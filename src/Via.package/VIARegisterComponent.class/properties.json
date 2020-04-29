@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAPagedComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"email",
+		"firstName",
+		"lastName",
+		"password",
+		"passwordConfirmation",
+		"disclaimerComponent",
+		"termsAccepted"
+	],
+	"name" : "VIARegisterComponent",
+	"type" : "normal"
+}

@@ -1,0 +1,33 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"tasks",
+		"title",
+		"exerciseLevel",
+		"imageAsset",
+		"authorUsers",
+		"coAuthorUsers",
+		"classification",
+		"footnotesPillar",
+		"isDraft",
+		"shortUid",
+		"teacherNotesPillar",
+		"moduleHistory",
+		"createdAt",
+		"isExam",
+		"website",
+		"rating",
+		"isPrivate",
+		"releasedAt",
+		"geocode",
+		"geocodes",
+		"allowIgnoreTasks"
+	],
+	"name" : "VIAModule",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+tasks
+runNightlyTasks
+	self backupModulesAsPdf

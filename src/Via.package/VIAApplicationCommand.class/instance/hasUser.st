@@ -1,0 +1,3 @@
+testing
+hasUser
+	^user notNil

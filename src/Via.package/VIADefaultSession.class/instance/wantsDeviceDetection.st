@@ -1,0 +1,3 @@
+viewport
+wantsDeviceDetection
+	^ true

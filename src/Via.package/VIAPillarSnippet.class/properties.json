@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIADisplayOnlyTaskBrick",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pillarDocument",
+		"pillarString",
+		"parseOk",
+		"parseError"
+	],
+	"name" : "VIAPillarSnippet",
+	"type" : "normal"
+}

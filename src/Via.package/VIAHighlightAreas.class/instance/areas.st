@@ -1,0 +1,3 @@
+accessing
+areas
+	^ areas values

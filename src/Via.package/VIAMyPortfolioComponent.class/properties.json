@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"moduleCardRenderer",
+		"certificate"
+	],
+	"name" : "VIAMyPortfolioComponent",
+	"type" : "normal"
+}

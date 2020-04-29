@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AndreasBrodbeck 5/27/2011 10:03",
+	"super" : "VIAComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"password",
+		"passwordConfirmation",
+		"validationResult"
+	],
+	"name" : "VIASetPasswordComponent",
+	"type" : "normal"
+}

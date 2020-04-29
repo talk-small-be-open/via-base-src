@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAHighlightAreasRenderer",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"highlightedCharsMap",
+		"characterCount",
+		"notHighlightedSymbol"
+	],
+	"name" : "VIAHighlightAreasV2Renderer",
+	"type" : "normal"
+}

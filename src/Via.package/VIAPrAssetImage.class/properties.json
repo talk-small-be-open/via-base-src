@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PRReference",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"asset"
+	],
+	"name" : "VIAPrAssetImage",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+data-seeding
+loadDefaultData
+	VIASamplesGenerator new loadDefaultData

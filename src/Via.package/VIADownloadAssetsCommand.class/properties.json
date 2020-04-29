@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAApplicationLightweightCommand",
+	"category" : "Via-View-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"module"
+	],
+	"name" : "VIADownloadAssetsCommand",
+	"type" : "normal"
+}

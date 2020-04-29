@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AndreasBrodbeck 7/5/2011 16:30",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pageName",
+		"errorMessage"
+	],
+	"name" : "VIAPagedComponent",
+	"type" : "normal"
+}

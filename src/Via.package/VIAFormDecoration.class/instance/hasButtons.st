@@ -1,0 +1,3 @@
+testing
+hasButtons
+	^buttons notEmpty

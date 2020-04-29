@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIASchoolPrintModuleExerciser",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIASchoolPrintSolutionModuleExerciser",
+	"type" : "normal"
+}

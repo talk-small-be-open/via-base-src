@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIARenderer",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAModuleCardRenderer",
+	"type" : "normal"
+}

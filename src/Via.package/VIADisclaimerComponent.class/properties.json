@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isEmbedded"
+	],
+	"name" : "VIADisclaimerComponent",
+	"type" : "normal"
+}

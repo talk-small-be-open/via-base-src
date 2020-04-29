@@ -1,0 +1,3 @@
+accessing
+footnotesPillarString
+	^VIAHelper pillarStringFromPillar: footnotesPillar

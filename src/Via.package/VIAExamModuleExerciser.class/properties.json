@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AndreasBrodbeck 3/16/2020 23:03",
+	"super" : "VIAModuleExerciser",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exam"
+	],
+	"name" : "VIAExamModuleExerciser",
+	"type" : "normal"
+}

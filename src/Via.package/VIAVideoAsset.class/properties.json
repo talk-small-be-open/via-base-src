@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMediaAsset",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileReference",
+		"aspectRatio",
+		"width",
+		"duration",
+		"bogus3"
+	],
+	"name" : "VIAVideoAsset",
+	"type" : "normal"
+}

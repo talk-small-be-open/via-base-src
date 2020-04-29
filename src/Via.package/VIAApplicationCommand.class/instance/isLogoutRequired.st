@@ -1,0 +1,3 @@
+accessing
+isLogoutRequired
+	^isLogoutRequired = true

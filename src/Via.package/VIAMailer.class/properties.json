@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"enabled",
+		"website"
+	],
+	"name" : "VIAMailer",
+	"type" : "normal"
+}

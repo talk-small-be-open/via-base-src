@@ -1,0 +1,3 @@
+accessing
+isVisibleAfterSubmit
+	^ visibleAfterSubmit = true

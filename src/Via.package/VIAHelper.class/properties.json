@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"AccentNormalizationMap"
+	],
+	"instvars" : [ ],
+	"name" : "VIAHelper",
+	"type" : "normal"
+}

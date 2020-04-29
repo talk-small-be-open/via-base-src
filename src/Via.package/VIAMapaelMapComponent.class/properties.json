@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"geocodes",
+		"cssClassBlock",
+		"tooltipContentBlock",
+		"urlBlock"
+	],
+	"name" : "VIAMapaelMapComponent",
+	"type" : "normal"
+}

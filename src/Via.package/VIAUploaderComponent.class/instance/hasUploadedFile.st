@@ -1,0 +1,3 @@
+testing
+hasUploadedFile
+	^tempFileReference isFileExisting

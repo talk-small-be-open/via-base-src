@@ -1,0 +1,3 @@
+testing
+isConfirmed
+	^password = passwordConfirmation

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Dialogs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"value",
+		"messageText",
+		"multiline"
+	],
+	"name" : "VIAInputDialog",
+	"type" : "normal"
+}

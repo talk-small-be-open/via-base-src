@@ -1,0 +1,3 @@
+testing
+hasRatings
+	^ratings notEmpty

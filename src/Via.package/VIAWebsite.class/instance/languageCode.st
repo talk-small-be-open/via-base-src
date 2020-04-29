@@ -1,0 +1,3 @@
+accessing
+languageCode
+	self subclassResponsibility

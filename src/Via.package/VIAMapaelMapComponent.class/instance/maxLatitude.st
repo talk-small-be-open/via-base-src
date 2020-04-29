@@ -1,0 +1,3 @@
+as yet unclassified
+maxLatitude
+	self subclassResponsibility

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "GRError",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAError",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "AndreasBrodbeck 3/29/2016 14:12",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskBrick"
+	],
+	"name" : "VIAAnswerItem",
+	"type" : "normal"
+}

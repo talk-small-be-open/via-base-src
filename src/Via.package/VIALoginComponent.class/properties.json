@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"afterLoginBlock",
+		"messageKey",
+		"email",
+		"loginOk",
+		"facebook",
+		"google",
+		"local"
+	],
+	"name" : "VIALoginComponent",
+	"type" : "normal"
+}

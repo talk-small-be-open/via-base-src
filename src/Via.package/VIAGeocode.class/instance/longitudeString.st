@@ -1,0 +1,3 @@
+accessing
+longitudeString
+	^ longitude asString

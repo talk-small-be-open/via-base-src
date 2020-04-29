@@ -1,0 +1,3 @@
+testing
+hasTranscription
+	^transcriptionPillar notBlank

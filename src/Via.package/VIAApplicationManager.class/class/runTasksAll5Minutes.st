@@ -1,0 +1,3 @@
+tasks
+runTasksAll5Minutes
+	self db cleanupApplicationCommands.

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"choices",
+		"style"
+	],
+	"name" : "VIASelectPointsInput",
+	"type" : "normal"
+}

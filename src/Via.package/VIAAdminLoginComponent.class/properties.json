@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"email",
+		"password",
+		"targetWebsite"
+	],
+	"name" : "VIAAdminLoginComponent",
+	"type" : "normal"
+}

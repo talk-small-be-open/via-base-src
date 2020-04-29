@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATag",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAContextTag",
+	"type" : "normal"
+}

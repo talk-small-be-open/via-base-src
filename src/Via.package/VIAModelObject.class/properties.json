@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "VIAObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uuid"
+	],
+	"name" : "VIAModelObject",
+	"type" : "normal"
+}

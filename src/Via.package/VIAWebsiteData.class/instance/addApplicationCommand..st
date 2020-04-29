@@ -1,0 +1,3 @@
+as yet unclassified
+addApplicationCommand: anApplicationCommand
+	applicationCommands at: anApplicationCommand code put: anApplicationCommand

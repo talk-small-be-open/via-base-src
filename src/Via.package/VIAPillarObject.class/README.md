@@ -1,0 +1,1 @@
+An encapsulation of a pillar document which is mostly represented in forms by its text pillar form

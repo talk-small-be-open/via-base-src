@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Database",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"title",
+		"domain",
+		"code",
+		"aliasDomains"
+	],
+	"name" : "VIAWebsite",
+	"type" : "normal"
+}

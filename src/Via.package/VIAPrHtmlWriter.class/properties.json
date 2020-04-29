@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PRHTMLWriter",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAPrHtmlWriter",
+	"type" : "normal"
+}

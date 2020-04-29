@@ -1,0 +1,3 @@
+as yet unclassified
+initSearchFormRenderer: anotherRenderer
+	searchFormRenderer copySettingsFrom: anotherRenderer

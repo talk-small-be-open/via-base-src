@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExerciserComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"footnotes",
+		"taskBrickGroups"
+	],
+	"name" : "VIAExerciserSchoolPrintComponent",
+	"type" : "normal"
+}

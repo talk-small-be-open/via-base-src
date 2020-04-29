@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponentDecoration",
+	"category" : "Via-View-Decoration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onetime",
+		"javascript"
+	],
+	"name" : "VIAJavascriptDecoration",
+	"type" : "normal"
+}

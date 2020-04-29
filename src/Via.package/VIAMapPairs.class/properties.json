@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATask",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pairInputs"
+	],
+	"name" : "VIAMapPairs",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponentDecoration",
+	"category" : "Via-View-Decoration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"buttons",
+		"defaultButton",
+		"cancelButtonNames",
+		"cssClass",
+		"isDirtyChecked",
+		"closeButtonNames"
+	],
+	"name" : "VIAFormDecoration",
+	"type" : "normal"
+}

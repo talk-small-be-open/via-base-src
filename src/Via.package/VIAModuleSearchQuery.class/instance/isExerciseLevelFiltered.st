@@ -1,0 +1,3 @@
+testing
+isExerciseLevelFiltered
+	^exerciseLevels notBlank

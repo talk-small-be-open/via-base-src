@@ -1,0 +1,3 @@
+testing
+isLoginRequired
+	^isLoginRequired = true

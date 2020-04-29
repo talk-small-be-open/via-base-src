@@ -1,0 +1,3 @@
+rendering
+cssColorForTricolorWrongness: aPercentInteger
+	^parent cssColorForTricolorWrongness: aPercentInteger

@@ -1,0 +1,3 @@
+accessing
+activityTypeTag
+	^ activityTypeTags anyOneOrNil

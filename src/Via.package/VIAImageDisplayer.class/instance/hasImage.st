@@ -1,0 +1,3 @@
+testing
+hasImage
+	^imageAsset notNil

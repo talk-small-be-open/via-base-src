@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAnswerItem",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"object"
+	],
+	"name" : "VIADragDropAnswerItem",
+	"type" : "normal"
+}

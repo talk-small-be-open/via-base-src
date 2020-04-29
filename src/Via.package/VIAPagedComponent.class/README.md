@@ -1,0 +1,1 @@
+A simple but effective component which has several views, called "pages". For cases where it would be overkill to define multiple components for each page

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIASingleTaskExerciserRenderer",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAHighlightAreasRenderer",
+	"type" : "normal"
+}

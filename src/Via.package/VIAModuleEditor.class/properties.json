@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModuleComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"validationResult",
+		"swissmap",
+		"worldmap"
+	],
+	"name" : "VIAModuleEditor",
+	"type" : "normal"
+}

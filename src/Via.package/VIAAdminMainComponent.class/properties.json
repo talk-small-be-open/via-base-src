@@ -1,0 +1,21 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMainBaseComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"modulesComponent",
+		"usersComponent",
+		"configurationComponent",
+		"maintenanceComponent",
+		"developmentComponent",
+		"tabbedNavigationComponent",
+		"assetsComponent",
+		"classificationComponent",
+		"uiTextComponent"
+	],
+	"name" : "VIAAdminMainComponent",
+	"type" : "normal"
+}

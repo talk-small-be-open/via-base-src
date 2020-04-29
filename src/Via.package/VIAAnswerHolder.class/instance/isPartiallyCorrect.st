@@ -1,0 +1,3 @@
+testing
+isPartiallyCorrect
+	^correction = #partiallyCorrect

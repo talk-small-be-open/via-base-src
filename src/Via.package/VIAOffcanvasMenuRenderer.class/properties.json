@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMenuRenderer",
+	"category" : "Via-View-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAOffcanvasMenuRenderer",
+	"type" : "normal"
+}

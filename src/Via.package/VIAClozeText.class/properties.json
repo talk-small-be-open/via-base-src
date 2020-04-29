@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATask",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"clozeTemplateString",
+		"placeholders",
+		"placeholderShelf",
+		"pillarDocument",
+		"parseOk",
+		"parseError"
+	],
+	"name" : "VIAClozeText",
+	"type" : "normal"
+}

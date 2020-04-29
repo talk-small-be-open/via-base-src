@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"ratings"
+	],
+	"name" : "VIARating",
+	"type" : "normal"
+}

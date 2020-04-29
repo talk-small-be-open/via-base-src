@@ -1,0 +1,3 @@
+accessing
+contextTag
+	^ contextTags anyOneOrNil

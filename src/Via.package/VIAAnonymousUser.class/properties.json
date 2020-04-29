@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAUserBase",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAnonymousUser",
+	"type" : "normal"
+}

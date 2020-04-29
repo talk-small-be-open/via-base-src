@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"exams",
+		"examModules",
+		"moduleCardRenderer"
+	],
+	"name" : "VIAMyTeacherCockpit",
+	"type" : "normal"
+}

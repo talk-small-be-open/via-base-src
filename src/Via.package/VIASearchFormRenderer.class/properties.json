@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIARenderer",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"searchText",
+		"query",
+		"isExtendedSearch"
+	],
+	"name" : "VIASearchFormRenderer",
+	"type" : "normal"
+}

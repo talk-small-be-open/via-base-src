@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponentDecoration",
+	"category" : "Via-View-Decoration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"delegate",
+		"title",
+		"showClose",
+		"isWide"
+	],
+	"name" : "VIALightbox",
+	"type" : "normal"
+}

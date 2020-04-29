@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExerciserExamComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAExerciserExamViewComponent",
+	"type" : "normal"
+}

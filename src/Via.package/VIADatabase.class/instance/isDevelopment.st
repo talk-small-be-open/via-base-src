@@ -1,0 +1,3 @@
+testing
+isDevelopment
+	^self == Development

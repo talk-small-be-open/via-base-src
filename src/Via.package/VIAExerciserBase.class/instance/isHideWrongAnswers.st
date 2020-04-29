@@ -1,0 +1,3 @@
+correction
+isHideWrongAnswers
+	^self isShowCorrection

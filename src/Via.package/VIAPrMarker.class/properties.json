@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PRDocumentItem",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"name",
+		"text"
+	],
+	"name" : "VIAPrMarker",
+	"type" : "normal"
+}

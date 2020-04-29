@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModuleComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentExerciser",
+		"exerciserComponents",
+		"subtitleTags",
+		"moduleExercise"
+	],
+	"name" : "VIAModuleExerciser",
+	"type" : "normal"
+}

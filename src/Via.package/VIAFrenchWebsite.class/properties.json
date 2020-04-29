@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAWebsite",
+	"category" : "Via-Database",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAFrenchWebsite",
+	"type" : "normal"
+}

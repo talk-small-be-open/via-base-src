@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Dialogs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"messageToConfirm",
+		"onConfirmBlock",
+		"onRejectBlock",
+		"isCaptchaSecured",
+		"confirmationText",
+		"cancelText"
+	],
+	"name" : "VIAConfirmationComponent",
+	"type" : "normal"
+}

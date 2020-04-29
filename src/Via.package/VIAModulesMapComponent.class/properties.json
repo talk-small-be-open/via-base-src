@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lookup",
+		"onClickBlock",
+		"cardRenderer",
+		"mapaelComponent"
+	],
+	"name" : "VIAModulesMapComponent",
+	"type" : "normal"
+}

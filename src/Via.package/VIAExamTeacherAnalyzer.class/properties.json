@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExamComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskComponents",
+		"wrongBricksAndCount",
+		"brickDetailsAnalyzer",
+		"maxLight",
+		"maxSaturation"
+	],
+	"name" : "VIAExamTeacherAnalyzer",
+	"type" : "normal"
+}

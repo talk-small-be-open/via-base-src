@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "WASession",
+	"category" : "Via-View-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"user",
+		"portfolio",
+		"website"
+	],
+	"name" : "VIASession",
+	"type" : "normal"
+}

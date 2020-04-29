@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"showOnlyMy",
+		"selectedModule",
+		"columnsCount"
+	],
+	"name" : "VIAAdminModulesComponent",
+	"type" : "normal"
+}

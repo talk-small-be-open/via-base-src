@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "JSObject",
+	"category" : "Via-View-Javascript",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"selector",
+		"id"
+	],
+	"name" : "VIAJsInteract",
+	"type" : "normal"
+}

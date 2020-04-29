@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAGeocode",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"geocodes"
+	],
+	"name" : "VIAGeocodeCluster",
+	"type" : "normal"
+}

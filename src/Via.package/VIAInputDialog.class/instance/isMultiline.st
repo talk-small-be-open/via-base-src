@@ -1,0 +1,3 @@
+testing
+isMultiline
+	^multiline = true

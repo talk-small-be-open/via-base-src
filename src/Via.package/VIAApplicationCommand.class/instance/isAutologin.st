@@ -1,0 +1,3 @@
+testing
+isAutologin
+	^isAutologin = true

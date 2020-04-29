@@ -1,0 +1,3 @@
+accessing
+isBeta
+	^ isBeta = true

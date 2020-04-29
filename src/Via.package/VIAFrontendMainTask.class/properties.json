@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMainTask",
+	"category" : "Via-View-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isEmbedded"
+	],
+	"name" : "VIAFrontendMainTask",
+	"type" : "normal"
+}

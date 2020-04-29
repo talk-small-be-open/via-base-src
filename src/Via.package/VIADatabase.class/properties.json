@@ -1,0 +1,33 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Database",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Current",
+		"Development",
+		"Production"
+	],
+	"instvars" : [
+		"databaseName",
+		"users",
+		"modules",
+		"categories",
+		"pages",
+		"portfolios",
+		"assets",
+		"properties",
+		"tags",
+		"searchEngine",
+		"uiTexts",
+		"trashedObjects",
+		"mailer",
+		"applicationCommands",
+		"exams",
+		"websites",
+		"websiteDatas"
+	],
+	"name" : "VIADatabase",
+	"type" : "normal"
+}

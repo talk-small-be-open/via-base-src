@@ -1,0 +1,3 @@
+testing
+hasCoAuthors
+	^coAuthorUsers notBlank

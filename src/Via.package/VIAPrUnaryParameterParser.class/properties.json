@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PRBasicObject",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAPrUnaryParameterParser",
+	"type" : "normal"
+}

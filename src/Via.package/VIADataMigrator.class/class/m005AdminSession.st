@@ -1,0 +1,3 @@
+as yet unclassified
+m005AdminSession
+	VIAAdminMainTask registerAsApplication

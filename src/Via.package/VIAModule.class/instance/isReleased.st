@@ -1,0 +1,3 @@
+testing
+isReleased
+	^ isDraft not

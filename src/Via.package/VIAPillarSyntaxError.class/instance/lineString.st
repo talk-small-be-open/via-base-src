@@ -1,0 +1,3 @@
+accessing
+lineString
+	^ lineString

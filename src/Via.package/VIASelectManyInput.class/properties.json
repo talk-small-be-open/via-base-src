@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"choices",
+		"solutions",
+		"shuffleChoices"
+	],
+	"name" : "VIASelectManyInput",
+	"type" : "normal"
+}

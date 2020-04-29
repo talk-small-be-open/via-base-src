@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Model-Search",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"results"
+	],
+	"name" : "VIASearchResult",
+	"type" : "normal"
+}

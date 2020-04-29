@@ -1,0 +1,3 @@
+icons
+iconLegalNotice
+	^self iconCopyright

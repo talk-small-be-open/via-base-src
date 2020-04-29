@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAVisitor",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAPrepareAssetsVisitor",
+	"type" : "normal"
+}

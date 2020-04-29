@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAError",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lineString",
+		"lineNumber",
+		"syntaxError"
+	],
+	"name" : "VIAPillarSyntaxError",
+	"type" : "normal"
+}

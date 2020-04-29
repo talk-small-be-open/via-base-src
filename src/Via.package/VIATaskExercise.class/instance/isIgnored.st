@@ -1,0 +1,3 @@
+testing
+isIgnored
+	^isIgnored = true

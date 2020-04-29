@@ -1,0 +1,3 @@
+accessing
+beTermsAccepted
+	termsAccepted := true

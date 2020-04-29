@@ -1,0 +1,3 @@
+switch user
+hasBackgroundAdminUser
+	^backgroundAdminUser notNil

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Dialogs",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"options",
+		"selection",
+		"labelBlock"
+	],
+	"name" : "VIAChoiceDialog",
+	"type" : "normal"
+}

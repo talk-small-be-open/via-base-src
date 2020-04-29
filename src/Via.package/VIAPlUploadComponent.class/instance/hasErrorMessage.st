@@ -1,0 +1,3 @@
+testing
+hasErrorMessage
+	^errorMessage notNil

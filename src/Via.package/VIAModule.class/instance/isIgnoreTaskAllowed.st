@@ -1,0 +1,3 @@
+testing
+isIgnoreTaskAllowed
+	^ allowIgnoreTasks = true

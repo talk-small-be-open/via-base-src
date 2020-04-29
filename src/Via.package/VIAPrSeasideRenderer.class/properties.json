@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "PRVisitor",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"html",
+		"htmlWriter",
+		"markerRenderingBlock"
+	],
+	"name" : "VIAPrSeasideRenderer",
+	"type" : "normal"
+}

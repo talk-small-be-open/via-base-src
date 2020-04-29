@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskBrick",
+		"value",
+		"correctness",
+		"correction",
+		"correctionCount",
+		"lastCheckedValueHash",
+		"lastAccessDateTime",
+		"points"
+	],
+	"name" : "VIAAnswerHolder",
+	"type" : "normal"
+}

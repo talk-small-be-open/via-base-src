@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIARenderingVisitorComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parent",
+		"task"
+	],
+	"name" : "VIAExamTaskAnalyzerComponent",
+	"type" : "normal"
+}

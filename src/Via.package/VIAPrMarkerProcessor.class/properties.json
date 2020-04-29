@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PRVisitor",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"onEachBlock"
+	],
+	"name" : "VIAPrMarkerProcessor",
+	"type" : "normal"
+}

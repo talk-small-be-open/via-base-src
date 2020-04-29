@@ -1,0 +1,3 @@
+accessing
+clearParams
+	params := nil

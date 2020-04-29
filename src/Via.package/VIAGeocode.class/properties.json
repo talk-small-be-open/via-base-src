@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"label",
+		"latitude",
+		"longitude",
+		"searchString",
+		"typeInfo"
+	],
+	"name" : "VIAGeocode",
+	"type" : "normal"
+}

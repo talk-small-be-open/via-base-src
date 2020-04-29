@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAFileReference",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"fileBasePath",
+		"fileRelativePath",
+		"fileName"
+	],
+	"name" : "VIALocalFileReference",
+	"type" : "normal"
+}

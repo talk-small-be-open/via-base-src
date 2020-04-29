@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIADisplayOnlyTaskBrick",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"imageAsset",
+		"width"
+	],
+	"name" : "VIAImageDisplayer",
+	"type" : "normal"
+}

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parentBrick",
+		"choices",
+		"solutions"
+	],
+	"name" : "VIADragDropInput",
+	"type" : "normal"
+}

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAMainTask",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAdminMainTask",
+	"type" : "normal"
+}

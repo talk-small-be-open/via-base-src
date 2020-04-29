@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"user",
+		"modules",
+		"moduleExercises",
+		"exams"
+	],
+	"name" : "VIAPortfolio",
+	"type" : "normal"
+}

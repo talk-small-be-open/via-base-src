@@ -1,0 +1,4 @@
+as yet unclassified
+m037BetterHighlightAreas
+
+	self registerSeasideComponents

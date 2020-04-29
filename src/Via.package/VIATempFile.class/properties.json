@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIALocalFileReference",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"file",
+		"fileBaseName",
+		"tempDirectory",
+		"fileExtension"
+	],
+	"name" : "VIATempFile",
+	"type" : "normal"
+}

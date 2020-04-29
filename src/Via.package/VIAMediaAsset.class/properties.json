@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"title",
+		"comment",
+		"internalComment"
+	],
+	"name" : "VIAMediaAsset",
+	"type" : "normal"
+}

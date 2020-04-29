@@ -1,0 +1,3 @@
+icons
+iconCorrect
+	^self iconCheck

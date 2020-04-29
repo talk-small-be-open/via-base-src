@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WADecoration",
+	"category" : "Via-View-Decoration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAComponentDecoration",
+	"type" : "normal"
+}

@@ -1,0 +1,18 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATask",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pillarDocument",
+		"areas",
+		"pillarString",
+		"areaShelf",
+		"parseOk",
+		"parseError"
+	],
+	"name" : "VIAHighlightAreas",
+	"type" : "normal"
+}

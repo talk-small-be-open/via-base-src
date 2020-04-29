@@ -1,0 +1,3 @@
+testing
+hasTeacherNotes
+	^teacherNotesPillar notNil

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"component"
+	],
+	"name" : "VIARenderer",
+	"type" : "normal"
+}

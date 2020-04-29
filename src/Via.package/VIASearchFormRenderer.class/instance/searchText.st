@@ -1,0 +1,3 @@
+accessing
+searchText
+	^ query text

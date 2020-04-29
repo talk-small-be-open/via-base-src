@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Model-Validation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"errorMessage",
+		"validator",
+		"ifBlock"
+	],
+	"name" : "VIAValidationRule",
+	"type" : "normal"
+}

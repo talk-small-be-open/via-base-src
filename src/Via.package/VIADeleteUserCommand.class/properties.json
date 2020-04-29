@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAApplicationCommand",
+	"category" : "Via-View-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIADeleteUserCommand",
+	"type" : "normal"
+}

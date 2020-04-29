@@ -1,0 +1,3 @@
+testing
+isChecked
+	^correction ~= #notCheckedYet

@@ -1,0 +1,1 @@
+I am a dialog for setting a new password. Has two input fields, for confirmation of the password. Validates password format.

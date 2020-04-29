@@ -1,0 +1,3 @@
+testing
+isTouchEnabled
+	^ touchEnabled = true

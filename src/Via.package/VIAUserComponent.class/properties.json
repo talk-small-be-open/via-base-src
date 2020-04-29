@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"module"
+	],
+	"name" : "VIAUserComponent",
+	"type" : "normal"
+}

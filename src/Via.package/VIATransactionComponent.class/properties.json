@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"payloadComponent",
+		"committed"
+	],
+	"name" : "VIATransactionComponent",
+	"type" : "normal"
+}

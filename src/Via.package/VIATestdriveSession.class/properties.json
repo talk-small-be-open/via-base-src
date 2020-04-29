@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIADefaultSession",
+	"category" : "Via-View-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIATestdriveSession",
+	"type" : "normal"
+}

@@ -1,0 +1,3 @@
+rendering
+cssColorForWrongness: aPercentInteger
+	^parent cssColorForWrongness: aPercentInteger

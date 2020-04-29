@@ -1,0 +1,3 @@
+testing
+isFragment
+	^startTime notNil

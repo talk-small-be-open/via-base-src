@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExerciserSolutionComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isShowingCongratulation"
+	],
+	"name" : "VIAExerciserFinishedComponent",
+	"type" : "normal"
+}

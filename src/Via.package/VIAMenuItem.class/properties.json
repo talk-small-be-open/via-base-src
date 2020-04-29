@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-View-Menu",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parent",
+		"css"
+	],
+	"name" : "VIAMenuItem",
+	"type" : "normal"
+}

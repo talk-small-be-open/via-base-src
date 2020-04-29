@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAFileReference",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"url"
+	],
+	"name" : "VIAWebFileReference",
+	"type" : "normal"
+}

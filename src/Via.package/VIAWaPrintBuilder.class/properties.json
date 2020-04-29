@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WABuilder",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaPrintBuilder",
+	"type" : "normal"
+}

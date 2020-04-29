@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uploadSessionUuid",
+		"tempFileReferences",
+		"targetBasePath",
+		"targetRelativePath",
+		"errorMessage"
+	],
+	"name" : "VIAPlUploadComponent",
+	"type" : "normal"
+}

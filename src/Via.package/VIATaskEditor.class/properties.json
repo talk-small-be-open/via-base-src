@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIARenderingVisitorComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"task",
+		"module",
+		"validationResult",
+		"authorBricks",
+		"authorBrickCategories"
+	],
+	"name" : "VIATaskEditor",
+	"type" : "normal"
+}

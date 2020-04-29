@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModuleComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAModuleAssetsComponent",
+	"type" : "normal"
+}

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAttributeValidationRule",
+	"category" : "Via-Model-Validation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"regularExpression"
+	],
+	"name" : "VIAValidateFormat",
+	"type" : "normal"
+}
