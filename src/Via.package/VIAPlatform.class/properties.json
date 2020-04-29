@@ -4,8 +4,10 @@
 	"category" : "Via-Platform",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"Current"
+	],
 	"instvars" : [ ],
-	"name" : "VIAPlatformAbstract",
+	"name" : "VIAPlatform",
 	"type" : "normal"
 }

@@ -5,7 +5,7 @@ receiveFile: aFile
 			| uniqueFilename uploadAbsoluteDir uploadRelativeDir uuidString |
 			uuidString := UUID new greaseString.
 			uploadRelativeDir := self targetRelativePath.
-			uniqueFilename := uuidString, '.', (VIAPlatform extensionOfFile: aFile fileName).
+			uniqueFilename := uuidString, '.', (VIAPlatform current extensionOfFile: aFile fileName).
 
 			uploadAbsoluteDir := self targetBasePath, '/', uploadRelativeDir. 
 			GRPlatform current ensureExistenceOfFolder: uploadAbsoluteDir.

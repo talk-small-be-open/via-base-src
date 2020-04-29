@@ -1,3 +1,3 @@
 as yet unclassified
 readFileSize
-	byteSize := VIAPlatform sizeOfFile: self path
+	byteSize := VIAPlatform current sizeOfFile: self path

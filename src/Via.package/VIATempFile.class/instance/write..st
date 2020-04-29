@@ -1,7 +1,7 @@
 as yet unclassified
 write: aText
 
-	GRPlatform current write: (VIAPlatform toUtf8: aText) toFile: self fileName inFolder: self directory
+	GRPlatform current write: (VIAPlatform current toUtf8: aText) toFile: self fileName inFolder: self directory
 	
 "	| textToWrite |
 	textToWrite := self isGemStone

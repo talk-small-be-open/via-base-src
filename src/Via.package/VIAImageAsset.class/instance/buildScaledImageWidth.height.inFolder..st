@@ -5,11 +5,11 @@ buildScaledImageWidth: aWidth height: aHeight inFolder: aTargetFolder
 	| filepath scaledImageFilepath cmd suffix |
 
 	filepath := self fileReference filePath.
-	suffix := '_', aWidth asString, '_', aHeight asString, '.', (VIAPlatform extensionOfFile: filepath).
+	suffix := '_', aWidth asString, '_', aHeight asString, '.', (VIAPlatform current extensionOfFile: filepath).
 
 	scaledImageFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform fileExists: scaledImageFilepath) ifFalse: [
+	(VIAPlatform current fileExists: scaledImageFilepath) ifFalse: [
 		cmd := 'convert -bordercolor white -border 1x1 -fuzz 5% -trim +repage -strip -resize "', aWidth asString,'x', aHeight asString, '>" "', filepath, '" "', scaledImageFilepath, '"'.
 		MCLPlatform runShellCommand: cmd].
 

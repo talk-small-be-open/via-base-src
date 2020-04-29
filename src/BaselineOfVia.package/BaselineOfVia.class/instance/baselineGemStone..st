@@ -17,6 +17,6 @@ baselineGemStone: spec
 				requires: #('MCLPlatformPortabilityGemstone');
 				repository: 'github://talk-small-be-open/via:master/src'.
 		].
-		spec
-			group: 'Core' with: #('MockGemStone' ).
+"		spec
+			group: 'Core' with: #('MockGemStone' )."
 	]

@@ -1,3 +1,3 @@
 as yet unclassified
 fileExtension
-	^VIAPlatform extensionOfFile: self fileName
+	^VIAPlatform current extensionOfFile: self fileName

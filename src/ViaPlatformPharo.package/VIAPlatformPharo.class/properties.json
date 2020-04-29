@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAPlatformAbstract",
+	"super" : "VIAPlatform",
 	"category" : "ViaPlatformPharo",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "VIAPlatform",
+	"name" : "VIAPlatformPharo",
 	"type" : "normal"
 }

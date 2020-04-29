@@ -4,6 +4,6 @@ initialize
 
 	fileBaseName := UUID new asString.
 	fileName := fileBaseName, '.', self fileExtension.
-	fileBasePath := VIAPlatform fullPathNameFor: self tempDirectory.
+	fileBasePath := VIAPlatform current fullPathNameFor: self tempDirectory.
 
 "	file := (ServerFileDirectory on: fileFolder) forceNewFileNamed: self filePath."

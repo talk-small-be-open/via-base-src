@@ -5,11 +5,11 @@ buildFixedImageWidth: aWidth inFolder: aTargetFolder
 	| filepath scaledImageFilepath cmd suffix |
 
 	filepath := self fileReference filePath.
-	suffix := '_', aWidth asString, '.', (VIAPlatform extensionOfFile: filepath).
+	suffix := '_', aWidth asString, '.', (VIAPlatform current extensionOfFile: filepath).
 
 	scaledImageFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform fileExists: scaledImageFilepath) ifFalse: [
+	(VIAPlatform current fileExists: scaledImageFilepath) ifFalse: [
 		cmd := 'convert -bordercolor white -border 1x1 -fuzz 5% -trim +repage -strip -resize ', aWidth asString, ' "', filepath, '" "', scaledImageFilepath, '"'.
 		MCLPlatform runShellCommand: cmd].
 

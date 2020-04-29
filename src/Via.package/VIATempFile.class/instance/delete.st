@@ -1,3 +1,3 @@
 as yet unclassified
 delete
-	VIAPlatform deleteFileNamed: self filePath
+	VIAPlatform current deleteFileNamed: self filePath

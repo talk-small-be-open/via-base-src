@@ -8,11 +8,11 @@ buildFragmentStart: aStart stop: aStop inFolder: aTargetFolder
 	stopText := (aStop ifBlank: ['end']) greaseString.
 
 	filepath := self fileReference filePath.
-	suffix := '_', startText, '_', stopText, '.', (VIAPlatform extensionOfFile: filepath).
+	suffix := '_', startText, '_', stopText, '.', (VIAPlatform current extensionOfFile: filepath).
 
 	audioFragmentFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform fileExists: audioFragmentFilepath) ifFalse: [
+	(VIAPlatform current fileExists: audioFragmentFilepath) ifFalse: [
 		cmd := String streamContents: [:s |
 			s nextPutAll: 'ffmpeg -nostats -loglevel warning -y '.
 			aStart ifNotBlank: [
