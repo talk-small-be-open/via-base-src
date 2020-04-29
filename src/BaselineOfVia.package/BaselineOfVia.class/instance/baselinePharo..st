@@ -9,7 +9,9 @@ baselinePharo: spec
 				repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo40/main/'
 		].
 		spec package: 'MockGemStone' with: [
-			spec repository: 'github://talk-small-be-open/utils:master/src'.
+			spec
+				requires: #('Seaside3');
+				repository: 'github://talk-small-be-open/utils:master/src'.
 		].
 		spec package: 'MCLPlatformPortabilityPharo' with: [ 
 			spec
