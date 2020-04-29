@@ -6,8 +6,10 @@ baseline: spec
 			baseline: 'Seaside3' with: [
 				spec
 					repository: 'github://SeasideSt/Seaside:v3.3.4/repository';
-					loads: #('default' 'JSON' 'Email' 'Javascript' 'JQuery') ];
-			project: 'Pillar'.
+					loads: #('default' 'JSON' 'Email' 'Javascript' 'JQuery') ].
+
+"in Pharo/GS getrennt			project: 'Pillar'."
+
 			spec baseline: 'NeoJSON' with: [ spec repository: 'github://svenvc/NeoJSON/repository' ].
 "			spec baseline: 'OSSubprocess' with: [
 				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
@@ -31,7 +33,7 @@ baseline: spec
 		spec package: 'Via' with: [
 				spec 
 					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' ); "'OSSubprocess'"
-					repository: 'github://talk-small-be-open/via'. ].
+					repository: 'github://talk-small-be-open/via:master/src'. ].
 		spec 
 			group: 'default' with: #('Core' );
 			group: 'Core' with: #('Via' ). ].

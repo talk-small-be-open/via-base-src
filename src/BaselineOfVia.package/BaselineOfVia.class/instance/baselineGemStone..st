@@ -6,15 +6,16 @@ baselineGemStone: spec
 		spec package: 'MCLPlatformPortabilityGemstone' with: [ 
 			spec
 				requires: #('MCLPlatformPortability');
-				repository: 'http://monticello.mindclue.dyndns.org:8753/mindclue' ].
+				repository: 'github://talk-small-be-open/utils:master/src' ].
+		spec package: 'ViaPlatformGemstone' with: [
+			spec
+				repository: 'github://talk-small-be-open/via:master/src'.
+		].
 		spec package: 'Via' with: [
 			spec 
 				includes: #('ViaPlatformGemstone');
 				requires: #('MCLPlatformPortabilityGemstone');
-				repository: 'github://talk-small-be-open/via'.].
-		spec package: 'ViaPlatformGemstone' with: [
-			spec
-				repository: 'github://talk-small-be-open/via'.
+				repository: 'github://talk-small-be-open/via:master/src'.
 		].
 		spec
 			group: 'Core' with: #('MockGemStone' ).
