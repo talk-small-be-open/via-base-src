@@ -4,13 +4,13 @@ baselinePharo: spec
 		spec baseline: 'NeoJSON' with: [
 			spec repository: 'github://svenvc/NeoJSON/repository'.
 		].
-		spec project: 'Pillar' with: [ 
+"		spec project: 'Pillar' with: [ 
 			spec
 				className: #ConfigurationOfPillar;
 				versionString: '0.56';
 				loads: #('html exporter' 'pillar exporter');
 				repository: 'http://smalltalkhub.com/mc/Pharo/MetaRepoForPharo40/main/'
-		].
+		]."
 		spec package: 'MockGemStone' with: [
 			spec
 				requires: #('Seaside3');
