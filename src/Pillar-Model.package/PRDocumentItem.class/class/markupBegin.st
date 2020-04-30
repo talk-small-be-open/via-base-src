@@ -1,0 +1,3 @@
+accessing
+markupBegin
+	^ self markup

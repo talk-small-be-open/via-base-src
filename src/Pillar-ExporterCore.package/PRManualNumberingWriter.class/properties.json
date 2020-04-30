@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PRDocumentWriter",
+	"category" : "Pillar-ExporterCore-Numbering",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PRManualNumberingWriter",
+	"type" : "normal"
+}

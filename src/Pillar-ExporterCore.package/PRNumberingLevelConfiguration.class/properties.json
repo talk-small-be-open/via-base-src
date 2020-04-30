@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "CyrilFerlicot 5/17/2015 19:11",
+	"super" : "Object",
+	"category" : "Pillar-ExporterCore-Configuration",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"parent",
+		"numbering",
+		"size"
+	],
+	"name" : "PRNumberingLevelConfiguration",
+	"type" : "normal"
+}

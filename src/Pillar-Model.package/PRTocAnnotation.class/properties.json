@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 4/17/2015 11:05",
+	"super" : "PRAbstractAnnotation",
+	"category" : "Pillar-Model-Document",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PRTocAnnotation",
+	"type" : "normal"
+}

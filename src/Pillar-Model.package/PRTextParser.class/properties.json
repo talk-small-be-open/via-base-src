@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "TorstenBergmann 3/5/2015 22:08",
+	"super" : "PRBasicObject",
+	"category" : "Pillar-Model-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"currentMarkup",
+		"currentStart",
+		"documentParser",
+		"itemParser",
+		"alreadySeenString",
+		"currentStop",
+		"stream"
+	],
+	"name" : "PRTextParser",
+	"type" : "normal"
+}

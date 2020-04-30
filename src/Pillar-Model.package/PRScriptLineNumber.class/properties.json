@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "CyrilFerlicot 4/22/2015 17:16",
+	"super" : "PRTransformer",
+	"category" : "Pillar-Model-Visitor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"stream"
+	],
+	"name" : "PRScriptLineNumber",
+	"type" : "normal"
+}

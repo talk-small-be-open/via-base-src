@@ -1,0 +1,1 @@
+I'm an abstract transformer. I assure that the transformation I do don't contains useless paragraph node.
