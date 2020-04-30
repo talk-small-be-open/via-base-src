@@ -22,23 +22,19 @@ baselinePharoPillarVersion056: spec
 		spec
 			package: 'Pillar-Model' with: [
 				spec
-					requires: #('Grease');
-					file: 'Pillar-Model-CyrilFerlicot.163'.
+					requires: #('Seaside3'). "Actually only Grease, but easier here"
 			];
 			package: 'Pillar-ExporterCore' with: [
 				spec
-					requires: #('Pillar-Model' 'Mustache');
-					file: 'Pillar-ExporterCore-CyrilFerlicot.149'.
+					requires: #('Pillar-Model' 'Mustache').
 			];
 			package: 'Pillar-ExporterHTML' with: [
 				spec
-					requires: #('Pillar-ExporterCore');
-					file: 'Pillar-ExporterHTML-CyrilFerlicot.61'
+					requires: #('Pillar-ExporterCore').
 			];
 			package: 'Pillar-ExporterPillar' with: [
 				spec
-					requires: #('Pillar-ExporterCore');
-					file: 'Pillar-ExporterPillar-CyrilFerlicot.22'
+					requires: #('Pillar-ExporterCore').
 			].
 
 		spec
