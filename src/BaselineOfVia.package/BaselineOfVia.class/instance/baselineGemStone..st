@@ -10,16 +10,18 @@ baselineGemStone: spec
 			spec
 				requires: #('MCLPlatformPortability');
 				repository: 'github://talk-small-be-open/utils:master/src' ].
-"TODO		spec package: 'ViaPlatformGemstone' with: [
-			spec
-				repository: 'github://talk-small-be-open/via:master/src'.
-		]."
 		spec package: 'Via' with: [
 			spec 
 "TODO				includes: #('ViaPlatformGemstone');"
 				requires: #('MCLPlatformPortabilityGemstone');
 				repository: 'github://talk-small-be-open/via:master/src'.
 		].
+		spec package: 'ViaPlatformGemstone' with: [
+			spec
+				requires: #('Via');
+				repository: 'github://talk-small-be-open/via:master/src'.
+		].
+
 "		spec
 			group: 'Core' with: #('MockGemStone' )."
 	]
