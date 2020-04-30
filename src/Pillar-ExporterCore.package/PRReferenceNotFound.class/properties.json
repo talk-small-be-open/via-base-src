@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "PRWarning",
+	"category" : "Pillar-ExporterCore-Exceptions",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"inputFile"
+	],
+	"name" : "PRReferenceNotFound",
+	"type" : "normal"
+}

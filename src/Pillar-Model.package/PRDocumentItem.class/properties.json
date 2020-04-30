@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "lr 5/28/2006 20:30",
+	"super" : "PRObject",
+	"category" : "Pillar-Model-Document",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"counter"
+	],
+	"name" : "PRDocumentItem",
+	"type" : "normal"
+}

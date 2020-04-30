@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "TorstenBergmann 3/5/2015 22:20",
+	"super" : "PRDocumentWriter",
+	"category" : "Pillar-ExporterPillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nesting"
+	],
+	"name" : "PRPillarWriter",
+	"type" : "normal"
+}

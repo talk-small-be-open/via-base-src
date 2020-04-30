@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "CyrilFerlicot 4/9/2015 11:37",
+	"super" : "PRTransformerWithoutUselessParagraph",
+	"category" : "Pillar-Model-Visitor",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PRFileInclusion",
+	"type" : "normal"
+}

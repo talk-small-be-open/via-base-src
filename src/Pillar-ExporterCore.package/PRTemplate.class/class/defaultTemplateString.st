@@ -1,0 +1,4 @@
+defaults
+defaultTemplateString
+
+	^ '{{{content}}}'

@@ -1,0 +1,3 @@
+helpers
+headerOffset
+	^ 0

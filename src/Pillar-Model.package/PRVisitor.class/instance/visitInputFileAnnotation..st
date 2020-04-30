@@ -1,0 +1,3 @@
+visiting-document
+visitInputFileAnnotation: anInputFileAnnotation
+	self visitAnnotation: anInputFileAnnotation

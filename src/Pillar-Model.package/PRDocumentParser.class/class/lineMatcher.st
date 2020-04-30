@@ -1,0 +1,3 @@
+accessing
+lineMatcher
+	^ PRMatcherManager lineMatcher

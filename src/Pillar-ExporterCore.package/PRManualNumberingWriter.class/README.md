@@ -1,0 +1,1 @@
+I'm an abstract writer that provides some functionality to compute headers/figures/scripts/... numbers. See PRNumeratingVisitor, PRNumerator and PRCascadingCounter.

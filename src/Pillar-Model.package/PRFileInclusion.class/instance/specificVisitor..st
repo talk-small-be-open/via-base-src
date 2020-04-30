@@ -1,0 +1,3 @@
+visitor
+specificVisitor: anInputFileAnnotation
+	^ self visitInputFileAnnotation: anInputFileAnnotation
