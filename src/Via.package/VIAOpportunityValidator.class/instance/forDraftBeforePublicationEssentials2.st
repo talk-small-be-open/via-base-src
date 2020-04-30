@@ -1,5 +1,0 @@
-rulesets
-forDraftBeforePublicationEssentials2
-	self validateTimeframe.
-	self validateLabelsArePresent.
-	self validateTopicsArePresent

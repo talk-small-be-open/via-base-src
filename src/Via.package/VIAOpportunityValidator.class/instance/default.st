@@ -1,3 +1,0 @@
-rulesets
-default
-	self forPublication
