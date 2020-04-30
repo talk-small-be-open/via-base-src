@@ -1,6 +1,9 @@
 baselines
 baselinePharo: spec
 	spec for: #'pharo' do: [
+		spec baseline: 'NeoJSON' with: [
+			spec repository: 'github://svenvc/NeoJSON/repository'.
+		].
 		spec project: 'Pillar' with: [ 
 			spec
 				className: #ConfigurationOfPillar;

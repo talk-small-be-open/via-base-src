@@ -1,6 +1,9 @@
 baselines
 baselineGemStone: spec
 	spec for: #'gemstone' do: [
+		spec baseline: 'NeoJSON' with: [
+			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'.
+		].
 		spec baseline: 'Pillar' with: [
 			spec repository: 'github://dassi/Pillar:projectVia/repository' ].
 		spec package: 'MCLPlatformPortabilityGemstone' with: [ 
