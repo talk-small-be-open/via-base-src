@@ -29,7 +29,7 @@ baselinePharo: spec
 			].
 		spec package: 'ViaPlatformPharo' with: [
 			spec
-"				requires: #('Via');"
+				requires: #('Via');
 				repository: 'github://talk-small-be-open/via:master/src'.
 		].
 		spec
