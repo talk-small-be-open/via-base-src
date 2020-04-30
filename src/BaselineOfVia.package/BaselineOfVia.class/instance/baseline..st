@@ -10,7 +10,7 @@ baseline: spec
 
 "in Pharo/GS getrennt			project: 'Pillar'."
 
-			spec baseline: 'NeoJSON' with: [ spec repository: 'github://svenvc/NeoJSON/repository' ].
+			spec baseline: 'NeoJSON'.
 "			spec baseline: 'OSSubprocess' with: [
 				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
 "			baseline: 'Pillar' with: [
