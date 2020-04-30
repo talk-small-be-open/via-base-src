@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "StephaneDucasse 3/31/2015 10:25",
-	"super" : "CCSTONConfigurationInterpreter",
+	"super" : "Object",
 	"category" : "Pillar-ExporterCore-Configuration",
 	"classinstvars" : [ ],
 	"pools" : [ ],
