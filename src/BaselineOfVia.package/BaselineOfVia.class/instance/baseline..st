@@ -6,7 +6,8 @@ baseline: spec
 			baseline: 'Seaside3' with: [
 				spec
 					repository: 'github://SeasideSt/Seaside:v3.3.4/repository';
-					loads: #('default' 'JSON' 'Email' 'Javascript' 'JQuery') ].
+					loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery')
+			].
 
 			spec baseline: 'NeoJSON'.
 "			spec baseline: 'OSSubprocess' with: [
