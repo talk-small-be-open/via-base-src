@@ -4,6 +4,12 @@ baselinePharo: spec
 		spec baseline: 'NeoJSON' with: [
 			spec repository: 'github://svenvc/NeoJSON/repository'.
 		].
+		spec baseline: 'Seaside3' with: [
+			spec
+"				repository: 'github://SeasideSt/Seaside:v3.3.4/repository';"
+				loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Development')
+		].
+	
 "		spec project: 'Pillar' with: [ 
 			spec
 				className: #ConfigurationOfPillar;
