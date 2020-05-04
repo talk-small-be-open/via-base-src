@@ -4,7 +4,7 @@ baselineGemStone: spec
 		spec baseline: 'Seaside3' with: [
 			spec
 "				repository: 'github://SeasideSt/Seaside:v3.3.4/repository';"
-				loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production')
+				loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc')
 		].
 		spec baseline: 'NeoJSON' with: [
 			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'.
