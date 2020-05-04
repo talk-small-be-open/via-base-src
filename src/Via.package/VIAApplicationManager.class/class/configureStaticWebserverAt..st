@@ -1,4 +1,4 @@
-as yet unclassified
+pharo
 configureStaticWebserverAt: aString
 	ZnZincStaticServerAdaptor default useDefaultExpirationHeaders.
 	ZnZincStaticServerAdaptor default server delegate serveFilesFrom: aString.
