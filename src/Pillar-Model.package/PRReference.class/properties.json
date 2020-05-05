@@ -1,5 +1,9 @@
 {
-	"classtraitcomposition" : "PRTParametrizable classTrait",
+	"commentStamp" : "CyrilFerlicot 4/28/2015 10:49",
+	"super" : "PRDocumentGroup",
+	"category" : "Pillar-Model-Document",
+	"classinstvars" : [ ],
+	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"reference",
@@ -7,11 +11,5 @@
 		"parameters"
 	],
 	"name" : "PRReference",
-	"commentStamp" : "CyrilFerlicot 4/28/2015 10:49",
-	"super" : "PRDocumentGroup",
-	"traitcomposition" : "PRTParametrizable",
-	"type" : "normal",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"category" : "Pillar-Model-Document"
+	"type" : "normal"
 }
