@@ -29,7 +29,9 @@ baseline: spec
 			group: 'default' with: #('Core' );
 			group: 'Core' with: #('Via' ). ].
 
+	self baselinePillar: spec.
+
 	self baselinePharo: spec.
-	self baselinePharoPillarVersion056: spec.
+"	self baselinePharoPillarVersion056: spec."
 	
 	self baselineGemStone: spec.
