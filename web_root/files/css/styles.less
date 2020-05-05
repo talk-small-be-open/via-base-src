@@ -1,0 +1,1200 @@
+// Main style file for VIA
+
+// UIKIT ============================================================================
+// Old: @import "../uikit3/src/less/uikit.less";
+// Since we want to avoid loading the print styles, we do import uikit explicitly:
+// Base
+
+@import "../uikit3/src/less/components/variables.less";
+@import "../uikit3/src/less/components/mixin.less";
+@import "../uikit3/src/less/components/base.less";
+
+// Elements
+@import "../uikit3/src/less/components/link.less";
+@import "../uikit3/src/less/components/heading.less";
+@import "../uikit3/src/less/components/divider.less";
+@import "../uikit3/src/less/components/list.less";
+@import "../uikit3/src/less/components/description-list.less";
+@import "../uikit3/src/less/components/table.less";
+@import "../uikit3/src/less/components/icon.less";
+@import "../uikit3/src/less/components/form-range.less";
+@import "../uikit3/src/less/components/form.less"; // After: Icon, Form Range
+@import "../uikit3/src/less/components/button.less";
+
+// Layout
+@import "../uikit3/src/less/components/section.less";
+@import "../uikit3/src/less/components/container.less";
+@import "../uikit3/src/less/components/grid.less";
+@import "../uikit3/src/less/components/tile.less";
+@import "../uikit3/src/less/components/card.less";
+
+// Common
+@import "../uikit3/src/less/components/close.less"; // After: Icon
+@import "../uikit3/src/less/components/spinner.less"; // After: Icon
+@import "../uikit3/src/less/components/totop.less"; // After: Icon
+@import "../uikit3/src/less/components/marker.less"; // After: Icon
+@import "../uikit3/src/less/components/alert.less"; // After: Close
+@import "../uikit3/src/less/components/badge.less";
+@import "../uikit3/src/less/components/label.less";
+@import "../uikit3/src/less/components/overlay.less"; // After: Icon
+@import "../uikit3/src/less/components/article.less"; // After: Subnav
+@import "../uikit3/src/less/components/comment.less"; // After: Subnav
+@import "../uikit3/src/less/components/search.less"; // After: Icon
+
+// Navs
+@import "../uikit3/src/less/components/nav.less";
+@import "../uikit3/src/less/components/navbar.less"; // After: Card, Grid, Nav, Icon, Search
+@import "../uikit3/src/less/components/subnav.less";
+@import "../uikit3/src/less/components/breadcrumb.less";
+@import "../uikit3/src/less/components/pagination.less";
+@import "../uikit3/src/less/components/tab.less";
+@import "../uikit3/src/less/components/slidenav.less"; // After: Icon
+@import "../uikit3/src/less/components/dotnav.less";
+@import "../uikit3/src/less/components/thumbnav.less";
+
+// JavaScript
+@import "../uikit3/src/less/components/accordion.less";
+@import "../uikit3/src/less/components/drop.less"; // After: Card
+@import "../uikit3/src/less/components/dropdown.less"; // After: Card
+@import "../uikit3/src/less/components/modal.less"; // After: Close
+@import "../uikit3/src/less/components/lightbox.less"; // After: Close
+@import "../uikit3/src/less/components/slideshow.less";
+@import "../uikit3/src/less/components/slider.less";
+@import "../uikit3/src/less/components/sticky.less";
+@import "../uikit3/src/less/components/offcanvas.less";
+@import "../uikit3/src/less/components/switcher.less";
+@import "../uikit3/src/less/components/leader.less";
+// Scrollspy
+// Toggle
+// Scroll
+
+// Additional
+@import "../uikit3/src/less/components/iconnav.less";
+@import "../uikit3/src/less/components/notification.less";
+@import "../uikit3/src/less/components/tooltip.less";
+@import "../uikit3/src/less/components/placeholder.less";
+@import "../uikit3/src/less/components/progress.less";
+@import "../uikit3/src/less/components/sortable.less";
+@import "../uikit3/src/less/components/countdown.less";
+
+// Utilities
+@import "../uikit3/src/less/components/animation.less";
+@import "../uikit3/src/less/components/width.less";
+@import "../uikit3/src/less/components/height.less";
+@import "../uikit3/src/less/components/text.less";
+@import "../uikit3/src/less/components/column.less";
+@import "../uikit3/src/less/components/cover.less";
+@import "../uikit3/src/less/components/background.less";
+@import "../uikit3/src/less/components/align.less";
+@import "../uikit3/src/less/components/svg.less";
+@import "../uikit3/src/less/components/utility.less";
+@import "../uikit3/src/less/components/flex.less"; // After: Utility
+@import "../uikit3/src/less/components/margin.less";
+@import "../uikit3/src/less/components/padding.less";
+@import "../uikit3/src/less/components/position.less";
+@import "../uikit3/src/less/components/transition.less";
+@import "../uikit3/src/less/components/visibility.less";
+@import "../uikit3/src/less/components/inverse.less";
+
+// Need to be loaded last
+// NOT INCLUDED! @import "print.less";
+
+// ============================================================================
+
+
+// Our own uikit theme
+@import "uikit_321_theme/_import.less";
+
+
+@import "common.less";
+@import "tasks.less";
+@import "development.less";
+
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(//fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
+}
+
+@core-margin-top:                                   150px;
+@global-primary-background: @via-basic-color;
+
+
+//
+// Your basic colors
+//
+@via-basic-color: #e20613;
+@via-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
+@via-coloredbutton-hover-color: darken(@via-coloredbutton-color, 10%);
+
+
+// @hm-fixed-background-a: url(../images/fixed-background-a.jpg);
+// @hm-fixed-background-b: url(../images/fixed-background-b.jpg);
+// @hm-fixed-background-c: url(../images/fixed-background-c.jpg);
+
+
+
+// 
+// Colors language levels
+//
+
+@level-a1:       #00cc67;    
+@level-a2:       #3399cc;
+@level-b1:       #cc6699;
+@level-b2:       #cccc66;
+@level-c1:       #bcb6a5;
+@level-c2:       #a8b3d3;
+
+
+@level-badge-boxen-fontcolor: #fff;
+@level-badge-boxen-line-height: 2em;
+
+
+@radius-auswahlbox: 5px;
+@rand-auswahlbox:  3px solid @global-primary-background;
+
+@auswahltextgroesse: 16px;
+
+
+// Kacheln Modul icons
+@iconkachel-groesse:    24px;
+
+//
+// Claim fuer 321 via
+// 
+@claim-padding-left: 200px;
+@claim-p-height:0.4em;
+
+
+@hm-subnav-line-border:                             @global-border;
+
+
+@hm-position-darken-background:                     #f5f5f5;
+@hm-position-contrast-background:                   #111;
+// @hm-position-primary-background:                      @global-primary-background;
+
+@hm-position-padding:                               20px;
+
+//
+// Teaser & Header Variables
+//
+
+@hm-teaser-background:                              none;
+
+@hm-header-height:                                  10vh;
+@hm-header-height-small:                            5vh;
+@hm-header-background:                              rgba(0,0,0,0.2);
+@hm-header-small-background:                        fade(@global-background, 95%);
+
+@hm-header-shadow-sticky:                           0 0 50px 1px rgba(0,0,0,0.2);
+@hm-header-shadow-teaser:                           0 0 150px 1px rgba(0,0,0,0.5);
+
+
+//
+// Panel Box Border
+//
+
+@hm-panel-box-border-padding:                      15px;
+@hm-panel-box-border-border:                       @global-border;
+@hm-panel-box-border-width:                        3px;
+
+
+//
+// Headline Border
+//
+
+@hm-headline-border-width:                          3px;
+@hm-headline-border-border:                         @global-primary-background;
+@hm-headline-border-padding:                        15px;
+
+
+
+// 
+// footer
+//
+
+@footer-background:                                 @global-primary-background;
+@footer-color:                                      #fff;
+@footer-padding:                                    12px;
+@footer-min-height:                                 40px;
+@footer-margin-top:                                 25px;
+
+
+//
+// Facebook
+//
+@facebook-blue: #4267B2;
+	
+
+
+table {
+		border-collapse: collapse;
+		
+		td, th {
+				border-bottom: 1px solid #999;
+				padding: 2px 5px;
+		}
+}
+
+
+option {		
+		font-size: @auswahltextgroesse;
+}
+
+
+// Colors for language levels
+.level-a1 {
+		background-color: @level-a1;
+}
+       
+.level-a2 {
+    background-color: @level-a2;
+}
+
+.level-b1 {
+    background-color: @level-b1;
+}
+
+.level-b2 {
+    background-color: @level-b2;
+}
+
+.level-c1 {
+    background-color: @level-c1;
+}
+
+.level-c2 {
+    background-color: @level-c2;
+}
+
+
+.level-badge {
+		-webkit-border-radius: 55px;
+		-moz-border-radius: 55px;
+		border-radius: 55px;
+    // color: #fff !important;
+    // line-height: 2em;
+    font-weight: bold;
+    color: @level-badge-boxen-fontcolor;
+    line-height: @level-badge-boxen-line-height;
+    text-align: center;		
+}
+
+.uk-button {
+		&.level-a1, &.level-a2, &.level-b1, &.level-b2, &.level-c1, &.level-c2 {
+				.level-badge();																																		 
+				margin: 0.3em;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				text-align: center;
+
+				&.selected,
+				&:hover {
+						border: 6px solid white;
+				}
+		}
+}
+
+
+// 
+// Accordion
+// 
+
+@acc-number-background: #000;
+@acc-number-color: #fff;
+@acc-number-height: 31px; 
+@acc-number-padding-top: 9px;
+@acc-number-padding-left: 18px;
+	
+	
+@acc-title-float: left;
+@acc-title-padding-left: 20px;
+@acc-title-padding-top: 9px;
+
+@acc-subtitle-font-size: 0.7em;
+@acc-subtitle-padding-top: 9px;
+ 
+
+
+//
+// header 
+//
+div.hm-header {
+    
+		background-color: @global-background;
+
+		img.tdu-logo {
+				height: @hm-header-height;
+				width: auto;
+				min-height: 3em;
+		}
+
+		.hm-claim {
+				//		padding-left: @claim-padding-left;
+				font-size: 16px;
+				vertical-align: top;
+				// line-height: 22px;
+				margin-top: 1em;
+
+				p {
+						line-height: @claim-p-height;
+				}
+
+		}
+
+		ul.uk-navbar-nav {
+				margin-top: 1em;
+		}
+
+		a.mainMenuToggler {
+				span.uk-icon {
+						margin-right: 0.2em;
+				}
+		}
+		
+		&.uk-active {
+
+				height: @hm-header-height-small;
+				box-shadow: @hm-header-shadow-sticky !important;
+				background: @hm-header-small-background;
+
+				> .uk-container {
+						height: @hm-header-height-small;
+
+						div.uk-navbar-right, div.uk-navbar-left {
+								align-items: flex-start;
+						}
+				}
+
+				//    .uk-dropdown-navbar { margin-top: 15px; }
+
+				// .uk-navbar-nav > li:not(.uk-active) > a {
+				// 		color: @navbar-nav-item-color !important;				
+				// }
+
+				//    .uk-navbar-toggle { color: @navbar-toggle-color !important; }
+
+		}
+
+		// Menu, in navbar or in offcanvas
+		#mainMenu {
+				ul.uk-nav, ul.uk-navbar-nav {
+						// Login Menu, Facebook-Vorgaben
+						li.loginMenu {
+								ul.loginMenu {
+										li.facebookLogin, li.googleLogin {
+												//				background-color: @facebook-blue;
+												padding-left: 2px;
+												background-color: #f6f6f6;
+
+												a.facebookLogin, a.googleLogin {
+														&:hover {
+																color: @base-link-color;
+														}
+														color: #333;
+
+														img.facebookLogo {
+																width: 20px;
+																//						margin: 2px;
+														}
+
+														img.googleLogo {
+																width: 16px;
+																margin: 2px;
+														}
+												}
+										}
+								}
+						}
+				}
+
+				&.uk-offcanvas {
+						ul.uk-nav {
+								li {
+										a {
+												color: white;
+										}
+								}
+						}
+				}
+		}
+
+}
+
+
+div.searchBarContainer {
+
+		background-color: @global-primary-background;
+		padding: 1.5em 0;
+ 		border-bottom: darken(@global-primary-background, 20%) 5px solid;
+
+		div.searchBar {
+
+				padding: 0 0.3em;
+				
+				div.uk-search {
+
+						input.uk-search-input {
+								background-color: #fff;   
+								border-radius: 12px;
+						}
+						
+						button.searchButton
+						{
+								background-color: @via-coloredbutton-color;
+								border: 2px solid white;
+								&:hover {
+										background-color: @via-coloredbutton-hover-color;
+								}
+						}
+				}
+
+				div.extendedSearch {
+						margin: 20px 0 0 0;
+				}
+		}
+}
+
+
+
+div.VIAModuleSearchComponent {
+		div.mapContainer.swissMap {
+				margin: 50px auto;
+				width: 50%;
+		}
+}
+
+
+
+// Accordion html
+
+div.acc-bar {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+		padding: 00px;
+		height: 40px;
+		color: #fff;
+    border: none;
+
+		&.ignored {
+				background-color: #bbb;
+				color: #ddd;
+		}
+		
+		.acc-number {
+				background-color:               @acc-number-background;
+				color:                          @acc-number-color;
+				height:                         @acc-number-height; 
+				padding-top:                    @acc-number-padding-top;
+				padding-left:                   @acc-number-padding-left;   
+				
+				font-weight: bold;
+				width: 30px;
+				float: left;
+				border: none;
+				position: relative; 
+		}
+
+		.acc-icon  {
+				float: left; 
+ 				color: #fff;
+				text-align: center;
+				padding-left:10px; 
+				padding-top: 9px; 
+				font-size: 1.4em;
+				min-width: 20px;
+				height: 20px;
+
+				img.icon {
+						background-color: #fff;
+				}
+		}
+
+		.acc-title {
+				float:                    @acc-title-float;
+				padding-left:             @acc-title-padding-left;
+				padding-top:              @acc-title-padding-top;
+		}
+
+		.acc-toggle  {
+				float: right; 
+				width:20px;
+				height: 20px;
+				padding-top: 10px;
+				margin-left: 20px;
+				margin-right: 20px;
+		}
+
+
+		.acc-subtitle {
+				font-size: @acc-subtitle-font-size;
+				padding-top: @acc-subtitle-padding-top;
+				float: right;
+				white-space: nowrap;
+		}
+}
+
+
+img.icon {
+    width: 20px;
+    height: 20px;		
+}
+
+div.VIAMyPortfolioComponent {
+		div.certificatePreview {
+				border: 20px white solid;
+				margin-top: 15px;
+		}
+
+		a.certificatePreview,
+		a.certificatePreview:hover {
+				color: inherit;
+		}
+
+}
+
+
+//
+// aufgaben testen
+//
+
+input.submit, button.submit {
+		&.check, &.reset, &.recheck, &.revealAnswers, &.save {
+				background: #f00;
+				color: #fff;
+				border:  0px;
+				padding: 10px;
+				font-size: 1.2em;
+				cursor: pointer;
+		}
+}
+
+.uk-button, button {
+		small {
+				margin-left: 0.5em;
+		}
+}
+
+
+//
+// Hintergrund/bild eingeloggt
+//
+ 
+body.loggedIn {
+		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
+		// Kein Background mehr laut Sara
+		// background-image: @hm-fixed-background-b;	
+		// -webkit-background-size: cover;
+		// -moz-background-size: cover;
+		// -o-background-size: cover;
+		// background-size: cover;
+		// background-attachment: fixed;
+
+
+		div.core {
+				background: rgba(255,255,255,0.8);
+				min-height: 500px;
+		}
+}
+
+//
+// module design
+//
+div.moduleCard {
+
+		&.mini {
+				@pad: 0.7em;
+				padding: @pad @pad 0.2em @pad;
+
+				div.title {
+//						text-transform: uppercase;
+				}
+
+				span.level-badge {
+						right: @pad * 1.1;
+						top: @pad * 1.1;
+						border: 1px solid;
+				}
+
+				span.exam-badge {
+						right: @pad * 1.1;
+						top: @pad * 3.1;
+						border: 2px solid;
+				}
+		}
+
+		&.normal {
+				@pad: 1.5em;
+				padding: @pad @pad 0.5em @pad;
+				
+				span.level-badge {
+						right: @pad * 1.1;
+						top: @pad * 1.1;
+						border: 2px solid;
+				}
+
+				span.exam-badge {
+						right: @pad * 1.1;
+						top: @pad * 3.1;
+						border: 2px solid;
+				}
+		}
+		
+		.badge-in-card() {
+				position: absolute;
+				vertical-align: text-bottom;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+		}
+		
+		span.level-badge {
+				.badge-in-card();
+		}		
+
+		span.done-badge, span.inWork-badge {
+				// OPTIMIZE
+				-webkit-border-radius: 55px;
+				-moz-border-radius: 55px;
+				border-radius: 55px;
+				position: absolute;
+				left: -10px;
+				top: -10px;
+				color: white;
+				// background-color: black;
+				vertical-align: text-bottom;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				font-size: 20px;
+
+				span.uk-icon {
+						// OPTIMIZE
+						vertical-align: text-bottom;
+						text-align: center;
+						margin-top: 4px;
+				}
+		}
+
+		span.done-badge {
+				background-color: black;
+		}
+		span.inWork-badge {
+				background-color: gray;
+		}
+
+		span.exam-badge {
+				.level-badge();
+				.badge-in-card();
+				color: black;
+				background-color: yellow;
+		}
+
+
+		.hm-angaben-box {
+				img.hm-kuchen {
+						width: @iconkachel-groesse; 
+						padding-right: 10px;
+						background-color: none;
+				}
+
+				ul.activityTypeTags {
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						display: inline-block;
+
+						li {
+								display: inline-block;
+								margin-right: 3px;
+
+								+ li {
+										border-left: 1px solid black;
+										padding-left: 3px;
+								}
+								
+								span.activityTypeCount {
+										font-weight: bold;
+										color: black;
+								}
+								
+								img.iconActivityType {
+										width:     @iconkachel-groesse;
+										height:    @iconkachel-groesse;
+								}
+						}
+				}
+		}
+
+
+
+
+		div.hm-titel-box {
+				font-size: 120%;
+				text-transform: uppercase;
+				color: #fff;
+				padding: 10px 0px 9px 0px;
+				min-height: 2em;
+		}
+
+		div.hm-tags {
+				margin-top: 15px;
+				padding-top: 4px;
+				border-top: 1px dotted #fff;
+				color:  #fff;
+				font-size: 0.8em;
+				line-height: 1.3em;
+				height: 4em;
+				overflow: hidden;
+		}
+
+		div.rating {
+				margin-top: 4px;
+				color:  #fff;
+				height: 1.2em;
+		}
+		
+}
+
+//
+// ModuleExerciser
+//
+div.VIAModuleExerciser {
+
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+		// 
+		// Titel besser
+		//
+		h2.moduleTitle {
+				padding:5px 5px 5px 5px;
+				background-color: #fff;
+				border-bottom: 1px solid #F00;
+				font-weight: 200;
+				font-size: 2em;
+
+				span.level-badge {
+						width: 50px;
+						height: 50px;
+						padding: 5px;
+				}
+
+				span.rating {
+						float: right;
+				}
+		}
+
+		div.moduleMenu {
+				div.rating {
+						a.noRating {
+								color: @global-muted-color;
+						}
+				}
+		}
+}
+
+//
+// Exam Exerciser
+//
+div.VIAExamModuleExerciser {
+
+		div.submitExam {
+
+				margin-top: 75px;
+				
+				.uk-button.submitExam {
+						background: #f00;
+						color: #fff;
+						border:  0px;
+						padding: 10px;
+						font-size: 1.2em;
+				}
+		}
+}
+
+
+
+nav.hm-navbar {
+		ul.uk-navbar-nav > li {
+				span.menuDivider {
+						display: inline-block;
+						width: 1px;
+						height: 30px;
+						background-color: @global-primary-background;
+						// -webkit-transform: rotate(20deg);
+	    			// -ms-transform: rotate(20deg);
+						transform: rotate(20deg);
+				}
+
+		}
+}
+
+
+//
+// Fixed backgrounds variants
+//
+
+.hm-fixed-background-a,
+.hm-fixed-background-b,
+.hm-fixed-background-c {
+    background-attachment: fixed;
+    background-size: cover;
+    padding: @hm-position-padding 0;
+    position: relative;
+    box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
+   // height:@fixedbackground-home-height;
+}
+
+.hm-fixed-background-a { background-image: @hm-fixed-background-a; }
+.hm-fixed-background-b { background-image: @hm-fixed-background-b; }
+.hm-fixed-background-c { background-image: @hm-fixed-background-c; }
+
+
+
+/* Breakpoints
+ ========================================================================== */
+
+// Small and bigger
+@media (min-width: @breakpoint-small) {
+
+		div.coreContainer {
+				padding-left: 2em;
+				padding-right: 2em;
+		}
+
+		div.VIAMyPortfolioComponent {
+				div.certificatePreview {
+						transform: translate(-25%, -25%) scale(0.5);
+				}
+		}
+		
+}
+
+// Not small phones
+@media (min-width: @breakpoint-small-max) {
+		body.loggedIn {
+				div.core {
+						min-height: 500px;
+				}
+		}
+}
+
+// Only very small phones
+@media (max-width: @breakpoint-small) {
+
+		body.loggedIn {
+				background-attachment: scroll;
+		}
+
+		.hm-fixed-background-a,
+    .hm-fixed-background-b,
+    .hm-fixed-background-c { background-attachment: scroll; }
+
+		
+    .uk-navbar-brand,
+    .uk-navbar-content { padding: 0 !important; }
+
+    .uk-navbar-toggle { padding-right: 0; }
+
+    h1, .uk-h1 {
+        font-size: @base-h1-font-size - 10px;
+        line-height: @base-h1-line-height - 10px;
+    }
+
+    h2, .uk-h2 {
+        font-size: @base-h2-font-size - 10px;
+        line-height: @base-h2-line-height - 10px;
+    }
+
+    h3, .uk-h3 {
+        font-size: @base-h3-font-size - 10px;
+        line-height: @base-h3-line-height - 10px;
+    }
+
+    h4, .uk-h4 {
+        font-size: @base-h4-font-size - 2px;
+        line-height: @base-h4-line-height - 2px;
+    }
+
+    h5, .uk-h5 {
+        font-size: @base-h5-font-size;
+        line-height: @base-h5-line-height;
+    }
+
+    h6, .uk-h6 {
+        font-size: @base-h6-font-size;
+        line-height: @base-h6-line-height;
+    }
+
+    .hm-position-teaser { position: absolute !important; }
+
+		div.moduleCard {
+
+				&.mini {
+						padding: 0.2em;
+				}
+
+				&.normal {
+						padding: 0.5em;
+				}
+
+
+				div.hm-titel-box {
+						font-size: 90%;
+						line-height: normal;
+				}
+
+		}
+
+
+}
+
+
+div.coreContainer {
+		// Wegen fixem footer:
+		padding-bottom: @footer-min-height + 25px;
+}
+
+
+//
+// footer
+// 
+
+.footer {
+    background-color: @footer-background;
+    color: @footer-color;
+    height: @footer-min-height;
+    margin-top: @footer-margin-top;
+
+		position: fixed;
+		z-index: 15;
+		bottom: 0;
+		width: 100%;
+		
+		div.footnotes {
+				padding: @footer-padding;
+		}
+
+		a {
+				color: inherit;
+		}
+		
+		div.awards {
+				position: absolute;
+				right: 0;
+				padding: @footer-padding;
+				
+				img.award {
+						height: @footer-min-height / 1.7;
+						filter: grayscale(100%);
+
+						&:hover {
+								filter: grayscale(0%);
+						}
+				}
+		}
+    
+}
+
+
+
+// zurückknopf
+div.backButton {
+		padding-top: 0.5em;
+}
+
+a.backButtonAnchor, input.check.submit  { 
+    background-color: @global-primary-background;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1em;
+    padding: 4px 10px 4px 10px;
+
+    -webkit-border-radius: @radius-auswahlbox;
+		-moz-border-radius:@radius-auswahlbox;
+		border-radius:@radius-auswahlbox;
+}
+
+a.backButtonAnchor:hover {
+		color: #ddd;   
+}
+
+    
+.topBuffer {
+		margin-top: 20px;
+}
+
+.bottomBuffer {
+		margin-bottom: 20px;
+}
+
+div.pillarParagraph {
+		// Anstelle eines echten p-Tags, weil das nicht schachtelbar ist
+		margin-top: 5px;
+
+		figure.inlineAssetImage {
+				display: inline-block;
+				
+				span.assetInfo {
+						.uk-text-muted();
+						cursor: pointer;
+						float: right;
+				}
+		}
+}
+
+// Spezialkennzeichnung falls NUR als Admin-Funktion sichtbar
+span.adminOnly {
+		border: 1px solid black;
+		span.adminOnlyLabel {
+				position: absolute;
+				font-weight: bold;
+				transform: rotate(-25deg);
+		}
+}
+
+// Dass imagemap keine Rahmen beim Klicken erhalten
+img[usemap], map area{
+    outline: none;
+}
+
+div.inputDialog {
+		textarea {
+ 				width: 500px;
+		}
+}
+
+div.VIAPublicHomeComponent {
+		div#award {
+				position: absolute;
+		}
+}
+
+div.testDriveContainer {
+		margin: 30px;
+}
+
+div.flashMessages {
+		margin-top: 20px;
+}
+
+div.VIAExamTeacherAnalyzer {
+
+		div.analyticsLegend {
+				margin: 10px 0;
+
+				div.colorScale {
+						margin: 10px 0;
+						color: gray;
+						font-size: 75%;
+				}
+		}
+		
+		span.analyticsBox {
+				display: inline-block;
+				padding: 3px;
+
+				span.analyticsDetails {
+						margin-left: 5px;
+						margin-right: 5px;
+						padding: 2px 5px;
+				}
+		}
+
+		div.audioPlayer,
+		div.videoPlayer,
+		div.imageDisplayer {
+				margin: 10px 0;
+		}
+
+		span.clozeTextPlaceholder {
+				.clozeTextPlaceholder;
+				display: inline-block;
+				min-height: 1em;
+				vertical-align: middle;
+				width: 5em;
+		}
+		
+}
+
+// Schweizer Karte (Plugin mapael)
+.mapael {
+		.map {
+        position: relative;
+    }
+		.mapTooltip {
+				position: absolute;
+				background-color: #474c4b;
+				moz-opacity: 0.70;
+				opacity: 0.70;
+				filter: alpha(opacity=70);
+				border-radius: 10px;
+				padding: 10px;
+				z-index: 1000;
+				max-width: 200px;
+				display: none;
+				color: #fff;
+		}
+}
+
+
+div.VIALoginComponent {
+		a.facebookLogin {
+				img.facebookLogo {
+						width: 20px;
+						margin-right: 10px;
+				}				
+		}
+		a.googleLogin {
+				img.googleLogo {
+						width: 20px;
+						margin-right: 10px;
+						background-color: white;
+						border: 3px solid white;
+				}				
+		}
+}
+
+
+
+// Emacs!! Am Ende der Datei stehen lassen!
+// Local Variables:
+// less-css-compile-at-save: t
+// End:
