@@ -1,0 +1,22 @@
+{
+	"class" : {
+		"authorInfoKey" : " 05/05/2020 02:59:33",
+		"authoringCategory" : " 05/05/2020 02:59:33",
+		"displayName" : " 05/05/2020 02:59:33",
+		"isAuthorReady" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"acceptRenderingVisitor:on:" : " 05/05/2020 02:59:33",
+		"acceptVisitor:" : " 05/05/2020 02:59:33",
+		"assets" : " 05/05/2020 02:59:33",
+		"audioAssets" : " 05/05/2020 02:59:33",
+		"checkAnswersOfExercise:" : " 05/05/2020 02:59:33",
+		"code" : " 05/05/2020 02:59:33",
+		"code:" : " 05/05/2020 02:59:33",
+		"createNewAnswerObject" : " 05/05/2020 02:59:33",
+		"cssScope" : " 05/05/2020 02:59:33",
+		"getAutoCode" : " 05/05/2020 02:59:33",
+		"matchesSearchString:" : " 05/05/2020 02:59:33",
+		"maxPoints" : " 05/05/2020 02:59:33",
+		"named:" : " 05/05/2020 02:59:33",
+		"prepareExercise:" : " 05/05/2020 02:59:33",
+		"videoAssets" : " 05/05/2020 02:59:33" } }

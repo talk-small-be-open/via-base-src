@@ -1,0 +1,26 @@
+{
+	"class" : {
+		"csv" : " 05/05/2020 02:59:33",
+		"csvForXSendfile" : " 05/05/2020 02:59:33",
+		"defaultFileExtension" : " 05/05/2020 02:59:33",
+		"defaultTempDirectory" : " 05/05/2020 02:59:33",
+		"extension:tempFolder:" : " 05/05/2020 02:59:33",
+		"extension:tempFolder:contentType:" : " 05/05/2020 02:59:33",
+		"html" : " 05/05/2020 02:59:33",
+		"newInFolder:" : " 05/05/2020 02:59:33",
+		"pdfForXSendfile" : " 05/05/2020 02:59:33",
+		"zip" : " 05/05/2020 02:59:33",
+		"zipForXSendfile" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"close" : " 05/05/2020 02:59:33",
+		"delete" : " 05/05/2020 02:59:33",
+		"ensureDirectoryExists" : " 05/05/2020 02:59:33",
+		"fileBaseName" : " 05/05/2020 02:59:33",
+		"fileExtension" : " 05/05/2020 02:59:33",
+		"fileStream" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"setFileExtension:" : " 05/05/2020 02:59:33",
+		"setTempDirectory:" : " 05/05/2020 02:59:33",
+		"tempDirectory" : " 05/05/2020 02:59:33",
+		"useSeparateFolder" : " 05/05/2020 02:59:33",
+		"write:" : " 05/05/2020 02:59:33" } }

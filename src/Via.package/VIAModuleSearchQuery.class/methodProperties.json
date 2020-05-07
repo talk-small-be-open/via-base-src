@@ -1,0 +1,23 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"beExamsOnly" : " 05/05/2020 02:59:33",
+		"beIncludingExams" : " 05/05/2020 02:59:33",
+		"clear" : " 05/05/2020 02:59:33",
+		"clearClassification" : " 05/05/2020 02:59:33",
+		"clearExerciseLevels" : " 05/05/2020 02:59:33",
+		"defaultBaseCollection" : " 05/05/2020 02:59:33",
+		"exerciseLevel" : " 05/05/2020 02:59:33",
+		"exerciseLevel:" : " 05/05/2020 02:59:33",
+		"exerciseLevels" : " 05/05/2020 02:59:33",
+		"exerciseLevels:" : " 05/05/2020 02:59:33",
+		"includesExerciseLevel:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"isClassificationFiltered" : " 05/05/2020 02:59:33",
+		"isExamsOnlyFiltered" : " 05/05/2020 02:59:33",
+		"isExerciseLevelFiltered" : " 05/05/2020 02:59:33",
+		"isIncludingDrafts" : " 05/05/2020 02:59:33",
+		"isIncludingExams" : " 05/05/2020 02:59:33",
+		"isIncludingPrivates" : " 05/05/2020 02:59:33",
+		"moduleClassification" : " 05/05/2020 02:59:33" } }

@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAObject",
 	"category" : "Via-Database",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"website",
 		"modules",
@@ -17,8 +17,9 @@
 		"exams",
 		"mailer",
 		"exerciseLevels",
-		"users"
-	],
+		"users" ],
 	"name" : "VIAWebsiteData",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

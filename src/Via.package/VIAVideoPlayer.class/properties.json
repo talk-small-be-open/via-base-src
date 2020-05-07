@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "VIADisplayOnlyTaskBrick",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"videoAsset",
 		"startTime",
 		"endTime",
 		"noSound",
 		"transcriptionPillar",
-		"width"
-	],
+		"width" ],
 	"name" : "VIAVideoPlayer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIADisplayOnlyTaskBrick",
+	"type" : "normal" }

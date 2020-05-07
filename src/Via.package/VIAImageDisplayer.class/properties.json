@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "VIADisplayOnlyTaskBrick",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"imageAsset",
-		"width"
-	],
+		"width" ],
 	"name" : "VIAImageDisplayer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIADisplayOnlyTaskBrick",
+	"type" : "normal" }

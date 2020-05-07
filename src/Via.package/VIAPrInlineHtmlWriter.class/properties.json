@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAPrHtmlWriter",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPrInlineHtmlWriter",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAPrHtmlWriter",
+	"type" : "normal" }

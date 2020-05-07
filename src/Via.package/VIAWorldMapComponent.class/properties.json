@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAMapaelMapComponent",
 	"category" : "Via-View-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAWorldMapComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAMapaelMapComponent",
+	"type" : "normal" }

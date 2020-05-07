@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAError",
 	"category" : "Via-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"validationResult"
-	],
+		"validationResult" ],
 	"name" : "VIAValidationError",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAError",
+	"type" : "normal" }

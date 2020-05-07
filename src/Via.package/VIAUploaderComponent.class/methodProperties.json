@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clearErrorMessage" : " 05/05/2020 02:59:33",
+		"clearTempFileReference" : " 05/05/2020 02:59:33",
+		"hasErrorMessage" : " 05/05/2020 02:59:33",
+		"hasUploadedFile" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"isAllowedMimeType:" : " 05/05/2020 02:59:33",
+		"receiveFile:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderUploadFormOn:" : " 05/05/2020 02:59:33",
+		"targetBasePath" : " 05/05/2020 02:59:33",
+		"targetBasePath:" : " 05/05/2020 02:59:33",
+		"targetRelativePath" : " 05/05/2020 02:59:33",
+		"targetRelativePath:" : " 05/05/2020 02:59:33",
+		"tempFileReference" : " 05/05/2020 02:59:33",
+		"validateAndAnswer" : " 05/05/2020 02:59:33" } }

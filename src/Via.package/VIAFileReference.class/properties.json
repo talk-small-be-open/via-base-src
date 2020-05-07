@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModelObject",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"title",
 		"comment",
 		"contentType",
-		"byteSize"
-	],
+		"byteSize" ],
 	"name" : "VIAFileReference",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelObject",
+	"type" : "normal" }

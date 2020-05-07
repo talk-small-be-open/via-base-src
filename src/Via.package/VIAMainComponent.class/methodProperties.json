@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"gotoAssetsDownloadOfModule:" : " 05/05/2020 02:59:33",
+		"gotoExam:" : " 05/05/2020 02:59:33",
+		"gotoFirstScreen" : " 05/05/2020 02:59:33",
+		"gotoHome" : " 05/05/2020 02:59:33",
+		"gotoModule:" : " 05/05/2020 02:59:33",
+		"gotoMyPortfolio" : " 05/05/2020 02:59:33",
+		"gotoMyProfile" : " 05/05/2020 02:59:33",
+		"gotoMyTeacherCockpit" : " 05/05/2020 02:59:33",
+		"gotoSearchModule" : " 05/05/2020 02:59:33",
+		"gotoSearchModuleQuery:renderer:" : " 05/05/2020 02:59:33",
+		"gotoSmartModule:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializeAccountMenu" : " 05/05/2020 02:59:33",
+		"initializeMenu" : " 05/05/2020 02:59:33",
+		"logout" : " 05/05/2020 02:59:33",
+		"openModule:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderNavbarContentOn:" : " 05/05/2020 02:59:33",
+		"renderNavbarSmallContentOn:" : " 05/05/2020 02:59:33",
+		"showAcceptTermsDialog" : " 05/05/2020 02:59:33",
+		"showActivatedUserWelcome" : " 05/05/2020 02:59:33",
+		"showSetNewPasswordDialog" : " 05/05/2020 02:59:33",
+		"updateRoot:" : " 05/05/2020 02:59:33" } }

@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addDataFor:" : " 05/05/2020 02:59:33",
+		"allAnswersOf:do:" : " 05/05/2020 02:59:33",
+		"dataFor:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"run:" : " 05/05/2020 02:59:33",
+		"visitClozeText:" : " 05/05/2020 02:59:33",
+		"visitDisplayOnlyTaskBrick:" : " 05/05/2020 02:59:33",
+		"visitSelectManyInput:" : " 05/05/2020 02:59:33",
+		"visitSelectOneInput:" : " 05/05/2020 02:59:33" } }

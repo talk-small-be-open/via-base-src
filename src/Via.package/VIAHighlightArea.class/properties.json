@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAInputBase",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"text",
-		"strict"
-	],
+		"strict" ],
 	"name" : "VIAHighlightArea",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAInputBase",
+	"type" : "normal" }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponent",
 	"category" : "Via-View-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"detectionDoneUrl"
-	],
+		"detectionDoneUrl" ],
 	"name" : "VIADeviceDetectorComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "WADecoration",
 	"category" : "Via-View-Decoration",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAComponentDecoration",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WADecoration",
+	"type" : "normal" }

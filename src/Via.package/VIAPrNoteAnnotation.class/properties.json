@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "PRAbstractAnnotation",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPrNoteAnnotation",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "PRAbstractAnnotation",
+	"type" : "normal" }

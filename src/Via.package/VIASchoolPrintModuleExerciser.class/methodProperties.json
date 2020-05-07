@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"buildExerciseComponentForTask:" : " 05/05/2020 02:59:33",
+		"currentPortfolio" : " 05/05/2020 02:59:33",
+		"downloadPdf" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderExerciser:index:on:" : " 05/05/2020 02:59:33",
+		"renderFooterOn:" : " 05/05/2020 02:59:33",
+		"renderTitleOn:" : " 05/05/2020 02:59:33",
+		"rendererClass" : " 05/05/2020 02:59:33",
+		"savePdfAs:inFolder:" : " 05/05/2020 02:59:33",
+		"taskExerciserClass" : " 05/05/2020 02:59:33",
+		"updateRoot:" : " 05/05/2020 02:59:33" } }

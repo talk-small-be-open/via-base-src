@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"moduleCardRenderer",
 		"searchFormRenderer",
 		"showMap",
 		"swissmap",
-		"worldmap"
-	],
+		"worldmap" ],
 	"name" : "VIAHomeBaseComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

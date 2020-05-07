@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"default" : " 05/05/2020 02:59:33",
+		"forNewRegistration" : " 05/05/2020 02:59:33",
+		"validateAcceptanceOfTermsAndConditions" : " 05/05/2020 02:59:33",
+		"validatePasswordConfirmation" : " 05/05/2020 02:59:33",
+		"validatePasswordLength" : " 05/05/2020 02:59:33",
+		"validateUniqueEmail" : " 05/05/2020 02:59:33" } }

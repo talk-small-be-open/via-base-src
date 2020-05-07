@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAActivationWelcomeComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

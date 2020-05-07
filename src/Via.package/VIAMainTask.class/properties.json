@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "WATask",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"user",
 		"applicationComponent",
-		"command"
-	],
+		"command" ],
 	"name" : "VIAMainTask",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WATask",
+	"type" : "normal" }

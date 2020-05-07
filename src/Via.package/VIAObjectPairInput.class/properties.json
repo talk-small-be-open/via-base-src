@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAInputBase",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"mapPairsTaskBrick",
 		"leftPillar",
-		"rightPillar"
-	],
+		"rightPillar" ],
 	"name" : "VIAObjectPairInput",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAInputBase",
+	"type" : "normal" }

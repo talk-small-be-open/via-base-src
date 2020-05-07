@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModuleExerciser",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAEmbeddedModuleExerciser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModuleExerciser",
+	"type" : "normal" }

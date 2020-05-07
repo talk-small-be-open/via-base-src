@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIATask",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"children"
-	],
+		"children" ],
 	"name" : "VIACompositeTask",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIATask",
+	"type" : "normal" }

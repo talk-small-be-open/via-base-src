@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"cleanupAfterDeletion" : " 05/05/2020 02:59:33",
+		"deleteFile" : " 05/05/2020 02:59:33",
+		"directory" : " 05/05/2020 02:59:33",
+		"fileBasePath" : " 05/05/2020 02:59:33",
+		"fileBasePath:" : " 05/05/2020 02:59:33",
+		"fileExtension" : " 05/05/2020 02:59:33",
+		"fileName" : " 05/05/2020 02:59:33",
+		"fileName:" : " 05/05/2020 02:59:33",
+		"filePath" : " 05/05/2020 02:59:33",
+		"fileRelativePath" : " 05/05/2020 02:59:33",
+		"fileRelativePath:" : " 05/05/2020 02:59:33",
+		"isFileDefined" : " 05/05/2020 02:59:33",
+		"isFileExisting" : " 05/05/2020 02:59:33",
+		"moveToFolderBase:relative:" : " 05/05/2020 02:59:33",
+		"moveToSubFolderNamed:" : " 05/05/2020 02:59:33",
+		"path" : " 05/05/2020 02:59:33",
+		"readContentType" : " 05/05/2020 02:59:33",
+		"readFileSize" : " 05/05/2020 02:59:33",
+		"title" : " 05/05/2020 02:59:33",
+		"url" : " 05/05/2020 02:59:33",
+		"urlDirectory" : " 05/05/2020 02:59:33" } }

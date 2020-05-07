@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAObject",
 	"category" : "Via-Platform",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"Current"
-	],
-	"instvars" : [ ],
+		"Current" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPlatform",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

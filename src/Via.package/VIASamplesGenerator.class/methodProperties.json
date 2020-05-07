@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createAudioPlayer" : " 05/05/2020 02:59:33",
+		"createClozeText" : " 05/05/2020 02:59:33",
+		"createCompositeTask" : " 05/05/2020 02:59:33",
+		"createHighlightAreas" : " 05/05/2020 02:59:33",
+		"createMapPairs" : " 05/05/2020 02:59:33",
+		"createPillar" : " 05/05/2020 02:59:33",
+		"createVideoPlayer" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"loadDefaultData" : " 05/05/2020 02:59:33",
+		"loadDefaultSampleData:" : " 05/05/2020 02:59:33",
+		"loadDefaultTags" : " 05/05/2020 02:59:33",
+		"loadDefaultWebsites" : " 05/05/2020 02:59:33",
+		"loadDesignerTemplateModule:" : " 05/05/2020 02:59:33",
+		"loadLotsOfDummyModules:" : " 05/05/2020 02:59:33",
+		"loadModule:" : " 05/05/2020 02:59:33",
+		"loadNoCompositeModule:" : " 05/05/2020 02:59:33",
+		"loadTestModule:" : " 05/05/2020 02:59:33",
+		"loadUser:" : " 05/05/2020 02:59:33",
+		"sampleClozePillar" : " 05/05/2020 02:59:33",
+		"sampleHighlightAreasPillar" : " 05/05/2020 02:59:33",
+		"samplePillar" : " 05/05/2020 02:59:33" } }

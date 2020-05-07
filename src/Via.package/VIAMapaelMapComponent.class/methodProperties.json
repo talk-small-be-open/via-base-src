@@ -1,0 +1,25 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addGeocode:" : " 05/05/2020 02:59:33",
+		"addGeocodes:" : " 05/05/2020 02:59:33",
+		"clear" : " 05/05/2020 02:59:33",
+		"clusteredGeocodes" : " 05/05/2020 02:59:33",
+		"cssClassBlock:" : " 05/05/2020 02:59:33",
+		"cssClassFor:" : " 05/05/2020 02:59:33",
+		"gridUnit" : " 05/05/2020 02:59:33",
+		"gridUnitsCount" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"mapaelAreas" : " 05/05/2020 02:59:33",
+		"mapaelMapName" : " 05/05/2020 02:59:33",
+		"maxLatitude" : " 05/05/2020 02:59:33",
+		"maxLongitude" : " 05/05/2020 02:59:33",
+		"minLatitude" : " 05/05/2020 02:59:33",
+		"minLongitude" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderMapOn:" : " 05/05/2020 02:59:33",
+		"tooltipContentBlock:" : " 05/05/2020 02:59:33",
+		"tooltipContentFor:" : " 05/05/2020 02:59:33",
+		"urlBlock:" : " 05/05/2020 02:59:33",
+		"urlFor:canvas:" : " 05/05/2020 02:59:33" } }

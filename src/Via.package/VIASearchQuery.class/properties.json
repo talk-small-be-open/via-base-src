@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAObject",
 	"category" : "Via-Model-Search",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"baseCollection",
 		"text",
 		"textTokens",
 		"filterBlocks",
-		"website"
-	],
+		"website" ],
 	"name" : "VIASearchQuery",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

@@ -1,0 +1,14 @@
+{
+	"class" : {
+		"forEmailDomains" : " 05/05/2020 02:59:33",
+		"minimalForAdmins" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"default" : " 05/05/2020 02:59:33",
+		"forEmailDomains" : " 05/05/2020 02:59:33",
+		"isDomain:subDomainAnyOf:" : " 05/05/2020 02:59:33",
+		"isValidEmailDomains:ofOrganization:" : " 05/05/2020 02:59:33",
+		"minimalForAdmins" : " 05/05/2020 02:59:33",
+		"validateAcronym" : " 05/05/2020 02:59:33",
+		"validateEmailDomains" : " 05/05/2020 02:59:33",
+		"validateHomepageUrl" : " 05/05/2020 02:59:33",
+		"validateTitle" : " 05/05/2020 02:59:33" } }

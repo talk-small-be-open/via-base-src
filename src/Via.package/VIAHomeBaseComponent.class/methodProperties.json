@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"children" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"performSearchQuery:" : " 05/05/2020 02:59:33",
+		"renderFeaturedModulesOn:" : " 05/05/2020 02:59:33",
+		"renderLatestModulesOn:" : " 05/05/2020 02:59:33",
+		"renderMapsOn:" : " 05/05/2020 02:59:33",
+		"renderReelModules:on:" : " 05/05/2020 02:59:33",
+		"renderSearchOn:" : " 05/05/2020 02:59:33" } }

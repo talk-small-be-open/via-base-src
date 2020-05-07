@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAExerciserComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAExerciserEmbeddedPreviewComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAExerciserComponent",
+	"type" : "normal" }

@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "VIASearchQuery",
 	"category" : "Via-Model-Search",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"moduleClassification",
 		"exerciseLevels",
 		"includeDrafts",
 		"includeExams",
 		"includePrivates",
-		"examsOnly"
-	],
+		"examsOnly" ],
 	"name" : "VIAModuleSearchQuery",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIASearchQuery",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAJsInteractInteraction",
 	"category" : "Via-View-Javascript",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAJsInteractDropzone",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAJsInteractInteraction",
+	"type" : "normal" }

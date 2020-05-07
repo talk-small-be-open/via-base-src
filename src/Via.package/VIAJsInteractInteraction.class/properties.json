@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "JSObject",
 	"category" : "Via-View-Javascript",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"interact",
 		"options",
-		"events"
-	],
+		"events" ],
 	"name" : "VIAJsInteractInteraction",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "JSObject",
+	"type" : "normal" }

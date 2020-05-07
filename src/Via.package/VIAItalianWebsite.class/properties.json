@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAWebsite",
 	"category" : "Via-Database",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAItalianWebsite",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAWebsite",
+	"type" : "normal" }

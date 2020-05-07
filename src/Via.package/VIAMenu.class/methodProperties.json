@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"acceptRender:on:" : " 05/05/2020 02:59:33",
+		"addDivider" : " 05/05/2020 02:59:33",
+		"addEntry:action:" : " 05/05/2020 02:59:33",
+		"addEntry:send:to:" : " 05/05/2020 02:59:33",
+		"addEntry:send:to:arg:" : " 05/05/2020 02:59:33",
+		"addItem:" : " 05/05/2020 02:59:33",
+		"addSubMenu" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"subitemsDo:" : " 05/05/2020 02:59:33" } }

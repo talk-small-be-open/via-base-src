@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponent",
 	"category" : "Via-View-Admin",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAAdminClassificationComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

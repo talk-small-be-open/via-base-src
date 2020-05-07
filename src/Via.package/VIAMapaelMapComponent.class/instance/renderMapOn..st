@@ -44,4 +44,3 @@ renderMapOn: html
 		script: (html jQuery this call: 'mapael' with: mapaelOptions);
 		with: [
 			html div class: 'map'; with: 'Here should be a map ...' ].
-

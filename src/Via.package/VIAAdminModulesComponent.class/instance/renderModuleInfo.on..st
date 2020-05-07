@@ -13,4 +13,3 @@ renderModuleInfo: aModule on: html
 	html text: (self countInWork: aModule) asString.
 	html text: ', Finished: '.
 	html text: (self countFinished: aModule) asString.
-

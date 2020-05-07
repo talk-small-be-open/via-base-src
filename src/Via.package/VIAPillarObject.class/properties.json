@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "AndreasBrodbeck 2/22/2016 22:59",
-	"super" : "VIAObject",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 2/22/2016 22:59",
 	"instvars" : [
 		"pillarString",
 		"pillarDocument",
 		"parseOk",
-		"parseError"
-	],
+		"parseError" ],
 	"name" : "VIAPillarObject",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

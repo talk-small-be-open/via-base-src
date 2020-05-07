@@ -1,14 +1,12 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAObject",
 	"category" : "Via-Database",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
 		"Current",
 		"Development",
-		"Production"
-	],
+		"Production" ],
+	"commentStamp" : "",
 	"instvars" : [
 		"databaseName",
 		"users",
@@ -26,8 +24,9 @@
 		"applicationCommands",
 		"exams",
 		"websites",
-		"websiteDatas"
-	],
+		"websiteDatas" ],
 	"name" : "VIADatabase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

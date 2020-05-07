@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAAnswerItem",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
+	"classinstvars" : [
+		 ],
 	"classvars" : [
-		"Default"
-	],
-	"instvars" : [ ],
+		"Default" ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIABlankAnswerItem",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAAnswerItem",
+	"type" : "normal" }

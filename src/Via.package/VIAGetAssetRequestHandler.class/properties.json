@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "WARequestHandler",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAGetAssetRequestHandler",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WARequestHandler",
+	"type" : "normal" }

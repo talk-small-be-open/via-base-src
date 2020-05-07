@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "AndreasBrodbeck 2/7/2012 11:29",
-	"super" : "VIAObject",
 	"category" : "Via-View-Command",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 2/7/2012 11:29",
 	"instvars" : [
 		"code",
 		"createdAt",
@@ -16,8 +16,9 @@
 		"isLogoutRequired",
 		"params",
 		"expirationDate",
-		"website"
-	],
+		"website" ],
 	"name" : "VIAApplicationCommand",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

@@ -1,0 +1,17 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"analyzeExam:" : " 05/05/2020 02:59:33",
+		"createNewExam" : " 05/05/2020 02:59:33",
+		"deleteAllInProgress:" : " 05/05/2020 02:59:33",
+		"deleteExam:" : " 05/05/2020 02:59:33",
+		"deleteStudent:inExam:" : " 05/05/2020 02:59:33",
+		"previewTestExamModule" : " 05/05/2020 02:59:33",
+		"refresh" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderExamsOn:" : " 05/05/2020 02:59:33",
+		"renderStudentsIn:on:" : " 05/05/2020 02:59:33",
+		"renderToolbarOn:" : " 05/05/2020 02:59:33",
+		"showStudent:exam:" : " 05/05/2020 02:59:33",
+		"toggleVisibility:" : " 05/05/2020 02:59:33" } }

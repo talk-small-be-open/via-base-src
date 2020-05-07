@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponentDecoration",
 	"category" : "Via-View-Decoration",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"cssClass"
-	],
+		"cssClass" ],
 	"name" : "VIACenterContainerDecoration",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponentDecoration",
+	"type" : "normal" }

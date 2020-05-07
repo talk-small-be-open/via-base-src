@@ -18,4 +18,3 @@ renderDragDrop: aDragDropInput on: html
 				html pillarString: each object.
 "				self renderDragDropDraggable: each on: html"] separatedBy: [html span: ' / ' ]
 		].
-

@@ -32,4 +32,3 @@ renderDragDropJquery: aDragDropInput on: html
 				ifNotBlank: [:col |
 					col do: [:each |
 						self renderDragDropDraggable: each on: html]]].
-

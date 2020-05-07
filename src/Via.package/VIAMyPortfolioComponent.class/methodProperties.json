@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"children" : " 05/05/2020 02:59:33",
+		"clearPortfolio" : " 05/05/2020 02:59:33",
+		"clickModuleCard:" : " 05/05/2020 02:59:33",
+		"continueExam:" : " 05/05/2020 02:59:33",
+		"generateCertificate" : " 05/05/2020 02:59:33",
+		"generateCertificatePdf" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"removeModule:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderMyCertificateOn:" : " 05/05/2020 02:59:33",
+		"renderMyExamsOn:" : " 05/05/2020 02:59:33",
+		"renderMyModulesOn:" : " 05/05/2020 02:59:33",
+		"showModule:" : " 05/05/2020 02:59:33",
+		"viewExam:" : " 05/05/2020 02:59:33" } }

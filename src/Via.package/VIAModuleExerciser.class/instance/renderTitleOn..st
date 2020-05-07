@@ -13,4 +13,3 @@ renderTitleOn: html
 		self renderRatingOn: html.
 		
 	].
-

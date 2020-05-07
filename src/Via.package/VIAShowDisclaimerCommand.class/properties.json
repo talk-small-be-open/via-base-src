@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAApplicationLightweightCommand",
 	"category" : "Via-View-Command",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAShowDisclaimerCommand",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAApplicationLightweightCommand",
+	"type" : "normal" }

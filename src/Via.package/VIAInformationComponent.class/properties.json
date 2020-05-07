@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "VIAComponent",
 	"category" : "Via-View-Dialogs",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"onOkBlock",
-		"message"
-	],
+		"message" ],
 	"name" : "VIAInformationComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

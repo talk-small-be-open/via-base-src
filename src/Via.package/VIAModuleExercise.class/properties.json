@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAExerciseBase",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"module",
 		"taskExercises",
-		"user"
-	],
+		"user" ],
 	"name" : "VIAModuleExercise",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAExerciseBase",
+	"type" : "normal" }

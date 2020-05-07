@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIARenderer",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"searchText",
 		"query",
-		"isExtendedSearch"
-	],
+		"isExtendedSearch" ],
 	"name" : "VIASearchFormRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIARenderer",
+	"type" : "normal" }

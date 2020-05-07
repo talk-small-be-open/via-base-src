@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAAssetComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"validationResult"
-	],
+		"validationResult" ],
 	"name" : "VIAAssetEditor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAAssetComponent",
+	"type" : "normal" }

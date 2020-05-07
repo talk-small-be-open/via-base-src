@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModelComponent",
 	"category" : "Via-View-Admin",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAAdminTagEditor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelComponent",
+	"type" : "normal" }

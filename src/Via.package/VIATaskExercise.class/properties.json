@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "<historical>",
-	"super" : "VIAExerciseBase",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
 	"instvars" : [
 		"task",
 		"answers",
 		"isOpen",
 		"isFinished",
 		"moduleExercise",
-		"isIgnored"
-	],
+		"isIgnored" ],
 	"name" : "VIATaskExercise",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAExerciseBase",
+	"type" : "normal" }

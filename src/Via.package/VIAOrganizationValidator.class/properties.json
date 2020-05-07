@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAValidator",
 	"category" : "Via-Model-Validation",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAOrganizationValidator",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAValidator",
+	"type" : "normal" }

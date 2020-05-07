@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAUserBase",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"firstName",
 		"lastName",
@@ -12,8 +12,9 @@
 		"roles",
 		"socialIds",
 		"passwordHash",
-		"termsAccepted"
-	],
+		"termsAccepted" ],
 	"name" : "VIAUser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAUserBase",
+	"type" : "normal" }

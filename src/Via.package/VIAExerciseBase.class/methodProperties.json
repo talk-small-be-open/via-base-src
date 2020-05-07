@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"beFinished" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializeDefaultValues" : " 05/05/2020 02:59:33",
+		"isFinished" : " 05/05/2020 02:59:33",
+		"maxPoints" : " 05/05/2020 02:59:33",
+		"points" : " 05/05/2020 02:59:33",
+		"propertiesOf:" : " 05/05/2020 02:59:33",
+		"propertyAt:of:" : " 05/05/2020 02:59:33",
+		"propertyAt:of:put:" : " 05/05/2020 02:59:33" } }

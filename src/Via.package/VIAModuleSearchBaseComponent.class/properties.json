@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"searchFormRenderer",
 		"searchResult",
 		"moduleCardRenderer",
 		"searchQuery",
 		"showMap",
-		"map"
-	],
+		"map" ],
 	"name" : "VIAModuleSearchBaseComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializePillarRenderer" : " 05/05/2020 02:59:33",
+		"renderAudioPlayer:on:" : " 05/05/2020 02:59:33",
+		"renderClozeText:on:" : " 05/05/2020 02:59:33",
+		"renderCompositeTask:on:" : " 05/05/2020 02:59:33",
+		"renderDragDrop:on:" : " 05/05/2020 02:59:33",
+		"renderHighlightArea:on:" : " 05/05/2020 02:59:33",
+		"renderHighlightAreas:on:" : " 05/05/2020 02:59:33",
+		"renderHtmlSnippet:on:" : " 05/05/2020 02:59:33",
+		"renderImageDisplayer:on:" : " 05/05/2020 02:59:33",
+		"renderMapPairs:on:" : " 05/05/2020 02:59:33",
+		"renderObjectPair:on:" : " 05/05/2020 02:59:33",
+		"renderPillarSnippet:on:" : " 05/05/2020 02:59:33",
+		"renderSelectMany:on:" : " 05/05/2020 02:59:33",
+		"renderSelectOne:on:" : " 05/05/2020 02:59:33",
+		"renderSelectPoints:on:" : " 05/05/2020 02:59:33",
+		"renderTaskBrick:on:" : " 05/05/2020 02:59:33",
+		"renderTaskBrickGroup:on:" : " 05/05/2020 02:59:33",
+		"renderTextInput:on:" : " 05/05/2020 02:59:33",
+		"renderVideoPlayer:on:" : " 05/05/2020 02:59:33" } }

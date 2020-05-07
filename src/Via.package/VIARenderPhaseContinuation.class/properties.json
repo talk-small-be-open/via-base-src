@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "WARenderPhaseContinuation",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIARenderPhaseContinuation",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WARenderPhaseContinuation",
+	"type" : "normal" }

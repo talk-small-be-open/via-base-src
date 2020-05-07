@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModuleCardRenderer",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"swissGerman"
-	],
+		"swissGerman" ],
 	"name" : "VIAGermanModuleCardRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModuleCardRenderer",
+	"type" : "normal" }

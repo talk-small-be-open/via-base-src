@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "AndreasBrodbeck 4/6/2020 15:38",
-	"super" : "VIATaskBrick",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 4/6/2020 15:38",
 	"instvars" : [
 		"children",
-		"title"
-	],
+		"title" ],
 	"name" : "VIATaskBrickGroup",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIATaskBrick",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "PRPillarWriter",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPrPillarWriter",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "PRPillarWriter",
+	"type" : "normal" }

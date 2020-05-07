@@ -1,0 +1,27 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clearRenderingHelpers" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializePillarRenderer" : " 05/05/2020 02:59:33",
+		"registerFootnote:" : " 05/05/2020 02:59:33",
+		"registerTaskBrickGroup:" : " 05/05/2020 02:59:33",
+		"renderAnnexOn:" : " 05/05/2020 02:59:33",
+		"renderAudioPlayer:on:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderFootnoteSymbol:on:" : " 05/05/2020 02:59:33",
+		"renderFootnoteSymbolOfBrick:on:" : " 05/05/2020 02:59:33",
+		"renderFootnoteSymbolOfText:on:" : " 05/05/2020 02:59:33",
+		"renderFootnotesOn:" : " 05/05/2020 02:59:33",
+		"renderHighlightArea:on:" : " 05/05/2020 02:59:33",
+		"renderHighlightAreas:on:" : " 05/05/2020 02:59:33",
+		"renderHintSymbolOf:on:" : " 05/05/2020 02:59:33",
+		"renderObjectPair:on:" : " 05/05/2020 02:59:33",
+		"renderSelectMany:on:" : " 05/05/2020 02:59:33",
+		"renderSelectOne:on:" : " 05/05/2020 02:59:33",
+		"renderSelectPoints:on:" : " 05/05/2020 02:59:33",
+		"renderTaskBrickGroup:on:" : " 05/05/2020 02:59:33",
+		"renderTaskBrickGroupsOn:" : " 05/05/2020 02:59:33",
+		"renderTextInput:on:" : " 05/05/2020 02:59:33",
+		"renderVideoPlayer:on:" : " 05/05/2020 02:59:33" } }

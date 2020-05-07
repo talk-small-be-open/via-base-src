@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"default" : " 05/05/2020 02:59:33",
+		"object:" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"addRule:" : " 05/05/2020 02:59:33",
+		"default" : " 05/05/2020 02:59:33",
+		"initializeDefaultValues" : " 05/05/2020 02:59:33",
+		"isEmpty" : " 05/05/2020 02:59:33",
+		"object" : " 05/05/2020 02:59:33",
+		"object:" : " 05/05/2020 02:59:33",
+		"signalIfInvalid" : " 05/05/2020 02:59:33",
+		"validateAbsence" : " 05/05/2020 02:59:33",
+		"validateEmailFormat" : " 05/05/2020 02:59:33",
+		"validateEquality" : " 05/05/2020 02:59:33",
+		"validateFieldConditions" : " 05/05/2020 02:59:33",
+		"validateFormat" : " 05/05/2020 02:59:33",
+		"validateLength" : " 05/05/2020 02:59:33",
+		"validatePresence" : " 05/05/2020 02:59:33",
+		"validateRange" : " 05/05/2020 02:59:33",
+		"validateTrue:" : " 05/05/2020 02:59:33",
+		"validateUrlFormat" : " 05/05/2020 02:59:33",
+		"validateValidityWith:" : " 05/05/2020 02:59:33",
+		"validationGroup:" : " 05/05/2020 02:59:33",
+		"validationResult" : " 05/05/2020 02:59:33" } }

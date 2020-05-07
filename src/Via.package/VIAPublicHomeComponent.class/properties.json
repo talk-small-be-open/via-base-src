@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAHomeBaseComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPublicHomeComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAHomeBaseComponent",
+	"type" : "normal" }

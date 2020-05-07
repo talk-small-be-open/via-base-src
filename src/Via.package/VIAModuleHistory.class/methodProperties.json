@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"addVersion:" : " 05/05/2020 02:59:33",
+		"createNewDraftVersion" : " 05/05/2020 02:59:33",
+		"getVersion:" : " 05/05/2020 02:59:33",
+		"hasMultipleVersions" : " 05/05/2020 02:59:33",
+		"hasReleasedVersions" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"isOldVersion:" : " 05/05/2020 02:59:33",
+		"newestReleasedVersion" : " 05/05/2020 02:59:33",
+		"newestVersion" : " 05/05/2020 02:59:33",
+		"oldVersions" : " 05/05/2020 02:59:33",
+		"removeVersion:" : " 05/05/2020 02:59:33",
+		"versionNumber:" : " 05/05/2020 02:59:33",
+		"versions" : " 05/05/2020 02:59:33",
+		"wd" : " 05/05/2020 02:59:33",
+		"website" : " 05/05/2020 02:59:33" } }

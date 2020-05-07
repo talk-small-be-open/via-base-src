@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "VIASession",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"gotoModule",
 		"isBeta",
 		"backgroundAdminUser",
 		"viewportWidth",
 		"touchEnabled",
-		"deviceDetectionDone"
-	],
+		"deviceDetectionDone" ],
 	"name" : "VIADefaultSession",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIASession",
+	"type" : "normal" }

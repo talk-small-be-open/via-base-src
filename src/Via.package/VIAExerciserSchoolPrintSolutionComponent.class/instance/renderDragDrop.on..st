@@ -8,4 +8,3 @@ renderDragDrop: aDragDropInput on: html
 		with: [
 			aDragDropInput solutions do: [:each |
 				self renderDragDropDraggable: each on: html]].
-

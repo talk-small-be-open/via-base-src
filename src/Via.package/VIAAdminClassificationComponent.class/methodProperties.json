@@ -1,0 +1,10 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createNewTags:type:" : " 05/05/2020 02:59:33",
+		"deleteTag:" : " 05/05/2020 02:59:33",
+		"editTag:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderTagClass:on:" : " 05/05/2020 02:59:33" } }

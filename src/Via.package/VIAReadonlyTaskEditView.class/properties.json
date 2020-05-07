@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIATaskEditor",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAReadonlyTaskEditView",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIATaskEditor",
+	"type" : "normal" }

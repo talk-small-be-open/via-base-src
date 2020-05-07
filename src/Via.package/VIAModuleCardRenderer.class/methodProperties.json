@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clickModule:" : " 05/05/2020 02:59:33",
+		"displayedTagsForModule:do:separatedBy:" : " 05/05/2020 02:59:33",
+		"isDoneModule:" : " 05/05/2020 02:59:33",
+		"isInPortfolioModule:" : " 05/05/2020 02:59:33",
+		"isInWorkByMeModule:" : " 05/05/2020 02:59:33",
+		"renderModule:callback:on:" : " 05/05/2020 02:59:33",
+		"renderModule:on:" : " 05/05/2020 02:59:33",
+		"renderRatingOf:on:" : " 05/05/2020 02:59:33",
+		"renderTags:on:" : " 05/05/2020 02:59:33" } }

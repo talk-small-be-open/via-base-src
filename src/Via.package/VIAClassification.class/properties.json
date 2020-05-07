@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAObject",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"durationTag",
 		"topicTags",
 		"contextTags",
 		"activityTypeTags",
-		"grammarTopicTags"
-	],
+		"grammarTopicTags" ],
 	"name" : "VIAClassification",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAObject",
+	"type" : "normal" }

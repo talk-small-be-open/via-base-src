@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"current" : " 05/07/2020 02:28:04" },
+	"instance" : {
+		"deleteFileNamed:" : " 05/05/2020 02:59:33",
+		"extensionOfFile:" : " 05/05/2020 02:59:33",
+		"fileExists:" : " 05/05/2020 02:59:33",
+		"fullPathNameFor:" : " 05/05/2020 02:59:33",
+		"gemstoneMigrateAll" : " 05/05/2020 02:59:33",
+		"gemstoneNeedMigration" : " 05/05/2020 02:59:33",
+		"moveFileNamed:to:" : " 05/05/2020 02:59:33",
+		"moveFileNamed:toFolder:" : " 05/05/2020 02:59:33",
+		"sizeOfFile:" : " 05/05/2020 02:59:33",
+		"superClassesOf:" : " 05/05/2020 02:59:33",
+		"toUtf8:" : " 05/05/2020 02:59:33" } }

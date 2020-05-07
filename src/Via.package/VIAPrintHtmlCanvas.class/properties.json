@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAHtmlCanvas",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPrintHtmlCanvas",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAHtmlCanvas",
+	"type" : "normal" }

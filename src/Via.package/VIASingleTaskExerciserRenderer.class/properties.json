@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAExerciserBase",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"parentExerciser"
-	],
+		"parentExerciser" ],
 	"name" : "VIASingleTaskExerciserRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAExerciserBase",
+	"type" : "normal" }

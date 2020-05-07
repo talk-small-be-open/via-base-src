@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAMenuRenderer",
 	"category" : "Via-View-Menu",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIADropdownMenuRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAMenuRenderer",
+	"type" : "normal" }

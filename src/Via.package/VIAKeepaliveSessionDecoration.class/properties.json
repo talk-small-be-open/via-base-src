@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponentDecoration",
 	"category" : "Via-View-Decoration",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAKeepaliveSessionDecoration",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponentDecoration",
+	"type" : "normal" }

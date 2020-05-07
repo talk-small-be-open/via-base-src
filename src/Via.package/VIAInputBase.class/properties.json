@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIATaskBrick",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"hintText"
-	],
+		"hintText" ],
 	"name" : "VIAInputBase",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIATaskBrick",
+	"type" : "normal" }

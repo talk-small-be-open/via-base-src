@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "PRVisitor",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"onEachBlock"
-	],
+		"onEachBlock" ],
 	"name" : "VIAPrMarkerProcessor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "PRVisitor",
+	"type" : "normal" }

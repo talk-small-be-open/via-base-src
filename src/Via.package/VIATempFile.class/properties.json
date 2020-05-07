@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "VIALocalFileReference",
 	"category" : "Via-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"file",
 		"fileBaseName",
 		"tempDirectory",
-		"fileExtension"
-	],
+		"fileExtension" ],
 	"name" : "VIATempFile",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIALocalFileReference",
+	"type" : "normal" }

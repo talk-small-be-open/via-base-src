@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAAttributeValidationRule",
 	"category" : "Via-Model-Validation",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"otherValidator",
-		"validationResult"
-	],
+		"validationResult" ],
 	"name" : "VIAValidateValidity",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAAttributeValidationRule",
+	"type" : "normal" }

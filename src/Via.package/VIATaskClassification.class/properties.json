@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAClassification",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIATaskClassification",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAClassification",
+	"type" : "normal" }

@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModuleCardRenderer",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAModuleMiniCardRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModuleCardRenderer",
+	"type" : "normal" }

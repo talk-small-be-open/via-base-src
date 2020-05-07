@@ -1,0 +1,28 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"backgroundAdminUser" : " 05/05/2020 02:59:33",
+		"clearGotoModule" : " 05/05/2020 02:59:33",
+		"deviceDetectionDone" : " 05/05/2020 02:59:33",
+		"deviceDetectionDone:" : " 05/05/2020 02:59:33",
+		"gotoModule" : " 05/05/2020 02:59:33",
+		"gotoModule:" : " 05/05/2020 02:59:33",
+		"hasBackgroundAdminUser" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"isBeta" : " 05/05/2020 02:59:33",
+		"isBeta:" : " 05/05/2020 02:59:33",
+		"isTouchEnabled" : " 05/05/2020 02:59:33",
+		"isViewportMedium" : " 05/05/2020 02:59:33",
+		"isViewportSmall" : " 05/05/2020 02:59:33",
+		"loginUser:" : " 05/05/2020 02:59:33",
+		"logout" : " 05/05/2020 02:59:33",
+		"logoutKeepSession" : " 05/05/2020 02:59:33",
+		"needsDeviceDetection" : "AndreasBrodbeck 05/07/2020 02:30",
+		"switchBackToAdmin" : " 05/05/2020 02:59:33",
+		"switchToUser:" : " 05/05/2020 02:59:33",
+		"touchEnabled" : " 05/05/2020 02:59:33",
+		"touchEnabled:" : " 05/05/2020 02:59:33",
+		"viewportWidth" : " 05/05/2020 02:59:33",
+		"viewportWidth:" : " 05/05/2020 02:59:33",
+		"wantsDeviceDetection" : " 05/06/2020 23:31:10" } }

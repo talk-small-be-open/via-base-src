@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIADisplayOnlyTaskBrick",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"htmlString"
-	],
+		"htmlString" ],
 	"name" : "VIAHtmlSnippet",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIADisplayOnlyTaskBrick",
+	"type" : "normal" }

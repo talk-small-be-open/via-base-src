@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModelObject",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"tasks",
 		"title",
@@ -26,8 +26,9 @@
 		"releasedAt",
 		"geocode",
 		"geocodes",
-		"allowIgnoreTasks"
-	],
+		"allowIgnoreTasks" ],
 	"name" : "VIAModule",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelObject",
+	"type" : "normal" }

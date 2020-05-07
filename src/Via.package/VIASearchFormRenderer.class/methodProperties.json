@@ -1,0 +1,23 @@
+{
+	"class" : {
+		"component:query:" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"copySettingsFrom:" : " 05/05/2020 02:59:33",
+		"ifSimpleSearch:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"isExtendedSearch" : " 05/05/2020 02:59:33",
+		"performBlankSearch" : " 05/05/2020 02:59:33",
+		"performExamsSearch" : " 05/05/2020 02:59:33",
+		"performSearch" : " 05/05/2020 02:59:33",
+		"performWithExerciseLevel:" : " 05/05/2020 02:59:33",
+		"query" : " 05/05/2020 02:59:33",
+		"query:" : " 05/05/2020 02:59:33",
+		"renderActionButtonsOn:" : " 05/05/2020 02:59:33",
+		"renderExtendedSearchOn:" : " 05/05/2020 02:59:33",
+		"renderLevelButtonsOn:" : " 05/05/2020 02:59:33",
+		"renderOn:" : " 05/05/2020 02:59:33",
+		"searchText" : " 05/05/2020 02:59:33",
+		"searchText:" : " 05/05/2020 02:59:33",
+		"setQuery:" : " 05/05/2020 02:59:33",
+		"toggleExtendedSearch" : " 05/05/2020 02:59:33",
+		"toggleExtendedSearchAndPerform" : " 05/05/2020 02:59:33" } }

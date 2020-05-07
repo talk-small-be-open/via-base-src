@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"asDictionary" : "AndreasBrodbeck 12/14/2015 22:12",
+		"average" : "AndreasBrodbeck 08/20/2017 15:27",
+		"flatCollect:" : "AndreasBrodbeck 12/14/2015 19:18",
+		"flatCollect:as:" : "AndreasBrodbeck 12/14/2015 18:47",
+		"flatCollectAsSet:" : "AndreasBrodbeck 12/14/2015 19:18",
+		"groupedBy:" : "AndreasBrodbeck 08/24/2017 12:34",
+		"identityIncludes:" : "AndreasBrodbeck 09/24/2017 11:51",
+		"includesAll:" : "AndreasBrodbeck 01/19/2016 22:02",
+		"includesAny:" : "AndreasBrodbeck 01/18/2016 06:23",
+		"sum:" : "AndreasBrodbeck 12/15/2015 14:06",
+		"sumNumbers:" : "AndreasBrodbeck 12/14/2015 21:26" } }

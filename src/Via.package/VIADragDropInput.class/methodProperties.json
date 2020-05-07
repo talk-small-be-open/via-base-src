@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"displayName" : " 05/05/2020 02:59:33",
+		"isAuthorReady" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"acceptRenderingVisitor:on:" : " 05/05/2020 02:59:33",
+		"choices" : " 05/05/2020 02:59:33",
+		"choicesString" : " 05/05/2020 02:59:33",
+		"choicesString:" : " 05/05/2020 02:59:33",
+		"correctnessOfAnswer:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializeWithMarker:" : " 05/05/2020 02:59:33",
+		"isSolution:" : " 05/05/2020 02:59:33",
+		"maxPoints" : " 05/05/2020 02:59:33",
+		"parentBrick" : " 05/05/2020 02:59:33",
+		"parentBrick:" : " 05/05/2020 02:59:33",
+		"postCopy" : " 05/05/2020 02:59:33",
+		"prepareExercise:" : " 05/05/2020 02:59:33",
+		"rebuildChoiceAndSolutionObjects" : " 05/05/2020 02:59:33",
+		"solutions" : " 05/05/2020 02:59:33",
+		"wrongChoices" : " 05/05/2020 02:59:33" } }

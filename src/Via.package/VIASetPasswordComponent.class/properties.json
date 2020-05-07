@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "AndreasBrodbeck 5/27/2011 10:03",
-	"super" : "VIAComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 5/27/2011 10:03",
 	"instvars" : [
 		"password",
 		"passwordConfirmation",
-		"validationResult"
-	],
+		"validationResult" ],
 	"name" : "VIASetPasswordComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

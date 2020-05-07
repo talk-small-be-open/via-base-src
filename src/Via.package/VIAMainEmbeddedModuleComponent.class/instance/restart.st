@@ -1,3 +1,3 @@
 as yet unclassified
 restart
-	self openModule: module 
+	self openModule: module

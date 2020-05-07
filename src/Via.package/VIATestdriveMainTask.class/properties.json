@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAMainTask",
 	"category" : "Via-View-Testdrive",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIATestdriveMainTask",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAMainTask",
+	"type" : "normal" }

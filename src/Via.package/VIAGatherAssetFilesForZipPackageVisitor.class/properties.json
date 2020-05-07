@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAVisitor",
 	"category" : "Via-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"files",
 		"titlePrefix",
 		"videoCounter",
-		"audioCounter"
-	],
+		"audioCounter" ],
 	"name" : "VIAGatherAssetFilesForZipPackageVisitor",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAVisitor",
+	"type" : "normal" }

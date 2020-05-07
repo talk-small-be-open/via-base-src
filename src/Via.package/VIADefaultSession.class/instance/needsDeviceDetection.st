@@ -1,3 +1,3 @@
 viewport
 needsDeviceDetection
-	^ self deviceDetectionDone = false
+  ^ false

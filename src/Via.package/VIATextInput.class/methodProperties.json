@@ -1,0 +1,25 @@
+{
+	"class" : {
+		"displayName" : " 05/05/2020 02:59:33",
+		"isAuthorReady" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"acceptRenderingVisitor:on:" : " 05/05/2020 02:59:33",
+		"addSolution:" : " 05/05/2020 02:59:33",
+		"autoShowHint" : " 05/05/2020 02:59:33",
+		"autoShowHint:" : " 05/05/2020 02:59:33",
+		"canShowInputMaskHint" : " 05/05/2020 02:59:33",
+		"correctnessOfAnswer:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializeWithMarker:" : " 05/05/2020 02:59:33",
+		"inputMaskHint" : " 05/05/2020 02:59:33",
+		"isAutoShowHint" : " 05/05/2020 02:59:33",
+		"isBlankIsSolution" : " 05/05/2020 02:59:33",
+		"isMultiSolution" : " 05/05/2020 02:59:33",
+		"postCopy" : " 05/05/2020 02:59:33",
+		"showCharsCount" : " 05/05/2020 02:59:33",
+		"showCharsCount:" : " 05/05/2020 02:59:33",
+		"solution" : " 05/05/2020 02:59:33",
+		"solutions" : " 05/05/2020 02:59:33",
+		"solutions:" : " 05/05/2020 02:59:33",
+		"solutionsString" : " 05/05/2020 02:59:33",
+		"solutionsString:" : " 05/05/2020 02:59:33" } }

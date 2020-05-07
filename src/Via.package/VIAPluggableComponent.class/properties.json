@@ -1,10 +1,10 @@
 {
-	"commentStamp" : "AndreasBrodbeck 10/5/2011 15:29",
-	"super" : "VIAComponent",
 	"category" : "Via-View-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 10/5/2011 15:29",
 	"instvars" : [
 		"titleRenderBlock",
 		"contentRenderBlock",
@@ -13,8 +13,9 @@
 		"titleText",
 		"panelDecoration",
 		"showCloseButton",
-		"onUpdateRootBlock"
-	],
+		"onUpdateRootBlock" ],
 	"name" : "VIAPluggableComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponent",
+	"type" : "normal" }

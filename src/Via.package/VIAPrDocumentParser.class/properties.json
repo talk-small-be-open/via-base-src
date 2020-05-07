@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "PRDocumentParser",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAPrDocumentParser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "PRDocumentParser",
+	"type" : "normal" }

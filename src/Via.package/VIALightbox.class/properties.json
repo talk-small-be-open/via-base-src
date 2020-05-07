@@ -1,16 +1,17 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAComponentDecoration",
 	"category" : "Via-View-Decoration",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"delegate",
 		"title",
 		"showClose",
-		"isWide"
-	],
+		"isWide" ],
 	"name" : "VIALightbox",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAComponentDecoration",
+	"type" : "normal" }

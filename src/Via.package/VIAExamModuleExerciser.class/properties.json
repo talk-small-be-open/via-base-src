@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "AndreasBrodbeck 3/16/2020 23:03",
-	"super" : "VIAModuleExerciser",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 3/16/2020 23:03",
 	"instvars" : [
-		"exam"
-	],
+		"exam" ],
 	"name" : "VIAExamModuleExerciser",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModuleExerciser",
+	"type" : "normal" }

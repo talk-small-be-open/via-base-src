@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModelComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"module"
-	],
+		"module" ],
 	"name" : "VIAUserComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelComponent",
+	"type" : "normal" }

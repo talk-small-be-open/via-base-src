@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAError",
 	"category" : "Via-Misc",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"lineString",
 		"lineNumber",
-		"syntaxError"
-	],
+		"syntaxError" ],
 	"name" : "VIAPillarSyntaxError",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAError",
+	"type" : "normal" }

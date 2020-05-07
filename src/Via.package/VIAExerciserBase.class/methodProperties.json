@@ -1,0 +1,13 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"ifCorrectionAnd:then:" : " 05/05/2020 02:59:33",
+		"ifc:" : " 05/05/2020 02:59:33",
+		"ifca:t:" : " 05/05/2020 02:59:33",
+		"isHideWrongAnswers" : " 05/05/2020 02:59:33",
+		"isShowCorrection" : " 05/05/2020 02:59:33",
+		"isca:" : " 05/05/2020 02:59:33",
+		"renderAssetInfo:on:" : " 05/05/2020 02:59:33",
+		"renderCorrection:on:" : " 05/05/2020 02:59:33",
+		"renderCorrection:showWrong:on:" : " 05/05/2020 02:59:33" } }

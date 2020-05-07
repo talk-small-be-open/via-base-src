@@ -1,18 +1,19 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModelObject",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"teacherUser",
 		"module",
 		"moduleExercises",
 		"createdAt",
 		"moduleExercisesInProgress",
-		"visibleAfterSubmit"
-	],
+		"visibleAfterSubmit" ],
 	"name" : "VIAExam",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelObject",
+	"type" : "normal" }

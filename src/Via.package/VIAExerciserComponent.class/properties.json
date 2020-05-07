@@ -1,17 +1,18 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAExerciserBase",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"exercise",
 		"onFinishBlock",
 		"onCheckButtonBlock",
 		"parentComponent",
-		"exerciserForHighlightAreas"
-	],
+		"exerciserForHighlightAreas" ],
 	"name" : "VIAExerciserComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAExerciserBase",
+	"type" : "normal" }

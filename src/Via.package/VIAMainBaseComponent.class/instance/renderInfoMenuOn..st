@@ -39,4 +39,3 @@ renderInfoMenuOn: html
 				].
 
 	]]]
-

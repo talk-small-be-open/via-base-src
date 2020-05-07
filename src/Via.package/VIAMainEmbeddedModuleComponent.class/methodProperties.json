@@ -1,0 +1,12 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"gotoFirstScreen" : " 05/05/2020 02:59:33",
+		"gotoModule:" : " 05/05/2020 02:59:33",
+		"logout" : " 05/05/2020 02:59:33",
+		"openLoginDialog" : " 05/05/2020 02:59:33",
+		"openModule:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderHeaderOn:" : " 05/05/2020 02:59:33",
+		"restart" : " 05/05/2020 02:59:33" } }

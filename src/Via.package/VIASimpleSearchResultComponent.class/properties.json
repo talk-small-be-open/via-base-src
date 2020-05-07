@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAModuleSearchBaseComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIASimpleSearchResultComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModuleSearchBaseComponent",
+	"type" : "normal" }

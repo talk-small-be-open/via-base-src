@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "AndreasBrodbeck 3/29/2016 14:12",
-	"super" : "VIAModelObject",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 3/29/2016 14:12",
 	"instvars" : [
-		"taskBrick"
-	],
+		"taskBrick" ],
 	"name" : "VIAAnswerItem",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAModelObject",
+	"type" : "normal" }

@@ -1,4 +1,4 @@
-SystemOrganization addCategory: #Via!
+SystemOrganization addCategory: #'Via'!
 SystemOrganization addCategory: #'Via-Database'!
 SystemOrganization addCategory: #'Via-Misc'!
 SystemOrganization addCategory: #'Via-Model'!

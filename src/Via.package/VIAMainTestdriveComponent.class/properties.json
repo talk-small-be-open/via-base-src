@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAMainBaseComponent",
 	"category" : "Via-View-Testdrive",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAMainTestdriveComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAMainBaseComponent",
+	"type" : "normal" }

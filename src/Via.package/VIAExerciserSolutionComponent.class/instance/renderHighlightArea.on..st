@@ -9,4 +9,3 @@ renderHighlightArea: aHighlightArea on: html
 		class: 'answerWasCorrect' if: answerHolder isCorrect;
 		class: 'answerWasWrong' if: answerHolder isWrong;
 		with: aHighlightArea text.
-

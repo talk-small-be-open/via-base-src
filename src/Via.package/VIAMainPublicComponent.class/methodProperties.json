@@ -1,0 +1,26 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"children" : " 05/05/2020 02:59:33",
+		"downloadLocalLoginHelpPdf" : " 05/05/2020 02:59:33",
+		"forgotPassword" : " 05/05/2020 02:59:33",
+		"gotoExam:" : " 05/05/2020 02:59:33",
+		"gotoFirstScreen" : " 05/05/2020 02:59:33",
+		"gotoHome" : " 05/05/2020 02:59:33",
+		"gotoModule:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"initializeLoginMenu" : " 05/05/2020 02:59:33",
+		"initializeMenu" : " 05/05/2020 02:59:33",
+		"login" : " 05/05/2020 02:59:33",
+		"openLocalLoginDialog" : " 05/05/2020 02:59:33",
+		"openLoginDialog" : " 05/05/2020 02:59:33",
+		"registerNewUser" : " 05/05/2020 02:59:33",
+		"renderBottomScriptsOn:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderLoginMenuOn:" : " 05/05/2020 02:59:33",
+		"renderNavbarContentOn:" : " 05/05/2020 02:59:33",
+		"renderNavbarSmallContentOn:" : " 05/05/2020 02:59:33",
+		"renderQuickLoginOn:" : " 05/05/2020 02:59:33",
+		"showAccountDeletedConfirmation" : " 05/05/2020 02:59:33",
+		"updateRoot:" : " 05/05/2020 02:59:33" } }

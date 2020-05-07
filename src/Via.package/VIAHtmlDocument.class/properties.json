@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "WAHtmlDocument",
 	"category" : "Via-View-Core",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAHtmlDocument",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "WAHtmlDocument",
+	"type" : "normal" }

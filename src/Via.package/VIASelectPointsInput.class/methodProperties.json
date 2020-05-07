@@ -1,0 +1,16 @@
+{
+	"class" : {
+		"displayName" : " 05/05/2020 02:59:33",
+		"isAuthorReady" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"acceptRenderingVisitor:on:" : " 05/05/2020 02:59:33",
+		"choices" : " 05/05/2020 02:59:33",
+		"choicesString" : " 05/05/2020 02:59:33",
+		"choicesString:" : " 05/05/2020 02:59:33",
+		"correctnessOfAnswer:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"labelForChoice:" : " 05/05/2020 02:59:33",
+		"maxPoints" : " 05/05/2020 02:59:33",
+		"pointsOfAnswer:" : " 05/05/2020 02:59:33",
+		"postCopy" : " 05/05/2020 02:59:33",
+		"setAnswerHolderCorrectness:" : " 05/05/2020 02:59:33" } }

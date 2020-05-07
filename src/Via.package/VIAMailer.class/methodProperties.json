@@ -1,0 +1,19 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"dearUser:" : " 05/05/2020 02:59:33",
+		"defaultSender" : " 05/05/2020 02:59:33",
+		"defaultSignature" : " 05/05/2020 02:59:33",
+		"enabled" : " 05/05/2020 02:59:33",
+		"enabled:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"language" : " 05/05/2020 02:59:33",
+		"sendActivationLinkToUser:" : " 05/05/2020 02:59:33",
+		"sendDeleteAccountLinkForUser:" : " 05/05/2020 02:59:33",
+		"sendMailTo:cc:bcc:subject:body:replyTo:sender:" : " 05/05/2020 02:59:33",
+		"sendMailTo:subject:body:" : " 05/05/2020 02:59:33",
+		"sendSetNewPasswordLinkForUser:" : " 05/05/2020 02:59:33",
+		"sendTestEmailTo:" : " 05/05/2020 02:59:33",
+		"website" : " 05/05/2020 02:59:33",
+		"website:" : " 05/05/2020 02:59:33" } }

@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAMediaAsset",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"fileReference"
-	],
+		"fileReference" ],
 	"name" : "VIAAudioAsset",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAMediaAsset",
+	"type" : "normal" }

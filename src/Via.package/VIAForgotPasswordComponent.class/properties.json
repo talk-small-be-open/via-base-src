@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAPagedComponent",
 	"category" : "Via-View",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"email",
-		"user"
-	],
+		"user" ],
 	"name" : "VIAForgotPasswordComponent",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAPagedComponent",
+	"type" : "normal" }

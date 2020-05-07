@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"isSolution" : " 05/05/2020 02:59:33",
+		"renderButtonsOn:" : " 05/05/2020 02:59:33",
+		"renderClozeTextUndroppedDraggables:on:" : " 05/05/2020 02:59:33",
+		"renderDragDrop:on:" : " 05/05/2020 02:59:33",
+		"renderHighlightArea:on:" : " 05/05/2020 02:59:33",
+		"renderHighlightAreas:on:" : " 05/05/2020 02:59:33",
+		"renderObjectPair:on:" : " 05/05/2020 02:59:33",
+		"renderSelectMany:on:" : " 05/05/2020 02:59:33",
+		"renderSelectOne:on:" : " 05/05/2020 02:59:33",
+		"renderSelectPoints:on:" : " 05/05/2020 02:59:33",
+		"renderTextInput:on:" : " 05/05/2020 02:59:33" } }

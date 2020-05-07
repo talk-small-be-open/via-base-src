@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAInputBase",
 	"category" : "Via-Model-Task",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"showCharsCount",
 		"solutions",
-		"autoShowHint"
-	],
+		"autoShowHint" ],
 	"name" : "VIATextInput",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAInputBase",
+	"type" : "normal" }

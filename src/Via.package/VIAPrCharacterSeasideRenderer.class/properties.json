@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAPrSeasideRenderer",
 	"category" : "Via-Pillar",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"characterRenderingBlock"
-	],
+		"characterRenderingBlock" ],
 	"name" : "VIAPrCharacterSeasideRenderer",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAPrSeasideRenderer",
+	"type" : "normal" }

@@ -1,15 +1,16 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAFileReference",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
 		"fileBasePath",
 		"fileRelativePath",
-		"fileName"
-	],
+		"fileName" ],
 	"name" : "VIALocalFileReference",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAFileReference",
+	"type" : "normal" }

@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "AndreasBrodbeck 4/12/2020 23:27",
-	"super" : "JSObject",
 	"category" : "Via-View-Javascript",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "AndreasBrodbeck 4/12/2020 23:27",
 	"instvars" : [
 		"id",
-		"options"
-	],
+		"options" ],
 	"name" : "VIAJsSortable",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "JSObject",
+	"type" : "normal" }

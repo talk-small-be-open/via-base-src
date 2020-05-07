@@ -1,0 +1,21 @@
+{
+	"class" : {
+		"displayName" : " 05/05/2020 02:59:33",
+		"isAuthorReady" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		"acceptRenderingVisitor:on:" : " 05/05/2020 02:59:33",
+		"addChild:" : " 05/05/2020 02:59:33",
+		"assets" : " 05/05/2020 02:59:33",
+		"checkAnswersOfExercise:" : " 05/05/2020 02:59:33",
+		"children" : " 05/05/2020 02:59:33",
+		"children:" : " 05/05/2020 02:59:33",
+		"childrenDo:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"matchesSearchString:" : " 05/05/2020 02:59:33",
+		"maxPoints" : " 05/05/2020 02:59:33",
+		"postCopy" : " 05/05/2020 02:59:33",
+		"prepareExercise:" : " 05/05/2020 02:59:33",
+		"removeChild:" : " 05/05/2020 02:59:33",
+		"sortChildrenBy:" : " 05/05/2020 02:59:33",
+		"title" : " 05/05/2020 02:59:33",
+		"title:" : " 05/05/2020 02:59:33" } }

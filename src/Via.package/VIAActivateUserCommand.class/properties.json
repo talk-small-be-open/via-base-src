@@ -1,11 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAApplicationCommand",
 	"category" : "Via-View-Command",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
 	"name" : "VIAActivateUserCommand",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAApplicationCommand",
+	"type" : "normal" }

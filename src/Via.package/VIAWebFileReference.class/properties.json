@@ -1,13 +1,14 @@
 {
-	"commentStamp" : "",
-	"super" : "VIAFileReference",
 	"category" : "Via-Model",
-	"classinstvars" : [ ],
-	"pools" : [ ],
-	"classvars" : [ ],
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
 	"instvars" : [
-		"url"
-	],
+		"url" ],
 	"name" : "VIAWebFileReference",
-	"type" : "normal"
-}
+	"pools" : [
+		 ],
+	"super" : "VIAFileReference",
+	"type" : "normal" }

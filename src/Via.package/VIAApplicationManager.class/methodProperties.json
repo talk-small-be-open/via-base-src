@@ -1,0 +1,20 @@
+{
+	"class" : {
+		"backupModulesAsPdf" : " 05/05/2020 02:59:33",
+		"configurePaths" : " 05/05/2020 02:59:33",
+		"configureStaticWebserverAt:" : " 05/05/2020 02:59:33",
+		"configureWebserver" : " 05/05/2020 02:59:33",
+		"enableAutomation" : " 05/05/2020 02:59:33",
+		"ensureDefaultRenderer" : " 05/05/2020 02:59:33",
+		"installInGemStone" : " 05/05/2020 02:59:33",
+		"installSmtpConfig" : " 05/05/2020 02:59:33",
+		"loadAdmin:password:" : " 05/05/2020 02:59:33",
+		"loadDefaultData" : " 05/05/2020 02:59:33",
+		"registerSeasideComponents" : " 05/05/2020 02:59:33",
+		"runNightlyTasks" : " 05/05/2020 02:59:33",
+		"runTasksAll5Minutes" : " 05/05/2020 02:59:33",
+		"setDevelopmentProcessEnvironment" : " 05/05/2020 02:59:33",
+		"shutDown:" : " 05/05/2020 02:59:33",
+		"startUp:" : " 05/05/2020 02:59:33" },
+	"instance" : {
+		 } }

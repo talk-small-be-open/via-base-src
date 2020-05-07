@@ -1,0 +1,15 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createUser" : " 05/05/2020 02:59:33",
+		"deleteUser:" : " 05/05/2020 02:59:33",
+		"editUser:" : " 05/05/2020 02:59:33",
+		"initialize" : " 05/05/2020 02:59:33",
+		"renderAdminsOn:" : " 05/05/2020 02:59:33",
+		"renderAllUsersOn:" : " 05/05/2020 02:59:33",
+		"renderContentOn:" : " 05/05/2020 02:59:33",
+		"renderEditorsOn:" : " 05/05/2020 02:59:33",
+		"renderTeachersOn:" : " 05/05/2020 02:59:33",
+		"resetAllUserTerms" : " 05/05/2020 02:59:33",
+		"setEmailFor:" : " 05/05/2020 02:59:33" } }
