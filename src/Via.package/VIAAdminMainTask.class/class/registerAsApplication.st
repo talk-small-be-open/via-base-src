@@ -1,3 +1,3 @@
 as yet unclassified
 registerAsApplication
-	self registerAsApplication: '321admin'
+	self registerAsApplication: 'via-admin'
