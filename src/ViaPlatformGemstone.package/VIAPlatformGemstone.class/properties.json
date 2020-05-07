@@ -1,0 +1,14 @@
+{
+	"category" : "ViaPlatformGemstone",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "VIAPlatformGemstone",
+	"pools" : [
+		 ],
+	"super" : "VIAPlatform",
+	"type" : "normal" }
