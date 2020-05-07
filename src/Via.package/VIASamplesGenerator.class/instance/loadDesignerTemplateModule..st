@@ -31,4 +31,3 @@ loadDesignerTemplateModule: aWebsite
 	task := self createCompositeTask.
 	module addTask: task.
 	task addChild: self createAudioPlayer.
-

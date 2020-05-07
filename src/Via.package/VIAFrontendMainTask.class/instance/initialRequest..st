@@ -78,4 +78,3 @@ initialRequest: aRequest
 			command := SIRSelectMenuEntryCommand new
 				menuEntryUrlKey: commandName;
 				yourself]]."
-

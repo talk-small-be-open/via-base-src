@@ -57,4 +57,3 @@ renderContentOn: html
 		self renderGeoInformationOn: html.
 
 		self renderFormButtonsOn: html].
-	

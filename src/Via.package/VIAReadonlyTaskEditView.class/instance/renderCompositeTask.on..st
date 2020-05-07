@@ -12,4 +12,3 @@ renderCompositeTask: aCompositeTask on: html
 				html listItem class: 'taskChild'; with: [
 					self renderTaskBrickHandle: each parentBrick: aCompositeTask on: html.
 					each acceptRenderingVisitor: self on: html]]].
-	

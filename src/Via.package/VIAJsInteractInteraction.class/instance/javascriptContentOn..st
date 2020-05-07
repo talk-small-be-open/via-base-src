@@ -20,4 +20,3 @@ javascriptContentOn: aStream
 		nextPut: $.;
 		nextPutAll: self method.
 	JSStream encodeArguments: self arguments on: aStream.
-	

@@ -15,4 +15,3 @@ renderTextInput: aPlaceholder on: html
 		class: 'markedAsEmpty' if: answerValue isExplicitBlank;
 		style: ('width: ', solutionMaxSize greaseString, 'em;');
 		value: (MCLPlatform joinCollection: aPlaceholder solutions delimiter: ' / ').
-

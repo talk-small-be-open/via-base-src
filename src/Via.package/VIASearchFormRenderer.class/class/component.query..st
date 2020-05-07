@@ -5,4 +5,3 @@ component: aComponent query: aQuery
 		setQuery: aQuery;
 		initialize;
 		yourself
-	

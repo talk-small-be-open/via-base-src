@@ -56,4 +56,3 @@ renderCompositeTask: aCompositeTask on: html
 			class: 'button';
 			callback: [self importFromOtherTaskInto: aCompositeTask];
 			with: '+ Import copy of another task ... '.
-

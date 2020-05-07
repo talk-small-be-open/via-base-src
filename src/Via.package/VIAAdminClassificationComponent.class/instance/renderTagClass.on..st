@@ -20,4 +20,3 @@ renderTagClass: aTagClass on: html
 					html anchor
 						callback: [self deleteTag: each];
 						with: 'Delete']]]].
-

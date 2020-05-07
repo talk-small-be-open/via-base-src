@@ -6,4 +6,3 @@ prepareExercise: anExercise
 	
 "	orderedChoices := self isShuffledChoices ifTrue: [self choices shuffled] ifFalse: [self choices].
 	anExercise propertyAt: #orderedChoices of: self put: orderedChoices."
-
