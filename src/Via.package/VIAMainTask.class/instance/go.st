@@ -27,5 +27,5 @@ go
 		on: Error
 		do: [:error |
 			self clearCommand.
-			self ifDevelopment: [error pass]
-"			self displayMessageAndCallPublicApplication: error messageText"]
+			self ifDevelopment: [error pass].
+			self displayMessageAndCallPublicApplication: error messageText]
