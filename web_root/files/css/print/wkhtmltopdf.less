@@ -1,0 +1,32 @@
+// Special styles if we print PDFs with wkhtmltopdf
+// -*- less-css-compile-at-save: t -*-
+
+body {
+		margin:0;
+		padding:0;
+		width:100%;
+		// Turn off kerning to prevent odd spacing problem when copying and pasting from PDFs on Windows
+		text-rendering: optimize-speed;
+}
+
+// body {
+// 		font-size: 13px;
+// }
+
+// .page-numbers { text-align:right; }
+
+// div.alwaysPageBreak {
+// 		page-break-before: always;
+// }
+
+// div.noPageBreak {
+// 		&:before {
+// 				clear:both;
+// 		}
+
+// 		page-break-inside: avoid;
+// }
+
+.noPrint {
+		display: none;
+}
