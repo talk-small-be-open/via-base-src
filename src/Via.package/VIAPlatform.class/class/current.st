@@ -1,3 +1,3 @@
 accessing
 current
-	^ Current ifNil: [ Current := self subclasses first new ]
+	^ Current ifNil: [ Current := self subclasses anyOne new ]
