@@ -1,0 +1,279 @@
+// -*- less-css-compile-at-save: t -*-
+																	 
+/* Admin styles */
+
+
+// stylesea {
+// 		width: 400px;
+
+// 		&.clozeText {
+// 				width: 600px;
+// 				height: 300px;
+// 		}
+// }
+
+h5.mainTitle {
+		margin-bottom: 0px;
+}
+
+div.clozeTextPlaceholderEditor {
+		border: 1px solid #333;
+		background-color: #eee;
+		padding: 5px;
+		margin: 10px 0;
+}
+
+table.adminModules {
+		width: 100%;
+
+		td.taskName {
+				padding-left: 25px;
+		}
+
+		tr.tasksBottom td {
+				height: 1em;
+		}
+
+		td.moduleName {
+				font-weight: bold;
+		}
+
+		tr.moduleInfos {
+				color: #999;
+				font-size: 80%;
+
+				td {
+						padding-bottom: 10px;
+				}
+		}
+
+		td.actions {
+				a:not(:first-child) {
+						margin-left: 0.6em;
+						white-space: nowrap;
+				}
+
+				&.extras {
+						font-size: 80%;
+				}
+		}
+
+		tr.selected {
+				background-color: #ddd;
+		}
+}
+
+table.adminAssets {
+		width: 100%;
+}
+
+ul.taskBricks {
+		list-style: none;
+
+		
+		li.taskChild {
+//				cursor: move;
+				background-color: white;
+				border: 1px solid black;
+				padding: 5px;
+				margin: 10px 0;
+				min-height: 100px;
+				margin-left: 25px;
+
+				textarea {
+						width: 100%;
+						// min-height: 80px;
+				}
+
+				&.insertPlaceholder {
+						background-color: lightgreen;
+						opacity: 0.4;
+				}
+
+		}
+}
+
+div.main {
+		margin-top: 10px;
+}
+
+div.taskBrickHandle {
+		cursor: move;
+		white-space: nowrap;
+		position: relative;
+		left: -75px;
+		top: +40px;
+		width: 100px;
+		background-color: #eee;
+		color: #aaa;
+		border: 1px solid #ccc;
+		padding: 1px 3px;
+		text-align: right;
+		transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-webkit-transform: rotate(-90deg);
+
+		button.deleteButton {
+				color: #1EAEDB;
+				font-size: 15px;
+				border: none;
+				padding: 0 5px;
+				margin: 0;
+				display: inline;
+				line-height: 1em;
+				height: 1em;
+		}
+}
+
+a {
+		// display: inline-block;
+		// background-color: #eee;
+		// padding: 0px 3px;
+		// margin: 0px 3px;
+
+		&:hover {
+				background-color: #ccc;
+		}
+}
+
+select[multiple] {
+		height: inherit;
+}
+
+pre.pillarExample {
+		font-size: 75%;
+		line-height: 1em;
+		white-space: pre-wrap;
+		margin: 0;
+}
+
+textarea.pillar {
+		width: 600px;
+//		margin-bottom: 0;
+}
+
+
+div.backButton {
+		margin: 10px 0 20px 0;
+}
+
+a.backButtonAnchor { 
+    background-color: black;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1em;
+    padding: 4px 10px 4px 10px;
+}
+
+div.validationResults {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		
+		border: 2px solid red;
+		background-color: #fee;
+		padding: 3px;
+		//		margin: 20px 0;
+
+		div.title {
+				font-weight: bold;
+		}
+
+		ul, ul li {
+				margin-bottom: 0;
+		}
+}
+
+div.taskEditor {
+		
+		div.pillarSyntaxError {
+				color: red;
+		}
+
+}
+
+div.pillarInput {
+
+		margin-bottom: 5px;
+		
+		textarea.pillar {
+				// width: 600px;
+				margin-bottom: 0;
+		}
+
+		a.pillarPreviewLink {
+				font-size: 90%;
+				// position: absolute;
+				// right: 0;
+		}
+}
+
+div#pillarPreviewDialog {
+		transition: all 0.25s ease-out;
+		position: fixed;
+		width: 930px;
+		top: 50px;
+		right: 10px;
+		background-color: yellow;
+		border: 1px solid black;
+		box-shadow: 5px 10px #888888;
+		padding: 5px;
+		transform: scale(0.5) translate(300px, 0px);
+		
+		&:hover, &.zoom {
+//				right: 10px;
+				transform: scale(1);	
+				background-color: #eee;
+		}
+
+		table {
+				td {
+						border: 1px solid black;
+				}
+		}
+}
+
+div.VIAModuleEditor {
+		div.mapPreview {
+				width: 400px;
+		}
+}
+
+label {
+		margin-top: 0.5rem;
+}
+
+@skSmallHeight: 25px;
+
+// Skeleton overwrites
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+		&.small {
+				height: @skSmallHeight;
+				padding: 0 10px;
+				// color: #555;
+				font-size: 10px;
+				// font-weight: 600;
+				line-height: @skSmallHeight;
+				letter-spacing: .1rem;
+				// text-transform: uppercase;
+				// border-radius: 4px;
+				// border: 1px solid #bbb;
+				
+		}
+}
+
+input[type="text"] {
+	&.small {
+			height: @skSmallHeight;
+			padding: 3px 5px; /* The 6px vertically centers text on FF, ignored by Webkit */
+			// background-color: #fff;
+			// border: 1px solid #D1D1D1;
+	}
+}
