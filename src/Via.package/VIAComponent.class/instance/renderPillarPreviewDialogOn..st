@@ -11,4 +11,3 @@ renderPillarPreviewDialogOn: html
 				id: 'pillarPreview';
 				with: '(click on one of the preview links, to see a formatted preview of your pillar text)'.
 	]
-		

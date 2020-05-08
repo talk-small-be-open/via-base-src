@@ -52,4 +52,3 @@ renderVideoPlayer: aVideoPlayer on: html
 		html script: (self jsForVideoPlayer: aVideoPlayer id: videoId).
 
 	].
-

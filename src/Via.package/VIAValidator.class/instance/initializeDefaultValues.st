@@ -4,4 +4,3 @@ initializeDefaultValues
 	
 	ruleGroups ifNil: [ruleGroups := OrderedCollection new].
 	currentRulesContainer := ruleGroups
-	

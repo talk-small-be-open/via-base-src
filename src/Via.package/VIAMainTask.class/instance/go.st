@@ -24,8 +24,8 @@ go
 
 	"Call the main application, either logged in or not, smart."
 	self callApplication]
-		on: Error
+		on: VIAError
 		do: [:error |
 			self clearCommand.
-			self ifDevelopment: [error pass]
-"			self displayMessageAndCallPublicApplication: error messageText"]
+			self ifDevelopment: [error pass].
+			self displayMessageAndCallPublicApplication: error messageText]

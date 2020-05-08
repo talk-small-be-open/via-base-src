@@ -25,4 +25,3 @@ renderHighlightArea: aHighlightArea on: html
 	span with: aHighlightArea text.
 
 	self renderCorrection: answerHolder showWrong: false on: html.
-

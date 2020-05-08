@@ -8,4 +8,3 @@ renderErrorMessagesForLanguage: aLanguage on: html
 		t: 'validation:error:_attribute_mustBeGivenCorrectly'
 		l: aLanguage
 		p: {#attribute->translatedAttributeName}
-
