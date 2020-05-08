@@ -5,96 +5,98 @@
 // Since we want to avoid loading the print styles, we do import uikit explicitly:
 // Base
 
-@import "../uikit3/src/less/components/variables.less";
-@import "../uikit3/src/less/components/mixin.less";
-@import "../uikit3/src/less/components/base.less";
+@uikitPath: ../lib/uikit3/src/less/components/;
+
+@import "@{uikitPath}variables.less";
+@import "@{uikitPath}mixin.less";
+@import "@{uikitPath}base.less";
 
 // Elements
-@import "../uikit3/src/less/components/link.less";
-@import "../uikit3/src/less/components/heading.less";
-@import "../uikit3/src/less/components/divider.less";
-@import "../uikit3/src/less/components/list.less";
-@import "../uikit3/src/less/components/description-list.less";
-@import "../uikit3/src/less/components/table.less";
-@import "../uikit3/src/less/components/icon.less";
-@import "../uikit3/src/less/components/form-range.less";
-@import "../uikit3/src/less/components/form.less"; // After: Icon, Form Range
-@import "../uikit3/src/less/components/button.less";
+@import "@{uikitPath}link.less";
+@import "@{uikitPath}heading.less";
+@import "@{uikitPath}divider.less";
+@import "@{uikitPath}list.less";
+@import "@{uikitPath}description-list.less";
+@import "@{uikitPath}table.less";
+@import "@{uikitPath}icon.less";
+@import "@{uikitPath}form-range.less";
+@import "@{uikitPath}form.less"; // After: Icon, Form Range
+@import "@{uikitPath}button.less";
 
 // Layout
-@import "../uikit3/src/less/components/section.less";
-@import "../uikit3/src/less/components/container.less";
-@import "../uikit3/src/less/components/grid.less";
-@import "../uikit3/src/less/components/tile.less";
-@import "../uikit3/src/less/components/card.less";
+@import "@{uikitPath}section.less";
+@import "@{uikitPath}container.less";
+@import "@{uikitPath}grid.less";
+@import "@{uikitPath}tile.less";
+@import "@{uikitPath}card.less";
 
 // Common
-@import "../uikit3/src/less/components/close.less"; // After: Icon
-@import "../uikit3/src/less/components/spinner.less"; // After: Icon
-@import "../uikit3/src/less/components/totop.less"; // After: Icon
-@import "../uikit3/src/less/components/marker.less"; // After: Icon
-@import "../uikit3/src/less/components/alert.less"; // After: Close
-@import "../uikit3/src/less/components/badge.less";
-@import "../uikit3/src/less/components/label.less";
-@import "../uikit3/src/less/components/overlay.less"; // After: Icon
-@import "../uikit3/src/less/components/article.less"; // After: Subnav
-@import "../uikit3/src/less/components/comment.less"; // After: Subnav
-@import "../uikit3/src/less/components/search.less"; // After: Icon
+@import "@{uikitPath}close.less"; // After: Icon
+@import "@{uikitPath}spinner.less"; // After: Icon
+@import "@{uikitPath}totop.less"; // After: Icon
+@import "@{uikitPath}marker.less"; // After: Icon
+@import "@{uikitPath}alert.less"; // After: Close
+@import "@{uikitPath}badge.less";
+@import "@{uikitPath}label.less";
+@import "@{uikitPath}overlay.less"; // After: Icon
+@import "@{uikitPath}article.less"; // After: Subnav
+@import "@{uikitPath}comment.less"; // After: Subnav
+@import "@{uikitPath}search.less"; // After: Icon
 
 // Navs
-@import "../uikit3/src/less/components/nav.less";
-@import "../uikit3/src/less/components/navbar.less"; // After: Card, Grid, Nav, Icon, Search
-@import "../uikit3/src/less/components/subnav.less";
-@import "../uikit3/src/less/components/breadcrumb.less";
-@import "../uikit3/src/less/components/pagination.less";
-@import "../uikit3/src/less/components/tab.less";
-@import "../uikit3/src/less/components/slidenav.less"; // After: Icon
-@import "../uikit3/src/less/components/dotnav.less";
-@import "../uikit3/src/less/components/thumbnav.less";
+@import "@{uikitPath}nav.less";
+@import "@{uikitPath}navbar.less"; // After: Card, Grid, Nav, Icon, Search
+@import "@{uikitPath}subnav.less";
+@import "@{uikitPath}breadcrumb.less";
+@import "@{uikitPath}pagination.less";
+@import "@{uikitPath}tab.less";
+@import "@{uikitPath}slidenav.less"; // After: Icon
+@import "@{uikitPath}dotnav.less";
+@import "@{uikitPath}thumbnav.less";
 
 // JavaScript
-@import "../uikit3/src/less/components/accordion.less";
-@import "../uikit3/src/less/components/drop.less"; // After: Card
-@import "../uikit3/src/less/components/dropdown.less"; // After: Card
-@import "../uikit3/src/less/components/modal.less"; // After: Close
-@import "../uikit3/src/less/components/lightbox.less"; // After: Close
-@import "../uikit3/src/less/components/slideshow.less";
-@import "../uikit3/src/less/components/slider.less";
-@import "../uikit3/src/less/components/sticky.less";
-@import "../uikit3/src/less/components/offcanvas.less";
-@import "../uikit3/src/less/components/switcher.less";
-@import "../uikit3/src/less/components/leader.less";
+@import "@{uikitPath}accordion.less";
+@import "@{uikitPath}drop.less"; // After: Card
+@import "@{uikitPath}dropdown.less"; // After: Card
+@import "@{uikitPath}modal.less"; // After: Close
+@import "@{uikitPath}lightbox.less"; // After: Close
+@import "@{uikitPath}slideshow.less";
+@import "@{uikitPath}slider.less";
+@import "@{uikitPath}sticky.less";
+@import "@{uikitPath}offcanvas.less";
+@import "@{uikitPath}switcher.less";
+@import "@{uikitPath}leader.less";
 // Scrollspy
 // Toggle
 // Scroll
 
 // Additional
-@import "../uikit3/src/less/components/iconnav.less";
-@import "../uikit3/src/less/components/notification.less";
-@import "../uikit3/src/less/components/tooltip.less";
-@import "../uikit3/src/less/components/placeholder.less";
-@import "../uikit3/src/less/components/progress.less";
-@import "../uikit3/src/less/components/sortable.less";
-@import "../uikit3/src/less/components/countdown.less";
+@import "@{uikitPath}iconnav.less";
+@import "@{uikitPath}notification.less";
+@import "@{uikitPath}tooltip.less";
+@import "@{uikitPath}placeholder.less";
+@import "@{uikitPath}progress.less";
+@import "@{uikitPath}sortable.less";
+@import "@{uikitPath}countdown.less";
 
 // Utilities
-@import "../uikit3/src/less/components/animation.less";
-@import "../uikit3/src/less/components/width.less";
-@import "../uikit3/src/less/components/height.less";
-@import "../uikit3/src/less/components/text.less";
-@import "../uikit3/src/less/components/column.less";
-@import "../uikit3/src/less/components/cover.less";
-@import "../uikit3/src/less/components/background.less";
-@import "../uikit3/src/less/components/align.less";
-@import "../uikit3/src/less/components/svg.less";
-@import "../uikit3/src/less/components/utility.less";
-@import "../uikit3/src/less/components/flex.less"; // After: Utility
-@import "../uikit3/src/less/components/margin.less";
-@import "../uikit3/src/less/components/padding.less";
-@import "../uikit3/src/less/components/position.less";
-@import "../uikit3/src/less/components/transition.less";
-@import "../uikit3/src/less/components/visibility.less";
-@import "../uikit3/src/less/components/inverse.less";
+@import "@{uikitPath}animation.less";
+@import "@{uikitPath}width.less";
+@import "@{uikitPath}height.less";
+@import "@{uikitPath}text.less";
+@import "@{uikitPath}column.less";
+@import "@{uikitPath}cover.less";
+@import "@{uikitPath}background.less";
+@import "@{uikitPath}align.less";
+@import "@{uikitPath}svg.less";
+@import "@{uikitPath}utility.less";
+@import "@{uikitPath}flex.less"; // After: Utility
+@import "@{uikitPath}margin.less";
+@import "@{uikitPath}padding.less";
+@import "@{uikitPath}position.less";
+@import "@{uikitPath}transition.less";
+@import "@{uikitPath}visibility.less";
+@import "@{uikitPath}inverse.less";
 
 // Need to be loaded last
 // NOT INCLUDED! @import "print.less";
@@ -154,16 +156,16 @@
 
 
 //
-// Your basic colors
+// Your basic definitions. You might want to redefine these in the less file for the sub-website (styles_*.less)
 //
 @via-basic-color: #e20613;
 @via-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
 @via-coloredbutton-hover-color: darken(@via-coloredbutton-color, 10%);
 
 
-// @hm-fixed-background-a: url(../images/fixed-background-a.jpg);
-// @hm-fixed-background-b: url(../images/fixed-background-b.jpg);
-// @hm-fixed-background-c: url(../images/fixed-background-c.jpg);
+@hm-fixed-background-a: url(../images/fixed-background-a.jpg);
+@hm-fixed-background-b: url(../images/fixed-background-b.jpg);
+@hm-fixed-background-c: url(../images/fixed-background-c.jpg);
 
 
 
@@ -1191,10 +1193,3 @@ div.VIALoginComponent {
 				}				
 		}
 }
-
-
-
-// Emacs!! Am Ende der Datei stehen lassen!
-// Local Variables:
-// less-css-compile-at-save: t
-// End:
