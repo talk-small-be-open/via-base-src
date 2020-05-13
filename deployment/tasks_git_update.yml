@@ -1,0 +1,17 @@
+- name: git repo VIA base code
+  become_user: "{{remoteUser}}"
+  git:
+    repo: "{{via.baseRepository.gitUrl}}"
+    dest: "{{via.installationPath}}/via_base"
+    accept_hostkey: yes
+    update: yes
+    force: no
+
+- name: git repo VIA site code
+  become_user: "{{remoteUser}}"
+  git:
+    repo: "{{via.siteRepository.gitUrl}}"
+    dest: "{{via.installationPath}}/via_site"
+    accept_hostkey: yes
+    update: yes
+    force: no
