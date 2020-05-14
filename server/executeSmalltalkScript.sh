@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 startTopaz via -q -l << EOF > /dev/null
 display oops
 output pushnew $GEMSTONE_LOGDIR/executeSmalltalk.log
