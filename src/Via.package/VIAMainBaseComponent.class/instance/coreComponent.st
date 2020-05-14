@@ -1,3 +1,0 @@
-accessing
-coreComponent
-	^ coreComponent

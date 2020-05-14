@@ -9,6 +9,6 @@ renderContentOn: html
 		with: 'Show flash message'.
 	html break.
 	html anchor
-		url: '/files/embed_test.html';
+		url: '/lib/embed_test.html';
 		target: '_blank';
 		with: 'Open Embed-Previewer ...'

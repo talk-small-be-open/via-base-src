@@ -4,6 +4,6 @@ updateRoot: anHtmlRoot
 	anHtmlRoot stylesheet
 "		addPrint;
 		addScreen;"
-		url: '/files/certificate/certificate.css'.
+		url: '/certificate/certificate.css'.
 		
-	anHtmlRoot stylesheet url: '/files/css/print/print.css'
+	anHtmlRoot stylesheet url: '/css/print/print.css'

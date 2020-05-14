@@ -14,4 +14,4 @@ iconActivityType: anActivityTypeTag
 		script: (self jQuery this call: 'webuiPopover' with: popoverOptions);
 		class: 'icon iconActivityType';
 		title: anActivityTypeTag displayName;
-		url: '/files/images/activity-type-', anActivityTypeTag code, '.svg'
+		url: '/images/activity-type-', anActivityTypeTag code, '.svg'

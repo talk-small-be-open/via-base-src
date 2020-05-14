@@ -10,7 +10,7 @@ updateRoot: anHtmlRoot
 	anHtmlRoot htmlAttributes at: 'lang' put: ws languageCode.
 	anHtmlRoot title: ws title.
 
-	anHtmlRoot stylesheet url: '/files/css/', ws stylesheetFilename.
+	anHtmlRoot stylesheet url: '/site/css/', ws stylesheetFilename.
 
 "	self updateRootJavascripts: anHtmlRoot."
 	

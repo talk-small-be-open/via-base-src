@@ -1,4 +1,4 @@
 updating
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
-	anHtmlRoot stylesheet url: '/files/css/print/print.css'.
+	anHtmlRoot stylesheet url: '/css/print/print.css'.
