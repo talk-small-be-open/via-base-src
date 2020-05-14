@@ -1,0 +1,15 @@
+- name: Ensure PHP is running
+  service:
+    name: php7.2-fpm
+    state: started
+
+- name: Ensure nginx is running
+  service:
+    name: nginx
+    state: started
+
+- name: Ensure monit is running
+  service:
+    name: monit
+    state: started
+    use: sysvinit

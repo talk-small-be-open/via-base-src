@@ -1,0 +1,364 @@
+---
+
+- hosts: all
+  become_user: root
+  become: true
+  roles:
+    - common
+  vars_files:
+    - via_{{customerCode}}.yml
+  vars:
+    remoteUser: "{{ansible_user}}"
+  environment:
+    GS_HOME: /opt/GsDevKit_home
+    PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
+  
+  tasks:
+  - name: set timezone to Switzerland
+    timezone:
+      name: Europe/Zurich
+      
+  - name: Add group for remoteUser
+    group:
+      name: "{{remoteUser}}"
+
+  - name: Add user
+    user:
+      name: "{{remoteUser}}"
+      group: adm
+      groups: "sudo, {{remoteUser}}"
+      shell: /bin/bash
+
+  # - name: Create /etc/via
+  #   file:
+  #     path: /etc/via
+  #     state: directory
+  #     owner: root
+  #     group: root
+
+  - name: Create .ssh folder
+    file:
+      path: "/home/{{remoteUser}}/.ssh"
+      state: directory
+      owner: "{{remoteUser}}"
+      group: "{{remoteUser}}"
+
+  - name: make sure SSH private key is installed (optional)
+    when: via.sshPrivateKey
+    no_log: true
+    copy:
+      content: "{{via.sshPrivateKey}}"
+      dest: "/home/{{remoteUser}}/.ssh/id_rsa"
+      owner: "{{remoteUser}}"
+      group: "{{remoteUser}}"
+      mode: 0600
+
+  - name: Copy SSH public key
+    when: via.sshPrivateKey
+    copy:
+      src: files/ssh/via_id.pub
+      dest: "/home/{{remoteUser}}/.ssh/id_rsa.pub"
+      owner: "{{remoteUser}}"
+      group: "{{remoteUser}}"
+      mode: 0644
+
+  # Not anymore. Using git via https.
+  # - name: tell the host about our servers it might want to ssh to
+  #   become_user: root
+  #   known_hosts:
+  #     path: /etc/ssh/ssh_known_hosts
+  #     name: "*******"
+  #     key: "{{ lookup('file', 'pubkeys/******') }}"
+
+  - name: Add apt repo for certbot
+    apt_repository:
+      repo: ppa:certbot/certbot
+      
+  - name: apt packages update
+    apt:
+      update_cache: yes
+     
+  - name: Create basic installation folders
+    file:
+      path: "{{item}}"
+      state: directory
+      mode: 0755
+      owner: '{{remoteUser}}'
+      group: '{{remoteUser}}'
+    with_items:
+      - "{{via.installationPath}}"
+      - "{{via.installationPath}}/via_base"
+      - "{{via.installationPath}}/via_site"
+      - "{{via.installationPath}}/install"
+
+  - name: Create GsDevKit_home folder
+    file:
+      path: "/opt/GsDevKit_home"
+      state: directory
+      mode: 0755
+      owner: '{{remoteUser}}'
+      group: '{{remoteUser}}'
+      
+  - include_tasks: tasks_git_update.yml    
+            
+    
+  #    
+  # CRON JOBS
+  #
+  # - name: cronjob backup Pharo image
+  #   cron:
+  #     name: pharo backup
+  #     user: "{{remoteUser}}"
+  #     minute: "10"
+  #     hour: "*/6"
+  #     job: "cd {{via.installationPath}}/server && ./backup-image-snapshot.sh"
+  - name: certbot renew weekly
+    when: via.useSsl
+    cron:
+      name: certbot renew
+      user: root
+      minute: "1"
+      hour: "1"
+      weekday: "0"
+      job: "certbot renew"
+  # - name: trigger via hourly
+  #   cron:
+  #     name: hourly trigger
+  #     user: "{{remoteUser}}"
+  #     minute: "0"
+  #     hour: "*"
+  #     job: "cd {{via.installationPath}}/server && ./run-task.sh runHourlyTasks 240"
+  # - name: trigger via 5 minutely
+  #   cron:
+  #     name: 5minutely trigger
+  #     user: "{{remoteUser}}"
+  #     minute: "*/5"
+  #     hour: "*"
+  #     job: "cd {{via.installationPath}}/server && ./run-task.sh run5MinutelyTasks"
+  - name: trigger via nightly
+    cron:
+      name: nightly trigger
+      user: "{{remoteUser}}"
+      minute: "0"
+      hour: "2"
+      job: "cd {{via.installationPath}}/maintenance && ./executeSmalltalk.sh \"VIAApplicationManager runNightlyTasks\" > /dev/null"
+
+      
+# TODO
+# 0 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tranlogs.sh
+# 30 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tmp_files.sh
+
+
+  #
+  # NGINX WEBSERVER
+  #
+  - name: nginx package
+    apt: pkg=nginx
+  - name: nginx certbot plugin
+    apt: pkg=python-certbot-nginx
+  - name: User {{remoteUser}} is in group www-data (uploaded files permission)
+    user:
+      name: "{{remoteUser}}"
+      append: true
+      groups: www-data
+
+    
+
+  #
+  # Postfix Mail
+  #
+  - name: postfix package
+    apt: pkg=postfix
+
+    
+  - include_tasks: tasks_common.yml
+
+  
+  # # Create working folders and symlinks
+  # - name: Directory for GemStone
+  #   file:
+  #     path: "{{via.installationPath}}/pharo"
+  #     state: directory
+  #     mode: 0755
+  #     owner: '{{remoteUser}}'
+  #     group: '{{remoteUser}}'
+      
+      
+  - name: Create Smalltalk Installer script
+    template:
+      src: files/install/installVia.st.j2
+      dest: "{{via.installationPath}}/install/installVia.st"
+      owner: '{{remoteUser}}'
+      group: '{{remoteUser}}'
+      mode: "u=rwx,g=rwx,o=rx"
+
+  
+  # Get SSL-Certificate
+  - name: Ensure port 80 not in use by nginx
+    when: via.useSsl
+    service:
+      name: nginx
+      enabled: yes
+      state: stopped
+  - name: certbot get Certificates
+    when: via.useSsl
+    shell: certbot --standalone -n --agree-tos --email {{via.adminEmail}} --cert-name "{{via.appDomain}}"  --domains "{{via.appDomain}}{% if via.appDomain2 %},{{via.appDomain2}}{% endif %}" certonly
+    args:
+      creates: "/etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem"
+
+
+    
+  #
+  # GemStone GsDevKit
+  #
+  - name: Get GsDevKit from github
+    become_user: "{{remoteUser}}"
+    git:
+      repo: "https://github.com/GsDevKit/GsDevKit_home.git"
+      dest: "/opt/GsDevKit_home"
+      accept_hostkey: yes
+      update: yes
+      force: yes
+
+  - name: Run install script from GsDevKit
+    become_user: "{{remoteUser}}"
+    shell: installServerClient
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/bin/.gsdevkitSetup"
+
+  - name: Try to avoid big download and take GemStone locally
+#TODO    when: via.sshPrivateKey
+    copy:
+      src: "files/GemStone64Bit3.4.5-x86_64.Linux.zip"
+      dest: "/opt/GsDevKit_home/shared/downloads/zip/GemStone64Bit3.4.5-x86_64.Linux.zip"
+      owner: "{{remoteUser}}"
+      group: "{{remoteUser}}"
+      mode: 0666
+    
+  - name: Create stone
+    become_user: "{{remoteUser}}"
+    shell: "createStone via {{via.gemStoneVersion}}"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/server/stones/via"
+
+  - name: Create tODE client
+    become_user: "{{remoteUser}}"
+    shell: "createClient tode"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/dev/clients/tode"
+
+  # See GemStone docs for Seaside at
+  # https://github.com/GsDevKit/GsDevKit_home/blob/master/docs/gettingStartedWithSeaside.md
+  - name: Install official GemStone-Seaside into tODE
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
+
+  - name: Load official GemStone-Seaside into tODE
+    become_user: "{{remoteUser}}"
+    command:
+      argv:
+        - todeIt
+        - via
+        - project
+        - load
+        - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc')\`"
+        - Seaside3
+
+
+  - name: Mount Seaside in tODE
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via mount @/sys/stone/dirs/Seaside3/tode /home seaside"
+    args:
+      chdir: "/opt/GsDevKit_home"
+
+  # TODO
+  # - name: Backup so far
+  #   become_user: "{{remoteUser}}"
+  #   shell: "todeBackup via seaside.dbf"
+  #   args:
+  #     chdir: "/opt/GsDevKit_home"
+  #     creates: "/opt/GsDevKit_home ...?
+    
+  - name: Add VIA site project information into tODE
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via project entry --baseline={{via.siteName}} --repo={{via.siteRepository.metacelloUrl}} /sys/local/server/projects"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/sys/local/server/projects/{{via.siteName}}.ston"
+
+  - name: git-clone VIA site project information
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via project clone --https --local --checkout=master {{via.siteName}}"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/shared/repos/{{via.siteRepository.name}}"
+      
+  - name: Update VIA site project information
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via project pull {{via.siteName}}"
+
+  - name: Update VIA site project information
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via project get {{via.siteName}}"
+  
+  - name: Load VIA site project
+    become_user: "{{remoteUser}}"
+    command:
+      argv:
+        - todeIt
+        - via
+        - project
+        - load
+        - --loads="\`#('default')\`"
+        - "{{via.siteName}}"
+
+  - name: Register Servers in tODE
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via /home/seaside/gemServer --register=seaside{{item}} --type=zinc --port={{item}}"
+    loop: "{{ via.gemPorts }}"
+    args:
+      chdir: "/opt/GsDevKit_home"
+
+  - name: Install/Config VIA application
+    become_user: "{{remoteUser}}"
+    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/installVia.st"
+    
+  - name: Start Servers in tODE
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via /home/seaside/gemServer --restart=seaside{{item}}"
+    loop: "{{ via.gemPorts }}"
+    args:
+      chdir: "/opt/GsDevKit_home"
+
+      
+
+
+  #
+  # Start services
+  #
+  - name: ensure monit enabled on boot
+    service:
+      name: monit
+      enabled: yes
+      use: sysvinit
+  - name: ensure monit started now
+    service:
+      name: monit
+      state: started
+      use: sysvinit
+  # - name: ensure via application parts started now
+  #   service:
+  #     name: via
+  #     state: started
+  #     use: sysvinit
+
+    #   - name: Running Via
+    # shell: monit reload && sleep 2 && monit start via_template
+    
+  - include_tasks: tasks_common_end.yml
