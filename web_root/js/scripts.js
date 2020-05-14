@@ -72,18 +72,6 @@ function onDragDropDrop(dropzone, draggable) {
 	$(draggable).css({top:0, left:0});
 }
 
-
-function open321VideoTutorial(language) {
-	var lightbox = UIkit.lightboxPanel({
-		items: [{source: '/files/video/321via_'+language+'.mp4', type: 'video'}],
-		videoAutoplay: true,
-		preload: 0,
-	});
-	
-	lightbox.show();
-
-}
-
 /* Markiert den Inhaltstext im Browser eines HTML-Elements. Praktisch für anschliessendes copy/paste */
 function selectTextIn(jQueryElements) {
 	var range = document.createRange();
