@@ -5,4 +5,4 @@ renderAudioPlayer: anAudioPlayer on: html
 		html text: 'AUDIO'; break.
 		html audio
 			controls: true;
-			url: '/files/audio/zero.mp3']
+			url: '/audio/zero.mp3']

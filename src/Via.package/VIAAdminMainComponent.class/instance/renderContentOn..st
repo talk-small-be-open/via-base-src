@@ -15,7 +15,7 @@ renderContentOn: html
 		html form: [
 
 			html heading level5; class: 'mainTitle'; with: [
-				html image url: '/files/css/images/logo_321.svg'; height: 'auto'; width: 30.
+				html image style: 'vertical-align: middle'; url: '/images/logo_via.svg'; height: 'auto'; width: 40.
 				html space.
 				html text: 'Administration'.
 				html space.

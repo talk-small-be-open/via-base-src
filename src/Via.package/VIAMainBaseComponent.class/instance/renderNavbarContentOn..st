@@ -1,3 +1,0 @@
-rendering
-renderNavbarContentOn: html
-	"subclasses"

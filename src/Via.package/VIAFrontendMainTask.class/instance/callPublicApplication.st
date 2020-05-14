@@ -6,7 +6,7 @@ callPublicApplication
 	
 	isEmbedded
 		ifTrue: [component := VIAMainEmbeddedModuleComponent new]
-		ifFalse: [component := VIAMainPublicComponent new].
+		ifFalse: [component := VIAApplicationManager current mainPublicComponentClass new].
 	
 	self applicationComponent: component.
 	self executeCommand.

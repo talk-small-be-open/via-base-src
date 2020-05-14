@@ -3,7 +3,7 @@ renderContentOn: html
 	html div class: 'main container'; with: [
 
 		html heading: 'Gateway to the secret dungeons'.
-		html image url: '/files/css/images/logo_321.svg'; height: 40; width: 120.
+		html image url: '/images/logo_via.svg'; height: 'auto'; width: 120.
 		html form: [
 			html label: 'Website:'.
 			html select

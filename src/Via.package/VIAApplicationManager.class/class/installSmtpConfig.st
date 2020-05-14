@@ -4,7 +4,7 @@ installSmtpConfig
 
 	apps := OrderedCollection new.
 	apps add: (WAAdmin defaultDispatcher handlerAt: 'app').
-	apps add: (WAAdmin defaultDispatcher handlerAt: '321admin').
+	apps add: (WAAdmin defaultDispatcher handlerAt: 'via-admin').
 
 	server := self db propertyAt: #smtpServer.
 	user := self db propertyAt: #smtpUsername.

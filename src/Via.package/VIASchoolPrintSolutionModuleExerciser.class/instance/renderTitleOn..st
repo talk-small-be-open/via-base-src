@@ -3,7 +3,7 @@ renderTitleOn: html
 	html heading level2; class: 'moduleTitle'; with: [
 		html span class: 'logo'; with: [
 			html image
-				url: ('/files/css/images/', self website logoFilename);
+				url: ('/site/images/', self website logoFilename);
 				height: 'auto';
 				width: '60px'.
 			html break.

@@ -30,7 +30,7 @@ renderModule: aModule callback: aBlock on: html
 
 			html ukImageWidth: '100%' height: '100px' url: (aModule imageAsset
 				ifNotNil: [:e | e imageUrlCropWidth: 100 height: 100]
-				ifNil: ['/files/images/module-card-placeholder.jpg']).
+				ifNil: ['/images/module-card-placeholder.jpg']).
 			html div class: 'title'; with: aModule title.
 "			html div class: 'hm-angaben-box'; with: [
 				html iconDurationTag: aModule durationTag.

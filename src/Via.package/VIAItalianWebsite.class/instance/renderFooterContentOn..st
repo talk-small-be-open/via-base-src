@@ -11,4 +11,4 @@ renderFooterContentOn: html
 				html image
 					class: 'award';
 					title: ('321via:footnotes:ielaAward't);
-					url: '/files/images/logo321viaIELA.png']].
+					url: '/images/logo321viaIELA.png']].

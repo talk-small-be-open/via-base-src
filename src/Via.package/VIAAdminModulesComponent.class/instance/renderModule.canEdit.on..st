@@ -38,7 +38,7 @@ renderModule: aModule canEdit: canEdit on: html
 							with: 'Release']]].
 		html popupAnchor
 			dependent: true;
-			windowTitle: '321 Preview';
+			windowTitle: 'VIA Preview';
 			callback: [self testdriveModule: aModule];
 "							target: '_blank';"
 			title: 'Preview and test module';
@@ -68,7 +68,7 @@ renderModule: aModule canEdit: canEdit on: html
 				title: 'Use this, if image/video/audio are not displayed correctly';
 				with: 'Rebuild assets'].
 	html anchor
-		url: '/files/embed_test.html?url=', (VIAHelper urlencode: aModule permaUrlEmbed);
+		url: '/lib/embed_test.html?url=', (VIAHelper urlencode: aModule permaUrlEmbed);
 		target: '_blank';
 		title: 'Show preview of embedded module';
 		with: 'Embedded'
