@@ -62,4 +62,5 @@ updateRoot: anHtmlRoot
 
 	"Projects main Javascript"
 	anHtmlRoot javascript url: '/js/scripts.js'.
+	anHtmlRoot javascript url: '/site/js/scripts.js'.
 	anHtmlRoot javascript url: ('/site/js/', self session website scriptsFilename).
