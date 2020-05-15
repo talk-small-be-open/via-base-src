@@ -1,4 +1,4 @@
-*pillar-exportercore
+*Pillar-Pharo
 pillarWriteDuring: aBlock
 	self
 		ensureDelete;
