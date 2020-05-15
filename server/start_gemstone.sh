@@ -1,3 +1,3 @@
 #!/bin/bash
 
-$GS_HOME/bin/startStone -b via
+$GS_HOME/bin/startStone via
