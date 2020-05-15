@@ -39,4 +39,13 @@ baselinePillar: spec
 		spec
 			group: 'Pillar' with: #('Pillar-ExporterHTML' 'Pillar-ExporterPillar').
 
+	].
+
+	spec for: #'pharo' do: [
+		spec package: 'Pillar-Pharo' with: [
+			spec
+				requires: #('Pillar-ExporterCore') ].
+		spec
+			group: 'Pillar' with: #('Pillar-Pharo').
+
 	]
