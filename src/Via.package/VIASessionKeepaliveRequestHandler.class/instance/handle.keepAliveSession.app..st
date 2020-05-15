@@ -4,11 +4,11 @@ handle: aRequestContext keepAliveSession: aSessionKey app: aString
 	ok := false.
 	aSessionKey ifNotBlank: [
 		(WAAdmin defaultDispatcher handlerAt: aString ifAbsent: [nil]) ifNotNil: [:application |
-			[application cache
-				notifyRetrieved: nil
-				key: aSessionKey.
+			[		
 			ok := true.
-			] on: Error do: [:error | "hm, nothing"].
+			"Touch cache entry"
+			application cache at: aSessionKey ifAbsent: [ok := false].
+			] on: Error do: [:error | ok := false ].
 		].
 	].
 

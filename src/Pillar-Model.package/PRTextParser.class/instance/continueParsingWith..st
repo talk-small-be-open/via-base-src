@@ -1,7 +1,7 @@
 parsing
 continueParsingWith: aString
 	|  workingString |
-	workingString := alreadySeenString , Smalltalk os pillarLineEnding , aString.
+	workingString := alreadySeenString, String lf, aString.
 	currentStop := PRMatcherManager
 		findFirst: (itemParser markupEnd: currentMarkup)
 		at: currentStart + currentMarkup size
