@@ -15,6 +15,7 @@ registerSeasideComponents
 	VIATestdriveMainTask registerAsApplication.
 	
 	VIASessionKeepaliveRequestHandler register.
+	VIAPingRequestHandler register.
 	
 	"Bestehende SMTP Daten in die Seaside config kopieren"
 	VIAApplicationManager installSmtpConfig.
