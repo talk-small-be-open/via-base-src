@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WARequestHandler",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAPingRequestHandler",
+	"type" : "normal"
+}

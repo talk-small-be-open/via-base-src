@@ -1,8 +1,7 @@
 as yet unclassified
 callApplication
 	
-	self callDeviceDetector.
-
-	self isLoggedIn
-		ifTrue: [self callLoggedInApplication]
-		ifFalse: [self callPublicApplication]
+	self callDeviceDetectorOr: [
+		self isLoggedIn
+			ifTrue: [self callLoggedInApplication]
+			ifFalse: [self callPublicApplication]]
