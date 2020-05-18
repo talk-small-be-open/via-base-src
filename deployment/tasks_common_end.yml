@@ -13,3 +13,14 @@
     name: monit
     state: started
     use: sysvinit
+
+- name: Ensure GemStone stone is running
+  monit:
+    name: via_gemstone_stone
+    state: present
+
+- name: Ensure all GemStone gems are is running
+  loop: "{{ via.gemPorts }}"
+  monit:
+    name: via_gemstone_gem_{{item}}
+    state: present 

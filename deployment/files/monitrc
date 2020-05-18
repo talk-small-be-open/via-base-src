@@ -17,7 +17,7 @@
 ## Start Monit in the background (run as a daemon):
 #
   set daemon 60            # check services at 1-minute intervals
-#   with start delay 240    # optional: delay the first check by 4-minutes (by 
+   with start delay 60    # optional: delay the first check by 4-minutes (by 
 #                           # default Monit check immediately after Monit start)
 #
 #
@@ -76,6 +76,9 @@
 # set mailserver mail.bar.baz,               # primary mailserver
 #                backup.bar.baz port 10025,  # backup mailserver on port 10025
 #                localhost                   # fallback relay
+
+set mailserver localhost
+
 #
 #
 ## By default Monit will drop alert events if no mail servers are available. 
@@ -150,8 +153,11 @@
 set httpd port 2812 and
     use address localhost  # only accept connection from localhost
     allow localhost        # allow localhost to connect to the server and
-
 #     allow admin:monit      # require user 'admin' with password 'monit'
+
+# set httpd unixsocket /var/run/monit.sock
+#      allow username:password
+		 
 #
 ###############################################################################
 ## Services
