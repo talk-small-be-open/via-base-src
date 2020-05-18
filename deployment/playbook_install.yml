@@ -227,8 +227,12 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/bin/.gsdevkitSetup"
 
+  - local_action: stat path=files/GemStone64Bit3.4.5-x86_64.Linux.zip
+    register: gemstone_zip_file_local
+    become: no
+    
   - name: Try to avoid big download and take GemStone locally
-#TODO    when: via.sshPrivateKey
+    when: gemstone_zip_file_local.stat.exists
     copy:
       src: "files/GemStone64Bit3.4.5-x86_64.Linux.zip"
       dest: "/opt/GsDevKit_home/shared/downloads/zip/GemStone64Bit3.4.5-x86_64.Linux.zip"
@@ -329,14 +333,16 @@
     become_user: "{{remoteUser}}"
     shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/installVia.st"
     
-  - name: Start Servers in tODE
-    become_user: "{{remoteUser}}"
-    shell: "todeIt via /home/seaside/gemServer --restart=seaside{{item}}"
-    loop: "{{ via.gemPorts }}"
-    args:
-      chdir: "/opt/GsDevKit_home"
+  # - name: Start Servers in tODE
+  #   become_user: "{{remoteUser}}"
+  #   shell: "todeIt via /home/seaside/gemServer --restart=seaside{{item}}"
+  #   loop: "{{ via.gemPorts }}"
+  #   args:
+  #     chdir: "/opt/GsDevKit_home"
 
-      
+  - name: Start Servers in tODE with monit
+    shell: "monit -g via_gemstone_gems start"
+
 
 
   #
