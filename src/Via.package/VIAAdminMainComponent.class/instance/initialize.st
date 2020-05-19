@@ -1,6 +1,9 @@
 as yet unclassified
 initialize
 	super initialize.
+
+	flashMessages := OrderedCollection new.
+
 	uiTextComponent := VIAAdminUiTextComponent new.
 	usersComponent := VIAAdminUsersComponent new.
 	modulesComponent := VIAAdminModulesComponent new.

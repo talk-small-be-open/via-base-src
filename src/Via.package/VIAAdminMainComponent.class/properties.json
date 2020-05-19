@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAMainBaseComponent",
+	"super" : "VIAComponent",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -14,7 +14,8 @@
 		"tabbedNavigationComponent",
 		"assetsComponent",
 		"classificationComponent",
-		"uiTextComponent"
+		"uiTextComponent",
+		"flashMessages"
 	],
 	"name" : "VIAAdminMainComponent",
 	"type" : "normal"
