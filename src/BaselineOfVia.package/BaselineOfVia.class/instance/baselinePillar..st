@@ -26,7 +26,7 @@ baselinePillar: spec
 			];
 			package: 'Pillar-ExporterCore' with: [
 				spec
-					requires: #('Pillar-Model' 'Mustache').
+					requires: #('Pillar-Model').
 			];
 			package: 'Pillar-ExporterHTML' with: [
 				spec
