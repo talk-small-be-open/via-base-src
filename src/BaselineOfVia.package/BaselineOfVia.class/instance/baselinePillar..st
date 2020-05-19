@@ -3,14 +3,14 @@ baselinePillar: spec
 
 	spec for: #'common' do: [
 
-		spec
+"		spec
 			project: 'Mustache'
 			with: [ 
 				spec
 					className: 'ConfigurationOfMustache';
 					versionString: '0.71';
 					loads: #('Core');
-					repository: 'github://noha/mustache/repository' ].
+					repository: 'github://noha/mustache/repository' ]."
 "					repository: 'http://www.smalltalkhub.com/mc/NorbertHartl/Mustache/main' ]."
 
 "			project: 'Grease' with: '1.1.13';"
