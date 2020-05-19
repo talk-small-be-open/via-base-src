@@ -14,7 +14,7 @@ check process via_gemstone_stone matching "^/opt/.*/sys/stoned via .*$"
 check process via_gemstone_netldi matching "^/opt/.*/sys/netldid via_ldi .*$"
 			ONREBOOT START
 			MODE ACTIVE
-			start program = "/bin/bash -l VIA_MONIT_USER={{remoteUser}} /opt/via/via_base/server/start_netldi.sh" as uid {{remoteUser}}
+			start program = "/bin/bash -l -c 'VIA_MONIT_USER={{remoteUser}} /opt/via/via_base/server/start_netldi.sh'" as uid {{remoteUser}}
 			stop program = "/bin/bash -l /opt/via/via_base/server/stop_netldi.sh" as uid {{remoteUser}} with timeout 90 seconds
  			if 7 restarts within 10 cycles then stop
 #			if totalmem > 700 Mb then alert

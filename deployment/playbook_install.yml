@@ -227,14 +227,14 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/bin/.gsdevkitSetup"
 
-  - local_action: stat path=files/GemStone64Bit3.4.5-x86_64.Linux.zip
+  - local_action: stat path=files/gemstone/GemStone64Bit3.4.5-x86_64.Linux.zip
     register: gemstone_zip_file_local
     become: no
     
   - name: Try to avoid big download and take GemStone locally
     when: gemstone_zip_file_local.stat.exists
     copy:
-      src: "files/GemStone64Bit3.4.5-x86_64.Linux.zip"
+      src: "files/gemstone/GemStone64Bit3.4.5-x86_64.Linux.zip"
       dest: "/opt/GsDevKit_home/shared/downloads/zip/GemStone64Bit3.4.5-x86_64.Linux.zip"
       owner: "{{remoteUser}}"
       group: "{{remoteUser}}"
@@ -247,6 +247,16 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/server/stones/via"
 
+
+  - name: Provide our own gem.conf
+    copy:
+      src: "files/gemstone/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/via/gem.conf"
+      owner: "{{remoteUser}}"
+#      group: "{{remoteUser}}"
+      mode: 0755
+    
+  
   - name: Create tODE client
     become_user: "{{remoteUser}}"
     shell: "createClient tode"

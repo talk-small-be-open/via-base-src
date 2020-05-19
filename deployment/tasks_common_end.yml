@@ -14,13 +14,17 @@
     state: started
     use: sysvinit
 
+- name: Wait for port 2812 to become open (Monit)
+  wait_for:
+    port: 2812
+    sleep: 3
+    timeout: 90
+    
 - name: Ensure GemStone stone is running
-  monit:
-    name: via_gemstone_stone
-    state: present
+  shell: monit start via_gemstone_stone
+
+- name: Ensure GemStone stone is running
+  shell: monit start via_gemstone_netldi
 
 - name: Ensure all GemStone gems are is running
-  loop: "{{ via.gemPorts }}"
-  monit:
-    name: via_gemstone_gem_{{item}}
-    state: present 
+  shell: monit -g via_gemstone_gems start
