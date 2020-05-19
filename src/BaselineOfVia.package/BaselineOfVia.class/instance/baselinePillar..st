@@ -3,14 +3,15 @@ baselinePillar: spec
 
 	spec for: #'common' do: [
 
-		spec
+"		spec
 			project: 'Mustache'
 			with: [ 
 				spec
 					className: 'ConfigurationOfMustache';
 					versionString: '0.71';
 					loads: #('Core');
-					repository: 'http://www.smalltalkhub.com/mc/NorbertHartl/Mustache/main' ].
+					repository: 'github://noha/mustache/repository' ]."
+"					repository: 'http://www.smalltalkhub.com/mc/NorbertHartl/Mustache/main' ]."
 
 "			project: 'Grease' with: '1.1.13';"
 "			project: 'Mustache' with: '0.71'."
@@ -25,7 +26,7 @@ baselinePillar: spec
 			];
 			package: 'Pillar-ExporterCore' with: [
 				spec
-					requires: #('Pillar-Model' 'Mustache').
+					requires: #('Pillar-Model').
 			];
 			package: 'Pillar-ExporterHTML' with: [
 				spec
