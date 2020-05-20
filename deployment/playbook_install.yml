@@ -254,7 +254,7 @@
       dest: "/opt/GsDevKit_home/server/stones/via/gem.conf"
       owner: "{{remoteUser}}"
 #      group: "{{remoteUser}}"
-      mode: 0755
+      mode: 0644
     
   
   - name: Create tODE client
@@ -264,14 +264,28 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/dev/clients/tode"
 
+  - name: Flush Monticello cache
+    become_user: "{{remoteUser}}"
+    shell: "todeIt via mr flush"
+
+  - name: Copy our own STON file for the Seaside project
+    copy:
+      src: files/gemstone/Seaside3.ston
+      dest: "/opt/GsDevKit_home/sys/local/server/projects/Seaside3.ston"
+      owner: '{{remoteUser}}'
+#      group: '{{remoteUser}}'
+      mode: 0644
+
+    
   # See GemStone docs for Seaside at
   # https://github.com/GsDevKit/GsDevKit_home/blob/master/docs/gettingStartedWithSeaside.md
   - name: Install official GemStone-Seaside into tODE
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
+#    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
+    shell: "todeIt via project install Seaside3"
     args:
       chdir: "/opt/GsDevKit_home"
-      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
+#      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
 
   - name: Load official GemStone-Seaside into tODE
     become_user: "{{remoteUser}}"
@@ -281,7 +295,7 @@
         - via
         - project
         - load
-        - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc')\`"
+        - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc' 'Tests')\`"
         - Seaside3
 
 
