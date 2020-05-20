@@ -6,7 +6,7 @@
   roles:
     - common
   vars_files:
-    - via_{{customerCode}}.yml
+    - ./site/via_{{customerCode}}.yml
   vars:
     remoteUser: "{{ansible_user}}"
   environment:
