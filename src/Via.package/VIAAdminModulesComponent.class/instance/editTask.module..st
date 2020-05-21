@@ -2,7 +2,7 @@ actions
 editTask: aTask module: aModule
 	selectedModule := aModule.
 	
-	self call: (VIATaskEditor new
+	self show: (VIATaskEditor new
 		task: aTask;
 		module: aModule;
 		yourself)

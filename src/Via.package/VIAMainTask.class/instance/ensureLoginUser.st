@@ -3,4 +3,5 @@ ensureLoginUser
 	self isLoggedIn ifFalse: [
 		self call: (VIALoginComponent new
 			addDecoration: VIACenterContainerDecoration new;
-			yourself)]
+			yourself) onAnswer: [ self restart ]
+	]

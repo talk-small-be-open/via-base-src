@@ -1,4 +1,4 @@
 actions
 restart
-	"simply answer, ord doing just nothing?"
+	"simply answer, or doing just nothing?"
 	self answer

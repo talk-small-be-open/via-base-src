@@ -3,7 +3,7 @@ commandExpired
 
 	self call: ((VIAStaticTextDisplayerComponent textKey: '321via:commandExpired')
 		addDecoration: VIACenterContainerDecoration new;
-		yourself)
+		yourself) onAnswer: [ self restart ]
 
 "	self call: (VIAPluggableComponent new
 		titleText: #main:commandExpired;
