@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAComponent",
+	"super" : "WAComponent",
 	"category" : "Via-View-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -8,5 +8,5 @@ displayMessageAndCallPublicApplication: aMessageText
 		yourself.
 		
 
-	self call: displayer.
-	self callPublicApplication.
+	self call: displayer onAnswer: [
+		self callPublicApplication ].

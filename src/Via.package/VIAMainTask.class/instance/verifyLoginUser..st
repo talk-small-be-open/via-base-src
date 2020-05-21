@@ -7,4 +7,5 @@ verifyLoginUser: aUser
 				email: aUser email;
 				beEmailLocked;
 				addDecoration: VIACenterContainerDecoration new;
-				yourself)]
+				yourself) onAnswer: [self restart]
+		]
