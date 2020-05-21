@@ -279,6 +279,7 @@
     
   # See GemStone docs for Seaside at
   # https://github.com/GsDevKit/GsDevKit_home/blob/master/docs/gettingStartedWithSeaside.md
+  # TODO: Es kommt aber die Meldung, dass es bereits installiert sei und nicht überschrieben wurde. Ist dieser Schritt obsolete nach einem createStone?!
   - name: Install official GemStone-Seaside into tODE
     become_user: "{{remoteUser}}"
 #    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
@@ -295,7 +296,7 @@
         - via
         - project
         - load
-        - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc' 'Tests')\`"
+        - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc' 'Tests')\`"
         - Seaside3
 
 
