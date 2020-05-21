@@ -5,7 +5,7 @@ baseline: spec
 		spec 
 			baseline: 'Seaside3' with: [
 				spec
-					repository: 'github://SeasideSt/Seaside:v3.2.5/repository'; "v3.3.4"
+					repository: 'github://SeasideSt/Seaside:v3.4.x/repository'; "v3.3.4"
 					loads: #('mustbedefined') "Template: 'Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery'"
 			].
 
