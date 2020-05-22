@@ -10,6 +10,7 @@ receiveFile: aFile
 			uploadAbsoluteDir := self targetBasePath, '/', uploadRelativeDir. 
 			GRPlatform current ensureExistenceOfFolder: uploadAbsoluteDir.
 
+"TODO: Would need rewrite because of binary/character streams"
 			MCLPlatform file: (uploadAbsoluteDir, '/', uniqueFilename) writeStreamDo: [:stream |
 				stream binary; nextPutAll: aFile rawContents].
 

@@ -1,4 +1,4 @@
-321via
+via
 pillarString: aString
 	| pillarDocument |
 	pillarDocument := (VIAHelper pillarFromPillarString: aString).

@@ -1,4 +1,4 @@
-321via
+via
 lazyImage: anUrlString
 	^self image
 		class: 'lazy';

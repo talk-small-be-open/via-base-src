@@ -8,4 +8,6 @@ initialize
 		targetRelativePath: (self wd propertyAt: #assetsRelativePath);
 		yourself."
 		
+	self clear.
+		
 	self beRestoringScrollPosition

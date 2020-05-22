@@ -11,9 +11,15 @@ createNewAssetsWithPlUpload
 	assetClass ifNotNil: [
 		self show: uploader onAnswer: [:answerCollection |
 			answerCollection ifNotBlank: [
+				| newAssets |
+				newAssets := OrderedCollection new.
 				answerCollection do: [:each |
 					| asset |
 					
 					asset := assetClass takeFromFileReference: each.
-					self wd addAsset: asset]
-	]]]
+					newAssets add: asset.
+					self wd addAsset: asset].
+				self showAssets: newAssets
+	
+	]]].
+

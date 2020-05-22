@@ -5,7 +5,7 @@ renderContentOn: html
 		html label: 'Title'.
 		html textInput on: #title of: model.
 		html break.
-		html label: 'Public comment'.
+		html label: 'Public comment & Copyright'.
 		html textArea on: #comment of: model.
 		html break.
 		html label: 'Internal Comment'.

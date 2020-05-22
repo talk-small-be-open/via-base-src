@@ -1,4 +1,4 @@
-321via
+via
 printThisButton: aJquerySelector
 	(self clickButton: '$("', aJquerySelector, '").printThis()')
 		class: 'printThis';
