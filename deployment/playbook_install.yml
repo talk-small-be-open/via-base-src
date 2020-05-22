@@ -14,11 +14,11 @@
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
   
   tasks:
-  - name: set timezone to Switzerland
+  - name: Set timezone to Switzerland
     timezone:
       name: Europe/Zurich
       
-  - name: Add group for remoteUser
+  - name: Add user group
     group:
       name: "{{remoteUser}}"
 
@@ -36,14 +36,14 @@
   #     owner: root
   #     group: root
 
-  - name: Create .ssh folder
+  - name: Create users .ssh folder
     file:
       path: "/home/{{remoteUser}}/.ssh"
       state: directory
       owner: "{{remoteUser}}"
       group: "{{remoteUser}}"
 
-  - name: make sure SSH private key is installed (optional)
+  - name: Make sure SSH private key is installed (optional)
     when: via.sshPrivateKey
     no_log: true
     copy:
@@ -91,7 +91,7 @@
       - "{{via.installationPath}}/via_site"
       - "{{via.installationPath}}/install"
 
-  - name: Create GsDevKit_home folder
+  - name: Create GemStone GsDevKit_home folder
     file:
       path: "/opt/GsDevKit_home"
       state: directory
@@ -112,7 +112,7 @@
   #     minute: "10"
   #     hour: "*/6"
   #     job: "cd {{via.installationPath}}/server && ./backup-image-snapshot.sh"
-  - name: certbot renew weekly
+  - name: "cron: Certbot renew weekly"
     when: via.useSsl
     cron:
       name: certbot renew
@@ -280,10 +280,11 @@
   # See GemStone docs for Seaside at
   # https://github.com/GsDevKit/GsDevKit_home/blob/master/docs/gettingStartedWithSeaside.md
   # TODO: Es kommt aber die Meldung, dass es bereits installiert sei und nicht überschrieben wurde. Ist dieser Schritt obsolete nach einem createStone?!
+  # Versuch: Installieren mit --stone statt default --local
   - name: Install official GemStone-Seaside into tODE
     become_user: "{{remoteUser}}"
 #    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
-    shell: "todeIt via project install Seaside3"
+    shell: "todeIt via project install --local Seaside3"
     args:
       chdir: "/opt/GsDevKit_home"
 #      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
@@ -356,7 +357,10 @@
 
   - name: Install/Config VIA application
     become_user: "{{remoteUser}}"
-    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/installVia.st"
+    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/installVia.st && touch INSTALLATION_IS_DONE.log"
+    args:
+      chdir: "{{via.installationPath}}/install"
+      creates: "{{via.installationPath}}/install/INSTALLATION_IS_DONE.log"
     
   # - name: Start Servers in tODE
   #   become_user: "{{remoteUser}}"

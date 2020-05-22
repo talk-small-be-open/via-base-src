@@ -1,0 +1,28 @@
+---
+
+#
+# Nur die simplen Datei-Updates, ohne Applikation Code und Neustart etc.
+#
+
+# - import_playbook: handlers.yml
+
+- hosts: all
+  become_user: root
+  become: true
+  roles:
+    - common
+  vars_files:
+    - ./site/via_{{customerCode}}.yml
+  vars:
+    remoteUser: "{{ansible_user}}"
+  environment:
+    GS_HOME: /opt/GsDevKit_home
+    PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
+
+  tasks:
+
+  - include_tasks: tasks_git_update.yml    
+
+  - include_tasks: tasks_common.yml
+
+  - include_tasks: tasks_common_end.yml
