@@ -228,11 +228,12 @@
       creates: "/opt/GsDevKit_home/bin/.gsdevkitSetup"
 
   - local_action: stat path=files/gemstone/GemStone64Bit3.4.5-x86_64.Linux.zip
+    when: isOnLocalNetwork is defined
     register: gemstone_zip_file_local
     become: no
     
   - name: Try to avoid big download and take GemStone locally
-    when: gemstone_zip_file_local.stat.exists
+    when: isOnLocalNetwork is defined and isOnLocalNetwork == "true" and gemstone_zip_file_local.stat.exists 
     copy:
       src: "files/gemstone/GemStone64Bit3.4.5-x86_64.Linux.zip"
       dest: "/opt/GsDevKit_home/shared/downloads/zip/GemStone64Bit3.4.5-x86_64.Linux.zip"
