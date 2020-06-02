@@ -13,6 +13,9 @@ getUiText: aKey language: aLanguage
 					self ensureUiText: aKey language: each
 				]."
 
+				"If not a key, then its probably a normal text"
+				aKey isTranslationKey ifFalse: [ ^ aKey ].
+
 				"Nur in 1 Sprache default setzen, da wir auch für Backend Texte in English haben"
 				self ensureUiText: aKey language: aLanguage.
 			

@@ -5,4 +5,4 @@ iconDurationTag: aDurationTag
 	self image
 "		class: 'icon';"
 		class: 'hm-kuchen';
-		url: '/images/', (aDurationTag duration min: 4) asString, '-4-kuchen.svg'
+		url: '/site/images/', (aDurationTag duration min: 4) asString, '-4-kuchen.svg'

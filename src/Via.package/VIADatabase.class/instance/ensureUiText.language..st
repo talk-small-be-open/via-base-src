@@ -5,7 +5,7 @@ ensureUiText: aKey language: aLanguage
 
 	uiTexts at: key ifAbsent: [
 		| defaultValue |
-		defaultValue := '??? ',
+		defaultValue := 't:',
 			(MCLPlatform splitString: aKey greaseString delimiter: $:) last.
 
 		self uiTextAt: key put: defaultValue]
