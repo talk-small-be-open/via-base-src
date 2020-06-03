@@ -13,6 +13,7 @@
     - ./site/via_{{customerCode}}.yml
   vars:
     remoteUser: "{{ansible_user}}"
+    stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
@@ -58,11 +59,11 @@
   #
   # UPDATE TO NEWEST CODE
   #
-  - name: Update VIA site project information
+  - name: Update VIA site project information (pull)
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
-  - name: Update VIA site project information
+  - name: Update VIA site project information (get)
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
