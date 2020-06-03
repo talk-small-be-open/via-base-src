@@ -3,7 +3,7 @@ sendTestEmailTo: aString
 	| to body subject |
 	to := Array with: aString.
 
-	subject := '321via Email-Test'.
+	subject := 'via Email-Test'.
 	body := String streamContents: [:stream |
 		stream nextPutAll: 'TEST TEST TEST'.
 		stream crlf; crlf.

@@ -1,7 +1,7 @@
 as yet unclassified
 commandExpired
 
-	self call: ((VIAStaticTextDisplayerComponent textKey: '321via:commandExpired')
+	self call: ((VIAStaticTextDisplayerComponent textKey: 'via:commandExpired')
 		addDecoration: VIACenterContainerDecoration new;
 		yourself) onAnswer: [ self restart ]
 
