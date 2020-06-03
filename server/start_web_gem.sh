@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# dummy line for git
+PORT=$2
 
-PORT=$1
-
-$GS_HOME/bin/todeIt via /home/seaside/gemServer --restart=seaside$PORT
+$GS_HOME/bin/todeIt $1 /home/seaside/gemServer --restart=seaside$PORT

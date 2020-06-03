@@ -1,5 +1,3 @@
 #!/bin/bash
 
-# dummy line for git
-
-$GS_HOME/bin/startStone via
+$GS_HOME/bin/startStone $1
