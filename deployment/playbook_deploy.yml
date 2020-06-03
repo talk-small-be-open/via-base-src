@@ -60,18 +60,18 @@
   #
   - name: Update VIA site project information
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project pull {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
   - name: Update VIA site project information
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project get {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
   - name: Load VIA site project
     become_user: "{{remoteUser}}"
     command:
       argv:
         - todeIt
-        - via
+        - "{{stoneName}}"
         - project
         - load
         - --loads="\`#('default')\`"
@@ -79,7 +79,7 @@
 
   - name: Update script inside VIA application
     become_user: "{{remoteUser}}"
-    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/updateVia.st"
+    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{stoneName}} {{via.installationPath}}/install/updateVia.st"
 
   - name: Starting VIA's web instances (gems)
     shell: monit -g via_gemstone_gems start
