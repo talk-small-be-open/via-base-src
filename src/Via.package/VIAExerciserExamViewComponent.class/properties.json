@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAExerciserExamComponent",
-	"category" : "Via-View",
+	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

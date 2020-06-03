@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAModuleComponent",
-	"category" : "Via-View",
+	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
