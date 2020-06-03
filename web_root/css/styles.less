@@ -107,7 +107,6 @@
 // Our own uikit theme
 @import "uikit_321_theme/_import.less";
 
-
 @import "common.less";
 @import "tasks.less";
 @import "development.less";
@@ -216,13 +215,6 @@
 
 @hm-teaser-background:                              none;
 
-@hm-header-height:                                  10vh;
-@hm-header-height-small:                            5vh;
-@hm-header-background:                              rgba(0,0,0,0.2);
-@hm-header-small-background:                        fade(@global-background, 95%);
-
-@hm-header-shadow-sticky:                           0 0 50px 1px rgba(0,0,0,0.2);
-@hm-header-shadow-teaser:                           0 0 150px 1px rgba(0,0,0,0.5);
 
 
 //
@@ -351,154 +343,6 @@ option {
 @acc-subtitle-padding-top: 9px;
  
 
-
-//
-// header 
-//
-div.hm-header {
-    
-		background-color: @global-background;
-
-		img.tdu-logo {
-				height: @hm-header-height;
-				width: auto;
-				min-height: 3em;
-		}
-
-		.hm-claim {
-				//		padding-left: @claim-padding-left;
-				font-size: 16px;
-				vertical-align: top;
-				// line-height: 22px;
-				margin-top: 1em;
-
-				p {
-						line-height: @claim-p-height;
-				}
-
-		}
-
-		ul.uk-navbar-nav {
-				margin-top: 1em;
-		}
-
-		a.mainMenuToggler {
-				span.uk-icon {
-						margin-right: 0.2em;
-				}
-		}
-		
-		&.uk-active {
-
-				height: @hm-header-height-small;
-				box-shadow: @hm-header-shadow-sticky !important;
-				background: @hm-header-small-background;
-
-				> .uk-container {
-						height: @hm-header-height-small;
-
-						div.uk-navbar-right, div.uk-navbar-left {
-								align-items: flex-start;
-						}
-				}
-
-				//    .uk-dropdown-navbar { margin-top: 15px; }
-
-				// .uk-navbar-nav > li:not(.uk-active) > a {
-				// 		color: @navbar-nav-item-color !important;				
-				// }
-
-				//    .uk-navbar-toggle { color: @navbar-toggle-color !important; }
-
-		}
-
-		// Menu, in navbar or in offcanvas
-		#mainMenu {
-				ul.uk-nav, ul.uk-navbar-nav {
-						// Login Menu, Facebook-Vorgaben
-						li.loginMenu {
-								ul.loginMenu {
-										li.facebookLogin, li.googleLogin {
-												//				background-color: @facebook-blue;
-												padding-left: 2px;
-												background-color: #f6f6f6;
-
-												a.facebookLogin, a.googleLogin {
-														&:hover {
-																color: @base-link-color;
-														}
-														color: #333;
-
-														img.facebookLogo {
-																width: 20px;
-																//						margin: 2px;
-														}
-
-														img.googleLogo {
-																width: 16px;
-																margin: 2px;
-														}
-												}
-										}
-								}
-						}
-				}
-
-				&.uk-offcanvas {
-						ul.uk-nav {
-								li {
-										a {
-												color: white;
-										}
-								}
-						}
-				}
-		}
-
-}
-
-
-div.searchBarContainer {
-
-		background-color: @global-primary-background;
-		padding: 1.5em 0;
- 		border-bottom: darken(@global-primary-background, 20%) 5px solid;
-
-		div.searchBar {
-
-				padding: 0 0.3em;
-				
-				div.uk-search {
-
-						input.uk-search-input {
-								background-color: #fff;   
-								border-radius: 12px;
-						}
-						
-						button.searchButton
-						{
-								background-color: @via-coloredbutton-color;
-								border: 2px solid white;
-								&:hover {
-										background-color: @via-coloredbutton-hover-color;
-								}
-						}
-				}
-
-				div.extendedSearch {
-						margin: 20px 0 0 0;
-				}
-		}
-}
-
-
-
-div.VIAModuleSearchComponent {
-		div.mapContainer.swissMap {
-				margin: 50px auto;
-				width: 50%;
-		}
-}
 
 
 
@@ -853,140 +697,41 @@ div.VIAExamModuleExerciser {
 
 
 
-nav.hm-navbar {
-		ul.uk-navbar-nav > li {
-				span.menuDivider {
-						display: inline-block;
-						width: 1px;
-						height: 30px;
-						background-color: @global-primary-background;
-						// -webkit-transform: rotate(20deg);
-	    			// -ms-transform: rotate(20deg);
-						transform: rotate(20deg);
-				}
+// nav.hm-navbar {
+// 		ul.uk-navbar-nav > li {
+// 				span.menuDivider {
+// 						display: inline-block;
+// 						width: 1px;
+// 						height: 30px;
+// 						background-color: @global-primary-background;
+// 						// -webkit-transform: rotate(20deg);
+// 	    			// -ms-transform: rotate(20deg);
+// 						transform: rotate(20deg);
+// 				}
 
-		}
-}
-
-
-//
-// Fixed backgrounds variants
-//
-
-.hm-fixed-background-a,
-.hm-fixed-background-b,
-.hm-fixed-background-c {
-    background-attachment: fixed;
-    background-size: cover;
-    padding: @hm-position-padding 0;
-    position: relative;
-    box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
-   // height:@fixedbackground-home-height;
-}
-
-.hm-fixed-background-a { background-image: @hm-fixed-background-a; }
-.hm-fixed-background-b { background-image: @hm-fixed-background-b; }
-.hm-fixed-background-c { background-image: @hm-fixed-background-c; }
+// 		}
+// }
 
 
+// //
+// // Fixed backgrounds variants
+// //
 
-/* Breakpoints
- ========================================================================== */
+// .hm-fixed-background-a,
+// .hm-fixed-background-b,
+// .hm-fixed-background-c {
+//     background-attachment: fixed;
+//     background-size: cover;
+//     padding: @hm-position-padding 0;
+//     position: relative;
+//     box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
+//    // height:@fixedbackground-home-height;
+// }
 
-// Small and bigger
-@media (min-width: @breakpoint-small) {
+// .hm-fixed-background-a { background-image: @hm-fixed-background-a; }
+// .hm-fixed-background-b { background-image: @hm-fixed-background-b; }
+// .hm-fixed-background-c { background-image: @hm-fixed-background-c; }
 
-		div.coreContainer {
-				padding-left: 2em;
-				padding-right: 2em;
-		}
-
-		div.VIAMyPortfolioComponent {
-				div.certificatePreview {
-						transform: translate(-25%, -25%) scale(0.5);
-				}
-		}
-		
-}
-
-// Not small phones
-@media (min-width: @breakpoint-small-max) {
-		body.loggedIn {
-				div.core {
-						min-height: 500px;
-				}
-		}
-}
-
-// Only very small phones
-@media (max-width: @breakpoint-small) {
-
-		body.loggedIn {
-				background-attachment: scroll;
-		}
-
-		.hm-fixed-background-a,
-    .hm-fixed-background-b,
-    .hm-fixed-background-c { background-attachment: scroll; }
-
-		
-    .uk-navbar-brand,
-    .uk-navbar-content { padding: 0 !important; }
-
-    .uk-navbar-toggle { padding-right: 0; }
-
-    h1, .uk-h1 {
-        font-size: @base-h1-font-size - 10px;
-        line-height: @base-h1-line-height - 10px;
-    }
-
-    h2, .uk-h2 {
-        font-size: @base-h2-font-size - 10px;
-        line-height: @base-h2-line-height - 10px;
-    }
-
-    h3, .uk-h3 {
-        font-size: @base-h3-font-size - 10px;
-        line-height: @base-h3-line-height - 10px;
-    }
-
-    h4, .uk-h4 {
-        font-size: @base-h4-font-size - 2px;
-        line-height: @base-h4-line-height - 2px;
-    }
-
-    h5, .uk-h5 {
-        font-size: @base-h5-font-size;
-        line-height: @base-h5-line-height;
-    }
-
-    h6, .uk-h6 {
-        font-size: @base-h6-font-size;
-        line-height: @base-h6-line-height;
-    }
-
-    .hm-position-teaser { position: absolute !important; }
-
-		div.moduleCard {
-
-				&.mini {
-						padding: 0.2em;
-				}
-
-				&.normal {
-						padding: 0.5em;
-				}
-
-
-				div.hm-titel-box {
-						font-size: 90%;
-						line-height: normal;
-				}
-
-		}
-
-
-}
 
 
 div.coreContainer {
@@ -995,49 +740,7 @@ div.coreContainer {
 }
 
 
-//
-// footer
-// 
-
-.footer {
-    background-color: @footer-background;
-    color: @footer-color;
-    height: @footer-min-height;
-    margin-top: @footer-margin-top;
-
-		position: fixed;
-		z-index: 15;
-		bottom: 0;
-		width: 100%;
-		
-		div.footnotes {
-				padding: @footer-padding;
-		}
-
-		a {
-				color: inherit;
-		}
-		
-		div.awards {
-				position: absolute;
-				right: 0;
-				padding: @footer-padding;
-				
-				img.award {
-						height: @footer-min-height / 1.7;
-						filter: grayscale(100%);
-
-						&:hover {
-								filter: grayscale(0%);
-						}
-				}
-		}
-    
-}
-
-
-
-// zurückknopf
+// Back button
 div.backButton {
 		padding-top: 0.5em;
 }
@@ -1058,7 +761,7 @@ a.backButtonAnchor:hover {
 		color: #ddd;   
 }
 
-    
+
 .topBuffer {
 		margin-top: 20px;
 }
@@ -1103,11 +806,6 @@ div.inputDialog {
 		}
 }
 
-div.VIAPublicHomeComponent {
-		div#award {
-				position: absolute;
-		}
-}
 
 div.testDriveContainer {
 		margin: 30px;
