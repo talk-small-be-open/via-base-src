@@ -4,4 +4,4 @@ printThisButton: aJquerySelector
 		class: 'printThis';
 		with: [
 			self iconPrint; space.
-			self t: '321via:printThis']
+			self t: 'via:printThis']

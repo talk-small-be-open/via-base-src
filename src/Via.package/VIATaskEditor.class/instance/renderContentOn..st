@@ -10,7 +10,7 @@ renderContentOn: html
 		html div: [
 			html popupAnchor
 				dependent: true;
-				windowTitle: '321via Preview';
+				windowTitle: 'Preview';
 				callback: [self testdrive];
 				with: 'Open preview of task ...'.
 			html break; break]]

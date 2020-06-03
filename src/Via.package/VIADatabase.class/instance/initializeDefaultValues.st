@@ -11,7 +11,6 @@ initializeDefaultValues
 	searchEngine ifNil: [searchEngine := VIASearchEngine new].
 	uiTexts ifNil: [uiTexts := Dictionary new].
 	trashedObjects ifNil: [trashedObjects := OrderedCollection new].
-	mailer ifNil: [mailer := VIAMailer new].
 	applicationCommands ifNil: [applicationCommands := RcKeyValueDictionary new].
 	exams ifNil: [exams := OrderedCollection new].
 	websites ifNil: [websites := OrderedCollection new].
