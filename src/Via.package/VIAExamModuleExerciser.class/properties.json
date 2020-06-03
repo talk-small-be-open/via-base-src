@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "AndreasBrodbeck 3/16/2020 23:03",
 	"super" : "VIAModuleExerciser",
-	"category" : "Via-View",
+	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

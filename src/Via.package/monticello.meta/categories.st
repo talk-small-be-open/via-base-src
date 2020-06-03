@@ -16,4 +16,5 @@ SystemOrganization addCategory: #'Via-View-Dialogs'!
 SystemOrganization addCategory: #'Via-View-Javascript'!
 SystemOrganization addCategory: #'Via-View-Menu'!
 SystemOrganization addCategory: #'Via-View-Misc'!
+SystemOrganization addCategory: #'Via-View-OutOfTheBox'!
 SystemOrganization addCategory: #'Via-View-Testdrive'!
