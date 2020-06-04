@@ -26,7 +26,8 @@
 		"releasedAt",
 		"geocode",
 		"geocodes",
-		"allowIgnoreTasks"
+		"allowIgnoreTasks",
+		"indexCode"
 	],
 	"name" : "VIAModule",
 	"type" : "normal"

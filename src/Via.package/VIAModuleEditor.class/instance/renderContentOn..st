@@ -7,14 +7,17 @@ renderContentOn: html
 		html label: 'Title of module'.
 		html textInput on: #title of: model.
 		html break.
+		html label: 'Index code (Chapter number, ...)'.
+		html textInput on: #indexCode of: model.
+		html break.
 		html label: [
 			html checkbox on: #isExam of: model.
 			html space.
-			html text: 'Is only for exam (not public searchable)'].
+			html text: 'Exam only (Not public searchable)'].
 		html label: [
 			html checkbox on: #isPrivate of: model.
 			html space.
-			html text: 'Is private'].
+			html text: 'Private (Accessible by link only)'].
 		html label: [
 			html checkbox on: #allowIgnoreTasks of: model.
 			html space.
@@ -48,10 +51,10 @@ renderContentOn: html
 			list: (VIADurationTag allForWebsite: self website);
 			on: #durationTag of: model classification.
 		html break.
-		html label: 'Footnotes (Use Pillar-Syntax for formatting)'.
+		html label: 'Footnotes'.
 		self renderPillarInput: #footnotesPillarString of: model on: html.
 		html break.
-		html label: 'Remarks for teachers (Use Pillar-Syntax for formatting)'.
+		html label: 'Remarks for teachers'.
 		self renderPillarInput: #teacherNotesPillarString of: model on: html.
 
 		self renderGeoInformationOn: html.
