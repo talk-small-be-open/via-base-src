@@ -12,6 +12,8 @@
 // 		}
 // }
 
+.muted() {color: #666}
+
 h5.mainTitle {
 		margin-bottom: 0px;
 }
@@ -168,14 +170,14 @@ a.backButtonAnchor {
 }
 
 div.validationResults {
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
+		position: sticky;
+		top: 5px;
+		// left: 7%;
+		// right: 7%;
 		
 		border: 2px solid red;
 		background-color: #fee;
-		padding: 3px;
+		padding: 10px 15px;
 		//		margin: 20px 0;
 
 		div.title {
@@ -204,10 +206,13 @@ div.pillarInput {
 				margin-bottom: 0;
 		}
 
-		a.pillarPreviewLink {
-				font-size: 90%;
-				// position: absolute;
-				// right: 0;
+		div.pillarToolbar {
+				.muted();
+				font-size: 80%;
+				a.pillarPreviewLink {
+						// position: absolute;
+						// right: 0;
+				}
 		}
 }
 
@@ -243,7 +248,7 @@ div.VIAModuleEditor {
 }
 
 label {
-		margin-top: 0.5rem;
+		margin-top: 1.5rem;
 }
 
 @skSmallHeight: 25px;
