@@ -1,0 +1,131 @@
+//
+// Styles for via's out of the box components
+//
+
+//
+// Fonts
+//
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Roboto Thin'), local('Roboto-Thin'), url(//fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Permanent Marker';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
+}
+
+
+// 
+// Accordion
+// 
+
+@acc-number-background: #000;
+@acc-number-color: #fff;
+@acc-number-height: 31px; 
+@acc-number-padding-top: 9px;
+@acc-number-padding-left: 18px;
+	
+	
+@acc-title-float: left;
+@acc-title-padding-left: 20px;
+@acc-title-padding-top: 9px;
+
+@acc-subtitle-font-size: 0.7em;
+@acc-subtitle-padding-top: 9px;
+
+div.acc-bar {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 18px;
+    cursor: pointer;
+		padding: 00px;
+		height: 40px;
+		color: #fff;
+    border: none;
+
+		&.ignored {
+				background-color: #bbb;
+				color: #ddd;
+		}
+		
+		.acc-number {
+				background-color:               @acc-number-background;
+				color:                          @acc-number-color;
+				height:                         @acc-number-height; 
+				padding-top:                    @acc-number-padding-top;
+				padding-left:                   @acc-number-padding-left;   
+				
+				font-weight: bold;
+				width: 30px;
+				float: left;
+				border: none;
+				position: relative; 
+		}
+
+		.acc-icon  {
+				float: left; 
+ 				color: #fff;
+				text-align: center;
+				padding-left:10px; 
+				padding-top: 9px; 
+				font-size: 1.4em;
+				min-width: 20px;
+				height: 20px;
+
+				img.icon {
+						background-color: #fff;
+				}
+		}
+
+		.acc-title {
+				float:                    @acc-title-float;
+				padding-left:             @acc-title-padding-left;
+				padding-top:              @acc-title-padding-top;
+		}
+
+		.acc-toggle  {
+				float: right; 
+				width:20px;
+				height: 20px;
+				padding-top: 10px;
+				margin-left: 20px;
+				margin-right: 20px;
+		}
+
+
+		.acc-subtitle {
+				font-size: @acc-subtitle-font-size;
+				padding-top: @acc-subtitle-padding-top;
+				float: right;
+				white-space: nowrap;
+		}
+}
