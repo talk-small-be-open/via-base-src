@@ -1,3 +1,3 @@
 converting
 asString
-	^ MCLPlatform joinCollection: self partStrings delimiter: $.
+	^ MCLPlatform joinCollection: self partStrings delimiter: '.'
