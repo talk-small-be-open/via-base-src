@@ -1,13 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAComponent",
-	"category" : "Via-View-OutOfTheBox",
+	"super" : "VIAObject",
+	"category" : "Via-Model",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"user"
+		"parts"
 	],
-	"name" : "VIAMyProfileComponent",
+	"name" : "VIAIndexCode",
 	"type" : "normal"
 }

@@ -1,3 +1,3 @@
 as yet unclassified
 ensureDefaultRenderer
-	VIAHtmlCanvas selectAsDefault
+	self rendererClass selectAsDefault
