@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"moduleExercise"
+		"moduleExerciseGSRENAME"
 	],
 	"name" : "VIAModuleExerciserBase",
 	"type" : "normal"

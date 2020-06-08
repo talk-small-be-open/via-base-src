@@ -1,3 +1,3 @@
 as yet unclassified
 buildExerciseComponentForTask: aTask
-	^self taskExerciserClass exercise: (moduleExercise exerciseForTask: aTask)
+	^self taskExerciserClass exercise: (moduleExerciseGSRENAME exerciseForTask: aTask)
