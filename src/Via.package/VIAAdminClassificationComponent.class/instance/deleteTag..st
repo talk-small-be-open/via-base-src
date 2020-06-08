@@ -1,4 +1,4 @@
 actions
 deleteTag: aTag
-	(self confirmYesNo: 'Really delete?') ifTrue: [
+	(self confirmYesNo: 'admin:reallyDeleteQM') ifTrue: [
 		self wd removeTag: aTag]

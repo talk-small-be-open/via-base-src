@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "VIARenderingVisitorComponent",
-	"category" : "Via-View-OutOfTheBox",
+	"super" : "VIAModuleComponent",
+	"category" : "Via-View",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "VIAExerciserBase",
+	"name" : "VIAModuleExerciserBase",
 	"type" : "normal"
 }
