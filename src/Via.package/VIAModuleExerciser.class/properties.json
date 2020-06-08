@@ -8,8 +8,7 @@
 	"instvars" : [
 		"currentExerciser",
 		"exerciserComponents",
-		"subtitleTags",
-		"moduleExercise"
+		"subtitleTags"
 	],
 	"name" : "VIAModuleExerciser",
 	"type" : "normal"
