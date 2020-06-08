@@ -1,0 +1,3 @@
+testing
+isBlank
+	^ self isEmpty

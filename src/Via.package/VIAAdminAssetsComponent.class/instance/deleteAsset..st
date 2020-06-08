@@ -1,4 +1,4 @@
 actions
 deleteAsset: anAsset
-	(self confirmYesNo: 'Delete?') ifTrue: [
+	(self confirmYesNo: 'admin:reallyDeleteQM') ifTrue: [
 		self wd deleteAsset: anAsset]

@@ -1,5 +1,5 @@
 actions
 removeTaskBrick: aTaskBrick from: aParent
 	"Delegate"
-	(self confirmYesNo: 'Really delete element?') ifTrue: [
+	(self confirmYesNo: 'admin:reallyDeleteQM') ifTrue: [
 		aParent removeChild: aTaskBrick]

@@ -1,3 +1,3 @@
 accessing
 indexCode
-	^ indexCode
+	^ indexCode ifNil: [ indexCode := VIAIndexCode new ]

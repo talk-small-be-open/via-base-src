@@ -6,6 +6,6 @@ allInstancesOfClass: aClass do: aBlock
 		ifTrue: [
 			self commitTransaction.
 			collection := aClass allInstances. "Does an abort"
-			System beginTransaction.
+			System beginTransaction. 
 			collection do: aBlock
 		]

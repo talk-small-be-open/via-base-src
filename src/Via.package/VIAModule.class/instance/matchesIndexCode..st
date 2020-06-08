@@ -3,6 +3,8 @@ matchesIndexCode: aString
 	"I am 1.2.3
 	matches: 1, 1., 1.2, 1.2., 1.2.3"
 
-	indexCode ifNil: [ ^ false ].
+	"OPTIMIZE"
 	
-	^ indexCode beginsWith: aString
+	indexCode ifBlank: [ ^ false ].
+	
+	^ indexCode string beginsWith: aString

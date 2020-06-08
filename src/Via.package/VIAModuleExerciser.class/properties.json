@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAModuleComponent",
+	"super" : "VIAModuleExerciserBase",
 	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -8,8 +8,7 @@
 	"instvars" : [
 		"currentExerciser",
 		"exerciserComponents",
-		"subtitleTags",
-		"moduleExercise"
+		"subtitleTags"
 	],
 	"name" : "VIAModuleExerciser",
 	"type" : "normal"

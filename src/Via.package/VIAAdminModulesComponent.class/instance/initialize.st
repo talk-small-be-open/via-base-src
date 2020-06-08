@@ -7,4 +7,5 @@ initialize
 	showOnlyMy := true.
 	self ifAdmin: [showOnlyMy := false].
 
-	self beRestoringScrollPosition
+	self beRestoringScrollPosition.
+	self addContainerDiv.

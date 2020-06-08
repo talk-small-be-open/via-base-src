@@ -2,7 +2,7 @@ actions
 releaseModule: aModule
 	aModule moduleHistory hasReleasedVersions
 		ifTrue: [
-			(self confirmYesNo: 'This will un-release a previous version of that module!') ifTrue: [
+			(self confirmYesNo: 'admin:reallyPublishModuleQM') ifTrue: [
 				self flashMessage: 'Published NEW version of existing module.'.
 				aModule releaseNow]]
 		ifFalse: [
