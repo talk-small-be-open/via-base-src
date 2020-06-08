@@ -50,9 +50,11 @@ table.adminModules {
 		}
 
 		td.actions {
-				a:not(:first-child) {
-						margin-left: 0.6em;
+				a {
 						white-space: nowrap;
+						&:not(:first-child) {
+								margin-left: 0.6em;
+						}
 				}
 
 				&.extras {
@@ -249,6 +251,12 @@ div.VIAModuleEditor {
 
 label {
 		margin-top: 1.5rem;
+
+		span.help {
+				.muted();
+				font-size: 80%;
+				font-weight: normal;
+		}
 }
 
 @skSmallHeight: 25px;
