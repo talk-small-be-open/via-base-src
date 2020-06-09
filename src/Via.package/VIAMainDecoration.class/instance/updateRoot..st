@@ -13,7 +13,7 @@ updateRoot: anHtmlRoot
 
 	self isDevelopment
 		ifTrue: [
-			anHtmlRoot title: '3-2-1 DEVELOPMENT ', self session language.
+			anHtmlRoot title: 'VIA DEVELOPMENT ', self session language.
 			anHtmlRoot bodyAttributes addClass: 'development'.
 
 "			anHtmlRoot javascript url: 'https://getuikit.com/migrate.min.js'."

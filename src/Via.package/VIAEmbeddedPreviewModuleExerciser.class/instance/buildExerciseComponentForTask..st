@@ -2,5 +2,5 @@ as yet unclassified
 buildExerciseComponentForTask: aTask
 	| exercise |
 
-	exercise := (moduleExercise exerciseForTask: aTask).
+	exercise := (moduleExerciseGSRENAME exerciseForTask: aTask).
 	^VIAExerciserEmbeddedPreviewComponent exercise: exercise

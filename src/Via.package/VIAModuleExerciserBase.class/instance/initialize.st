@@ -2,5 +2,5 @@ initialization
 initialize 
 	super initialize.
 	
-	moduleExercise ifNil: [
-		moduleExercise := self currentPortfolio exerciseForModule: model]
+	moduleExerciseGSRENAME ifNil: [
+		moduleExerciseGSRENAME := self currentPortfolio exerciseForModule: model]
