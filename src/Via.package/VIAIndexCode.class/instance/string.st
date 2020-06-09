@@ -1,3 +1,3 @@
 as yet unclassified
 string
-	^ self asString
+	^ string

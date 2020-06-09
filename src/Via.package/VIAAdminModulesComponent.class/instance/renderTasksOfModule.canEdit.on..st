@@ -30,7 +30,7 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 
 				html popupAnchor
 					dependent: true;
-					windowTitle: '321 Preview';
+					windowTitle: 'Preview';
 					callback: [self testdriveTask: eachTask module: aModule];
 "							target: '_blank';"
 					title: 'Preview single task and test it';

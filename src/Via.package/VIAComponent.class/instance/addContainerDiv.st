@@ -9,4 +9,4 @@ addContainerDiv
 		
 	css := MCLPlatform joinCollection: (classes collect: [:each | each name asString]) delimiter: ' '.
 
-	self addDivClass: css
+	^ self addDivClass: css
