@@ -3,5 +3,5 @@ initialize
 
 	super initialize.
 
-	title := '<Unbenannt>'.
+	title := nil.
 	classification := VIATaskClassification new.

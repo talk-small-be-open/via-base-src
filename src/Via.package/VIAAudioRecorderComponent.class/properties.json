@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uploadSessionUuid",
+		"fileReference"
+	],
+	"name" : "VIAAudioRecorderComponent",
+	"type" : "normal"
+}
