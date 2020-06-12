@@ -321,25 +321,25 @@
   #     chdir: "/opt/GsDevKit_home"
   #     creates: "/opt/GsDevKit_home ...?
     
-  - name: Add VIA site project information into tODE
+  - name: Add VIA site project into tODE
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project entry --baseline={{via.siteName}} --repo={{via.siteRepository.metacelloUrl}} /sys/local/server/projects"
     args:
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/sys/local/server/projects/{{via.siteName}}.ston"
 
-  - name: git-clone VIA site project information
+  - name: git-clone VIA site project
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project clone --https --local --checkout=master {{via.siteName}}"
     args:
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/shared/repos/{{via.siteRepository.name}}"
       
-  - name: Update VIA site project information (pull)
+  - name: Update VIA site project (pull)
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
-  - name: Update VIA site project information (get)
+  - name: Update VIA site project (get)
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   

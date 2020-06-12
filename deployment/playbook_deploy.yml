@@ -55,6 +55,50 @@
   #  - name: certbot renew
 
 
+  - name: Flush Monticello cache
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mr flush"
+
+    # mc revert Via ???
+
+  #
+  # UPDATE TO NEWEST CODE IN VIA BASE
+  # (Very strange, that we have to do that, since I thought Monticell would update subprojects as well?)
+  #
+  - name: git-clone VIA base project
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project clone --https --local --checkout=master Via"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/shared/repos/via"
+      
+  - name: Update VIA base project (pull)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project pull Via"
+
+  - name: Update VIA base project (get)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project get Via"
+
+  # Hack, GemStone weigert sich irgendwie zu updaten
+  - name: Monticello revert to last version (strange, why?)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mc revert Via"
+
+  
+  # - name: Load VIA site project
+  #   become_user: "{{remoteUser}}"
+  #   command:
+  #     argv:
+  #       - todeIt
+  #       - "{{stoneName}}"
+  #       - project
+  #       - load
+  #       - --loads="\`#('default')\`"
+  #       - "{{via.siteName}}"
+
+
+
 
   #
   # UPDATE TO NEWEST CODE
@@ -78,6 +122,12 @@
         - --loads="\`#('default')\`"
         - "{{via.siteName}}"
 
+  # Hack, GemStone weigert sich irgendwie zu updaten
+  - name: Monticello revert to last version (strange, why?)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mc revert ViaSiteHep"
+
+      
   - name: Update script inside VIA application
     become_user: "{{remoteUser}}"
     shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{stoneName}} {{via.installationPath}}/install/updateVia.st"

@@ -1,7 +1,7 @@
 // JavaScript for the VIAAudioRecorder component
 
 
-function startAudioRecorder(uploadSessionUuid, callback) {
+function startAudioRecorder(uploadSessionUuid, inputDeviceId, callback) {
 
 	const player = document.getElementById('audioRecorderPlayer');
 
@@ -10,15 +10,58 @@ function startAudioRecorder(uploadSessionUuid, callback) {
 	const downloadLink = document.getElementById('audioRecorderDownload');
 	const startButton = document.getElementById('audioRecorderStart');
 	const stopButton = document.getElementById('audioRecorderStop');
+	const sourcesList = document.getElementById('audioRecorderSources');
+	const progress = document.getElementById('audioRecorderUploadProgress');
 
+	$(progress).hide();
+	$(stopButton).hide();
+
+
+	// Choose microphone
+	var inputDevices;
+	var chosenInputDeviceId = inputDeviceId;
+
+	navigator.mediaDevices.enumerateDevices().then((devices) => {
+	  inputDevices = devices.filter((d) => d.kind === 'audioinput');
+
+		// Create the list of inputs
+		inputDevices.forEach(function(e) {
+			var o = new Option(e.label, e.deviceId);
+			$(sourcesList).append(o);			
+		});
+
+		$(sourcesList).val(chosenInputDeviceId);
+
+//		console.log(inputDevices);
+	});
+
+
+// 	sourcesList.addEventListener('change', function() {
+// 		chosenInputDeviceId = $(sourcesList).val();
+// //		return true;
+// 	});
+	
 	stopButton.addEventListener('click', function() {
 		shouldStop = true;
 		console.log('Recording stop');
+		$(stopButton).removeClass('recording');
+		$(progress).show();
+		$(startButton).show();
+		$(stopButton).hide();
 	});
 
 	startButton.addEventListener('click', function() {
+		$(stopButton).addClass('recording');
 		console.log('Recording start');
-		navigator.mediaDevices.getUserMedia({ audio: true, video: false }).then(handleMicrophoneSuccess);
+		$(startButton).hide();
+		$(stopButton).show();
+		navigator.mediaDevices.getUserMedia({
+			audio: {
+				deviceId: chosenInputDeviceId
+			},
+//			audio: true,
+			video: false
+		}).then(handleMicrophoneSuccess);
 	});
 
 	const handleMicrophoneSuccess = function(stream) {
@@ -67,14 +110,5 @@ function startAudioRecorder(uploadSessionUuid, callback) {
 		mediaRecorder.start(1000);
 	};
 
-	// Choose microphone
-	// navigator.mediaDevices.enumerateDevices().then((devices) => {
-	//   devices = devices.filter((d) => d.kind === 'audioinput');
-	// });
-	// navigator.mediaDevices.getUserMedia({
-	//   audio: {
-	//     deviceId: devices[0].deviceId
-	//   }
-	// });
-
+	
 }
