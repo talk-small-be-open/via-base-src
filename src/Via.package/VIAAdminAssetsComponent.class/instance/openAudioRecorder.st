@@ -1,8 +1,9 @@
 as yet unclassified
-openAudioRecorderFor: anAudioPlayer
+openAudioRecorder
 	| recorder |
 	recorder := VIAAudioRecorderComponent new.
+	self clear.
 	self showLightbox: 'Record from your microphone' component: recorder wide: true onAnswer: [:asset |
 		asset ifNotNil: [
-			anAudioPlayer audioAsset: asset ]
+			self showAssets: {asset} ]
 	]

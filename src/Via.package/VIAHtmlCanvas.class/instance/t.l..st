@@ -3,7 +3,7 @@ t: aKey l: aLanguage
 	"failsafe"
 	"OPTIMIZE: Das ist overhead!"
 	VIADatabase current isDevelopment ifTrue: [
-		aKey isTranslationKey ifFalse: [
+		(aKey isTranslationKey not and: [(self session isKindOf: VIAAdminSession) not]) ifTrue: [
 			self halt: 'Should not get here!'
 "			self text: aKey"]
 	].

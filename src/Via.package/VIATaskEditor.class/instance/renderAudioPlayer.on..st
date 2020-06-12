@@ -7,7 +7,8 @@ renderAudioPlayer: anAudioPlayer on: html
 			beOptional;
 			on: #audioAsset of: anAudioPlayer.
 
-		self ifFeature: #admin:recordAudioFromBrowser then: [
+		self ifFeature: #backend:recordAudioFromBrowser then: [
+			html space.
 			self renderAudioRecorderFor: anAudioPlayer on: html.
 		].
 	

@@ -13,7 +13,7 @@ processUploadedFile: aFilenameString
 	"Bereits bestehendes File hierhin verschieben"
 	VIAPlatform current moveFileNamed: (self tempUploadFolder, aFilenameString) to: (uploadAbsoluteDir, '/', uniqueFilename).
 
-	title := 'Audio-Recording ', self currentUser fullName, ' at ', (VIAHelper germanDateAndTimeStringFor: DateAndTime now).
+	title := 'Adhoc recording of ', self currentUser fullName, ' at ', (VIAHelper germanDateAndTimeStringFor: DateAndTime now).
 
 	fileReference := VIALocalFileReference new
 		fileBasePath: targetBasePath;
@@ -21,3 +21,5 @@ processUploadedFile: aFilenameString
 		fileName: uniqueFilename;
 		title: title;
 		yourself.
+
+	optimizeAudio ifTrue: [ VIAHelper optimizeSelfRecordedSpeech: fileReference ]
