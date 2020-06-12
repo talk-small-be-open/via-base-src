@@ -17,4 +17,4 @@ initializeDefaultValues
 	websiteDatas ifNil: [websiteDatas := IdentityDictionary new].
 
 	self propertyAt: #uploadsBasePath ifAbsentPut: ['/tmp'].
-	self propertyAt: #fileStoragePath ifAbsentPut: ['/Users/dassi/code/smalltalk/seaside/321via/web_root'].
+	self propertyAt: #fileStoragePath ifAbsentPut: ['/tmp'].
