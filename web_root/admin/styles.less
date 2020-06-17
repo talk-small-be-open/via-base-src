@@ -30,9 +30,48 @@
 
 
 // ======================================================
+// Fake styles for mimic some cross-used uikit components
+// ======================================================
+
+div[uk-modal] {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 99999;
+		background-color: rgba(100,100,100, 0.5);
+
+		div.uk-modal-dialog {
+				background-color: white;
+				border: 1px solid black;
+				width: 75%;
+				margin: 2em auto;
+				padding: 1em;
+		}
+}
+
+// ======================================================
 // Styles
 // ======================================================
 
+.badge {
+		display: inline-block;
+		background-color: #666;
+		color: white;
+		padding: 0.3em;
+		margin: 3px;
+		border-radius: 5px;
+		text-transform: uppercase;
+
+		&.warning {
+				background-color: orange;
+		}
+
+		&.success {
+				background-color: green;
+		}
+}
 
 h5.mainTitle {
 		margin-bottom: 0px;
@@ -49,7 +88,7 @@ table.adminModules {
 		width: 100%;
 
 		td.taskName {
-				padding-left: 25px;
+				//padding-left: 25px;
 		}
 
 		tr.tasksBottom td {
@@ -217,6 +256,16 @@ div.taskEditor {
 				color: red;
 		}
 
+		// TODO Evt. innerhalb taskEditor
+		div.inputEditor {
+				> div.inputEditor {
+						border: 1px dotted #333;
+						background-color: #f3f3f3;
+						padding: 5px;
+						margin: 10px 0;
+				}
+		}
+
 }
 
 div.pillarInput {
@@ -229,11 +278,16 @@ div.pillarInput {
 		}
 
 		div.pillarToolbar {
+				text-align: right;
 				.muted();
 				font-size: 80%;
 				a.pillarPreviewLink {
 						// position: absolute;
 						// right: 0;
+				}
+
+				span.pillarSyntaxIndicator {
+						.badge();
 				}
 		}
 }
@@ -319,5 +373,11 @@ div.VIAAudioRecorderComponent {
 						.blink();
 						background-color: red;
 				}
+		}
+}
+
+div.inputDialog {
+		textarea {
+				width: 100%;
 		}
 }
