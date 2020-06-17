@@ -1,0 +1,1 @@
+A full seaside component base for task bricks who are a bit more complex, than just being rendered in a visitor-style method

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"questionPillar",
+		"answerPillar",
+		"explanationBrick"
+	],
+	"name" : "VIATandemQandA",
+	"type" : "normal"
+}

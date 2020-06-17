@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "WAFileLibrary",
+	"super" : "VIAStaticFileLibraryBase",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],

@@ -17,7 +17,7 @@ registerAsApplication: aName
 
 		addLibrary: WANavigationFiles;
 
-		addLibrary: VIAStaticFileLibrary;
+"		addLibrary: VIAStaticFileLibrary;"
 		addLibrary: VIAAdminStaticFileLibrary.
 
 	 (GRPlatform current label = 'Pharo')

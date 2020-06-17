@@ -30,7 +30,7 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 						self renderTaskBrickHandle: each parentBrick: aTaskBrickGroup on: html.
 						each acceptRenderingVisitor: self on: html]]].
 		
-		html label with: 'Add elements'.
+"		html div with: 'Add an element:'."
 		((VIADisplayOnlyTaskBrick allSubclasses select: #isAuthorReady) sortedBy: #displayName) do: [:each |
 			html submitButton
 				class: 'button';
