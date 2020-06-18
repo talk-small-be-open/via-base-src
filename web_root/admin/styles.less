@@ -12,7 +12,27 @@
 // 		}
 // }
 
+// ======================================================
+// Mixins
+// ======================================================
+
 .muted() {color: #666}
+
+.blink {
+  animation: blinker 0.5s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+// ======================================================
+// Styles
+// ======================================================
+
 
 h5.mainTitle {
 		margin-bottom: 0px;
@@ -289,4 +309,15 @@ input[type="text"] {
 			// background-color: #fff;
 			// border: 1px solid #D1D1D1;
 	}
+}
+
+
+
+div.VIAAudioRecorderComponent {
+		a#audioRecorderStop {
+				&.recording {
+						.blink();
+						background-color: red;
+				}
+		}
 }
