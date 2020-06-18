@@ -1,3 +1,3 @@
 icons
 iconUpload
-	^self ukIcon: 'upload'
+	^self farIcon: 'upload'

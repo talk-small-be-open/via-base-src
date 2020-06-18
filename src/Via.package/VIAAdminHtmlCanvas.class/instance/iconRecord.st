@@ -1,3 +1,3 @@
 icons
 iconRecord
-	^self ukIcon: 'microphone'
+	^self farIcon: 'microphone'

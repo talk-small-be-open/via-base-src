@@ -1,13 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "WAHtmlCanvas",
+	"super" : "VIAHtmlCanvasBase",
 	"category" : "Via-View-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"pillarSeasideRenderer"
-	],
+	"instvars" : [ ],
 	"name" : "VIAHtmlCanvas",
 	"type" : "normal"
 }

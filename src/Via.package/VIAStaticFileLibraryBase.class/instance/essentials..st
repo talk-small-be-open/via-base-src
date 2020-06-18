@@ -30,3 +30,6 @@ essentials: anHtmlRoot
 	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/jquery.mapael.min.js'.
 	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/maps/switzerland.js'.
 	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/maps/world_countries_miller.js'.
+
+	"Our own library"
+	anHtmlRoot javascript url: '/js/lib.js'.

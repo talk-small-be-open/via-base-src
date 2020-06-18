@@ -1,3 +1,3 @@
 icons
 iconRemove
-	^self ukIcon: 'trash'
+	^self farIcon: 'trash'

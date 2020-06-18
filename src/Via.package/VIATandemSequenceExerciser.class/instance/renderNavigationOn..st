@@ -1,6 +1,6 @@
 rendering
 renderNavigationOn: html		
-	html div: [ 
+	html div class: 'navigation'; with: [ 
 		html anchor
 			callback: [ self goBack ];
 			with: '<'.

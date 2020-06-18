@@ -26,7 +26,7 @@ renderContentOn: html
 				callback: [self save];
 				with: 'Save'.
 			html space.
-			html ukAnchorButton
+			html anchorButton
 				callback: [self cancel];
 				with: 'Cancel'
 		]]

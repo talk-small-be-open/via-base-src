@@ -18,6 +18,6 @@ renderContentOn: html
 						callback: [self answer: value];
 						t: 'general:ok'.
 					html space.
-					html ukAnchorButton
+					html anchorButton
 						callback: [self cancel];
 						t: 'general:cancel']]]

@@ -18,6 +18,6 @@ renderTandemSequence: aTandemSequence on: html
 			each acceptRenderingVisitor: self on: html.
 			].
 		html div class: 'topBuffer'; with: [
-			html ukSubmitButton
+			html submitButton
 				callback: [aTandemSequence addNewQAndA];
 				with: '+ Add Q&A']]

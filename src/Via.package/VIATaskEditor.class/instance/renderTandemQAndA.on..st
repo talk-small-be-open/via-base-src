@@ -5,9 +5,9 @@ renderTandemQAndA: aTandemQAndA on: html
 		html textArea
 			on: #hintText of: aTandemQAndA."
 
-		html div: 'Info'.
+		html div: 'Info for question'.
 		aTandemQAndA explanationBrick acceptRenderingVisitor: self on: html.
-		html div: 'Question (Pillar)'.
+		html div: 'Question'.
 		aTandemQAndA questionPillar acceptRenderingVisitor: self on: html.
-		html div: 'Answer (Pillar)'.
+		html div: 'Answer'.
 		aTandemQAndA answerPillar acceptRenderingVisitor: self on: html]

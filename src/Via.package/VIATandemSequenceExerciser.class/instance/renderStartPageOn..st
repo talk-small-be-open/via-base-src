@@ -1,6 +1,6 @@
 rendering
 renderStartPageOn: html
-	html paragraph: 'Press A or B'.
+	html paragraph t: 'tandemSequence:pleaseChoosePlayer'.
 	html ukAnchorButton
 		callback: [ self iamPlayerNumber: 1 ];
 		with: 'A'.

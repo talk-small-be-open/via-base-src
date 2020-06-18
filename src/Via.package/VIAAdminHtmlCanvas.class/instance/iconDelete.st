@@ -1,3 +1,3 @@
 icons
 iconDelete
-	^self ukIcon: 'trash'
+	^self farIcon: 'trash'

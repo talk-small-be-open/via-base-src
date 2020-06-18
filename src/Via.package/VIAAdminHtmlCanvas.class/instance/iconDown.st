@@ -1,3 +1,3 @@
 icons
 iconDown
-	^self ukIcon: 'arrow-down'
+	^self fasIcon: 'arrow-down'
