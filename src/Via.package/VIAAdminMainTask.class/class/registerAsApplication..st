@@ -15,9 +15,9 @@ registerAsApplication: aName
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation;
 
-		addLibrary: WANavigationFiles;
+"		addLibrary: WANavigationFiles;"
 
-		addLibrary: VIAStaticFileLibrary;
+"		addLibrary: VIAStaticFileLibrary;"
 		addLibrary: VIAAdminStaticFileLibrary.
 
 	 (GRPlatform current label = 'Pharo')

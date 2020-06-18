@@ -1,0 +1,3 @@
+icons
+iconVideo
+	^self iconFilm

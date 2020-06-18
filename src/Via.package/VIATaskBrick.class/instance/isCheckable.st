@@ -1,0 +1,3 @@
+testing
+isCheckable
+	self subclassResponsibility

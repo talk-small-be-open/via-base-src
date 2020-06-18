@@ -2,8 +2,8 @@ rendering
 renderModule: aModule canEdit: canEdit on: html
 	html tableData: [
 		aModule isDraft
-			ifTrue: [html ukLabelWarning: ('DRAFT ', aModule versionNumberString)]
-			ifFalse: [html ukLabelSuccess: ('RELEASED ', aModule versionNumberString)]
+			ifTrue: [html badgeWarning: ('DRAFT ', aModule versionNumberString)]
+			ifFalse: [html badgeSuccess: ('RELEASED ', aModule versionNumberString)]
 	].
 	html tableData class: 'moduleName'; with: [
 		html text: aModule displayName.

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "AndreasBrodbeck 6/17/2020 13:52",
+	"super" : "VIATaskExerciserBase",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskBrick",
+		"parentExerciser"
+	],
+	"name" : "VIATaskBrickExerciser",
+	"type" : "normal"
+}

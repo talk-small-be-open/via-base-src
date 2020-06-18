@@ -10,11 +10,11 @@ renderContentOn: html
 				beOptional;
 				callback: [ :value | self selection: value ].
 			html break.
-			html ukSubmitButton
+			html submitButton
 					callback: [self ok];
 					t: 'general:ok'.
 			html space.
-			html ukAnchorButton
+			html anchorButton
 				callback: [self cancel];
 				t: 'general:cancel'
 		].

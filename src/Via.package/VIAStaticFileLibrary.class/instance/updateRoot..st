@@ -2,24 +2,8 @@ as yet unclassified
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 
-	"jQuery, but NO jQuery-UI"
-	anHtmlRoot javascript url: '/js/jquery/jquery-3.4.1.min.js'.
+	self essentials: anHtmlRoot.
 
-	"Underscore JS"
-	anHtmlRoot javascript url: '/js/underscore-min.js'.
-
-	"Mouse/Touch events unifier for dragging, ..."
-	anHtmlRoot javascript url: 'https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js'.
-
-	"List drag/drop sorting library"
-	anHtmlRoot javascript url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.
-
-	anHtmlRoot javascript url: '/js/js.cookie.js'.
-
-	"FontAwesome CDN"
-	anHtmlRoot javascript
-		url: 'https://kit.fontawesome.com/d3b8411a92.js';
-		attributeAt: 'crossorigin' put: 'anonymous'.
 
 	"CSS from the site repository"
 	anHtmlRoot stylesheet url: '/site/css/', self session website stylesheetFilename.
@@ -42,23 +26,8 @@ updateRoot: anHtmlRoot
 	"For facebook/google login"
 	anHtmlRoot javascript url: '/lib/bower_components/hello/dist/hello.all.min.js'.
 
-	"For selecting text ranges"
-"	anHtmlRoot javascript url: '/files/bower_components/rangy/rangy-core.js'.
-	anHtmlRoot javascript url: '/files/bower_components/rangy/rangy-textrange.js'.
-	anHtmlRoot javascript url: '/files/bower_components/rangy/rangy-classapplier.js'.
-	anHtmlRoot javascript url: '/files/bower_components/rangy/rangy-highlighter.js'."
-
-	"Textareas autosizing"
-	anHtmlRoot javascript url: '/js/jquery.autosize.js'.
-
 	"Print helper"
 	anHtmlRoot javascript url: '/js/printThis/printThis.js'.
-
-	"Maps SVG drawer"
-	anHtmlRoot javascript url: '/js/raphael.min.js	'.
-	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/jquery.mapael.min.js'.
-	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/maps/switzerland.js'.
-	anHtmlRoot javascript url: '/js/jQuery-Mapael-2.2.0/js/maps/world_countries_miller.js'.
 
 	"Projects main Javascript"
 	anHtmlRoot javascript url: '/js/scripts.js'.

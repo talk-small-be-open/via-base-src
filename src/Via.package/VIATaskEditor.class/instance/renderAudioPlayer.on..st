@@ -11,6 +11,10 @@ renderAudioPlayer: anAudioPlayer on: html
 			html space.
 			self renderAudioRecorderFor: anAudioPlayer on: html.
 		].
+
+		html audio
+			controls: true;
+			url: anAudioPlayer audioUrl.
 	
 		html skRow: [
 			html skColumnWidth: 'three' with: [
