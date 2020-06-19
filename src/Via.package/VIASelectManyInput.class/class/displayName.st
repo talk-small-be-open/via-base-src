@@ -1,3 +1,3 @@
 as yet unclassified
 displayName
-	^'Select (multiple)'
+	^'Select many'

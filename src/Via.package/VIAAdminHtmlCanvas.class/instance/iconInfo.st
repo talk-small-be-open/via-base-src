@@ -1,3 +1,3 @@
 icons
 iconInfo
-	^self ukIcon: 'info-circle'
+	^self farIcon: 'info-circle'

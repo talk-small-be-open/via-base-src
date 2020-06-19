@@ -33,7 +33,7 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 "		html div with: 'Add an element:'."
 		((VIADisplayOnlyTaskBrick allSubclasses select: #isAuthorReady) sortedBy: #displayName) do: [:each |
 			html submitButton
-				class: 'button';
+				class: 'button small';
 				callback: [aTaskBrickGroup addChild: (each new)];
 				with: '+ ', each displayName.
 			html space]]

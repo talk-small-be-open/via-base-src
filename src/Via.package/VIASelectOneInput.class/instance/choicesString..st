@@ -1,6 +1,9 @@
 as yet unclassified
 choicesString: aString
-	| lines |
-	lines := aString lines.
-	solutions := lines select: [:each | each beginsWith: '*'] thenCollect: [:each | each allButFirst].
-	choices := lines collect: [:each | each trimLeft: [:char | char = $* ]]
+	| tuple |
+	"Reuse parser of sibling task"
+	tuple := VIASelectManyInput parseChoicesString: aString.
+	
+	solutions := tuple first.
+	choices := tuple second.
+	choicesGroups := tuple third.

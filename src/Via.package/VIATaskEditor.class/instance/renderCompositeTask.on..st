@@ -45,7 +45,7 @@ renderCompositeTask: aCompositeTask on: html
 		(authorBricks at: cat) do: [:each |
 			html submitButton
 				title: (each authorInfoKey)t;
-				class: 'button popover';
+				class: 'button small popover';
 				callback: [aCompositeTask addChild: (each new)];
 				with: '+ ', each displayName.
 			html space]].
@@ -53,6 +53,6 @@ renderCompositeTask: aCompositeTask on: html
 	html div: [
 		html strong: 'Importing'].
 		html submitButton
-			class: 'button';
+			class: 'button small';
 			callback: [self importFromOtherTaskInto: aCompositeTask];
 			with: '+ Import copy of another task ... '.

@@ -2,7 +2,7 @@ rendering-visitor
 renderMapPairs: aMapPairs on: html
 	html div class: 'inputEditor'; with: [
 
-		html heading level2; with: 'Map pairs'.
+"		html heading level2; with: 'Map pairs'."
 "		html div: 'Pairs:'."
 		aMapPairs pairInputs withIndexDo: [:each :index |
 			html div: [
