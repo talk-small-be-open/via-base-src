@@ -2,7 +2,7 @@ rendering-visitor
 renderTandemSequence: aTandemSequence on: html
 	html div class: 'inputEditor'; with: [
 
-		html heading level2; with: 'Tandem sequence'.
+"		html heading level2; with: 'Tandem sequence'."
 "		html div: 'Question and answers:'."
 		aTandemSequence qAndAs withIndexDo: [:each :index |
 			html div: [

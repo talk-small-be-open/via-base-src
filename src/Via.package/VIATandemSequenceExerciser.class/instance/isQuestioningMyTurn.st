@@ -1,3 +1,3 @@
 testing
 isQuestioningMyTurn
-	^ (currentNumber \\ totalPlayers) = playerNumber
+	^ ((currentNumber - 1) \\ totalPlayers) + 1 = playerNumber

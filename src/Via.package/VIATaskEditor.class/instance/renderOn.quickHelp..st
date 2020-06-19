@@ -1,6 +1,6 @@
 rendering
 renderOn: html quickHelp: aString
-	html paragraph: [
+	html div class: 'quickHelp'; with: [
 		html iconInfo; space.
-		html text: 'Quick help: '.
+		html text: 'Help: '.
 		html text: aString]

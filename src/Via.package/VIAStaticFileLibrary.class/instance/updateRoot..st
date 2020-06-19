@@ -24,12 +24,13 @@ updateRoot: anHtmlRoot
 	
 
 	"For facebook/google login"
+	"TODO: Only if needed"
 	anHtmlRoot javascript url: '/lib/bower_components/hello/dist/hello.all.min.js'.
 
 	"Print helper"
 	anHtmlRoot javascript url: '/js/printThis/printThis.js'.
 
 	"Projects main Javascript"
-	anHtmlRoot javascript url: '/js/scripts.js'.
+"	anHtmlRoot javascript url: '/js/scripts.js'."
 	anHtmlRoot javascript url: '/site/js/scripts.js'.
 	anHtmlRoot javascript url: ('/site/js/', self session website scriptsFilename).
