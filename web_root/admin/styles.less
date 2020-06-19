@@ -17,13 +17,13 @@
 .muted() {color: #666}
 
 .blink {
-  animation: blinker 0.5s linear infinite;
+		animation: blinker 0.5s linear infinite;
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+		50% {
+				opacity: 0;
+		}
 }
 
 
@@ -57,63 +57,63 @@ div[uk-modal] {
 
 /* this is from http://kalsey.com/tools/csstabs/ - would also be nice to do http://www.alistapart.com/articles/slidingdoors/ */
 .kalsey .navigation-options {
-	border-bottom : 1px solid #ccc;
-	margin : 0;
-	padding-bottom : 19px;
-	padding-left : 10px;
+		border-bottom : 1px solid #ccc;
+		margin : 0;
+		padding-bottom : 19px;
+		padding-left : 10px;
 }
 
 .kalsey .navigation-options ul, .kalsey .navigation-options li	{
-	display : inline;
-	list-style-type : none;
-	margin : 0;
-	padding : 0;
+		display : inline;
+		list-style-type : none;
+		margin : 0;
+		padding : 0;
 }
 
 
 .kalsey .navigation-options a:link, .kalsey .navigation-options a:visited	{
-	background : #E8EBF0;
-	border : 1px solid #ccc;
-	color : #666;
-	float : left;
-	font-size : small;
-	font-weight : normal;
-	line-height : 14px;
-	margin-right : 8px;
-	padding : 2px 10px 2px 10px;
-	text-decoration : none;
+		background : #E8EBF0;
+		border : 1px solid #ccc;
+		color : #666;
+		float : left;
+		font-size : small;
+		font-weight : normal;
+		line-height : 14px;
+		margin-right : 8px;
+		padding : 2px 10px 2px 10px;
+		text-decoration : none;
 }
 
 .kalsey .navigation-options a:link.active, .kalsey .navigation-options a:visited.active	{
-	background : #fff;
-	border-bottom : 1px solid #fff;
-	color : #000;
+		background : #fff;
+		border-bottom : 1px solid #fff;
+		color : #000;
 }
 
 .kalsey .navigation-options ul a:hover	{
-	color : #f00;
+		color : #f00;
 }
 
 .kalsey .navigation-options .option-selected a {
-	background : #fff;
-	border-bottom : 1px solid #fff;
-	color : #000;
+		background : #fff;
+		border-bottom : 1px solid #fff;
+		color : #000;
 }
 
 .kalsey .navigation-content {
-	background : #fff;
-	border : 1px solid #ccc;
-	border-top : none;
-	clear : both;
-	margin : 0px;
-	padding : 15px;
-	line-height: 1.1;  /* IE6 CSS workaround - http://www.dracos.co.uk/web/css/ie6floatbug/ */
+		background : #fff;
+		border : 1px solid #ccc;
+		border-top : none;
+		clear : both;
+		margin : 0px;
+		padding : 15px;
+		line-height: 1.1;  /* IE6 CSS workaround - http://www.dracos.co.uk/web/css/ie6floatbug/ */
 }
 
 /* customization */
 .kalsey .navigation-content tbody tr th, .kalsey .navigation-content tfoot tr th {
-	text-align: right;
-	vertical-align: top;
+		text-align: right;
+		vertical-align: top;
 }
 
 // .kalsey .navigation-content h2 {
@@ -121,7 +121,7 @@ div[uk-modal] {
 // }
 
 .kalsey .navigation-content tbody.right tr td, .kalsey .navigation-content tfoot.right tr td {
-	text-align: right;
+		text-align: right;
 }
 
 // }}}
@@ -130,17 +130,6 @@ div[uk-modal] {
 // Styles
 // ======================================================
 
-h1 {
-		font-size: 1.3rem;
-}
-
-h2 {
-		font-size: 1.2rem;		
-}
-
-h2 {
-		font-size: 1.1rem;		
-}
 
 
 textarea {
@@ -229,14 +218,52 @@ ul.taskBricks {
 
 		
 		li.taskChild {
-//				cursor: move;
+				//				cursor: move;
 				background-color: white;
 				border: 1px solid black;
 				padding: 5px;
 				margin: 10px 0;
 				min-height: 100px;
 				margin-left: 25px;
+				position: relative;
 
+
+				div.taskBrickHandle {
+						@tallness: 120px;
+						
+						font-size: 90%;
+						text-transform: uppercase;
+						cursor: move;
+						white-space: nowrap;
+						position: absolute;
+						left: -30px;
+						top: @tallness + 8px;
+						width: @tallness;
+						background-color: #eee;
+						color: black;
+						border: 1px solid #ccc;
+						padding: 1px 3px;
+						text-align: right;
+						transform: rotate(-90deg);
+						transform-origin: 0 0;
+						// -moz-transform: rotate(-90deg);
+						// -ms-transform: rotate(-90deg);
+						// -o-transform: rotate(-90deg);
+						// -webkit-transform: rotate(-90deg);
+
+						button.deleteButton {
+								color: #1EAEDB;
+								font-size: 15px;
+								border: none;
+								padding: 0 0px;
+								margin: 0;
+								display: inline;
+								line-height: 1em;
+								height: 1em;
+						}
+				}
+
+				
 				textarea {
 						width: 100%;
 						// min-height: 80px;
@@ -254,35 +281,6 @@ div.main {
 		margin-top: 10px;
 }
 
-div.taskBrickHandle {
-		cursor: move;
-		white-space: nowrap;
-		position: relative;
-		left: -75px;
-		top: +40px;
-		width: 100px;
-		background-color: #eee;
-		color: #aaa;
-		border: 1px solid #ccc;
-		padding: 1px 3px;
-		text-align: right;
-		transform: rotate(-90deg);
-		-moz-transform: rotate(-90deg);
-		-ms-transform: rotate(-90deg);
-		-o-transform: rotate(-90deg);
-		-webkit-transform: rotate(-90deg);
-
-		button.deleteButton {
-				color: #1EAEDB;
-				font-size: 15px;
-				border: none;
-				padding: 0 5px;
-				margin: 0;
-				display: inline;
-				line-height: 1em;
-				height: 1em;
-		}
-}
 
 a {
 		// display: inline-block;
@@ -326,6 +324,7 @@ a.backButtonAnchor {
 
 div.validationResults {
 		position: sticky;
+		z-index: 99999999;
 		top: 5px;
 		// left: 7%;
 		// right: 7%;
@@ -350,22 +349,45 @@ div.taskEditor {
 				color: red;
 		}
 
+		div.quickHelp {
+				.muted();
+				font-size: 90%;
+				margin: 0.5em 0;
+		}
+
 		// top level
 		div.inputEditor {
 
-				// level 1
+				// nesting level 1
 				> div.inputEditor {
 						border: 1px dotted #333;
 						background-color: #f3f3f3;
 						padding: 5px;
 						margin: 0.5em 0 2em 0;
 
-						// level 2
+						// nesting level 2
 						> div.inputEditor {
 								margin: 5px 0 10px 0;
 						}
 
 				}
+
+				h1 {
+						font-size: 2rem;
+						font-weight: bold;
+				}
+
+				h2 {
+						font-size: 1.8rem;		
+						font-weight: bold;
+				}
+
+				h3 {
+						font-size: 1.6rem;		
+						font-weight: bold;
+				}
+
+				
 		}
 
 }
@@ -410,7 +432,7 @@ div#pillarPreviewDialog {
 		transform: scale(0.5) translate(300px, 0px);
 		
 		&:hover, &.zoom {
-//				right: 10px;
+				//				right: 10px;
 				transform: scale(1);	
 				background-color: #eee;
 		}
@@ -429,8 +451,10 @@ div.VIAModuleEditor {
 }
 
 label {
-		margin-top: 1.5rem;
-
+		&:not(:first-child) {
+				margin-top: 1rem;
+		}
+		
 		span.help {
 				.muted();
 				font-size: 80%;
@@ -462,12 +486,12 @@ input[type="button"] {
 }
 
 input[type="text"] {
-	&.small {
-			height: @skSmallHeight;
-			padding: 3px 5px; /* The 6px vertically centers text on FF, ignored by Webkit */
-			// background-color: #fff;
-			// border: 1px solid #D1D1D1;
-	}
+		&.small {
+				height: @skSmallHeight;
+				padding: 3px 5px; /* The 6px vertically centers text on FF, ignored by Webkit */
+				// background-color: #fff;
+				// border: 1px solid #D1D1D1;
+		}
 }
 
 
