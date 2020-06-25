@@ -62,7 +62,12 @@ renderModule: aModule canEdit: canEdit on: html
 						html anchor
 							callback: [self unreleaseModule: aModule];
 							title: 'Unpublish this module';
-							with: 'Un-Release']].
+							with: 'Un-Release'].
+				html anchor
+					callback: [ self downloadRawSourceModule: aModule ];
+					title: 'Download raw source file';
+					with: 'Raw'
+			].
 			html anchor
 				callback: [self prepareAssetsForModule: aModule];
 				title: 'Use this, if image/video/audio are not displayed correctly';

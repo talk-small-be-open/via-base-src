@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInvitationCommand",
+	"category" : "Via-View-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"userGroup"
+	],
+	"name" : "VIAInviteStudentToGroupCommand",
+	"type" : "normal"
+}

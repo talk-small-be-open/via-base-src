@@ -7,7 +7,7 @@ renderContentOn: html
 	html div
 		a: 'uk-accordion'; "p: '{collapse: false}'"
 		with: [
-			#(german english italian french) do: [:eachLanguage |
+			languages do: [:eachLanguage |
 				html div: [
 					html heading level3; class: 'uk-accordion-title'; with: [html t: 'main:disclaimer:title' l: eachLanguage].
 					html div class: 'uk-accordion-content'; with: [

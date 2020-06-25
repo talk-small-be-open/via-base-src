@@ -18,5 +18,5 @@ submitExam
 	
 "NICHT, weil dies ein seaside call ist. Wir müssen hier aber answer machen, damit die Transaction schliessen kann.	self inform: 'exam:successfullySubmittedExam'."
 
-	self flashMessage: 'exam:successfullySubmittedExam'.
+	self flashMessage: 'exam:successfullySubmittedExam't.
 	self close

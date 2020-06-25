@@ -1,3 +1,4 @@
 testing
 isQuestioningMyTurn
-	^ ((currentNumber - 1) \\ totalPlayers) + 1 = playerNumber
+	"Player 1 hat die erste Antwort zu geben"
+	^ ((currentNumber) \\ totalPlayers) + 1 = playerNumber

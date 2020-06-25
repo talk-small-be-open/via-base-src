@@ -10,4 +10,4 @@ renderTandemQAndA: aTandemQAndA on: html
 		html label: 'Question'.
 		aTandemQAndA questionPillar acceptRenderingVisitor: self on: html.
 		html label: 'Answer'.
-		aTandemQAndA answerPillar acceptRenderingVisitor: self on: html]
+		aTandemQAndA answerBrick acceptRenderingVisitor: self on: html]

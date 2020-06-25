@@ -7,8 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"questionPillar",
-		"answerPillar",
-		"explanationBrick"
+		"explanationBrick",
+		"answerBrick"
 	],
 	"name" : "VIATandemQandA",
 	"type" : "normal"

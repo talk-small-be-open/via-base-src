@@ -6,7 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"file",
 		"fileBaseName",
 		"tempDirectory",
 		"fileExtension"

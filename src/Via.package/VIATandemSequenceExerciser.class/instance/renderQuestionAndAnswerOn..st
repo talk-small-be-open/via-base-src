@@ -8,5 +8,5 @@ renderQuestionAndAnswerOn: html
 			self renderQuestionMarkOn: html.
 			currentQAndA questionPillar acceptRenderingVisitor: parentExerciser on: html ].
 		html div class: 'answer'; with: [
-			currentQAndA answerPillar acceptRenderingVisitor: parentExerciser on: html]
+			currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html]
 	].

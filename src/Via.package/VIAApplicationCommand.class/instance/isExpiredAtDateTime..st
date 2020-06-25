@@ -1,3 +1,3 @@
 testing
 isExpiredAtDateTime: aDateAndTime  
-	^self expirationDate < aDateAndTime
+	^self expirationDateAndTime < aDateAndTime
