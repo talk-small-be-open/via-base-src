@@ -1,3 +1,4 @@
 as yet unclassified
 displayName
-	^self classDisplayName, ' "', title asString, '"'
+	^self classDisplayName
+	", title asString "

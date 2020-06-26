@@ -66,7 +66,11 @@ renderModule: aModule canEdit: canEdit on: html
 				html anchor
 					callback: [ self downloadRawSourceModule: aModule ];
 					title: 'Download raw source file';
-					with: 'Raw'
+					with: 'raw.txt'.
+				html anchor
+					callback: [ self downloadAssetsZipPackage: aModule ];
+					title: 'Download all used assets (zip)';
+					with: 'assets.zip'.
 			].
 			html anchor
 				callback: [self prepareAssetsForModule: aModule];

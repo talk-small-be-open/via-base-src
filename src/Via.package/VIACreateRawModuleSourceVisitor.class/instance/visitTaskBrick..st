@@ -1,4 +1,7 @@
 as yet unclassified
 visitTaskBrick: aTaskBrick
-	stream << aTaskBrick displayName.
-	stream lf; lf.
+	self write: aTaskBrick displayName.
+	self indent.
+	self newline.
+	self writeInstVars: aTaskBrick.
+	self outdent.

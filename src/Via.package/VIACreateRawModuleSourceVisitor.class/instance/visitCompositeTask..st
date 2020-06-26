@@ -1,10 +1,15 @@
 as yet unclassified
 visitCompositeTask: aCompositeTask
-	stream << aCompositeTask title.
-	stream lf.
-	stream << '====='.
-	stream lf.
+	self write: aCompositeTask displayName.
+	self newline.
+	self write: '====================================================='.
+	self newline.
+	self newline.
 	
 	aCompositeTask children do: [:each |
-		each acceptVisitor: self].
+		self write: '-----------------------------------------------------'.
+		self newline.
+		each acceptVisitor: self.
+		self newline.
+	].
 

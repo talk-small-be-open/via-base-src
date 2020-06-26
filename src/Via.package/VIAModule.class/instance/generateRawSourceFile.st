@@ -6,9 +6,7 @@ generateRawSourceFile
 	visitor := VIACreateRawModuleSourceVisitor new.
 "	visitor file: tempFile."
 
-	self tasks withIndexDo: [:eachTask :eachIndex |
-		eachTask acceptVisitor: visitor.
-	].
+	self acceptVisitor: visitor.
 
 	tempFile write: visitor contents.
 	

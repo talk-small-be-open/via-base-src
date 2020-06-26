@@ -1,12 +1,14 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAVisitor",
+	"super" : "VIABrickTreeVisitor",
 	"category" : "Via-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"stream"
+		"stream",
+		"indentation",
+		"isAtLineStart"
 	],
 	"name" : "VIACreateRawModuleSourceVisitor",
 	"type" : "normal"
