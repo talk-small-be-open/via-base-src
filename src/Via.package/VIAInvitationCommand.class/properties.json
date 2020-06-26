@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAApplicationCommand",
+	"category" : "Via-View-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"invitationCode"
+	],
+	"name" : "VIAInvitationCommand",
+	"type" : "normal"
+}

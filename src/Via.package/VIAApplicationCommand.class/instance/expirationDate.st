@@ -1,3 +1,3 @@
 as yet unclassified
 expirationDate
-	^expirationDate ifNil: [createdAt + self lifetimeDuration]
+	^self expirationDateAndTime asDate

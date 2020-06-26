@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAUserGroup",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"teachers"
+	],
+	"name" : "VIAStudentsGroup",
+	"type" : "normal"
+}

@@ -6,7 +6,7 @@ renderContentOn: html
 		self renderUploadedFilesOn: html.
 
 		html div class: 'topBuffer'; with: [	
-			html skAnchorButton
+			html anchorButton
 				callback: [self goAhead];
 				with: 'OK'.
 			html space.

@@ -4,4 +4,4 @@ postCopy
 	
 	explanationBrick := explanationBrick copy.
 	questionPillar := questionPillar copy.
-	answerPillar := answerPillar copy.
+	answerBrick := answerBrick copy.

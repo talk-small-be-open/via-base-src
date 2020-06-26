@@ -1,4 +1,3 @@
 as yet unclassified
 visitModelObject: anObject
-	"do nothing default"
-	^nil
+	^ self visitViaObject: anObject

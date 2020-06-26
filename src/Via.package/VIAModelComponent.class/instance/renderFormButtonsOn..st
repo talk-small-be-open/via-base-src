@@ -6,7 +6,7 @@ renderFormButtonsOn: html
 			callback: [self save];
 			with: 'Save'.
 		html space.
-		html skAnchorButton
+		html anchorButton
 			class: 'button-primary';
 			callback: [self cancel];
 			with: 'Cancel']

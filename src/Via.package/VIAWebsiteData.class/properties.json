@@ -17,7 +17,8 @@
 		"exams",
 		"mailer",
 		"exerciseLevels",
-		"users"
+		"users",
+		"userGroups"
 	],
 	"name" : "VIAWebsiteData",
 	"type" : "normal"

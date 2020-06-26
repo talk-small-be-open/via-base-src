@@ -1,3 +1,3 @@
 icons
 iconCopyright
-	^self ukIcon: 'copyright'
+	^self farIcon: 'copyright'

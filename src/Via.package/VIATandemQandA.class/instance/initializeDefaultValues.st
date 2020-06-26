@@ -3,5 +3,5 @@ initializeDefaultValues
 	super initializeDefaultValues.
 
 	explanationBrick ifNil: [ explanationBrick := VIARichDisplayContent new ].
-	questionPillar ifNil: [questionPillar := VIAPillarSnippet new].
-	answerPillar ifNil: [answerPillar := VIAPillarSnippet new]
+	questionPillar ifNil: [ questionPillar := VIAPillarSnippet new ].
+	answerBrick ifNil: [ answerBrick := VIARichDisplayContent new ].
