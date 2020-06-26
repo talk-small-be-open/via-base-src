@@ -22,16 +22,15 @@ writeInstVars: anObject
 			(instVar isKindOf: VIAObject)
 				ifTrue: [ instVar acceptVisitor: self ]
 				ifFalse: [
-					instVar isLiteral ifTrue: [ instVar printOn: stream ] ifFalse: [
-						(instVar isKindOf: OrderedCollection)
-							ifTrue: [
-								self indent; newline.
-								instVar do: [ :eachItem |
-									self write: '- '.
-									eachItem acceptVisitor: self ].
-								self outdent.
-							]
-							ifFalse: [ instVar printOn: stream ] ] ].
+					(instVar isKindOf: OrderedCollection)
+						ifTrue: [
+							self indent; newline.
+							instVar do: [ :eachItem |
+								self write: '- '.
+								eachItem acceptVisitor: self ].
+							self outdent.
+						]
+						ifFalse: [ instVar printOn: stream ] ].
 				
 			self newline.
 		].
