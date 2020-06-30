@@ -1,11 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAStaticFileLibraryBase",
+	"super" : "VIAMainDecorationBase",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "VIAAdminStaticFileLibrary",
+	"name" : "VIAAdminMainDecoration",
 	"type" : "normal"
 }

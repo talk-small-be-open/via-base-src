@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAComponentDecoration",
+	"super" : "VIAMainDecorationBase",
 	"category" : "Via-View-Decoration",
 	"classinstvars" : [ ],
 	"pools" : [ ],

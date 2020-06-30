@@ -1,9 +1,6 @@
-as yet unclassified
+updating
 updateRoot: anHtmlRoot
-	super updateRoot: anHtmlRoot.
-
-	self essentials: anHtmlRoot.
-
+	self updateRootEssentials: anHtmlRoot.
 
 	anHtmlRoot stylesheet url: '/admin/skeleton/normalize.css'.
 	anHtmlRoot stylesheet url: '/admin/skeleton/skeleton.css'.

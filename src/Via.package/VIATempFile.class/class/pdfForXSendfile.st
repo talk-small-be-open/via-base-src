@@ -1,3 +1,3 @@
 as yet unclassified
 pdfForXSendfile
-	^self extension: 'pdf' tempFolder: 'tmp'
+	^self extension: 'pdf' tempFolder: nil
