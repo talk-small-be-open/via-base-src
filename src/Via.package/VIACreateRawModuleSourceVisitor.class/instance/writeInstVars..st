@@ -2,6 +2,8 @@ as yet unclassified
 writeInstVars: anObject
 	| classes |
 	
+	self checkLoop: anObject ifSoAbort: [ ^ self ].
+	
 	"Write inst vars upto superclass VIAObject"
 	classes := OrderedCollection new
 		add: anObject class;

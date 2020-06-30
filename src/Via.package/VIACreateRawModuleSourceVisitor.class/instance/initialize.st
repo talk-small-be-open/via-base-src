@@ -4,4 +4,5 @@ initialize
 	
 	stream := String new writeStream.
 	indentation := 0.
-	isAtLineStart := true
+	isAtLineStart := true.
+	writtenObjects := IdentitySet new.
