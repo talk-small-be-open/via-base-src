@@ -431,6 +431,7 @@ div#pillarPreviewDialog {
 		box-shadow: 5px 10px #888888;
 		padding: 5px;
 		transform: scale(0.5) translate(300px, 0px);
+		z-index: 999999;
 		
 		&:hover, &.zoom {
 				//				right: 10px;
@@ -454,6 +455,10 @@ div.VIAModuleEditor {
 label {
 		&:not(:first-child) {
 				margin-top: 1rem;
+		}
+
+		&.inline {
+				display: inline;
 		}
 		
 		span.help {
