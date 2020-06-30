@@ -1,3 +1,3 @@
 icons
 iconRecord
-	^self farIcon: 'microphone'
+	^self fasIcon: 'microphone'

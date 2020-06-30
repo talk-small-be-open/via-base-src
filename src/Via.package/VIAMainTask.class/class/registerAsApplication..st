@@ -13,11 +13,11 @@ registerAsApplication: aName
 		sessionClass: VIADefaultSession;
 		preferenceAt: #trackingStrategy put: WACookieIfSupportedSessionTrackingStrategy new;
 		preferenceAt: #documentClass put: VIAHtmlDocument;
-		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation;
+		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.
 		
-		addLibrary: VIAStaticResetFileLibrary;
+"		addLibrary: VIAStaticResetFileLibrary."
 
-		addLibrary: VIAStaticFileLibrary.
+"		addLibrary: VIAStaticFileLibrary."
 
 	 (GRPlatform current label = 'Pharo')
 		ifTrue: [

@@ -1,5 +1,5 @@
 as yet unclassified
-essentials: anHtmlRoot
+updateRootEssentials: anHtmlRoot
 
 	"jQuery, but NO jQuery-UI"
 	anHtmlRoot javascript url: '/js/jquery/jquery-3.4.1.min.js'.

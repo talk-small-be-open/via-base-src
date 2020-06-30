@@ -1,3 +1,3 @@
 icons
 iconUp
-	^self farIcon: 'arrow-up'
+	^self fasIcon: 'arrow-up'
