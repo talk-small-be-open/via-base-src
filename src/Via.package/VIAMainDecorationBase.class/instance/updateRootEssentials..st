@@ -1,6 +1,29 @@
 as yet unclassified
 updateRootEssentials: anHtmlRoot
 
+	self requestContext response doNotCache.
+	
+	anHtmlRoot beHtml5.
+
+	anHtmlRoot meta
+		charset: 'utf-8'.
+		
+	"Viewport"
+	anHtmlRoot meta
+		name: 'viewport';
+		content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'.
+	
+	"Tell robots not to follow links"
+	anHtmlRoot meta
+		name: 'ROBOTS';
+		content: 'INDEX, NOFOLLOW'.
+		
+	"Favicon"
+	anHtmlRoot link
+		beShortcutIcon;
+		url: '/favicon.ico'.
+
+
 	"jQuery, but NO jQuery-UI"
 	anHtmlRoot javascript url: '/js/jquery/jquery-3.4.1.min.js'.
 
