@@ -12,7 +12,8 @@
 		"roles",
 		"socialIds",
 		"passwordHash",
-		"termsAccepted"
+		"termsAccepted",
+		"properties"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

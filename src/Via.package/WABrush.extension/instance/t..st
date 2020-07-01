@@ -1,3 +1,3 @@
 *Via
 t: aString
-	self with: aString t
+	self sT: aString

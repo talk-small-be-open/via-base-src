@@ -11,7 +11,8 @@
 		"includeDrafts",
 		"includeExams",
 		"includePrivates",
-		"examsOnly"
+		"examsOnly",
+		"indexCodePartial"
 	],
 	"name" : "VIAModuleSearchQuery",
 	"type" : "normal"
