@@ -1,4 +1,4 @@
-rendering-visitor
+obsolete
 renderObjectPairUikit: anObjectPair on: html
 	| jsEventHandler jsEventHandlerStart answerHolder rightObject others |
 	answerHolder := exercise answerOf: anObjectPair.

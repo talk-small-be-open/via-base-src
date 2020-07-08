@@ -1,5 +1,5 @@
 as yet unclassified
-renderHighlightAreas: aHighlightAreas on: html
+renderContentOn: html
 	| id inputId |
 	
 	"Übergeordneter Handler bei Markierung. (Jeder Markierstelle hat noch einen eigenen)"
@@ -11,7 +11,7 @@ renderHighlightAreas: aHighlightAreas on: html
 
 	self start.
 
-	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: aHighlightAreas.
+	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: taskBrick.
 "	highlightedCharsMap inspect."
 
 	inputId := html nextId.
@@ -71,9 +71,9 @@ $(myGroup).removeClass("highlighted");
 				seasideHtmlCanvas: html;
 				markerRenderingBlock: [:marker :h |
 					| area |
-					area := aHighlightAreas areaForMarker: marker.
+					area := taskBrick areaForMarker: marker.
 					area acceptRenderingVisitor: self on: h];
-				start: aHighlightAreas pillarDocument].
+				start: taskBrick pillarDocument].
 	
 	html textInput
 		id: inputId;

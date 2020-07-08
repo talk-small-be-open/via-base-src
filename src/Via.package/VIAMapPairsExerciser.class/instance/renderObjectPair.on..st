@@ -1,10 +1,11 @@
-obsolete
-renderObjectPairInteractJs: anObjectPair on: html
+rendering-visitor
+renderObjectPair: anObjectPair on: html
+	"Variante mit InteractJs"
 	| answerHolder rightObject others jsEventHandler rightObjectId |
-	answerHolder := exercise answerOf: anObjectPair.
+	answerHolder := self exercise answerOf: anObjectPair.
 
 	rightObject := answerHolder value.
-	others := exercise answer: #leftOvers of: anObjectPair.
+	others := self exercise answer: #leftOvers of: anObjectPair.
 
 	rightObjectId := html nextId.
 
@@ -23,7 +24,7 @@ renderObjectPairInteractJs: anObjectPair on: html
 		with: [
 			html div class: 'leftObject'; with: [
 				self renderHintSymbolOf: anObjectPair on: html.
-				anObjectPair leftPillar acceptRenderingVisitor: self on: html].
+				self renderWithParent: anObjectPair leftPillar on: html].
 
 			html div class: 'middleColumn'; with: [
 				self renderCorrection: answerHolder on: html ].
@@ -50,7 +51,7 @@ renderObjectPairInteractJs: anObjectPair on: html
 							passenger: eachDraggable;
 							with: [
 								html span class: 'dragHandle'; with: [html iconDragVertical].
-								eachDraggable acceptRenderingVisitor: self on: html]].
+								self renderWithParent: eachDraggable on: html]].
 					
 					rightObject ifNotNil: [draggableRenderer value: rightObject].
 

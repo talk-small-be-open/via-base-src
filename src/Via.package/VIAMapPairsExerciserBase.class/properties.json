@@ -5,13 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"playerNumber",
-		"currentQAndA",
-		"currentNumber",
-		"total",
-		"totalPlayers"
-	],
-	"name" : "VIATandemSequenceExerciser",
+	"instvars" : [ ],
+	"name" : "VIAMapPairsExerciserBase",
 	"type" : "normal"
 }

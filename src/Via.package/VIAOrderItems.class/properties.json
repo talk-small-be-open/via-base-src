@@ -1,14 +1,13 @@
 {
-	"commentStamp" : "AndreasBrodbeck 7/8/2020 14:16",
-	"super" : "VIATaskBrick",
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
 	"category" : "Via-Model-Task",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"title",
-		"classification"
+		"itemsContainer"
 	],
-	"name" : "VIATask",
+	"name" : "VIAOrderItems",
 	"type" : "normal"
 }

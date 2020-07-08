@@ -7,4 +7,4 @@ modules
 		ifFalse: [all]
 		ifTrue: [all select: [:each | each isContributor: self currentUser]].
 		
-	^modules sortedBy: #title
+	^modules sortedBySortKey

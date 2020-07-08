@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAJsInteractInteraction",
+	"category" : "Via-View-Javascript",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAJsInteractPointer",
+	"type" : "normal"
+}
