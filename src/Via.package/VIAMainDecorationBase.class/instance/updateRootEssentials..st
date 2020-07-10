@@ -31,7 +31,7 @@ updateRootEssentials: anHtmlRoot
 	anHtmlRoot javascript url: '/js/underscore-min.js'.
 
 	"Mouse/Touch events unifier for dragging, ..."
-	anHtmlRoot javascript url: 'https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js'.
+	anHtmlRoot javascript url: 'https://cdn.jsdelivr.net/npm/interactjs@1.9.20/dist/interact.min.js'.
 
 	"List drag/drop sorting library"
 	anHtmlRoot javascript url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.
