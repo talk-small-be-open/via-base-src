@@ -1,0 +1,3 @@
+accessing
+items
+	^ itemsContainer children

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"itemsContainer"
+	],
+	"name" : "VIAOrderItems",
+	"type" : "normal"
+}

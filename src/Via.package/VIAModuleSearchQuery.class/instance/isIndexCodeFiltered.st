@@ -1,0 +1,3 @@
+testing
+isIndexCodeFiltered
+	^indexCodePartial notBlank
