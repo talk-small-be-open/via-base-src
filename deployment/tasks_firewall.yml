@@ -31,6 +31,12 @@
     rule: allow
     name: OpenSSH
 
+
+# Allow Mosh, robust SSH connections
+- ufw:
+    rule: allow
+    name: mosh
+  
 - name: Allow all access to tcp port 80
   ufw:
     rule: allow

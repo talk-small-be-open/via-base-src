@@ -6,9 +6,9 @@
   roles:
     - common
   vars_files:
-    - ./site/via_{{customerCode}}.yml
+    - ./site/via_{{instanceName}}.yml
   vars:
-    remoteUser: "{{ansible_user}}"
+    remoteUser: "{{via_user}}"
     stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
@@ -62,14 +62,6 @@
       owner: "{{remoteUser}}"
       group: "{{remoteUser}}"
       mode: 0644
-
-  # Not anymore. Using git via https.
-  # - name: tell the host about our servers it might want to ssh to
-  #   become_user: root
-  #   known_hosts:
-  #     path: /etc/ssh/ssh_known_hosts
-  #     name: "*******"
-  #     key: "{{ lookup('file', 'pubkeys/******') }}"
 
   - name: Add apt repo for certbot
     apt_repository:
@@ -221,6 +213,13 @@
       update: yes
       force: yes
 
+  - name: GIVE user sudo permission without password. Will be removed later.
+    copy:
+      content: '{{remoteUser}} ALL=(ALL) NOPASSWD:ALL'
+      dest: /etc/sudoers.d/mediaclue
+      owner: root
+      group: root
+      
   - name: Run install script from GsDevKit
     become_user: "{{remoteUser}}"
     shell: installServerClient
@@ -228,6 +227,13 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/bin/.gsdevkitSetup"
 
+  - name: REMOVE user sudo permission without password.
+    file:
+      path: /etc/sudoers.d/mediaclue
+      state: absent
+
+
+    
   - local_action: stat path=files/gemstone/GemStone64Bit3.4.5-x86_64.Linux.zip
     when: isOnLocalNetwork is defined
     register: gemstone_zip_file_local
