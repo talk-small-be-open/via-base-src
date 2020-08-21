@@ -5,6 +5,9 @@ renderContentOn: html
 	html skAnchorButton
 		callback: [self refresh];
 		with: 'Refresh'.
+	html skAnchorButton
+		callback: [self downloadTextFile];
+		with: 'Download texts'.
 	html table: [
 		uiTextKeys do: [:each |
 			html tableRow: [
