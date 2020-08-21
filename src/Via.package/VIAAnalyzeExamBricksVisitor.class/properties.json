@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAVisitor",
+	"super" : "VIABrickTreeVisitor",
 	"category" : "Via-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],

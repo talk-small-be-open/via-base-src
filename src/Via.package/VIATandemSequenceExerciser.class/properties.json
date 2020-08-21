@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATaskBrickExerciser",
+	"category" : "Via-View-OutOfTheBox",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"playerNumber",
+		"currentQAndA",
+		"currentNumber",
+		"total",
+		"totalPlayers"
+	],
+	"name" : "VIATandemSequenceExerciser",
+	"type" : "normal"
+}

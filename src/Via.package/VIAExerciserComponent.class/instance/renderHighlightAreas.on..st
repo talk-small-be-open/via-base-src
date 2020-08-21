@@ -1,3 +1,3 @@
 rendering-visitor
 renderHighlightAreas: aHighlightAreas on: html
-	aHighlightAreas acceptRenderingVisitor: exerciserForHighlightAreas on: html
+	self subRender: aHighlightAreas type: VIAHighlightAreasV2Renderer on: html

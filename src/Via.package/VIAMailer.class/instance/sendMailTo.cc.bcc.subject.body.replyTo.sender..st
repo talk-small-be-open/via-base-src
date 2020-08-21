@@ -5,7 +5,7 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 	self enabled ifFalse: [^nil].
 
 	email := WAEmailMessage new
-		headerAt: 'Return-path' put: 'info@321via.ch';
+		headerAt: 'Return-path' put: ('info@', website domain);
 		headerAt: 'Content-Type' put: 'text/plain; charset=UTF-8';
 		headerAt: 'Content-Transfer-Encoding' put: '8bit';
 		yourself.
@@ -44,7 +44,7 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 	bcc do: [:each | email addBcc: (WAEmailAddress address: each)].
 
 	aReplyEmailString isNil
-		ifTrue: [email headerAt: 'Reply-To' put: ('do_not_reply@321via.ch')]
+		ifTrue: [email headerAt: 'Reply-To' put: ('do_not_reply@', website domain)]
 		ifFalse: [email headerAt: 'Reply-To' put: aReplyEmailString].
 
 	Transcript show: 'Sending email:'; cr.

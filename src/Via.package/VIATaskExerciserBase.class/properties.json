@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIARenderingVisitorComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"taskBrickSubExercisers"
+	],
+	"name" : "VIATaskExerciserBase",
+	"type" : "normal"
+}

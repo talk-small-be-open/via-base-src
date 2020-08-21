@@ -1,3 +1,3 @@
 as yet unclassified
 csvForXSendfile
-	^self extension: 'csv' tempFolder: 'tmp'
+	^self extension: 'csv' tempFolder: nil

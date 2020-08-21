@@ -1,5 +1,5 @@
 actions
 deleteUser: aUser
-	(self confirmYesNo: 'Delete user ', aUser displayName, '?') ifTrue: [
+	(self confirmYesNo: 'admin:reallyDeleteQM') ifTrue: [
 		self wd removeUser: aUser.
 		self flashMessage: 'User deleted']

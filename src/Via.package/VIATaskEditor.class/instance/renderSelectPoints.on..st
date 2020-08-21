@@ -1,8 +1,8 @@
 rendering-visitor
 renderSelectPoints: aSelectPointsInput on: html
 	html div class: 'inputEditor'; with: [
-		html heading level5; with: [
-			html text: 'Self evaluation'].
+"		html heading level5; with: [
+			html text: 'Self evaluation']."
 		html span: 'Hint: '.
 		html textArea
 			on: #hintText of: aSelectPointsInput.

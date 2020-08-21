@@ -8,16 +8,19 @@ renderPillarInput: aSymbol of: anObject cssClass: aString on: html
 			class: 'pillar';
 			class: aString;
 			on: aSymbol of: anObject.
-		html break.
-		html anchor
-			class: 'pillarPreviewLink';
-			onClick: (
-				(((html jQuery id: 'pillarPreview') load)
-					callback: [:value | self pillarPreviewString: value greaseString]
-						value: (JSStream on: '$("#', id greaseString, '").val()');
-					html: [:h | self renderPillarPreviewOn: h]),
-					((html jQuery id: 'pillarPreviewDialog') show)
-			);
+		html div
+			class: 'pillarToolbar';
 			with: [
-				html iconPreview; space.
-				html text: 'Preview this pillar']]
+				html span class: 'pillarSyntaxIndicator'; with: 'Pillar syntax'.
+				html anchor
+					class: 'pillarPreviewLink';
+					onClick: (
+						(((html jQuery id: 'pillarPreview') load)
+							callback: [:value | self pillarPreviewString: value greaseString]
+								value: (JSStream on: '$("#', id greaseString, '").val()');
+							html: [:h | self renderPillarPreviewOn: h]),
+							((html jQuery id: 'pillarPreviewDialog') show)
+					);
+					with: [
+"						html iconPreview."
+						html text: 'Preview']]]

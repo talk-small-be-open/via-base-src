@@ -1,5 +1,7 @@
 as yet unclassified
 displayName
-	^self isDraft
-		ifFalse: [self title]
-		ifTrue: [self title, ' (DRAFT)']
+	^ String streamContents: [ :s |
+		indexCode ifNotBlank: [:i | s << i asString. s space].
+		s << self title.
+		self isDraft ifTrue: [ s << ' (DRAFT)' ]
+	]

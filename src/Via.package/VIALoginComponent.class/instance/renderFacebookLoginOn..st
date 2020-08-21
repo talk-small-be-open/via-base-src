@@ -1,6 +1,6 @@
 rendering
 renderFacebookLoginOn: html
-	html ukAnchorButton
+	html anchorButton
 		class: 'facebookLogin';
 		onClick: 'login_facebook()';
 		with: [

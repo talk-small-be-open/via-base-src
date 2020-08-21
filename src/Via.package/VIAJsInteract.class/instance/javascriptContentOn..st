@@ -2,7 +2,12 @@ as yet unclassified
 javascriptContentOn: aStream
 	aStream
 		nextPutAll: 'interact("#';
-		nextPutAll: id;
-		space;
-		nextPutAll: selector;
+		nextPutAll: id.
+
+	selector ifNotBlank: [
+		aStream
+			space;
+			nextPutAll: selector].
+
+	aStream
 		nextPutAll: '")'.

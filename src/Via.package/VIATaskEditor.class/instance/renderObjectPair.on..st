@@ -4,7 +4,7 @@ renderObjectPair: anObjectPair on: html
 		html span: 'Hint: '.
 		html textArea
 			on: #hintText of: anObjectPair.
-		html div: 'Left (Pillar)'.
+		html div: 'Left'.
 		anObjectPair leftPillar acceptRenderingVisitor: self on: html.
-		html div: 'Right (Pillar)'.
+		html div: 'Right'.
 		anObjectPair rightPillar acceptRenderingVisitor: self on: html]

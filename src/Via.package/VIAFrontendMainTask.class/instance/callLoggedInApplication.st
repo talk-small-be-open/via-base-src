@@ -5,7 +5,7 @@ callLoggedInApplication
 	self isLoggedIn ifFalse: [^self].
 
 	isEmbedded
-		ifTrue: [component := VIAMainEmbeddedModuleComponent new]
+		ifTrue: [component := VIAApplicationManager current mainEmbeddedComponentClass new]
 		ifFalse: [component := VIAApplicationManager current mainComponentClass new].
 
 	self applicationComponent: component.

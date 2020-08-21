@@ -5,7 +5,7 @@ callPublicApplication
 	self session ensureUserIsAnonymous.
 	
 	isEmbedded
-		ifTrue: [component := VIAMainEmbeddedModuleComponent new]
+		ifTrue: [component := VIAApplicationManager current mainEmbeddedComponentClass new]
 		ifFalse: [component := VIAApplicationManager current mainPublicComponentClass new].
 	
 	self applicationComponent: component.

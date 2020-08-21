@@ -1,6 +1,12 @@
 as yet unclassified
 choicesString: aString
-	| lines |
+	| tuple |
+"	| lines |
 	lines := aString lines.
 	solutions := lines select: [:each | each beginsWith: '*'] thenCollect: [:each | each allButFirst].
-	choices := lines collect: [:each | each trimLeft: [:char | char = $* ]]
+	choices := lines collect: [:each | each trimLeft: [:char | char = $* ]]"
+	tuple := self class parseChoicesString: aString.
+	
+	solutions := tuple first.
+	choices := tuple second.
+	choicesGroups := tuple third.

@@ -13,6 +13,7 @@
     - ./site/via_{{customerCode}}.yml
   vars:
     remoteUser: "{{ansible_user}}"
+    stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
@@ -54,32 +55,82 @@
   #  - name: certbot renew
 
 
+  - name: Flush Monticello cache
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mr flush"
+
+    # mc revert Via ???
+
+  #
+  # UPDATE TO NEWEST CODE IN VIA BASE
+  # (Very strange, that we have to do that, since I thought Monticell would update subprojects as well?)
+  #
+  - name: git-clone VIA base project
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project clone --https --local --checkout=master Via"
+    args:
+      chdir: "/opt/GsDevKit_home"
+      creates: "/opt/GsDevKit_home/shared/repos/via"
+      
+  - name: Update VIA base project (pull)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project pull Via"
+
+  - name: Update VIA base project (get)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} project get Via"
+
+  # Hack, GemStone weigert sich irgendwie zu updaten
+  - name: Monticello revert to last version (strange, why?)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mc revert Via"
+
+  
+  # - name: Load VIA site project
+  #   become_user: "{{remoteUser}}"
+  #   command:
+  #     argv:
+  #       - todeIt
+  #       - "{{stoneName}}"
+  #       - project
+  #       - load
+  #       - --loads="\`#('default')\`"
+  #       - "{{via.siteName}}"
+
+
+
 
   #
   # UPDATE TO NEWEST CODE
   #
-  - name: Update VIA site project information
+  - name: Update VIA site project information (pull)
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project pull {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
-  - name: Update VIA site project information
+  - name: Update VIA site project information (get)
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project get {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
   - name: Load VIA site project
     become_user: "{{remoteUser}}"
     command:
       argv:
         - todeIt
-        - via
+        - "{{stoneName}}"
         - project
         - load
         - --loads="\`#('default')\`"
         - "{{via.siteName}}"
 
+  # Hack, GemStone weigert sich irgendwie zu updaten
+  - name: Monticello revert to last version (strange, why?)
+    become_user: "{{remoteUser}}"
+    shell: "todeIt {{stoneName}} mc revert ViaSiteHep"
+
+      
   - name: Update script inside VIA application
     become_user: "{{remoteUser}}"
-    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/updateVia.st"
+    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{stoneName}} {{via.installationPath}}/install/updateVia.st"
 
   - name: Starting VIA's web instances (gems)
     shell: monit -g via_gemstone_gems start

@@ -14,7 +14,7 @@ getUiText: aKey language: aLanguage
 				]."
 
 				"If not a key, then its probably a normal text"
-				aKey isTranslationKey ifFalse: [ ^ aKey ].
+				aKey isTranslationKey ifFalse: [ ^ VIAHelper pillarFromPillarString: aKey ].
 
 				"Nur in 1 Sprache default setzen, da wir auch für Backend Texte in English haben"
 				self ensureUiText: aKey language: aLanguage.

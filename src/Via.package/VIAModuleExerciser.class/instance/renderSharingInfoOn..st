@@ -1,7 +1,7 @@
 rendering
 renderSharingInfoOn: html
 	| iframe |
-	iframe := '<iframe src="', model permaUrlEmbed, '" width="700px" height="800px" style="border: 1px solid #999; resize: both; overflow: auto;" class="embedded321Module" />'.
+	iframe := '<iframe src="', model permaUrlEmbed, '" width="700px" height="800px" style="border: 1px solid #999; resize: both; overflow: auto;" class="embeddedModule" />'.
 
 	html t: 'moduleExerciser:sharing:permaUrl'; space.
 	html span

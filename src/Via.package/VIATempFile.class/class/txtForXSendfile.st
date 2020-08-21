@@ -1,3 +1,5 @@
 as yet unclassified
 txtForXSendfile
-	^self extension: 'txt' tempFolder: 'tmp' contentType: 'text/plain'
+	| instance |
+	instance := self extension: 'txt' tempFolder: nil contentType: 'text/plain'.
+	^instance

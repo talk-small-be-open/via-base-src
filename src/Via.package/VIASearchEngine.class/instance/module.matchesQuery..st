@@ -41,6 +41,11 @@ module: aModule matchesQuery: aQuery
 		aModule isPrivate ifTrue: [^false]
 	].
 
+	"Filter for index code"
+	aQuery isIndexCodeFiltered ifTrue: [ 
+		(aModule matchesIndexCode: aQuery indexCodePartial) ifFalse: [ ^ false ]
+	].
+
 	"Custom filters"
 "	(self anyCustomFilterFalseQuery: aQuery model: aPerson) ifTrue: [^false]."
 

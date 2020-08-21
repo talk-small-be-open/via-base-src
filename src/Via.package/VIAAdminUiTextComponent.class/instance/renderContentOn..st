@@ -1,6 +1,6 @@
 as yet unclassified
 renderContentOn: html
-	html heading level3; with: 'UI Texts'.
+	html heading level1; with: 'UI Texts'.
 	html paragraph: 'Hint: Use Pillar for formatting!'.
 	html skAnchorButton
 		callback: [self refresh];

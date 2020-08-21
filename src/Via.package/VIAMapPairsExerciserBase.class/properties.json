@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATaskBrickExerciser",
+	"category" : "Via-View-OutOfTheBox",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAMapPairsExerciserBase",
+	"type" : "normal"
+}

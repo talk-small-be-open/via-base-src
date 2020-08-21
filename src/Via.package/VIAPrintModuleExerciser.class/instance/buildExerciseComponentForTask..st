@@ -3,7 +3,7 @@ buildExerciseComponentForTask: aTask
 	| taskIndex taskExerciser |
 	taskIndex := model tasks indexOf: aTask.
 
-	taskExerciser := VIAExerciserPrintComponent exercise: (moduleExercise exerciseForTask: aTask).
+	taskExerciser := VIAExerciserPrintComponent exercise: (moduleExerciseGSRENAME exerciseForTask: aTask).
 	
 	exerciserComponents
 		at: taskIndex

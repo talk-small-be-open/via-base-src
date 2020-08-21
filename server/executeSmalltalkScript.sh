@@ -4,12 +4,12 @@
 # output pushnew $GEMSTONE_LOGDIR/executeSmalltalk.log
 
 
-startTopaz via -q -l << EOF > /dev/null
+startTopaz $1 -q -l << EOF > /dev/null
 display oops
 output pushnew executeSmalltalk.log
 login
 run
-$(cat $1)
+$(cat $2)
 System commitTransaction.
 %
 logout

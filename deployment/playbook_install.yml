@@ -9,6 +9,7 @@
     - ./site/via_{{customerCode}}.yml
   vars:
     remoteUser: "{{ansible_user}}"
+    stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
@@ -44,7 +45,7 @@
       group: "{{remoteUser}}"
 
   - name: Make sure SSH private key is installed (optional)
-    when: via.sshPrivateKey
+    when: via.sshPrivateKey is defined
     no_log: true
     copy:
       content: "{{via.sshPrivateKey}}"
@@ -54,7 +55,7 @@
       mode: 0600
 
   - name: Copy SSH public key
-    when: via.sshPrivateKey
+    when: via.sshPrivateKey is defined
     copy:
       src: files/ssh/via_id.pub
       dest: "/home/{{remoteUser}}/.ssh/id_rsa.pub"
@@ -243,16 +244,16 @@
     
   - name: Create stone
     become_user: "{{remoteUser}}"
-    shell: "createStone via {{via.gemStoneVersion}}"
+    shell: "createStone {{stoneName}} {{via.gemStoneVersion}}"
     args:
       chdir: "/opt/GsDevKit_home"
-      creates: "/opt/GsDevKit_home/server/stones/via"
+      creates: "/opt/GsDevKit_home/server/stones/{{stoneName}}"
 
 
   - name: Provide our own gem.conf
     copy:
       src: "files/gemstone/gem.conf"
-      dest: "/opt/GsDevKit_home/server/stones/via/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
       owner: "{{remoteUser}}"
 #      group: "{{remoteUser}}"
       mode: 0644
@@ -265,9 +266,13 @@
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/dev/clients/tode"
 
+  - name: monit reload
+    when: monitconfig1.changed or monitconfig2.changed
+    shell: monit reload
+    
   - name: Flush Monticello cache
     become_user: "{{remoteUser}}"
-    shell: "todeIt via mr flush"
+    shell: "todeIt {{stoneName}} mr flush"
 
   - name: Copy our own STON file for the Seaside project
     copy:
@@ -284,8 +289,8 @@
   # Versuch: Installieren mit --stone statt default --local
   - name: Install official GemStone-Seaside into tODE
     become_user: "{{remoteUser}}"
-#    shell: "todeIt via project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
-    shell: "todeIt via project install --local Seaside3"
+#    shell: "todeIt {{stoneName}} project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
+    shell: "todeIt {{stoneName}} project install --local Seaside3"
     args:
       chdir: "/opt/GsDevKit_home"
 #      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
@@ -295,7 +300,7 @@
     command:
       argv:
         - todeIt
-        - via
+        - "{{stoneName}}"
         - project
         - load
         - --loads="\`#('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Production' 'Zinc' 'Tests')\`"
@@ -304,46 +309,46 @@
 
   - name: Mount Seaside in tODE
     become_user: "{{remoteUser}}"
-    shell: "todeIt via mount @/sys/stone/dirs/Seaside3/tode /home seaside"
+    shell: "todeIt {{stoneName}} mount @/sys/stone/dirs/Seaside3/tode /home seaside"
     args:
       chdir: "/opt/GsDevKit_home"
 
   # TODO
   # - name: Backup so far
   #   become_user: "{{remoteUser}}"
-  #   shell: "todeBackup via seaside.dbf"
+  #   shell: "todeBackup {{stoneName}} seaside.dbf"
   #   args:
   #     chdir: "/opt/GsDevKit_home"
   #     creates: "/opt/GsDevKit_home ...?
     
-  - name: Add VIA site project information into tODE
+  - name: Add VIA site project into tODE
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project entry --baseline={{via.siteName}} --repo={{via.siteRepository.metacelloUrl}} /sys/local/server/projects"
+    shell: "todeIt {{stoneName}} project entry --baseline={{via.siteName}} --repo={{via.siteRepository.metacelloUrl}} /sys/local/server/projects"
     args:
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/sys/local/server/projects/{{via.siteName}}.ston"
 
-  - name: git-clone VIA site project information
+  - name: git-clone VIA site project
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project clone --https --local --checkout=master {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project clone --https --local --checkout=master {{via.siteName}}"
     args:
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/shared/repos/{{via.siteRepository.name}}"
       
-  - name: Update VIA site project information
+  - name: Update VIA site project (pull)
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project pull {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
-  - name: Update VIA site project information
+  - name: Update VIA site project (get)
     become_user: "{{remoteUser}}"
-    shell: "todeIt via project get {{via.siteName}}"
+    shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
   - name: Load VIA site project
     become_user: "{{remoteUser}}"
     command:
       argv:
         - todeIt
-        - via
+        - "{{stoneName}}"
         - project
         - load
         - --loads="\`#('default')\`"
@@ -351,21 +356,21 @@
 
   - name: Register Servers in tODE
     become_user: "{{remoteUser}}"
-    shell: "todeIt via /home/seaside/gemServer --register=seaside{{item}} --type=zinc --port={{item}}"
+    shell: "todeIt {{stoneName}} /home/seaside/gemServer --register=seaside{{item}} --type=zinc --port={{item}}"
     loop: "{{ via.gemPorts }}"
     args:
       chdir: "/opt/GsDevKit_home"
 
   - name: Install/Config VIA application
     become_user: "{{remoteUser}}"
-    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{via.installationPath}}/install/installVia.st && touch INSTALLATION_IS_DONE.log"
+    shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{stoneName}} {{via.installationPath}}/install/installVia.st && touch INSTALLATION_IS_DONE.log"
     args:
       chdir: "{{via.installationPath}}/install"
       creates: "{{via.installationPath}}/install/INSTALLATION_IS_DONE.log"
     
   # - name: Start Servers in tODE
   #   become_user: "{{remoteUser}}"
-  #   shell: "todeIt via /home/seaside/gemServer --restart=seaside{{item}}"
+  #   shell: "todeIt {{stoneName}} /home/seaside/gemServer --restart=seaside{{item}}"
   #   loop: "{{ via.gemPorts }}"
   #   args:
   #     chdir: "/opt/GsDevKit_home"

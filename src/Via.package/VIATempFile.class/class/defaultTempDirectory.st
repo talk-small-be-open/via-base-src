@@ -1,3 +1,3 @@
 as yet unclassified
 defaultTempDirectory
-	^ '/tmp'
+	^ self db propertyAt: #tmpPath default: ['/tmp']

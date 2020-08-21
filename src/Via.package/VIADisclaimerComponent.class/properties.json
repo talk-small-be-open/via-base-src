@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"isEmbedded"
+		"isEmbedded",
+		"languages"
 	],
 	"name" : "VIADisclaimerComponent",
 	"type" : "normal"

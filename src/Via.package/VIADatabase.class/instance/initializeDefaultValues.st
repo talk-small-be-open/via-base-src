@@ -11,11 +11,10 @@ initializeDefaultValues
 	searchEngine ifNil: [searchEngine := VIASearchEngine new].
 	uiTexts ifNil: [uiTexts := Dictionary new].
 	trashedObjects ifNil: [trashedObjects := OrderedCollection new].
-	mailer ifNil: [mailer := VIAMailer new].
 	applicationCommands ifNil: [applicationCommands := RcKeyValueDictionary new].
 	exams ifNil: [exams := OrderedCollection new].
 	websites ifNil: [websites := OrderedCollection new].
 	websiteDatas ifNil: [websiteDatas := IdentityDictionary new].
 
 	self propertyAt: #uploadsBasePath ifAbsentPut: ['/tmp'].
-	self propertyAt: #fileStoragePath ifAbsentPut: ['/Users/dassi/code/smalltalk/seaside/321via/web_root'].
+	self propertyAt: #fileStoragePath ifAbsentPut: ['/tmp'].

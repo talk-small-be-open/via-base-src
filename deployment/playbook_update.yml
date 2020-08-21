@@ -15,6 +15,7 @@
     - ./site/via_{{customerCode}}.yml
   vars:
     remoteUser: "{{ansible_user}}"
+    stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}

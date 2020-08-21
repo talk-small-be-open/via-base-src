@@ -1,0 +1,3 @@
+accessing
+qAndACount
+	^ qAndAs size

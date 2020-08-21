@@ -6,7 +6,7 @@ renderContentOn: html
 	
 	html div with: [
 		taskComponents withIndexDo: [:each :index |
-			html heading level3; with: (index asString, '. ', (each task title)).
+			html heading level3; with: (index asString, '. ', (each task displayName)).
 			html render: each]].
 	
 "	html paragraph: 'Exam analyse'.

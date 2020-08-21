@@ -1,0 +1,3 @@
+testing
+hasIndexCode
+	^ indexCode notBlank

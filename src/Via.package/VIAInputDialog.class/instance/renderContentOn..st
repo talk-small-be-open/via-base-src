@@ -2,7 +2,7 @@ rendering
 renderContentOn: html
 	| textField |
 	html div class: 'inputDialog'; with: [
-		html paragraph: messageText.
+		html div class: 'messageText'; with: messageText.
 		html form
 			defaultAction: [ self answer: value ];
 			with: [
@@ -13,11 +13,11 @@ renderContentOn: html
 					textField
 						script: (html jQuery this triggerFocus);
 						on: #value of: self.
-					html break.
-					html submitButton
-						callback: [self answer: value];
-						t: 'general:ok'.
-					html space.
-					html ukAnchorButton
-						callback: [self cancel];
-						t: 'general:cancel']]]
+					html div: [
+						html submitButton
+							callback: [self answer: value];
+							t: 'general:ok'.
+						html space.
+						html anchorButton
+							callback: [self cancel];
+							t: 'general:cancel']]]]

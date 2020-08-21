@@ -141,6 +141,7 @@
   # MONIT
   #
   - name: monitrc file
+    register: monitconfig1
     copy:
       src: files/monitrc
       dest: /etc/monit/monitrc
@@ -148,7 +149,9 @@
       group: 'root'
     notify:
       - restart monit
+
   - name: monit config for via
+    register: monitconfig2
     template:
       src: files/monit_via.j2
       dest: /etc/monit/conf.d/via
@@ -157,7 +160,6 @@
     notify:
       - restart monit
 
-    
 
   #
   # Postfix Mail

@@ -105,60 +105,25 @@
 
 
 // Our own uikit theme
-@import "uikit_321_theme/_import.less";
-
+@import "uikit_theme/_import.less";
 
 @import "common.less";
-@import "tasks.less";
+// @import "tasks.less";
 @import "development.less";
 
 
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 200;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(//fonts.gstatic.com/s/roboto/v15/Jzo62I39jc0gQRrbndN6nfesZW2xOQ-xsNqO47m55DA.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Roboto Light'), local('Roboto-Light'), url(//fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'), url(//fonts.gstatic.com/s/roboto/v15/zN7GBFwfMP4uA6AR0HCoLQ.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: local('Roboto Medium'), local('Roboto-Medium'), url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUaCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'), url(//fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOKCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
-}
 
-@font-face {
-  font-family: 'Permanent Marker';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
-}
 
 @core-margin-top:                                   150px;
-@global-primary-background: @via-basic-color;
+@global-primary-background: @via-basic-background-color;
 
 
 //
-// Your basic definitions. You might want to redefine these in the less file for the sub-website (styles_*.less)
+// Your basic definitions. You might want to redefine these in the less file for the sub-website (<site>/css/styles_*.less)
 //
-@via-basic-color: #e20613;
+
+@via-basic-color: black;
+@via-basic-background-color: #e20613;
 @via-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
 @via-coloredbutton-hover-color: darken(@via-coloredbutton-color, 10%);
 
@@ -216,13 +181,6 @@
 
 @hm-teaser-background:                              none;
 
-@hm-header-height:                                  10vh;
-@hm-header-height-small:                            5vh;
-@hm-header-background:                              rgba(0,0,0,0.2);
-@hm-header-small-background:                        fade(@global-background, 95%);
-
-@hm-header-shadow-sticky:                           0 0 50px 1px rgba(0,0,0,0.2);
-@hm-header-shadow-teaser:                           0 0 150px 1px rgba(0,0,0,0.5);
 
 
 //
@@ -259,9 +217,29 @@
 // Facebook
 //
 @facebook-blue: #4267B2;
-	
 
 
+// ===================================================================================
+
+//
+// Only for Development. Might put it in development.less but this
+// will be needed for staging platform aswell.
+// 
+
+div.devDummy {
+		background-color: #eee;
+		padding: 0.5em;
+		border: 1ps solid #ccc;
+		margin: 1em 0;
+}
+
+
+// ===================================================================================
+
+
+//
+// Basic styles
+//
 table {
 		border-collapse: collapse;
 		
@@ -332,280 +310,12 @@ option {
 }
 
 
-// 
-// Accordion
-// 
-
-@acc-number-background: #000;
-@acc-number-color: #fff;
-@acc-number-height: 31px; 
-@acc-number-padding-top: 9px;
-@acc-number-padding-left: 18px;
-	
-	
-@acc-title-float: left;
-@acc-title-padding-left: 20px;
-@acc-title-padding-top: 9px;
-
-@acc-subtitle-font-size: 0.7em;
-@acc-subtitle-padding-top: 9px;
- 
-
-
-//
-// header 
-//
-div.hm-header {
-    
-		background-color: @global-background;
-
-		img.tdu-logo {
-				height: @hm-header-height;
-				width: auto;
-				min-height: 3em;
-		}
-
-		.hm-claim {
-				//		padding-left: @claim-padding-left;
-				font-size: 16px;
-				vertical-align: top;
-				// line-height: 22px;
-				margin-top: 1em;
-
-				p {
-						line-height: @claim-p-height;
-				}
-
-		}
-
-		ul.uk-navbar-nav {
-				margin-top: 1em;
-		}
-
-		a.mainMenuToggler {
-				span.uk-icon {
-						margin-right: 0.2em;
-				}
-		}
-		
-		&.uk-active {
-
-				height: @hm-header-height-small;
-				box-shadow: @hm-header-shadow-sticky !important;
-				background: @hm-header-small-background;
-
-				> .uk-container {
-						height: @hm-header-height-small;
-
-						div.uk-navbar-right, div.uk-navbar-left {
-								align-items: flex-start;
-						}
-				}
-
-				//    .uk-dropdown-navbar { margin-top: 15px; }
-
-				// .uk-navbar-nav > li:not(.uk-active) > a {
-				// 		color: @navbar-nav-item-color !important;				
-				// }
-
-				//    .uk-navbar-toggle { color: @navbar-toggle-color !important; }
-
-		}
-
-		// Menu, in navbar or in offcanvas
-		#mainMenu {
-				ul.uk-nav, ul.uk-navbar-nav {
-						// Login Menu, Facebook-Vorgaben
-						li.loginMenu {
-								ul.loginMenu {
-										li.facebookLogin, li.googleLogin {
-												//				background-color: @facebook-blue;
-												padding-left: 2px;
-												background-color: #f6f6f6;
-
-												a.facebookLogin, a.googleLogin {
-														&:hover {
-																color: @base-link-color;
-														}
-														color: #333;
-
-														img.facebookLogo {
-																width: 20px;
-																//						margin: 2px;
-														}
-
-														img.googleLogo {
-																width: 16px;
-																margin: 2px;
-														}
-												}
-										}
-								}
-						}
-				}
-
-				&.uk-offcanvas {
-						ul.uk-nav {
-								li {
-										a {
-												color: white;
-										}
-								}
-						}
-				}
-		}
-
-}
-
-
-div.searchBarContainer {
-
-		background-color: @global-primary-background;
-		padding: 1.5em 0;
- 		border-bottom: darken(@global-primary-background, 20%) 5px solid;
-
-		div.searchBar {
-
-				padding: 0 0.3em;
-				
-				div.uk-search {
-
-						input.uk-search-input {
-								background-color: #fff;   
-								border-radius: 12px;
-						}
-						
-						button.searchButton
-						{
-								background-color: @via-coloredbutton-color;
-								border: 2px solid white;
-								&:hover {
-										background-color: @via-coloredbutton-hover-color;
-								}
-						}
-				}
-
-				div.extendedSearch {
-						margin: 20px 0 0 0;
-				}
-		}
-}
-
-
-
-div.VIAModuleSearchComponent {
-		div.mapContainer.swissMap {
-				margin: 50px auto;
-				width: 50%;
-		}
-}
-
-
-
-// Accordion html
-
-div.acc-bar {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 18px;
-    cursor: pointer;
-		padding: 00px;
-		height: 40px;
-		color: #fff;
-    border: none;
-
-		&.ignored {
-				background-color: #bbb;
-				color: #ddd;
-		}
-		
-		.acc-number {
-				background-color:               @acc-number-background;
-				color:                          @acc-number-color;
-				height:                         @acc-number-height; 
-				padding-top:                    @acc-number-padding-top;
-				padding-left:                   @acc-number-padding-left;   
-				
-				font-weight: bold;
-				width: 30px;
-				float: left;
-				border: none;
-				position: relative; 
-		}
-
-		.acc-icon  {
-				float: left; 
- 				color: #fff;
-				text-align: center;
-				padding-left:10px; 
-				padding-top: 9px; 
-				font-size: 1.4em;
-				min-width: 20px;
-				height: 20px;
-
-				img.icon {
-						background-color: #fff;
-				}
-		}
-
-		.acc-title {
-				float:                    @acc-title-float;
-				padding-left:             @acc-title-padding-left;
-				padding-top:              @acc-title-padding-top;
-		}
-
-		.acc-toggle  {
-				float: right; 
-				width:20px;
-				height: 20px;
-				padding-top: 10px;
-				margin-left: 20px;
-				margin-right: 20px;
-		}
-
-
-		.acc-subtitle {
-				font-size: @acc-subtitle-font-size;
-				padding-top: @acc-subtitle-padding-top;
-				float: right;
-				white-space: nowrap;
-		}
-}
-
-
 img.icon {
     width: 20px;
     height: 20px;		
 }
 
-div.VIAMyPortfolioComponent {
-		div.certificatePreview {
-				border: 20px white solid;
-				margin-top: 15px;
-		}
 
-		a.certificatePreview,
-		a.certificatePreview:hover {
-				color: inherit;
-		}
-
-}
-
-
-//
-// aufgaben testen
-//
-
-input.submit, button.submit {
-		&.check, &.reset, &.recheck, &.revealAnswers, &.save {
-				background: #f00;
-				color: #fff;
-				border:  0px;
-				padding: 10px;
-				font-size: 1.2em;
-				cursor: pointer;
-		}
-}
 
 .uk-button, button {
 		small {
@@ -634,6 +344,9 @@ body.loggedIn {
 				min-height: 500px;
 		}
 }
+
+
+// ===================================================================================
 
 //
 // module design
@@ -794,6 +507,25 @@ div.moduleCard {
 		
 }
 
+
+//
+// Personal portfolio
+//
+div.VIAMyPortfolioComponent {
+		div.certificatePreview {
+				border: 20px white solid;
+				margin-top: 15px;
+		}
+
+		a.certificatePreview,
+		a.certificatePreview:hover {
+				color: inherit;
+		}
+
+}
+
+
+
 //
 // ModuleExerciser
 //
@@ -853,140 +585,41 @@ div.VIAExamModuleExerciser {
 
 
 
-nav.hm-navbar {
-		ul.uk-navbar-nav > li {
-				span.menuDivider {
-						display: inline-block;
-						width: 1px;
-						height: 30px;
-						background-color: @global-primary-background;
-						// -webkit-transform: rotate(20deg);
-	    			// -ms-transform: rotate(20deg);
-						transform: rotate(20deg);
-				}
+// nav.hm-navbar {
+// 		ul.uk-navbar-nav > li {
+// 				span.menuDivider {
+// 						display: inline-block;
+// 						width: 1px;
+// 						height: 30px;
+// 						background-color: @global-primary-background;
+// 						// -webkit-transform: rotate(20deg);
+// 	    			// -ms-transform: rotate(20deg);
+// 						transform: rotate(20deg);
+// 				}
 
-		}
-}
-
-
-//
-// Fixed backgrounds variants
-//
-
-.hm-fixed-background-a,
-.hm-fixed-background-b,
-.hm-fixed-background-c {
-    background-attachment: fixed;
-    background-size: cover;
-    padding: @hm-position-padding 0;
-    position: relative;
-    box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
-   // height:@fixedbackground-home-height;
-}
-
-.hm-fixed-background-a { background-image: @hm-fixed-background-a; }
-.hm-fixed-background-b { background-image: @hm-fixed-background-b; }
-.hm-fixed-background-c { background-image: @hm-fixed-background-c; }
+// 		}
+// }
 
 
+// //
+// // Fixed backgrounds variants
+// //
 
-/* Breakpoints
- ========================================================================== */
+// .hm-fixed-background-a,
+// .hm-fixed-background-b,
+// .hm-fixed-background-c {
+//     background-attachment: fixed;
+//     background-size: cover;
+//     padding: @hm-position-padding 0;
+//     position: relative;
+//     box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
+//    // height:@fixedbackground-home-height;
+// }
 
-// Small and bigger
-@media (min-width: @breakpoint-small) {
+// .hm-fixed-background-a { background-image: @hm-fixed-background-a; }
+// .hm-fixed-background-b { background-image: @hm-fixed-background-b; }
+// .hm-fixed-background-c { background-image: @hm-fixed-background-c; }
 
-		div.coreContainer {
-				padding-left: 2em;
-				padding-right: 2em;
-		}
-
-		div.VIAMyPortfolioComponent {
-				div.certificatePreview {
-						transform: translate(-25%, -25%) scale(0.5);
-				}
-		}
-		
-}
-
-// Not small phones
-@media (min-width: @breakpoint-small-max) {
-		body.loggedIn {
-				div.core {
-						min-height: 500px;
-				}
-		}
-}
-
-// Only very small phones
-@media (max-width: @breakpoint-small) {
-
-		body.loggedIn {
-				background-attachment: scroll;
-		}
-
-		.hm-fixed-background-a,
-    .hm-fixed-background-b,
-    .hm-fixed-background-c { background-attachment: scroll; }
-
-		
-    .uk-navbar-brand,
-    .uk-navbar-content { padding: 0 !important; }
-
-    .uk-navbar-toggle { padding-right: 0; }
-
-    h1, .uk-h1 {
-        font-size: @base-h1-font-size - 10px;
-        line-height: @base-h1-line-height - 10px;
-    }
-
-    h2, .uk-h2 {
-        font-size: @base-h2-font-size - 10px;
-        line-height: @base-h2-line-height - 10px;
-    }
-
-    h3, .uk-h3 {
-        font-size: @base-h3-font-size - 10px;
-        line-height: @base-h3-line-height - 10px;
-    }
-
-    h4, .uk-h4 {
-        font-size: @base-h4-font-size - 2px;
-        line-height: @base-h4-line-height - 2px;
-    }
-
-    h5, .uk-h5 {
-        font-size: @base-h5-font-size;
-        line-height: @base-h5-line-height;
-    }
-
-    h6, .uk-h6 {
-        font-size: @base-h6-font-size;
-        line-height: @base-h6-line-height;
-    }
-
-    .hm-position-teaser { position: absolute !important; }
-
-		div.moduleCard {
-
-				&.mini {
-						padding: 0.2em;
-				}
-
-				&.normal {
-						padding: 0.5em;
-				}
-
-
-				div.hm-titel-box {
-						font-size: 90%;
-						line-height: normal;
-				}
-
-		}
-
-
-}
 
 
 div.coreContainer {
@@ -995,49 +628,7 @@ div.coreContainer {
 }
 
 
-//
-// footer
-// 
-
-.footer {
-    background-color: @footer-background;
-    color: @footer-color;
-    height: @footer-min-height;
-    margin-top: @footer-margin-top;
-
-		position: fixed;
-		z-index: 15;
-		bottom: 0;
-		width: 100%;
-		
-		div.footnotes {
-				padding: @footer-padding;
-		}
-
-		a {
-				color: inherit;
-		}
-		
-		div.awards {
-				position: absolute;
-				right: 0;
-				padding: @footer-padding;
-				
-				img.award {
-						height: @footer-min-height / 1.7;
-						filter: grayscale(100%);
-
-						&:hover {
-								filter: grayscale(0%);
-						}
-				}
-		}
-    
-}
-
-
-
-// zurückknopf
+// Back button
 div.backButton {
 		padding-top: 0.5em;
 }
@@ -1058,7 +649,7 @@ a.backButtonAnchor:hover {
 		color: #ddd;   
 }
 
-    
+
 .topBuffer {
 		margin-top: 20px;
 }
@@ -1103,11 +694,6 @@ div.inputDialog {
 		}
 }
 
-div.VIAPublicHomeComponent {
-		div#award {
-				position: absolute;
-		}
-}
 
 div.testDriveContainer {
 		margin: 30px;

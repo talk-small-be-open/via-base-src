@@ -6,6 +6,15 @@ renderAudioPlayer: anAudioPlayer on: html
 			labels: [:each | each displayName];
 			beOptional;
 			on: #audioAsset of: anAudioPlayer.
+
+		self ifFeature: #backend:recordAudioFromBrowser then: [
+			html space.
+			self renderAudioRecorderFor: anAudioPlayer on: html.
+		].
+
+		html audio
+			controls: true;
+			url: anAudioPlayer audioUrl.
 	
 		html skRow: [
 			html skColumnWidth: 'three' with: [

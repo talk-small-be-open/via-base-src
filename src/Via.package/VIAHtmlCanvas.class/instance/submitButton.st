@@ -1,5 +1,3 @@
 as yet unclassified
 submitButton
-	^self button
-		beSubmit;
-		yourself.
+	^ self ukSubmitButton

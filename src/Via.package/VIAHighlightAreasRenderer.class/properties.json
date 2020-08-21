@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
-	"super" : "VIASingleTaskExerciserRenderer",
-	"category" : "Via-View",
+	"super" : "VIATaskBrickExerciser",
+	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

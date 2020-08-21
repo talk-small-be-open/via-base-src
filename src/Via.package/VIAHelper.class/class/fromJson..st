@@ -3,4 +3,6 @@ fromJson: aString
 
 	aString ifBlank: [ ^{} ].
 	
-	^ NeoJSONReader fromString: aString
+	^ [
+	NeoJSONReader fromString: aString
+	] on: NeoJSONParseError do: [ :error | nil ]

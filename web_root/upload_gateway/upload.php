@@ -1,8 +1,8 @@
 <?php
 
 //
-// Uploader handler for Plupload
-// 321via Andreas Brodbeck
+// Uploader handler for Plupload.
+// For via project.
 //
 
 // No cache headers
@@ -19,8 +19,8 @@ http_response_code(500);
 @set_time_limit(30 * 60);
 
 // Settings
-$albusUploadSessionId = $_GET['id'];
-$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload" . DIRECTORY_SEPARATOR . $albusUploadSessionId;
+$uploadSessionId = $_GET['id'];
+$targetDir = ini_get("upload_tmp_dir") . DIRECTORY_SEPARATOR . "plupload" . DIRECTORY_SEPARATOR . $uploadSessionId;
 
 // Create target dir
 if (!file_exists($targetDir)) {

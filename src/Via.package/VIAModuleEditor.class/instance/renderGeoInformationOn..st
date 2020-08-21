@@ -1,9 +1,12 @@
 as yet unclassified
 renderGeoInformationOn: html
+	| exists |
+	exists := model geocodes notEmpty.
+	
 	html div: [
 		html label: 'Geo information'.
 		model geocodes
-			ifEmpty: [html strong: 'No geo information! ']
+			ifEmpty: [html span: 'None']
 			ifNotEmpty: [:geocodes |
 				geocodes do: [:gc |
 					html div: [
@@ -39,10 +42,11 @@ renderGeoInformationOn: html
 		]]].
 
 		html div class: 'topBuffer'; with: [
-			html submitButton
-"				callback: [];"
-				with: 'Accept change'.
-			html space.
+			exists ifTrue: [
+				html submitButton
+	"				callback: [];"
+					with: 'Accept change'.
+				html space].
 			html submitButton
 				callback: [self addGeocode];
 				with: '+ Search swiss geo location ...'.
@@ -57,7 +61,8 @@ renderGeoInformationOn: html
 				with: 'Search online for latitude/longitude ... '
 		].
 
-		html div class: 'mapPreview'; with: swissmap.
-		html div class: 'mapPreview'; with: worldmap.
+		exists ifTrue: [
+			html div class: 'mapPreview'; with: swissmap.
+			html div class: 'mapPreview'; with: worldmap].
 
 	].
