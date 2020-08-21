@@ -1,4 +1,4 @@
-as yet unclassified
+uitext
 saveUiTextsToFile
 	| tempFile text |
 	
@@ -7,7 +7,7 @@ saveUiTextsToFile
 	text := String streamContents: [ :s |	
 		self uiTexts keys sorted do: [:key |
 			| value |
-			value := self uiTextAt: key.
+			value := VIAHelper pillarStringFromPillar: (self uiTextAt: key).
 			s nextPut: $#.
 			s nextPutAll: key.
 			s tab.

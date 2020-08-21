@@ -1,3 +1,10 @@
 as yet unclassified
 uploadTextFile
-"TBD"
+	| uploader |
+	
+	uploader := VIAUploaderComponent new.
+	
+	self show: uploader onAnswer: [:fileReference |
+		fileReference ifNotNil: [
+			self db loadUiTextsNoOverwrite: fileReference
+	]]
