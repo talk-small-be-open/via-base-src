@@ -2,6 +2,9 @@ rendering
 renderUploaderOn: html
 	html heading level2; with: 'Multiple file upload'.
 
+	infoMessage ifNotBlank: [
+		html paragraph: infoMessage].
+
 	errorMessage ifNotNil: [
 		html div class: 'error'; with: errorMessage.
 		self clearErrorMessage].
