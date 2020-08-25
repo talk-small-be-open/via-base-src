@@ -44,15 +44,16 @@
   #
   # hosts file
   #
-  - name: Replace a localhost entry with our own
+  - name: local via domain in hosts file
     lineinfile:
       path: /etc/hosts
-#      regexp: '^127\.0\.0\.1'
       line: 127.0.0.1 via.local
-      # owner: root
-      # group: root
-      # mode: '0644'
-    
+
+  - name: Ensure hostname is resolved in hosts file
+    lineinfile:
+      path: /etc/hosts
+      line: "127.0.0.1 {{ansible_hostname}}"
+      
         
   - name: Install basic apt packages
     apt:

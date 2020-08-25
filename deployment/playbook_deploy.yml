@@ -10,9 +10,9 @@
   roles:
     - common
   vars_files:
-    - ./site/via_{{customerCode}}.yml
+    - ./site/via_{{instanceName}}.yml
   vars:
-    remoteUser: "{{ansible_user}}"
+    remoteUser: "{{via_user}}"
     stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
