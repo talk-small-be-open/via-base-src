@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAComponent",
+	"super" : "VIAAdminComponent",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],
@@ -10,7 +10,8 @@
 		"tempFileReferences",
 		"targetBasePath",
 		"targetRelativePath",
-		"errorMessage"
+		"errorMessage",
+		"infoMessage"
 	],
 	"name" : "VIAPlUploadComponent",
 	"type" : "normal"

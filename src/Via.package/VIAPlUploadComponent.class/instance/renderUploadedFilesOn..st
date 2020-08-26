@@ -1,7 +1,7 @@
 rendering
 renderUploadedFilesOn: html
 	tempFileReferences ifNotBlank: [
-		html div class: 'topBuffer'; with: [
+		html div class: 'topBuffer bottomBuffer'; with: [
 			html strong: 'Uploaded files:'.
 			tempFileReferences do: [:each |
 				html div: [

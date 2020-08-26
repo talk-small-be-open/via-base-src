@@ -9,10 +9,10 @@ renderModule: aModule canEdit: canEdit on: html
 		html text: aModule displayName.
 		aModule isExam ifTrue: [
 			html space.
-			html ukLabel: 'EXAM ONLY'].
+			html badgeSuccess: 'EXAM ONLY'].
 		aModule isPrivate ifTrue: [
 			html space.
-			html ukLabelWarning: 'PRIVATE'].
+			html badgeWarning: 'PRIVATE'].
 	].
 	html tableData class: 'actions'; with: [
 		(self canMakeVewVersionModule: aModule) ifTrue: [

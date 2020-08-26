@@ -6,5 +6,8 @@ uploadTextFile
 	
 	self show: uploader onAnswer: [:fileReference |
 		fileReference ifNotNil: [
-			self db loadUiTextsNoOverwrite: fileReference
+			(self confirm: 'Do you want to keep the existing texts or overwrite them?' title: 'Overwrite?' buttonText: 'Load new only' cancelText: 'Overwrite all')
+				ifTrue: [ self db loadUiTextsNoOverwrite: fileReference ]
+				ifFalse: [ self db loadUiTextsOverwrite: fileReference ]
+			
 	]]
