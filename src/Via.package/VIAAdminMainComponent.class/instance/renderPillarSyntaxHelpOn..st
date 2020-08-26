@@ -43,3 +43,8 @@ Inject raw HTML:
 this is how you inject raw <b>­htm­l</­b> in your output file 
 }}}
 '.
+
+	html preformatted: 'Use special Pillar characters:
+\+ will output a "+" plus sign.
+\* will output a "*" star sign.
+'

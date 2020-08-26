@@ -1,3 +1,4 @@
 testing
 isValidReference: aString
-	^ aString includesSubstring: '://' caseSensitive: true
+	"Absolute or relative links"
+	^ (aString includesSubstring: '://' caseSensitive: true) or: [ aString beginsWith: '/' ]

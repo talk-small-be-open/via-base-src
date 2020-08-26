@@ -1,4 +1,4 @@
-as yet unclassified
+rendering
 renderListOn: html
 	self assets ifNil: [ ^self ].
 	self assets

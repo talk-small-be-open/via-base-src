@@ -1,3 +1,3 @@
 icons
 iconPartiallyCorrect
-	^self ukIcon: 'check-circle-o'
+	^self farIcon: 'check-circle'
