@@ -1,0 +1,3 @@
+accessing
+shuffleSequence
+	^ shuffleSequence = true
