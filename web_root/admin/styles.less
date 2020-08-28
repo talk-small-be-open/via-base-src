@@ -193,12 +193,12 @@ table.adminModules {
 		}
 
 		td.actions {
-				a {
-						white-space: nowrap;
-						&:not(:first-child) {
-								margin-left: 0.6em;
-						}
-				}
+				// a {
+				// 		white-space: nowrap;
+				// 		&:not(:first-child) {
+				// 				margin-left: 0.6em;
+				// 		}
+				// }
 
 				&.extras {
 						font-size: 80%;
@@ -209,6 +209,17 @@ table.adminModules {
 				background-color: #ddd;
 		}
 }
+
+
+td.actions {
+		a {
+				white-space: nowrap;
+				&:not(:first-child) {
+						margin-left: 0.6em;
+				}
+		}
+}
+
 
 table.adminAssets {
 		width: 100%;
@@ -300,9 +311,13 @@ select[multiple] {
 
 pre.pillarExample {
 		font-size: 75%;
-		line-height: 1em;
+		line-height: 1.5em;
 		white-space: pre-wrap;
 		margin: 0;
+}
+
+.copyPaste {
+		cursor: pointer;
 }
 
 // textarea.pillar {
@@ -415,6 +430,7 @@ div.pillarInput {
 
 				span.pillarSyntaxIndicator {
 						.badge();
+						background-color: green;
 						font-size: 90%;
 				}
 		}
@@ -525,6 +541,15 @@ div.inputDialog {
 		margin-bottom: 20px;
 }
 
+div.VIAAdminModulesComponent {
+		div.dialogButtons {
+				position: sticky;
+				bottom: 0;
+				background-color: rgba(100,100,100,0.1);
+				padding: 0.5em;
+				border-top: 1px solid #999;
+		}
+}
 
 // Keep this for Emacs editor!
 // Local Variables:
