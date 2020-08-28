@@ -10,7 +10,8 @@
 		"module",
 		"validationResult",
 		"authorBricks",
-		"authorBrickCategories"
+		"authorBrickCategories",
+		"assetsComponent"
 	],
 	"name" : "VIATaskEditor",
 	"type" : "normal"

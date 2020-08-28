@@ -9,7 +9,8 @@
 		"user",
 		"modules",
 		"moduleExercises",
-		"exams"
+		"exams",
+		"lastOpenedModule"
 	],
 	"name" : "VIAPortfolio",
 	"type" : "normal"

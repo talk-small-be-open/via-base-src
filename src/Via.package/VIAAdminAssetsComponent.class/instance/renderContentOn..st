@@ -1,5 +1,5 @@
 rendering
 renderContentOn: html
-	html heading: 'Media assets'.
+	self renderTitleOn: html.
 	self renderToolbarOn: html.
 	self renderListOn: html.
