@@ -8,6 +8,8 @@ initialize
 		targetRelativePath: (self wd propertyAt: #assetsRelativePath);
 		yourself."
 		
+	batchSize := 100.
+	
 	self clear.
 		
 	self beRestoringScrollPosition

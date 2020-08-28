@@ -8,7 +8,9 @@
 	"instvars" : [
 		"uploader",
 		"searchString",
-		"assets"
+		"assets",
+		"batcher",
+		"batchSize"
 	],
 	"name" : "VIAAdminAssetsComponent",
 	"type" : "normal"

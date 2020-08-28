@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "VIATask",
-	"category" : "Via-Model-Task",
+	"super" : "VIAComponentDecoration",
+	"category" : "Via-View-Decoration",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"qAndAs",
-		"shuffleSequence"
+		"component"
 	],
-	"name" : "VIATandemSequence",
+	"name" : "VIAAppendDecoration",
 	"type" : "normal"
 }

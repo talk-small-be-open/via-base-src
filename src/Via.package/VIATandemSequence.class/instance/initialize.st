@@ -1,4 +1,6 @@
 initialization
 initialize
 	super initialize.
-	qAndAs := OrderedCollection new
+	qAndAs := OrderedCollection new.
+	
+	shuffleSequence := false

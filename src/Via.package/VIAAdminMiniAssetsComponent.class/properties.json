@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAdminAssetsComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAdminMiniAssetsComponent",
+	"type" : "normal"
+}

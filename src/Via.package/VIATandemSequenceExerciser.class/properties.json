@@ -10,7 +10,9 @@
 		"currentQAndA",
 		"currentNumber",
 		"total",
-		"totalPlayers"
+		"totalPlayers",
+		"sequence",
+		"randomCode"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"
