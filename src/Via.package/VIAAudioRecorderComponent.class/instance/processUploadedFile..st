@@ -22,4 +22,6 @@ processUploadedFile: aFilenameString
 		title: title;
 		yourself.
 
-	optimizeAudio ifTrue: [ VIAHelper optimizeSelfRecordedSpeech: fileReference ]
+	VIAHelper processSelfRecordedSpeech: fileReference optimize: optimizeAudio.
+	
+	fileReference readContentType

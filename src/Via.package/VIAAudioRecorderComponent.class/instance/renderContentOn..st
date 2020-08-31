@@ -6,15 +6,17 @@ renderContentOn: html
 
 		html label: 'Input source'.
 		html skRow: [
-			html skColumnWidth: 'eight' with: [
+			html skColumnWidth: 'five' with: [
 				html select
 					name: 'audioRecorderSourceId';
 	"				callback: [:value | self jsInputDeviceId: value ];"
 					id: 'audioRecorderSources' ].
-			html skColumnWidth: 'four' with: [
+			html skColumnWidth: 'seven' with: [
 				html label: [ 
-					html checkbox on: #optimizeAudio of: self.
-					html span class: 'label-body'; with: ' optimize audio'
+					html checkbox
+						on: #optimizeAudio of: self;
+						submitOnChange.
+					html span class: 'label-body'; with: ' Optimize audio (Trim silence, normalize volume, cut low frequencies)'
 				]].
 			html hiddenInput callback: [ self receiveAudioSourceId ].
 "			html paragraph: jsInputDeviceId."

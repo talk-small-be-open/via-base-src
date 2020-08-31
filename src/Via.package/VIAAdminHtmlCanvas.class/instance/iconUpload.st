@@ -1,3 +1,3 @@
 icons
 iconUpload
-	^self farIcon: 'upload'
+	^self fasIcon: 'upload'
