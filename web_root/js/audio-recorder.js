@@ -65,7 +65,8 @@ function startAudioRecorder(uploadSessionUuid, inputDeviceId, callback) {
 	});
 
 	const handleMicrophoneSuccess = function(stream) {
-		const options = {mimeType: 'audio/webm;codecs=opus'};
+		const options = {mimeType: 'audio/webm;codecs=opus', audioBitsPerSecond: 128000};
+//		const options = {mimeType: 'audio/m4a', audioBitsPerSecond: 128000};
 		const recordedChunks = [];
 		const mediaRecorder = new MediaRecorder(stream, options);
 
