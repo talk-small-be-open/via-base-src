@@ -60,12 +60,12 @@ while ($buff = fread($in, 4096)) {
 rename("{$filePath}.part", $filePath);
 
 
-// Production Server on Linux
-if (PHP_OS == 'Linux') {
-    // chown($filePath, 'ubuntu');
-    chgrp($targetDir, 'ubuntu');
-    chgrp($filePath, 'ubuntu');
-}   
+// // Production Server on Linux
+// if (PHP_OS == 'Linux') {
+//     // chown($filePath, 'ubuntu');
+//     chgrp($targetDir, 'ubuntu');
+//     chgrp($filePath, 'ubuntu');
+// }   
 
 // Development on MacOS
 if (PHP_OS == 'Darwin') {
