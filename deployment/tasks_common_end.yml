@@ -28,3 +28,7 @@
 
 - name: Ensure all GemStone gems are is running
   shell: monit -g via_gemstone_gems start
+
+
+# Include site specific tasks
+- include_tasks: "site/tasks_{{instanceName}}.yml"

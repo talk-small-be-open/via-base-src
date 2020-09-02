@@ -77,6 +77,17 @@ http {
         }
 
 
+				{% if via.isBeta %}
+        # Dont cache CSS/JS while beta
+        location ~ (\.css|\.js)$ {
+            root {{via.installationPath}}/via_base/web_root;
+            expires -1;
+            add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0, proxy-revalidate";
+            try_files $uri @gemstone;
+        }
+				{% endif %}
+
+
 				# Reverse proxy to GemStone gems
         location @gemstone {
             expires -1;
