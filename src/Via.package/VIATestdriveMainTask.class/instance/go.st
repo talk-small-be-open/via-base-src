@@ -1,3 +1,4 @@
 as yet unclassified
 go
-	self call: VIAApplicationManager current mainTestdriveComponentClass new onAnswer: [ self restart ]
+	self applicationComponent: VIAApplicationManager current mainTestdriveComponentClass new.
+	self callApplicationComponent

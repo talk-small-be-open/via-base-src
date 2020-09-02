@@ -11,9 +11,15 @@ renderContentOn: html
 				labels: [:each | each title ];
 				on: #targetWebsite of: self.
 			html label: 'Email:'.
-			html textInput id: 'loginEmail'; on: #email of: self.
+			html textInput
+				id: 'loginEmail';
+				autocomplete: 'username';
+				on: #email of: self.
 			html label: 'Magic spell:'.
-			html passwordInput id: 'loginPassword'; on: #password of: self.
+			html passwordInput
+				id: 'loginPassword';
+				autocomplete: 'current-password';
+				on: #password of: self.
 			html break.
 			html submitButton
 				callback: [self authenticate];

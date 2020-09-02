@@ -8,7 +8,8 @@
 	"instvars" : [
 		"showCharsCount",
 		"solutions",
-		"autoShowHint"
+		"autoShowHint",
+		"offerBlankChoice"
 	],
 	"name" : "VIATextInput",
 	"type" : "normal"

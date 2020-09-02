@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAdminComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pillar",
+		"pillarDocument",
+		"parseError"
+	],
+	"name" : "VIAPillarTesterComponent",
+	"type" : "normal"
+}

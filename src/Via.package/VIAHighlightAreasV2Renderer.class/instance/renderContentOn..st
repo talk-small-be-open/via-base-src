@@ -1,70 +1,29 @@
 as yet unclassified
 renderContentOn: html
-	| id inputId |
+	| id |
 	
-	"Übergeordneter Handler bei Markierung. (Jeder Markierstelle hat noch einen eigenen)"
-"	jsStoreHandler := ((html jQuery ajax
-		callback: [:value | rangySerialization value: value]
-		value: (JSStream on: 'highlighter.serialize()');
-		onError: (html javascript alert: 'Fehler beim Speichern der Markierung!')))
-			asFunction: #(event newHighlights highlighter)."
-
 	self start.
 
 	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: taskBrick.
-"	highlightedCharsMap inspect."
 
-	inputId := html nextId.
+"	inputId := html nextId."
 
 	html div
 		class: 'highlightAreas';
 		id: (id := html nextId);
+
 		script: (html jQuery this dataAt: 'allSelChars' put: (html jQuery this find: 'span.selChar'));
+
 		script: ((html jsInteract: 'span.selChar') dropzone
-			onDragEnter: ('
-var all = $("#', id, '").data("allSelChars");
-var a = all.index(event.relatedTarget); 
-var b = all.index(event.target);
-if (a>b) {[a, b] = [b, a]}
-all.removeClass("selected").slice(a, b+1).addClass("selected");
-');
-			onDrop: ('
-var all = $("#', id, '").data("allSelChars");
-var a = all.index(event.relatedTarget); 
-var b = all.index(event.target); 
-if (a>b) {[a, b] = [b, a]}
-var highlighted = all.slice(a, b+1);
-all.removeClass("selected");
-var toggle = ! ($(event.relatedTarget).hasClass("highlighted") && $(event.target).hasClass("highlighted"));
-highlighted.toggleClass("highlighted", toggle );
-var map = all.map(function(i,e){return $(e).hasClass("highlighted") ? e.textContent : "', notHighlightedSymbol asString, '"}).get().join("");
-$("#', inputId, '").val(map);
-
-var leftArea = $(event.relatedTarget).closest("span.highlightArea");
-var rightArea = $(event.target).closest("span.highlightArea");
-
-if (leftArea[0] && (leftArea[0] == rightArea[0])) {
-	var text = highlighted.text();
-	leftArea.trigger("via:highlight", [text]);
-}
-')
+			onDragEnter: (('highlightAreas_onDragEnter(event, "', id, '")') asFunction: #(event));
+			onDrop: (('highlightAreas_onDrop(event, "', id, '", "', notHighlightedSymbol asString, '")') asFunction: #(event))
 		);
 
 		script: ((html jsInteract: 'span.selChar') draggable
-			onEnd: '
-var all = $("#', id, '").data("allSelChars");
-all.removeClass("selected");
-'
-		);
+			onMove: ('"Dummy doing nothing prevent warning"' asFunction: #(event));
+			onEnd: (('highlightAreas_onEnd(event, "', id, '")') asFunction: #(event)));
 
-		onClick: (('
-if (!$(event.target).hasClass("highlighted")) {return false}
-var all = $("#', id, '").data("allSelChars");
-var me = event.target;
-var groups = runningGroupArray(all, function(each){ return $(each).hasClass("highlighted") });
-var myGroup = groups.find(function(each){return _.includes(each, me)})
-$(myGroup).removeClass("highlighted");
-') asFunction: #(event));
+		onClick: ('highlightAreas_onClick(event, "', id, '")' asFunction: #(event));
 		
 		with: [
 			pillarSeasideRenderer
@@ -73,9 +32,11 @@ $(myGroup).removeClass("highlighted");
 					| area |
 					area := taskBrick areaForMarker: marker.
 					area acceptRenderingVisitor: self on: h];
-				start: taskBrick pillarDocument].
+				start: taskBrick pillarDocument.
 	
-	html textInput
-		id: inputId;
-		style: 'display: none';
-		on: #value of: highlightedCharsMap
+			html textInput
+"				id: inputId;"
+				class: 'charsMap';
+				style: 'display: none';
+				on: #value of: highlightedCharsMap
+	]

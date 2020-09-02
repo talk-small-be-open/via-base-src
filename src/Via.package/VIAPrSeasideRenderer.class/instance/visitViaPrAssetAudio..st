@@ -1,8 +1,8 @@
 as yet unclassified
 visitViaPrAssetAudio: aViaPrAssetAudio
 	| start stop url |
-	start := aViaPrAssetAudio parameters at: 'start' ifAbsent: [nil].
-	stop := aViaPrAssetAudio parameters at: 'stop' ifAbsent: [nil].
+	start := aViaPrAssetAudio parameters at: 'start' ifPresent: [:s | s asInteger] ifAbsent: [nil].
+	stop := aViaPrAssetAudio parameters at: 'stop' ifPresent: [:s | s asInteger] ifAbsent: [nil].
 	
 	url := (start notNil or: [ stop notNil ])
 		ifTrue: [aViaPrAssetAudio asset audioUrlStart: start stop: stop]

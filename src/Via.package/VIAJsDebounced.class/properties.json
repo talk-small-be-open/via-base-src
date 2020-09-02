@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "JSTimed",
+	"category" : "Via-View-Javascript",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAJsDebounced",
+	"type" : "normal"
+}

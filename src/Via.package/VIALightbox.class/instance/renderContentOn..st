@@ -19,4 +19,5 @@ renderContentOn: html
 					html div class: 'uk-modal-body'; with: delegate]].
 
 	"TODO: Frontend/Backend agnostisch werden"
-	html script: 'UIkit.modal("#lightboxModal", {escClose: false, bgClose: false}).show()'
+	self isFrontend ifTrue: [
+		html script: 'UIkit.modal("#lightboxModal", {escClose: false, bgClose: false}).show()']

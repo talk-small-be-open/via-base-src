@@ -15,7 +15,7 @@ renderTextInput: aPlaceholder on: html
 		class: 'markedAsEmpty' if: (answerHolder isExplicitBlank);
 		style: ('width: ', solutionMaxSize greaseString, 'em;');
 		callback: [:value |
-			value = '---' ifTrue: [ answerHolder beExplicitBlank ] ifFalse: [
+			value = 'BLANK' ifTrue: [ answerHolder beExplicitBlank ] ifFalse: [
 				answerHolder value: (self sanitizeClozeInput: value) ] ].
 	
 	(aPlaceholder isAutoShowHint and: [aPlaceholder hasHintText]) ifTrue: [
