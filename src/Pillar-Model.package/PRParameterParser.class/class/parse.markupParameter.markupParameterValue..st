@@ -3,7 +3,7 @@ parse: aString1 markupParameter: aString2 markupParameterValue: aString3
 	| index string result parameter |
 	index := 1.
 	string := aString1.
-	result := Dictionary new.
+	result := GRSmallDictionary new. "Cool: Order preserving!"
 	[ string isEmpty ] whileFalse: [
 		index := PRMatcherManager findFirst: aString2 at: 1 in: string.
 		index := index < 1 

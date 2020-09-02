@@ -10,11 +10,16 @@ renderTextInput: aPlaceholder on: html
 				html label: [
 					html checkbox on: #autoShowHint of: aPlaceholder.
 					html text: ' Auto show hint']].
-			html skColumnWidth: 'three' with: [
+			html skColumnWidth: 'four' with: [
 				html label: [
 					html checkbox on: #showCharsCount of: aPlaceholder.
-					html text: ' Show characters placeholders']]].
+					html text: ' Show character placeholders']].
+			html skColumnWidth: 'five' with: [
+				html label: [
+					html checkbox on: #offerBlankChoice of: aPlaceholder.
+					html text: ' Offer blank']]
+		].
 		
-		html label: 'Correct answers (Each line = one correct answer)'.
+		html label: 'Correct answers (Each line = one correct answer. Use "BLANK" as empty answer)'.
 		html textArea on: #solutionsString of: aPlaceholder.
 	]

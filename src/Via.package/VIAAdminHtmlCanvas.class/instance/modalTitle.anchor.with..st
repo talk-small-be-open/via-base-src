@@ -3,13 +3,16 @@ modalTitle: aTitle anchor: anAnchorString with: aRenderable
 	| id |
 	id := self nextId.
 	
-	self span
+	self anchor
+		class: 'clickAction';
 		onClick: (self jQuery id: id) toggle;
 		with: anAnchorString.
 	
 	self div
 		id: id;
-		style: 'display:none;';
+		onClick: (self jQuery this toggle);
+		class: 'modalBackground';
 		with: [
-			self heading: aTitle.
-			self render: aRenderable]
+			self div class: 'modalDialog'; with: [
+				self heading: aTitle.
+				self render: aRenderable]]

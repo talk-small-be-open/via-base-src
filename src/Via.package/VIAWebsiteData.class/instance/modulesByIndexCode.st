@@ -1,3 +1,3 @@
 accessing
 modulesByIndexCode
-	^ self modules sortedBy: [ :each | each indexCode ]
+	^ self publicModules sortedBy: [ :each | each indexCode ]
