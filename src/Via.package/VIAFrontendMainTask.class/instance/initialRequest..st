@@ -4,6 +4,8 @@ initialRequest: aRequest
 
 	super initialRequest: aRequest.
 
+	self cookieLogin: aRequest.
+	
 	self socialLogin: aRequest.
 	
 	"Get the command, if any given"

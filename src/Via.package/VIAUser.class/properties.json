@@ -13,7 +13,8 @@
 		"socialIds",
 		"passwordHash",
 		"termsAccepted",
-		"properties"
+		"properties",
+		"rememberToken"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "WATask",
-	"category" : "Via-View-Core",
+	"super" : "VIATaskExerciserBase",
+	"category" : "Via-View",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"applicationComponent",
-		"command"
+		"taskBrickSubExercisers"
 	],
-	"name" : "VIAMainTask",
+	"name" : "VIATaskExerciser",
 	"type" : "normal"
 }

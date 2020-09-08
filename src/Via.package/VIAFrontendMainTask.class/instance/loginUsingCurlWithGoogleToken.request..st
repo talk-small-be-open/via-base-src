@@ -1,6 +1,6 @@
 as yet unclassified
 loginUsingCurlWithGoogleToken: aString request: aRequest
-	| userData response |
+	| user userData response |
 
 "Siehe https://developers.google.com/identity/sign-in/web/backend-auth"
 

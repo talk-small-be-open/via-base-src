@@ -1,6 +1,6 @@
 as yet unclassified
 loginUsingCurlWithFacebookToken: aString
-	| userData response |
+	| user userData response |
 
 "	facebookCredentials := ZnOAuth2ConsumerData 
 		key: '778873922228492'
