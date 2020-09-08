@@ -12,7 +12,7 @@ renderContentOn: html
 		class: 'highlightAreas';
 		id: (id := html nextId);
 
-		script: (html jQuery this dataAt: 'allSelChars' put: (html jQuery this find: 'span.selChar'));
+		script: ((html jQuery id: id) dataAt: 'allSelChars' put: ((html jQuery id: id) find: 'span.selChar'));
 
 		script: ((html jsInteract: 'span.selChar') dropzone
 			onDragEnter: (('highlightAreas_onDragEnter(event, "', id, '")') asFunction: #(event));

@@ -1,4 +1,8 @@
 testing
 isFirstTake
-	"TODO: Schöner berechnen"
-	^(answers isEmpty or: [answers allSatisfy: [:each | each isEmpty or: [each allSatisfy: #isUnchecked]]])
+	| mainAnswers |
+	"OPTIMIZE: Schöner berechnen"
+	mainAnswers := self mainAnswerHolders.
+	^(mainAnswers isEmpty
+		or: [mainAnswers allSatisfy: #isEmpty ])
+		or: [mainAnswers allSatisfy: #isUnchecked]

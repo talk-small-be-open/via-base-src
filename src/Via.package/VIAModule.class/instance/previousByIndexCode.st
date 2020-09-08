@@ -1,3 +1,5 @@
 as yet unclassified
 previousByIndexCode
-	^ self wd modulesByIndexCode before: self ifAbsent: [ nil ]
+	| modules |
+	modules := self wd findPublicModulesByFirstIndexCode: self indexCode first.
+	^ modules sortedBySortKey before: self ifAbsent: [ nil ]
