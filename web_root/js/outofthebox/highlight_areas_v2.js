@@ -22,7 +22,7 @@ function highlightAreas_onDrop(event, id) {
 	var highlighted = all.slice(a, b+1);
 	all.removeClass("selected");
 	var toggle = ! ($(event.relatedTarget).hasClass("highlighted") && $(event.target).hasClass("highlighted"));
-	highlighted.toggleClass("highlighted", toggle );
+	highlighted.toggleClass("highlighted", toggle).addClass('touchedNow');
 
 	// var map = all.map(function(i,e){return $(e).hasClass("highlighted") ? e.textContent : notHighlightedSymbol}).get().join("");
 	// taskElement.find("input.charsMap").val(map);
