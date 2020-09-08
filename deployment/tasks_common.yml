@@ -57,7 +57,7 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'wkhtmltopdf', 'xpra', 'pigz' ]
+      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz' ]
       state: present
 
   # - name: Check if wkhtmltopdf is present
