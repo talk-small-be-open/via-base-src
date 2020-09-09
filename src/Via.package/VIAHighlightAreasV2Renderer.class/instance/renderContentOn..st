@@ -10,6 +10,7 @@ renderContentOn: html
 
 	html div
 		class: 'highlightAreas';
+		class: 'firstTake' if: self exercise isFirstTake;
 		id: (id := html nextId);
 
 		script: ((html jQuery id: id) dataAt: 'allSelChars' put: ((html jQuery id: id) find: 'span.selChar'));

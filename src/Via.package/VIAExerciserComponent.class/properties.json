@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIATaskExerciserBase",
+	"super" : "VIATaskExerciser",
 	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],

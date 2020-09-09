@@ -10,7 +10,7 @@ registerAsApplication: aName
 	
 	app
 		scriptGeneratorClass: JQScriptGenerator;
-		sessionClass: VIADefaultSession;
+		sessionClass: VIAApplicationManager current frontendSessionClass;
 		preferenceAt: #trackingStrategy put: WACookieIfSupportedSessionTrackingStrategy new;
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.
