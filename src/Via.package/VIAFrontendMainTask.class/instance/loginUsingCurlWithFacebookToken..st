@@ -2,10 +2,6 @@ as yet unclassified
 loginUsingCurlWithFacebookToken: aString
 	| user userData response |
 
-"	facebookCredentials := ZnOAuth2ConsumerData 
-		key: '778873922228492'
-		secret: 'c35583c1e96a76394773e2eb5cde0473'."
-
 	response := MCLPlatform runShellCommand: ('curl --silent "https://graph.facebook.com/me?fields=email,first_name,last_name,verified&access_token=', aString, '"').
 
 	userData := VIAHelper fromJson: response.
