@@ -55,11 +55,12 @@
   #  - name: certbot renew
 
 
+  # Scheint nichts zu bringen?!
+  # Besser ist, weiter unten: mc revert Via ???
   - name: Flush Monticello cache
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} mr flush"
 
-    # mc revert Via ???
 
   #
   # UPDATE TO NEWEST CODE IN VIA BASE
@@ -83,7 +84,14 @@
   # Hack, GemStone weigert sich irgendwie zu updaten
   - name: Monticello revert to last version (strange, why?)
     become_user: "{{remoteUser}}"
-    shell: "todeIt {{stoneName}} mc revert Via"
+    shell: "todeIt {{stoneName}} mc revert {{item}}"
+    with_items:
+      - "Via"
+      - "Pillar-ExporterCore"
+      - "Pillar-ExporterHTML"
+      - "Pillar-ExporterPillar"
+      - "Pillar-Model"
+      - "ViaPlatformGemstone"
 
   
   # - name: Load VIA site project
@@ -111,7 +119,7 @@
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
-  - name: Load VIA site project
+  - name: Load VIA site project (including base)
     become_user: "{{remoteUser}}"
     command:
       argv:
@@ -125,7 +133,7 @@
   # Hack, GemStone weigert sich irgendwie zu updaten
   - name: Monticello revert to last version (strange, why?)
     become_user: "{{remoteUser}}"
-    shell: "todeIt {{stoneName}} mc revert ViaSiteHep"
+    shell: "todeIt {{stoneName}} mc revert {{via.siteName}}"
 
       
   - name: Update script inside VIA application

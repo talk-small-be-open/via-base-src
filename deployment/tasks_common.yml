@@ -1,4 +1,3 @@
-  - include_tasks: tasks_firewall.yml
 
   # - name: Give via sudo permission. Will be removed at the end of installation.
   #   copy:
@@ -60,6 +59,7 @@
       name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz' ]
       state: present
 
+      
   # - name: Check if wkhtmltopdf is present
   #   stat:
   #     path: /usr/local/bin/wkhtmltopdf
@@ -177,3 +177,64 @@
       enabled: yes
       state: restarted
 
+  #    
+  # CRON JOBS
+  #
+
+  # TODO: Port 80 kann nicht gebraucht werden
+  - name: "cron: Certbot renew weekly"
+    when: via.useSsl
+    cron:
+      name: certbot renew
+      user: root
+      minute: "1"
+      hour: "1"
+      weekday: "0"
+      job: "certbot renew"
+  # - name: trigger via hourly
+  #   cron:
+  #     name: hourly trigger
+  #     user: "{{remoteUser}}"
+  #     minute: "0"
+  #     hour: "*"
+  #     job: "cd {{via.installationPath}}/server && ./run-task.sh runHourlyTasks 240"
+  # - name: trigger via 5 minutely
+  #   cron:
+  #     name: 5minutely trigger
+  #     user: "{{remoteUser}}"
+  #     minute: "*/5"
+  #     hour: "*"
+  #     job: "cd {{via.installationPath}}/server && ./run-task.sh run5MinutelyTasks"
+  - name: trigger via nightly
+    cron:
+      name: nightly trigger
+      user: "{{remoteUser}}"
+      minute: "0"
+      hour: "2"
+      job: "cd {{via.installationPath}}/maintenance && ./executeSmalltalk.sh \"VIAApplicationManager runNightlyTasks\" > /dev/null"
+
+      
+# TODO
+# 0 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tranlogs.sh
+# 30 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tmp_files.sh
+
+
+
+  #
+  # GemStone configuration
+  #
+  - name: Check if GemStone is already installed
+    stat: 
+      path: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+    register: gemstone_exists
+  - name: Update with our own gem.conf (only if already exists)
+    when: gemstone_exists.stat.exists == true
+    copy:
+      src: "files/gemstone/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+      owner: "{{remoteUser}}"
+      mode: 0644
+
+
+
+  - include_tasks: tasks_firewall.yml

@@ -95,51 +95,6 @@
   - include_tasks: tasks_git_update.yml    
             
     
-  #    
-  # CRON JOBS
-  #
-  # - name: cronjob backup Pharo image
-  #   cron:
-  #     name: pharo backup
-  #     user: "{{remoteUser}}"
-  #     minute: "10"
-  #     hour: "*/6"
-  #     job: "cd {{via.installationPath}}/server && ./backup-image-snapshot.sh"
-  - name: "cron: Certbot renew weekly"
-    when: via.useSsl
-    cron:
-      name: certbot renew
-      user: root
-      minute: "1"
-      hour: "1"
-      weekday: "0"
-      job: "certbot renew"
-  # - name: trigger via hourly
-  #   cron:
-  #     name: hourly trigger
-  #     user: "{{remoteUser}}"
-  #     minute: "0"
-  #     hour: "*"
-  #     job: "cd {{via.installationPath}}/server && ./run-task.sh runHourlyTasks 240"
-  # - name: trigger via 5 minutely
-  #   cron:
-  #     name: 5minutely trigger
-  #     user: "{{remoteUser}}"
-  #     minute: "*/5"
-  #     hour: "*"
-  #     job: "cd {{via.installationPath}}/server && ./run-task.sh run5MinutelyTasks"
-  - name: trigger via nightly
-    cron:
-      name: nightly trigger
-      user: "{{remoteUser}}"
-      minute: "0"
-      hour: "2"
-      job: "cd {{via.installationPath}}/maintenance && ./executeSmalltalk.sh \"VIAApplicationManager runNightlyTasks\" > /dev/null"
-
-      
-# TODO
-# 0 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tranlogs.sh
-# 30 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tmp_files.sh
 
 
   #
@@ -256,12 +211,11 @@
       creates: "/opt/GsDevKit_home/server/stones/{{stoneName}}"
 
 
-  - name: Provide our own gem.conf
+  - name: Overwrite with our own gem.conf
     copy:
       src: "files/gemstone/gem.conf"
       dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
       owner: "{{remoteUser}}"
-#      group: "{{remoteUser}}"
       mode: 0644
     
   
@@ -381,10 +335,6 @@
   #   args:
   #     chdir: "/opt/GsDevKit_home"
 
-  - name: Start Servers in tODE with monit
-    shell: "monit -g via_gemstone_gems start"
-
-
 
   #
   # Start services
@@ -394,18 +344,19 @@
       name: monit
       enabled: yes
       use: sysvinit
-  - name: ensure monit started now
+  - name: ensure monit restarted now
     service:
       name: monit
-      state: started
+      state: restarted
       use: sysvinit
-  # - name: ensure via application parts started now
-  #   service:
-  #     name: via
-  #     state: started
-  #     use: sysvinit
 
-    #   - name: Running Via
-    # shell: monit reload && sleep 2 && monit start via_template
-    
+  - name: Wait for port 2812 to become open (Monit)
+    wait_for:
+      port: 2812
+      sleep: 3
+      timeout: 90
+
+  - name: Start Servers in tODE with monit (wait couple seconds for monit to be there)
+    shell: "monit -g via_gemstone_gems start"
+     
   - include_tasks: tasks_common_end.yml
