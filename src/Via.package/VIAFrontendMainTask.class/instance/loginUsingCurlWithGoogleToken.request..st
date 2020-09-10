@@ -4,10 +4,6 @@ loginUsingCurlWithGoogleToken: aString request: aRequest
 
 "Siehe https://developers.google.com/identity/sign-in/web/backend-auth"
 
-"	Google Schlüssel: m5c-Q02L5vCiUu1rMc0vb5LK
-	Google Client-ID: 470503913313-ur0fjs4ti1lvjos4pob4t5asp7q9v8di.apps.googleusercontent.com
-	API-Schlüssel: AIzaSyDp52UNJSyyIHAIJeCZQ3PUw6KMF1jQ7Sw"
-
 	response := MCLPlatform runShellCommand: ('curl --silent "https://www.googleapis.com/oauth2/v3/tokeninfo?access_token=', aString, '"').
 
 	userData := VIAHelper fromJson: response.

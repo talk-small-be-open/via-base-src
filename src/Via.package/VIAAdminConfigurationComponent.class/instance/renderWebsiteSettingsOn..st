@@ -18,5 +18,12 @@ renderWebsiteSettingsOn: html
 						callback: [:incomingValue | self wd propertyAt: key put: incomingValue]
 						on: html.
 				].
+				(value isKindOf: Integer) ifTrue: [
+					self renderIntegerLabel: key
+						value: value
+						callback: [:incomingValue | self wd propertyAt: key put: incomingValue]
+						on: html.
+				].
+
 			]].
 		html submitButton: 'Save']

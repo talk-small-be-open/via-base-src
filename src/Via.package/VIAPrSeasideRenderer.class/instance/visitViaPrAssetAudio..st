@@ -16,6 +16,7 @@ visitViaPrAssetAudio: aViaPrAssetAudio
 		html audio
 			id: audioId;
 			controls: true;
+			preload: 'auto';
 			url: url.
 	"		self renderAssetInfo: anAudioPlayer audioAsset on: html."
 
@@ -28,6 +29,7 @@ visitViaPrAssetAudio: aViaPrAssetAudio
 				nextPutAll: '").mediaelementplayer({
 	features: [ "playpause" ],
 	pauseOtherPlayers: true,
+	enableKeyboard: false,
 	defaultAudioWidth: 50,
 	defaultAudioHeight: 40,
 	})[0];'.
