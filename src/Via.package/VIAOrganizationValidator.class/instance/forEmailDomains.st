@@ -1,3 +1,0 @@
-rules creation
-forEmailDomains
-	self validateEmailDomains

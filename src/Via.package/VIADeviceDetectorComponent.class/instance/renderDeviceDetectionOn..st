@@ -1,20 +1,23 @@
 as yet unclassified
 renderDeviceDetectionOn: html
 	| anchorTag |
-	html div style: 'color: #666; font-size: 80%;'; with: [
-		html div: 'Wait while we detect your device size. '.
-		anchorTag := html anchor
-			style: 'color: #666';
-			callback: [ self close ];
-			with: 'Press here, if not automatically reloaded ...';
-			yourself.
+	html ukContainer with: [
+		html div class: 'uk-position-center uk-align-center'; with: [
+"			html span class: 'spinner'; a: 'uk-spinner' p: 'ratio: 3'."
+			html heading: self website title.
+			html paragraph: [
+				anchorTag := html anchor
+					class: 'spinnerMessage';
+					callback: [ self close ];
+					with: 'Loading ...';
+					yourself].
 	
-		detectionDoneUrl := anchorTag url.
-	].
+			detectionDoneUrl := anchorTag url.
+	]].
 
 	"Auto-Javascript, will return URL for reload after successful AJAX"
 	html script: (
-		html jQuery ajax
+		(html jQuery ajax
 			callback: [:json | self detectFromJson: json ]
 			value: (JSStream on: '
 JSON.stringify({
@@ -24,4 +27,4 @@ JSON.stringify({
 ');
 			onSuccess: ('location.href = url' asFunction: #(url status));
 			dataType: 'text'
-	)
+	 ) setTimeout: 1000)

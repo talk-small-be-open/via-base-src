@@ -3,7 +3,10 @@ updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 
 	self updateRootEssentials: anHtmlRoot.
-	
+
+	"OPTIMIZE: Performance?"
+	self updateRootPwa: anHtmlRoot.
+		
 	anHtmlRoot htmlAttributes
 		at: 'lang' put: self session languageCode.
 "		at: 'class' put: 'no-js'." "Für modernizr"
