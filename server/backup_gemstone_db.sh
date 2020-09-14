@@ -3,5 +3,5 @@
 # export GS_HOME=/opt/GsDevKit_home
 
 # Backup machen
-sudo -E -u ubuntu ./todeBackup $1 via_backup.dbf
+./todeBackup $1 via_backup.dbf
 
