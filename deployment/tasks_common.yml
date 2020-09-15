@@ -56,7 +56,7 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz' ]
+      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz', 'cronic', 'duplicity' ]
       state: present
 
       
@@ -182,6 +182,39 @@
   #
 
   # TODO: Port 80 kann nicht gebraucht werden
+  - name: set SHELL in cron (root)
+    cron:
+      env: yes
+      name: SHELL
+      job: /bin/bash
+  - name: set MAILTO in cron (root)
+    cron:
+      env: yes
+      name: MAILTO
+      value: "{{via.adminEmail}}"
+  - name: set PATH in cron (root)
+    cron:
+      env: yes
+      name: PATH
+      value: /usr/bin:/bin:/usr/local/bin
+  - name: set SHELL in cron
+    cron:
+      user: "{{remoteUser}}"
+      env: yes
+      name: SHELL
+      job: /bin/bash
+  - name: set MAILTO in cron
+    cron:
+      user: "{{remoteUser}}"
+      env: yes
+      name: MAILTO
+      value: "{{via.adminEmail}}"
+  - name: set PATH in cron
+    cron:
+      user: "{{remoteUser}}"
+      env: yes
+      name: PATH
+      value: /usr/bin:/bin:/usr/local/bin
   - name: "cron: Certbot renew weekly"
     when: via.useSsl
     cron:
@@ -190,7 +223,7 @@
       minute: "1"
       hour: "1"
       weekday: "0"
-      job: "certbot renew"
+      job: "cronic certbot renew"
   # - name: trigger via hourly
   #   cron:
   #     name: hourly trigger
@@ -205,19 +238,41 @@
   #     minute: "*/5"
   #     hour: "*"
   #     job: "cd {{via.installationPath}}/server && ./run-task.sh run5MinutelyTasks"
-  - name: trigger via nightly
+  - name: Trigger via nightly
     cron:
-      name: nightly trigger
+      name: "Nightly trigger {{stoneName}}"
       user: "{{remoteUser}}"
       minute: "0"
       hour: "2"
-      job: "cd {{via.installationPath}}/maintenance && ./executeSmalltalk.sh \"VIAApplicationManager runNightlyTasks\" > /dev/null"
+      job: "cd {{via.installationPath}}/via_base/server && cronic ./executeSmalltalk.sh {{stoneName}} \"VIAApplicationManager current runNightlyTasks\" "
+  - name: Backup cron job
+    cron:
+      name: "Backup {{stoneName}}"
+      user: "{{remoteUser}}"
+      minute: "0"
+      hour: "3,12"
+      job: "cd {{via.installationPath}}/via_base/server && cronic ./backup.sh {{stoneName}} {{via.backupTarget}}"
 
       
-# TODO
-# 0 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tranlogs.sh
-# 30 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tmp_files.sh
+  # TODO
+  # 0 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tranlogs.sh
+  # 30 1 * * * cd /opt/321via/repo/maintenance && ./delete_old_tmp_files.sh
 
+
+  #
+  # Backup with duplicity (see also cron job above)
+  #
+
+  - name: duplicity credentials
+    when: via.backupPassword is defined
+    no_log: true
+    copy:
+      content: "FTP_PASSWORD={{via.backupPassword}}"
+      dest: "{{via.installationPath}}/.duplicity.cred"
+      owner: "{{remoteUser}}"
+      group: "{{remoteUser}}"
+      mode: 0600
+  
 
 
   #
