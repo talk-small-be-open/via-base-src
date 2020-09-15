@@ -8,19 +8,19 @@ source "/opt/via/.duplicity.cred"
 BACKEND=$1
 
 # GemStone DB
-echo -n "GEMSTONE DATABASE"
+echo -e "GEMSTONE DATABASE\n================"
 TARGET=$BACKEND/via_db
-duplicity collection-status $TARGET
-duplicity list-current-files $TARGET
+duplicity collection-status --verbosity warning $TARGET
+duplicity list-current-files --verbosity warning $TARGET
 
 # Assets
-echo -n "ASSETS"
+echo -e "ASSETS\n========"
 TARGET=$BACKEND/via_assets
-duplicity collection-status $TARGET
-duplicity list-current-files $TARGET
+duplicity collection-status --verbosity warning $TARGET
+duplicity list-current-files --verbosity warning $TARGET
 
 # Exported module PDFs and others
-echo -n "EXPORTS"
+echo -e "EXPORTS\n========"
 TARGET=$BACKEND/via_exports
-duplicity collection-status $TARGET
-duplicity list-current-files $TARGET
+duplicity collection-status --verbosity warning $TARGET
+duplicity list-current-files --verbosity warning $TARGET
