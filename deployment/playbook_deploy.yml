@@ -46,9 +46,9 @@
   - name: Ensure GemStone netldi is running
     shell: monit start via_gemstone_netldi
       
-  # - name: Do backup
+  # - name: Do GemStone backup
   #   become_user: "{{remoteUser}}"
-  #   shell: "./backup-image-snapshot.sh"
+  #   shell: "./backup_gemtone_db.sh"
   #   args:
   #     chdir: "{{via.installationPath}}/server"
 

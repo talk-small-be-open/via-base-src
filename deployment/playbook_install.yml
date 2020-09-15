@@ -83,6 +83,9 @@
       - "{{via.installationPath}}/via_base"
       - "{{via.installationPath}}/via_site"
       - "{{via.installationPath}}/install"
+      - "{{via.installationPath}}/export"
+      - "{{via.installationPath}}/log"
+      - "{{via.installationPath}}/tmp"
 
   - name: Create GemStone GsDevKit_home folder
     file:
