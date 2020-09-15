@@ -2,7 +2,7 @@ as yet unclassified
 generateAppleStartupScreens
 	| path |
 
-	path := (self db propertyAt: #fileStoragePath), '/site/pwa/apple/'.
+	path := (self db propertyAt: #webRootPath), '/site/pwa/apple/'.
 	VIAHelper appleStartupImagesData
 		do: [ :each |
 			| x y n cmd file |

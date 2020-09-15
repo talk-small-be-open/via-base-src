@@ -1,7 +1,7 @@
 as yet unclassified
-backupModulesAsPdf
-	| backupFolder today timestamp |
-	backupFolder := self db backupFolderPath.
+exportModulesAsPdf
+	| exportFolder today timestamp |
+	exportFolder := self db exportFolderPath.
 	today := Date today.
 	timestamp := today year asString, '_', today monthIndex asTwoCharacterString.
 	self db allModules do: [:each |
@@ -10,16 +10,16 @@ backupModulesAsPdf
 		
 		[
 		printableComponent := VIASchoolPrintModuleExerciser model: each.
-		printableComponent savePdfAs: ('backup_', fileBasename, '.pdf') inFolder: backupFolder
+		printableComponent savePdfAs: ('export_', fileBasename, '.pdf') inFolder: exportFolder
 		] ifError: [:message |
 			"TODO: Mail to admin!"
-			self logError: ('Fehler beim PDF-Backup von Modul ', each displayName, ': ', message)].
+			self logError: ('Fehler beim PDF-Export von Modul ', each displayName, ': ', message)].
 
 		[
 		printableComponent := VIASchoolPrintSolutionModuleExerciser model: each.
-		printableComponent savePdfAs: ('backup_', fileBasename, '_solution.pdf') inFolder: backupFolder
+		printableComponent savePdfAs: ('export_', fileBasename, '_solution.pdf') inFolder: exportFolder
 		] ifError: [:message |
 			"TODO: Mail to admin!"
-			self logError: ('Fehler beim PDF-Backup der Lösung von Modul ', each displayName, ': ', message)]
+			self logError: ('Fehler beim PDF-Export der Lösung von Modul ', each displayName, ': ', message)]
 		
 	]

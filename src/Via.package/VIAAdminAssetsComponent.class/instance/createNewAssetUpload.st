@@ -3,8 +3,8 @@ createNewAssetUpload
 	| assetClass |
 	
 	uploader := VIAUploaderComponent new
-		targetBasePath: (self db propertyAt: #fileStoragePath);
-		targetRelativePath: (self wd propertyAt: #assetsRelativePath);
+		targetBasePath: (self db propertyAt: #webRootPath);
+		targetRelativePath: self website assetsRelativePath;
 		yourself.
 	
 	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Typ?'.

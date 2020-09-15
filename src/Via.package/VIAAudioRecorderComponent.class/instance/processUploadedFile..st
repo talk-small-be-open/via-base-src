@@ -3,8 +3,8 @@ processUploadedFile: aFilenameString
 	| uniqueFilename uploadAbsoluteDir uploadRelativeDir uuidString targetBasePath title |
 
 	uuidString := UUID new greaseString.
-	targetBasePath := (self db propertyAt: #fileStoragePath).
-	uploadRelativeDir := (self wd propertyAt: #assetsRelativePath).
+	targetBasePath := (self db propertyAt: #webRootPath).
+	uploadRelativeDir := self website assetsRelativePath.
 	uniqueFilename := uuidString, '.webm'.
 
 	uploadAbsoluteDir := targetBasePath, '/', uploadRelativeDir.

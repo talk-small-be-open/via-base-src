@@ -8,7 +8,7 @@ createNewAssetChooseFile
 		filename := self request: 'Filename?'.
 
 		reference := VIALocalFileReference new
-			fileBasePath: (self db propertyAt: #fileStoragePath);
+			fileBasePath: (self db propertyAt: #webRootPath);
 			fileRelativePath: path;
 			fileName: filename;
 			yourself.

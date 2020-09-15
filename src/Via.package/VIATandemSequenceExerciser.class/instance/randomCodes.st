@@ -1,3 +1,3 @@
 as yet unclassified
 randomCodes
-	^ ($A to: $Z) asArray
+	^ ($A to: $L) asArray

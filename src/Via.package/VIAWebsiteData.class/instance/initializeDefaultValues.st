@@ -11,5 +11,3 @@ initializeDefaultValues
 	mailer ifNil: [mailer := VIAMailer new website: website; yourself].
 	users ifNil: [users := OrderedCollection new].
 	userGroups ifNil: [userGroups := OrderedCollection new].
-
-	self propertyAt: #assetsRelativePath ifAbsentPut: ['assets'].

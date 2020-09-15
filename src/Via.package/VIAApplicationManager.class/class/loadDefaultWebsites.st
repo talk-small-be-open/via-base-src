@@ -29,6 +29,4 @@ loadDefaultWebsites
 		websiteData tags: (db instVarNamed: 'tags') copy.
 		websiteData users: (db instVarNamed: 'users') copy.
 
-		"Properties"
-		websiteData propertyAt: #assetsRelativePath put: ('assets_', website languageCode asString).
 	]

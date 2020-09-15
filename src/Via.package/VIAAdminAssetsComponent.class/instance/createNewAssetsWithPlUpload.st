@@ -2,12 +2,12 @@ actions
 createNewAssetsWithPlUpload
 	| assetClass |
 		
-	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Typ?'.
+	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Type?'.
 	assetClass ifNotNil: [
 
 		uploader := VIAPlUploadComponent new
-			targetBasePath: (self db propertyAt: #fileStoragePath);
-			targetRelativePath: (self wd propertyAt: #assetsRelativePath);
+			targetBasePath: (self db propertyAt: #webRootPath);
+			targetRelativePath: self website assetsRelativePath;
 			infoMessage: ('File type: ', assetClass displayName);
 			yourself.
 
