@@ -1,0 +1,13 @@
+"Update trigger of the app"
+VIAApplicationManager current
+	update;
+	afterDeployment.
+
+"Enable/Disable seaside development tools"
+(WAAdmin canUnderstand: #developmentToolsEnabled) ifTrue: [
+{% if via.isBeta %}
+	WAAdmin developmentToolsEnabled ifFalse: [ WAAdmin enableDevelopmentTools ].
+{% else %}
+	WAAdmin developmentToolsEnabled ifTrue: [ WAAdmin disableDevelopmentTools ].
+{% endif %}
+].

@@ -16,8 +16,6 @@ http {
     '$status $body_bytes_sent "$http_referer" '
     '"$http_user_agent" "$http_x_forwarded_for"';
 
-    # access_log  /opt/local/var/log/access.log  main;
-
     sendfile        on;
     keepalive_timeout  65;
 
@@ -32,24 +30,26 @@ http {
         server 127.0.0.1:{{port}} max_conns=1 max_fails=3;
         {% endfor %}
 
-		}
+    }
 
     
     # Via Server
     server {
 
-				{% if via.useSsl %}
-				
-				listen 443 ssl http2;
+        # TODO: Filter by GeoIP, ...
 
-				ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
-				ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
-				include /etc/letsencrypt/options-ssl-nginx.conf;
-				ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+        {% if via.useSsl %}
+        
+        listen 443 ssl http2;
 
-				{% else %}
-				listen 80;
-				{% endif %}
+        ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
+        include /etc/letsencrypt/options-ssl-nginx.conf;
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+        {% else %}
+        listen 80;
+        {% endif %}
 
         server_name {{via.appDomain}} {{via.appDomain2}};
 
@@ -64,37 +64,63 @@ http {
             fastcgi_pass unix:/run/php/php7.2-fpm.sock;
         }
         
+        # General rule, serve static file or redirect to app
         location / {
 
-						{% if via.isBeta %}
+            {%- if via.isBeta -%}
             # BETA TEST
             auth_basic           "App Beta-Test";
             auth_basic_user_file htpasswd_betatest;
-						{% endif %}
+            {%- endif -%}
             
-            root {{via.installationPath}}/via_base/web_root;
             try_files $uri @gemstone;
         }
 
 
-				{% if via.isBeta %}
-        # Dont cache CSS/JS while beta
-        location ~ (\.css|\.js)$ {
-            root {{via.installationPath}}/via_base/web_root;
-            expires -1;
-            add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0, proxy-revalidate";
-            try_files $uri @gemstone;
+        {% for path in ['/app', '/via-admin'] -%}
+        # Speedup access to main app (Frontend and Backend)
+        location {{path}} {
+
+            {%- if via.isBeta -%}
+            # BETA TEST
+            auth_basic           "App Beta-Test";
+            auth_basic_user_file htpasswd_betatest;
+            {%- endif %}
+            
+						{% include 'proxy_to_gems.j2' %}
         }
-				{% endif %}
+        {% endfor %}
 
 
-				# Reverse proxy to GemStone gems
+        # Caching, see https://web.dev/http-cache/
+
+        # Aggressively cache assets
+        location /assets {
+            add_header Cache-Control "public, max-age=31536000";
+            etag on;
+            access_log off;
+        }
+
+        # Moderately cache application static files CSS/JS
+        {% for path in ['/js', '/css', '/images', '/site', '/lib'] -%}
+        location {{path}} {
+            {% if via.isBeta -%}
+            # Cache for 5 minutes
+            add_header Cache-Control "public, no-cache, max-age=300";
+            {% else -%}
+            # Cache for 24h
+            add_header Cache-Control "public, no-cache, max-age=361440";
+            {% endif %}
+
+            etag on;
+            access_log off;
+        }
+        {% endfor %}
+
+
+        # Reverse proxy to GemStone gems
         location @gemstone {
-            expires -1;
-            add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0, proxy-revalidate";
-            proxy_pass http://gems;
-            proxy_set_header Host            $host;
-            proxy_set_header X-Forwarded-For $remote_addr;
+						{% include 'proxy_to_gems.j2' %}
         }
 
 
@@ -104,35 +130,35 @@ http {
             root /;
         }
 
-				# Custom error page, if App is not running (looks nicer)
-				error_page 502 /errors/502.html;
+        # Custom error page, if App is not running (looks nicer)
+        error_page 502 /errors/502.html;
 
     }
 
-		{% if via.useSsl %}
+    {% if via.useSsl %}
     # Redirect HTTP->HTTPS
-		server {
+    server {
         listen     80;
-     		server_name {{via.appDomain}} {{via.appDomain2}};
-       	return 301 https://$host$request_uri;
+        server_name {{via.appDomain}} {{via.appDomain2}};
+        return 301 https://$host$request_uri;
     }
-		{% endif %}
+    {% endif %}
 
 
     # Reject access with just the IP. We do not want bots or other dark forces to annoy us
     server {
-				listen 80 default_server;
+        listen 80 default_server;
 
-				{% if via.useSsl %}
-				
-				listen 443 ssl http2 default_server;
+        {% if via.useSsl %}
+        
+        listen 443 ssl http2 default_server;
 
-				ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
-				ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
-				include /etc/letsencrypt/options-ssl-nginx.conf;
-				ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+        ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
+        include /etc/letsencrypt/options-ssl-nginx.conf;
+        ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
-				{% endif %}
+        {% endif %}
 
         server_name _;
 
