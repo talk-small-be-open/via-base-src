@@ -4,4 +4,4 @@ updateRoot: anHtmlRoot
 	
 	"Login credentials für hello.js"
 	self wd hasSocialLogin ifTrue: [
-		anHtmlRoot script beJavascript; with: self wd helloJavascript]
+		anHtmlRoot javascript with: self wd helloJavascript]

@@ -1,6 +1,6 @@
 as yet unclassified
 builder
 	^ super builder
-		scriptGeneratorClass: JQScriptGenerator;
+		scriptGeneratorClass: VIAJqScriptGenerator;
 		documentClass: VIAHtmlDocument;
 		yourself

@@ -9,7 +9,7 @@ registerAsApplication: aName
 	app configuration addParent: WAEmailConfiguration instance.
 	
 	app
-		scriptGeneratorClass: JQScriptGenerator;
+		scriptGeneratorClass: VIAJqScriptGenerator;
 		sessionClass: VIAApplicationManager current frontendSessionClass;
 		preferenceAt: #trackingStrategy put: WACookieIfSupportedSessionTrackingStrategy new;
 		preferenceAt: #documentClass put: VIAHtmlDocument;

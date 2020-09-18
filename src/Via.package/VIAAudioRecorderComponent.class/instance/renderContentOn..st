@@ -50,4 +50,4 @@ renderContentOn: html
 		]
 	].
 
-	html script: (self javascriptOn: html)
+	html scriptDefer: (self javascriptOn: html)

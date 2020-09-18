@@ -16,7 +16,7 @@ renderDeviceDetectionOn: html
 	]].
 
 	"Auto-Javascript, will return URL for reload after successful AJAX"
-	html script: (
+	html scriptDefer: (
 		(html jQuery ajax
 			callback: [:json | self detectFromJson: json ]
 			value: (JSStream on: '

@@ -9,7 +9,7 @@ registerAsApplication: aName
 	app configuration addParent: WAEmailConfiguration instance.
 
 	app
-		scriptGeneratorClass: JQScriptGenerator;
+		scriptGeneratorClass: VIAJqScriptGenerator;
 		sessionClass: VIAAdminSession;
 		
 		preferenceAt: #documentClass put: VIAHtmlDocument;

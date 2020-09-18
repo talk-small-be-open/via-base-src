@@ -44,6 +44,6 @@ renderVideoPlayer: aVideoPlayer on: html
 
 					html tableData: []]].
 
-				html script: (self jsForVideoPlayer: aVideoPlayer id: videoId).
+				html scriptDefer: (self jsForVideoPlayer: aVideoPlayer id: videoId).
 
 			]]

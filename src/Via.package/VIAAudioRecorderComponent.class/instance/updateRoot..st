@@ -1,3 +1,4 @@
 updating
 updateRoot: anHtmlRoot
-	anHtmlRoot javascript url: '/js/audio-recorder.js'
+	super updateRoot: anHtmlRoot.
+	anHtmlRoot javascript defer; url: '/js/audio-recorder.js'
