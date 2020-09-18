@@ -64,3 +64,9 @@
     - 10.0.0.0/8
     - 172.16.0.0/12
     - 192.168.0.0/16
+
+# TODO: Maybe only in beta mode?    
+- name: Allow access to iperf3
+  ufw:
+    rule: allow
+    port: "5201"

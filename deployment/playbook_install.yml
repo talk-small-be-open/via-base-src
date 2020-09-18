@@ -242,8 +242,20 @@
       src: files/gemstone/Seaside3.ston
       dest: "/opt/GsDevKit_home/sys/local/server/projects/Seaside3.ston"
       owner: '{{remoteUser}}'
-#      group: '{{remoteUser}}'
       mode: 0644
+
+
+
+  - name: Check if Via is already installed
+    stat: 
+      path: "{{via.installationPath}}/install/INSTALLATION_IS_DONE.log"
+    register: installation_is_done_file
+
+  - set_fact:
+      via_is_installed: True
+    when: installation_is_done_file.stat.exists == true
+
+
 
     
   # See GemStone docs for Seaside at
@@ -251,14 +263,15 @@
   # TODO: Es kommt aber die Meldung, dass es bereits installiert sei und nicht überschrieben wurde. Ist dieser Schritt obsolete nach einem createStone?!
   # Versuch: Installieren mit --stone statt default --local
   - name: Install official GemStone-Seaside into tODE
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
-#    shell: "todeIt {{stoneName}} project install --url=http://gsdevkit.github.io/GsDevKit_home/Seaside32.ston"
     shell: "todeIt {{stoneName}} project install --local Seaside3"
     args:
       chdir: "/opt/GsDevKit_home"
 #      creates: "/opt/GsDevKit_home/sys/local/server/projects/Seaside32.ston"
 
   - name: Load official GemStone-Seaside into tODE
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     command:
       argv:
@@ -271,6 +284,7 @@
 
 
   - name: Mount Seaside in tODE
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} mount @/sys/stone/dirs/Seaside3/tode /home seaside"
     args:
@@ -285,6 +299,7 @@
   #     creates: "/opt/GsDevKit_home ...?
     
   - name: Add VIA site project into tODE
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project entry --baseline={{via.siteName}} --repo={{via.siteRepository.metacelloUrl}} /sys/local/server/projects"
     args:
@@ -299,14 +314,17 @@
       creates: "/opt/GsDevKit_home/shared/repos/{{via.siteRepository.name}}"
       
   - name: Update VIA site project (pull)
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project pull {{via.siteName}}"
 
   - name: Update VIA site project (get)
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} project get {{via.siteName}}"
   
   - name: Load VIA site project
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     command:
       argv:
@@ -318,13 +336,16 @@
         - "{{via.siteName}}"
 
   - name: Register Servers in tODE
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "todeIt {{stoneName}} /home/seaside/gemServer --register=seaside{{item}} --type=zinc --port={{item}}"
     loop: "{{ via.gemPorts }}"
     args:
       chdir: "/opt/GsDevKit_home"
 
+    
   - name: Install/Config VIA application
+    when: via_is_installed is undefined
     become_user: "{{remoteUser}}"
     shell: "{{via.installationPath}}/via_base/server/executeSmalltalkScript.sh {{stoneName}} {{via.installationPath}}/install/installVia.st && touch INSTALLATION_IS_DONE.log"
     args:

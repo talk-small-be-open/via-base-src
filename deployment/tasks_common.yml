@@ -56,7 +56,7 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz', 'cronic', 'duplicity' ]
+      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz', 'cronic', 'duplicity', 'iperf3' ]
       state: present
 
       
@@ -176,7 +176,14 @@
       name: postfix
       enabled: yes
       state: restarted
+  - name: root email alias to admin
+    lineinfile:
+      path: /etc/aliases
+      line: "root: {{via.adminEmail}}"
+    notify:
+      - create postfix aliases
 
+    
   #    
   # CRON JOBS
   #
@@ -209,12 +216,18 @@
       env: yes
       name: MAILTO
       value: "{{via.adminEmail}}"
+  - name: set GS_HOME in cron
+    cron:
+      user: "{{remoteUser}}"
+      env: yes
+      name: GS_HOME
+      value: /opt/GsDevKit_home
   - name: set PATH in cron
     cron:
       user: "{{remoteUser}}"
       env: yes
       name: PATH
-      value: /usr/bin:/bin:/usr/local/bin
+      value: /opt/GsDevKit_home/bin:/usr/bin:/bin:/usr/local/bin
   - name: "cron: Certbot renew weekly"
     when: via.useSsl
     cron:
@@ -223,7 +236,13 @@
       minute: "1"
       hour: "1"
       weekday: "0"
-      job: "cronic certbot renew"
+      job: "cronic certbot --nginx renew"
+
+# TODO Deactivate cronjob from apt package certbot
+# Deactivate systemd timer (systemctl show certbot.timer)
+# Because they do not work standalone (port 80 taken)
+
+    
   # - name: trigger via hourly
   #   cron:
   #     name: hourly trigger
@@ -282,8 +301,13 @@
     stat: 
       path: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
     register: gemstone_exists
-  - name: Update with our own gem.conf (only if already exists)
+
+  - set_fact:
+      gemstone_is_installed: True
     when: gemstone_exists.stat.exists == true
+  
+  - name: Update with our own gem.conf (only if already exists)
+    when: gemstone_is_installed
     copy:
       src: "files/gemstone/gem.conf"
       dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"

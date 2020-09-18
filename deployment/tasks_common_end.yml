@@ -23,7 +23,7 @@
 - name: Ensure GemStone stone is running
   shell: monit start via_gemstone_stone
 
-- name: Ensure GemStone stone is running
+- name: Ensure GemStone LDI is running
   shell: monit start via_gemstone_netldi
 
 - name: Ensure all GemStone gems are is running

@@ -1,0 +1,43 @@
+"Installs the application's internals"
+VIADatabase current
+ifNotNil: [
+  Transcript show: 'WARNING! Not installing. Already installed!']
+ifNil: [
+	| db |
+
+  "Temporary Seaside GemStone bug fix. Re-base WADynamicVariable
+	to GRNotificationBasedDynamicVariable instead GRDynamicVariable"
+" Not needed anymore I guess (3.9.2020)
+GRNotificationBasedDynamicVariable subclass: 'WADynamicVariable'
+	instVarNames: #()
+	classVars: #()
+	classInstVars: #()
+	poolDictionaries: #()
+	inDictionary: ''
+	category: 'Seaside-Core-Utilities'
+	options: #().
+"
+
+  VIAApplicationManager current installInGemStone.
+  "Load the admin"
+  VIAApplicationManager current loadAdmin: '{{via.adminEmail}}' password: '{{via.adminInitialPw}}'.
+
+  db := VIADatabase current.
+
+	"Configuration"
+	db
+		propertyAt: #fileStoragePath put: '{{via.installationPath}}/via_base/web_root';
+		propertyAt: #tmpPath put: '{{via.installationPath}}/via_base/main/tmp'.
+
+	"TODO: Set domain of the first website"
+
+	"Enable/Disable seaside development tools"
+	(WAAdmin canUnderstand: #developmentToolsEnabled) ifTrue: [
+	{% if via.isBeta %}
+		WAAdmin developmentToolsEnabled ifFalse: [ WAAdmin enableDevelopmentTools ].
+	{% else %}
+		WAAdmin developmentToolsEnabled ifTrue: [ WAAdmin disableDevelopmentTools ].
+	{% endif %}
+	].
+
+].
