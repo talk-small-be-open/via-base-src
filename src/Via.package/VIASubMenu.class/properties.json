@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"mainEntry"
+		"mainEntry",
+		"collapsed"
 	],
 	"name" : "VIASubMenu",
 	"type" : "normal"

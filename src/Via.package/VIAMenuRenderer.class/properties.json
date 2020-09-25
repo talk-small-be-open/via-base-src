@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAObject",
+	"super" : "VIAComponent",
 	"category" : "Via-View-Menu",
 	"classinstvars" : [ ],
 	"pools" : [ ],

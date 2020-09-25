@@ -1,5 +1,5 @@
 as yet unclassified
 renderMenu: aMenu on: html
-	aMenu subitemsDo: [:each |
+	aMenu itemsDo: [:each |
 		each acceptRender: self on: html
 	]

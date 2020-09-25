@@ -4,7 +4,7 @@ renderMenu: aMenu on: html
 		class: 'uk-navbar-nav';
 		class: aMenu css;
 		with: [
-			aMenu subitemsDo: [:each |
+			aMenu itemsDo: [:each |
 				html listItem
 					class: each css;
 					with: [
