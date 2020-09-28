@@ -3,7 +3,7 @@ testRegexpEmail
 	"Test values adapted from https://gist.github.com/cjaoude/fd9910626629b53c4d25"
 	
 	| r |
-	r := VIATocHelper regexpEmail.
+	r := VIAHelper regexpEmail.
 	
 'email@example.com
 firstname.lastname@example.com

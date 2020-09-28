@@ -33,7 +33,7 @@ renderCompositeTask: aCompositeTask on: html
 		with: [
 		
 			aCompositeTask children do: [:each |
-				html listItem passenger: each; class: 'taskChild'; with: [
+				html listItem passenger: each; class: 'taskChild'; class: each className; with: [
 					self renderTaskBrickHandle: each parentBrick: aCompositeTask on: html.
 					each acceptRenderingVisitor: self on: html]]].
 	
