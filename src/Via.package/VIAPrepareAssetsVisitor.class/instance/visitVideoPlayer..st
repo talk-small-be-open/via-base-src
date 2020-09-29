@@ -3,8 +3,6 @@ visitVideoPlayer: aVideoPlayer
 	| asset |
 	asset := aVideoPlayer videoAsset ifNil: [^self].
 
-	asset deleteTransformedMediaFiles.
-
 	asset buildPosterImage.
 
 	aVideoPlayer isFragment ifTrue: [

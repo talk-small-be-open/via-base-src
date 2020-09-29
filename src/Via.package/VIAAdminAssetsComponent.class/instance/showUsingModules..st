@@ -1,6 +1,5 @@
 actions
 showUsingModules: anAsset
 	| modules |
-	modules := self wd modules select: [:each |
-		each assets includes: anAsset].
+	modules := self wd findModulesUsingAsset: anAsset.
 	self inform: (MCLPlatform joinCollection: (modules collect: #displayName) delimiter: ', ')

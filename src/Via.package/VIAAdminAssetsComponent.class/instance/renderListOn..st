@@ -20,9 +20,9 @@ renderListOn: html
 							html tableData: each classDisplayName.
 							html tableData: [
 								self renderPreview: each on: html].
-							html tableData class: 'assetName'; with: [
-								html div: each title.
-								html div: (GRPrinter decimalFileSize print: each byteSize)].
+							html tableData class: 'assetInfo'; with: [
+								self renderInfo: each on: html.
+							].
 							html tableData with: [
 								each pillarTemplateStrings do: [:eachTemplate |
 									html preformatted
