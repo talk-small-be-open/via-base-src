@@ -109,7 +109,20 @@
 // Styles
 // ======================================================
 
-
+// See also skeleton.css
+/* NOTE skeleton.css:
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+html {
+		font-size: 58%; // 62.5%;
+}
+body {
+		font-size: 1.3em;
+		line-height: 1;
+		font-weight: 400;
+		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		color: #222;
+}
 
 textarea {
 		width: 100%;
@@ -208,40 +221,41 @@ table.adminAssets {
 ul.taskBricks {
 		list-style: none;
 
+		@tallness: 80px;
 		
 		li.taskChild {
+				@childPadding: 5px;
 				//				cursor: move;
 				background-color: white;
 				border: 1px solid black;
-				padding: 5px;
+				padding: @childPadding;
 				margin: 10px 0;
-				min-height: 100px;
-				margin-left: 25px;
+				//min-height: @tallness;
+				margin-left: 20px;
 				position: relative;
+
+				&.VIADivider {
+						background-color: #999;
+				}
 
 
 				div.taskBrickHandle {
-						@tallness: 120px;
 						
 						font-size: 90%;
 						text-transform: uppercase;
 						cursor: move;
 						white-space: nowrap;
 						position: absolute;
-						left: -30px;
-						top: @tallness + 8px;
-						width: @tallness;
+						//left: -30px;
+						//top: -@childPadding;
 						background-color: #eee;
 						color: black;
 						border: 1px solid #ccc;
-						padding: 1px 3px;
-						text-align: right;
-						transform: rotate(-90deg);
-						transform-origin: 0 0;
-						// -moz-transform: rotate(-90deg);
-						// -ms-transform: rotate(-90deg);
-						// -o-transform: rotate(-90deg);
-						// -webkit-transform: rotate(-90deg);
+						padding: 3px 1px;
+
+						transform: rotate(-180deg) translate(25px, @childPadding);
+						transform-origin: 50% 50%;
+						writing-mode: vertical-lr;
 
 						button.deleteButton {
 								color: #1EAEDB;
@@ -252,6 +266,7 @@ ul.taskBricks {
 								display: inline;
 								line-height: 1em;
 								height: 1em;
+								vertical-align: bottom;
 						}
 				}
 
