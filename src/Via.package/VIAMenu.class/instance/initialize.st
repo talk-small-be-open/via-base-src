@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 
-	subitems := OrderedCollection new.
+	items := OrderedCollection new.

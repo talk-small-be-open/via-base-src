@@ -20,4 +20,4 @@ renderContentOn: html
 
 	"TODO: Frontend/Backend agnostisch werden"
 	self isFrontend ifTrue: [
-		html script: 'UIkit.modal("#lightboxModal", {escClose: false, bgClose: false}).show()']
+		html scriptDefer: 'UIkit.modal("#lightboxModal", {escClose: false, bgClose: false}).show()']

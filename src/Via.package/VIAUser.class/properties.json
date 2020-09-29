@@ -14,7 +14,8 @@
 		"passwordHash",
 		"termsAccepted",
 		"properties",
-		"rememberToken"
+		"rememberToken",
+		"useAutologin"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

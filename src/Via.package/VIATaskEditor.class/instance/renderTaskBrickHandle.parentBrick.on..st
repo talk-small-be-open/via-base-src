@@ -1,7 +1,7 @@
 rendering
 renderTaskBrickHandle: aTaskBrick parentBrick: aParent on: html
 	html div class: 'taskBrickHandle'; with: [
-		html text: aTaskBrick classDisplayName.
+		html text: aTaskBrick classShortDisplayName.
 		html space.
 		html button
 			beSubmit;

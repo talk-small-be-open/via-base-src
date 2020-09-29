@@ -6,7 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"subitems"
+		"items"
 	],
 	"name" : "VIAMenu",
 	"type" : "normal"

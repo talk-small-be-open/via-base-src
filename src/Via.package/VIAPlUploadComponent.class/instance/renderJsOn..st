@@ -57,4 +57,4 @@ document.getElementById("pluploadStartButton").onclick = function() {
 });
 ').
 
-	html script: js.
+	html scriptDefer: js.

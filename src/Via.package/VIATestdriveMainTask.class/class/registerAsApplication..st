@@ -7,7 +7,7 @@ registerAsApplication: aName
 		asApplicationAt: aName.
 
 	app
-		scriptGeneratorClass: JQScriptGenerator;
+		scriptGeneratorClass: VIAJqScriptGenerator;
 		sessionClass: VIATestdriveSession;
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.

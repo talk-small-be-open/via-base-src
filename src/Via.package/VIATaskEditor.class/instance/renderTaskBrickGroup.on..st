@@ -26,7 +26,7 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 			with: [
 			
 				aTaskBrickGroup children do: [:each |
-					html listItem passenger: each; class: 'taskChild'; with: [
+					html listItem passenger: each; class: 'taskChild'; class: each className; with: [
 						self renderTaskBrickHandle: each parentBrick: aTaskBrickGroup on: html.
 						each acceptRenderingVisitor: self on: html]]].
 		

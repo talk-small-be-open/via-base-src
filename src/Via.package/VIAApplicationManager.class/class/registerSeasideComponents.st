@@ -2,7 +2,7 @@ as yet unclassified
 registerSeasideComponents
 
 	WAAdmin applicationDefaults
-		at: #scriptGeneratorClass put: JQScriptGenerator;
+		at: #scriptGeneratorClass put: VIAJqScriptGenerator;
 		at: #documentClass put: VIAHtmlDocument.
 
 "	WARequestHandlingConfiguration instance

@@ -22,9 +22,10 @@ visitViaPrAssetAudio: aViaPrAssetAudio
 
 	"		self renderAudioTranscription: anAudioPlayer on: html."
 
-		html script: (String streamContents: [:s |
+		html scriptDefer: (String streamContents: [:s |
 			s
-				nextPutAll: 'var player', audioId, ' = $("#';
+"				nextPutAll: 'var player', audioId, ' = $(""#';"
+				nextPutAll: '$("#';
 				nextPutAll: audioId;
 				nextPutAll: '").mediaelementplayer({
 	features: [ "playpause" ],

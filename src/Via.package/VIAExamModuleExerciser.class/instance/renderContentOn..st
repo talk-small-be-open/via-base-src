@@ -1,6 +1,6 @@
 as yet unclassified
 renderContentOn: html
-	html script: 'enableUnloadWarning();'.
+	html scriptDefer: 'enableUnloadWarning();'.
 
 	html heading t: 'exerciser:exam:title'.
 	html ukBlockMuted with: [

@@ -1,4 +1,4 @@
 rendering
 renderQuestionMarkOn: html
-	html div: [
+	html div class: 'questionIcon'; with: [
 		html iconQuestion ].

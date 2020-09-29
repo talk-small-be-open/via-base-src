@@ -1,3 +1,3 @@
 icons
 iconChecked
-	^self ukIcon: 'check-square-o'
+	^self farIcon: 'check-square'

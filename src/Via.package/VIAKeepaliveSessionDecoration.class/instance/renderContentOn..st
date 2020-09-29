@@ -15,6 +15,6 @@ renderContentOn: html
 		stream nextPutAll: appName.
 	].
 
-	html script: (html jQuery ajax
+	html scriptDefer: (html jQuery ajax
 		url: keepaliveUrl;
 		interval: 540000) "Alle 9 Minuten"

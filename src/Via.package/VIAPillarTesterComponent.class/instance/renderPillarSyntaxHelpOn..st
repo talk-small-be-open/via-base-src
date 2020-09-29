@@ -42,7 +42,12 @@ this is how you inject raw <b>­htm­l</­b> in your output file
 }}}
 '.
 
-	html strong: 'Use special Pillar characters'.
+	html strong: 'Special styled paragraphs:'.
+	html preformatted: '@@style This is a paragraph styled with a style.
+Ask your developer for available styles (CSS).
+'.
+
+	html strong: 'Use special Pillar characters:'.
 	html preformatted: '\+ will output a "+" plus sign.
 \* will output a "*" star sign.
 '

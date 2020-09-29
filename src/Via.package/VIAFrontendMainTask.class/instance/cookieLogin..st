@@ -9,5 +9,7 @@ cookieLogin: aRequest
 	"Allenfalls auto-login durch remember-me cookie"
 	(aRequest cookieAt: cookieName) ifNotNil: [:cookie |
 		user := self wd findUserByRememberToken: cookie value.
-		user ifNotNil: [ self session loginUser: user ]
+		user ifNotNil: [
+			user useAutologin ifTrue: [
+				self session loginUser: user ]]
 	].

@@ -22,4 +22,4 @@ updateRoot: anHtmlRoot
 
 	anHtmlRoot stylesheet url: '/admin/styles.css'.
 	
-	anHtmlRoot javascript url: '/admin/js/scripts.js'.
+	anHtmlRoot javascript defer; url: '/admin/js/scripts.js'.
