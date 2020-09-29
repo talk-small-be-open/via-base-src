@@ -19,11 +19,16 @@ renderToolbarOn: html
 		html space.
 		html skAnchorButton
 			callback: [self createNewAssetChooseFile];
-			with: 'After FTP: New from file path ...'.
+			with: 'New from path (FTP) ...'.
 		html space.
 		html skAnchorButton
 			callback: [self rebuildVideoThumbnails];
-			with: 'Rebuild video thumbnails'].
+			with: 'Rebuild video thumbs'.
+		html space.
+		html skAnchorButton
+			callback: [self showUnused];
+			with: 'Show unused'.
+	].
 	html form: [
 		html textInput on: #searchString of: self.
 		html space.

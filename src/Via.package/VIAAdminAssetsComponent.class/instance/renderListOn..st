@@ -22,7 +22,10 @@ renderListOn: html
 								self renderPreview: each on: html].
 							html tableData class: 'assetName'; with: [
 								html div: each title.
-								html div: (GRPrinter decimalFileSize print: each byteSize)].
+								html div: (GRPrinter decimalFileSize print: each byteSize).
+								html div style: 'color:green'; with: (each comment).
+								html div style: 'color:red'; with: (each internalComment).
+							].
 							html tableData with: [
 								each pillarTemplateStrings do: [:eachTemplate |
 									html preformatted
