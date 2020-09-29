@@ -32,6 +32,7 @@ __underscore__
 	html strong: 'Links:'.
 	html preformatted: 'Anchor @anchor (new line)
 Internal link *anchor*
+Link to module by index *See also this module>MOD:2.15*
 External link *Google>http://google.com*
 Image +Caption>file://image.png|width=50|label=label+
 Asset +Caption>4bozbmywaefqleznke0r5aa7f|width=50+'.

@@ -4,6 +4,9 @@ updateRoot: anHtmlRoot
 
 	self updateRootEssentials: anHtmlRoot.
 	
+	(self isFeature: #module:geoInformation) ifTrue: [
+		self updateRootMaps: anHtmlRoot].
+	
 	anHtmlRoot htmlAttributes
 		at: 'lang' put: 'en'.
 

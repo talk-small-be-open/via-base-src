@@ -8,7 +8,9 @@
 	"instvars" : [
 		"showOnlyMy",
 		"selectedModule",
-		"columnsCount"
+		"columnsCount",
+		"modules",
+		"searchString"
 	],
 	"name" : "VIAAdminModulesComponent",
 	"type" : "normal"

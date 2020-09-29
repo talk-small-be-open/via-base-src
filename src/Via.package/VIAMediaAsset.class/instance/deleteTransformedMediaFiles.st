@@ -1,3 +1,3 @@
 as yet unclassified
 deleteTransformedMediaFiles
-	"subclasses"
+	self transformedMediaFiles do: [ :each | "TODO delete file" ]

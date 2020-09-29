@@ -1,3 +1,3 @@
-as yet unclassified
+testing
 isFeature: aSymbol
 	^ self wd isFeature: aSymbol
