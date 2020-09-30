@@ -2,7 +2,7 @@ initialization
 initialize
 	super initialize.
 
-	self addForm withStandardSaveCancelButtons.
+	self addForm removeButtons.
 	
 	task := nil.
 

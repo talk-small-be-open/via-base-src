@@ -1,6 +1,6 @@
 as yet unclassified
 assetFiles
 	| visitor |
-	visitor := VIAGatherAssetFilesForZipPackageVisitor new.
+	visitor := VIAGatherAssetFilesForFrontendZipPackageVisitor new.
 	self acceptVisitor: visitor.
 	^visitor files

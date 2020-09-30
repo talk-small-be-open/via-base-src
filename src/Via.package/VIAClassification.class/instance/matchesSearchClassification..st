@@ -20,5 +20,9 @@ matchesSearchClassification: anotherClassification
 	anotherClassification durationTag ifNotNil: [:dt |
 		durationTag = dt ifFalse: [^false]
 	].
+
+	anotherClassification levelTag ifNotNil: [:lt |
+		levelTag = lt ifFalse: [^false]
+	].
 	
 	^true

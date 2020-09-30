@@ -12,6 +12,6 @@
 		"audioCounter",
 		"imageCounter"
 	],
-	"name" : "VIAGatherAssetFilesForZipPackageVisitor",
+	"name" : "VIAGatherAssetFilesForFrontendZipPackageVisitor",
 	"type" : "normal"
 }

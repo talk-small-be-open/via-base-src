@@ -1,3 +1,3 @@
 testing
 isEmpty
-	^{activityTypeTags. contextTags. topicTags. grammarTopicTags. durationTag} allSatisfy: #isBlank
+	^{activityTypeTags. contextTags. topicTags. grammarTopicTags. durationTag. levelTag} allSatisfy: #isBlank

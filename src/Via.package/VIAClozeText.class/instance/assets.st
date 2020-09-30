@@ -1,3 +1,7 @@
 as yet unclassified
 assets
-	^(VIAPrAssetGatherer new start: pillarDocument) assets
+	| assets |
+	assets := Set new.
+	assets addAll: (VIAPrAssetGatherer new assetsOf: pillarDocument).
+	assets addAll: (self childBricks gather: [:each | each assets]).
+	^ assets
