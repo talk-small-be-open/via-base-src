@@ -213,10 +213,28 @@ td.actions {
 		}
 }
 
+div.VIAAdminAssetsComponent {
+		table.adminAssets {
+				width: 100%;
 
-table.adminAssets {
-		width: 100%;
+				td.assetInfo {
+						word-break: break-word;
+						div.publicComment {
+								color: green;
+						}
+						div.internalComment {
+								color: red;
+						}
+						div.fileOnDisk {
+								.muted();
+								font-family: monospace;
+						}
+				}
+				
+		}
+		
 }
+
 
 ul.taskBricks {
 		list-style: none;
