@@ -1,6 +1,6 @@
 as yet unclassified
 generateDownloadAssetsZipPackage
-	| tempFile shellCommandString output visitor |
+	| tempFile shellCommandString |
 	tempFile := VIATempFile zipForXSendfile.
 
 	shellCommandString := String streamContents: [:s |
@@ -13,26 +13,20 @@ generateDownloadAssetsZipPackage
 		s space.
 
 
-		self tasks withIndexDo: [:eachTask :eachIndex |
+		self assets sortedBySortKey withIndexDo: [:eachAsset :eachIndex |
+			| fr |
+			fr := eachAsset fileReference.
 
-			visitor := VIAGatherAssetFilesForZipPackageVisitor new.
-			visitor titlePrefix: ('Task ', eachIndex greaseString).
+			"symlink mit natürlichem Namen erstellen"
+			MCLPlatform runShellCommand: 'ln -s "', fr filePath, '" "', (tempFile directory, '/', fr fileName), '"'.
 			
-			eachTask acceptVisitor: visitor.
-
-			visitor files do: [:eachFileReference |
-				
-				"symlink mit natürlichem Namen erstellen"
-				MCLPlatform runShellCommand: 'ln -s "', eachFileReference filePath, '" "', (tempFile directory, '/', eachFileReference title), '"'.
-				
-				s << '"'.
-				s << eachFileReference title.
-				s << '"'.
-				s space.
-			]
-		].
+			s << '"'.
+			s << fr fileName.
+			s << '"'.
+			s space.
+		]
 	].
 	
-	output := MCLPlatform runShellCommand: shellCommandString.
+	MCLPlatform runShellCommand: shellCommandString.
 	
 	^tempFile

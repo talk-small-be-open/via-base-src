@@ -24,8 +24,8 @@ renderContentOn: html
 				html checkbox on: #allowIgnoreTasks of: model.
 				html space.
 				html text: 'Allow ignoring of tasks']].
-		html label: 'Language level' help: '(E.g. A1-B2, ...)'.
-		html textInput on: #exerciseLevel of: model.
+"Deprecated, us level tags		html label: 'Language level' help: '(E.g. A1-B2, ...)'.
+		html textInput on: #exerciseLevel of: model."
 		html label: 'Image' help: '(Main image, displayed in search results etc.)'.
 		html select
 			beOptional;
@@ -42,6 +42,11 @@ renderContentOn: html
 			list: self wd authors sortedBySortKey;
 			labels: [:each | each displayName];
 			on: #coAuthorUsers of: model.
+		html label: 'Level'.
+		html select
+			labels: [:each | each displayName];
+			list: (VIALevelTag allForWebsite: self website);
+			on: #levelTag of: model classification.
 		html label: 'Duration'.
 		html select
 			labels: [:each | each displayName];

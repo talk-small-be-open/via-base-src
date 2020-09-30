@@ -5,3 +5,4 @@ clear
 	contextTags := Set new.
 	activityTypeTags := Set new.
 	grammarTopicTags := Set new.
+	levelTag := nil

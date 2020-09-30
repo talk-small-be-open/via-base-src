@@ -11,4 +11,4 @@ renderButtonsOn: html
 						self renderButton: labelKey forSelector: actionName on: html.
 						html space.]].
 			isDirtyChecked ifTrue: [
-				self decoratedComponent renderDirtyFlagOn: html]]]
+"TODO				self decoratedComponent renderDirtyFlagOn: html"]]]

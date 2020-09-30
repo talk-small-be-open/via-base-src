@@ -8,8 +8,7 @@ loadLotsOfDummyModules: aWebsite
 			module := self loadModule: aWebsite.
 			
 			module
-				title: ('Dummy ', index asString, ' ', eachLevel);
-				exerciseLevel: eachLevel.
+				title: ('Dummy ', index asString, ' ', eachLevel).
 
 			3 timesRepeat: [
 				(module addTask: self createCompositeTask)

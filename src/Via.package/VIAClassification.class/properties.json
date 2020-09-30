@@ -10,7 +10,8 @@
 		"topicTags",
 		"contextTags",
 		"activityTypeTags",
-		"grammarTopicTags"
+		"grammarTopicTags",
+		"levelTag"
 	],
 	"name" : "VIAClassification",
 	"type" : "normal"

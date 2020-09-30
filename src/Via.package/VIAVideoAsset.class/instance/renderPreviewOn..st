@@ -1,7 +1,7 @@
 rendering
 renderPreviewOn: html
 	html video
-		preload: 'metadata';
+		preload: 'none';
 		poster: self posterUrl;
 		controls: true;
 		autoplay: false;

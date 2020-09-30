@@ -1,0 +1,3 @@
+accessing
+fileReference
+	self subclassResponsibility

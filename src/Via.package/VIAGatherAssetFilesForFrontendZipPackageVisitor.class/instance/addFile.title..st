@@ -1,13 +1,15 @@
 as yet unclassified
 addFile: aFileReference title: aString
-	| fullFilename |
+	| fullFilename copy |
+
+	copy := aFileReference copy.
 
 	fullFilename := String streamContents: [:s |
 		titlePrefix ifNotBlank: [
 			s << titlePrefix.
 			s << ' - '].
-		s << (aString, '.', aFileReference fileExtension)].
+		s << (aString, '.', copy fileExtension)].
 
-	aFileReference title: fullFilename.
+	copy title: fullFilename.
 	
-	^files add: aFileReference
+	^files add: copy
