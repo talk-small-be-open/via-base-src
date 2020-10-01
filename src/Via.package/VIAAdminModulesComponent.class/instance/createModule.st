@@ -8,4 +8,7 @@ createModule
 		addAuthorUser: self currentUser. 
 	
 	self wd addModule: module.
+	
+	self refresh.
+	
 	self editModule: module

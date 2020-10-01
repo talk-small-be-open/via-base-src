@@ -45,12 +45,12 @@ renderContentOn: html
 		html label: 'Level'.
 		html select
 			labels: [:each | each displayName];
-			list: (VIALevelTag allForWebsite: self website);
+			list: (VIALevelTag allSortedForWebsite: self website);
 			on: #levelTag of: model classification.
 		html label: 'Duration'.
 		html select
 			labels: [:each | each displayName];
-			list: (VIADurationTag allForWebsite: self website);
+			list: (VIADurationTag allSortedForWebsite: self website);
 			on: #durationTag of: model classification.
 		html label: 'Footnotes'.
 		self renderPillarInput: #footnotesPillarString of: model on: html.
