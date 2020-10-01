@@ -5,4 +5,17 @@
 # Usage: ./deploy.sh <name of instance>
 # Example: ./deploy.sh production
 
-ansible-playbook -i ./site/inventory_$1.yml -e instanceName=$1 --ask-become-pass playbook_deploy.yml
+while getopts "n" opt; do
+		case ${opt} in
+				n ) # process option h
+						GEMSTONE_ONLY="-e gemstoneOnly=true"
+						shift
+						;;
+				\? ) echo "Usage: cmd [-n]"
+						 exit
+						 ;;
+		esac
+done
+
+
+ansible-playbook -i ./site/inventory_$1.yml -e instanceName=$1 $GEMSTONE_ONLY --ask-become-pass playbook_deploy.yml

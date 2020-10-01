@@ -310,7 +310,7 @@
     when: gemstone_is_installed
     copy:
       src: "files/gemstone/gem.conf"
-      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/{{stoneName}}.conf"
       owner: "{{remoteUser}}"
       mode: 0644
 
