@@ -14,6 +14,6 @@ installGemStoneTimeZone
 	swap
 	   ifTrue: [TimeZone default become: aTimeZone]
 	   ifFalse: [TimeZone default: aTimeZone].
-".
+"
 
 	TimeZone default installAsCurrentTimeZone
