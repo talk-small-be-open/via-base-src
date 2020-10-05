@@ -14,8 +14,8 @@ updateRootJavascripts: anHtmlRoot
 		url: 'https://kit.fontawesome.com/d3b8411a92.js';
 		attributeAt: 'crossorigin' put: 'anonymous'.
 
-	anHtmlRoot javascript url: '/lib/uikit3/dist/js/uikit.min.js'.
-	anHtmlRoot javascript url: '/lib/uikit3/dist/js/uikit-icons.min.js'.
+	anHtmlRoot javascript url: '/lib/uikit/dist/js/uikit.min.js'.
+	anHtmlRoot javascript url: '/lib/uikit/dist/js/uikit-icons.min.js'.
 
 	"TODO Needed for PDF?"
 	anHtmlRoot javascript url: '/lib/bower_components/jquery-plusastab/src/plusastab.joelpurra.js'.

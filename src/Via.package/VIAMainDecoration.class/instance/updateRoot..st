@@ -26,8 +26,8 @@ updateRoot: anHtmlRoot
 	"CSS from the site repository"
 	anHtmlRoot stylesheet url: '/site/css/', self session website stylesheetFilename.
 
-	anHtmlRoot javascript defer; url: '/lib/uikit3/dist/js/uikit.min.js'.
-	anHtmlRoot javascript defer; url: '/lib/uikit3/dist/js/uikit-icons.min.js'.
+	anHtmlRoot javascript defer; url: '/lib/uikit/dist/js/uikit.min.js'.
+	anHtmlRoot javascript defer; url: '/lib/uikit/dist/js/uikit-icons.min.js'.
 
 
 	anHtmlRoot stylesheet url: '/js/jquery.webui-popover.min.css'.

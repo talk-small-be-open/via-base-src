@@ -1,6 +1,8 @@
 gemstone
 installGemStoneTimeZone
-	| swap aTimeZone |
+
+"TODO: Dies muss als SystemUser via topaz in GemStone eingepflegt werden"
+"	| swap aTimeZone |
 
 	swap := true.
 
@@ -12,5 +14,6 @@ installGemStoneTimeZone
 	swap
 	   ifTrue: [TimeZone default become: aTimeZone]
 	   ifFalse: [TimeZone default: aTimeZone].
+".
 
 	TimeZone default installAsCurrentTimeZone
