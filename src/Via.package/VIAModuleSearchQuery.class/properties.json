@@ -12,7 +12,8 @@
 		"includeExams",
 		"includePrivates",
 		"examsOnly",
-		"indexCodePartial"
+		"indexCodePartial",
+		"isIndexExactMatch"
 	],
 	"name" : "VIAModuleSearchQuery",
 	"type" : "normal"

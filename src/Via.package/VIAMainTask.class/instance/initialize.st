@@ -3,6 +3,6 @@ initialize
 
 	super initialize.
 	
-	self ifDevelopment: [
+"	self ifDevelopment: [
 		self addDecoration: VIADevToolsDecoration new.
-	]
+	]"

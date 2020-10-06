@@ -38,13 +38,7 @@ updateRootEssentials: anHtmlRoot
 
 	anHtmlRoot javascript defer; url: '/js/js.cookie.js'.
 
-	"FontAwesome CDN"
-	anHtmlRoot javascript
-		async;
-		url: 'https://kit.fontawesome.com/d3b8411a92.js';
-		attributeAt: 'crossorigin' put: 'anonymous'.
-
-
+"	self updateRootFontawesome: anHtmlRoot."
 
 	"Textareas autosizing"
 	anHtmlRoot javascript defer; url: '/js/jquery.autosize.js'.

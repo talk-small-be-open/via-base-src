@@ -42,8 +42,11 @@ module: aModule matchesQuery: aQuery
 	].
 
 	"Filter for index code"
-	aQuery isIndexCodeFiltered ifTrue: [ 
-		(aModule matchesIndexCode: aQuery indexCodePartial) ifFalse: [ ^ false ]
+	aQuery isIndexCodeFiltered ifTrue: [
+		aQuery isIndexExactMatch ifTrue: [
+			(aModule indexCodeString = aQuery indexCodePartial) ifFalse: [ ^ false ]
+		] ifFalse: [
+			(aModule matchesIndexCode: aQuery indexCodePartial) ifFalse: [ ^ false ] ]
 	].
 
 	"Custom filters"

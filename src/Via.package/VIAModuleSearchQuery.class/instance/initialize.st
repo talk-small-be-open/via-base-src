@@ -7,3 +7,4 @@ initialize
 	includeDrafts := false.
 	includeExams := false.
 	includePrivates := false.
+	isIndexExactMatch := false.

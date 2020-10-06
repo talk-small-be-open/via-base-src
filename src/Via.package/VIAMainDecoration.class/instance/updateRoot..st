@@ -3,6 +3,7 @@ updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 
 	self updateRootEssentials: anHtmlRoot.
+	self updateRootFontawesome: anHtmlRoot.
 
 	"OPTIMIZE: Performance?"
 	self updateRootPwa: anHtmlRoot.
