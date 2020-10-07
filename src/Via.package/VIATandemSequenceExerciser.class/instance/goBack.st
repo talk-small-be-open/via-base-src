@@ -1,3 +1,6 @@
 as yet unclassified
 goBack
-	self gotoQAndA: currentNumber - 1
+	currentNumber = 1
+		ifTrue: [ self restart ]
+		ifFalse: [ self gotoQAndA: currentNumber - 1 ].
+	
