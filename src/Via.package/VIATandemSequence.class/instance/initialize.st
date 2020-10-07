@@ -3,4 +3,5 @@ initialize
 	super initialize.
 	qAndAs := OrderedCollection new.
 	
-	shuffleSequence := false
+	shuffleSequence := false.
+	showHistory := true

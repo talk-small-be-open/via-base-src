@@ -2,9 +2,16 @@ rendering-visitor
 renderTandemSequence: aTandemSequence on: html
 	html div class: 'inputEditor'; with: [
 
-		html label: [
-			html checkbox on: #shuffleSequence of: aTandemSequence.
-			html text: ' Shuffle sequence'].
+		html skRow: [
+			html skColumnWidth: 'three' with: [
+				html label: [
+					html checkbox on: #shuffleSequence of: aTandemSequence.
+					html text: ' Shuffle sequence']].
+			html skColumnWidth: 'three' with: [
+				html label: [
+					html checkbox on: #showHistory of: aTandemSequence.
+					html text: ' Show history']]
+		].
 
 
 "		html heading level2; with: 'Tandem sequence'."

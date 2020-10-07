@@ -1,3 +1,3 @@
 icons
 iconDelete
-	^self farIcon: 'trash'
+	^self farIcon: 'trash-alt'
