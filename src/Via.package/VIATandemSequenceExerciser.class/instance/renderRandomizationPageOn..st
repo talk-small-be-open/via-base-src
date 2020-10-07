@@ -2,7 +2,6 @@ rendering
 renderRandomizationPageOn: html
 	playerNumber = 1
 		ifTrue: [
-			self renderInstructionsOn: html.
 			self ensureRandomCode.
 			html paragraph: [html t: 'tandemSequence:forwardThisRandomCode'].
 			html div class: 'randomCode'; with: randomCode.
@@ -12,7 +11,6 @@ renderRandomizationPageOn: html
 			^self.
 		]
 		ifFalse: [
-			self renderInstructionsOn: html.
 			html paragraph: [html t: 'tandemSequence:enterRandomCode'].
 			html ukGrid class: 'uk-grid-small uk-child-width-1-6 uk-child-width-auto@l randomCodes'; with: [
 				self randomCodes do: [ :each |
