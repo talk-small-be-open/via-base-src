@@ -13,9 +13,10 @@
     - common
   vars_files:
     - ./site/via_{{instanceName}}.yml
-  vars:
-    remoteUser: "{{via_user}}"
-    stoneName: "{{via.siteName}}"
+    - vars_common.yml
+  # vars:
+  #   remoteUser: "{{via_user}}"
+  #   stoneName: "{{via.siteName}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}

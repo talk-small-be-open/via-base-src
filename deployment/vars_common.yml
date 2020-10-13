@@ -1,0 +1,4 @@
+---
+
+remoteUser: "{{via_user}}"
+stoneName: "{{via.stoneName | default(via.siteName)}}"

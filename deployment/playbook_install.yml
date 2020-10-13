@@ -7,9 +7,10 @@
     - common
   vars_files:
     - ./site/via_{{instanceName}}.yml
-  vars:
-    remoteUser: "{{via_user}}"
-    stoneName: "{{via.siteName}}"
+    - vars_common.yml
+  # vars:
+  #   remoteUser: "{{via_user}}"
+  #   stoneName: "{{default(via.stoneName,via.siteName)}}"
   environment:
     GS_HOME: /opt/GsDevKit_home
     PATH: /opt/GsDevKit_home/bin:{{ ansible_env.PATH }}
@@ -217,7 +218,7 @@
   - name: Overwrite with our own gem.conf
     copy:
       src: "files/gemstone/gem.conf"
-      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/{{stoneName}}.conf"
       owner: "{{remoteUser}}"
       mode: 0644
     
@@ -251,9 +252,9 @@
       path: "{{via.installationPath}}/install/INSTALLATION_IS_DONE.log"
     register: installation_is_done_file
 
-  - set_fact:
-      via_is_installed: True
-    when: installation_is_done_file.stat.exists == true
+  # - set_fact:
+  #     via_is_installed: True
+  #   when: installation_is_done_file.stat.exists == true
 
 
 

@@ -299,7 +299,7 @@
   #
   - name: Check if GemStone is already installed
     stat: 
-      path: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+      path: "/opt/GsDevKit_home/server/stones/{{stoneName}}/{{stoneName}}.conf"
     register: gemstone_exists
 
   - set_fact:
@@ -307,13 +307,20 @@
     when: gemstone_exists.stat.exists == true
   
   - name: Update with our own gem.conf (only if already exists)
-    when: gemstone_is_installed
+    when: gemstone_is_installed is defined
+    copy:
+      src: "files/gemstone/gem.conf"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
+      owner: "{{remoteUser}}"
+      mode: 0644
+
+  - name: Update with our own stone.conf (only if already exists)
+    when: gemstone_is_installed is defined
     copy:
       src: "files/gemstone/gem.conf"
       dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/{{stoneName}}.conf"
       owner: "{{remoteUser}}"
       mode: 0644
-
 
 
   - include_tasks: tasks_firewall.yml
