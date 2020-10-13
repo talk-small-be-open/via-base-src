@@ -1,7 +1,8 @@
 // Main style file for VIA
+// Make sure you import it in your site's less file
 
 // UIKIT ============================================================================
-// Old: @import "../uikit3/src/less/uikit.less";
+// Old: @import "../uikit/src/less/uikit.less";
 // Since we want to avoid loading the print styles, we do import uikit explicitly:
 // Base
 
@@ -22,11 +23,11 @@
 @import "@{uikitPath}form-range.less";
 @import "@{uikitPath}form.less"; // After: Icon, Form Range
 @import "@{uikitPath}button.less";
+@import "@{uikitPath}progress.less";
 
 // Layout
 @import "@{uikitPath}section.less";
 @import "@{uikitPath}container.less";
-@import "@{uikitPath}grid.less";
 @import "@{uikitPath}tile.less";
 @import "@{uikitPath}card.less";
 
@@ -36,12 +37,34 @@
 @import "@{uikitPath}totop.less"; // After: Icon
 @import "@{uikitPath}marker.less"; // After: Icon
 @import "@{uikitPath}alert.less"; // After: Close
+@import "@{uikitPath}placeholder.less";
 @import "@{uikitPath}badge.less";
 @import "@{uikitPath}label.less";
 @import "@{uikitPath}overlay.less"; // After: Icon
 @import "@{uikitPath}article.less"; // After: Subnav
 @import "@{uikitPath}comment.less"; // After: Subnav
 @import "@{uikitPath}search.less"; // After: Icon
+
+// JavaScript
+@import "@{uikitPath}accordion.less";
+@import "@{uikitPath}drop.less"; // After: Card
+@import "@{uikitPath}dropdown.less"; // After: Card
+@import "@{uikitPath}modal.less"; // After: Close
+@import "@{uikitPath}slideshow.less";
+@import "@{uikitPath}slider.less";
+@import "@{uikitPath}sticky.less";
+@import "@{uikitPath}offcanvas.less";
+@import "@{uikitPath}switcher.less";
+@import "@{uikitPath}leader.less";
+@import "@{uikitPath}notification.less";
+@import "@{uikitPath}tooltip.less";
+@import "@{uikitPath}sortable.less";
+@import "@{uikitPath}countdown.less";
+// Scrollspy
+// Toggle
+// Scroll
+
+@import "@{uikitPath}grid.less";
 
 // Navs
 @import "@{uikitPath}nav.less";
@@ -53,31 +76,10 @@
 @import "@{uikitPath}slidenav.less"; // After: Icon
 @import "@{uikitPath}dotnav.less";
 @import "@{uikitPath}thumbnav.less";
-
-// JavaScript
-@import "@{uikitPath}accordion.less";
-@import "@{uikitPath}drop.less"; // After: Card
-@import "@{uikitPath}dropdown.less"; // After: Card
-@import "@{uikitPath}modal.less"; // After: Close
-@import "@{uikitPath}lightbox.less"; // After: Close
-@import "@{uikitPath}slideshow.less";
-@import "@{uikitPath}slider.less";
-@import "@{uikitPath}sticky.less";
-@import "@{uikitPath}offcanvas.less";
-@import "@{uikitPath}switcher.less";
-@import "@{uikitPath}leader.less";
-// Scrollspy
-// Toggle
-// Scroll
-
-// Additional
 @import "@{uikitPath}iconnav.less";
-@import "@{uikitPath}notification.less";
-@import "@{uikitPath}tooltip.less";
-@import "@{uikitPath}placeholder.less";
-@import "@{uikitPath}progress.less";
-@import "@{uikitPath}sortable.less";
-@import "@{uikitPath}countdown.less";
+
+@import "@{uikitPath}lightbox.less"; // After: Close
+
 
 // Utilities
 @import "@{uikitPath}animation.less";
@@ -105,17 +107,11 @@
 
 
 // Our own uikit theme
-@import "uikit_theme/_import.less";
+// !!! IMPORTANT: Copy and include this in your site project
+// @import "uikit_theme/_import.less";
 
 @import "common.less";
-// @import "tasks.less";
 @import "development.less";
-
-
-
-
-@core-margin-top:                                   150px;
-@global-primary-background: @via-basic-background-color;
 
 
 //
@@ -127,521 +123,45 @@
 @via-coloredbutton-color: #555; // darken(@global-primary-background, 15%);
 @via-coloredbutton-hover-color: darken(@via-coloredbutton-color, 10%);
 
-
-@hm-fixed-background-a: url(../images/fixed-background-a.jpg);
-@hm-fixed-background-b: url(../images/fixed-background-b.jpg);
-@hm-fixed-background-c: url(../images/fixed-background-c.jpg);
-
-
-
-// 
-// Colors language levels
-//
-
-@level-a1:       #00cc67;    
-@level-a2:       #3399cc;
-@level-b1:       #cc6699;
-@level-b2:       #cccc66;
-@level-c1:       #bcb6a5;
-@level-c2:       #a8b3d3;
-
-
-@level-badge-boxen-fontcolor: #fff;
-@level-badge-boxen-line-height: 2em;
-
-
-@radius-auswahlbox: 5px;
-@rand-auswahlbox:  3px solid @global-primary-background;
-
-@auswahltextgroesse: 16px;
-
-
-// Kacheln Modul icons
-@iconkachel-groesse:    24px;
-
-//
-// Claim fuer 321 via
-// 
-@claim-padding-left: 200px;
-@claim-p-height:0.4em;
-
-
-@hm-subnav-line-border:                             @global-border;
-
-
-@hm-position-darken-background:                     #f5f5f5;
-@hm-position-contrast-background:                   #111;
-// @hm-position-primary-background:                      @global-primary-background;
-
-@hm-position-padding:                               20px;
-
-//
-// Teaser & Header Variables
-//
-
-@hm-teaser-background:                              none;
-
-
-
-//
-// Panel Box Border
-//
-
-@hm-panel-box-border-padding:                      15px;
-@hm-panel-box-border-border:                       @global-border;
-@hm-panel-box-border-width:                        3px;
-
-
-//
-// Headline Border
-//
-
-@hm-headline-border-width:                          3px;
-@hm-headline-border-border:                         @global-primary-background;
-@hm-headline-border-padding:                        15px;
-
-
-
-// 
-// footer
-//
-
-@footer-background:                                 @global-primary-background;
-@footer-color:                                      #fff;
-@footer-padding:                                    12px;
-@footer-min-height:                                 40px;
-@footer-margin-top:                                 25px;
-
-
-//
-// Facebook
-//
-@facebook-blue: #4267B2;
-
-
-// ===================================================================================
-
-//
-// Only for Development. Might put it in development.less but this
-// will be needed for staging platform aswell.
-// 
-
-div.devDummy {
-		background-color: #eee;
-		padding: 0.5em;
-		border: 1ps solid #ccc;
-		margin: 1em 0;
-}
-
-
-// ===================================================================================
-
-
-//
-// Basic styles
-//
-table {
-		border-collapse: collapse;
-		
-		td, th {
-				border-bottom: 1px solid #999;
-				padding: 2px 5px;
-		}
-}
-
-
-option {		
-		font-size: @auswahltextgroesse;
-}
-
-
-// Colors for language levels
-.level-a1 {
-		background-color: @level-a1;
-}
-       
-.level-a2 {
-    background-color: @level-a2;
-}
-
-.level-b1 {
-    background-color: @level-b1;
-}
-
-.level-b2 {
-    background-color: @level-b2;
-}
-
-.level-c1 {
-    background-color: @level-c1;
-}
-
-.level-c2 {
-    background-color: @level-c2;
-}
-
-
-.level-badge {
-		-webkit-border-radius: 55px;
-		-moz-border-radius: 55px;
-		border-radius: 55px;
-    // color: #fff !important;
-    // line-height: 2em;
-    font-weight: bold;
-    color: @level-badge-boxen-fontcolor;
-    line-height: @level-badge-boxen-line-height;
-    text-align: center;		
-}
-
-.uk-button {
-		&.level-a1, &.level-a2, &.level-b1, &.level-b2, &.level-c1, &.level-c2 {
-				.level-badge();																																		 
-				margin: 0.3em;
-				width: 50px;
-				height: 50px;
-				padding: 0;
-				text-align: center;
-
-				&.selected,
-				&:hover {
-						border: 6px solid white;
-				}
-		}
-}
-
-
-img.icon {
-    width: 20px;
-    height: 20px;		
-}
-
-
-
-.uk-button, button {
-		small {
-				margin-left: 0.5em;
-		}
-}
-
-
-//
-// Hintergrund/bild eingeloggt
-//
- 
-body.loggedIn {
-		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
-		// Kein Background mehr laut Sara
-		// background-image: @hm-fixed-background-b;	
-		// -webkit-background-size: cover;
-		// -moz-background-size: cover;
-		// -o-background-size: cover;
-		// background-size: cover;
-		// background-attachment: fixed;
-
-
-		div.core {
-				background: rgba(255,255,255,0.8);
-				min-height: 500px;
-		}
-}
-
-
-// ===================================================================================
-
-//
-// module design
-//
-div.moduleCard {
-
-		&.mini {
-				@pad: 0.7em;
-				padding: @pad @pad 0.2em @pad;
-
-				div.title {
-//						text-transform: uppercase;
-				}
-
-				span.level-badge {
-						right: @pad * 1.1;
-						top: @pad * 1.1;
-						border: 1px solid;
-				}
-
-				span.exam-badge {
-						right: @pad * 1.1;
-						top: @pad * 3.1;
-						border: 2px solid;
-				}
-		}
-
-		&.normal {
-				@pad: 1.5em;
-				padding: @pad @pad 0.5em @pad;
-				
-				span.level-badge {
-						right: @pad * 1.1;
-						top: @pad * 1.1;
-						border: 2px solid;
-				}
-
-				span.exam-badge {
-						right: @pad * 1.1;
-						top: @pad * 3.1;
-						border: 2px solid;
-				}
-		}
-		
-		.badge-in-card() {
+// @global-primary-background: @via-basic-background-color;
+
+
+// Plugin mapael (SVG maps)
+.mapael {
+		.map {
+        position: relative;
+    }
+		.mapTooltip {
 				position: absolute;
-				vertical-align: text-bottom;
-				text-align: center;
-				width: 30px;
-				height: 30px;
-		}
-		
-		span.level-badge {
-				.badge-in-card();
-		}		
-
-		span.done-badge, span.inWork-badge {
-				// OPTIMIZE
-				-webkit-border-radius: 55px;
-				-moz-border-radius: 55px;
-				border-radius: 55px;
-				position: absolute;
-				left: -10px;
-				top: -10px;
-				color: white;
-				// background-color: black;
-				vertical-align: text-bottom;
-				text-align: center;
-				width: 30px;
-				height: 30px;
-				font-size: 20px;
-
-				span.uk-icon {
-						// OPTIMIZE
-						vertical-align: text-bottom;
-						text-align: center;
-						margin-top: 4px;
-				}
-		}
-
-		span.done-badge {
-				background-color: black;
-		}
-		span.inWork-badge {
-				background-color: gray;
-		}
-
-		span.exam-badge {
-				.level-badge();
-				.badge-in-card();
-				color: black;
-				background-color: yellow;
-		}
-
-
-		.hm-angaben-box {
-				img.hm-kuchen {
-						width: @iconkachel-groesse; 
-						padding-right: 10px;
-						background-color: none;
-				}
-
-				ul.activityTypeTags {
-						margin: 0;
-						padding: 0;
-						list-style-type: none;
-						display: inline-block;
-
-						li {
-								display: inline-block;
-								margin-right: 3px;
-
-								+ li {
-										border-left: 1px solid black;
-										padding-left: 3px;
-								}
-								
-								span.activityTypeCount {
-										font-weight: bold;
-										color: black;
-								}
-								
-								img.iconActivityType {
-										width:     @iconkachel-groesse;
-										height:    @iconkachel-groesse;
-								}
-						}
-				}
-		}
-
-
-
-
-		div.hm-titel-box {
-				font-size: 120%;
-				text-transform: uppercase;
+				background-color: #474c4b;
+				moz-opacity: 0.70;
+				opacity: 0.70;
+				filter: alpha(opacity=70);
+				border-radius: 10px;
+				padding: 10px;
+				z-index: 1000;
+				max-width: 200px;
+				display: none;
 				color: #fff;
-				padding: 10px 0px 9px 0px;
-				min-height: 2em;
-		}
-
-		div.hm-tags {
-				margin-top: 15px;
-				padding-top: 4px;
-				border-top: 1px dotted #fff;
-				color:  #fff;
-				font-size: 0.8em;
-				line-height: 1.3em;
-				height: 4em;
-				overflow: hidden;
-		}
-
-		div.rating {
-				margin-top: 4px;
-				color:  #fff;
-				height: 1.2em;
-		}
-		
-}
-
-
-//
-// Personal portfolio
-//
-div.VIAMyPortfolioComponent {
-		div.certificatePreview {
-				border: 20px white solid;
-				margin-top: 15px;
-		}
-
-		a.certificatePreview,
-		a.certificatePreview:hover {
-				color: inherit;
-		}
-
-}
-
-
-
-//
-// ModuleExerciser
-//
-div.VIAModuleExerciser {
-
-		padding-left: 0.5em;
-		padding-right: 0.5em;
-
-		// 
-		// Titel besser
-		//
-		h2.moduleTitle {
-				padding:5px 5px 5px 5px;
-				background-color: #fff;
-				border-bottom: 1px solid #F00;
-				font-weight: 200;
-				font-size: 2em;
-
-				span.level-badge {
-						width: 50px;
-						height: 50px;
-						padding: 5px;
-				}
-
-				span.rating {
-						float: right;
-				}
-		}
-
-		div.moduleMenu {
-				div.rating {
-						a.noRating {
-								color: @global-muted-color;
-						}
-				}
 		}
 }
 
-//
-// Exam Exerciser
-//
-div.VIAExamModuleExerciser {
+// Avoid borders on imagemaps, when clicked
+img[usemap], map area{
+    outline: none;
+}
 
-		div.submitExam {
-
-				margin-top: 75px;
-				
-				.uk-button.submitExam {
-						background: #f00;
-						color: #fff;
-						border:  0px;
-						padding: 10px;
-						font-size: 1.2em;
-				}
+// Admin only functionality
+span.adminOnly {
+		border: 1px solid black;
+		span.adminOnlyLabel {
+				position: absolute;
+				font-weight: bold;
+				transform: rotate(-25deg);
 		}
 }
 
-
-
-// nav.hm-navbar {
-// 		ul.uk-navbar-nav > li {
-// 				span.menuDivider {
-// 						display: inline-block;
-// 						width: 1px;
-// 						height: 30px;
-// 						background-color: @global-primary-background;
-// 						// -webkit-transform: rotate(20deg);
-// 	    			// -ms-transform: rotate(20deg);
-// 						transform: rotate(20deg);
-// 				}
-
-// 		}
-// }
-
-
-// //
-// // Fixed backgrounds variants
-// //
-
-// .hm-fixed-background-a,
-// .hm-fixed-background-b,
-// .hm-fixed-background-c {
-//     background-attachment: fixed;
-//     background-size: cover;
-//     padding: @hm-position-padding 0;
-//     position: relative;
-//     box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
-//    // height:@fixedbackground-home-height;
-// }
-
-// .hm-fixed-background-a { background-image: @hm-fixed-background-a; }
-// .hm-fixed-background-b { background-image: @hm-fixed-background-b; }
-// .hm-fixed-background-c { background-image: @hm-fixed-background-c; }
-
-
-
-div.coreContainer {
-		// Wegen fixem footer:
-		padding-bottom: @footer-min-height + 25px;
-}
-
-
-// Back button
-div.backButton {
-		padding-top: 0.5em;
-}
-
-
-.topBuffer {
-		margin-top: 20px;
-}
-
-.bottomBuffer {
-		margin-bottom: 20px;
-}
-
+// Some basic styles for Pillar paragraphs
 div.pillarParagraph {
 
 		figure.inlineAssetImage {
@@ -663,105 +183,10 @@ div.pillarParagraph {
 		
 }
 
-// Spezialkennzeichnung falls NUR als Admin-Funktion sichtbar
-span.adminOnly {
-		border: 1px solid black;
-		span.adminOnlyLabel {
-				position: absolute;
-				font-weight: bold;
-				transform: rotate(-25deg);
-		}
-}
-
-// Dass imagemap keine Rahmen beim Klicken erhalten
-img[usemap], map area{
-    outline: none;
-}
-
-div.inputDialog {
-		textarea {
- 				width: 500px;
-		}
-}
-
-
-div.flashMessages {
+.topBuffer {
 		margin-top: 20px;
 }
 
-div.VIAExamTeacherAnalyzer {
-
-		div.analyticsLegend {
-				margin: 10px 0;
-
-				div.colorScale {
-						margin: 10px 0;
-						color: gray;
-						font-size: 75%;
-				}
-		}
-		
-		span.analyticsBox {
-				display: inline-block;
-				padding: 3px;
-
-				span.analyticsDetails {
-						margin-left: 5px;
-						margin-right: 5px;
-						padding: 2px 5px;
-				}
-		}
-
-		div.audioPlayer,
-		div.videoPlayer,
-		div.imageDisplayer {
-				margin: 10px 0;
-		}
-
-		span.clozeTextPlaceholder {
-				.clozeTextPlaceholder;
-				display: inline-block;
-				min-height: 1em;
-				vertical-align: middle;
-				width: 5em;
-		}
-		
-}
-
-// Schweizer Karte (Plugin mapael)
-.mapael {
-		.map {
-        position: relative;
-    }
-		.mapTooltip {
-				position: absolute;
-				background-color: #474c4b;
-				moz-opacity: 0.70;
-				opacity: 0.70;
-				filter: alpha(opacity=70);
-				border-radius: 10px;
-				padding: 10px;
-				z-index: 1000;
-				max-width: 200px;
-				display: none;
-				color: #fff;
-		}
-}
-
-
-div.VIALoginComponent {
-		a.facebookLogin {
-				img.facebookLogo {
-						width: 20px;
-						margin-right: 10px;
-				}				
-		}
-		a.googleLogin {
-				img.googleLogo {
-						width: 20px;
-						margin-right: 10px;
-						background-color: white;
-						border: 3px solid white;
-				}				
-		}
+.bottomBuffer {
+		margin-bottom: 20px;
 }

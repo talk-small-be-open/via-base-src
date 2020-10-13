@@ -1,5 +1,6 @@
 //
 // Styles for via's out of the box components
+// Use these as a starting point, reuse them in your site's styles.
 //
 
 //
@@ -43,6 +44,18 @@
   src: local('Permanent Marker'), local('PermanentMarker'), url(//fonts.gstatic.com/s/permanentmarker/v5/9vYsg5VgPHKK8SXYbf3sMrg27BfaRSB61e9iDGqjWqk.ttf) format('truetype');
 }
 
+//
+// UIkit
+//
+
+@global-primary-background: @via-basic-background-color;
+
+//Obsolete?
+@position-darken-background:                     #f5f5f5;
+@position-contrast-background:                   #111;
+@position-padding:                               20px;
+
+@subnav-line-border:                             @global-border;
 
 // 
 // Accordion
@@ -54,13 +67,648 @@
 @acc-number-padding-top: 9px;
 @acc-number-padding-left: 18px;
 	
-	
 @acc-title-float: left;
 @acc-title-padding-left: 20px;
 @acc-title-padding-top: 9px;
 
 @acc-subtitle-font-size: 0.7em;
 @acc-subtitle-padding-top: 9px;
+
+
+//
+// Backgrounds
+//
+
+@fixed-background-a: url(../images/fixed-background-a.jpg);
+@fixed-background-b: url(../images/fixed-background-b.jpg);
+@fixed-background-c: url(../images/fixed-background-c.jpg);
+
+
+// 
+// Colors language levels
+//
+
+@level-a1:       #00cc67;    
+@level-a2:       #3399cc;
+@level-b1:       #cc6699;
+@level-b2:       #cccc66;
+@level-c1:       #bcb6a5;
+@level-c2:       #a8b3d3;
+
+
+@level-badge-boxen-fontcolor: #fff;
+@level-badge-boxen-line-height: 2em;
+
+
+//
+// Misc
+//
+
+@radius-auswahlbox: 5px;
+@rand-auswahlbox:  3px solid @global-primary-background;
+@auswahltextgroesse: 16px;
+@iconkachel-groesse:    24px;
+
+//
+// Claim fuer 321 via
+//
+
+@claim-padding-left: 200px;
+@claim-p-height:0.4em;
+
+
+
+//
+// Teaser & Header
+//
+
+@teaser-background:                              none;
+
+
+
+//
+// Panel Box Border
+//
+
+@panel-box-border-padding:                      15px;
+@panel-box-border-border:                       @global-border;
+@panel-box-border-width:                        3px;
+
+
+//
+// Headline Border
+//
+
+@headline-border-width:                          3px;
+@headline-border-border:                         @global-primary-background;
+@headline-border-padding:                        15px;
+
+
+
+// 
+// footer
+//
+
+@footer-background:                                 @global-primary-background;
+@footer-color:                                      #fff;
+@footer-padding:                                    12px;
+@footer-min-height:                                 40px;
+@footer-margin-top:                                 25px;
+
+
+//
+// Facebook
+//
+@facebook-blue: #4267B2;
+
+
+// ===================================================================================
+
+//
+// Only for Development. Might put it in development.less but this
+// will be needed for staging platform aswell.
+// 
+
+div.devDummy {
+		background-color: #eee;
+		padding: 0.5em;
+		border: 1ps solid #ccc;
+		margin: 1em 0;
+}
+
+
+// ===================================================================================
+
+
+//
+// Basic styles
+//
+
+table {
+		border-collapse: collapse;
+		
+		td, th {
+				border-bottom: 1px solid #999;
+				padding: 2px 5px;
+		}
+}
+
+
+option {		
+		font-size: @auswahltextgroesse;
+}
+
+
+// Colors for language levels
+.level-a1 {
+		background-color: @level-a1;
+}
+       
+.level-a2 {
+    background-color: @level-a2;
+}
+
+.level-b1 {
+    background-color: @level-b1;
+}
+
+.level-b2 {
+    background-color: @level-b2;
+}
+
+.level-c1 {
+    background-color: @level-c1;
+}
+
+.level-c2 {
+    background-color: @level-c2;
+}
+
+
+.level-badge {
+		-webkit-border-radius: 55px;
+		-moz-border-radius: 55px;
+		border-radius: 55px;
+    font-weight: bold;
+    color: @level-badge-boxen-fontcolor;
+    line-height: @level-badge-boxen-line-height;
+    text-align: center;		
+}
+
+.uk-button {
+		&.level-a1, &.level-a2, &.level-b1, &.level-b2, &.level-c1, &.level-c2 {
+				.level-badge();																																		 
+				margin: 0.3em;
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				text-align: center;
+
+				&.selected,
+				&:hover {
+						border: 6px solid white;
+				}
+		}
+}
+
+
+img.icon {
+    width: 20px;
+    height: 20px;		
+}
+
+
+
+.uk-button, button {
+		small {
+				margin-left: 0.5em;
+		}
+}
+
+
+//
+// Hintergrund/bild eingeloggt
+//
+ 
+body.loggedIn {
+//		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
+		background-color: #eee;
+		// Kein Background mehr laut Sara
+		// background-image: @fixed-background-b;	
+		// -webkit-background-size: cover;
+		// -moz-background-size: cover;
+		// -o-background-size: cover;
+		// background-size: cover;
+		// background-attachment: fixed;
+
+
+		div.core {
+//				background: rgba(255,255,255,0.8);
+				background-color: white;
+				min-height: 500px;
+		}
+}
+
+
+// ===================================================================================
+
+//
+// module design
+//
+div.moduleCard {
+
+		&.mini {
+				@pad: 0.7em;
+				padding: @pad @pad 0.2em @pad;
+
+				div.title {
+//						text-transform: uppercase;
+				}
+
+				span.level-badge {
+						right: @pad * 1.1;
+						top: @pad * 1.1;
+						border: 1px solid;
+				}
+
+				span.exam-badge {
+						right: @pad * 1.1;
+						top: @pad * 3.1;
+						border: 2px solid;
+				}
+		}
+
+		&.normal {
+				@pad: 1.5em;
+				padding: @pad @pad 0.5em @pad;
+				
+				span.level-badge {
+						right: @pad * 1.1;
+						top: @pad * 1.1;
+						border: 2px solid;
+				}
+
+				span.exam-badge {
+						right: @pad * 1.1;
+						top: @pad * 3.1;
+						border: 2px solid;
+				}
+		}
+		
+		.badge-in-card() {
+				position: absolute;
+				vertical-align: text-bottom;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+		}
+		
+		span.level-badge {
+				.badge-in-card();
+		}		
+
+		span.done-badge, span.inWork-badge {
+				// OPTIMIZE
+				-webkit-border-radius: 55px;
+				-moz-border-radius: 55px;
+				border-radius: 55px;
+				position: absolute;
+				left: -10px;
+				top: -10px;
+				color: white;
+				// background-color: black;
+				vertical-align: text-bottom;
+				text-align: center;
+				width: 30px;
+				height: 30px;
+				font-size: 20px;
+
+				span.uk-icon {
+						// OPTIMIZE
+						vertical-align: text-bottom;
+						text-align: center;
+						margin-top: 4px;
+				}
+		}
+
+		span.done-badge {
+				background-color: black;
+		}
+		span.inWork-badge {
+				background-color: gray;
+		}
+
+		span.exam-badge {
+				.level-badge();
+				.badge-in-card();
+				color: black;
+				background-color: yellow;
+		}
+
+
+		.tdu-angaben-box {
+				img.tdu-kuchen {
+						width: @iconkachel-groesse; 
+						padding-right: 10px;
+						background-color: none;
+				}
+
+				ul.activityTypeTags {
+						margin: 0;
+						padding: 0;
+						list-style-type: none;
+						display: inline-block;
+
+						li {
+								display: inline-block;
+								margin-right: 3px;
+
+								+ li {
+										border-left: 1px solid black;
+										padding-left: 3px;
+								}
+								
+								span.activityTypeCount {
+										font-weight: bold;
+										color: black;
+								}
+								
+								img.iconActivityType {
+										width:     @iconkachel-groesse;
+										height:    @iconkachel-groesse;
+								}
+						}
+				}
+		}
+
+
+
+
+		div.tdu-titel-box {
+				font-size: 120%;
+				text-transform: uppercase;
+				color: #fff;
+				padding: 10px 0px 9px 0px;
+				min-height: 2em;
+		}
+
+		div.tdu-tags {
+				margin-top: 15px;
+				padding-top: 4px;
+				border-top: 1px dotted #fff;
+				color:  #fff;
+				font-size: 0.8em;
+				line-height: 1.3em;
+				height: 4em;
+				overflow: hidden;
+		}
+
+		div.rating {
+				margin-top: 4px;
+				color:  #fff;
+				height: 1.2em;
+		}
+		
+}
+
+
+//
+// Personal portfolio
+//
+div.VIAMyPortfolioComponent {
+		div.certificatePreview {
+				border: 20px white solid;
+				margin-top: 15px;
+		}
+
+		a.certificatePreview,
+		a.certificatePreview:hover {
+				color: inherit;
+		}
+
+}
+
+
+
+//
+// ModuleExerciser
+//
+div.VIAModuleExerciser {
+
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+		// 
+		// Titel besser
+		//
+		h2.moduleTitle {
+				padding:5px 5px 5px 5px;
+				background-color: #fff;
+				border-bottom: 1px solid #F00;
+				font-weight: 200;
+				font-size: 2em;
+
+				span.level-badge {
+						width: 50px;
+						height: 50px;
+						padding: 5px;
+				}
+
+				span.rating {
+						float: right;
+				}
+		}
+
+		div.moduleMenu {
+				div.rating {
+						a.noRating {
+								color: @global-muted-color;
+						}
+				}
+		}
+
+		div.hiddenTaskExercise {
+				// Nicht display:none, weil das Berechnungen mit Breite etc. nicht möglich macht
+				
+				// height: 0px;
+				// visibility: hidden;
+				// overflow: hidden;
+
+				// position: absolute; 
+				// overflow: hidden; 
+				// clip: rect(0 0 0 0); 
+				// height: 1px; width: 1px; 
+				// margin: -1px; padding: 0; border: 0; 
+
+				
+				position: absolute !important;
+				top: -9999px !important;
+				left: -9999px !important;
+				width: 100%; // TODO: Smarter, aber ich fand nicht heraus, wo die Breite drin steht. Wir brauchen aber eine feste Breite, damit die Berechnung per JS OK ist
+				visibility: hidden;
+				
+				// div.VIAExerciserComponent {
+				// 		height: 0px;
+				// }
+		}
+
+		div.moduleDetails {
+				margin-bottom: 20px;
+				
+				span.moduleEmbedHtml {
+						font-family: monospace;
+						display: block;
+						font-size: 80%;
+						border: 1px solid #999;
+						line-height: 0.9em;
+						padding: 1px;
+						margin: 2px 0;
+						background-color: #eee;
+				}
+		}
+		
+		div.moduleFootnotes {
+				margin-top: 20px;
+				border: 1px solid #ddd;
+				padding: 5px;
+		}
+
+		div.teacherNotes {
+				.uk-hidden();
+		}
+
+
+		
+}
+
+//
+// Exam Exerciser
+//
+div.VIAExamModuleExerciser {
+
+		div.submitExam {
+
+				margin-top: 75px;
+				
+				.uk-button.submitExam {
+						background: #f00;
+						color: #fff;
+						border:  0px;
+						padding: 10px;
+						font-size: 1.2em;
+				}
+		}
+}
+
+
+
+// nav.navbar {
+// 		ul.uk-navbar-nav > li {
+// 				span.menuDivider {
+// 						display: inline-block;
+// 						width: 1px;
+// 						height: 30px;
+// 						background-color: @global-primary-background;
+// 						// -webkit-transform: rotate(20deg);
+// 	    			// -ms-transform: rotate(20deg);
+// 						transform: rotate(20deg);
+// 				}
+
+// 		}
+// }
+
+
+// //
+// // Fixed backgrounds variants
+// //
+
+// .fixed-background-a,
+// .fixed-background-b,
+// .fixed-background-c {
+//     background-attachment: fixed;
+//     background-size: cover;
+//     padding: @position-padding 0;
+//     position: relative;
+//     box-shadow: inset 0 0 150px 1px rgba(0,0,0,0.5);
+//    // height:@fixedbackground-home-height;
+// }
+
+// .fixed-background-a { background-image: @fixed-background-a; }
+// .fixed-background-b { background-image: @fixed-background-b; }
+// .fixed-background-c { background-image: @fixed-background-c; }
+
+
+
+div.coreContainer {
+		// Wegen fixem footer:
+		padding-bottom: @footer-min-height + 25px;
+
+		div.core {
+				padding-top: 0.5em;
+		}
+}
+
+
+// Back button
+div.backButton {
+		padding-top: 0.5em;
+}
+
+
+
+
+
+
+div.inputDialog {
+		textarea {
+ 				width: 500px;
+		}
+}
+
+
+div.flashMessages {
+		margin-top: 20px;
+}
+
+div.VIAExamTeacherAnalyzer {
+
+		div.analyticsLegend {
+				margin: 10px 0;
+
+				div.colorScale {
+						margin: 10px 0;
+						color: gray;
+						font-size: 75%;
+				}
+		}
+		
+		span.analyticsBox {
+				display: inline-block;
+				padding: 3px;
+
+				span.analyticsDetails {
+						margin-left: 5px;
+						margin-right: 5px;
+						padding: 2px 5px;
+				}
+		}
+
+		div.audioPlayer,
+		div.videoPlayer,
+		div.imageDisplayer {
+				margin: 10px 0;
+		}
+
+		span.clozeTextPlaceholder {
+				.clozeTextPlaceholder;
+				display: inline-block;
+				min-height: 1em;
+				vertical-align: middle;
+				width: 5em;
+		}
+		
+}
+
+
+
+div.VIALoginComponent {
+		a.facebookLogin {
+				img.facebookLogo {
+						width: 20px;
+						margin-right: 10px;
+				}				
+		}
+		a.googleLogin {
+				img.googleLogo {
+						width: 20px;
+						margin-right: 10px;
+						background-color: white;
+						border: 3px solid white;
+				}				
+		}
+}
+
+
 
 a.backButtonAnchor, input.check.submit  { 
     background-color: @global-primary-background;
@@ -188,9 +836,9 @@ div.acc-bar {
 figure.inlineAssetImage {
 		display: inline-block;
 
-		figcaption {
-				display: none;
-		}
+		// figcaption {
+		// 		display: none;
+		// }
 }
 
 .correct {
@@ -242,8 +890,6 @@ div.pillarParagraph {
 
 
 
-
-
 div.VIAExerciserSolutionComponent,
 div.VIAExerciserFinishedComponent {
 		.solution {
@@ -269,6 +915,11 @@ div.VIAExerciserFinishedComponent {
 // 		}
 // }
 
+
+
+//
+// Embedded module UI
+//
 div.embeddedModule {
 		// div.core {
 		// 		margin: 0;
@@ -282,13 +933,6 @@ div.embeddedModule {
 				div.taskExercise {
 						position: relative;
 						a.clickOverlay {
-								// position: fixed;
-								// z-index: 999;
-								// top: 0px;
-								// left: 0px;
-								// height: 100%;
-								// width: 100%;
-
 								position: absolute;
 								z-index: 999;
 								top: 0px;
@@ -319,64 +963,10 @@ span.copyPaste, pre.copyPaste {
 		cursor: pointer;
 }
 
-div.VIAModuleExerciser {
-		div.hiddenTaskExercise {
-				// Nicht display:none, weil das Berechnungen mit Breite etc. nicht möglich macht
-				
-				// height: 0px;
-				// visibility: hidden;
-				// overflow: hidden;
 
-				// position: absolute; 
-				// overflow: hidden; 
-				// clip: rect(0 0 0 0); 
-				// height: 1px; width: 1px; 
-				// margin: -1px; padding: 0; border: 0; 
-
-				
-				position: absolute !important;
-				top: -9999px !important;
-				left: -9999px !important;
-				width: 100%; // TODO: Smarter, aber ich fand nicht heraus, wo die Breite drin steht. Wir brauchen aber eine feste Breite, damit die Berechnung per JS OK ist
-				visibility: hidden;
-				
-				// div.VIAExerciserComponent {
-				// 		height: 0px;
-				// }
-		}
-
-		div.moduleDetails {
-				margin-bottom: 20px;
-				
-				span.moduleEmbedHtml {
-						font-family: monospace;
-						display: block;
-						font-size: 80%;
-						border: 1px solid #999;
-						line-height: 0.9em;
-						padding: 1px;
-						margin: 2px 0;
-						background-color: #eee;
-				}
-		}
-		
-		div.moduleFootnotes {
-				margin-top: 20px;
-				border: 1px solid #ddd;
-				padding: 5px;
-		}
-
-		div.teacherNotes {
-				.uk-hidden();
-		}
-
-
-}
-
-// div.VIAExerciserComponent {
-
-// }
-
+//
+// Styles for an exercise
+//
 div.exercise {
 		
 		@dropTargetHoverColor: yellow;
@@ -562,14 +1152,6 @@ div.exercise {
 		div.buttons {
 
 				margin-top: 15px;
-				
-				// &:before {
-				// 		font-size: 1em;
-				// 		content: "\f160";
-				// 		font-family: FontAwesome;
-				// 		padding-right: 10px;
-				// }
-
 
 				input.submit, button {
 						&.check, &.reset, &.recheck, &.revealAnswers, &.save {
@@ -594,14 +1176,10 @@ div.exercise {
 
 				
 				div.transcriptionContainer {
-						// float: left;
-						// width: 45%;
 
 						div.transcriptionText {
 								font-size: 90%;
 								line-height: normal;
-								// max-height: 300px;
-								// overflow: auto;
 						}
 
 						
@@ -621,31 +1199,9 @@ div.exercise {
 
 		
 		div.videoPlayer {
-				// clear: both;
-				// float: left;
-				// width: 100%;
-
-				// &.stickyVideo {
-				// 		// box-sizing: border-box;
-				// 		// background: #f5f5f5;
-				// 		// box-shadow: inset 0 10px 10px 0 rgba(0, 0, 0, 0.6);
-				// 		// border-radius: 4px;
-				// 		// margin: 10px;
-				// 		// border: 2px solid green;
-				// }
 				
 				div.videoContainer {
-						// float: left;
 						margin-right: 10px;
-						// width: 50%;
-
-						// video {
-						// 		// width: 100%    !important;
-						// 		max-width: 100%;
-						// 		height: auto   !important;
-						// 		background: rgba(200,200,200,20) no-repeat;
-						// 		// background-size: 100%;
-						// }
 				}
 
 				div.transcriptionContainer {
@@ -663,8 +1219,6 @@ div.exercise {
 						div.transcriptionText {
 								font-size: 90%;
 								line-height: normal;
-								// max-height: 300px;
-								// overflow: auto;
 						}
 				}
 
@@ -696,57 +1250,29 @@ div.exercise {
 				margin-right: 3px;
 		}
 
-		// Meist für Videos
-		// div.uk-sticky-placeholder {
-		// 		width: 100%;
-		// 		z-index: 999999;
-		// }
-
-		// .ui-selectmenu-button span.ui-selectmenu-text {
-		// 		// text-align: left;
-		// 		// padding: 0.4em 2.1em 0.4em 1em;
-		// 		// display: block;
-		// 		// line-height: 1.4;
-		// 		// overflow: hidden;
-		// 		/* text-overflow: ellipsis; */
-		// 		white-space: normal;
-		// }
 
 		div.mapPairs {
 				@pairBorder: 1px solid black;
 				
-				// float: left;
-				// width: 100%;
-				// clear: both;
 				border-top: @pairBorder;
 				display: table;
 				border-collapse: collapse;
-				//table-layout: fixed;
 				
 				div.objectPair {
-						//float: left;
-						// width: 100%;
-						// clear: both;
 						display: table-row;
-						// background-color: #f9f9f9;
 						border-bottom: @pairBorder;
-						// padding: 5px 0;
 
 						.dropHover();
 
 						span.hintSymbol {
 								float:left;
-								// position: absolute;
 								margin-left: -20px;
 								margin-top: 10px;
 						}
 						
 						div.leftObject {
 								display: table-cell;
-								//						float: left;
-								// width: 1%;
 								padding-left: 10px;
-								//				border-bottom: @pairBorder;
 						}
 
 						div.middleColumn {
@@ -755,11 +1281,7 @@ div.exercise {
 
 						div.rightObject {
 								display: table-cell;
-								//						float: right;
-								//width: 48%;
 								padding: 5px 10px 5px (@dragHandleOffset + 10px);
-								//				border-bottom: @pairBorder;
-
 
 								div.objectPairDraggable {
 										background-color: #eee;
@@ -787,15 +1309,6 @@ div.exercise {
 										}
 
 								}
-								
-// // TODO Obsolete jQuery UI
-// 								.ui-draggable-dragging {
-// 										box-shadow: 5px 5px 3px #ddd;
-// 										background-color: #eee;
-// 										border: 1px solid grey;
-// 										cursor: move;
-// 								}
-								
 						}
 				}
 				
@@ -808,16 +1321,6 @@ div.exercise {
 		
 		
 }
-
-// // TODO Evt. innerhalb taskEditor
-// div.inputEditor {
-// 		> div.inputEditor {
-// 				border: 1px solid #333;
-// 				background-color: #f3f3f3;
-// 				padding: 5px;
-// 				margin: 10px 0;
-// 		}
-// }
 
 span.dictionaryEntry {
 		border-bottom: 1px dotted #333;
@@ -852,7 +1355,7 @@ div.highlightAreas {
 		
 		// Version 2 ==========================
 		span.selChar {
-				cursor: url('/files/images/horizontal-text-select.cur'), text;
+				cursor: url('/images/horizontal-text-select.cur'), text;
 //				cursor: text;
 				&.highlighted {
 						background-color: green;
@@ -888,15 +1391,9 @@ div.highlightAreas {
 }
 
 div.taskGroup {
-		// clear: both;
-		// float: left;
-		// width: 100%;
 		
 		div.taskGroupItem {
 				margin: 10px 0px;
-				// clear: both;
-				// float: left;
-				// width: 100%;
 		}
 }
 
@@ -909,7 +1406,6 @@ button.taskBrickGroupToggler {
 }
 
 div.taskBrickGroup {
-		// border: 1px solid black;
 		padding: 5px;
 }
 
@@ -922,8 +1418,6 @@ div.taskBrickGroup {
 }
 
 div.moduleScore {
-//		float: right;
-//		margin-bottom: 5px;
 
 		table.scoreTable {
 				border-collapse: collapse;
@@ -948,8 +1442,6 @@ div.moduleScore {
 }
 
 div.moduleMenu {
-//		margin-top: 5px;
-//		float: left;
 }
 
 div.moduleBody {
@@ -964,41 +1456,3 @@ div.searchResults {
 }
 
 
-
-// a.printThis {
-// 		color:
-// }
-
-// div.moduleCard {
-// 		background-color: #ff3;
-
-// 		div.eerciseLevel {
-// 				float: right;
-// 				margin-top: 10px;
-// 				margin-right: 10px;
-// 				padding: 3px;
-// 				background-color: white;
-// 		}
-		
-// 		h1 {
-// 				font-size: inherit;
-// 		}
-		
-// 		div.top {
-// 				height: 200px;
-// 				background-repeat: no-repeat;
-// 				background-position: right top;
-// 				background-image: #fff;
-// 		}
-
-// 		div.middle {
-// 				height: 100px;
-// 				padding: 5px;
-// 		}
-
-// 		div.bottom {
-// 				padding: 5px;
-// 				height: 40px;
-// 		}
-		
-// }
