@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	self addDecoration: VIAMainDecoration new.
+	self addDecoration: VIAApplicationManager current mainDecorationClass new

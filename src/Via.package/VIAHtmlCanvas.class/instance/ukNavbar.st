@@ -1,3 +1,3 @@
 uikit
 ukNavbar
-	^(self ukNavbarOptions: nil)
+	^self ukNavbarOptions: nil

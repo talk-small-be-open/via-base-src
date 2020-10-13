@@ -21,14 +21,12 @@ renderVideoPlayer: aVideoPlayer on: html
 			videoTag := html video.
 			videoTag
 				id: videoId;
-"zu viel autoplay				a: 'uk-video';"
-"				preload: 'auto';"
-				preload: 'none'; "redommended by mediaelement.js"
-"				url: aVideoPlayer videoUrl;"
-"					poster: aVideoPlayer posterUrl;"
+				preload: 'metadata'; "none = recommended by mediaelement.js"
+				poster: aVideoPlayer posterUrl;
 				noTab;
 				controls: true;
 				autoplay: false;
+				attributeAt: 'playsinline' put: true;
 				a: 'muted' p: aVideoPlayer noSound.
 
 			aVideoPlayer width ifNotBlank: [

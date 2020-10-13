@@ -3,4 +3,4 @@ renderContentOn: html
 "	self isDetectionDone ifFalse: [ self renderDeviceDetectionOn: html. ^self]."
 	
 	self renderNextOn: html.
-	self renderBottomScriptsOn: html.
+"	self renderBottomScriptsOn: html."
