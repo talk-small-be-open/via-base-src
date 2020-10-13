@@ -24,6 +24,18 @@ updateRootEssentials: anHtmlRoot
 		url: '/favicon.ico'.
 
 
+	anHtmlRoot htmlAttributes
+		at: 'lang' put: self session languageCode.
+		
+	self isDevelopment
+		ifTrue: [
+			anHtmlRoot title: 'VIA DEVELOPMENT ', self session language.
+			anHtmlRoot bodyAttributes addClass: 'development'.
+		]
+		ifFalse: [
+			anHtmlRoot title: (self session website title).
+		].
+
 	"jQuery, but NO jQuery-UI"
 	anHtmlRoot javascript defer; url: '/js/jquery/jquery-3.4.1.min.js'.
 

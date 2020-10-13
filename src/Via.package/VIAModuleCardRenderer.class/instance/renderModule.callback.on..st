@@ -32,8 +32,8 @@ renderModule: aModule callback: aBlock on: html
 				html ukImageWidth: '100%' height: '200px' url: (aModule imageAsset
 						ifNotNil: [:e | e imageUrlCropWidth: 200 height: 200]
 						ifNil: ['/images/module-card-placeholder.jpg']).
-				html div class: 'hm-titel-box'; with: aModule title.
-				html div class: 'hm-angaben-box'; with: [
+				html div class: 'tdu-titel-box'; with: aModule title.
+				html div class: 'tdu-angaben-box'; with: [
 					html iconDurationTag: aModule durationTag.
 					html unorderedList
 						class: 'activityTypeTags';

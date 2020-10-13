@@ -32,7 +32,7 @@ renderModule: aModule callback: aBlock on: html
 				ifNotNil: [:e | e imageUrlCropWidth: 100 height: 100]
 				ifNil: ['/images/module-card-placeholder.jpg']).
 			html div class: 'title'; with: aModule title.
-"			html div class: 'hm-angaben-box'; with: [
+"			html div class: 'tdu-angaben-box'; with: [
 				html iconDurationTag: aModule durationTag.
 				html unorderedList
 					class: 'uk-list activityTypeTags';
