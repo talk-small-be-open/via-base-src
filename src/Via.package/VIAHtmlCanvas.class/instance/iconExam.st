@@ -1,3 +1,3 @@
 icons
 iconExam
-	^self farIcon: 'graduation-cap'
+	^self fasIcon: 'graduation-cap'
