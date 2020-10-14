@@ -1,6 +1,6 @@
 rendering
 renderOn: html
-	html div class: 'searchBarContainer'; with: [
+	html div class: 'searchBarContainer expandToCore'; with: [
 		html ukContainer: [
 			html div class: 'searchBar'; id: html nextId; with: [
 				html form

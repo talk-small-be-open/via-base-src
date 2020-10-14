@@ -1,3 +1,3 @@
 icons
 iconInfo
-	^self farIcon: 'info-circle'
+	^self fasIcon: 'info-circle'
