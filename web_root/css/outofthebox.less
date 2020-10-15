@@ -272,7 +272,8 @@ img.icon {
  
 body.loggedIn {
 //		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
-		background-color: #eee;
+//		background-color: #eee;
+
 		// Kein Background mehr laut Sara
 		// background-image: @fixed-background-b;	
 		// -webkit-background-size: cover;
@@ -624,7 +625,15 @@ div.coreContainer {
 		padding-bottom: @footer-min-height + 25px;
 
 		div.core {
-				padding-top: 0.5em;
+				@pad: 0.5em;
+				padding: @pad;
+
+				.expandToCore {
+						margin-left: -@pad;
+						margin-right: -@pad;
+						padding-left: @pad;
+						padding-right: @pad;
+				}
 		}
 }
 
@@ -1456,3 +1465,6 @@ div.searchResults {
 }
 
 
+div.VIAExamsModuleTeacherComponent {
+		padding: 0.5em;
+}
