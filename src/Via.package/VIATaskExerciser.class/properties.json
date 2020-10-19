@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"taskBrickSubExercisers"
+		"taskBrickSubExercisers",
+		"exercise"
 	],
 	"name" : "VIATaskExerciser",
 	"type" : "normal"

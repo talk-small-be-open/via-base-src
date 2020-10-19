@@ -1,3 +1,3 @@
 icons
 iconImage
-	^self ukIcon: 'picture-o'
+	^self farIcon: 'image'

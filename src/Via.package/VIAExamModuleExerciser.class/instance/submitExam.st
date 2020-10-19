@@ -11,7 +11,7 @@ submitExam
 "Besser nicht, weil die Schüler dann vergessen zu bestätigen."	
 "	(self confirmYesNo: 'exam:reallySubmitExamQM') ifFalse: [^self]."
 	
-	exam submitModuleExercise: moduleExerciseGSRENAME.
+	exam submitModuleExercise: moduleExercise.
 
 	"Prüfung ebenfalls in Portfolio übernehmen, erst wenn diese eingereicht wurde"
 "Veraltet, wir speichern Exam im Portfolio	self currentPortfolio addModuleExercise: moduleExercise."

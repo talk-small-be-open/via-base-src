@@ -1,3 +1,3 @@
 icons
 iconRefresh
-	^self ukIcon: 'refresh'
+	^self fasIcon: 'redo-alt'

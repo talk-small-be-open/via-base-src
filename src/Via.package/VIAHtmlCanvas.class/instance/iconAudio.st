@@ -1,3 +1,3 @@
 icons
 iconAudio
-	^self ukIcon: 'volume-up'
+	^self fasIcon: 'volume-up'

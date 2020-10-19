@@ -1,3 +1,3 @@
 icons
 iconFilm
-	^self ukIcon: 'film'
+	^self fasIcon: 'film'

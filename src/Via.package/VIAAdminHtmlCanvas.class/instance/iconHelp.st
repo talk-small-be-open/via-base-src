@@ -1,3 +1,3 @@
 icons
 iconHelp
-	^self ukIcon: 'question'
+	^self fasIcon: 'question'

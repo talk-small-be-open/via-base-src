@@ -1,7 +1,9 @@
 as yet unclassified
 initialize
 	super initialize.
-	binPath := '/usr/local/bin/'.
+
+	"Ubuntu"
+	binPath := '/usr/bin/'.
 	
 	self ifDevelopment: [
 		binPath := '/usr/local/bin/'].

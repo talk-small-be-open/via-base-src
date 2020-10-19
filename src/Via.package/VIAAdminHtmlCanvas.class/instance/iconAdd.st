@@ -1,3 +1,3 @@
 icons
 iconAdd
-	^self ukIcon: 'plus'
+	^self fasIcon: 'plus'

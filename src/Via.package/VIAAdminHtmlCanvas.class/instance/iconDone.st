@@ -1,3 +1,3 @@
 icons
 iconDone
-	^self ukIcon: 'check'
+	^self fasIcon: 'check'

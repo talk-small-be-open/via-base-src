@@ -9,8 +9,8 @@ module: aModule matchesQuery: aQuery
 		(aModule overallClassification matchesSearchClassification: aQuery moduleClassification) ifFalse: [^false]].
 
 	"Filter for gender"
-	aQuery isExerciseLevelFiltered ifTrue: [
-		(aQuery exerciseLevels includes: aModule exerciseLevel) ifFalse: [^false]].
+"	aQuery isExerciseLevelFiltered ifTrue: [
+		(aQuery exerciseLevels includes: aModule exerciseLevel) ifFalse: [^false]]."
 
 	"Filter for fulltext"
 	aQuery isFulltextFiltered ifTrue: [

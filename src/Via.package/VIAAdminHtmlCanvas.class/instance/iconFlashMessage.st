@@ -1,3 +1,3 @@
 icons
 iconFlashMessage
-	^self ukIcon: 'comment'
+	^self farIcon: 'comment'

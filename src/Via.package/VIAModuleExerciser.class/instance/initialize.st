@@ -7,8 +7,8 @@ initialize
 	currentExerciser := nil.
 	exerciserComponents := nil.
 	
-	moduleExerciseGSRENAME ifNil: [
-		moduleExerciseGSRENAME := self currentPortfolio exerciseForModule: model].
+	moduleExercise ifNil: [
+		moduleExercise := self currentPortfolio exerciseForModule: model].
 	
 	self addForm
 		removeButtons.

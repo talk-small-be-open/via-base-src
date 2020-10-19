@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIATaskExerciser",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"footnotes",
+		"taskBrickGroups"
+	],
+	"name" : "VIALectorshipPrintTaskExerciser",
+	"type" : "normal"
+}
