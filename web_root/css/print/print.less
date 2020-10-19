@@ -1,5 +1,4 @@
 // Printing styles
-// -*- less-css-compile-at-save: t -*-
 
 @import "../common.less";
 
@@ -66,174 +65,222 @@
 				display: none;
 		}
 
+		// Fontawesome svg icons
+		svg.svg-inline--fa.icon {
+				text-align: center;
+				display: inline-block;
+				width: 1.5rem;
+				height: 1rem;
+				margin-right: 1em;
+		}
+
+		
 }
 
-div.VIASchoolPrintSolutionModuleExerciser .solution {
-		border: 1px dashed black;
-}
 
-div.VIASchoolPrintModuleExerciser, div.VIASchoolPrintSolutionModuleExerciser {
+//
+// Lectorship PDF
+//
+div.VIALectorshipPrintModuleExerciser {
 
 		h2.moduleTitle {
-				span.logo {
-						font-size: 50%;
-						float: right;
-						text-align: center;
+				// span.logo {
+				// 		font-size: 50%;
+				// 		float: right;
+				// 		text-align: center;
+				// }
+		}
+
+		div.taskTitle {
+				font-weight: bold;
+				margin: 1em 0 0.5em 0;
+		}
+
+		.lectorText {
+				font-family: monospace;
+				color: #666;
+		}
+
+		div.VIALectorshipPrintTaskExerciser {
+
+				div.taskGroupItem {
+						padding: 1em 5em;
+						margin-bottom: 2em;
+						border-left: 2px solid black;
+//						border-right: $border-left;
 				}
-		}
-		
-		div.acc-bar {
-				padding-right: 10px;
-		}
-		
-		img.videoPreview{
-				max-width: 200px;
-				border: 1px solid black;
-		}
-
-		span.clozeTextPlaceholder {
-				.clozeTextPlaceholder;
-				display: inline-block;
-				min-height: 1em;
-				vertical-align: middle;
-		}
-
-		span.footnoteReference {
-				font-style: italic;
-		}
-	
-		div:not(.clozeText) {
-				
-				div.selectMany, span.selectOneInput {
-						span.footnoteReference {
-								display: block;
-								margin-bottom: 20px;
-
-								// span.seeAt {
-								// 		display: inline;
-								// }
-
-								// span.footnoteSymbol {
-								// 		vertical-align: baseline;
-								// 		font-size: inherit;
-								// }
-						}
-				}
-		}
-
-		ul.selectOneChoices, ul.selectManyChoices, ul.selectPointsChoices {
-				list-style-type: none;
-				margin: 0;
-				padding: 3px;
-
-				
-				@indent: 15px;
-				li {
-						margin: 0;
-						margin-left: @indent; 
-						padding: 0;
-
-						span.listItemIcon {
-								position: absolute;
-								margin-left: -@indent;
-						}
-
-						span.listItemContent {
-								// float: left;
-						}
-				}
-		}
-
-		div.taskBrickGroupToggler {
-				// color: #666;	
-		}
-
-
-		div.annex {
-				border-top: 2px solid black;
-				padding-top: 10px;
-				margin-top: 20px;
-				font-size: 90%;
-				// margin-bottom: 10px;
-
-				div.footnotes {
-						margin-bottom: 10px;
+			
+				img.videoPreview{
+						max-width: 200px;
+						border: 1px solid black;
 				}
 
-				div.bottomTaskBrickGroup {
-						border: 1px dotted #666;
-						padding: 5px;
-
-						div.title {
-								font-weight: bold;
-						}
-
-						div.taskGroupItem {
-								margin: 3px 0;
-						}
+				span.clozeTextPlaceholder {
+//						.clozeTextPlaceholder();
+						display: inline-block;
+						min-height: 1em;
+						vertical-align: middle;
+						border-bottom: 2px solid black;
 				}
-				
-		}
-
-		div.dragDropDraggables {
-				background-color: transparent !important;
-		}
-				
-		span.dragDropTarget {
-				background-color: transparent !important;
-		}
-		
-		div.clozeText {
 
 				span.footnoteReference {
-						font-style: inherit;
+						font-style: italic;
+				}
+				
+				div:not(.clozeText) {
+						
+						div.selectMany, span.selectOneInput {
+								span.footnoteReference {
+										display: block;
+										margin-bottom: 20px;
 
-						span.seeAt {
-								display: none;
-						}
-						span.footnoteSymbol {
-								vertical-align: super;
-								font-size: 75%;
+										// span.seeAt {
+										// 		display: inline;
+										// }
+
+										// span.footnoteSymbol {
+										// 		vertical-align: baseline;
+										// 		font-size: inherit;
+										// }
+								}
 						}
 				}
 
+				ul.selectOneChoices, ul.selectManyChoices, ul.selectPointsChoices {
+						list-style-type: none;
+						margin: 0;
+						padding: 3px;
 
-				.selectOneInput {
-						ul.selectOneChoices {
-								list-style-type: none;
+						
+						@indent: 1.5em;
+						li {
 								margin: 0;
-								padding: 3px;
-								display: inline;
-								border: 1px solid #666;
-								li {
-										@padding: 5px;
+								margin-left: @indent; 
+								padding: 0;
+
+								span.listItemIcon {
+										position: absolute;
+										margin-left: -@indent;
+								}
+
+								span.listItemContent {
+										// float: left;
+								}
+						}
+				}
+
+				div.taskBrickGroupToggler {
+						// color: #666;	
+				}
+
+
+				div.annex {
+						border-top: 2px solid black;
+						padding-top: 10px;
+						margin-top: 20px;
+						font-size: 90%;
+						// margin-bottom: 10px;
+
+						div.footnotes {
+								margin-bottom: 10px;
+						}
+
+						div.bottomTaskBrickGroup {
+								border: 1px dotted #666;
+								padding: 5px;
+
+								div.title {
+										font-weight: bold;
+								}
+
+								div.taskGroupItem {
+										margin: 3px 0;
+								}
+						}
+						
+				}
+
+				div.dragDropDraggables {
+						background-color: transparent !important;
+
+						span.dragDropDraggable {
+								border: 1px dotted black;
+								margin: 0 1em;
+						}
+				}
+				
+				span.dragDropTarget {
+						background-color: transparent !important;
+				}
+				
+				div.clozeText {
+
+						span.footnoteReference {
+								font-style: inherit;
+
+								span.seeAt {
+										display: none;
+								}
+								span.footnoteSymbol {
+										vertical-align: super;
+										font-size: 75%;
+								}
+						}
+
+
+						.selectOneInput {
+								ul.selectOneChoices {
+										list-style-type: none;
 										margin: 0;
+										padding: 3px;
 										display: inline;
-										padding-right: @padding;
+										border: 1px solid #666;
+										li {
+												@padding: 5px;
+												margin: 0;
+												display: inline;
+												padding-right: @padding;
 
-										&:not(:first-child) {
-												padding-left: @padding;
-												border-left: 2px solid black;
-										}
+												&:not(:first-child) {
+														padding-left: @padding;
+														border-left: 2px solid black;
+												}
 
-										&:last-child {
-												padding-right: 0;
-										}
+												&:last-child {
+														padding-right: 0;
+												}
 
-										span.listItemIcon {
-												display: none;
+												// span.listItemIcon {
+												// 		display: none;
+												// }
 										}
 								}
 						}
 				}
-		}
 
-		div.moduleFootnotes {
-				border: none;
-				border-top: 2px solid black;
-				margin-top: 100px;
-				div.title {
-						font-weight: bold;
+				div.moduleFootnotes {
+						border: none;
+						border-top: 2px solid black;
+						margin-top: 100px;
+						div.title {
+								font-weight: bold;
+						}
+				}
+
+				div.tandemSequence {
+						div.questionAndAnswer {
+								margin: 1em 0;
+								border: 1px solid black;
+								padding: 0.5em;
+
+								div.answer {
+										border-top: 2px solid black;
+								}
+						}
 				}
 		}
 }
+
+// Local Variables:
+// less-css-compile-at-save: t
+// End:

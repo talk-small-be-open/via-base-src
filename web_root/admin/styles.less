@@ -161,48 +161,57 @@ div.clozeTextPlaceholderEditor {
 		margin: 10px 0;
 }
 
-table.adminModules {
-		width: 100%;
+div.VIAAdminModulesComponent {
+		table.adminModules {
+				width: 100%;
 
-		td.taskName {
-				//padding-left: 25px;
-		}
-
-		tr.tasksBottom td {
-				height: 1em;
-		}
-
-		td.moduleName {
-				font-weight: bold;
-		}
-
-		tr.moduleInfos {
-				color: #999;
-				font-size: 80%;
-
-				td {
-						padding-bottom: 10px;
+				td.taskName {
+						//padding-left: 25px;
 				}
-		}
 
-		td.actions {
-				// a {
-				// 		white-space: nowrap;
-				// 		&:not(:first-child) {
-				// 				margin-left: 0.6em;
-				// 		}
-				// }
+				tr.tasksBottom td {
+						height: 1em;
+				}
 
-				&.extras {
+				td.moduleName {
+						font-weight: bold;
+				}
+
+				tr.moduleInfos {
+						color: #999;
 						font-size: 80%;
+
+						td {
+								padding-bottom: 10px;
+						}
+				}
+
+				td.actions {
+						// a {
+						// 		white-space: nowrap;
+						// 		&:not(:first-child) {
+						// 				margin-left: 0.6em;
+						// 		}
+						// }
+
+						// &.extras {
+						// 		font-size: 80%;
+						// }
+				}
+
+				tr.selected {
+						background-color: #ddd;
 				}
 		}
 
-		tr.selected {
-				background-color: #ddd;
+		div.extraTools {
+				a {
+						display: block;
+						margin: 5px 0;
+						font-size: 115%;
+				}
 		}
 }
-
 
 td.actions {
 		a {

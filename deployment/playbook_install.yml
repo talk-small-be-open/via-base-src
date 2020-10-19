@@ -95,7 +95,25 @@
       mode: 0755
       owner: '{{remoteUser}}'
       group: '{{remoteUser}}'
-      
+
+  - name: Create working user convenience symlink for stone
+    file:
+      src: "/home/{{remoteUser}}/stone"
+      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}"
+      state: link
+
+  - name: Create working user convenience symlink for via_base
+    file:
+      src: "/home/{{remoteUser}}/vb"
+      dest: "{{via.installationPath}}/via_base"
+      state: link
+
+  - name: Create working user convenience symlink for via_site
+    file:
+      src: "/home/{{remoteUser}}/vs"
+      dest: "{{via.installationPath}}/via_site"
+      state: link
+
   - include_tasks: tasks_git_update.yml    
             
     
@@ -125,16 +143,6 @@
     
   - include_tasks: tasks_common.yml
 
-  
-  # # Create working folders and symlinks
-  # - name: Directory for GemStone
-  #   file:
-  #     path: "{{via.installationPath}}/pharo"
-  #     state: directory
-  #     mode: 0755
-  #     owner: '{{remoteUser}}'
-  #     group: '{{remoteUser}}'
-      
       
   - name: Create Smalltalk Installer script
     template:
@@ -252,9 +260,11 @@
       path: "{{via.installationPath}}/install/INSTALLATION_IS_DONE.log"
     register: installation_is_done_file
 
-  # - set_fact:
-  #     via_is_installed: True
-  #   when: installation_is_done_file.stat.exists == true
+  # TODO! WIeder reinnehmen!!! Nur für 321 update auskommentiert!
+  # TBD: Bei 321 migration rauskommentieren
+  - set_fact:
+      via_is_installed: True
+    when: installation_is_done_file.stat.exists == true
 
 
 
