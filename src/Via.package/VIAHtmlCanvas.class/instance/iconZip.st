@@ -1,3 +1,3 @@
 icons
 iconZip
-	^self ukIcon: 'file-zip-o'
+	^self farIcon: 'file-archive'

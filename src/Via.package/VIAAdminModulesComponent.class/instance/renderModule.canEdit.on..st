@@ -45,40 +45,4 @@ renderModule: aModule canEdit: canEdit on: html
 			with: 'Test'.
 	].
 	html tableData class: 'actions extras'; with: [
-		html anchor
-			callback: [self copyModule: aModule];
-			title: 'Create an independent copy as a new module draft';
-			with: 'Copy'.
-		canEdit ifTrue: [
-			self ifAdmin: [
-				html anchor
-					callback: [self deleteModule: aModule];
-					with: 'Delete'.
-				html anchor
-					callback: [self resetRatingModule: aModule];
-					with: 'Reset rating'.
-				aModule isDraft
-					ifFalse: [
-						html anchor
-							callback: [self unreleaseModule: aModule];
-							title: 'Unpublish this module';
-							with: 'Un-Release'].
-				html anchor
-					callback: [ self downloadRawSourceModule: aModule ];
-					title: 'Download raw source file';
-					with: 'raw.txt'.
-				html anchor
-					callback: [ self downloadAssetsZipPackage: aModule ];
-					title: 'Download all used assets (zip)';
-					with: 'assets.zip'.
-			].
-			html anchor
-				callback: [self prepareAssetsForModule: aModule];
-				title: 'Use this, if image/video/audio are not displayed correctly';
-				with: 'Rebuild assets'].
-	html anchor
-		url: '/lib/embed_test.html?url=', (VIAHelper urlencode: aModule permaUrlEmbed);
-		target: '_blank';
-		title: 'Show preview of embedded module';
-		with: 'Embedded'
-	]
+		html anchor callback: [ self openExtraToolsFor: aModule ]; with: 'Tools ...']

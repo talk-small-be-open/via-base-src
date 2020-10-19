@@ -1,3 +1,3 @@
 icons
 iconMenu
-	^self ukIcon: 'menu'
+	^self fasIcon: 'bars'

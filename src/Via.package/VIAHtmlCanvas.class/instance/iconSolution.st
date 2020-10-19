@@ -1,3 +1,3 @@
 icons
 iconSolution
-	^self ukIcon: 'check-square'
+	^self ukIcon: 'check'

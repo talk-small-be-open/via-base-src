@@ -1,3 +1,3 @@
 icons
 iconRight
-	^self ukIcon: 'chevron-right'
+	^self fasIcon: 'chevron-right'

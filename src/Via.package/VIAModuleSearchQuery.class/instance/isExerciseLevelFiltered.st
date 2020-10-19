@@ -1,3 +1,0 @@
-testing
-isExerciseLevelFiltered
-	^exerciseLevels notBlank

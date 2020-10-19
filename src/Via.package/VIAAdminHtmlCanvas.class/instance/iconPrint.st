@@ -1,3 +1,3 @@
 icons
 iconPrint
-	^self ukIcon: 'print'
+	^self farIcon: 'print'

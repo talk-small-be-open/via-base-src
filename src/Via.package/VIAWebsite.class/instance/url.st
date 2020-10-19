@@ -1,3 +1,3 @@
 as yet unclassified
 url
-	^'https://', self domain, '/app'
+	^ self baseUrl, '/app'

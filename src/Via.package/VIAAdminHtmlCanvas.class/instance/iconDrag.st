@@ -1,3 +1,3 @@
 icons
 iconDrag
-	^self ukIcon: 'navicon'
+	^self fasIcon: 'arrows-alt'

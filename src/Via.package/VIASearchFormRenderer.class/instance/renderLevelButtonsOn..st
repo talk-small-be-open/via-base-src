@@ -1,10 +1,9 @@
 rendering
 renderLevelButtonsOn: html
-	self wd exerciseLevels do: [:eachLevel |
-		"html anchor"
+	levelTags do: [:eachLevel |
 		html button
 			beSubmit;
-			callback: [self performWithExerciseLevel: eachLevel];
+			callback: [self performWithLevelTag: eachLevel];
 			class: ('uk-button level-', eachLevel asLowercase);
-			class: 'selected' if: (query includesExerciseLevel: eachLevel);
+			class: 'selected' if: (query moduleClassification levelTag = eachLevel);
 			with: eachLevel].

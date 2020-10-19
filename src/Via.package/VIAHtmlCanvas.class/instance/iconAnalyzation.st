@@ -1,3 +1,3 @@
 icons
 iconAnalyzation
-	^self ukIcon: 'circle'
+	^self ukIcon: 'grid'

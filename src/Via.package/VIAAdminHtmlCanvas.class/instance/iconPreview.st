@@ -1,3 +1,3 @@
 icons
 iconPreview
-	^self ukIcon: 'play'
+	^self farIcon: 'eye'

@@ -1,3 +1,3 @@
 icons
 iconDragVertical
-	^self ukIcon: 'arrows-v'
+	^self fasIcon: 'arrows-alt-v'

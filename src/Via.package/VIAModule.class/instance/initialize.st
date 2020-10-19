@@ -5,7 +5,6 @@ initialize
 
 	self clear.
 	title := '<Unbenannt>'.
-	exerciseLevel := 'A1'.
 	createdAt := DateAndTime now.
 	self beDraft.
 

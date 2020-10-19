@@ -5,12 +5,11 @@ helloJavascript
 	facebookId := self propertyAt: #facebookAppId ifAbsent: ['false'].
 	googleId := self propertyAt: #googleClientId ifAbsent: ['false'].
 	
-	^'$(document).ready(function(){
-
+	^'
+window.addEventListener("DOMContentLoaded", function() {
 	hello.init({
 		facebook: "', facebookId,'",
 		// windows: WINDOWS_CLIENT_ID,
 		google: "', googleId,'"
 	}, {});
-
 });'

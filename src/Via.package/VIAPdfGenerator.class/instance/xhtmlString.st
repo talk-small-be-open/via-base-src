@@ -11,9 +11,12 @@ fakeSession user: component currentUser."
 	fakeRequestContext
 		push: fakeSession
 		during: [
-			| builder |
+			| builder canvas |
 
-			builder := VIAPrintHtmlCanvas builder
+			canvas := component rendererClass.
+			canvas isForPrint ifFalse: [ canvas := VIAPrintHtmlCanvas ].
+			
+			builder := canvas builder
 				codec: (GRCodec forEncoding: 'utf-8');
 				fullDocument: true;
 				rootBlock: [ :root |

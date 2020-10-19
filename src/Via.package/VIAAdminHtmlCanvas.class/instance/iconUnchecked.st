@@ -1,3 +1,3 @@
 icons
 iconUnchecked
-	^self ukIcon: 'square-o'
+	^self farIcon: 'square'
