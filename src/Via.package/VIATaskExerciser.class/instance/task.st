@@ -1,3 +1,3 @@
 as yet unclassified
 task
-	^exercise task
+	^exerciseGSRENAME task

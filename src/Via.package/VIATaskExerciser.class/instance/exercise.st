@@ -1,3 +1,3 @@
 accessing
 exercise
-	^ exercise
+	^ exerciseGSRENAME

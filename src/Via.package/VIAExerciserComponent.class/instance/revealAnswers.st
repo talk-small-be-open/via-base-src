@@ -2,7 +2,7 @@ actions
 revealAnswers
 	| solution |
 	solution := VIAExerciserSolutionComponent new
-		exercise: exercise;
+		exercise: exerciseGSRENAME;
 "		addBackButton;"
 		yourself.
 

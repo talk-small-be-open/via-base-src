@@ -1,11 +1,11 @@
 obsolete
 renderObjectPairUikit: anObjectPair on: html
 	| jsEventHandler jsEventHandlerStart answerHolder rightObject others |
-	answerHolder := exercise answerOf: anObjectPair.
+	answerHolder := exerciseGSRENAME answerOf: anObjectPair.
 
 "	rightObject := anObjectPair rightPillar."
 	rightObject := answerHolder value.
-	others := exercise answer: #leftOvers of: anObjectPair.
+	others := exerciseGSRENAME answer: #leftOvers of: anObjectPair.
 
 "	answerHolder ifNotEmpty: [rightObject := answerHolder value]."
 	

@@ -2,7 +2,7 @@ rendering-visitor
 renderSelectOne: aSelectOneInput on: html
 	| orderedChoices |
 
-	orderedChoices := exercise propertyAt: #orderedChoices of: aSelectOneInput.
+	orderedChoices := exerciseGSRENAME propertyAt: #orderedChoices of: aSelectOneInput.
 
 	html span class: 'selectOneInput'; with: [
 
