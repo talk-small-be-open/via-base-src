@@ -101,12 +101,16 @@ div.VIALectorshipPrintModuleExerciser {
 		}
 
 		.lectorText {
-				font-family: monospace;
+				font-family: monospace, 'monospace'; // Strange wkhtmltopdf behaviour
 				color: #666;
 		}
 
 		div.VIALectorshipPrintTaskExerciser {
 
+				.solution {
+						text-decoration: underline;
+				}
+				
 				div.taskGroupItem {
 						padding: 1em 5em;
 						margin-bottom: 2em;
@@ -151,25 +155,25 @@ div.VIALectorshipPrintModuleExerciser {
 				}
 
 				ul.selectOneChoices, ul.selectManyChoices, ul.selectPointsChoices {
-						list-style-type: none;
+						list-style-type: square;
 						margin: 0;
 						padding: 3px;
 
 						
-						@indent: 1.5em;
+						//@indent: 1.5em;
 						li {
 								margin: 0;
-								margin-left: @indent; 
+//								margin-left: @indent; 
 								padding: 0;
 
-								span.listItemIcon {
-										position: absolute;
-										margin-left: -@indent;
-								}
+								// span.listItemIcon {
+								// 		position: absolute;
+								// 		margin-left: -@indent;
+								// }
 
-								span.listItemContent {
-										// float: left;
-								}
+								// span.listItemContent {
+								// 		// float: left;
+								// }
 						}
 				}
 
@@ -234,20 +238,22 @@ div.VIALectorshipPrintModuleExerciser {
 
 						.selectOneInput {
 								ul.selectOneChoices {
+										@border: 1px solid black;
+										@padding: 5px;
+
 										list-style-type: none;
 										margin: 0;
-										padding: 3px;
+										padding: 0 @padding;
 										display: inline;
-										border: 1px solid #666;
+										border: @border;
 										li {
-												@padding: 5px;
 												margin: 0;
 												display: inline;
 												padding-right: @padding;
 
 												&:not(:first-child) {
 														padding-left: @padding;
-														border-left: 2px solid black;
+														border-left: @border;
 												}
 
 												&:last-child {
@@ -281,6 +287,11 @@ div.VIALectorshipPrintModuleExerciser {
 										border-top: 2px solid black;
 								}
 						}
+				}
+
+				div.transcriptionText {
+						border: 1px solid black;
+						padding: 1em;
 				}
 		}
 }
