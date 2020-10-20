@@ -1,8 +1,8 @@
 rendering
 renderExerciser: aTaskExerciser index: anInteger on: html
-	html div class: 'taskTitle'; with: [
+	html heading level2; class: 'taskTitle'; with: [
 		html span: anInteger.
-		html space.
+		html span: '. '.
 		html span: aTaskExerciser task title.
 		html space.
 		html span: [

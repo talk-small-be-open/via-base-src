@@ -2,8 +2,8 @@ rendering-visitor
 renderSelectMany: aSelectManyInput on: html
 	| answerValue regionDiv  answerCollection orderedChoices |
 
-	answerValue := exercise answerOf: aSelectManyInput.
-	orderedChoices := exercise propertyAt: #orderedChoices of: aSelectManyInput.
+	answerValue := exerciseGSRENAME answerOf: aSelectManyInput.
+	orderedChoices := exerciseGSRENAME propertyAt: #orderedChoices of: aSelectManyInput.
 
 	answerCollection := answerValue value.
 

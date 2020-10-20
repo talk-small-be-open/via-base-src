@@ -1,3 +1,3 @@
 accessing
 setExercise: anObject
-	exercise := anObject
+	exerciseGSRENAME := anObject

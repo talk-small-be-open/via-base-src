@@ -1,4 +1,3 @@
 actions
 restart
-	playerNumber := nil.
-	self start
+	self reset

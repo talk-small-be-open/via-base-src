@@ -2,11 +2,11 @@ rendering
 renderRandomizationPageOn: html
 	playerNumber = 1
 		ifTrue: [
-			self ensureRandomCode.
+"			self ensureRandomCode."
 			html paragraph: [html t: 'tandemSequence:forwardThisRandomCode'].
 			html div class: 'randomCode'; with: randomCode.
 			html ukAnchorButton
-				callback: [ self start ];
+				callback: [ self startWithRandomCode: randomCode ];
 				t: 'tandemSequence:okStartRandom'.
 			^self.
 		]

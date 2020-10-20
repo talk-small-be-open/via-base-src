@@ -1,7 +1,7 @@
 rendering-visitor
 renderObjectPair: anObjectPair on: html
 	| answerHolder rightObject  |
-	answerHolder := exercise answerOf: anObjectPair.
+	answerHolder := exerciseGSRENAME answerOf: anObjectPair.
 
 	rightObject := answerHolder value.
 
