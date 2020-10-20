@@ -56,20 +56,27 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'wkhtmltopdf', 'xpra', 'pigz', 'cronic', 'duplicity', 'iperf3' ]
+      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'xpra', 'pigz', 'cronic', 'duplicity', 'iperf3' ]
       state: present
 
       
-  # - name: Check if wkhtmltopdf is present
-  #   stat:
-  #     path: /usr/local/bin/wkhtmltopdf
-  #   register: result
+  - name: Check if wkhtmltopdf is present
+    stat:
+      path: /usr/local/bin/wkhtmltopdf
+    register: result
     
-  # - name: Install special version of wkhtmltopdf
-  #   apt:
-  #     deb: https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
-  #   when: result.stat.exists == false
+  # TODO: Make simpler, use the official version, if that will generate PDFs without qt-errors
+  - name: Install special version of wkhtmltopdf (be aware for ubuntu 18.04)
+    apt:
+      deb: https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.bionic_amd64.deb
+    when: result.stat.exists == false
 
+  - name: wkhtmltopdf link for binary in /usr/bin
+    file:
+      dest: "/usr/bin/wkhtmltopdf"
+      src: "/usr/local/bin/wkhtmltopdf"
+      state: link
+    
 
   - name: ImageMagick policy File (to allow processing of PDF, ...)
     copy:

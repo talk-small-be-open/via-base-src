@@ -129,6 +129,10 @@ http {
             internal;
             root /;
         }
+        location {{via.installationPath}}/via_base/tmp {
+            internal;
+            root /;
+        }
 
         # Custom error page, if App is not running (looks nicer)
         error_page 502 /errors/502.html;
