@@ -4,7 +4,10 @@ renderQuestionAndAnswerOn: html
 	id := html nextId.
 	html div class: 'questionAndAnswer current'; with: [
 		self renderQuestionOn: html.
-		html div class: 'answer'; class: self playerCss; with: [
+		html div class: 'answer'; class: self playerInTurnCss; with: [
+"			html span class: 'playerLabel'; with: self playerInTurnLetter.
+			html span: '(Me)'."
+			
 			html div
 				ukToggleFadeTarget: ('#', id);
 				class: 'answerIcon';

@@ -1,3 +1,3 @@
 accessing
-start
+startGame
 	self gotoQAndA: 1

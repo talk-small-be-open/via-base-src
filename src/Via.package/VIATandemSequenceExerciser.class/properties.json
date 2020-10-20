@@ -12,7 +12,8 @@
 		"total",
 		"totalPlayers",
 		"sequence",
-		"randomCode"
+		"randomCode",
+		"randomizationDone"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"
