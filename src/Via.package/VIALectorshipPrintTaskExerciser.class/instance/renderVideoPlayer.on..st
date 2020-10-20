@@ -10,5 +10,6 @@ renderVideoPlayer: aVideoPlayer on: html
 
 		aVideoPlayer hasTranscription ifTrue: [
 			html div class: 'transcriptionText'; with: [
+				html lectorText: 'Trascription:'; break.
 				html pillar: aVideoPlayer transcriptionPillar pillarDocument]].
 	]

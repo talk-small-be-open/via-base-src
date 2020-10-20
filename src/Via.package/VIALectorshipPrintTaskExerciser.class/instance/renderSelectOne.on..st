@@ -1,19 +1,14 @@
 rendering-visitor
 renderSelectOne: aSelectOneInput on: html
-	| orderedChoices |
-
-	orderedChoices := exerciseGSRENAME propertyAt: #orderedChoices of: aSelectOneInput.
 
 	html span class: 'selectOneInput'; with: [
 
-		orderedChoices ifNotNil: [
+		aSelectOneInput choices ifNotNil: [
 			html unorderedList class: 'selectOneChoices'; with: [
-				orderedChoices do: [:each |
+				aSelectOneInput choices do: [:each |
 					html listItem
 						class: 'solution' if: (aSelectOneInput solutions includes: each);
-						with: [
-							html span class: 'listItemIcon'; with: [html iconUnchecked; space].
-							html span class: 'listItemContent'; with: each].
+						with: each.
 				]]].
 
-		self renderFootnoteSymbolOfBrick: aSelectOneInput on: html].
+		self renderFootnoteSymbolOfBrick: aSelectOneInput on: html]

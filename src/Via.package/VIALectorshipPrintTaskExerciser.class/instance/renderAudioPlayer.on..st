@@ -6,4 +6,5 @@ renderAudioPlayer: anAudioPlayer on: html
 
 		anAudioPlayer hasTranscription ifTrue: [
 			html div class: 'transcriptionText'; with: [
+				html lectorText: 'Transcription:'; break.
 				html pillar: anAudioPlayer transcriptionPillar pillarDocument]]]
