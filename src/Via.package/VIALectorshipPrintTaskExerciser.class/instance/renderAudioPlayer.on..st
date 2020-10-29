@@ -1,7 +1,7 @@
 rendering-visitor
 renderAudioPlayer: anAudioPlayer on: html
 	html div class: 'audioPlayer'; with: [
-		html iconAudio; space.
+		html iconAudio.
 		html text: 'AUDIO'.
 
 		anAudioPlayer hasTranscription ifTrue: [

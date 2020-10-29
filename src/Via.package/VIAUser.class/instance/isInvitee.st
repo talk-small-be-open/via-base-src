@@ -1,0 +1,3 @@
+accessing
+isInvitee
+	^ isInvitee = true

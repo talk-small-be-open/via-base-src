@@ -15,7 +15,8 @@
 		"termsAccepted",
 		"properties",
 		"rememberToken",
-		"useAutologin"
+		"useAutologin",
+		"isInvitee"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

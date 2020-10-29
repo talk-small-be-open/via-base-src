@@ -1,3 +1,3 @@
 adding
 addUser: aUser
-	users add: aUser
+	users addIfNotPresent: aUser

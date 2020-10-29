@@ -6,7 +6,8 @@ renderDragDrop: aDragDropInput on: html
 	html span
 		class: 'dragDropTarget';
 		with: [
-			aDragDropInput solutions do: [:each |
+			aDragDropInput choices do: [:each |
 				html span
+					class: 'solution' if: (aDragDropInput isSolution: each);
 					class: 'dragDropDraggable';
 					with: [html pillarString: each object]]]

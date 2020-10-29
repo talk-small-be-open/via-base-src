@@ -1,3 +1,3 @@
 as yet unclassified
 maxPoints
-	^choices max: [:each | each first]
+	^(choices max: [:each | each first]) ifNil: [ 0 ]
