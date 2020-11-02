@@ -1,7 +1,10 @@
 rendering-visitor
 renderTextInput: aPlaceholder on: html
 	html div class: 'inputEditor'; with: [
-		aPlaceholder code ifNotBlank: [ :c | html heading level2; with: c ].
+		aPlaceholder code ifNotBlank: [ :c |
+			html heading level2; with: [
+				html text: 'Text input: '.
+				html text: c ] ].
 		html label: 'Hint: '.
 		html textArea
 			on: #hintText of: aPlaceholder.

@@ -1,6 +1,9 @@
 rendering
 renderContentOn: html
-	html paragraph with: [html tOrS: message].
+	html div
+		class: css;
+		with: [
+			html tOrS: message].
 	"Render as button, that robots dont klick it"
 	html form: [
 		html ukSubmitButton

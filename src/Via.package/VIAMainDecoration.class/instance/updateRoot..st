@@ -9,15 +9,3 @@ updateRoot: anHtmlRoot
 	
 	"OPTIMIZE: Performance?"
 	self updateRootPwa: anHtmlRoot.
-		
-	anHtmlRoot htmlAttributes
-		at: 'lang' put: self session languageCode.
-		
-	self isDevelopment
-		ifTrue: [
-			anHtmlRoot title: 'VIA DEVELOPMENT ', self session language.
-			anHtmlRoot bodyAttributes addClass: 'development'.
-		]
-		ifFalse: [
-			anHtmlRoot title: (self session website title).
-		]

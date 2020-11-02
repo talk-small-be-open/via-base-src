@@ -1,7 +1,10 @@
 rendering-visitor
 renderSelectOne: aSelectOneInput on: html
 	html div class: 'inputEditor'; with: [
-		aSelectOneInput code ifNotBlank: [ :c | html heading level2; with: c ].
+		aSelectOneInput code ifNotBlank: [ :c |
+			html heading level2; with: [
+				html text: 'Select one: '.
+				html text: c] ].
 "		html heading level5; with: [
 			html text: 'Multiple choice (single answer): '.
 			html text: aSelectOneInput code]."

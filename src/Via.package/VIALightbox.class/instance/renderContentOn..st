@@ -7,7 +7,8 @@ renderContentOn: html
 	
 	html div
 		a: 'uk-modal';
-		id: 'lightboxModal';
+		class: 'lightboxModal';
+"		id: 'lightboxModal';"
 		with: [
 			html div
 				class: 'uk-modal-dialog';
@@ -20,4 +21,4 @@ renderContentOn: html
 
 	"TODO: Frontend/Backend agnostisch werden"
 	self isFrontend ifTrue: [
-		html scriptDefer: 'UIkit.modal("#lightboxModal", {escClose: false, bgClose: false}).show()']
+		html scriptDefer: 'UIkit.modal(".lightboxModal", {escClose: false, bgClose: false}).show()']

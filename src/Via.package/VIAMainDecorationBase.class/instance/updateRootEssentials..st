@@ -23,7 +23,6 @@ updateRootEssentials: anHtmlRoot
 		beShortcutIcon;
 		url: '/favicon.ico'.
 
-
 	anHtmlRoot htmlAttributes
 		at: 'lang' put: self session languageCode.
 		

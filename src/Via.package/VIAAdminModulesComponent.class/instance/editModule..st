@@ -3,4 +3,4 @@ editModule: aModule
 	selectedModule := aModule.
 	self show: ((VIAModuleEditor model: aModule)
 		addBackButton;
-		yourself)
+		yourself) onAnswer: [ self refresh ]

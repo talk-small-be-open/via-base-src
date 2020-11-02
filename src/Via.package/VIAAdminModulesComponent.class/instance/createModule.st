@@ -9,6 +9,4 @@ createModule
 	
 	self wd addModule: module.
 	
-	self refresh.
-	
 	self editModule: module
