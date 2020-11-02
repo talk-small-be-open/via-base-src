@@ -51,5 +51,6 @@ Ask your developer for available styles (CSS).
 	html strong: 'Use special Pillar characters:'.
 	html preformatted: '\+ will output a "+" plus sign.
 \* will output a "*" star sign.
+\_ will output a "_" underscore sign.
 '
 ]]
