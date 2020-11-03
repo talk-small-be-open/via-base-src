@@ -17,5 +17,5 @@ while getopts "n" opt; do
 		esac
 done
 
-
-ansible-playbook -i ./site/inventory_$1.yml -e instanceName=$1 $GEMSTONE_ONLY --ask-become-pass playbook_deploy.yml
+# NOT needed: --ask-become-pass
+ansible-playbook -i ./site/inventory_$1.yml -e instanceName=$1 $GEMSTONE_ONLY playbook_deploy.yml
