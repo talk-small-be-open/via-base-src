@@ -5,4 +5,5 @@
 # Usage: ./update.sh <name of instance>
 # Example: ./update.sh production
 
-ansible-playbook -i site/inventory_$1.yml -e instanceName=$1 --ask-become-pass playbook_update.yml
+# NOT needed: --ask-become-pass
+ansible-playbook -i site/inventory_$1.yml -e instanceName=$1 playbook_update.yml

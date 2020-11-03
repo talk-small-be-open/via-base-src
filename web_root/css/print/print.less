@@ -86,6 +86,10 @@
 //
 div.VIALectorshipPrintModuleExerciser {
 
+		// Better readability for lector ?
+		// font-size: 120%;
+		// line-height: 1.5em;
+		
 		h1.moduleTitle {
 				// span.logo {
 				// 		font-size: 50%;
@@ -107,6 +111,7 @@ div.VIALectorshipPrintModuleExerciser {
 
 		div.VIALectorshipPrintTaskExerciser {
 
+				
 				.solution {
 						text-decoration: underline;
 				}
@@ -127,6 +132,7 @@ div.VIALectorshipPrintModuleExerciser {
 //						.clozeTextPlaceholder();
 						display: inline-block;
 						min-height: 1em;
+						padding: 0 0.3em;
 						vertical-align: middle;
 						border-bottom: 2px solid black;
 				}
@@ -208,20 +214,12 @@ div.VIALectorshipPrintModuleExerciser {
 						
 				}
 
-				div.dragDropDraggables {
-						background-color: transparent !important;
-
-						span.dragDropDraggable {
-								border: 1px dotted black;
-								margin: 0 1em;
-						}
-				}
-				
-				span.dragDropTarget {
-						background-color: transparent !important;
-				}
-				
+								
 				div.clozeText {
+
+						// For elements which will be rendered in a framed box
+						@frameBorder: 1px solid black;
+						@framePadding: 5px;
 
 						span.footnoteReference {
 								font-style: inherit;
@@ -238,22 +236,20 @@ div.VIALectorshipPrintModuleExerciser {
 
 						.selectOneInput {
 								ul.selectOneChoices {
-										@border: 1px solid black;
-										@padding: 5px;
 
 										list-style-type: none;
 										margin: 0;
-										padding: 0 @padding;
+										padding: 0 @framePadding;
 										display: inline;
-										border: @border;
+										border: @frameBorder;
 										li {
 												margin: 0;
 												display: inline;
-												padding-right: @padding;
+												padding-right: @framePadding;
 
 												&:not(:first-child) {
-														padding-left: @padding;
-														border-left: @border;
+														padding-left: @framePadding;
+														border-left: @frameBorder;
 												}
 
 												&:last-child {
@@ -266,6 +262,26 @@ div.VIALectorshipPrintModuleExerciser {
 										}
 								}
 						}
+
+						span.dragDropTarget {
+								padding: 0 @framePadding;
+								border: @frameBorder;
+								background-color: transparent !important;
+
+								span.dragDropDraggable {
+										padding-right: @framePadding;
+
+										&:not(:first-child) {
+												padding-left: @framePadding;
+												border-left: @frameBorder;
+										}
+
+										&:last-child {
+												padding-right: 0;
+										}
+								}
+						}
+						
 				}
 
 				div.moduleFootnotes {
