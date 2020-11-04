@@ -1,10 +1,10 @@
 obsolete
 renderObjectPairJquery: anObjectPair on: html
 	| answerHolder rightObject others jsEventHandler rightObjectId |
-	answerHolder := exerciseGSRENAME answerOf: anObjectPair.
+	answerHolder := exercise answerOf: anObjectPair.
 
 	rightObject := answerHolder value.
-	others := exerciseGSRENAME answer: #leftOvers of: anObjectPair.
+	others := exercise answer: #leftOvers of: anObjectPair.
 
 	rightObjectId := html nextId.
 

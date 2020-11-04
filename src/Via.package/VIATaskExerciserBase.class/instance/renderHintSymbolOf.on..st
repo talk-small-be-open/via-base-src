@@ -6,7 +6,7 @@ renderHintSymbolOf: aBrick on: html
 			#title->''.
 			#content->(VIAHelper inlineHtmlFromPillar: aBrick hintText).
 			#closeable->false.
-			#placement->'top'.
+			#placement->'auto-top'.
 			#trigger->'hover'.
 			#multi->true.
 			#padding->true.

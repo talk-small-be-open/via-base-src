@@ -2,8 +2,8 @@ rendering-visitor
 renderSelectOneRadio: aSelectOneInput on: html
 	| div answerValue input orderedChoices |
 
-	answerValue := exerciseGSRENAME answerOf: aSelectOneInput.
-	orderedChoices := exerciseGSRENAME propertyAt: #orderedChoices of: aSelectOneInput.
+	answerValue := exercise answerOf: aSelectOneInput.
+	orderedChoices := exercise propertyAt: #orderedChoices of: aSelectOneInput.
 
 	self renderHintSymbolOf: aSelectOneInput on: html.
 
