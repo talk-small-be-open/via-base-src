@@ -63,7 +63,12 @@ http {
             include snippets/fastcgi-php.conf;
             fastcgi_pass unix:/run/php/php7.2-fpm.sock;
         }
-        
+
+				# If root is accessed, then redirect to app
+				location = / {
+    		 	  return 301 https://$host/app;
+				}
+
         # General rule, serve static file or redirect to app
         location / {
 
