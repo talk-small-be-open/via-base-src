@@ -10,7 +10,8 @@
 		"titlePrefix",
 		"videoCounter",
 		"audioCounter",
-		"imageCounter"
+		"imageCounter",
+		"fileCounter"
 	],
 	"name" : "VIAGatherAssetFilesForFrontendZipPackageVisitor",
 	"type" : "normal"

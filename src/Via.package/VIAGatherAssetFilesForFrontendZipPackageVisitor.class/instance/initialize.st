@@ -7,4 +7,5 @@ initialize
 	videoCounter := 1.
 	audioCounter := 1.
 	imageCounter := 1.
+	fileCounter := 1.
 	titlePrefix := nil

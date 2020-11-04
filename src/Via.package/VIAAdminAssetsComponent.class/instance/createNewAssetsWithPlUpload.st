@@ -2,7 +2,7 @@ actions
 createNewAssetsWithPlUpload
 	| assetClass |
 		
-	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Type?'.
+	assetClass := self chooseFrom: VIAMediaAsset subclasses title: 'Type?'.
 	assetClass ifNotNil: [
 
 		uploader := VIAPlUploadComponent new

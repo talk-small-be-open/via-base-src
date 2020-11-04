@@ -6,11 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"fileReference",
-		"aspectRatio",
-		"width",
-		"duration"
+		"fileReference"
 	],
-	"name" : "VIAVideoAsset",
+	"name" : "VIADocumentAsset",
 	"type" : "normal"
 }
