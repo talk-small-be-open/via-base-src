@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExternalVideoPlayer",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAVimeoVideoPlayer",
+	"type" : "normal"
+}

@@ -7,7 +7,7 @@ createNewAssetUpload
 		targetRelativePath: self website assetsRelativePath;
 		yourself.
 	
-	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Typ?'.
+	assetClass := self chooseFrom: VIAMediaAsset subclasses title: 'Typ?'.
 	assetClass ifNotNil: [
 		self show: uploader onAnswer: [:answer |
 			answer ifNotNil: [

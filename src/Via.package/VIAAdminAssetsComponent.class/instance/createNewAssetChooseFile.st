@@ -1,7 +1,7 @@
 actions
 createNewAssetChooseFile
 	| assetClass |
-	assetClass := self chooseFrom: {VIAImageAsset. VIAAudioAsset. VIAVideoAsset} title: 'Typ?'.
+	assetClass := self chooseFrom: VIAMediaAsset subclasses title: 'Typ?'.
 	assetClass ifNotNil: [
 	| path asset reference filename |
 		path := self request: 'Relative path (no slashes)?' default: 'assets'.
