@@ -21,7 +21,7 @@ visitViaPrAssetImage: aViaPrAssetImage
 					#title->''.
 					#content->(VIAHelper inlineHtmlFromPillar: text).
 					#closeable->true.
-					#placement->'top'.
+					#placement->'auto-top'.
 					#trigger->'click'.
 					#multi->true.
 					#padding->true.

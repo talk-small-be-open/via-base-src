@@ -1,3 +1,3 @@
 as yet unclassified
 module
-	^exerciseGSRENAME module
+	^exercise module

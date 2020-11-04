@@ -4,7 +4,7 @@ iconActivityType: anActivityTypeTag
 	popoverOptions := {
 		#title->anActivityTypeTag displayName.
 		#closeable->false.
-		#placement->'top'.
+		#placement->'auto-top'.
 		#trigger->'hover'.
 		#multi->true.
 		#padding->true.

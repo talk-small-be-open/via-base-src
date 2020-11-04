@@ -2,7 +2,7 @@ rendering-visitor
 renderSelectMany: aSelectManyInput on: html
 	| orderedChoices |
 
-	orderedChoices := exerciseGSRENAME propertyAt: #orderedChoices of: aSelectManyInput.
+	orderedChoices := exercise propertyAt: #orderedChoices of: aSelectManyInput.
 
 	html div
 		class: 'selectMany';

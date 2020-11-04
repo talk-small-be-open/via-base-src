@@ -1,4 +1,4 @@
 as yet unclassified
 check
-	exerciseGSRENAME checkAnswers
+	exercise checkAnswers
 "	self tryToFinish."
