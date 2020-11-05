@@ -129,12 +129,16 @@ http {
         }
 
 
-        # X-Sendfile for generated files (ZIP, PDF, ...)
+        # X-Sendfile for generated files (ZIP, PDF, ...) and asset file download
         location {{via.installationPath}}/tmp {
             internal;
             root /;
         }
         location {{via.installationPath}}/via_base/tmp {
+            internal;
+            root /;
+        }
+        location {{via.installationPath}}/via_base/web_root/assets {
             internal;
             root /;
         }
