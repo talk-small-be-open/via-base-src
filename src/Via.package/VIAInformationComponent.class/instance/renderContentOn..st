@@ -1,6 +1,7 @@
 rendering
 renderContentOn: html
 	html div
+		class: 'message';
 		class: css;
 		with: [
 			html tOrS: message].
