@@ -6,9 +6,7 @@
 # Dieses Script ist noch nicht gut getestet. Nur manuell die einzelnen Schritte durchführen
 exit
 
-
 STONE=$1
-
 
 export GS_HOME=/opt/GsDevKit_home
 STONE_DIR=$GS_HOME/server/stones/$STONE
@@ -19,7 +17,7 @@ rm -f $LOGFILE
 # Prohibit that the last temporary shrinked DB data file will be used accidentally. Delete it.
 rm -f $STONE_DIR/backups/$BACKUPNAME
 
-# Stop all Seaside processes
+# Stop all seaside processes
 ./monit_stop_web_gems.sh
 #./monit_stop_netldi.sh
 
@@ -47,25 +45,9 @@ pushd $STONE_DIR/extents/
 mv --backup=numbered extent0.dbf _before_shrink_extent0.dbf
 popd
 
-# Get a pristine DB
-#newExtent -s /opt/321via/GsDevKit_home/shared/downloads/products/GemStone64Bit3.2.12-x86_64.Linux/seaside/data/extent0.dbf $STONE
-
-# TODO: Optionen mit direktem reinladen? Siehe auch 321 update prozess?
-# TODO: ... oder restore von snapshot ...tode.dbf.gz
-#newExtent $STONE
-#todeLoad $STONE
-
-#cp $STONE_DIR/snapshots/extent0.tode.dbf $STONE_DIR/extents/extent0.dbf
-
+# -t oder -a? um die tode Struktur beizubehalten
 newExtent -t -s $STONE_DIR/backups/$BACKUPNAME $STONE
-
-# start stone for restore
-#startStone -R $STONE
-
-# Hat nicht funktioniert, aber das Pendant dazu via tode-Client manuell schon
-# TODO: todeRestore $STONE $BACKUPNAME
-
-# Stop & Start
+# Oder?  todeIt ViaSiteTdu mount @/sys/stone/dirs/Seaside3/tode /home seaside
 
 stopStone $STONE
 
