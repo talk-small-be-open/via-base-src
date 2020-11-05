@@ -1,5 +1,5 @@
 #!/bin/bash
 
-sudo monit -g via_gemstone_gems stop
-sudo monit stop via_gemstone_netldi
-sudo monit stop via_gemstone_stone
+./monit_stop_web_gems.sh
+./monit_stop_netldi.sh
+./monit_stop_stone.sh

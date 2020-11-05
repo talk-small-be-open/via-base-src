@@ -1,5 +1,6 @@
 #!/bin/bash
 
-PORT=$1
+STONE=$1
+PORT=$2
 
-$GS_HOME/bin/todeIt $1 /home/seaside/gemServer --stop=seaside$PORT
+$GS_HOME/bin/todeIt $STONE /home/seaside/gemServer --stop=seaside$PORT
