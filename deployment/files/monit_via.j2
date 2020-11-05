@@ -4,8 +4,8 @@ set alert {{via.adminEmail}}
 check process via_gemstone_stone matching "^/opt/.*/sys/stoned {{stoneName}} .*$"
 			ONREBOOT START
 			MODE ACTIVE
-			start program = "/bin/bash -l /opt/via/via_base/server/start_gemstone.sh {{stoneName}}" as uid "{{remoteUser}}" gid "adm"
-			stop program = "/bin/bash -l /opt/via/via_base/server/stop_gemstone.sh {{stoneName}}" as uid "{{remoteUser}}" gid "adm" with timeout 90 seconds
+			start program = "/bin/bash -l /opt/via/via_base/server/start_stone.sh {{stoneName}}" as uid "{{remoteUser}}" gid "adm"
+			stop program = "/bin/bash -l /opt/via/via_base/server/stop_stone.sh {{stoneName}}" as uid "{{remoteUser}}" gid "adm" with timeout 90 seconds
  			if 7 restarts within 10 cycles then stop
 #			if totalmem > 700 Mb then alert
 			if cpu > 60% for 4 cycles then alert
