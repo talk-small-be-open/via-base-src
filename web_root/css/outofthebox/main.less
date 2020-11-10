@@ -271,20 +271,7 @@ img.icon {
 //
  
 body.loggedIn {
-//		background-color: lighten(desaturate(@global-primary-background, 30%), 110%, relative);
-//		background-color: #eee;
-
-		// Kein Background mehr laut Sara
-		// background-image: @fixed-background-b;	
-		// -webkit-background-size: cover;
-		// -moz-background-size: cover;
-		// -o-background-size: cover;
-		// background-size: cover;
-		// background-attachment: fixed;
-
-
 		div.core {
-//				background: rgba(255,255,255,0.8);
 				background-color: white;
 				min-height: 500px;
 		}
@@ -453,21 +440,6 @@ div.moduleCard {
 }
 
 
-//
-// Personal portfolio
-//
-div.VIAMyPortfolioComponent {
-		div.certificatePreview {
-				border: 20px white solid;
-				margin-top: 15px;
-		}
-
-		a.certificatePreview,
-		a.certificatePreview:hover {
-				color: inherit;
-		}
-
-}
 
 
 
@@ -509,28 +481,11 @@ div.VIAModuleExerciser {
 		}
 
 		div.hiddenTaskExercise {
-				// Nicht display:none, weil das Berechnungen mit Breite etc. nicht möglich macht
-				
-				// height: 0px;
-				// visibility: hidden;
-				// overflow: hidden;
-
-				// position: absolute; 
-				// overflow: hidden; 
-				// clip: rect(0 0 0 0); 
-				// height: 1px; width: 1px; 
-				// margin: -1px; padding: 0; border: 0; 
-
-				
 				position: absolute !important;
 				top: -9999px !important;
 				left: -9999px !important;
 				width: 100%; // TODO: Smarter, aber ich fand nicht heraus, wo die Breite drin steht. Wir brauchen aber eine feste Breite, damit die Berechnung per JS OK ist
 				visibility: hidden;
-				
-				// div.VIAExerciserComponent {
-				// 		height: 0px;
-				// }
 		}
 
 		div.moduleDetails {
@@ -557,30 +512,7 @@ div.VIAModuleExerciser {
 		div.teacherNotes {
 				.uk-hidden();
 		}
-
-
-		
 }
-
-//
-// Exam Exerciser
-//
-div.VIAExamModuleExerciser {
-
-		div.submitExam {
-
-				margin-top: 75px;
-				
-				.uk-button.submitExam {
-						background: #f00;
-						color: #fff;
-						border:  0px;
-						padding: 10px;
-						font-size: 1.2em;
-				}
-		}
-}
-
 
 
 // nav.navbar {
@@ -1448,9 +1380,6 @@ div.moduleScore {
 				}
 				
 		}
-}
-
-div.moduleMenu {
 }
 
 div.moduleBody {

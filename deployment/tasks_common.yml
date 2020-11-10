@@ -195,7 +195,6 @@
   # CRON JOBS
   #
 
-  # TODO: Port 80 kann nicht gebraucht werden
   - name: set SHELL in cron (root)
     cron:
       env: yes

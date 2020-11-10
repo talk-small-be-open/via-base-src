@@ -16,19 +16,20 @@ Script for command line usage:
 
 Scripts used by cron. Can also be used at command line if required:
 
-	backup.sh
-	backup_gemstone_db.sh
-	backup_with_duplicity.sh
+	backup.sh STONE [DUPLICITY_TARGET]
+	backup_gemstone_db.sh STONE
+	backup_with_duplicity.sh STONE [DUPLICITY_TARGET]
 	delete_old_tmp_files.sh
 	delete_old_tranlogs.sh
 
 Auxiliary scripts for monit. If you use them, make sure monit is not monitoring concurrently:
 
-	start_gemstone.sh
-	start_netldi.sh
-	start_web_gem.sh
-	start_web_gems.sh
-	stop_gemstone.sh
-	stop_netldi.sh
-	stop_web_gem.sh
-	stop_web_gems.sh
+	monit_start_stone.sh
+	monit_start_netldi.sh
+	monit_start_web_gems.sh
+	monit_stop_stone.sh
+	monit_stop_netldi.sh
+	monit_stop_web_gems.sh
+
+	start_web_gem.sh STONE PORT
+	stop_web_gem.sh STONE PORT

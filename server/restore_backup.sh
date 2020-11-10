@@ -14,8 +14,8 @@ source "/opt/via/.duplicity.cred"
 # Relocate the original files
 
 # Stop GemStone processes
-sudo monit -g via_gemstone_gems stop
-sudo monit stop via_gemstone_stone
+./monit_stop_web_gems.sh
+./monit_stop_stone.sh
 
 
 #

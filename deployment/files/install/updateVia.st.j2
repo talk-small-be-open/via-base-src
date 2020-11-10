@@ -9,5 +9,7 @@ VIAApplicationManager current
 	WAAdmin developmentToolsEnabled ifFalse: [ WAAdmin enableDevelopmentTools ].
 {% else %}
 	WAAdmin developmentToolsEnabled ifTrue: [ WAAdmin disableDevelopmentTools ].
+	WAAdmin unregister: 'config'.
+	VIAApplicationManager removeDevelopmentSeasideComponents.
 {% endif %}
 ].
