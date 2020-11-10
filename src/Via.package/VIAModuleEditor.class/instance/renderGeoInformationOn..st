@@ -1,7 +1,8 @@
 as yet unclassified
 renderGeoInformationOn: html
-	| exists |
+	| exists hasFormElements |
 	exists := model geocodes notEmpty.
+	hasFormElements := false.
 	
 	html div: [
 		html label: 'Geo information'.
@@ -26,10 +27,11 @@ renderGeoInformationOn: html
 							html span: 'Original search text: '.
 							html span: gc searchString.
 						] ifFalse: [
+							hasFormElements := true.
 							html span: 'Latitude: '.
 							html textInput
 								on: #latitudeString of: gc.
-							html span: 'Longitude: '.
+							html span: ' Longitude: '.
 							html
 								textInput on: #longitudeString of: gc.
 						].
@@ -42,7 +44,7 @@ renderGeoInformationOn: html
 		]]].
 
 		html div class: 'topBuffer'; with: [
-			exists ifTrue: [
+			hasFormElements ifTrue: [
 				html submitButton
 	"				callback: [];"
 					with: 'Accept change'.
@@ -53,12 +55,12 @@ renderGeoInformationOn: html
 			html space.
 			html submitButton
 				callback: [self addBlankGeocode];
-				with: '+ Add blank geo location'.
+				with: '+ Add latitude/longitude'.
 			html space.
 			html anchor
 				url: 'https://www.latlong.net';
 				target: '_blank';
-				with: 'Search online for latitude/longitude ... '
+				with: 'Search online for latitude/longitude'
 		].
 
 		exists ifTrue: [

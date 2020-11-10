@@ -7,13 +7,15 @@ updateRoot: anHtmlRoot
 	
 		
 	"Mediaelement CDN"
+	"OPTIMIZE: Only if needed"
 	anHtmlRoot javascript defer url: 'https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js'.
 	anHtmlRoot stylesheet url: 'https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css'.
 
 	"Youtube embedding"
-	"DONT defer, must be early ready"
-	anHtmlRoot javascript url: '/js/youtube.js'.
+	"OPTIMIZE: Only if needed"
+	anHtmlRoot javascript url: '/js/youtube.js'. "DONT defer, must be early ready"
 	anHtmlRoot javascript defer; url: 'https://www.youtube.com/iframe_api'.
 
 	"Vimeo embedding"
+	"OPTIMIZE: Only if needed"
 	anHtmlRoot javascript defer url: 'https://player.vimeo.com/api/player.js'

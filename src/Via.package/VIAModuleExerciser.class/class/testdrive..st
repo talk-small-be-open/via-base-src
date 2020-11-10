@@ -12,7 +12,7 @@ testdrive: aModule
 			
 		testExercise := VIAModuleExercise module: aModule user: self currentUser.
 		
-		^VIAExamModuleExerciser exam: testExam moduleExercise: testExercise.
+		^VIATduExamModuleExerciser exam: testExam moduleExercise: testExercise.
 	].
 
 	^(self model: aModule) start; yourself

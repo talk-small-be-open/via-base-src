@@ -4,4 +4,4 @@ points
 	
 	^points ifNil: [
 		"OPTIONAL: Mit /correctionCount gewichten"
-		taskBrick maxPoints * (correctness/100)]
+		(taskBrick maxPoints * (correctness/100)) rounded ]

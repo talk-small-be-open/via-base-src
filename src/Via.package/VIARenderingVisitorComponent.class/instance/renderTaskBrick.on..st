@@ -1,3 +1,3 @@
 rendering-visitor
 renderTaskBrick: aTaskBrick on: html
-	html span: '[BAUSTEIN ', aTaskBrick classDisplayName, ']'
+	html span: '[PLACEHOLDER FOR ', aTaskBrick classDisplayName, ']'

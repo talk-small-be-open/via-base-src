@@ -5,6 +5,6 @@ testdrive: aTask module: aModule
 	testExercise := VIATaskExercise task: aTask moduleExercise: moduleExercise.
 	
 	aModule isExam ifTrue: [
-		^VIAExerciserExamComponent exercise: testExercise].
+		^VIATduTaskExerciserExam exercise: testExercise].
 
 	^self exercise: testExercise

@@ -14,7 +14,7 @@ smartFromModule: aModule
 		exam := (aModule examsOfStudent: self currentUser) firstOrNil.
 		
 		exam ifNotNil: [
-			^VIAExamModuleViewExerciser exam: exam.
+			^VIATduExamModuleViewExerciser exam: exam.
 		].
 
 "NICHT, weil: An einer Prüfung teilnehmen geht via gotoExam."

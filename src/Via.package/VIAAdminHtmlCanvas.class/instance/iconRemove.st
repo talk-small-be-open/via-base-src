@@ -1,3 +1,3 @@
 icons
 iconRemove
-	^self farIcon: 'trash'
+	^self farIcon: 'trash-alt'

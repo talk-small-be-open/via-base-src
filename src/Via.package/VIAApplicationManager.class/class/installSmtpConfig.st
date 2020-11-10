@@ -1,17 +1,19 @@
 as yet unclassified
 installSmtpConfig
-	| apps server user password |
+	| apps server user password port |
 
 	apps := OrderedCollection new.
 	apps add: (WAAdmin defaultDispatcher handlerAt: 'app').
 	apps add: (WAAdmin defaultDispatcher handlerAt: 'via-admin').
 
-	server := self db propertyAt: #smtpServer.
-	user := self db propertyAt: #smtpUsername.
-	password := self db propertyAt: #smtpPassword.
+	server := self db propertyAt: #smtpServer default: ['localhost'].
+	user := self db propertyAt: #smtpUsername default: [nil].
+	password := self db propertyAt: #smtpPassword default: [nil].
+	port := self db propertyAt: #smtpPort default: [25].
 	
 	apps do: [:each |
 		each preferenceAt: #smtpServer put: server.
 		each preferenceAt: #smtpUsername put: user.
 		each preferenceAt: #smtpPassword put: password.
+		each preferenceAt: #smtpPort put: port.
 	]

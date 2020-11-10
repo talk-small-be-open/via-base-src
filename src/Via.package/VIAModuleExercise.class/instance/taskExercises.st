@@ -1,3 +1,3 @@
 as yet unclassified
 taskExercises
-	^taskExercises
+	^taskExercises values

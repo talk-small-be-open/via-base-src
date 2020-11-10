@@ -11,7 +11,7 @@ initialize
 		searchFormRenderer := VIASearchFormRenderer component: self query: searchQuery].
 
 	showMap ifNil: [
-		showMap := self wd propertyAt: #showSwissMapOnSearch ifAbsent: [false]].
+		showMap := self isFeature: #showSwissMapOnSearch].
 	
 	showMap ifTrue: [
 		map := VIAModulesMapComponent new.

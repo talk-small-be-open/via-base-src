@@ -8,8 +8,5 @@ renderActions: anAsset on: html
 		callback: [self editAsset: anAsset];
 		with: 'Edit'.
 	html anchor
-		callback: [self deleteAsset: anAsset];
-		with: 'Delete'.
-	html anchor
-		callback: [self showUsingModules: anAsset];
-		with: 'Where?'.
+		callback: [ self openExtraToolsFor: anAsset ];
+		with: 'Tools ...'
