@@ -4,26 +4,9 @@ renderWebsiteSettingsOn: html
 	html form: [
 		html table: [
 			self wd properties keys sorted do: [:key |
-				| value |
-				value := self wd propertyAt: key.
-				(value isString or: [value isNil]) ifTrue: [
-					self renderTextInputLabel: key
-						value: value
-						callback: [:incomingValue | self wd propertyAt: key put: incomingValue]
-						on: html.
-				].
-				(value isKindOf: Boolean) ifTrue: [
-					self renderCheckboxLabel: key
-						value: value
-						callback: [:incomingValue | self wd propertyAt: key put: incomingValue]
-						on: html.
-				].
-				(value isKindOf: Integer) ifTrue: [
-					self renderIntegerLabel: key
-						value: value
-						callback: [:incomingValue | self wd propertyAt: key put: incomingValue]
-						on: html.
-				].
-
-			]].
+				self
+					renderValue: (self wd propertyAt: key)
+					label: key
+					setter: [:incomingValue | self wd propertyAt: key put: incomingValue]
+					on: html]].
 		html submitButton: 'Save']

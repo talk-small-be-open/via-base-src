@@ -1,3 +1,3 @@
 as yet unclassified
 mimeType
-	^nil
+	^self fileReference contentType

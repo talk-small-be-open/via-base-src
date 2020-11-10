@@ -11,7 +11,8 @@
 		"backgroundAdminUser",
 		"viewportWidth",
 		"touchEnabled",
-		"deviceDetectionDone"
+		"deviceDetectionDone",
+		"browserType"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

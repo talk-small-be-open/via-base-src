@@ -2,13 +2,10 @@ as yet unclassified
 renderContentOn: html
 	html div class: 'certificate'; with: [
 		html paragraph class: 'toptext'; t: 'certificate:header'.
-		"'321via.ch: la piattaforma per esercitare competenze ricettive d''italiano con giornali, radio e TV della Svizzera italiana'."
 		html div class: 'logo'; with: [
 			html image
-				url: ('/css/images/', self website logoFilename);
-				style: 'width:150px;height:auto'.
-"				width: '150';
-				height: '169'"].
+				url: ('/site/images/', self website logoFilename);
+				style: 'width:150px;height:auto'].
 		html div class: 'banner'; with: [
 			html span class: 'bannerText'; t: 'certificate:bannerText'.
 			html image url: '/certificate/banner.svg'; width: '600'; height: '131'].
@@ -28,6 +25,7 @@ renderContentOn: html
 				html text: each points greaseString.
 				html text: '/'.
 				html text: each maxPoints greaseString.
+				html space.
 				html t: 'certificate:points'. "' punti'."
 			]].
 		html div class: 'blumeli'; with: [html image url: '/certificate/blumeli.svg'; width: '120'; height: '37'].

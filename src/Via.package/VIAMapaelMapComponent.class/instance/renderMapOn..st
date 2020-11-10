@@ -40,7 +40,8 @@ renderMapOn: html
 		at: 'plots' put: plots.
 		
 	html div
-		class: 'mapContainer swissMap';
+		class: 'mapContainer';
+		class: self mapCss;
 		script: (html jQuery this call: 'mapael' with: mapaelOptions);
 		with: [
 			html div class: 'map'; with: 'Here should be a map ...' ].

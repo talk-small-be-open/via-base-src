@@ -1,3 +1,4 @@
 actions
 resetAllUserTerms
-	self wd users do: [ :each | each termsAccepted: false ]
+	(self confirmYesNo: 'Really?') ifTrue: [
+		self wd users do: [ :each | each termsAccepted: false ]]

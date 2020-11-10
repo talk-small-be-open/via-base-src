@@ -1,5 +1,7 @@
 as yet unclassified
 setDevelopmentProcessEnvironment
+"	Smalltalk os environment at: 'PATH' put: ..."
+	
 "	OSProcess thisOSProcess environmentAt: #PATH put: '/usr/local/bin:/usr/local/sbin:/opt/local/bin:/opt/local/sbin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/mysql/bin'"
 	
 "OSSUnixSubprocess new

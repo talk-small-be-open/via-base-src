@@ -19,12 +19,7 @@ renderDeviceDetectionOn: html
 	html scriptDefer: (
 		(html jQuery ajax
 			callback: [:json | self detectFromJson: json ]
-			value: (JSStream on: '
-JSON.stringify({
-	width: $(window).width(),
-	touch: ("ontouchstart" in document.documentElement),
-})
-');
+			value: (JSStream on: self jsJsonData);
 			onSuccess: ('location.href = url' asFunction: #(url status));
 			dataType: 'text'
-	 ) setTimeout: 1000)
+	 ) setTimeout: 500)

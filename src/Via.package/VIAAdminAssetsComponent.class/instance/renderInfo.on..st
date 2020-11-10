@@ -8,4 +8,10 @@ renderInfo: each on: html
 	].
 	html div class: 'publicComment'; with: (each comment).
 	html div class: 'internalComment'; with: (each internalComment).
-	html div class: 'fileOnDisk'; with: each fileName
+	html div class: 'fileOnDisk'; with: [
+		html text: each fileName.
+		html space.
+		html text: '('.
+		html text: each mimeType.
+		html text: ')'.
+	]
