@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WACookieSessionTrackingStrategy",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaCookieIfAllowedSessionTrackingStrategy",
+	"type" : "normal"
+}

@@ -6,4 +6,6 @@ initialize
 	bodyKey := nil.
 	headingKey := nil.
 	
-	self addCenterContainer
+	self addCenterContainer.
+
+	self addContainerDiv

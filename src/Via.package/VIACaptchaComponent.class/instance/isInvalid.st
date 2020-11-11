@@ -1,0 +1,3 @@
+testing
+isInvalid
+	^isValid = false

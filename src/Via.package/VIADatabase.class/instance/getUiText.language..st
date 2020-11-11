@@ -4,14 +4,6 @@ getUiText: aKey language: aLanguage
 	dictKey := self uiTextKeyFor: aKey language: aLanguage.
 
 	^uiTexts at: dictKey ifAbsent: [
-"failsafe		aKey isTranslationKey
-			ifFalse: [
-				^VIAHelper pillarFromPillarString: aKey]
-			ifTrue: ["
-				"Default in allen Sprachen installieren"
-"				self languages do: [:each |
-					self ensureUiText: aKey language: each
-				]."
 
 				"If not a key, then its probably a normal text"
 				aKey isTranslationKey ifFalse: [ ^ VIAHelper pillarFromPillarString: aKey ].
