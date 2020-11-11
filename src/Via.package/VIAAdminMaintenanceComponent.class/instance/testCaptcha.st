@@ -1,0 +1,3 @@
+tests
+testCaptcha
+	self requestCaptcha

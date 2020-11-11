@@ -11,4 +11,8 @@ renderContentOn: html
 	html anchor
 		url: '/lib/embed_test.html';
 		target: '_blank';
-		with: 'Open Embed-Previewer ...'
+		with: 'Open Embed-Previewer ...'.
+	html break.
+	html anchor
+		callback: [ self testCaptcha ];
+		with: 'Test captcha ...'

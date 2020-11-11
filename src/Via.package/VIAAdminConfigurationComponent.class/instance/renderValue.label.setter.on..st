@@ -10,9 +10,15 @@ renderValue: aValue label: aLabelString setter: aSetterBlock on: html
 				html span: 'Leer'
 			].
 			aValue isString ifTrue: [
-				html textInput
-					callback: aSetterBlock;
-					value: aValue
+				(aValue lines size > 1) ifTrue: [ 
+					html textArea
+						callback: aSetterBlock;
+						value: aValue
+				] ifFalse: [
+					html textInput
+						callback: aSetterBlock;
+						value: aValue
+				]
 			].
 			(aValue isKindOf: Boolean) ifTrue: [
 				html checkbox
@@ -34,6 +40,10 @@ renderValue: aValue label: aLabelString setter: aSetterBlock on: html
 					html anchor
 						callback: [ aSetterBlock value: '' ];
 						with: 'Text'.
+					html space.
+					html anchor
+						callback: [ aSetterBlock value: (String crlf, String crlf) ];
+						with: 'Multiline'.
 					html space.
 					html anchor
 						callback: [ aSetterBlock value: 0 ];
