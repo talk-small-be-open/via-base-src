@@ -1,6 +1,53 @@
 //
 // VIA Javascript Library (Frontend & Backend)
 //
+//
+//
+
+//
+// Cookie consent
+//
+// See https://cookie-bar.eu or https://github.com/ToX82/cookie-bar
+var cookiesAllowed = false;
+function checkCookiesAllowed() {
+	var matchedCookies = document.cookie.match(/(;)?cookiebar=([^;]*);?/);
+	if ( matchedCookies && (matchedCookies[2] == 'CookieAllowed') ) {
+		cookiesAllowed = true;
+	}
+}
+function isCookiesAllowed() {
+	return cookiesAllowed;
+}
+function isCookiesNotAllowed() {
+	return !cookiesAllowed;
+}
+checkCookiesAllowed();
+
+
+//
+// Scroll position restoring
+//
+function saveScroll(id) {
+	if (isCookiesNotAllowed()) { return }
+		
+	var y = $(document).scrollTop();
+	// Kurze Dauer, sonst können sich zuviele anhäufen
+	var inFifteenMinutes = new Date(new Date().getTime() + 15 * 60 * 1000);
+	Cookies.set("page_scroll_" + id, y, { expires: inFifteenMinutes });
+}
+
+function loadScroll(id) {
+	if (isCookiesNotAllowed()) { return }
+
+	var y = Cookies.get("page_scroll_" + id);
+	if (!y) {return}
+	$(document).scrollTop(y);
+}
+
+
+//
+// General library
+//
 
 // Creates group of items whenever their value from borderChecker(item) changes
 // Example: runningGroupArray(['aaa', 'aaa', 'eee', 'ww', 'tt', 'ttt', 'zzz'], function(item){return item.length})
@@ -20,22 +67,7 @@ function runningGroupArray(array, borderChecker) {
 	}, [])
 }
 
-
-function saveScroll(id) {
-	var y = $(document).scrollTop();
-	// Kurze Dauer, sonst können sich zuviele anhäufen
-	var inFifteenMinutes = new Date(new Date().getTime() + 15 * 60 * 1000);
-	Cookies.set("page_scroll_" + id, y, { expires: inFifteenMinutes });
-}
-
-function loadScroll(id) {
-	var y = Cookies.get("page_scroll_" + id);
-	if (!y) {return}
-	$(document).scrollTop(y);
-}
-
-
-/* Markiert den Inhaltstext im Browser eines HTML-Elements. Praktisch für anschliessendes copy/paste */
+// Marks the content text of an element. Used for copy/paste helper */
 function selectTextIn(jQueryElements) {
 	var range = document.createRange();
   var selection = window.getSelection();
@@ -105,3 +137,5 @@ function isInViewport(el){
         rect.left <= (window.innerWidth || document.documentElement.clientWidth)
      );
 }
+
+

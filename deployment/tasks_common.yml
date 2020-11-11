@@ -56,7 +56,27 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'xpra', 'pigz', 'cronic', 'duplicity', 'iperf3' ]
+      name:
+        - 'unattended-upgrades'
+        - 'monit'
+        - 'git'
+        - 'imagemagick'
+        - 'htop'
+        - 'unzip'
+        - 'zip'
+        - 'aptitude'
+        - 'mosh'
+        - 'python3-pip'
+        - 'mediainfo'
+        - 'ffmpeg'
+        - 'sox'
+        - 'libsox-fmt-all'
+        - 'xpra'
+        - 'pigz'
+        - 'cronic'
+        - 'duplicity'
+        - 'iperf3'
+        - 'figlet'
       state: present
 
       
