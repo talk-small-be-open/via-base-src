@@ -6,9 +6,9 @@ renderNavigationOn: html
 				callback: [ self goBack ];
 				with: [html iconLeft]].
 		html span: [
-			html span: currentNumber asString.
+			html span: currentQAndACounter asString.
 			html span: '/'.
-			html span: total asString].
+			html span: totalQAndAs asString].
 		html span: [
 			html anchor
 				callback: [ self goAhead ];

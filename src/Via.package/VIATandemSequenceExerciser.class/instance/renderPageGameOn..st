@@ -1,8 +1,8 @@
 rendering
 renderPageGameOn: html
-	taskBrick showHistory ifTrue: [
+"	taskBrick showHistory ifTrue: [
 		self renderHistoryOn: html.
-	].
+	]."
 	
 	self isQuestioningMyTurn
 		ifTrue: [ self renderQuestionAndAnswerOn: html ]

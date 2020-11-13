@@ -22,4 +22,4 @@ renderDeviceDetectionOn: html
 			value: (JSStream on: self jsJsonData);
 			onSuccess: ('location.href = url' asFunction: #(url status));
 			dataType: 'text'
-	 ) setTimeout: 500)
+	 ) setTimeout: 1000)

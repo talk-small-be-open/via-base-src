@@ -6,4 +6,6 @@ matches: aModule searchString: aString
 		ifFalse: [
 			(aModule matchesSearchString: aString) ifTrue: [ ^ true ]].
 
+	(aModule tasks anySatisfy: [ :each | each matchesSearchString: aString ]) ifTrue: [ ^ true ].
+	
 	^ false

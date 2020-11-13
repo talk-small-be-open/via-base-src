@@ -1,3 +1,11 @@
 as yet unclassified
 goAhead
-	self gotoQAndA: currentNumber + 1
+	| next |
+	next := stepIndex + 1.
+	
+	(next > sequence size) ifTrue: [ ^ self ].
+	
+	stepIndex := next.
+
+	self currentStep isInteger ifTrue: [
+		self gotoQAndA: self currentStep ]

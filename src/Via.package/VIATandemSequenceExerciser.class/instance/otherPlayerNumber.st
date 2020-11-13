@@ -1,3 +1,3 @@
 testing
 otherPlayerNumber
-	^ (playerNumber \\ totalPlayers) + 1
+	^ (playerNumber \\ 2) + 1

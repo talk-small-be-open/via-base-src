@@ -1,0 +1,3 @@
+accessing
+step2PillarPlayerA
+	^ step2PillarPlayerA

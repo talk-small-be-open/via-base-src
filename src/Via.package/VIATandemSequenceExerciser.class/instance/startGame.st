@@ -1,3 +1,3 @@
 accessing
 startGame
-	self gotoQAndA: 1
+"	self gotoQAndA: 1"

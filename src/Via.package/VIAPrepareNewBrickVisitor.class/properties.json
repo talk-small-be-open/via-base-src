@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAVisitor",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"website"
+	],
+	"name" : "VIAPrepareNewBrickVisitor",
+	"type" : "normal"
+}

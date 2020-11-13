@@ -46,7 +46,7 @@ renderCompositeTask: aCompositeTask on: html
 			html submitButton
 				title: (each authorInfoKey)t;
 				class: 'button small popover';
-				callback: [aCompositeTask addChild: (each new)];
+				callback: [self addChildClass: each into: aCompositeTask];
 				with: '+ ', each displayName.
 			html space]].
 	

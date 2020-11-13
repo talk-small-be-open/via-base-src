@@ -1,6 +1,13 @@
 as yet unclassified
 goBack
-	currentNumber = 1
+	| next |
+	next := stepIndex - 1.
+	
+	next < 1 ifTrue: [ ^ self ].
+	
+	stepIndex := next.
+
+	stepIndex = 1
 		ifTrue: [ self restart ]
-		ifFalse: [ self gotoQAndA: currentNumber - 1 ].
+		ifFalse: [ self gotoQAndA: currentQAndACounter ].
 	
