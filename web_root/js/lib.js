@@ -21,6 +21,9 @@ function isCookiesAllowed() {
 function isCookiesNotAllowed() {
 	return !cookiesAllowed;
 }
+function setCookiesAllowed() {
+	cookiesAllowed = true;
+}
 checkCookiesAllowed();
 
 
@@ -29,11 +32,11 @@ checkCookiesAllowed();
 //
 function saveScroll(id) {
 	if (isCookiesNotAllowed()) { return }
-		
+	
 	var y = $(document).scrollTop();
 	// Kurze Dauer, sonst können sich zuviele anhäufen
 	var inFifteenMinutes = new Date(new Date().getTime() + 15 * 60 * 1000);
-	Cookies.set("page_scroll_" + id, y, { expires: inFifteenMinutes });
+	Cookies.set("page_scroll_" + id, y, { expires: inFifteenMinutes, sameSite: "Strict", secure: true });
 }
 
 function loadScroll(id) {
@@ -104,38 +107,161 @@ function enableUnloadWarning() {
 var lazy = [];
 
 function setLazy(){
-    lazy = document.querySelectorAll('img.lazy');
-//    console.log('Found ' + lazy.length + ' lazy images');
+  lazy = document.querySelectorAll('img.lazy');
+	//    console.log('Found ' + lazy.length + ' lazy images');
 } 
 
 function lazyLoad(){
-    for(var i=0; i<lazy.length; i++){
-        if(isInViewport(lazy[i])){
-            if (lazy[i].getAttribute('data-src')){
-                lazy[i].src = lazy[i].getAttribute('data-src');
-                lazy[i].removeAttribute('data-src');
-            }
-        }
+  for(var i=0; i<lazy.length; i++){
+    if(isInViewport(lazy[i])){
+      if (lazy[i].getAttribute('data-src')){
+        lazy[i].src = lazy[i].getAttribute('data-src');
+        lazy[i].removeAttribute('data-src');
+      }
     }
-    
-    cleanLazy();
+  }
+  
+  cleanLazy();
 }
 
 // Schneller filter
 function cleanLazy(){
-    lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
+  lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
 }
 
 // OPTIMIZE: Abfrage auch auf visible? Schwierig: Reagieren auf, wenn eingeblendet
 function isInViewport(el){
-    var rect = el.getBoundingClientRect();
-    
-    return (
-        rect.bottom >= 0 && 
-        rect.right >= 0 && 
-        rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
-        rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-     );
+  var rect = el.getBoundingClientRect();
+  
+  return (
+    rect.bottom >= 0 && 
+      rect.right >= 0 && 
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
+      rect.left <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
 
 
+//
+// Peer to peer, see VIAP2pComponent
+//
+// function p2pInit(elementId, myPeerId, onDataFunction) {
+// 	var peer = new Peer(myPeerId, {host: "/", port: 443, path: "/peerjs", secure: true, debug: 0});
+	
+// 	peer.on("open", function(id) {
+// 		console.log("My peer ID is: " + id);
+// 	});
+
+// 	peer.on("error", function(error) {
+// 		console.log("Peer error " + error);
+// 	});
+
+// 	peer.on("connection", function(c) {
+// 		console.log("Incoming connection!");
+
+// 		c.on("data", function(data) {
+// 			console.log("Received", data);
+// 			onDataFunction(data);
+// 		});
+// 	});
+
+// 	$('#'+elementId).data('peer', peer);
+
+// }
+
+function p2pInit(elementId, myPeerId, onDataFunction) {
+
+	var openPeer = new Promise( (resolve, reject) => {
+	  var peer = new Peer(myPeerId, {host: "/", port: 443, path: "/peerjs", secure: true, debug: 0});
+	
+	  peer.on("open", function(id) {
+			console.log("My peer ID is: " + id);
+			resolve(peer);
+		});
+
+	  peer.on("error", function(error) {
+			console.log("Peer error " + error);
+			reject("Could not connect to peer server");
+		});
+
+	  peer.on("connection", function(c) {
+			console.log("Incoming connection!");
+
+			c.on("data", function(data) {
+				console.log("Received", data);
+				onDataFunction(data);
+			});
+		});
+
+	})
+
+	$('#'+elementId).data('peerPromise', openPeer);
+
+	return openPeer;
+}
+
+function p2pStart(elementId, myPeerId, otherPeerId = null, onDataFunction = null, sendOnConnect = null) {
+	p2pInit(elementId, myPeerId, onDataFunction).then(peer => {
+
+		if (otherPeerId) {
+			p2pGetConnection(elementId, otherPeerId).then(conn => {
+				conn.on("open", function() {
+
+					console.log("Outgoing Connection opened");
+
+					conn.on("data", function(data) {
+						console.log("Received", data);
+						if (onDataFunction) {
+							onDataFunction(data);
+						}
+					});
+
+					if (sendOnConnect) {
+						conn.send(sendOnConnect);
+					}
+				});
+				
+			})
+		}
+	})
+}
+
+
+		
+// Get a connection object, which we have tracked, or generate a new
+function p2pGetConnection(elementId, otherPeerId) {
+	return new Promise( (resolve, reject) => {
+
+		const connectionId = 'p2p_' + elementId + '_' + otherPeerId;	
+		var conn = $('#'+elementId).data(connectionId);
+
+		if (conn) {
+			resolve(conn);
+		}
+		else {
+			const openPeer = $('#'+elementId).data('peerPromise');
+
+			openPeer.then(peer => {
+				conn = peer.connect(otherPeerId, {reliable: true});
+				$('#'+elementId).data(connectionId, conn);
+				resolve(conn);
+			});
+		}
+		
+	})
+}
+
+
+function p2pSend(elementId, otherPeerId, anObject) {
+	p2pGetConnection(elementId, otherPeerId).then(conn => {
+
+		// if (!conn.open) {
+		// 	alert('To early!')
+		// }
+	
+		console.log("Sending " + anObject);
+
+		conn.send(anObject);
+		
+	})
+}
