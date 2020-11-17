@@ -1,3 +1,3 @@
 as yet unclassified
 answerHolder
-	^ self exercise answerOf: taskBrick
+	^ (self exercise hasAnswerOf: taskBrick) ifTrue: [self exercise answerOf: taskBrick]

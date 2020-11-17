@@ -17,7 +17,8 @@
 		"p2pComponent",
 		"otherExerciser",
 		"totalQAndAs",
-		"currentQAndACounter"
+		"currentQAndACounter",
+		"gameBoardId"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

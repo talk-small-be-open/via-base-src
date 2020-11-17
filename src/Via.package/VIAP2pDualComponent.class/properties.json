@@ -1,14 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAComponent",
+	"super" : "VIAP2pComponent",
 	"category" : "Via-View-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"thisPeerId",
-		"onDataJs"
+		"otherPeerId",
+		"startConnection",
+		"sendJs"
 	],
-	"name" : "VIAP2pComponent",
+	"name" : "VIAP2pDualComponent",
 	"type" : "normal"
 }

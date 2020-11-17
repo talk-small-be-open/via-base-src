@@ -5,5 +5,10 @@ renderStep2InstructionsOn: html
 			html pillarSnippet: taskBrick step2PillarPlayerA
 		] else: [ 
 			html pillarSnippet: taskBrick step2PillarPlayerB
-		]
+		].
+	
+		html anchorButton
+			callback: [ self goAhead ];
+			t: 'general:ok'
+	
 	]

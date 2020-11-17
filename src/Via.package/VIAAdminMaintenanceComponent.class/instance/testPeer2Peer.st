@@ -1,7 +1,7 @@
 tests
 testPeer2Peer
 	| p2p other |
-	p2p := VIAP2PComponent new.
+	p2p := VIAP2pComponent new.
 	
 	other := self request: ('Your ID is ', p2p thisPeerId, '. Enter the other ID:').
 

@@ -2,6 +2,8 @@ as yet unclassified
 renderContentOn: html
 	| id |
 	
+	self addJavascript: '/js/outofthebox/highlight_areas_v2.js' on: html.
+	
 	self start.
 
 	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: taskBrick.

@@ -17,4 +17,6 @@ initialize
 
 	self createSequence: qAndASequence.
 
-	self reset
+	gameBoardId := UUID new asString36.
+
+	self restart
