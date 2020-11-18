@@ -11,7 +11,7 @@ renderP2pSynchronizationOn: html
 
 		p2pComponent onData: (
 			(html jQuery ajax)
-				callback: [:d | self ajaxProcessP2pData: d ] value: (JSStream on: 'data');
+				callback: [:d | self ajaxProcessP2pData: d ] json: (JSStream on: 'data');
 				onSuccess: ((((html jQuery id: gameBoardId) load
 					html: [ :h | self renderPageLogicOn: h ]) condition: 'answer=="reload"')
 					asFunction: #(answer status));

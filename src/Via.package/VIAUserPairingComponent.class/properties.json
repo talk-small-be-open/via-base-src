@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"pairingToken",
-		"namespace"
+		"namespace",
+		"data"
 	],
 	"name" : "VIAUserPairingComponent",
 	"type" : "normal"

@@ -4,5 +4,5 @@ renderStatusOn: html
 		html div: 'Is paired to ', self pairedUser displayName.
 		html anchorButton
 			callback: [ self finish ];
-			with: 'Finish'
+			t: 'general:ok'
 	]

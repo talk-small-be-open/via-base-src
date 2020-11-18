@@ -7,9 +7,5 @@ renderContentOn: html
 		html div id: gameBoardId; with: [
 			self renderPageLogicOn: html ].
 
-"		html div
-			onClick: ((html jQuery id: gameBoardId) load html: [ :h | self renderPageLogicOn: h ]);
-			with: 'AJAX reload'."
-			
-		self renderP2pSynchronizationOn: html.
+		self renderToolbarOn: html
 	]

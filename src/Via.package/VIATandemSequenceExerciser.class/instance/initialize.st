@@ -10,7 +10,8 @@ initialize
 
 	qAndASequence := taskBrick shuffleSequence
 		ifTrue: [
-			(1 to: totalQAndAs) asArray shuffleBy: (Random seed: randomCode asInteger)
+"			(1 to: totalQAndAs) asArray shuffleBy: (Random seed: randomCode asInteger)"
+			(1 to: totalQAndAs) asArray shuffled
 		] ifFalse: [
 			(1 to: totalQAndAs)
 		].

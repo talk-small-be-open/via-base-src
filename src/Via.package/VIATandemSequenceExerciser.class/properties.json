@@ -18,7 +18,8 @@
 		"otherExerciser",
 		"totalQAndAs",
 		"currentQAndACounter",
-		"gameBoardId"
+		"gameBoardId",
+		"gameOnceJs"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

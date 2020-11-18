@@ -2,4 +2,6 @@ updating
 updateRoot: anHtmlRoot
 	super updateRoot: anHtmlRoot.
 
-	anHtmlRoot javascript defer; url: '/js/peerjs/peerjs.min.js'
+	"Dont defer, need it early"
+	anHtmlRoot javascript url: '/js/peerjs/peerjs.min.js'.
+	anHtmlRoot javascript url: '/js/p2p.js'

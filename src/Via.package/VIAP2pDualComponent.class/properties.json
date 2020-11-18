@@ -8,7 +8,8 @@
 	"instvars" : [
 		"otherPeerId",
 		"startConnection",
-		"sendJs"
+		"sendJs",
+		"sendOnceJs"
 	],
 	"name" : "VIAP2pDualComponent",
 	"type" : "normal"

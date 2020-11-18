@@ -8,6 +8,6 @@ renderContentOn: html
 
 	self renderStatusOn: html.
 
-	html anchorButton
+"	html anchorButton
 		callback: [ self close ];
-		with: 'Close'
+		with: 'Close'"

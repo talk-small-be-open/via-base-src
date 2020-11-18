@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"thisPeerId",
-		"onDataJs"
+		"onDataJs",
+		"label"
 	],
 	"name" : "VIAP2pComponent",
 	"type" : "normal"

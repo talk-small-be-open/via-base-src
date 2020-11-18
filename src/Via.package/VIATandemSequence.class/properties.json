@@ -12,7 +12,8 @@
 		"startPillarPlayerA",
 		"startPillarPlayerB",
 		"step2PillarPlayerA",
-		"step2PillarPlayerB"
+		"step2PillarPlayerB",
+		"showCorrection"
 	],
 	"name" : "VIATandemSequence",
 	"type" : "normal"

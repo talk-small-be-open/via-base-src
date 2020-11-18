@@ -10,7 +10,11 @@ renderTandemSequence: aTandemSequence on: html
 			html skColumnWidth: 'three' with: [
 				html label: [
 					html checkbox on: #showHistory of: aTandemSequence.
-					html text: ' Show history']]
+					html text: ' Show history']].
+			html skColumnWidth: 'three' with: [
+				html label: [
+					html checkbox on: #showCorrection of: aTandemSequence.
+					html text: ' Show correction']]
 		].
 
 		html label: 'Intro text player A / B'.

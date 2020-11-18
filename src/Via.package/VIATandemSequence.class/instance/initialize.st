@@ -4,4 +4,5 @@ initialize
 	qAndAs := OrderedCollection new.
 	
 	shuffleSequence := false.
-	showHistory := true
+	showHistory := true.
+	showCorrection := true.

@@ -1,5 +1,8 @@
-as yet unclassified
+actions
 gotoStepIndex: anInteger
+
+	stepIndex = anInteger ifTrue: [ ^ self ].
+	
 	stepIndex := anInteger asInteger.
 
 	self currentStep = #summary ifTrue: [

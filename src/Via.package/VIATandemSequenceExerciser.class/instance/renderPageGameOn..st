@@ -14,4 +14,6 @@ renderPageGameOn: html
 	wie bei den Standard-Aufgaben auch" 
 	html div: self currentAnswerHolder value.
 	
-	self renderNavigationOn: html
+	self renderNavigationOn: html.
+	
+	gameOnceJs ifNotNil: [ html scriptDefer: gameOnceJs. gameOnceJs := nil ].

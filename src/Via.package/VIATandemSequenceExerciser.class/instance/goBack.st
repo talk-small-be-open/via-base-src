@@ -1,13 +1,14 @@
-as yet unclassified
+actions
 goBack
 	| next |
 	next := stepIndex - 1.
 	
 	next < 1 ifTrue: [ ^ self ].
 	
-	stepIndex := next.
-
-	stepIndex = 1
+"	next = 1
 		ifTrue: [ self restart ]
-		ifFalse: [ self gotoQAndA: currentQAndACounter ].
-	
+		ifFalse: [ self gotoQAndA: currentQAndACounter ]."
+
+	self gotoStepIndex: next.
+
+	self triggerP2pSync.

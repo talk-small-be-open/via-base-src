@@ -54,5 +54,6 @@ updateRootEssentials: anHtmlRoot
 	"Textareas autosizing"
 	anHtmlRoot javascript defer; url: '/js/jquery.autosize.js'.
 
-	"Our own library"
-	anHtmlRoot javascript defer url: '/js/lib.js'.
+	"Our own library
+	REMARK: We do not defer, because some of it we might use in early JavaScript"
+	anHtmlRoot javascript url: '/js/lib.js'.
