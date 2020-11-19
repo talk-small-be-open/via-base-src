@@ -1,4 +1,3 @@
-as yet unclassified
+actions
 playAgain
-	self restart.
-	self triggerP2pSync.
+	stepIndex := 3.

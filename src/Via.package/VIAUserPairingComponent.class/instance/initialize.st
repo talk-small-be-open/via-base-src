@@ -2,4 +2,6 @@ initialization
 initialize
 	super initialize.
 
-	namespace := 'global'
+	namespace := 'global'.
+	
+	self addContainerDiv

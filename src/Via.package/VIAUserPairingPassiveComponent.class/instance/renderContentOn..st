@@ -1,10 +1,9 @@
 rendering
 renderContentOn: html
-	html div: 'Your ID ', self pairingToken code.
+	html div class: 'yourId'; with: [
+		html span class: 'message'; t: 'userPairing:yourId'.
+		html space.
+		html span class: 'theId'; with: self pairingToken code ].
 
 	self renderAjaxInterval: 1000 on: html html: [ :h |
-		self renderStatusOn: h ].
-
-	html anchorButton
-		callback: [ self close ];
-		with: 'Close'
+		self renderStatusOn: h ]

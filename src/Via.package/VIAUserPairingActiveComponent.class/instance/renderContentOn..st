@@ -2,12 +2,11 @@ rendering
 renderContentOn: html
 	html form: [ 
 		html textInput
+			class: 'codeInput';
 			callback: [ :value | self tryPairByCode: value ].
-		html submitButton with: 'Pair now!'
+		html space.
+		html submitButton t: 'userPairing:pairNow'
 	].
 
 	self renderStatusOn: html.
 
-"	html anchorButton
-		callback: [ self close ];
-		with: 'Close'"
