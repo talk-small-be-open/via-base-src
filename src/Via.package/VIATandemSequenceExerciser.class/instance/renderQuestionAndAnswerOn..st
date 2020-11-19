@@ -15,9 +15,9 @@ renderQuestionAndAnswerOn: html
 					html iconAnswer; t: 'tandemSequence:answer'; iconDropdown.
 				].
 			
-			taskBrick showCorrection ifTrue: [
-				html div class: 'body'; id: id; beHidden; with: [
-					currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html.
+			html div class: 'body'; id: id; beHidden; with: [
+				currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html.
+				self ifShowCorrection: [
 					html anchorButton
 						onClick: (self jsSend: 'correct');
 						with: 'correct'.

@@ -9,6 +9,8 @@ renderPageLogicOn: html
 		^ self
 	]."
 
+	p2pSyncJs ifNotNil: [ html scriptDefer: p2pSyncJs. p2pSyncJs := nil ].
+	
 	self currentStep = #start ifTrue: [self renderStartPageOn: html. ^ self ].
 	self currentStep = #pairing ifTrue: [self renderPairingPageOn: html. ^ self ].
 	self currentStep = #step2Instruction ifTrue: [self renderStep2InstructionsOn: html. ^ self ].

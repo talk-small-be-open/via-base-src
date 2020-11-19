@@ -19,7 +19,9 @@
 		"totalQAndAs",
 		"currentQAndACounter",
 		"gameBoardId",
-		"gameOnceJs"
+		"gameOnceJs",
+		"showHistory",
+		"p2pSyncJs"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

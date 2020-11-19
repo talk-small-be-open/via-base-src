@@ -8,4 +8,4 @@ renderContentOn: html
 			self renderPageLogicOn: html ].
 
 		self renderToolbarOn: html
-	]
+	].

@@ -3,7 +3,9 @@ initialize
 	| qAndASequence |
 	
 	super initialize.
-	
+
+	showHistory := false.
+		
 	self addContainerDiv.
 	
 	totalQAndAs := taskBrick qAndACount.
