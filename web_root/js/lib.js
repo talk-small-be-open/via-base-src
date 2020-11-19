@@ -1,7 +1,8 @@
 //
 // VIA Javascript Library (Frontend & Backend)
 //
-//
+// Remark: Try to be plain Javascript, since we defer load all the other libraries
+// like jQuery etc., or be sure that those functions are not called early.
 //
 
 //
@@ -34,7 +35,7 @@ function saveScroll(id) {
 	if (isCookiesNotAllowed()) { return }
 	
 	var y = $(document).scrollTop();
-	// Kurze Dauer, sonst können sich zuviele anhäufen
+	// Short time to live, else they would cumulate to many in the browser
 	var inFifteenMinutes = new Date(new Date().getTime() + 15 * 60 * 1000);
 	Cookies.set("page_scroll_" + id, y, { expires: inFifteenMinutes, sameSite: "Strict", secure: true });
 }
@@ -139,129 +140,4 @@ function isInViewport(el){
       rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
       rect.left <= (window.innerWidth || document.documentElement.clientWidth)
   );
-}
-
-
-//
-// Peer to peer, see VIAP2pComponent
-//
-// function p2pInit(elementId, myPeerId, onDataFunction) {
-// 	var peer = new Peer(myPeerId, {host: "/", port: 443, path: "/peerjs", secure: true, debug: 0});
-	
-// 	peer.on("open", function(id) {
-// 		console.log("My peer ID is: " + id);
-// 	});
-
-// 	peer.on("error", function(error) {
-// 		console.log("Peer error " + error);
-// 	});
-
-// 	peer.on("connection", function(c) {
-// 		console.log("Incoming connection!");
-
-// 		c.on("data", function(data) {
-// 			console.log("Received", data);
-// 			onDataFunction(data);
-// 		});
-// 	});
-
-// 	$('#'+elementId).data('peer', peer);
-
-// }
-
-function p2pInit(elementId, myPeerId, onDataFunction) {
-
-	var openPeer = new Promise( (resolve, reject) => {
-	  var peer = new Peer(myPeerId, {host: "/", port: 443, path: "/peerjs", secure: true, debug: 0});
-	
-	  peer.on("open", function(id) {
-			console.log("My peer ID is: " + id);
-			resolve(peer);
-		});
-
-	  peer.on("error", function(error) {
-			console.log("Peer error " + error);
-			reject("Could not connect to peer server");
-		});
-
-	  peer.on("connection", function(c) {
-			console.log("Incoming connection!");
-
-			c.on("data", function(data) {
-				console.log("Received", data);
-				onDataFunction(data);
-			});
-		});
-
-	})
-
-	$('#'+elementId).data('peerPromise', openPeer);
-
-	return openPeer;
-}
-
-function p2pStart(elementId, myPeerId, otherPeerId = null, onDataFunction = null, sendOnConnect = null) {
-	p2pInit(elementId, myPeerId, onDataFunction).then(peer => {
-
-		if (otherPeerId) {
-			p2pGetConnection(elementId, otherPeerId).then(conn => {
-				conn.on("open", function() {
-
-					console.log("Outgoing Connection opened");
-
-					conn.on("data", function(data) {
-						console.log("Received", data);
-						if (onDataFunction) {
-							onDataFunction(data);
-						}
-					});
-
-					if (sendOnConnect) {
-						conn.send(sendOnConnect);
-					}
-				});
-				
-			})
-		}
-	})
-}
-
-
-		
-// Get a connection object, which we have tracked, or generate a new
-function p2pGetConnection(elementId, otherPeerId) {
-	return new Promise( (resolve, reject) => {
-
-		const connectionId = 'p2p_' + elementId + '_' + otherPeerId;	
-		var conn = $('#'+elementId).data(connectionId);
-
-		if (conn) {
-			resolve(conn);
-		}
-		else {
-			const openPeer = $('#'+elementId).data('peerPromise');
-
-			openPeer.then(peer => {
-				conn = peer.connect(otherPeerId, {reliable: true});
-				$('#'+elementId).data(connectionId, conn);
-				resolve(conn);
-			});
-		}
-		
-	})
-}
-
-
-function p2pSend(elementId, otherPeerId, anObject) {
-	p2pGetConnection(elementId, otherPeerId).then(conn => {
-
-		// if (!conn.open) {
-		// 	alert('To early!')
-		// }
-	
-		console.log("Sending " + anObject);
-
-		conn.send(anObject);
-		
-	})
 }
