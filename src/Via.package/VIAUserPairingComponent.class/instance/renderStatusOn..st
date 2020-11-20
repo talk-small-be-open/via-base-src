@@ -1,17 +1,18 @@
 rendering
 renderStatusOn: html
-	self isPaired ifTrue: [
-		html div: [
-			html sT: 'userPairing:isPairedTo'.
-			html space.
-			html text: self pairedUser displayName ].
-		html anchorButton
-			callback: [ self finish ];
-			t: 'general:ok'
-	] ifFalse: [ 
+	html div class: 'pairingStatus'; with: [
+		self isPaired ifTrue: [
+			html div class: 'pairingMessage'; with: [
+				html sT: 'userPairing:isPairedTo'.
+				html space.
+				html text: self pairedUser displayName ].
+			html anchorButton
+				callback: [ self finish ];
+				t: 'general:ok'
+		] ifFalse: [ 
+			html div class: 'pairingMessage'; t: 'userPairing:waitingToPair' ].
+	].
 
-		html div t: 'userPairing:waitingToPair'.
-
-		html anchorButton
-			callback: [ self cancel ];
-			with: 'general:cancel' ]
+	html anchorButton
+		callback: [ self cancel ];
+		with: 'general:cancel'

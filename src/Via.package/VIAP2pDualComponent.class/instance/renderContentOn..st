@@ -9,7 +9,7 @@ renderContentOn: html
 		id: self elementId;
 		onClick: (self jsSend: 'ping');
 		class: 'p2pStatus';
-		with: label.
+		t: label.
 	
 	"Needs to be after the div creation"
 	self renderJavascriptOn: html.

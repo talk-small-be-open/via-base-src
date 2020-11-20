@@ -4,6 +4,6 @@ renderContentOn: html
 	html div
 		id: self elementId;
 		class: 'p2pStatus';
-		with: 'LIVE'.
+		t: label.
 	
 	self renderJavascriptOn: html.

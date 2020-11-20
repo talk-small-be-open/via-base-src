@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 
-	label := 'LIVE'
+	label := 'p2p:connectionLabel'

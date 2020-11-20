@@ -8,8 +8,9 @@ renderStep2InstructionsOn: html
 		].
 	
 		html div: [
-			html anchorButton
-				callback: [ self goAhead ];
-				t: 'general:ok' ]
+			self ajaxAction: [ self goAhead ] on: html with: [
+				html ukButton
+					t: 'general:ok' ]
+		]
 	
 	]

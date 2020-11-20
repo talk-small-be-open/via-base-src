@@ -4,7 +4,7 @@ renderSummaryPageOn: html
 		html t: 'tandemSequence:summaryInfo'.
 		
 		self ifShowCorrection: [
-			html div: self points asString ].
+			html div class: 'points'; with: self points asString ].
 
 "		html anchor
 			callback: [ self reset ];

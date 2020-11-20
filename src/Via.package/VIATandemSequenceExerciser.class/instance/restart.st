@@ -3,5 +3,5 @@ restart
 	playerNumber := nil.
 "	randomCode := nil.	"
 "	randomizationDone := false."
-	stepIndex := 1.
 
+	self gotoStepIndex: 1.

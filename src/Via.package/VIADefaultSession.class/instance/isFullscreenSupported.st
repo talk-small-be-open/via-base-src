@@ -1,0 +1,3 @@
+testing
+isFullscreenSupported
+	^ isFullscreenSupported = true

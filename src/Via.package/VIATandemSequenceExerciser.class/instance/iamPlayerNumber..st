@@ -12,4 +12,6 @@ iamPlayerNumber: aNumber
 	pairingComponent namespace: ('tandem_', taskBrick uuidString).
 	
 	pairingComponent onAnswer: [:pairingToken |
-		self pairingFinished ]
+		pairingToken
+			ifNil: [ self restart ]
+			ifNotNil: [ self pairingFinished ] ]
