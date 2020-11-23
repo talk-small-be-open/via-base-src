@@ -56,7 +56,29 @@
         
   - name: Install basic apt packages
     apt:
-      name: ['unattended-upgrades', 'monit', 'git', 'imagemagick', 'htop', 'unzip', 'zip', 'aptitude', 'mosh', 'python3-pip', 'mediainfo', 'ffmpeg', 'sox', 'libsox-fmt-all', 'xpra', 'pigz', 'cronic', 'duplicity', 'iperf3' ]
+      name:
+        - 'unattended-upgrades'
+        - 'monit'
+        - 'git'
+        - 'imagemagick'
+        - 'htop'
+        - 'unzip'
+        - 'zip'
+        - 'aptitude'
+        - 'mosh'
+        - 'python3-pip'
+        - 'mediainfo'
+        - 'ffmpeg'
+        - 'sox'
+        - 'libsox-fmt-all'
+        - 'xpra'
+        - 'pigz'
+        - 'cronic'
+        - 'duplicity'
+        - 'iperf3'
+        - 'figlet'
+        - 'nodejs'
+        - 'npm'
       state: present
 
       
@@ -105,6 +127,12 @@
     notify:
       - restart PHP
 
+
+  - name: Install peerjs npm package
+    npm:
+      name: peer
+      version: 0.5.3
+      global: yes
   
   #
   # NGINX WEBSERVER
@@ -209,7 +237,7 @@
     cron:
       env: yes
       name: PATH
-      value: /usr/bin:/bin:/usr/local/bin
+      value: /usr/bin:/bin:/usr/local/bin:/usr/sbin
   - name: set SHELL in cron
     cron:
       user: "{{remoteUser}}"

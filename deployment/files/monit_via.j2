@@ -37,3 +37,10 @@ check process via_gemstone_gem_{{port}} with pidfile /opt/GsDevKit_home/server/s
 			if cpu > 60% for 4 cycles then alert
 
 {% endfor %}
+
+# peerjs Server
+check process via_peerjs_server matching "^.*/bin/peerjs --port 9001 .*$"
+			start program = "/bin/bash -l /opt/via/via_base/server/start_peerjs_server.sh" as uid "{{remoteUser}}" gid "adm"
+			stop program = "/bin/bash -l /opt/via/via_base/server/stop_peerjs_server.sh" as uid "{{remoteUser}}" gid "adm" with timeout 90 seconds
+ 			if 7 restarts within 10 cycles then stop
+			if cpu > 60% for 4 cycles then alert

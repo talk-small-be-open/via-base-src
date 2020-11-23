@@ -2,6 +2,8 @@
 // VIA Admin JavaScript
 //
 
+// In the backend cookies are always allowed
+setCookiesAllowed();
 
 function debounce(func, threshold, execAsap) {
   var timeout;
