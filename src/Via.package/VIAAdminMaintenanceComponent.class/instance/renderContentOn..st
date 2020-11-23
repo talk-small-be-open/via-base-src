@@ -15,4 +15,16 @@ renderContentOn: html
 	html break.
 	html anchor
 		callback: [ self testCaptcha ];
-		with: 'Test captcha ...'
+		with: 'Test captcha ...'.
+	html break.
+	html anchor
+		callback: [ self testPeer2Peer ];
+		with: 'Test P2P ...'.
+	html break.
+	html anchor
+		callback: [ self testUserPairA ];
+		with: 'Test Pairing A ...'.
+	html break.
+	html anchor
+		callback: [ self testUserPairB ];
+		with: 'Test Pairing B ...'.

@@ -8,7 +8,12 @@
 	"instvars" : [
 		"qAndAs",
 		"shuffleSequence",
-		"showHistory"
+		"showHistory",
+		"startPillarPlayerA",
+		"startPillarPlayerB",
+		"step2PillarPlayerA",
+		"step2PillarPlayerB",
+		"showCorrection"
 	],
 	"name" : "VIATandemSequence",
 	"type" : "normal"

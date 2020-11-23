@@ -23,10 +23,10 @@
 		"uiTexts",
 		"trashedObjects",
 		"mailer",
-		"applicationCommands",
 		"exams",
 		"websites",
-		"websiteDatas"
+		"websiteDatas",
+		"userPairingTokens"
 	],
 	"name" : "VIADatabase",
 	"type" : "normal"

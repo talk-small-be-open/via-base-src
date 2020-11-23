@@ -8,12 +8,19 @@
 	"instvars" : [
 		"playerNumber",
 		"currentQAndA",
-		"currentNumber",
-		"total",
-		"totalPlayers",
 		"sequence",
 		"randomCode",
-		"randomizationDone"
+		"randomizationDone",
+		"stepIndex",
+		"pairingComponent",
+		"p2pComponent",
+		"otherExerciser",
+		"totalQAndAs",
+		"currentQAndACounter",
+		"gameBoardId",
+		"gameOnceJs",
+		"showHistory",
+		"p2pSyncJs"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

@@ -1,3 +1,4 @@
 as yet unclassified
 checkAnswersOfExercise: anExercise
-	self subclassResponsibility
+	self childBricks do: [:each |
+		each checkAnswersOfExercise: anExercise]

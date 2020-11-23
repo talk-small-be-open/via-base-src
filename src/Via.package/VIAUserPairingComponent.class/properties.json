@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"pairingToken",
+		"namespace",
+		"data"
+	],
+	"name" : "VIAUserPairingComponent",
+	"type" : "normal"
+}

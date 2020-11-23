@@ -1,0 +1,3 @@
+testing
+isPaired
+	^ pairedUser notNil

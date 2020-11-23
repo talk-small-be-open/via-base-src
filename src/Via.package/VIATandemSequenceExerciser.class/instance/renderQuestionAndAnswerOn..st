@@ -14,6 +14,19 @@ renderQuestionAndAnswerOn: html
 				with: [
 					html iconAnswer; t: 'tandemSequence:answer'; iconDropdown.
 				].
+			
 			html div class: 'body'; id: id; beHidden; with: [
-				currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html]]
-	].
+				currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html.
+				self ifShowCorrection: [
+					html div class: 'correction'; with: [
+						html ukButtonGroup: [
+							html anchorButton
+								onClick: (self jsSend: 'correct');
+								with: 'correct'.
+							html anchorButton
+								onClick: (self jsSend: 'notCorrect');
+								with: 'not correct' ].
+				]]
+			]
+		]
+	]

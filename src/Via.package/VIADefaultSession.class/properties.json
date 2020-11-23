@@ -12,7 +12,8 @@
 		"viewportWidth",
 		"touchEnabled",
 		"deviceDetectionDone",
-		"browserType"
+		"browserType",
+		"isFullscreenSupported"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

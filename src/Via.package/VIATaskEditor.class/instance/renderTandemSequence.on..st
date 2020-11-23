@@ -10,9 +10,20 @@ renderTandemSequence: aTandemSequence on: html
 			html skColumnWidth: 'three' with: [
 				html label: [
 					html checkbox on: #showHistory of: aTandemSequence.
-					html text: ' Show history']]
+					html text: ' Show history']].
+			html skColumnWidth: 'three' with: [
+				html label: [
+					html checkbox on: #showCorrection of: aTandemSequence.
+					html text: ' Show correction']]
 		].
 
+		html label: 'Intro text player A / B'.
+		aTandemSequence startPillarPlayerA acceptRenderingVisitor: self on: html.
+		aTandemSequence startPillarPlayerB acceptRenderingVisitor: self on: html.
+
+		html label: 'Step 2 text player A / B'.
+		aTandemSequence step2PillarPlayerA acceptRenderingVisitor: self on: html.
+		aTandemSequence step2PillarPlayerB acceptRenderingVisitor: self on: html.
 
 "		html heading level2; with: 'Tandem sequence'."
 "		html div: 'Question and answers:'."

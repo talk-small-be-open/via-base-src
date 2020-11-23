@@ -1,3 +1,3 @@
 testing
 playerInTurn
-	^ self playerInTurnInRound: currentNumber
+	^ self playerInTurnInRound: currentQAndACounter

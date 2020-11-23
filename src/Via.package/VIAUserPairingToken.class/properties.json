@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"createdAt",
+		"createdBy",
+		"creatorData",
+		"namespace",
+		"code",
+		"pairedUser",
+		"pairedData"
+	],
+	"name" : "VIAUserPairingToken",
+	"type" : "normal"
+}

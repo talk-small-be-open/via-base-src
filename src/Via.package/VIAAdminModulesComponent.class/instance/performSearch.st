@@ -1,6 +1,7 @@
 rendering
 performSearch
 	| all |
+
 	all := self wd modules.
 	
 	modules := showOnlyMy

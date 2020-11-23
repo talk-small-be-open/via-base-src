@@ -1,11 +1,6 @@
 initialization
 gotoQAndA: anInteger
-	| qaNumber |
-
-	anInteger < 1 ifTrue: [ ^ self ].
-	anInteger > total ifTrue: [ ^ self ].
+	anInteger isInteger ifFalse: [ ^ self ].
 	
-	currentNumber := anInteger.
-
-	qaNumber := sequence at: currentNumber.
-	currentQAndA := taskBrick qAndAAt: qaNumber.
+	currentQAndACounter := self qAndASequence indexOf: anInteger.
+	currentQAndA := taskBrick qAndAAt: anInteger.

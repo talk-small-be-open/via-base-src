@@ -1,12 +1,25 @@
 initialization
 initialize
-	super initialize.
+	| qAndASequence |
 	
+	super initialize.
+
+	showHistory := false.
+		
 	self addContainerDiv.
 	
-	"For the moment only 2 players"
-	totalPlayers := 2.
-	total := taskBrick qAndACount.
-	sequence := (1 to: total) asArray.
+	totalQAndAs := taskBrick qAndACount.
 
-	self reset
+	qAndASequence := taskBrick shuffleSequence
+		ifTrue: [
+"			(1 to: totalQAndAs) asArray shuffleBy: (Random seed: randomCode asInteger)"
+			(1 to: totalQAndAs) asArray shuffled
+		] ifFalse: [
+			(1 to: totalQAndAs)
+		].
+
+	self createSequence: qAndASequence.
+
+	gameBoardId := UUID new asString36.
+
+	self restart
