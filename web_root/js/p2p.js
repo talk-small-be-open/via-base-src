@@ -30,7 +30,7 @@ function p2pInit(elementId, myPeerId, onDataFunction) {
 	  peer.on("error", function(error) {
 			console.log("Peer error " + error);
 			reject("Could not connect to peer server: "+error);
-			element.classList.add('error');
+//			element.classList.add('error');
 		});
 
 		// On incoming connection
@@ -39,7 +39,7 @@ function p2pInit(elementId, myPeerId, onDataFunction) {
 			p2pSetConnection(elementId, c.peer, c);
 
 			c.on("error", function(error) {
-				console.log("Connection error " + error);
+				console.log("Connection error ", error);
 				element.classList.add('error');
 			});
 
@@ -88,8 +88,10 @@ function p2pStart(elementId, myPeerId, otherPeerId = null, onDataFunction = null
 				conn.on("data", function(data){p2pOnData(elementId, data, conn, onDataFunction)});
 
 				conn.on("error", function(error) {
-					console.log("Connection error " + error);
+					console.log("Connection error ", error);
 					element.classList.add('error');
+					// remove cache, so its recreated
+					p2pSetConnection(elementId, otherPeerId, null);
 				});
 
 				if (sendOnConnect) {

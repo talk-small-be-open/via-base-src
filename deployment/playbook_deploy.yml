@@ -95,6 +95,7 @@
       - "Pillar-ExporterPillar"
       - "Pillar-Model"
       - "ViaPlatformGemstone"
+      - "MCL-Utils-CollectionSugar"
 
   
   # - name: Load VIA site project
