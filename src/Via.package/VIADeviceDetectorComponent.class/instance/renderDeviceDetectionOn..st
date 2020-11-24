@@ -13,6 +13,8 @@ renderDeviceDetectionOn: html
 					yourself].
 	
 			detectionDoneUrl := anchorTag url.
+			Transcript show: detectionDoneUrl.
+			Transcript cr.
 	]].
 
 	"Auto-Javascript, will return URL for reload after successful AJAX"

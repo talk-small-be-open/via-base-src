@@ -26,7 +26,8 @@
 		"geocode",
 		"geocodes",
 		"allowIgnoreTasks",
-		"indexCode"
+		"indexCode",
+		"exerciseLevel"
 	],
 	"name" : "VIAModule",
 	"type" : "normal"
