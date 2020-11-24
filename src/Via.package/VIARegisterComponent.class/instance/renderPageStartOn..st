@@ -23,13 +23,6 @@ renderPageStartOn: html
 			html label class: 'uk-form-label'; t: 'register:passwordConfirmation'.
 			html div class: 'uk-form-controls'; with: [html ukPasswordInput class: 'uk-width-1-2'; on: #passwordConfirmation of: self]].
 
-		html div class: 'uk-margin-small'; with: [
-			html label class: 'uk-form-label'; t: 'register:captcha'.
-			html div class: 'uk-form-controls'; with: [
-				html div
-					class: 'g-recaptcha';
-					attributeAt: 'data-sitekey' put: '6LehQygTAAAAAGcZ7Xd_mNPJXnku8A0RvejzIxeM']].
-
 		self renderDisclaimerOn: html.
 
 		html div class: 'uk-margin-small'; with: [
