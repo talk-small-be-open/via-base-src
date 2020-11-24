@@ -1,5 +1,5 @@
 rendering-visitor
-renderVideoPlayer: aVideoPlayer on: html
+renderMediaelementVideoPlayer: aVideoPlayer on: html
 	| videoId tag videoContainer |
 
 	videoId := html nextId greaseString.
@@ -12,7 +12,7 @@ renderVideoPlayer: aVideoPlayer on: html
 		videoContainer := html div class: 'videoContainer'.
 		
 		aVideoPlayer width ifNotBlank: [
-			videoContainer style: ('max-width:', (aVideoPlayer width greaseString, 'px')).
+"			videoContainer style: ('max-width:', (aVideoPlayer width greaseString, 'px'))."
 	"		tag style: ('max-height:', (aVideoPlayer height greaseString, 'px'))."
 		].
 		
@@ -31,10 +31,12 @@ renderVideoPlayer: aVideoPlayer on: html
 
 			aVideoPlayer width ifNotBlank: [
 				videoTag
-					width: (aVideoPlayer width greaseString, 'px');
-					height: (aVideoPlayer height greaseString, 'px');
-					style: ('max-width:', (aVideoPlayer width greaseString, 'px'));
-					style: ('max-height:', (aVideoPlayer height greaseString, 'px')).
+"					width: '100%';
+					height: 'auto'."
+"					width: (aVideoPlayer width greaseString, 'px');
+					height: (aVideoPlayer height greaseString, 'px')."
+"					style: ('max-width:', (aVideoPlayer width greaseString, 'px'));
+					style: ('max-height:', (aVideoPlayer height greaseString, 'px'))."
 			].
 				
 			videoTag with: [
@@ -47,6 +49,6 @@ renderVideoPlayer: aVideoPlayer on: html
 
 		self renderVideoTranscription: aVideoPlayer on: html.
 
-		html scriptDefer: (self jsForVideoPlayer: aVideoPlayer id: videoId).
+		html scriptDefer: (self jsForMediaelementVideoPlayer: aVideoPlayer id: videoId).
 
 	].

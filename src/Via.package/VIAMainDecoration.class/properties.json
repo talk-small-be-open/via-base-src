@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAMainDecorationBase",
-	"category" : "Via-View-Decoration",
+	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
