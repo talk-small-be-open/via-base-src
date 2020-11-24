@@ -1,10 +1,13 @@
 rendering-visitor
-renderAudioPlayer: anAudioPlayer on: html
+renderMediaelementAudioPlayer: anAudioPlayer on: html
 	| audioId |
 	audioId := html nextId greaseString.
 	
 	html div class: 'audioPlayer'; with: [
 		html audio
+			preload: 'metadata'; "none = recommended by mediaelement.js"
+			noTab;
+			autoplay: false;
 			id: audioId;
 			controls: true;
 			url: anAudioPlayer audioUrl.
@@ -12,4 +15,4 @@ renderAudioPlayer: anAudioPlayer on: html
 
 		self renderAudioTranscription: anAudioPlayer on: html.
 
-		html scriptDefer: (self jsForAudioPlayer: anAudioPlayer id: audioId)]
+		html scriptDefer: (self jsForMediaelementAudioPlayer: anAudioPlayer id: audioId)]
