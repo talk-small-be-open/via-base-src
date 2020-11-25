@@ -1,7 +1,7 @@
 as yet unclassified
 fromJson: aString 
 
-	aString ifBlank: [ ^{} ].
+	aString ifBlank: [ ^ nil ].
 	
 	^ [
 	NeoJSONReader fromString: aString

@@ -1,6 +1,6 @@
 icons
 iconHint
-	^ self anchor
+	^ self farIcon: 'question-circle'
+"	^ self anchor
 		a: 'uk-icon' p: 'question';
-"		class: 'uk-icon-hover uk-icon-small uk-icon-question';"
-		yourself
+		yourself"

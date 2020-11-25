@@ -3,9 +3,10 @@ detectFromJson: aJsonString
 	| dict |
 	dict := VIAHelper fromJson: aJsonString.
 
-	self viewportWidth: (dict at: 'width').
-	self touchEnabled: (dict at: 'touch').
-	self browserType: (dict at: 'detectedBrowser').
-	self isFullscreenSupported: (dict at: 'isFullscreenSupported').
+	dict ifNotNil: [
+		self viewportWidth: (dict at: 'width' ifAbsent: [1024]).
+		self touchEnabled: (dict at: 'touch' ifAbsent: [false]).
+		self browserType: (dict at: 'detectedBrowser' ifAbsent: ['unknown']).
+		self isFullscreenSupported: (dict at: 'isFullscreenSupported' ifAbsent: [true]) ].
 	
 	self beDetectionDone.
