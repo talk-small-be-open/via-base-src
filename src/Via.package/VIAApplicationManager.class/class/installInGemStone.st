@@ -4,7 +4,7 @@ installInGemStone
 	"Block re-install"
 	VIADatabase current ifNotNil: [ self error: 'Is already installed! To reinstall you must delete the VIA-Database manually.' ].
 	
-	self installGemStoneTimeZone.
+	"CANT Must be SystemUser: self installGemStoneTimeZone."
 	
 	"Create the database instance"
 	VIADatabase

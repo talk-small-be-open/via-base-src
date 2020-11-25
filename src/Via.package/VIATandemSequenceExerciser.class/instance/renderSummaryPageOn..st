@@ -4,15 +4,18 @@ renderSummaryPageOn: html
 		html t: 'tandemSequence:summaryInfo'.
 		
 		self ifShowCorrection: [
-			html div class: 'points'; with: self points asString ].
+			html div class: 'pointsSummary'; with: [
+				html div t: 'tandemSequence:yourPoints'.
+				html div class: 'points'; with: self points asString ] ].
 
 "		html anchor
 			callback: [ self reset ];
 			with: 'Reset'."
 			
 		taskBrick showHistory ifTrue: [
-			html anchorButton
-				callback: [ self toggleHistory ];
-				with: 'Show History'.
+			showHistory ifFalse: [
+				html anchorButton
+					callback: [ self toggleHistory ];
+					with: 'Show History' ].
 			showHistory ifTrue: [
 				self renderHistoryOn: html ] ] ]
