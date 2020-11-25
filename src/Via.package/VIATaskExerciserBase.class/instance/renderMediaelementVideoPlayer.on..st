@@ -12,8 +12,8 @@ renderMediaelementVideoPlayer: aVideoPlayer on: html
 		videoContainer := html div class: 'videoContainer'.
 		
 		aVideoPlayer width ifNotBlank: [
-"			videoContainer style: ('max-width:', (aVideoPlayer width greaseString, 'px'))."
-	"		tag style: ('max-height:', (aVideoPlayer height greaseString, 'px'))."
+			videoContainer style: ('max-width:', (aVideoPlayer width greaseString, 'px')).
+			tag style: ('max-height:', (aVideoPlayer height greaseString, 'px')).
 		].
 		
 		videoContainer with: [

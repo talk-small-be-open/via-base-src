@@ -2,14 +2,15 @@ rendering
 renderAllUsersOn: html
 	html heading level3; with: [
 		html text: 'Users'; space.
-		html text: '('.
+		html text: '(Total '.
 		html text: self wd users size greaseString.
 		html text: ')'.
 	].
 
-	html skAnchorButton
-		callback: [ self resetAllUserTerms ];
-		with: 'Reset ALL accepted terms'.
+	self renderToolbarOn: html.
+
+	self users ifNil: [ ^self ].
+
 
 	html table: [
 		html tableHead: [
@@ -22,7 +23,7 @@ renderAllUsersOn: html
 				html tableHeading.
 			 ]
 		 ].
-		self wd users do: [:each |
+		batcher batch do: [:each |
 			html tableRow: [
 				html tableData: each fullName.
 				html tableData: each email.
@@ -41,3 +42,7 @@ renderAllUsersOn: html
 						with: 'Delete'
 					]
 			]]].
+
+	html div
+		style: 'text-align: center';
+		with: batcher

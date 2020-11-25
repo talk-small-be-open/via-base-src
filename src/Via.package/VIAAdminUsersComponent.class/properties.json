@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"batcher",
+		"users",
+		"searchString"
+	],
 	"name" : "VIAAdminUsersComponent",
 	"type" : "normal"
 }
