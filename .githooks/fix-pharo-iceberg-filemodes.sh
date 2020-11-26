@@ -10,8 +10,7 @@
 # git repo for Iceberg as symlinks from the .git/hook/post-merge file.
 
 # Keep the shell scripts executable
-chmod +x ./server/*.sh
-
-# .. or maybe better: git reset --hard server/
+# chmod +x ./server/*.sh
+git restore --staged server/
 
 # TDB ensure that symlinks are symlinks
