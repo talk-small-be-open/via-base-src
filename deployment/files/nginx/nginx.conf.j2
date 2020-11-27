@@ -42,7 +42,7 @@ http {
     # Via Server
     server {
 
-        # TODO: Filter by GeoIP, ...
+        # TODO: Filter by GeoIP, Bad bots blocker, ...
 
         {% if via.useSsl %}
         
@@ -57,10 +57,15 @@ http {
         listen 80;
         {% endif %}
 
-        server_name {{via.appDomain}} {{via.appDomain2}};
+        server_name {{via.appDomain}} {{via.appSecondaryDomains|join(" ")}};
 
         root {{via.installationPath}}/via_base/web_root;
 
+				# Simple block some annoying idiots
+				# OPTIMIZE: Use something like https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+				if ($http_user_agent ~ (LieBaoFast|UCBrowser|MQQBrowser|Mb2345Browser|zh-CN|MicroMessenger|zh_CN|Kinza|Bytespider|Baiduspider|Sogou|AspiegelBot|PetalBot|adscanner|serpstatbot|spaziodat|undefined) ) {
+					 return 403;
+				}
 
         # Pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
         #
@@ -176,7 +181,8 @@ http {
     # Redirect HTTP->HTTPS
     server {
         listen     80;
-        server_name {{via.appDomain}} {{via.appDomain2}};
+				server_name {{via.appDomain}} {{via.appSecondaryDomains|join(" ")}};
+
         return 301 https://$host$request_uri;
     }
     {% endif %}

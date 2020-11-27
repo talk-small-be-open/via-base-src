@@ -98,20 +98,20 @@
 
   - name: Create working user convenience symlink for stone
     file:
-      src: "/home/{{remoteUser}}/stone"
-      dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}"
+      dest: "/home/{{remoteUser}}/stone"
+      src: "/opt/GsDevKit_home/server/stones/{{stoneName}}"
       state: link
 
   - name: Create working user convenience symlink for via_base
     file:
-      src: "/home/{{remoteUser}}/vb"
-      dest: "{{via.installationPath}}/via_base"
+      dest: "/home/{{remoteUser}}/vb"
+      src: "{{via.installationPath}}/via_base"
       state: link
 
   - name: Create working user convenience symlink for via_site
     file:
-      src: "/home/{{remoteUser}}/vs"
-      dest: "{{via.installationPath}}/via_site"
+      dest: "/home/{{remoteUser}}/vs"
+      src: "{{via.installationPath}}/via_site"
       state: link
 
   - include_tasks: tasks_git_update.yml    
@@ -162,12 +162,10 @@
       state: stopped
   - name: certbot get Certificates
     when: via.useSsl
-    shell: certbot --standalone -n --agree-tos --email {{via.adminEmail}} --cert-name "{{via.appDomain}}"  --domains "{{via.appDomain}}{% if via.appDomain2 %},{{via.appDomain2}}{% endif %}" certonly
+    shell: certbot --standalone -n --agree-tos --email {{via.adminEmail}} --cert-name "{{via.appDomain}}"  --domains "{{via.appDomain}}{% if via.appSecondaryDomains %},{{via.appSecondaryDomains|join(',')}}{% endif %}" certonly
     args:
       creates: "/etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem"
 
-
-    
   #
   # GemStone GsDevKit
   #
