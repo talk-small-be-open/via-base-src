@@ -36,7 +36,7 @@ updateRootEssentials: anHtmlRoot
 		].
 
 	"jQuery, but NO jQuery-UI"
-	anHtmlRoot javascript defer; url: '/js/jquery/jquery-3.4.1.min.js'.
+	anHtmlRoot javascript defer; url: '/js/jquery/jquery.min.js'.
 
 	"Underscore JS"
 	anHtmlRoot javascript defer; url: '/js/underscore-min.js'.
