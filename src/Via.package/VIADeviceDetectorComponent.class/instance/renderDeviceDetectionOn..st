@@ -9,7 +9,7 @@ renderDeviceDetectionOn: html
 				anchorTag := html anchor
 					class: 'spinnerMessage';
 					callback: [ self finish ];
-					with: 'Loading ...';
+					t: 'deviceDetector:loading';
 					yourself].
 	
 			detectionDoneUrl := anchorTag url.
