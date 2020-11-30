@@ -7,6 +7,8 @@ callPublicApplication
 	isEmbedded
 		ifTrue: [component := VIAApplicationManager current mainEmbeddedComponentClass new]
 		ifFalse: [component := VIAApplicationManager current mainPublicComponentClass new].
+
+	self addDecoration: VIAApplicationManager current mainDecorationClass new.
 	
 	self applicationComponent: component.
 	self executeCommand.
