@@ -17,7 +17,7 @@ updateRoot: anHtmlRoot
 	anHtmlRoot title: (self session website title).
 
 	"jQuery, but NO jQuery-UI"
-	anHtmlRoot javascript url: '/js/jquery/jquery-3.4.1.min.js'.
+	anHtmlRoot javascript url: '/js/jquery/jquery.min.js'.
 
 	anHtmlRoot javascript url: '/js/device-detector.js'.
 
