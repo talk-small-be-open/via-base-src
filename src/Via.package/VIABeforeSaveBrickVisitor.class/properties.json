@@ -6,6 +6,6 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "VIAPrepareNewBrickVisitor",
+	"name" : "VIABeforeSaveBrickVisitor",
 	"type" : "normal"
 }

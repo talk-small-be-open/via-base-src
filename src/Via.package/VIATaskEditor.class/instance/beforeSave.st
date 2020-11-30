@@ -1,3 +1,6 @@
 as yet unclassified
 beforeSave
-	task beforeSave
+	| visitor |
+
+	visitor := VIABeforeSaveBrickVisitor website: self currentWebsite.
+	visitor visit: task.

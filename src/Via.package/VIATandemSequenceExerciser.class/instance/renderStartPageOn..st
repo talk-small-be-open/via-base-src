@@ -10,6 +10,7 @@ renderStartPageOn: html
 				class: 'chooser player1 uk-link-reset';
 				with: [
 					html iconQuestion. 
+					html div t: 'tandemSequence:iAm'.
 					html span class: 'playerLabel'; with: [ html t: 'tandemSequence:player1' ].
 					html div: [
 						html pillarSnippet: taskBrick startPillarPlayerA ].
@@ -21,6 +22,7 @@ renderStartPageOn: html
 				class: 'chooser player2 uk-link-reset';
 				with: [
 					html iconAnswer.
+					html div t: 'tandemSequence:iAm'.
 					html span class: 'playerLabel'; with: [ html t: 'tandemSequence:player2' ].
 					html div: [
 						html pillarSnippet: taskBrick startPillarPlayerB ].

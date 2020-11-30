@@ -1,11 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAPresetBrickVisitor",
+	"super" : "VIABrickTreeVisitor",
 	"category" : "Via-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
-	"name" : "VIAPrepareNewBrickVisitor",
+	"instvars" : [
+		"website"
+	],
+	"name" : "VIAPresetBrickVisitor",
 	"type" : "normal"
 }

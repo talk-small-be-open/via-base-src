@@ -8,13 +8,11 @@ renderDeviceDetectionOn: html
 			html paragraph: [
 				anchorTag := html anchor
 					class: 'spinnerMessage';
-					callback: [ self close ];
+					callback: [ self finish ];
 					with: 'Loading ...';
 					yourself].
 	
 			detectionDoneUrl := anchorTag url.
-"			Transcript show: detectionDoneUrl.
-			Transcript cr."
 	]].
 
 	"Auto-Javascript, will return URL for reload after successful AJAX"
@@ -22,6 +20,6 @@ renderDeviceDetectionOn: html
 		(html jQuery ajax
 			callback: [:json | self detectFromJson: json ]
 			value: (JSStream on: self jsJsonData);
-			onSuccess: ('location.href = url' asFunction: #(url status));
+			onSuccess: ('location.href = answer' asFunction: #(answer));
 			dataType: 'text'
 	 ) setTimeout: 1000)
