@@ -9,8 +9,6 @@
 # Id did not find a solution, so this post-merge hook should be installed in the
 # git repo for Iceberg as symlinks from the .git/hook/post-merge file.
 
-# Keep the shell scripts executable
-# chmod +x ./server/*.sh
-git restore --staged server/
-
-# TDB ensure that symlinks are symlinks
+# Keep the shell scripts executable and keep the f*ing symlinks symlinks!
+# Do not dare to mess around after a merge, bloody hell!
+git restore --staged

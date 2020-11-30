@@ -49,6 +49,13 @@ popd
 newExtent -t -s $STONE_DIR/backups/$BACKUPNAME $STONE
 # Oder?  todeIt ViaSiteTdu mount @/sys/stone/dirs/Seaside3/tode /home seaside
 
+# Alternativ, wegen blödem login disabled Fehler
+# newExtent normal
+# todeLoad ViaSiteTdu
+# todeRestore ViaSiteTdu /opt/GsDevKit_home/server/stones/ViaSiteTdu/backups/shrinking_gemstone.dbf.gz
+# todeIt ViaSiteTdu "script --script=rebuildServerTode"
+# todeIt ViaSiteTdu  mount @/sys/stone/dirs/Seaside3/tode /home seaside
+
 stopStone $STONE
 
 ./via_start.sh

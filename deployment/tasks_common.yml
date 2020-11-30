@@ -320,7 +320,7 @@
     when: via.backupPassword is defined
     no_log: true
     copy:
-      content: "FTP_PASSWORD={{via.backupPassword}}"
+      content: "export FTP_PASSWORD={{via.backupPassword}}"
       dest: "{{via.installationPath}}/.duplicity.cred"
       owner: "{{remoteUser}}"
       group: "{{remoteUser}}"
