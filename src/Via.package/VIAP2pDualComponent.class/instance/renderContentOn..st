@@ -2,14 +2,23 @@ rendering
 renderContentOn: html
 	
 	"Remarks: For flawless usage, place this component at the very start
-	of your HTML section which will use P2P Javascript functions. This
+	of your HTML section which wants to use the P2P Javascript functions. This
 	component will start the P2P process."
 	
 	html div
 		id: self elementId;
 		onClick: (self jsSend: 'ping');
 		class: 'p2pStatus';
-		t: label.
-	
+		with: [
+			html span class: 'p2pIcon'; with: [
+				html span class: 'p2pUndefined'; with: [
+					html iconP2pUndefined ].
+				html span class: 'p2pNotConnected'; with: [
+					html iconP2pNotConnected ].
+				html span class: 'p2pConnected'; with: [
+					html iconP2pConnected ] ].
+			html sT: label.
+		].
+
 	"Needs to be after the div creation"
 	self renderJavascriptOn: html.
