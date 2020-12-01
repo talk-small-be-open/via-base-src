@@ -11,4 +11,4 @@
 
 # Keep the shell scripts executable and keep the f*ing symlinks symlinks!
 # Do not dare to mess around after a merge, bloody hell!
-git restore --staged
+git restore --staged .

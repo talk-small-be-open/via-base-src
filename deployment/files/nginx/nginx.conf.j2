@@ -48,8 +48,8 @@ http {
         
         listen 443 ssl http2;
 
-        ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/via/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/via/privkey.pem;
         include /etc/letsencrypt/options-ssl-nginx.conf;
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
@@ -57,7 +57,7 @@ http {
         listen 80;
         {% endif %}
 
-        server_name {{via.appDomain}} {{via.appSecondaryDomains|join(" ")}};
+        server_name {{via.appDomains|join(" ")}};
 
         root {{via.installationPath}}/via_base/web_root;
 
@@ -181,7 +181,7 @@ http {
     # Redirect HTTP->HTTPS
     server {
         listen     80;
-				server_name {{via.appDomain}} {{via.appSecondaryDomains|join(" ")}};
+				server_name {{via.appDomains|join(" ")}};
 
         return 301 https://$host$request_uri;
     }
@@ -196,8 +196,8 @@ http {
         
         listen 443 ssl http2 default_server;
 
-        ssl_certificate /etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/{{via.appDomain}}/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/via/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/via/privkey.pem;
         include /etc/letsencrypt/options-ssl-nginx.conf;
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 

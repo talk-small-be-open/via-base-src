@@ -340,21 +340,28 @@
       gemstone_is_installed: True
     when: gemstone_exists.stat.exists == true
   
-  - name: Update with our own gem.conf (only if already exists)
+  - name: Update with our own gem.conf for gems
     when: gemstone_is_installed is defined
-    copy:
-      src: "files/gemstone/gem.conf"
+    template:
+      src: "files/gemstone/gem.conf.j2"
       dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/gem.conf"
       owner: "{{remoteUser}}"
       mode: 0644
 
-  - name: Update with our own stone.conf (only if already exists)
+  - name: Update with our own stone.conf for the stone
     when: gemstone_is_installed is defined
-    copy:
-      src: "files/gemstone/gem.conf"
+    template:
+      src: "files/gemstone/gem.conf.j2"
       dest: "/opt/GsDevKit_home/server/stones/{{stoneName}}/{{stoneName}}.conf"
       owner: "{{remoteUser}}"
       mode: 0644
 
+  - name: Copy key file, if we have one
+    when: gemstone_is_installed is defined and via.gemStone.keyfile is defined
+    copy:
+      src: "{{via.gemStone.keyfile}}"
+      dest: "{{via.installationPath}}/install/gemstone.key"
+      owner: "{{remoteUser}}"
+      mode: 0600
 
   - include_tasks: tasks_firewall.yml

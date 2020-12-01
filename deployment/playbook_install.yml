@@ -162,7 +162,7 @@
       state: stopped
   - name: certbot get Certificates
     when: via.useSsl
-    shell: certbot --standalone -n --agree-tos --email {{via.adminEmail}} --cert-name "{{via.appDomain}}"  --domains "{{via.appDomain}}{% if via.appSecondaryDomains %},{{via.appSecondaryDomains|join(',')}}{% endif %}" certonly
+    shell: certbot --standalone -n --agree-tos --email {{via.adminEmail}} --cert-name "via"  --domains "{{via.appDomains|join(',')}}" certonly
     args:
       creates: "/etc/letsencrypt/live/{{via.appDomain}}/fullchain.pem"
 
@@ -215,7 +215,7 @@
     
   - name: Create stone
     become_user: "{{remoteUser}}"
-    shell: "createStone {{stoneName}} {{via.gemStoneVersion}}"
+    shell: "createStone {{stoneName}} {{via.gemStone.version}}"
     args:
       chdir: "/opt/GsDevKit_home"
       creates: "/opt/GsDevKit_home/server/stones/{{stoneName}}"

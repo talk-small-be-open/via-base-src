@@ -190,3 +190,55 @@ div.pillarParagraph {
 .bottomBuffer {
 		margin-bottom: 20px;
 }
+
+div.p2pStatus {
+
+		span.p2pIcon {
+				margin: 0 0.2em;
+		}
+		
+		span.p2pUndefined {
+				display: none;
+		}
+		span.p2pNotConnected {
+				display: none;
+		}
+		span.p2pConnected {
+				display: none;
+		}
+
+		&.open {
+				span.p2pUndefined {
+						display: initial;
+				}
+				span.p2pNotConnected {
+						display: none;
+				}
+				span.p2pConnected {
+						display: none;
+				}
+		}
+		&.error {
+				span.p2pUndefined {
+						display: none;
+				}
+				span.p2pNotConnected {
+						display: initial;
+				}
+				span.p2pConnected {
+						display: none;
+				}
+		}
+		&.data {
+				span.p2pUndefined {
+						display: none;
+				}
+				span.p2pNotConnected {
+						display: none;
+				}
+				span.p2pConnected {
+						display: initial;
+				}
+		}
+		
+}
