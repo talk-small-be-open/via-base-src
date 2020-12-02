@@ -28,7 +28,7 @@ updateRootEssentials: anHtmlRoot
 		
 	self isDevelopment
 		ifTrue: [
-			anHtmlRoot title: 'VIA DEVELOPMENT ', self session language.
+			anHtmlRoot title: 'VIA DEVELOPMENT ', self website title.
 			anHtmlRoot bodyAttributes addClass: 'development'.
 		]
 		ifFalse: [
