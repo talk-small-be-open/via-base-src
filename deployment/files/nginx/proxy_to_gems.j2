@@ -1,6 +1,0 @@
-expires -1;
-add_header Cache-Control "no-store, no-cache, must-revalidate, max-age=0, proxy-revalidate";
-# gzip on;
-proxy_pass http://gems;
-proxy_set_header Host            $host;
-proxy_set_header X-Forwarded-For $remote_addr;
