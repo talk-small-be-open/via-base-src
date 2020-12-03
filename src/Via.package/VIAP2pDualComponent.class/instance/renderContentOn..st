@@ -9,6 +9,7 @@ renderContentOn: html
 		id: self elementId;
 		onClick: (self jsSend: 'ping');
 		class: 'p2pStatus';
+		popover: ('Paired to ', self otherPeerLabel);
 		with: [
 			html span class: 'p2pIcon'; with: [
 				html span class: 'p2pUndefined'; with: [
@@ -17,7 +18,7 @@ renderContentOn: html
 					html iconP2pNotConnected ].
 				html span class: 'p2pConnected'; with: [
 					html iconP2pConnected ] ].
-			html sT: label.
+"			html sT: label."
 		].
 
 	"Needs to be after the div creation"

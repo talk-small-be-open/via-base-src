@@ -1,4 +1,0 @@
-rendering
-renderQuestionMarkOn: html
-	html div class: 'questionIcon'; with: [
-		html iconQuestion; t: 'tandemSequence:question' ].

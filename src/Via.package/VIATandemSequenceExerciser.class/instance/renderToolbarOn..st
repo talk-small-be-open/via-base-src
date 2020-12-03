@@ -3,12 +3,12 @@ renderToolbarOn: html
 	html div class: 'toolbar'; with: [
 		html ukButtonGroup: [
 			self isInGame ifTrue: [
-				html anchorButton
+				html anchor
 					callback: [ self reset ];
-					t: 'tandemSequence:reset'.
-				html anchorButton
+					with: [ html iconReset ].
+"				html anchorButton
 					callback: [ self playAgain ];
-					t: 'tandemSequence:playAgain'.
+					t: 'tandemSequence:playAgain'."
 "				html anchorButton
 					callback: [ ];
 					with: 'swap sides'."

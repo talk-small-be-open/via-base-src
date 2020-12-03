@@ -9,9 +9,8 @@ renderStartPageOn: html
 				callback: [ self iamPlayerNumber: 1; goAhead ];
 				class: 'chooser player1 uk-link-reset';
 				with: [
-					html iconQuestion. 
 					html div t: 'tandemSequence:iAm'.
-					html span class: 'playerLabel'; with: [ html t: 'tandemSequence:player1' ].
+					self renderPlayerLetter: 'A' on: html.
 					html div: [
 						html pillarSnippet: taskBrick startPillarPlayerA ].
 					html span class: 'button'; t: 'tandemSequence:go' ]
@@ -21,9 +20,8 @@ renderStartPageOn: html
 				callback: [ self iamPlayerNumber: 2; goAhead ];
 				class: 'chooser player2 uk-link-reset';
 				with: [
-					html iconAnswer.
 					html div t: 'tandemSequence:iAm'.
-					html span class: 'playerLabel'; with: [ html t: 'tandemSequence:player2' ].
+					self renderPlayerLetter: 'B' on: html.
 					html div: [
 						html pillarSnippet: taskBrick startPillarPlayerB ].
 					html span class: 'button'; t: 'tandemSequence:go' ]

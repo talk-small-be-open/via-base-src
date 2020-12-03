@@ -1,3 +1,4 @@
 rendering
 renderPairingPageOn: html
-	html render: pairingComponent
+	html div class: 'pairer'; class: self playerCss; with: [
+		html render: pairingComponent ]

@@ -4,8 +4,8 @@ renderQuestionAndHiddenAnswerOn: html
 "		html span class: 'playerLabel'; with: self playerInTurnLetter.
 		html span: '(Me)'."
 		self renderQuestionOn: html.
-		html div
+"		html div
 			class: 'answer';
-			class: self playerInTurnCss.
-"			with: '?'"
+			class: self otherPlayerCss;
+			with: [ html iconAnswer ]"
 	]

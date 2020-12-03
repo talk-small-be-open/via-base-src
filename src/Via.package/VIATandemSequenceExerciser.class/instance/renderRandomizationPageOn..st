@@ -1,4 +1,4 @@
-rendering
+obsolete
 renderRandomizationPageOn: html
 	self ifPlayer1: [
 		html paragraph: [html t: 'tandemSequence:forwardThisRandomCode'].

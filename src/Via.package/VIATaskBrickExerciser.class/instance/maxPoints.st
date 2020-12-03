@@ -1,0 +1,3 @@
+accessing
+maxPoints
+	^taskBrick maxPoints
