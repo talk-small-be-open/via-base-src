@@ -31,4 +31,6 @@ renderContentOn: html
 		].
 		
 		self renderFlashMessagesOn: html.
+		self renderSystemMessageOn: html.
+		
 		html render: tabbedNavigationComponent]
