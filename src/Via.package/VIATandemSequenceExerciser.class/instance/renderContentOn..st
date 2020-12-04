@@ -7,5 +7,7 @@ renderContentOn: html
 		html div id: gameBoardId; with: [
 			self renderPageLogicOn: html ].
 
-		self renderToolbarOn: html
+		"Outside of AJAX reload area. P2P needs to be active all the time"
+		self renderP2pSynchronizationOn: html.
+"		self renderToolbarOn: html"
 	].

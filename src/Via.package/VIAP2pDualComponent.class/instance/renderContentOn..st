@@ -9,14 +9,13 @@ renderContentOn: html
 		id: self elementId;
 		onClick: (self jsSend: 'ping');
 		class: 'p2pStatus';
-		popover: ('Paired to ', self otherPeerLabel);
 		with: [
 			html span class: 'p2pIcon'; with: [
-				html span class: 'p2pUndefined'; with: [
+				html span class: 'p2pUndefined'; popover: ('Waiting for ', self otherPeerLabel); with: [
 					html iconP2pUndefined ].
-				html span class: 'p2pNotConnected'; with: [
+				html span class: 'p2pNotConnected'; popover: ('NOT paired to ', self otherPeerLabel); with: [
 					html iconP2pNotConnected ].
-				html span class: 'p2pConnected'; with: [
+				html span class: 'p2pConnected'; popover: ('Paired to ', self otherPeerLabel); with: [
 					html iconP2pConnected ] ].
 "			html sT: label."
 		].

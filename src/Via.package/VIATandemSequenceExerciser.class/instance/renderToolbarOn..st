@@ -1,20 +1,21 @@
 rendering
 renderToolbarOn: html
 	html div class: 'toolbar'; with: [
-		html ukButtonGroup: [
-			self isInGame ifTrue: [
+"			self isInGame ifTrue: ["
 				html anchor
 					callback: [ self reset ];
-					with: [ html iconReset ].
+					with: [ html fasIcon: 'undo' "iconRefresh" ].
 "				html anchorButton
 					callback: [ self playAgain ];
 					t: 'tandemSequence:playAgain'."
 "				html anchorButton
 					callback: [ ];
 					with: 'swap sides'."
-				self session isFullscreenSupported ifTrue: [
-					html anchorButton
+				(self session isFullscreenSupported and: [self isInGame]) ifTrue: [
+					html anchor
 						onClick: (((html jQuery id: gameBoardId) at: 0) call: 'toggleFullscreen');
-						t: 'tandemSequence:toggleFullscreen']]].
-		self renderP2pSynchronizationOn: html.	
+"						t: 'tandemSequence:toggleFullscreen'."
+						with: [ html iconFullscreen ]
+				].
+"		self renderP2pSynchronizationOn: html.	"
 	]

@@ -12,21 +12,21 @@ renderSummaryPageOn: html
 	"		html anchor
 				callback: [ self reset ];
 				with: 'Reset'."
-				
-			taskBrick showHistory ifTrue: [
-				showHistory ifFalse: [
-					html anchorButton
-						callback: [ self toggleHistory ];
-						with: [
-							html iconShowSolution; space.
-							html t: 'tandemSequence:showSolutions' ] ].
-			].
+			html div class: 'summaryButtons'; with: [	
+				taskBrick showHistory ifTrue: [
+					showHistory ifFalse: [
+						html anchorButton
+							callback: [ self toggleHistory ];
+							with: [
+								html iconShowSolution; space.
+								html t: 'tandemSequence:showSolutions' ] ].
+				].
 
-			html anchorButton
-				callback: [ self reset ];
-				with: [
-					html iconReset; space.
-					html t: 'tandemSequence:reset' ].
+				html anchorButton
+					callback: [ self reset ];
+					with: [
+						html iconReset; space.
+						html t: 'tandemSequence:reset' ] ].
 		].
 
 		showHistory ifTrue: [
