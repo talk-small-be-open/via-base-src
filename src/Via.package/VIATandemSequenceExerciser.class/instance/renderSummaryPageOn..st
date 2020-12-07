@@ -18,14 +18,14 @@ renderSummaryPageOn: html
 						html anchorButton
 							callback: [ self toggleHistory ];
 							with: [
-								html iconShowSolution; space.
+								html iconShowSolution; break.
 								html t: 'tandemSequence:showSolutions' ] ].
 				].
 
 				html anchorButton
 					callback: [ self reset ];
 					with: [
-						html iconReset; space.
+						html iconReset; break.
 						html t: 'tandemSequence:reset' ] ].
 		].
 
