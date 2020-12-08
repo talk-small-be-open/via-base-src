@@ -1,3 +1,3 @@
 icons
 iconPdf
-	^self ukIcon: 'file-pdf'
+	^self farIcon: 'file-pdf'

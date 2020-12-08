@@ -8,6 +8,6 @@ maintenanceTaskVia5Minutes
     valuable: [ :task | 
       GsFile gciLogServer: 'Starting via 5 minutes task at ', DateAndTime now printString, ' ...'.
       System transactionMode ~~ #'autoBegin' ifTrue: [System beginTransaction].
-		VIAApplicationManager runTasksAll5Minutes.
+		VIAApplicationManager current runTasksAll5Minutes.
       GsFile gciLogServer: '...finished'.
       System commitTransaction]

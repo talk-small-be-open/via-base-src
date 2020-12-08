@@ -8,7 +8,7 @@ initialize
 	moduleCardRenderer := self website moduleCardRendererClass component: self.
 
 	searchQuery ifNotNil: [
-		searchFormRenderer := VIASearchFormRenderer component: self query: searchQuery].
+		searchFormRenderer := self searchFormRendererClass component: self query: searchQuery].
 
 	showMap ifNil: [
 		showMap := self isFeature: #showSwissMapOnSearch].

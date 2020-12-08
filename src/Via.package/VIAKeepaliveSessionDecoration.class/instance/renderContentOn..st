@@ -7,8 +7,8 @@ renderContentOn: html
 	appName := self requestContext request url path first.
 		
 	keepaliveUrl := String streamContents: [:stream |
-		stream nextPutAll: '//'.
-		stream nextPutAll: self website domain.
+"		stream nextPutAll: '//'.
+		stream nextPutAll: self website domain."
 		stream nextPutAll: '/keepalive?session='.
 		stream nextPutAll: self session key.
 		stream nextPutAll: '&app='.

@@ -1,0 +1,3 @@
+icons
+iconAccount
+	^self iconPerson

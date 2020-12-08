@@ -9,7 +9,9 @@ renderVideoTranscription: aVideoPlayer on: html
 				transcriptionId := html nextId.
 				html anchor
 					ukToggleTarget: ('#', transcriptionId) class: 'disabled';
-					t: 'exerciser:showVideoTranscription'.
+					with: [
+						html iconTranscription; space.
+						html t: 'exerciser:showVideoTranscription' ].
 				html ukCard
 					id: transcriptionId;
 					a: 'uk-sticky' p: 'media: @s; bottom: !div.taskGroup;';

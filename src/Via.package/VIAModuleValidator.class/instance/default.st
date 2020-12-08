@@ -5,6 +5,4 @@ default
 "	self validatePresence of: #coAuthorUsers named: 'module:coauthors'."
 	self validatePresence of: #imageAsset named: 'module:mainImage'.
 
-	self validateFormat
-		of: #exerciseLevel named: 'module:level';
-		withRegexp: '[A|B|C]\d'
+	self validatePresence of: #levelTag named: 'module:level'

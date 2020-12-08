@@ -1,4 +1,3 @@
 accessing
 featuredModules
-	"TODO: Features nehmen, nicht Zufall!"
-	^ self publicModules shuffled "takeFirst: 20"
+	^ self propertyAt: #featuredModules ifAbsent: [ self publicModules shuffled takeFirst: 10 ]
