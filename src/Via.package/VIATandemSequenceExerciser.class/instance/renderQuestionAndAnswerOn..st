@@ -22,10 +22,10 @@ renderQuestionAndAnswerOn: html
 					html div class: 'correction'; with: [
 							html anchor
 								onClick: (self jsSend: 'notCorrect');
-								with: [ html image style: 'width: 3em'; url: '/site/images/button-wrong.svg' ].
+								with: [ html iconBeWrong ].
 							html anchor
 								onClick: (self jsSend: 'correct');
-								with: [ html image style: 'width: 3em'; url: '/site/images/button-correct.svg' ].
+								with: [ html iconBeCorrect ].
 				]]
 			]
 		]
