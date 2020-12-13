@@ -17,7 +17,9 @@
 		"exams",
 		"mailer",
 		"users",
-		"userGroups"
+		"userGroups",
+		"massMailings",
+		"mailingConfiguration"
 	],
 	"name" : "VIAWebsiteData",
 	"type" : "normal"

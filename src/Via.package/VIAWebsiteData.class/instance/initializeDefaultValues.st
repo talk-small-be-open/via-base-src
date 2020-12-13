@@ -11,3 +11,5 @@ initializeDefaultValues
 	mailer ifNil: [mailer := VIAMailer new website: website; yourself].
 	users ifNil: [users := OrderedCollection new].
 	userGroups ifNil: [userGroups := OrderedCollection new].
+	massMailings ifNil: [ massMailings := OrderedCollection new ].
+	mailingConfiguration ifNil: [ mailingConfiguration := VIAMailingConfiguration new ].

@@ -13,6 +13,7 @@ renderContentOn: html
 			html div class: 'uk-form-controls'; with: [
 				html span: user email.
 				"html textInput on: #email of: user"]].
+		self renderMailingSettingsOn: html.
 		html div class: 'topBuffer'; with: [
 			html ukSubmitButton t: 'myProfile:save']].
 	html div class: 'topBuffer'; with: [

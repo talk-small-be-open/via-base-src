@@ -15,5 +15,6 @@ initializeTabbedNavigationComponent
 			add: usersComponent label: 'Users';
 			add: configurationComponent label: 'Configuration';
 	"		add: emailsComponent label: 'Emails';"
+			add: mailingComponent label: 'Mailing';
 			add: maintenanceComponent label: 'Maintenance'.
 	"		add: developmentComponent label: 'Development';"]

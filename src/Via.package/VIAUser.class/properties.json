@@ -16,7 +16,8 @@
 		"properties",
 		"rememberToken",
 		"useAutologin",
-		"isInvitee"
+		"isInvitee",
+		"mailingConfiguration"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"channelsData",
+		"globalEnabled"
+	],
+	"name" : "VIAMailingConfiguration",
+	"type" : "normal"
+}

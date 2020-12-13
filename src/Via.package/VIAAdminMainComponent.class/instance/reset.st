@@ -8,6 +8,7 @@ reset
 	modulesComponent := VIAAdminModulesComponent new.
 	configurationComponent := VIAAdminConfigurationComponent new.
 	classificationComponent := VIAAdminClassificationComponent new.
+	mailingComponent := VIAAdminMailingComponent new.
 	maintenanceComponent := VIAAdminMaintenanceComponent new.
 "	developmentComponent := SIRAdminDevelopmentComponent new.
 "

@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"website",
+		"messagePillar",
+		"subject",
+		"toRoles",
+		"failedEmails",
+		"ignoreSettings",
+		"channelName",
+		"sentAt"
+	],
+	"name" : "VIAMassMailing",
+	"type" : "normal"
+}

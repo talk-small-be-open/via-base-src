@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAdminComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"mailing"
+	],
+	"name" : "VIAAdminMailingComponent",
+	"type" : "normal"
+}

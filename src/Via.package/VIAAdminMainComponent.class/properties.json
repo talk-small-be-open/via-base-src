@@ -15,7 +15,8 @@
 		"assetsComponent",
 		"classificationComponent",
 		"uiTextComponent",
-		"flashMessages"
+		"flashMessages",
+		"mailingComponent"
 	],
 	"name" : "VIAAdminMainComponent",
 	"type" : "normal"

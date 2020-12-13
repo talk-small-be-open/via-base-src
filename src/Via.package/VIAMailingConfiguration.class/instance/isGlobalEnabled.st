@@ -1,0 +1,3 @@
+testing
+isGlobalEnabled
+	^ globalEnabled = true
