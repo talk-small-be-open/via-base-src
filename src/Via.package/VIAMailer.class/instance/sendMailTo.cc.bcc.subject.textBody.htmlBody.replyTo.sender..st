@@ -1,12 +1,12 @@
 delivery
-sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject textBody: body htmlBody: aRenderBlock replyTo: aReplyEmailString sender: aWAEmailAddress
+sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject textBody: body htmlBody: aComponent replyTo: aReplyEmailString sender: aWAEmailAddress
 	| email to cc bcc sender isMultipart |
 	
 	self enabled ifFalse: [^nil].
 
-	isMultipart := aRenderBlock notNil.
+	isMultipart := aComponent notNil.
 
-	email := isMultipart ifTrue: [ WAMultiPartEmailMessage new ] ifFalse: [ WAEmailMessage new ].
+	email := isMultipart ifTrue: [ VIAWaHtmlEmailMessage new ] ifFalse: [ WAEmailMessage new ].
 
 	email
 		headerAt: 'Return-path' put: ('postmaster@', website domain).
@@ -31,7 +31,7 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 		from: sender.
 		
 	isMultipart ifTrue: [ 
-		email setHtmlBody: aRenderBlock.
+		email htmlComponent: aComponent.
 	] ifFalse: [ 
 		email
 			headerAt: 'Content-Type' put: 'text/plain; charset=UTF-8';

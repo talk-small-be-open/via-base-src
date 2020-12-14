@@ -3,8 +3,7 @@ renderContentOn: html
 	html div class: 'certificate'; with: [
 		html paragraph class: 'toptext'; t: 'certificate:header'.
 		html div class: 'logo'; with: [
-			html image
-				url: ('/site/images/', self website logoFilename);
+			(html logoImageFor: self website)
 				style: 'width:150px;height:auto'].
 		html div class: 'banner'; with: [
 			html span class: 'bannerText'; t: 'certificate:bannerText'.

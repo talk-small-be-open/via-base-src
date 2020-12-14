@@ -71,6 +71,10 @@ initialRequest: aRequest
 			command := VIAShowDisclaimerCommand new.
 		].
 
+		"Direct URL to email settings"
+		(commandName = 'mailsettings') ifTrue: [
+			command := VIAShowMailSettingsCommand new.
+		].
 		
 	].
 

@@ -5,7 +5,6 @@ verifyLoginUser: aUser
 		ifFalse: [
 			self call: (VIALoginComponent new
 				email: aUser email;
-				beEmailLocked;
 				addDecoration: VIACenterContainerDecoration new;
 				yourself) onAnswer: [self restart]
 		]

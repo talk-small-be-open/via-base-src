@@ -11,7 +11,7 @@ sendTestHtmlEmailTo: aString
 		stream crlf; crlf.
 		stream crlf; nextPutAll: self defaultSignature].
 
-	htmlBody := [:html |
+	htmlBody := VIAPluggableComponent new content: [:html |
 		html heading: 'TEST TEST TEST'.
 		html break; break.
 		html horizontalRule.

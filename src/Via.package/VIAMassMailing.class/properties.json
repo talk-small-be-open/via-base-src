@@ -13,7 +13,8 @@
 		"failedEmails",
 		"ignoreSettings",
 		"channelName",
-		"sentAt"
+		"sentAt",
+		"sentBy"
 	],
 	"name" : "VIAMassMailing",
 	"type" : "normal"

@@ -1,22 +1,20 @@
 mails
 sendMassMailTo: aToCollection subject: aSubjectString pillarBody: aPillarDocument
-	| body htmlBody failedRecipients |
+	| textBody htmlBody failedRecipients |
 
 	"Sends single email copies to many. Answers the emails which failed."
 
-	body := aPillarDocument text.
+	htmlBody := VIAApplicationManager current massMailingHtmlEmailClass website: website.
+	htmlBody mainPillar: aPillarDocument. 
 
-	htmlBody := [:html |
-		VIAPrSeasideRenderer new
-			seasideHtmlCanvas: html;
-			start: aPillarDocument.
-	].
+	textBody := htmlBody asSimpleText.
 
-	"TODO: Bremsen?"
+	"OPTIMIZE: Speed break somewhere? But since we are communicating with
+	localhost postfix, this should run very quick"
 	failedRecipients := OrderedCollection new.
 	aToCollection do: [ :each |
 		[
-			self sendMailTo: {each} subject: aSubjectString textBody: body htmlBody: htmlBody
+			self sendMailTo: {each} subject: aSubjectString textBody: textBody htmlBody: htmlBody
 		] on: Error do: [:error |
 			self ifDevelopment: [ error pass ].
 			failedRecipients add: each ]

@@ -6,3 +6,5 @@ afterDeployment
 
 	"Load new tasks, if any"
 	WAGemStoneMaintenanceTask initialize.
+	
+	self ensureDefaultRenderer.

@@ -1,4 +1,4 @@
 initialization
 start
-	mailing := VIAMassMailing website: self currentWebsite.
+	mailing := VIAMassMailing website: self currentWebsite by: self currentUser
 	

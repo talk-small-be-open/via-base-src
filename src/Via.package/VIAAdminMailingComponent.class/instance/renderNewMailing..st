@@ -1,12 +1,8 @@
 rendering
 renderNewMailing: html
-	html heading level1; with: 'Mailing'.
 	self renderPillarPreviewDialogOn: html.
 	
 	html form: [
-"		aVideoPlayer transcriptionPillar isParseOk ifFalse: [
-			self renderPillarSyntaxError: aVideoPlayer transcriptionPillar parseError on: html
-		]."
 		html heading level3; with: 'Channel'.
 		html select
 			list: #(official systemStatus);
@@ -29,14 +25,19 @@ renderNewMailing: html
 		
 		html heading level3; with: 'Message'.
 
-		self renderPillarInput: #pillarString of: mailing messagePillar on: html.
-		
+		self renderPillarObjectInput: mailing messagePillar on: html.
 
 		html div: [ 			
 			html submitButton
 				callback: [ "self save" ];
 				with: 'Save'.
+			html space.
+			html submitButton
+				callback: [ self sendTestToMe ];
+				with: 'Send test to myself'.
+			html space.
 			html submitButton
 				callback: [ self send ];
-				with: 'Send'.]
+				with: 'Send to all'.
+		]
 	].

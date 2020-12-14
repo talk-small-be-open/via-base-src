@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WAHtmlEmailBody",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaHtmlEmailBody",
+	"type" : "normal"
+}

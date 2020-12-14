@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WAMultiPartEmailMessage",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaHtmlEmailMessage",
+	"type" : "normal"
+}
