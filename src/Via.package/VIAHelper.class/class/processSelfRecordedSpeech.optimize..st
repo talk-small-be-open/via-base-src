@@ -27,6 +27,7 @@ processSelfRecordedSpeech: aFileReference optimize: aBoolean
 
 
 	"With SoX. Convert from webm to wav with ffmpeg"
+	"SoX see: http://sox.sourceforge.net/sox.html"
 	cmd := String streamContents: [:s |
 		s << 'ffmpeg -nostats -loglevel warning -y '.
 		s << (' -i "', filepath, '" ').
@@ -38,7 +39,7 @@ processSelfRecordedSpeech: aFileReference optimize: aBoolean
 		s << ('"', outputFilepath, '" ').
 		
 		aBoolean ifTrue: [
-			s << ' highpass 80 fade l 0 -0.2 0.2 silence 1 0.2 -60d fade l 0.02 pad 0.5 gain -n -1' ].
+			s << ' highpass 80 fade l 0 -0.2 0.2 silence 1 0.05 -40d fade l 0.001 pad 0.5 gain -n -1' ].
 
 		s << (' && rm "', filepath, '" "', filepath, '.wav"').
 	].

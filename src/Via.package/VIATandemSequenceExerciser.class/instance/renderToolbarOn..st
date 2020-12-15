@@ -11,7 +11,7 @@ renderToolbarOn: html
 "				html anchorButton
 					callback: [ ];
 					with: 'swap sides'."
-				(self session isFullscreenSupported and: [self isInGame]) ifTrue: [
+				(self session isViewportSmall and: [self session isFullscreenSupported and: [self isInGame]]) ifTrue: [
 					html anchor
 						onClick: (((html jQuery id: gameBoardId) at: 0) call: 'toggleFullscreen');
 "						t: 'tandemSequence:toggleFullscreen'."

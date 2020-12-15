@@ -3,9 +3,12 @@ renderDeviceDetectionOn: html
 	| anchorTag |
 	html ukContainer with: [
 		html div class: 'uk-position-center uk-align-center'; with: [
-"			html span class: 'spinner'; a: 'uk-spinner' p: 'ratio: 3'."
-			html heading: self website title.
+			html heading
+				onClick: (html javascript alert: (JSStream on: self jsJsonData));
+				with: self website title.
 			html paragraph: [
+"Uikit not loaded here				html ukSpinner.
+				html space."
 				anchorTag := html anchor
 					class: 'spinnerMessage';
 					callback: [ self finish ];

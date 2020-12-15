@@ -4,7 +4,7 @@ ajaxProcessP2pData: anObject
 	reload := [ self ajaxReturnText: 'reload'. ^ self ].
 	
 	"A number means goto page"
-	Transcript show: anObject asString; cr.
+"	Transcript show: anObject asString; cr."
 	anObject isInteger ifTrue: [
 		(self stepIndex ~= anObject) ifTrue: [
 			self gotoStepIndex: anObject. reload value ]

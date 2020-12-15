@@ -6,9 +6,8 @@ renderContentOn: html
 		html span class: 'theId'; with: self pairingToken code.
 	].
 	html paragraph with: [
-		html t: 'userPairing:idValidUntil'.
-		html space.
-		html text: self pairingToken expirationDateAndTime asTime print24 ].
+		html t: 'userPairing:idValidUntil_time_' p: {#time->self pairingToken expirationDateAndTime asTime print24}.
+	].
 
 	self renderAjaxInterval: 1000 on: html html: [ :h |
 		self renderStatusOn: h ]
