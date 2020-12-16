@@ -10,6 +10,7 @@ reset
 	classificationComponent := VIAAdminClassificationComponent new.
 	mailingComponent := VIAAdminMailingComponent new.
 	maintenanceComponent := VIAAdminMaintenanceComponent new.
+	statusComponent := VIAAdminStatusComponent new.
 "	developmentComponent := SIRAdminDevelopmentComponent new.
 "
 	assetsComponent := VIAAdminAssetsComponent new.

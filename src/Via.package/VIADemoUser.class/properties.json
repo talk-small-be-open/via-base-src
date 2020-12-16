@@ -10,7 +10,8 @@
 		"lastName",
 		"roles",
 		"properties",
-		"mailingConfiguration"
+		"mailingConfiguration",
+		"portfolio"
 	],
 	"name" : "VIADemoUser",
 	"type" : "normal"

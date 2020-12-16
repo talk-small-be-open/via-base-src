@@ -2,5 +2,5 @@ as yet unclassified
 loginUser: aUser
 	super loginUser: aUser.
 
-	portfolio := self wd findOrCreatePortfolioByUser: aUser.
+	portfolio := aUser portfolioInWebsite: self website.
 	portfolio cleanup
