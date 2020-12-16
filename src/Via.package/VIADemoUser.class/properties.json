@@ -1,0 +1,17 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAUserBase",
+	"category" : "Via-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"firstName",
+		"lastName",
+		"roles",
+		"properties",
+		"mailingConfiguration"
+	],
+	"name" : "VIADemoUser",
+	"type" : "normal"
+}

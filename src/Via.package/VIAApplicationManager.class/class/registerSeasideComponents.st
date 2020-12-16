@@ -5,15 +5,12 @@ registerSeasideComponents
 		at: #scriptGeneratorClass put: VIAJqScriptGenerator;
 		at: #documentClass put: VIAHtmlDocument.
 
-"	WARequestHandlingConfiguration instance
-		at: #scriptGeneratorClass put: JQScriptGenerator;
-		at: #documentClass put: VIAHtmlDocument."
-
-	"Seaside components"
-	VIAFrontendMainTask registerAsApplication.
-	VIAAdminMainTask registerAsApplication.
-	VIATestdriveMainTask registerAsApplication.
+	"Register all seaside applications"
+	VIAMainTask subclassesDo: [ :each |
+		each registerAsApplication.
+	].
 	
+	"Register some auxiliary handlers"
 	VIASessionKeepaliveRequestHandler register.
 	VIAPingRequestHandler register.
 	

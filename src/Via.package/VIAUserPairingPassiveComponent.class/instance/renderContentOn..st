@@ -1,5 +1,7 @@
 rendering
 renderContentOn: html
+	html div class: 'explanation'; t:'userPairing:pleaseShareThisCode'.
+
 	html div class: 'yourId'; with: [
 		html span class: 'message'; t: 'userPairing:yourId'.
 		html space.

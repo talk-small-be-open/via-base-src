@@ -13,6 +13,9 @@ renderModule: aModule canEdit: canEdit on: html
 		aModule isPrivate ifTrue: [
 			html space.
 			html badgeWarning: 'PRIVATE'].
+		aModule isForDemo ifTrue: [
+			html space.
+			html badgeWarning: 'IN DEMO'].
 	].
 	html tableData class: 'actions'; with: [
 		(self canMakeVewVersionModule: aModule) ifTrue: [

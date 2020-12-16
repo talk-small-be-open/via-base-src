@@ -1,0 +1,4 @@
+as yet unclassified
+callLoggedInApplication
+	self applicationComponent: VIAApplicationManager current mainDemoComponentClass new.
+	self callApplicationComponent.

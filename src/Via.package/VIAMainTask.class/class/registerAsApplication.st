@@ -1,3 +1,3 @@
 as yet unclassified
 registerAsApplication
-	self registerAsApplication: 'app'
+	self registerAsApplication: self registeredApplicationName
