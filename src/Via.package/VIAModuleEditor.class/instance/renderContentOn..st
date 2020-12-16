@@ -24,6 +24,12 @@ renderContentOn: html
 				html checkbox on: #allowIgnoreTasks of: model.
 				html space.
 				html text: 'Allow ignoring of tasks']].
+		self ifFeature: #demo then: [
+			html label: [
+				html checkbox on: #isForDemo of: model.
+				html space.
+				html text: 'Accessible in DEMO app (Note: Even if unpublished)']].
+
 "Deprecated, us level tags		html label: 'Language level' help: '(E.g. A1-B2, ...)'.
 		html textInput on: #exerciseLevel of: model."
 		html label: 'Image' help: '(Main image, displayed in search results etc.)'.

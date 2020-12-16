@@ -18,14 +18,23 @@ renderQuestionAndAnswerOn: html
 			
 			html div class: 'body'; id: id; beHidden; with: [
 				currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html.
-				self ifShowCorrection: [
-					html div class: 'correction'; with: [
+				html div class: 'interaction'; with: [
+					self ifShowCorrection: [
+						| spinnerId |
+						spinnerId := html nextId.
+						html div class: 'buttons'; with: [
 							html anchor
-								onClick: (self jsSend: 'notCorrect');
+								onClick: ((self jsSend: 'notCorrect'),
+									(html jQuery id: spinnerId) show);
 								with: [ html iconBeWrong ].
+							(html ukSpinner) id: spinnerId; class: 'spinner'.
 							html anchor
-								onClick: (self jsSend: 'correct');
-								with: [ html iconBeCorrect ].
+								onClick: ((self jsSend: 'correct'),
+									(html jQuery id: spinnerId) show);
+								with: [ html iconBeCorrect ] ].
+					] else: [
+						self ajaxAction: [ self goAhead ] on: html with: [
+							html fasIcon: 'chevron-right']
 				]]
 			]
 		]

@@ -1,3 +1,4 @@
 testing
 isAnsweringMyTurn
-	^ self isQuestioningMyTurn not
+	"Player 1 hat die erste Antwort zu geben"
+	^ self playerInTurn = playerNumber

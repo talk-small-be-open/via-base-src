@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Demo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"captcha"
+	],
+	"name" : "VIADemoLoginComponent",
+	"type" : "normal"
+}

@@ -6,6 +6,7 @@ initializeDefaultValues
 	coAuthorUsers ifNil: [coAuthorUsers := OrderedCollection new].
 	moduleHistory ifNil: [moduleHistory := VIAModuleHistory new].
 	isExam ifNil: [isExam := false].
+	isForDemo ifNil: [ isForDemo := false ].
 "Wir machens lazy	exams ifNil: [exams := OrderedCollection new]"
 	rating ifNil: [rating := VIARating new].
 	isPrivate ifNil: [isPrivate := false].

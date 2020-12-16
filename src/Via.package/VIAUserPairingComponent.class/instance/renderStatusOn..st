@@ -13,6 +13,6 @@ renderStatusOn: html
 			html div class: 'pairingMessage'; t: 'userPairing:waitingToPair' ].
 	].
 
-	html anchorButton
+	html ukAnchorButtonSmall
 		callback: [ self cancel ];
-		with: 'general:cancel'
+		t: 'general:cancel'

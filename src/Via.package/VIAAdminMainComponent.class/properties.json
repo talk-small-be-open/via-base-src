@@ -16,7 +16,8 @@
 		"classificationComponent",
 		"uiTextComponent",
 		"flashMessages",
-		"mailingComponent"
+		"mailingComponent",
+		"statusComponent"
 	],
 	"name" : "VIAAdminMainComponent",
 	"type" : "normal"

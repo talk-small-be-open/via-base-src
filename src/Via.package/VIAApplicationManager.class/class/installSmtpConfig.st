@@ -3,8 +3,9 @@ installSmtpConfig
 	| apps server user password port |
 
 	apps := OrderedCollection new.
-	apps add: (WAAdmin defaultDispatcher handlerAt: 'app').
-	apps add: (WAAdmin defaultDispatcher handlerAt: 'via-admin').
+	{ VIAFrontendMainTask. VIAAdminMainTask. VIADemoMainTask } do: [ :each |
+		apps add: (WAAdmin defaultDispatcher handlerAt: each registeredApplicationName ).
+	].
 
 	server := self db propertyAt: #smtpServer default: ['localhost'].
 	user := self db propertyAt: #smtpUsername default: [nil].

@@ -1,0 +1,3 @@
+accessing
+portfolioInWebsite: aWebsite
+	self subclassResponsibility

@@ -1,7 +1,9 @@
 removing
 removeDevelopmentSeasideComponents
+	"Will be called from script while deploying with ansible, and if the
+	app is not beta status"
 
-	"Unnötige Apps entfernen"
+	"Remove dangerous unused seaside apps"
 	WAAdmin
 		unregister: 'config'; "Gefährliche App"
 		unregister: 'browse';
