@@ -1,6 +1,6 @@
 as yet unclassified
 goAhead
 	(self validate) ifTrue: [
-		self afterCaptcha: [
+		self afterCaptchaDo: [
 			self sendActivationEmail.
 			self gotoPage: #activation]]

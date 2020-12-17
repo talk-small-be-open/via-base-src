@@ -4,6 +4,8 @@ renderCompositeTask: aCompositeTask on: html
 	
 	html label with: 'Title of task'.
 	html textInput on: #title of: aCompositeTask.
+	html label with: 'Subtitle'.
+	html textInput on: #subtitle of: aCompositeTask.
 
 	html skRow: [
 		html skColumnWidth: 'three' with: [

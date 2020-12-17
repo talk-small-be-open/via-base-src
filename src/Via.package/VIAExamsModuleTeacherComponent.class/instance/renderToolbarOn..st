@@ -1,6 +1,7 @@
 rendering
 renderToolbarOn: html
 	html heading level1; t: 'examModuleTeacher:title'.
+	html paragraph pT: 'examModuleTeacher:info'.
 	html heading level2; with: model displayName.
 	html ukAnchorButton
 		callback: [self createNewExam];

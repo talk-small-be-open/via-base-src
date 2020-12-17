@@ -1,3 +1,11 @@
 as yet unclassified
 displayName
-	^ self title ifBlank: [ self classDisplayName ]
+	^ String streamContents: [:s |
+		self title
+			ifBlank: [s << self classDisplayName ]
+			ifNotBlank: [ s << self title ].
+		self subtitle ifNotBlank: [
+			s << ' - '.
+			s << self subtitle
+		]
+	]

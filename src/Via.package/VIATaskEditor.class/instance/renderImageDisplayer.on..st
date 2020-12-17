@@ -19,5 +19,6 @@ renderImageDisplayer: anImageDisplayer on: html
 				html numberInput
 					min: 10;
 					max: 1000;
-					on: #width of: anImageDisplayer ].
+					on: #width of: anImageDisplayer.
+			].
 	]]

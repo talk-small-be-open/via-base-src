@@ -15,13 +15,7 @@ registerAsApplication: aName
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.
 
-"		addLibrary: WANavigationFiles;"
-
-"		addLibrary: VIAStaticFileLibrary;"
-"		addLibrary: VIAAdminStaticFileLibrary."
-
-	 (GRPlatform current label = 'Pharo')
-		ifTrue: [
-			app exceptionHandler: WADebugErrorHandler].
+	self configureSession: app.
+	self configureExceptionHandler: app.
 
 	^app

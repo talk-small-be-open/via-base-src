@@ -15,10 +15,7 @@ registerAsApplication: aName
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.
 
-	"TODO short session timeout"
-		
-	 (GRPlatform current label = 'Pharo')
-		ifTrue: [
-			app exceptionHandler: WADebugErrorHandler].
+	self configureSession: app.
+	self configureExceptionHandler: app.
 
 	^ app
