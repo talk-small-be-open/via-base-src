@@ -1,7 +1,9 @@
 rendering-visitor
 renderVideoPlayer: aVideoPlayer on: html
 	| v i |
-	
+
+	v := 'somethingdefaultsilly'.
+		
 	html div class: 'inputEditor'; with: [
 		aVideoPlayer hasVideo ifTrue: [
 			html div: [
