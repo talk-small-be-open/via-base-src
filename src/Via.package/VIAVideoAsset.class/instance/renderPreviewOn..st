@@ -1,7 +1,9 @@
 rendering
 renderPreviewOn: html
+	| id |
 	html video
-		preload: 'none';
+		id: (id := html nextId);
+		preload: 'metadata';
 		poster: self posterUrl;
 		controls: true;
 		autoplay: false;
@@ -11,3 +13,5 @@ renderPreviewOn: html
 				type: self mimeType;
 				url: self videoUrl.
 			html text: 'Your browser does not support the video tag.'].
+		
+	^ id

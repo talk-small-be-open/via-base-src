@@ -11,6 +11,7 @@ jsForMediaelementVideoPlayer: aVideoPlayer id: aVideoId
 	alwaysShowHours: false,
 	showTimecodeFrameCount: false,
 	stretching: "responsive",
+	showPosterWhenEnded: true,
 	})[0];'.
 
 			aVideoPlayer noSound ifTrue: [

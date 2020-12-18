@@ -1,26 +1,87 @@
 rendering-visitor
 renderVideoPlayer: aVideoPlayer on: html
+	| v i |
+	
 	html div class: 'inputEditor'; with: [
+		aVideoPlayer hasVideo ifTrue: [
+			html div: [
+				html video
+					id: (v := html nextId);
+					preload: 'metadata';
+					poster: aVideoPlayer videoAsset posterUrl;
+					controls: true;
+					style: 'width:400px';
+					with: [html source type: aVideoPlayer videoAsset mimeType; url: aVideoPlayer videoAsset videoUrl].
+		]].
+
 		html select
 			list: self wd videoAssets reversed;
 			labels: [:each | each displayName];
 			beOptional;
 			on: #videoAsset of: aVideoPlayer.
+
 		html skRow: [
-			html skColumnWidth: 'three' with: [
-				html label: 'Start time [format 0:00:00]'.
-				html textInput on: #startTimeString of: aVideoPlayer].
-			html skColumnWidth: 'three' with: [
-				html label: 'End time [format 0:00:00]'.
-				html textInput on: #endTimeString of: aVideoPlayer].
-			html skColumnWidth: 'three' with: [
+			html skColumnWidth: 'two' with: [
+				html label: 'Still image [0:00:00.00]'.
+				html textInput
+					id: (i := html nextId);
+					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer posterImageTimeMs / 1000));
+					on: #posterImageTimeString of: aVideoPlayer.
+				html div class: 'videoTimingTools'; with: [
+					html anchor
+						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
+						with: 'GOTO'.
+					html anchor
+						onClick: 'videoTakeTime("',v,'", "',i,'", true);';
+						with: 'SET'.
+					html anchor
+						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") - 0.04;', 'videoTakeTime("',v,'", "',i,'", true);');
+						with: '<<'.
+					html anchor
+						class: 'clickAction';
+						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") + 0.04;', 'videoTakeTime("',v,'", "',i,'", true);');
+						with: '>>'.
+				]
+			].
+			html skColumnWidth: 'two' with: [
+				html label: 'Start time [0:00:00]'.
+				html textInput
+					id: (i := html nextId);
+					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer startSeconds));
+					on: #startTimeString of: aVideoPlayer.
+				html div class: 'videoTimingTools'; with: [
+					html anchor
+						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
+						with: 'GOTO'.
+					html anchor
+						onClick: 'videoTakeTime("',v,'", "',i,'");';
+						with: 'SET'
+				].
+			].
+			html skColumnWidth: 'two' with: [
+				html label: 'End time [0:00:00]'.
+				html textInput
+					id: (i := html nextId);
+					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer endSeconds));
+					on: #endTimeString of: aVideoPlayer.
+				html div class: 'videoTimingTools'; with: [
+					html anchor
+						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
+						with: 'GOTO'.
+					html anchor
+						onClick: 'videoTakeTime("',v,'", "',i,'");';
+						with: 'SET'
+				].
+					
+			].
+			html skColumnWidth: 'two' with: [
 				html label: 'Width: '.
 				html numberInput
 					min: 10;
 					"max: 1000;"
 					on: #width of: aVideoPlayer
 			].
-			html skColumnWidth: 'three' with: [
+			html skColumnWidth: 'two' with: [
 				html label: [
 					html checkbox on: #noSound of: aVideoPlayer.
 					html space.
@@ -34,4 +95,4 @@ renderVideoPlayer: aVideoPlayer on: html
 
 		self renderPillarInput: #pillarString of: aVideoPlayer transcriptionPillar on: html.
 
-	]
+	 ]

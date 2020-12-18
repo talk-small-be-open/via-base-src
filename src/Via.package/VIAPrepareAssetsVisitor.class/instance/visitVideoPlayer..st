@@ -3,7 +3,7 @@ visitVideoPlayer: aVideoPlayer
 	| asset |
 	asset := aVideoPlayer videoAsset ifNil: [^self].
 
-	asset buildPosterImage.
+	aVideoPlayer buildPosterImage.
 
 	aVideoPlayer isFragment ifTrue: [
 		asset buildFragmentStart: aVideoPlayer startSeconds stop: aVideoPlayer endSeconds.

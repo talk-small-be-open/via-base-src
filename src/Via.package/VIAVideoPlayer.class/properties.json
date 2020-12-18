@@ -11,7 +11,9 @@
 		"endTime",
 		"noSound",
 		"transcriptionPillar",
-		"width"
+		"width",
+		"posterImageLocationMs",
+		"posterImageTime"
 	],
 	"name" : "VIAVideoPlayer",
 	"type" : "normal"

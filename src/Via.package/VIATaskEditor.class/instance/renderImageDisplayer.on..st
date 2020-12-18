@@ -3,9 +3,11 @@ renderImageDisplayer: anImageDisplayer on: html
 	html div class: 'inputEditor'; with: [
 
 		anImageDisplayer hasImage ifTrue: [
-			html image
-				style: 'max-width:100px;max-height:100px';
-				url: (anImageDisplayer imageUrl)].
+			html div
+				style: 'width:100px;height:100px;margin-bottom:5px;';
+				with: [
+					anImageDisplayer imageAsset renderPreviewOn: html ].
+		].
 			
 		html skRow: [
 			html skColumnWidth: 'nine' with: [

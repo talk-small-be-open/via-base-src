@@ -20,10 +20,10 @@ renderToolbarOn: html
 		html skAnchorButton
 			callback: [self createNewAssetChooseFile];
 			with: 'New from path (FTP) ...'.
-		html space.
+"		html space.
 		html skAnchorButton
 			callback: [self rebuildVideoThumbnails];
-			with: 'Rebuild video thumbs'.
+			with: 'Rebuild video thumbs'."
 		html space.
 		html skAnchorButton
 			callback: [self showUnused];

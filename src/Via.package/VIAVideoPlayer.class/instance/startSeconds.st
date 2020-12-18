@@ -1,3 +1,3 @@
 accessing
 startSeconds
-	^ startTime ifNotBlank: [startTime asSeconds]
+	^ startTime ifNil: [ 0 ] ifNotNil: [startTime asSeconds]

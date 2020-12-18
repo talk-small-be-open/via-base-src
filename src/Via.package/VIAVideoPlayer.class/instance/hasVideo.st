@@ -1,0 +1,3 @@
+testing
+hasVideo
+	^videoAsset notNil

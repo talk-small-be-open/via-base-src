@@ -1,3 +1,3 @@
 rendering
 renderPreviewOn: html
-	(html lazyImage: self previewImageUrl) style: 'width:100%; height:100%;'
+	(html lazyImage: self previewImageUrl) style: 'max-width:100%; max-height:100%;'
