@@ -13,11 +13,22 @@ updateRoot: anHtmlRoot
 	anHtmlRoot meta
 		name: 'ROBOTS';
 		content: 'INDEX, NOFOLLOW'.
+
+	"Viewport normalizing. IMPORTANT for correct width detection!"
+	anHtmlRoot meta
+		name: 'viewport';
+		content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'.
+
 				
 	anHtmlRoot title: (self session website title).
 
 	"jQuery, but NO jQuery-UI"
 	anHtmlRoot javascript url: '/js/jquery/jquery.min.js'.
+
+	"Not really needed, could be done plain JS, but maybe useful later. See https://github.com/ryanve/actual"
+	anHtmlRoot javascript url: '/js/actual/actual.js'.
+	
+"	anHtmlRoot javascript url: '/js/verge/verge.min.js'."
 
 	anHtmlRoot javascript url: '/js/device-detector.js'.
 

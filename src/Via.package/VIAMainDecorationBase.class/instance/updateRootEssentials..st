@@ -28,11 +28,11 @@ updateRootEssentials: anHtmlRoot
 		
 	self isDevelopment
 		ifTrue: [
-			anHtmlRoot title: 'VIA DEVELOPMENT ', self website title.
+			anHtmlRoot title: 'VIA DEVELOPMENT ', self session websiteTitle.
 			anHtmlRoot bodyAttributes addClass: 'development'.
 		]
 		ifFalse: [
-			anHtmlRoot title: (self session website title).
+			anHtmlRoot title: (self session websiteTitle).
 		].
 
 	"jQuery, but NO jQuery-UI"
@@ -48,8 +48,6 @@ updateRootEssentials: anHtmlRoot
 	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.
 
 	anHtmlRoot javascript defer; url: '/js/js.cookie.js'.
-
-"	self updateRootFontawesome: anHtmlRoot."
 
 	"Textareas autosizing"
 	anHtmlRoot javascript defer; url: '/js/jquery.autosize.js'.

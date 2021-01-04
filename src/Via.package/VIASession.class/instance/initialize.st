@@ -5,4 +5,3 @@ initialize
 	
 	self initializeAnonymousUser.
 
-	self detectWebsite.

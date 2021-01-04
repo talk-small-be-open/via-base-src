@@ -1,3 +1,3 @@
 as yet unclassified
 deleteTransformedMediaFiles
-	self transformedMediaFiles do: [ :each | "TODO delete file" ]
+	self transformedMediaFiles do: [ :each | VIAPlatform current deleteFileNamed: each ]

@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"language",
+		"languageCode"
+	],
 	"name" : "VIAPortalSession",
 	"type" : "normal"
 }

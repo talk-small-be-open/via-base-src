@@ -13,7 +13,8 @@
 		"touchEnabled",
 		"deviceDetectionDone",
 		"browserType",
-		"isFullscreenSupported"
+		"isFullscreenSupported",
+		"portfolio"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

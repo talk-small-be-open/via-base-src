@@ -22,6 +22,7 @@ createNewAssetsWithPlUpload
 					asset := assetClass takeFromFileReference: each.
 					newAssets add: asset.
 					self wd addAsset: asset].
+				self clear.
 				self showAssets: newAssets
 	
 	]]].

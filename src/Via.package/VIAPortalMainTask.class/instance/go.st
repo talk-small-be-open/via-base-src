@@ -1,7 +1,7 @@
 as yet unclassified
 go
 
-	"Portal is active if more than 1 websites"
+	"Portal is active if more than 1 websites exist"
 	self db websites size <= 1 ifTrue: [
 		self requestContext respond: [ :response |
 			response

@@ -1,0 +1,3 @@
+adding
+addMainDecoration
+	self addDecoration: VIAApplicationManager current mainPortalDecorationClass new

@@ -8,7 +8,7 @@ buildFragmentStart: aStart stop: aStop inFolder: aTargetFolder
 	stopText := (aStop ifBlank: ['end']) greaseString.
 
 	filepath := self fileReference filePath.
-	suffix := '_', startText, '_', stopText, '.', (VIAPlatform current extensionOfFile: filepath).
+	suffix := '_', startText, '_', stopText, '.', (self fileReference fileExtension).
 
 	audioFragmentFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 

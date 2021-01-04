@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAMainTask",
-	"category" : "Via-View-Demo",
+	"category" : "Via-View-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -8,7 +8,7 @@ callPublicApplication
 		ifTrue: [component := VIAApplicationManager current mainEmbeddedComponentClass new]
 		ifFalse: [component := VIAApplicationManager current mainPublicComponentClass new].
 
-	self addDecoration: VIAApplicationManager current mainDecorationClass new.
+	self addMainDecoration.
 	
 	self applicationComponent: component.
 	self executeCommand.

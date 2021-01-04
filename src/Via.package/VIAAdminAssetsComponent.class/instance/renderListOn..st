@@ -1,6 +1,8 @@
 rendering
 renderListOn: html
-	self assets ifNil: [ ^self ].
+	self assets ifNil: [
+		html paragraph: 'Use filter to show assets'.
+		^self ].
 
 	self assets
 		ifBlank: [ html paragraph: 'Nothing found' ]

@@ -5,7 +5,7 @@ editKey: aKey
 
 	[
 		text := self
-			requestMultiline: 'UI Text'
+			requestMultiline: 'UI Text ', aKey
 			default: text.
 
 		text

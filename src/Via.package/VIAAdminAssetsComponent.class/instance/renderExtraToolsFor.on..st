@@ -2,9 +2,6 @@ rendering
 renderExtraToolsFor: anAsset on: html
 	html div class: 'extraTools'; with: [
 		html anchor
-			callback: [self deleteAsset: anAsset];
-			with: 'Delete'.
-		html anchor
 			callback: [self showUsingModules: anAsset];
 			with: 'Where is it used?'.
 		html anchor
@@ -13,6 +10,9 @@ renderExtraToolsFor: anAsset on: html
 		html anchor
 			callback: [ anAsset fileReference readContentType ];
 			with: 'Reread content type'.
+		html anchor
+			callback: [self deleteAsset: anAsset];
+			with: 'Delete'.
 "		self ifAdmin: [
 			self ifDevelopment: [
 			].

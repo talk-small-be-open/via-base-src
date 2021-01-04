@@ -7,7 +7,6 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"user",
-		"portfolio",
 		"website"
 	],
 	"name" : "VIASession",

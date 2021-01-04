@@ -1,3 +1,3 @@
 accessing
 refresh
-	self performSearch
+	searchString ifBlank: [ self clear ] ifNotBlank: [ self performSearch ]

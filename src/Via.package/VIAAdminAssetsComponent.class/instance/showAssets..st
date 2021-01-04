@@ -1,6 +1,6 @@
 as yet unclassified
 showAssets: aCollection
-	self clear.
+"	self clear."
 	assets := aCollection.
 
 	batcher := WABatchedList new
