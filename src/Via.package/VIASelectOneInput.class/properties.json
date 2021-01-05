@@ -10,7 +10,8 @@
 		"solutions",
 		"style",
 		"shuffleChoices",
-		"choicesGroups"
+		"choicesGroups",
+		"columns"
 	],
 	"name" : "VIASelectOneInput",
 	"type" : "normal"

@@ -1,0 +1,3 @@
+testing
+hasFixedColumns
+	^ columns notNil

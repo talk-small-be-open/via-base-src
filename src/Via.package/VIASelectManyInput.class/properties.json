@@ -9,7 +9,8 @@
 		"choices",
 		"solutions",
 		"shuffleChoices",
-		"choicesGroups"
+		"choicesGroups",
+		"columns"
 	],
 	"name" : "VIASelectManyInput",
 	"type" : "normal"

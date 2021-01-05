@@ -15,6 +15,12 @@ renderSelectMany: aSelectManyInput on: html
 				html label: [
 					html checkbox on: #shuffleChoices of: aSelectManyInput.
 					html text: ' Shuffle choices'].
-		]].
+			].
+			html skColumnWidth: 'three' with: [
+				html label: 'Columns (empty = auto):'.
+				html textInput
+					on: #columns of: aSelectManyInput.
+			]
+		].
 		
 	]

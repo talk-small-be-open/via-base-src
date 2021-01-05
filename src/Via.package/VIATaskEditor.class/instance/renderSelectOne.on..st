@@ -19,10 +19,16 @@ renderSelectOne: aSelectOneInput on: html
 					html checkbox on: #shuffleChoices of: aSelectOneInput.
 					html text: ' Shuffle choices']].
 			html skColumnWidth: 'three' with: [
+				html label: 'Columns (empty = auto):'.
+				html textInput
+					on: #columns of: aSelectOneInput.
+			].
+			html skColumnWidth: 'three' with: [
 				html label: 'Style: '.
 				html select
 					list: #(dropdown radio);
 					on: #style of: aSelectOneInput.
-		]].
+			].
+		].
 			
 	]
