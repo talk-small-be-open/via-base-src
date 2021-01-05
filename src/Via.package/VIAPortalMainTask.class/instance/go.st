@@ -2,7 +2,7 @@ as yet unclassified
 go
 
 	"Portal is active if more than 1 websites exist"
-	self db websites size <= 1 ifTrue: [
+	self hasPortal ifFalse: [
 		self requestContext respond: [ :response |
 			response
 				notFound;
@@ -10,7 +10,6 @@ go
 				nextPutAll: 'Portal not available'
 	]].
 	
-	"Call the main application, either logged in or not, smart."
 	[self callApplication]
 		on: VIAError
 		do: [:error |
