@@ -2,7 +2,7 @@ as yet unclassified
 go
 
 	"If demo is disabled, we return a HTTP not found"
-	(self wd isFeature: #demo) ifFalse: [
+	self demoIsEnabled ifFalse: [
 		self requestContext respond: [ :response |
 			response
 				notFound;

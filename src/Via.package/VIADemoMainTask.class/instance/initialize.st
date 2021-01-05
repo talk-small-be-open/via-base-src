@@ -2,4 +2,6 @@ initialization
 initialize
 	super initialize.
 	
-	self addMainDecoration
+	self addMainDecoration.
+	
+	demoClass := VIAApplicationManager current mainDemoComponentClass
