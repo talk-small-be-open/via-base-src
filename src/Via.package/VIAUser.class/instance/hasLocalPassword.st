@@ -1,0 +1,3 @@
+testing
+hasLocalPassword
+	^ passwordHash notNil
