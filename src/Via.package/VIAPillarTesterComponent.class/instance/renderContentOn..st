@@ -1,7 +1,10 @@
 rendering
 renderContentOn: html
-	| id |
+	| id idPreview |
+	
 	id := html nextId.
+	idPreview := html nextId.
+	
 	html skAnchorButton
 		callback: [ self close ];
 		with: 'Close'.
@@ -11,14 +14,15 @@ renderContentOn: html
 			id: id;
 			class: 'pillar';
 			onInput: ((
-				((html jQuery id: 'pillarPreview') load)
+				((html jQuery id: idPreview) load)
 					callback: [:value | self pillar: value greaseString]
 						value: (JSStream on: '$("#', id greaseString, '").val()');
 					html: [:h | self renderPillarPreviewOn: h]) asFunction debounce: 500);
 			on: #pillar of: self.
 
 		html div
-			id: 'pillarPreview';
+			class: 'pillarPreview';
+			id: idPreview;
 			with: [self renderPillarPreviewOn: html ].
 	].
 

@@ -10,3 +10,9 @@ detectFromJson: aJsonString
 		self isFullscreenSupported: (dict at: 'isFullscreenSupported' ifAbsent: [true]) ].
 	
 	self beDetectionDone.
+	
+	self requestContext respond: [ :response |
+		response
+			doNotCache;
+			contentType: (WAMimeType textPlain charset: self requestContext handler charSet);
+			nextPutAll: detectionDoneUrl asString]

@@ -1,3 +1,3 @@
 private
 pictureExtensions
-	^ #('png' 'jpg' 'jpeg' 'pdf')
+	^ #('png' 'jpg' 'jpeg' 'pdf' 'svg')
