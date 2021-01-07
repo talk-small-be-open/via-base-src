@@ -1,4 +1,4 @@
 as yet unclassified
 go
-	self applicationComponent: VIAApplicationManager current mainTestdriveComponentClass new.
+	self applicationComponent: self am mainTestdriveComponentClass new.
 	self callApplicationComponent

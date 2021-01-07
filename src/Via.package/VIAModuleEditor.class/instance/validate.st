@@ -1,6 +1,6 @@
 as yet unclassified
 validate
 	| validator |
-	validator := VIAApplicationManager current moduleValidatorClass default.
+	validator := self am moduleValidatorClass default.
 	validationResult := model validateWith: validator.
 	^validationResult

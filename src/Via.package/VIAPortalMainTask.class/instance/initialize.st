@@ -2,4 +2,4 @@ initialization
 initialize
 	super initialize.
 	
-	portalClass := VIAApplicationManager current mainPortalComponentClass
+	portalClass := self am mainPortalComponentClass

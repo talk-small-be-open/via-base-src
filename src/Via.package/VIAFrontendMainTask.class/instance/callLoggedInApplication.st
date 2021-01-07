@@ -5,8 +5,8 @@ callLoggedInApplication
 	self isLoggedIn ifFalse: [^self].
 
 	isEmbedded
-		ifTrue: [component := VIAApplicationManager current mainEmbeddedComponentClass new]
-		ifFalse: [component := VIAApplicationManager current mainComponentClass new].
+		ifTrue: [component := self am mainEmbeddedComponentClass new]
+		ifFalse: [component := self am mainComponentClass new].
 
 	self addMainDecoration.
 	

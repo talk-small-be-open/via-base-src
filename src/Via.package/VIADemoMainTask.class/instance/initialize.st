@@ -4,4 +4,4 @@ initialize
 	
 	self addMainDecoration.
 	
-	demoClass := VIAApplicationManager current mainDemoComponentClass
+	demoClass := self am mainDemoComponentClass

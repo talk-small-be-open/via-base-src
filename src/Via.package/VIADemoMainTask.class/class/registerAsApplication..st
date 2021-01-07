@@ -10,7 +10,7 @@ registerAsApplication: aName
 	
 	app
 		scriptGeneratorClass: VIAJqScriptGenerator;
-		sessionClass: VIAApplicationManager current demoSessionClass;
+		sessionClass: self am demoSessionClass;
 		preferenceAt: #trackingStrategy put: WAQueryFieldHandlerTrackingStrategy new;
 		preferenceAt: #documentClass put: VIAHtmlDocument;
 		preferenceAt: #renderPhaseContinuationClass put: VIARenderPhaseContinuation.

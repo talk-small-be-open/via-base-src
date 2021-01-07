@@ -1,16 +1,15 @@
 {
 	"commentStamp" : "",
-	"super" : "VIALoginBaseComponent",
+	"super" : "VIAComponent",
 	"category" : "Via-View-OutOfTheBox",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"afterLoginBlock",
-		"facebook",
-		"google",
-		"local"
+		"messageKey",
+		"email",
+		"loginOk"
 	],
-	"name" : "VIALoginComponent",
+	"name" : "VIALoginBaseComponent",
 	"type" : "normal"
 }

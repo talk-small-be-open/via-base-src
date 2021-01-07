@@ -4,7 +4,7 @@ sendMassMailTo: aToCollection subject: aSubjectString pillarBody: aPillarDocumen
 
 	"Sends single email copies to many. Answers the emails which failed."
 
-	htmlBody := VIAApplicationManager current massMailingHtmlEmailClass website: website.
+	htmlBody := self am massMailingHtmlEmailClass website: website.
 	htmlBody mainPillar: aPillarDocument. 
 
 	textBody := htmlBody asSimpleText.

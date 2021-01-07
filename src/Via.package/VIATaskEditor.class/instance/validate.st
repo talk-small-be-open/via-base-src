@@ -1,6 +1,6 @@
 as yet unclassified
 validate
 	| validator |
-	validator := VIAApplicationManager current taskValidatorClass default.
+	validator := self am taskValidatorClass default.
 	validationResult := task validateWith: validator.
 	^validationResult

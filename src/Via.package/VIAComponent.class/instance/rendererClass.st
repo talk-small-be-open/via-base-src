@@ -1,3 +1,3 @@
 as yet unclassified
 rendererClass
-	^ VIAApplicationManager current rendererClass
+	^ self am rendererClass

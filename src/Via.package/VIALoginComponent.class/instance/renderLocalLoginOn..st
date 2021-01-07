@@ -34,7 +34,7 @@ renderLocalLoginOn: html
 			html div class: 'uk-form-controls'; with: [
 				html ukPasswordInput
 					id: 'loginPassword';
-					callback: [:value | self loginWithPassword: value]]].
+					callback: [:value | self localLoginWithPassword: value]]].
 		html div class: 'uk-margin'; with: [
 			html ukSubmitButton t: 'login:loginNow'].
 	].

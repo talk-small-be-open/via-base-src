@@ -1,22 +1,22 @@
 rendering
 renderContentOn: html
 	html heading t: 'myProfile:title'.
-	html form class: 'uk-form-stacked'; with: [
+	html ukFormStacked: [
 		html div class: 'uk-margin'; with: [
-			html label class: 'uk-form-label'; t: 'myProfile:firstName'.
-			html div class: 'uk-form-controls'; with: [
+			html ukFormLabel t: 'myProfile:firstName'.
+			html ukFormControls: [
 				html ukTextInput
 					class: 'uk-form-width-medium';
 					on: #firstName of: user]].
 		html div class: 'uk-margin'; with: [
-			html label class: 'uk-form-label'; t: 'myProfile:lastName'.
-			html div class: 'uk-form-controls'; with: [
+			html ukFormLabel t: 'myProfile:lastName'.
+			html ukFormControls: [
 				html ukTextInput
 					class: 'uk-form-width-medium';
 					on: #lastName of: user]].
 		html div class: 'uk-margin'; with: [
-			html label class: 'uk-form-label'; t: 'myProfile:email'.
-			html div class: 'uk-form-controls'; with: [
+			html ukFormLabel t: 'myProfile:email'.
+			html ukFormControls: [
 				html span: user email.
 				"html textInput on: #email of: user"]].
 		self renderMailingSettingsOn: html.

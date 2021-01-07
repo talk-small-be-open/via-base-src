@@ -4,7 +4,7 @@ renderContentOn: html
 
 		html heading: 'Gateway to the secret dungeons'.
 		html image url: '/images/logo_via.svg'; height: 'auto'; width: 120.
-		html form: [
+		html form class: 'topBuffer'; with: [
 			html label: 'Website:'.
 			html select
 				list: self db websites;
@@ -20,7 +20,7 @@ renderContentOn: html
 				id: 'loginPassword';
 				autocomplete: 'current-password';
 				on: #password of: self.
-			html break.
+			html break; break.
 			html submitButton
 				callback: [self authenticate];
 				with: 'Be brave!'
