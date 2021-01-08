@@ -1,5 +1,5 @@
 actions
 deleteUser: aUser
 	(self confirmYesNo: 'admin:reallyDeleteQM') ifTrue: [
-		self wd removeUser: aUser.
+		aUser deleteOnWebsite: self website.
 		self flashMessage: 'User deleted']
