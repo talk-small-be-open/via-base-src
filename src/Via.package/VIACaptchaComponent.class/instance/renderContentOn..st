@@ -6,18 +6,18 @@ renderContentOn: html
 		html textInput
 			script: (html jQuery this triggerFocus);
 			class: 'captcha';
+			noAuto; 
 			callback: [:value | self enteredCode: value].
 		self renderErrorMessageOn: html.
-		html break.
-		html break.
-		html submitButton
-			callback: [self validate];
-			t: 'captcha:ok'.
-		html space.
-		html anchorButton
-			callback: [self cancel];
-			t: 'general:cancel'.
-		html space.
-		html anchorButton
-			callback: [self newCode];
-			t: 'captcha:new']
+		html div class: 'uk-margin'; with: [
+			html submitButton
+				callback: [self validate];
+				t: 'captcha:ok'.
+			html space.
+			html anchor
+				callback: [self cancel];
+				t: 'general:cancel'.
+			html space.
+			html anchor
+				callback: [self newCode];
+				t: 'captcha:new']]
