@@ -9,6 +9,8 @@ renderBodyOn: html
 			html textInput
 				id: id;
 				class: 'codeInput';
+				noAutocapitalize;
+				noAutocorrect;
 				script: ( html jQuery this triggerFocus );
 				onInput: ((html jQuery ajax
 					callback: [ :codeString | self tryPairByCode: codeString ]

@@ -11,11 +11,11 @@ renderContentOn: html
 		class: 'p2pStatus';
 		with: [
 			html span class: 'p2pIcon'; with: [
-				html span class: 'p2pUndefined'; popover: ('Waiting for ', self otherPeerLabel); with: [
+				html span class: 'p2pUndefined'; popover: ('p2p:waitingFor't, ' ', self otherPeerLabel); with: [
 					html iconP2pUndefined ].
-				html span class: 'p2pNotConnected'; popover: ('NOT paired to ', self otherPeerLabel); with: [
+				html span class: 'p2pNotConnected'; popover: ('p2p:notPairedTo't, ' ', self otherPeerLabel); with: [
 					html iconP2pNotConnected ].
-				html span class: 'p2pConnected'; popover: ('Paired to ', self otherPeerLabel); with: [
+				html span class: 'p2pConnected'; popover: ('p2p:pairedTo't, ' ', self otherPeerLabel); with: [
 					html iconP2pConnected ] ].
 "			html sT: label."
 		].

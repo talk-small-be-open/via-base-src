@@ -6,7 +6,7 @@ pairingFinished
 	"Handover shuffled sequence"
 	taskBrick shuffleSequence ifTrue: [
 		self ifPlayer1: [
-			otherExerciser createSequence: self qAndASequence.
+			otherExerciser takeSequenceFrom: self.
 "			p2pComponent sendOnce: self qAndASequence "] ].
 	
 	self goAhead

@@ -1,3 +1,6 @@
 testing
 matchesNowCode: aString namespace: aNamespaceString
-	^ self isValidNow and: [ aNamespaceString = namespace and: [code = aString] ]
+	| normalized |
+	normalized := aString asLowercase.
+	
+	^ self isValidNow and: [ aNamespaceString = namespace and: [code = normalized] ]
