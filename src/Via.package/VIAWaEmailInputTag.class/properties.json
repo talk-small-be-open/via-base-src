@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "AndreasBrodbeck 1/12/2021 18:35",
+	"super" : "WATextInputTag",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaEmailInputTag",
+	"type" : "normal"
+}

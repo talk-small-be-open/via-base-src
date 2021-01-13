@@ -1,5 +1,5 @@
 uikit
 ukEmailInput
-	^ self emailInput
+	^ (self brush: VIAWaEmailInputTag new)
 		class: 'uk-input';
 		yourself

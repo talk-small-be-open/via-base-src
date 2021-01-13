@@ -1,0 +1,1 @@
+Our own email tag, since the seaside tag will operate wit WAEmailAddress. But we want string.
