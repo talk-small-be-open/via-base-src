@@ -1,9 +1,9 @@
 rendering
 renderContentOn: html
 	html div class: 'uploader'; with: [
-		self renderJsOn: html.
 		self renderUploaderOn: html.
 		self renderUploadedFilesOn: html.
+		self renderJsOn: html.
 
 		html div class: 'topBuffer'; with: [	
 			html anchorButton

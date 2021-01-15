@@ -10,7 +10,7 @@ renderJsOn: html
 $(document).ready(function() {
 
 var uploader = new plupload.Uploader({
-	browse_button: "pluploadBrowseButton",
+	browse_button: document.getElementById("pluploadBrowseButton"),
 	url: "/upload_gateway/upload.php?id=', uploadSessionUuid,'"
 //	chunk_size: "200kb",
 //	max_retries: 3

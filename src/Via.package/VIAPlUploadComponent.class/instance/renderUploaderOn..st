@@ -12,10 +12,10 @@ renderUploaderOn: html
 	html unorderedList
 		id: 'pluploadFilelist'.
 
-	html anchorButton
+	html spanButton
 		id: 'pluploadBrowseButton';
 		with: '+ Add files to queue'.
 	html space.
-	html anchorButton
+	html spanButton
 		id: 'pluploadStartButton';
 		with: 'Start upload'
