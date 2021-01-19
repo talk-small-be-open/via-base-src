@@ -2,6 +2,8 @@ as yet unclassified
 addFile: aFileReference title: aString
 	| fullFilename copy |
 
+	aFileReference ifNil: [ ^ nil ].
+	
 	copy := aFileReference copy.
 
 	fullFilename := String streamContents: [:s |

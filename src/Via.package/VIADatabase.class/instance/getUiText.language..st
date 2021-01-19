@@ -5,6 +5,8 @@ getUiText: aKey language: aLanguage
 
 	^uiTexts at: dictKey ifAbsent: [
 
+		aKey ifBlank: [ ^ VIAHelper pillarFromPillarString: '' ].
+
 		"If not a key, then its probably a normal text"
 		aKey isTranslationKey ifFalse: [ ^ VIAHelper pillarFromPillarString: aKey ].
 

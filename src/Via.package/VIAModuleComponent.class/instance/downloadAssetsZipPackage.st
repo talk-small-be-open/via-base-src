@@ -1,5 +1,6 @@
 actions
 downloadAssetsZipPackage
 	| file |
-	file := model generateDownloadAssetsFrontendZipPackage.
-	self sendFileToBrowser: file named: (model fileDisplayName, '_MediaPackage.zip')
+	(self confirmYesNo: 'module:reallyDownloadAssetsZipQM') ifTrue: [
+		file := model generateDownloadAssetsFrontendZipPackage.
+		self offerDownload: file named: (model fileDisplayName, '_MediaPackage.zip') message: nil]
