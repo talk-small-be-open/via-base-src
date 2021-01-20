@@ -4,4 +4,4 @@ hmac: aString secret: aSecretString
 	
 	output := MCLPlatform runShellCommand: ('echo -n "', aString, '" | openssl dgst -binary -sha1 -hmac "', aSecretString, '" ').
 	
-	^ output base64Encoded 
+	^ output asByteArray base64Encoded 
