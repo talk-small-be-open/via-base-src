@@ -1,3 +1,3 @@
 rendering
 requirementsReady
-	^ totalQAndAs < 2
+	^ totalQAndAs >= 2
