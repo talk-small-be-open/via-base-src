@@ -5,11 +5,11 @@ createTurnConfig
 
 	(self db propertyAt: #turnServerSecret) ifNotBlank: [ :secretString |
 		| secret time username password |
-		secret := secretString asByteArray.
+		secret := secretString.
 		time := DateAndTime now asPosixSeconds.
 "		expiry := 8400."
 "		username := (time + expiry) asString asByteArray."
-		username := (time asString, self thisPeerId) asByteArray.
+		username := (time asString, self thisPeerId).
 "		password := ((SHA1 new) hmac key: secret; digestMessage: username) base64Encoded."
 		password := VIAHelper hmac: username secret: secret.
 
