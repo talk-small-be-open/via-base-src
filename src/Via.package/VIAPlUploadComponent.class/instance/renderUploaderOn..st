@@ -12,10 +12,13 @@ renderUploaderOn: html
 	html unorderedList
 		id: 'pluploadFilelist'.
 
-	html anchorButton
-		id: 'pluploadBrowseButton';
-		with: '+ Add files to queue'.
-	html space.
-	html anchorButton
-		id: 'pluploadStartButton';
-		with: 'Start upload'
+	html form multipart; with: [
+		"Safari 14.0.2 hat ein Bug. Upload-Dialog erscheint nicht!!!"
+		html spanButton
+			id: 'pluploadBrowseButton';
+			with: '+ Add files to queue'.
+		html space.
+		html spanButton
+			id: 'pluploadStartButton';
+			with: 'Start upload'.
+		]

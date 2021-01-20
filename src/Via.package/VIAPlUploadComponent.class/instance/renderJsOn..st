@@ -10,8 +10,12 @@ renderJsOn: html
 $(document).ready(function() {
 
 var uploader = new plupload.Uploader({
-	browse_button: "pluploadBrowseButton",
-	url: "/upload_gateway/upload.php?id=', uploadSessionUuid,'"
+	browse_button: document.getElementById("pluploadBrowseButton"),
+	url: "/upload_gateway/upload.php?id=', uploadSessionUuid,'",
+	filters: {
+//		mime_types: [{title : "Image files", extensions : "jpg,jpeg,gif,png"}],
+		prevent_duplicates: true,
+	},
 //	chunk_size: "200kb",
 //	max_retries: 3
 });

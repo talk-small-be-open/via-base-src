@@ -30,11 +30,16 @@ renderContentOn: html
 			html tableData: [
 			] ].
 		html tableRow: [ 
-			html tableData: 'Number of current sessions'.
+			html tableData: 'Number of current frontend sessions'.
 			html tableData: [
 				html text: (WAAdmin defaultDispatcher handlerAt: 'app') sessions size asString].
 			html tableData: [
 			] ].
-	
+		html tableRow: [ 
+			html tableData: 'Number of current backend sessions'.
+			html tableData: [
+				html text: (WAAdmin defaultDispatcher handlerAt: 'via-admin') sessions size asString].
+			html tableData: [
+			] ].
 
 	]

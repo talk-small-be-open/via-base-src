@@ -1,0 +1,3 @@
+accessing
+useIcon
+	^ useIcon = true

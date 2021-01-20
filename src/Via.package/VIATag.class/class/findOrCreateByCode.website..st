@@ -4,7 +4,7 @@ findOrCreateByCode: aSymbol website: aWebsite
 	tag := aWebsite data findTagByCode: aSymbol class: self.
 	
 	tag ifNil: [
-		tag := self code: aSymbol asString.
+		tag := self code: aSymbol.
 		aWebsite data addTag: tag].
 
 	^tag

@@ -18,15 +18,15 @@ renderModule: aModule canEdit: canEdit on: html
 			html badgeWarning: 'IN DEMO'].
 	].
 	html tableData class: 'actions'; with: [
-		(self canMakeVewVersionModule: aModule) ifTrue: [
-			html anchor
-				callback: [self createNewModuleVersion: aModule];
-				title: 'Create a new draft version for this module';
-				with: 'New version'].
 		canEdit ifTrue: [
 			html anchor
 				callback: [self editModule: aModule];
 				with: 'Edit'.
+			(self canMakeVewVersionModule: aModule) ifTrue: [
+				html anchor
+					callback: [self createNewModuleVersion: aModule];
+					title: 'Create a new draft version for this module';
+					with: 'New version'].
 			aModule hasVersions ifTrue: [
 				html anchor
 					callback: [self showVersionHistory: aModule];

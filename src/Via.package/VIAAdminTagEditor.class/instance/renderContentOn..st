@@ -8,6 +8,10 @@ renderContentOn: html
 		html textInput on: #code of: model.
 		html label: 'Gleichwertige Varianten (zeilengetrennt)'.
 		html textArea on: #textVariantsString of: model.
+		html label with: [
+			html checkbox on: #useIcon of: model.
+			html space.
+			html span: 'Enable icon' ].
 		
 		self renderFormButtonsOn: html.
 
