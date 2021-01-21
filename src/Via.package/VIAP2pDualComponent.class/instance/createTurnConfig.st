@@ -4,19 +4,17 @@ createTurnConfig
 	Creates username/password for Time-Limited Credentials Mechanism"
 
 	(self db propertyAt: #turnServerSecret) ifNotBlank: [ :secretString |
-		| secret time username password |
+		| secret time username password expiry |
 		secret := secretString.
 		time := DateAndTime now asPosixSeconds.
-"		expiry := 8400."
-"		username := (time + expiry) asString asByteArray."
-		username := (time asString, self thisPeerId).
-"		password := ((SHA1 new) hmac key: secret; digestMessage: username) base64Encoded."
+		expiry := 3600. "60 min"
+		username := ((time + expiry) asString, ':', self thisPeerId).
 		password := VIAHelper hmac: username secret: secret.
 
 		^ {
-			'host'->(self website domain, ':3478').
+			'host'->((self db propertyAt: #serverAddress), ':3478').
 			'username'->username.
-			'credentials'->password.
+			'credential'->password.
 		} asDictionary
 	].
 
