@@ -6,7 +6,7 @@ createTurnConfig
 	(self db propertyAt: #turnServerSecret) ifNotBlank: [ :secretString |
 		| secret time username password expiry |
 		secret := secretString.
-		time := DateAndTime now asPosixSeconds.
+		time := DateAndTime now asPosixSeconds asInteger.
 		expiry := 3600. "60 min"
 		username := ((time + expiry) asString, ':', self thisPeerId).
 		password := VIAHelper hmac: username secret: secret.
