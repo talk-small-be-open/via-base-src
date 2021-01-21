@@ -1,4 +1,4 @@
-*Via
+*ViaPlatformPharo
 default
 	"The default maximum number dictionary entries to accept."
 	

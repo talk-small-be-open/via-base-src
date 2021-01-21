@@ -8,7 +8,10 @@ createTurnConfig
 		secret := secretString.
 		time := DateAndTime now asPosixSeconds asInteger.
 		expiry := 3600. "60 min"
+		
+		"NEEDS coturn syntax expirytimestamp:someotheruserid"
 		username := ((time + expiry) asString, ':', self thisPeerId).
+		
 		password := VIAHelper hmac: username secret: secret.
 
 		^ {
