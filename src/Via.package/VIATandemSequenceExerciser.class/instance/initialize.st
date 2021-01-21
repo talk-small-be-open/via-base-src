@@ -10,6 +10,9 @@ initialize
 	
 	totalQAndAs := taskBrick qAndACount.
 
+	"Minimum 2 Q&A are needed to make sense"
+	self requirementsReady ifFalse: [ ^ self ].
+
 	qAndASequence := taskBrick shuffleSequence
 		ifTrue: [
 "			(1 to: totalQAndAs) asArray shuffleBy: (Random seed: randomCode asInteger)"
