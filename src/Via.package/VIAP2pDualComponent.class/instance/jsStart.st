@@ -17,6 +17,8 @@ jsStart
 	js javascript: onDataJs.
 	js nextPutAll: '},'.
 	js javascript: sendJs.
+	js nextPutAll: ','.
+	js javascript: self createTurnConfig.
 	js nextPutAll: ')'.
 
 	sendOnceJs ifNotNil: [ 

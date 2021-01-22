@@ -5,4 +5,8 @@ callApplicationComponent
 	Somehow the login process was ending the task with answering the main component,
 	but then the whole application was stuck and I got very strange, barely-debuggable
 	WARequestContextNotFound errors"
+	
+	"Hook to setup application"
+	applicationComponent beforeFirstCall.
+	
 	self call: applicationComponent onAnswer: [ self restart ]

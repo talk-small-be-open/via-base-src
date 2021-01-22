@@ -1,0 +1,1 @@
+Subclass your main component from this
