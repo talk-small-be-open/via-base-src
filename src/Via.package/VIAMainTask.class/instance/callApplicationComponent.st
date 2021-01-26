@@ -7,6 +7,7 @@ callApplicationComponent
 	WARequestContextNotFound errors"
 	
 	"Hook to setup application"
-	applicationComponent beforeFirstCall.
+	(applicationComponent respondsTo: #beforeFirstCall) ifTrue: [
+		applicationComponent beforeFirstCall ].
 	
 	self call: applicationComponent onAnswer: [ self restart ]
