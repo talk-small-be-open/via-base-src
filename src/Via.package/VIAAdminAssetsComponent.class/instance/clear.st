@@ -1,4 +1,5 @@
 initialization
 clear
 	searchString := nil.
-	assets := nil
+	assets := nil.
+	searchType := #all.

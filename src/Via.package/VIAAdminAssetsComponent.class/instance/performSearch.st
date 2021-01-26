@@ -1,5 +1,13 @@
 as yet unclassified
 performSearch
-	self showAssets: (searchString
-		ifBlank: [self wd assets reversed]
-		ifNotBlank: [(self wd assets select: [:each | each matchesSearchString: searchString]) reversed ])
+	| filteredAssets |
+
+	filteredAssets := self wd assets reversed.
+	
+	searchType ~= #all ifTrue: [
+		filteredAssets := filteredAssets select: [ :each | each isKindOf: searchType ] ].
+	
+	searchString ifNotBlank: [
+		filteredAssets := filteredAssets select: [:each | each matchesSearchString: searchString]].
+		
+	self showAssets: filteredAssets

@@ -30,10 +30,9 @@ renderToolbarOn: html
 			with: 'Show unused'.
 	].
 	html form: [
-		html textInput on: #searchString of: self.
-		html space.
-		html submitButton callback: [self performSearch]; with: 'Search'.
-		html space.
+		self renderSearchStringOn: html.
+		self renderSearchTypeOn: html.
+		self renderSearchPerformOn: html.
 		html skAnchorButton
 			callback: [ self showAll ];
 			with: 'Show all'	].

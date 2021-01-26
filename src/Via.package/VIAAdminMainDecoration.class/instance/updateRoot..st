@@ -16,7 +16,7 @@ updateRoot: anHtmlRoot
 			anHtmlRoot title: 'VIA ADMIN DEV ', self website title.
 		]
 		ifFalse: [
-			anHtmlRoot title: 'VIA ADMIN'.
+			anHtmlRoot title: 'VIA ADMIN', self website title.
 		].
 
 

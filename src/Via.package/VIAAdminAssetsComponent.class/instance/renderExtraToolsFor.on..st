@@ -5,8 +5,8 @@ renderExtraToolsFor: anAsset on: html
 			callback: [self showUsingModules: anAsset];
 			with: 'Where is it used?'.
 		html anchor
-			callback: [ anAsset buildPreviewImage ];
-			with: 'Rebuild preview image'.
+			callback: [ anAsset deleteTransformedMediaFiles ];
+			with: 'Delete all generated copies (will rebuild on demand)'.
 		html anchor
 			callback: [ anAsset fileReference readContentType ];
 			with: 'Reread content type'.

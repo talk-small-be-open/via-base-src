@@ -4,9 +4,9 @@ renderToolbarOn: html
 		callback: [ self openAudioRecorder ];
 		with: [ html iconRecord; space; text: 'Record audio' ].
 	html form: [
-		html textInput on: #searchString of: self.
-		html space.
-		html submitButton callback: [self performSearch]; with: 'Search'.
+		self renderSearchStringOn: html.
+		self renderSearchTypeOn: html.
+		self renderSearchPerformOn: html.
 		html space.
 		html skAnchorButton
 			callback: [ self showAll ];
