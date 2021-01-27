@@ -47,10 +47,12 @@ updateRootEssentials: anHtmlRoot
 	"List drag/drop sorting library"
 	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.
 
-	anHtmlRoot javascript defer; url: '/js/js.cookie.js'.
 
 	"Textareas autosizing"
 	anHtmlRoot javascript defer; url: '/js/jquery.autosize.js'.
+
+	"REMARK: We do not defer, because some of it we might use in early JavaScript"
+	anHtmlRoot javascript url: '/js/js.cookie.js'.
 
 	"Our own library
 	REMARK: We do not defer, because some of it we might use in early JavaScript"

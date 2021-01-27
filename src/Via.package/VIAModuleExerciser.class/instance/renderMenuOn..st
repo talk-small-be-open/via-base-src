@@ -21,17 +21,17 @@ renderMenuOn: html
 					html iconPrint; space.
 					html t: 'moduleExerciser:showSchoolPrintSolutionModule'].
 			html space: 3."
-			html anchor
+"			html anchor
 				callback: [self downloadSchoolPrintVersion];
 				with: [
 					html iconPdf; space.
-					html t: 'moduleExerciser:downloadSchoolPrintPdf'].
-			html break.
+					html t: 'moduleExerciser:downloadSchoolPrintPdf']."
+"			html break.
 			html anchor
 				callback: [self downloadSchoolPrintSolutionVersion];
 				with: [
 					html iconPdf; space.
-					html t: 'moduleExerciser:downloadSchoolPrintSolutionPdf'].
+					html t: 'moduleExerciser:downloadSchoolPrintSolutionPdf']."
 			self ifTeacher: [
 				html break.
 				html anchor

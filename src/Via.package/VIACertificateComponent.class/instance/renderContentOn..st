@@ -29,7 +29,7 @@ renderContentOn: html
 			]].
 		html div class: 'blumeli'; with: [html image url: '/certificate/blumeli.svg'; width: '120'; height: '37'].
 		html paragraph: [html t: 'certificate:date'; space; text: Date today yyyymmdd].
-		html div class: 'stempel'; with: [html image url: '/certificate/stamp.svg'; width: '200'; height: '200'].
+		html div class: 'stamp'; with: [html image url: ('/site/images/certificate/stamp_', self website code,'.svg'); width: '200'].
 		html div class: 'fusszeile'; t: 'certificate:footer'. 
 		"'Progetto finanziato dall''Ufficio federale della Cultura svizzero e realizzato in collaborazione con i media della Svizzera italiana'."
 		html div: [html space].

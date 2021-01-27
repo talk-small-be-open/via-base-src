@@ -3,4 +3,4 @@ renderContentOn: html
 
 	self renderNextOn: html.
 	
-	html scriptDefer: self js.
+	html script: self js.

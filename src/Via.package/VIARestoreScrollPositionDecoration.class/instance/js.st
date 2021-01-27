@@ -8,13 +8,9 @@ js
 function ', functionName,'() {
 	saveScroll("', id,'")
 }
-	
-$(document).ready(function(){
-	if (!$.restoreScrollPositionIsSet) {
-		$.restoreScrollPositionIsSet = true;
-		window.addEventListener("unload", ', functionName, ');
-		loadScroll("', id,'");
-		setInterval(', functionName, ', 1000);
-	}
-});
+
+
+window.addEventListener("unload", ', functionName, ');
+loadScroll("', id,'");
+setInterval(', functionName, ', 1000);
 '
