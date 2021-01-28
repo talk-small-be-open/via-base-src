@@ -1,3 +1,7 @@
 rendering
 renderPreviewOn: html
-	(html lazyImage: self previewImageUrl) style: 'max-width:100%; max-height:100%;'
+	html zoomBoxLazyImage: self previewImageUrl with: [:tag |
+		tag
+			width: self width;
+			style: 'width:100%; max-height:100%;'
+	]

@@ -28,6 +28,10 @@ renderToolbarOn: html
 		html skAnchorButton
 			callback: [self showUnused];
 			with: 'Show unused'.
+		html space.
+		html skAnchorButton
+			callback: [self showUsageReport];
+			with: 'Show usage report'.
 	].
 	html form: [
 		self renderSearchStringOn: html.

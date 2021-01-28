@@ -1,3 +1,3 @@
 as yet unclassified
 rendererClass
-	^self am rendererClass
+	^self decoratedComponent rendererClass

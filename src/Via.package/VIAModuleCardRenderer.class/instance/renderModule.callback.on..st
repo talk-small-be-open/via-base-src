@@ -28,10 +28,16 @@ renderModule: aModule callback: aBlock on: html
 						with: [html iconExam].
 				].
 
-
-				html ukImageWidth: '100%' height: '200px' url: (aModule imageAsset
-						ifNotNil: [:e | e imageUrlCropWidth: 200 height: 200]
-						ifNil: ['/images/module-card-placeholder.jpg']).
+				aModule imageAsset ifNil: [
+					html image width: 200; height: 200; url: '/images/module-card-placeholder.jpg' ]
+				ifNotNil: [ 
+					html
+						ukImageWidth: 200
+						height: 200
+						url: (aModule imageAsset imageUrlCropWidth: 200 height: 200)
+						hidpiUrl: (aModule imageAsset imageUrlCropWidth: 400 height: 400)
+				].
+						
 				html div class: 'tdu-titel-box'; with: aModule title.
 				html div class: 'tdu-angaben-box'; with: [
 					html iconDurationTag: aModule durationTag.
