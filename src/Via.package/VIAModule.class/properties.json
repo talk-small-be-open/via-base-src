@@ -28,7 +28,8 @@
 		"allowIgnoreTasks",
 		"indexCode",
 		"exerciseLevel",
-		"isForDemo"
+		"isForDemo",
+		"isForBetatester"
 	],
 	"name" : "VIAModule",
 	"type" : "normal"

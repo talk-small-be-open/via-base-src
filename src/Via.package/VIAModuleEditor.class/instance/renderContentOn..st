@@ -31,7 +31,12 @@ renderContentOn: html
 				html label: [
 					html checkbox on: #isForDemo of: model.
 					html space.
-					html text: 'Accessible in DEMO app (Note: Even if unpublished)']]].
+					html text: 'Accessible in DEMO app (Even if unpublished)']].
+			html label: [
+				html checkbox on: #isForBetatester of: model.
+				html space.
+				html text: 'Accessible for Beta-Testers, if unpublished']
+		].
 
 "Deprecated, us level tags		html label: 'Language level' help: '(E.g. A1-B2, ...)'.
 		html textInput on: #exerciseLevel of: model."

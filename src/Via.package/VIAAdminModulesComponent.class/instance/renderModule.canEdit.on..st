@@ -16,6 +16,9 @@ renderModule: aModule canEdit: canEdit on: html
 		aModule isForDemo ifTrue: [
 			html space.
 			html badgeWarning: 'IN DEMO'].
+		aModule isForBetatester ifTrue: [
+			html space.
+			html badgeWarning: 'FOR TESTER'].
 	].
 	html tableData class: 'actions'; with: [
 		canEdit ifTrue: [

@@ -12,3 +12,4 @@ initializeDefaultValues
 	isPrivate ifNil: [isPrivate := false].
 "	geocode ifNil: [geocode :=  ]"
 	geocodes ifNil: [ geocodes := OrderedCollection new ].
+	isForBetatester ifNil: [ isForBetatester := false ].
