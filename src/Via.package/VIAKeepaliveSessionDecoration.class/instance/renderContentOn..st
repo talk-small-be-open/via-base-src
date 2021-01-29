@@ -17,7 +17,7 @@ renderContentOn: html
 	js nextPutAll: 'var keepaliveInterval; keepaliveInterval = setInterval(function(){'.
 	(html jQuery ajax
 		url: keepaliveUrl;
-		onError: 'clearInterval(keepaliveInterval);') javascriptContentOn: js.
+		onError: 'clearInterval(keepaliveInterval);alert("Error: Could not keep session alive. You might have been logged out.");') javascriptContentOn: js.
 	js
 		nextPutAll: '}, 540000);'. "9 Minuten"
 
