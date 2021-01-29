@@ -26,8 +26,8 @@ renderListOn: html
 								self renderPreview: each on: html].
 							html tableData class: 'assetInfo'; with: [
 								self renderInfo: each on: html.
-								"Additional stuff per asset type"
-								each acceptRenderingVisitor: self on: html
+								"Additional stuff per asset type. Not needed so far"
+"								each acceptRenderingVisitor: self on: html"
 							].
 							html tableData class: 'actions'; with: [
 								self renderActions: each on: html.
