@@ -4,7 +4,7 @@ renderImageDisplayer: anImageDisplayer on: html
 
 		anImageDisplayer hasImage ifTrue: [
 			html div
-				style: 'width:100px;height:100px;margin-bottom:5px;';
+				style: 'width:100px;height:auto;margin-bottom:5px;';
 				with: [
 					anImageDisplayer imageAsset renderPreviewOn: html ].
 			html div: [ 
