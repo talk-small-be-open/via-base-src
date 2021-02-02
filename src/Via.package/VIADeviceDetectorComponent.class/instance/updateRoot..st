@@ -6,8 +6,9 @@ updateRoot: anHtmlRoot
 
 	self requestContext response doNotCache.
 	anHtmlRoot beHtml5.
-	anHtmlRoot meta
-		charset: 'utf-8'.
+
+"obsolete, is default	anHtmlRoot meta
+		charset: 'utf-8'."
 		
 	"Tell robots not to follow links"
 	anHtmlRoot meta
