@@ -54,7 +54,7 @@ updateRootEssentials: anHtmlRoot
 	anHtmlRoot javascript defer; url: '/js/underscore-min.js'.
 
 	"Mouse/Touch events unifier for dragging, ..."
-	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.9.20/dist/interact.min.js'.
+	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.10.3/dist/interact.min.js'.
 
 	"List drag/drop sorting library"
 	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.

@@ -1,3 +1,4 @@
 as yet unclassified
 untouchedModuleExercises
-	^self moduleExercises select: #isUntouched
+	"the modules which are checkable but have been untouched. So they are useless."
+	^self moduleExercises select: [:each | each isUntouched and: [ each module isCheckable ] ]

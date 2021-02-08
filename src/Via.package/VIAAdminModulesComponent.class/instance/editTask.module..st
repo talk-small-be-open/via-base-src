@@ -3,6 +3,8 @@ editTask: aTask module: aModule
 	| miniAssetsComponent |
 	
 	selectedModule := aModule.
+
+	self warnBeforeEdit: aModule.
 	
 	miniAssetsComponent := VIAAdminMiniAssetsComponent new.
 	

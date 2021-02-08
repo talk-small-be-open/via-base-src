@@ -1,0 +1,3 @@
+accessing
+highlightedCharsMap
+	^ highlightedCharsMap value

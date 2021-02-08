@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"itemsContainer"
+		"itemsContainer",
+		"showNumbers"
 	],
 	"name" : "VIAOrderItems",
 	"type" : "normal"
