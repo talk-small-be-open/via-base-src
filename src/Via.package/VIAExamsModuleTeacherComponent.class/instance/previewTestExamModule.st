@@ -7,6 +7,6 @@ previewTestExamModule
 		
 	testExercise := VIAModuleExercise module: model user: self currentUser.
 	
-	self show: ((VIATduExamModuleExerciser exam: testExam moduleExercise: testExercise)
+	self show: ((self am examModuleExerciserClass exam: testExam moduleExercise: testExercise)
 		addBackButton;
 		yourself).
