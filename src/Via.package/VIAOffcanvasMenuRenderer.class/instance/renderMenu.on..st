@@ -9,6 +9,7 @@ renderMenu: aMenu on: html
 			aMenu itemsDo: [:each |
 				html listItem
 					class: each css;
+					class: 'uk-open' if: (each isCollapsible and: [each isCollapsed not]);
 					with: [
 						each acceptRender: self on: html
 			]]]
