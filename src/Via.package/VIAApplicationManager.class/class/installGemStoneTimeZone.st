@@ -6,7 +6,8 @@ installGemStoneTimeZone
 "startTopaz STONE -l
 In topaz:
   - set user SystemUser
-  - set password ***
+  - set password sw***sh
+  - login
   - run
 VIAApplicationManager installGemStoneTimeZone
 %

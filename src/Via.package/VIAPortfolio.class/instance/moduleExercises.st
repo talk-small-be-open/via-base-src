@@ -1,3 +1,3 @@
 as yet unclassified
 moduleExercises
-	^moduleExercises
+	^moduleExercises values

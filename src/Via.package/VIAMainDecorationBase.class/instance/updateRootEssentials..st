@@ -5,8 +5,8 @@ updateRootEssentials: anHtmlRoot
 	
 	anHtmlRoot beHtml5.
 
-	anHtmlRoot meta
-		charset: 'utf-8'.
+"obsolete. Seaside sets it	anHtmlRoot meta
+		charset: 'utf-8'."
 		
 	"Viewport"
 	anHtmlRoot meta
@@ -22,6 +22,18 @@ updateRootEssentials: anHtmlRoot
 	anHtmlRoot link
 		beShortcutIcon;
 		url: '/favicon.ico'.
+
+	"Alternative favicons"
+	VIAHelper faviconImagesData do: [ :each |
+		| dimension x |
+		x := each first asString.
+		dimension := (x, 'x', x).
+		anHtmlRoot link
+			relationship: 'icon';
+			attributeAt: 'sizes' put: dimension;
+			url: ('/site/favicons/favicon-', dimension, '.png');
+			attributeAt: 'type' put: 'image/png'.
+	].
 
 	anHtmlRoot htmlAttributes
 		at: 'lang' put: self session languageCode.
@@ -42,7 +54,7 @@ updateRootEssentials: anHtmlRoot
 	anHtmlRoot javascript defer; url: '/js/underscore-min.js'.
 
 	"Mouse/Touch events unifier for dragging, ..."
-	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.9.20/dist/interact.min.js'.
+	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.10.3/dist/interact.min.js'.
 
 	"List drag/drop sorting library"
 	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js'.

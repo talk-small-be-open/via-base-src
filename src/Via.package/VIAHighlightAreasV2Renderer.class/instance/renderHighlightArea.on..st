@@ -13,7 +13,7 @@ renderHighlightArea: aHighlightArea on: html
 	span := html span
 		class: 'highlightArea';
 		id: (id := html nextId);
-		script: (html jQuery this on: 'via:highlight' do: jsEventHandler).
+		script: (html jQuery this on: 'via:highlightinarea' do: jsEventHandler).
 	
 	self ifca: answerHolder isCorrect t: [
 		"Als korrekt anzeigen und allfällige Markierungen darin entfernen"

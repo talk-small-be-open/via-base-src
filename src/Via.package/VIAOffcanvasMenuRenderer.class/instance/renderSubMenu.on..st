@@ -5,7 +5,7 @@ renderSubMenu: aMenu on: html
 	html unorderedList
 		class: 'uk-nav-sub';
 		class: aMenu css;
-		class: 'collapsed' if: aMenu isCollapsed;
+"		class: 'collapsed' if: aMenu isCollapsed;"
 		with: [
 			aMenu itemsDo: [:each |
 				html listItem

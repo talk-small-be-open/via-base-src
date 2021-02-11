@@ -5,17 +5,15 @@ visitViaPrAssetImage: aViaPrAssetImage
 	asset := aViaPrAssetImage asset.
 	asset ifNil: [ html span: 'IMAGENOTFOUND'. ^ self ].
 
-	width := aViaPrAssetImage parameters at: 'width' ifAbsent: [nil].
+	width := aViaPrAssetImage width.
 	
-	url := width
-		ifNil: [ asset imageUrl]
-		ifNotNil: [ asset imageUrlWidth: width].
+	url := asset imageUrlWidth: width.
 	
 	html figure class: 'inlineAssetImage'; with: [
 		img := html image
 			url: url;
 			yourself.
-		width ifNotNil: [img width: width greaseString].
+		width ifNotNil: [img width: width].
 		html figureCaption: [
 			self visitReference: aViaPrAssetImage.
 		

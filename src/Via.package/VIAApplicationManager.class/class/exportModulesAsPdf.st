@@ -2,6 +2,9 @@ as yet unclassified
 exportModulesAsPdf
 	| exportFolder today timestamp |
 	exportFolder := self db exportFolderPath.
+	
+	GRPlatform current ensureExistenceOfFolder: exportFolder.
+	
 	today := Date today.
 	timestamp := today year asString, '_', today monthIndex asTwoCharacterString.
 	self db allModules do: [:each |

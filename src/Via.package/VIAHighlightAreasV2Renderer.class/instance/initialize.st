@@ -2,5 +2,7 @@ as yet unclassified
 initialize
 	super initialize.
 
-"	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: aHighlightAreas."
+"Why not?"
+	highlightedCharsMap := self exercise answer: #highlightedCharsMap of: taskBrick.
+
 	notHighlightedSymbol := $~

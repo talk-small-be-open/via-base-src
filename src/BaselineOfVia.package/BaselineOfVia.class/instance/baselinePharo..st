@@ -33,12 +33,12 @@ baselinePharo: spec
 			spec 
 				includes: #('ViaPlatformPharo');
 				requires: #('MockGemStone' 'MCLPlatformPortabilityPharo');
-				repository: 'github://talk-small-be-open/via:master/src'.
+				repository: 'github://talk-small-be-open/via-base-src:master/src'.
 			].
 		spec package: 'ViaPlatformPharo' with: [
 			spec
 				requires: #('Via');
-				repository: 'github://talk-small-be-open/via:master/src'.
+				repository: 'github://talk-small-be-open/via-base-src:master/src'.
 		].
 		spec
 			group: 'Core' with: #('MockGemStone' ).

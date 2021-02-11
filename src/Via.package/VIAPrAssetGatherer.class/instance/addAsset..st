@@ -1,3 +1,3 @@
 as yet unclassified
 addAsset: anAsset
-	assets add: anAsset
+	assets addIfNotPresent: anAsset

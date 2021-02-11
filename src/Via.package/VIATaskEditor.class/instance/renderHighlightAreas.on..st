@@ -9,6 +9,10 @@ renderHighlightAreas: aHighlightAreas on: html
 		].
 	
 		self renderPillarInput: #pillarString of: aHighlightAreas cssClass: 'highlightAreas' on: html.
-			
+		
+		aHighlightAreas hasAreas ifFalse: [
+			html badge: 'passive mode'.
+			html span: 'You have not defined any highlight areas. The task will be just for highlighting but there will be no correction.' ].
+		
 		aHighlightAreas areas do: [:each |
 			each acceptRenderingVisitor: self on: html]]

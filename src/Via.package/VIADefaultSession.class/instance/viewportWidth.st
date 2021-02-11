@@ -1,4 +1,4 @@
 viewport
 viewportWidth
 	"Mobile first, if not given"
-	^ viewportWidth ifNil: [ 600 ]
+	^ viewportWidth ifNil: [ 1024 ]

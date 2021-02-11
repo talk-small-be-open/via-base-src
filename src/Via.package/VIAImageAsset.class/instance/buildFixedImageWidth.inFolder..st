@@ -1,6 +1,7 @@
 as yet unclassified
 buildFixedImageWidth: aWidth inFolder: aTargetFolder
-	"Scales and converts a thumbnail file, with ImageMagick, if file does not exist yet."
+	"Fixed width, height calculated.
+	Scales and converts a thumbnail file, with ImageMagick, if file does not exist yet."
 
 	| filepath scaledImageFilepath cmd suffix quality |
 

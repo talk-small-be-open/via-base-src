@@ -11,4 +11,6 @@ renderContentOn: html
 	self renderAdminsOn: html.
 	self renderEditorsOn: html.
 	self renderTeachersOn: html.
+	self renderBetatestersOn: html.
+	
 	self renderAllUsersOn: html.

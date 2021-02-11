@@ -4,9 +4,13 @@ renderImageDisplayer: anImageDisplayer on: html
 
 		anImageDisplayer hasImage ifTrue: [
 			html div
-				style: 'width:100px;height:100px;margin-bottom:5px;';
+				style: 'width:100px;height:auto;margin-bottom:5px;';
 				with: [
 					anImageDisplayer imageAsset renderPreviewOn: html ].
+			html div: [ 
+				html text: 'Original width: '.
+				html text: anImageDisplayer imageAsset width asString.
+				html text: ' pixels' ]
 		].
 			
 		html skRow: [
@@ -22,5 +26,6 @@ renderImageDisplayer: anImageDisplayer on: html
 					min: 10;
 					max: 1000;
 					on: #width of: anImageDisplayer.
+				html span: ' pixels'
 			].
 	]]

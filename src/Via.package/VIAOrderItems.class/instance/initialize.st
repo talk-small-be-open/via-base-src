@@ -3,4 +3,5 @@ initialize
 
 	super initialize.
 
-	itemsContainer := VIARichDisplayContent new
+	itemsContainer := VIARichDisplayContent new.
+	showNumbers := false

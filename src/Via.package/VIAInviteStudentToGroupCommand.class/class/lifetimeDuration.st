@@ -1,3 +1,3 @@
 instance creation
 lifetimeDuration
-	^24 hours
+	^7 days

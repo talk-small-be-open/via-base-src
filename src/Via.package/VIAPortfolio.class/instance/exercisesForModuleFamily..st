@@ -1,3 +1,3 @@
 as yet unclassified
 exercisesForModuleFamily: aModule
-	^moduleExercises select: [:each | each module isSameFamily: aModule]
+	^self moduleExercises select: [:each | each module isSameFamily: aModule]

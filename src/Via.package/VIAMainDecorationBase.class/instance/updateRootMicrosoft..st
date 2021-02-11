@@ -2,9 +2,15 @@ as yet unclassified
 updateRootMicrosoft: anHtmlRoot
 
 	"Microsoft"
-	anHtmlRoot meta
-		name: 'msapplication-TileImage';
-		content: '/site/pwa/ms/icon-144.png'.
+	VIAHelper msTileImagesData do: [ :each |
+		 | x y |
+		x := each first.
+		y := each second.
+
+		anHtmlRoot meta
+			name: 'msapplication-TileImage';
+			content: '/site/pwa/ms/tile-image-', x asString, 'x', y asString,'.png' ].
+
 	anHtmlRoot meta
 		name: 'msapplication-TileColor';
-		content: '#2F3BA2'.
+		content: '#ffffff'.
