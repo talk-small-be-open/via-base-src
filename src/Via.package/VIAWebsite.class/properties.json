@@ -9,7 +9,8 @@
 		"title",
 		"domain",
 		"code",
-		"aliasDomains"
+		"aliasDomains",
+		"sortKey"
 	],
 	"name" : "VIAWebsite",
 	"type" : "normal"
