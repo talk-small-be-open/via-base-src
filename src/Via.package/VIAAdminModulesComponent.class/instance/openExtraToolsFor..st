@@ -1,7 +1,8 @@
-as yet unclassified
+actions
 openExtraToolsFor: aModule
 	| component |
 	component := VIAPluggableComponent new
+		rendererClass: VIAAdminHtmlCanvas;
 		titleText: ('Module: ', aModule displayName);
 		content: [:html |
 			| canEdit |

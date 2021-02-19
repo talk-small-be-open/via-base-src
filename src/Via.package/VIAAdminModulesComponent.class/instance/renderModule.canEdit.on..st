@@ -19,6 +19,9 @@ renderModule: aModule canEdit: canEdit on: html
 		aModule isForBetatester ifTrue: [
 			html space.
 			html badgeWarning: 'FOR TESTER'].
+		aModule isLocked ifTrue: [
+			html space.
+			html badgeDanger: ('LOCKED by ', aModule lockedByAdmin fullName)].
 	].
 	html tableData class: 'actions'; with: [
 		canEdit ifTrue: [

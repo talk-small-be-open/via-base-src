@@ -1,0 +1,3 @@
+testing
+isLocked
+	^ lockedByAdmin notNil

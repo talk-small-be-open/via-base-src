@@ -12,7 +12,7 @@ renderContentOn: html
 			list: VIAUser allRoles;
 			on: #roles of: model.
 
-		html label class: 'topBuffer'; with: 'Password:'.
+		html label class: 'topBuffer'; with: 'Local password:'.
 		html div class: 'bottomBuffer'; with: [
 			model hasLocalPassword
 				ifTrue: [ html badgeSuccess: 'Has local password' ]
@@ -29,6 +29,14 @@ renderContentOn: html
 		html submitButton
 			callback: [self clearPassword];
 			with: 'Clear password ...'.
+
+		html label class: 'topBuffer'; with: 'Social IDs:'.
+		html paragraph: model socialIdsString.
+		html submitButton
+			callback: [self editSocialIds];
+			with: 'Edit social IDs (careful!) ...'.
+		html space.
+
 
 		html div class: 'topBuffer'; with: [
 			html submitButton

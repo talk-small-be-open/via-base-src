@@ -13,7 +13,7 @@ updateRoot: anHtmlRoot
 
 	self isDevelopment
 		ifTrue: [
-			anHtmlRoot title: 'VIA ADMIN DEV ', self website title.
+			anHtmlRoot title: 'VIA DEVELOPMENT ADMIN ', self website title.
 		]
 		ifFalse: [
 			anHtmlRoot title: 'VIA ADMIN ', self website title.

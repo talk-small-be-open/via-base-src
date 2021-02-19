@@ -13,7 +13,8 @@
 		"titleText",
 		"panelDecoration",
 		"showCloseButton",
-		"onUpdateRootBlock"
+		"onUpdateRootBlock",
+		"rendererClass"
 	],
 	"name" : "VIAPluggableComponent",
 	"type" : "normal"

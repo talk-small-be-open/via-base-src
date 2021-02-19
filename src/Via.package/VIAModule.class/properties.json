@@ -29,7 +29,8 @@
 		"indexCode",
 		"exerciseLevel",
 		"isForDemo",
-		"isForBetatester"
+		"isForBetatester",
+		"lockedByAdmin"
 	],
 	"name" : "VIAModule",
 	"type" : "normal"

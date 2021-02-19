@@ -1,3 +1,3 @@
 as yet unclassified
 maxPoints
-	^ self qAndACount
+	^ self qAndACount // 2 "per Player"

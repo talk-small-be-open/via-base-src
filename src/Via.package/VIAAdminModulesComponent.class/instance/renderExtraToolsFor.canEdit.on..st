@@ -5,6 +5,19 @@ renderExtraToolsFor: aModule canEdit: canEdit on: html
 			callback: [self copyModule: aModule];
 			title: 'Create an independent copy as a new module draft';
 			with: 'Copy module'.
+
+		self ifAdmin: [
+			aModule isLocked ifTrue: [
+				html anchor
+					callback: [self unlockModule: aModule];
+					with: [
+						html badgeDanger: 'LOCKED'.
+						html text: 'Unlock']
+			] ifFalse: [
+				html anchor
+					callback: [self lockModule: aModule];
+					with: 'Lock'] ].
+
 		canEdit ifTrue: [
 			self ifAdmin: [
 				html anchor
