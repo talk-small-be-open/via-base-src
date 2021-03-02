@@ -1,3 +1,3 @@
 adding
 addTeacher: aTeacher
-	teachers add: aTeacher
+	teachers addIfNotPresent: aTeacher

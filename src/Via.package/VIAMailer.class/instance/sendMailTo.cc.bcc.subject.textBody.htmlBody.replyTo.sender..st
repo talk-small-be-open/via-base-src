@@ -52,9 +52,7 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 	cc do: [:each | email addCc: (WAEmailAddress address: each)].
 	bcc do: [:each | email addBcc: (WAEmailAddress address: each)].
 
-	aReplyEmailString isNil
-		ifTrue: [email headerAt: 'Reply-To' put: ('do_not_reply@', website domain)]
-		ifFalse: [email headerAt: 'Reply-To' put: aReplyEmailString].
+	email headerAt: 'Reply-To' put: (aReplyEmailString ifBlank: [self defaultReplyTo]).
 
 	Transcript show: 'Sending email:'; cr.
 	Transcript show: email plainMessage.

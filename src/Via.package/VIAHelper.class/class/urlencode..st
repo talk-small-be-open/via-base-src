@@ -5,4 +5,5 @@ urlencode: aString
 		| urlEncoder |
 		urlEncoder := GRPlatform current urlEncoderOn: s.
 		
-		urlEncoder nextPutAll: aString]
+		"TODO? VIAPlatform current toUtf8: "
+		urlEncoder nextPutAll: ((GRCodec forEncoding: 'utf-8') encode: aString)].

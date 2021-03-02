@@ -4,8 +4,9 @@ renderContentOn: html
 		html div style: 'float: right'; with: [
 			self renderHelpOn: html.
 			html space: 3.
-			html text: 'Logged in as '.
 			html text: self currentUser displayName.
+			html text: ' is logged in as '.
+			html text: self currentUser roles asCommaString.
 			html space.
 			html anchor
 				callback: [self logout];

@@ -9,6 +9,7 @@ renderContentOn: html
 		with: 'Create testing users ...'.
 		
 	self renderAdminsOn: html.
+	self renderSupportersOn: html.
 	self renderEditorsOn: html.
 	self renderTeachersOn: html.
 	self renderBetatestersOn: html.

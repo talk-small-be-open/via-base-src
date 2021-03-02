@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAdminModelInspector",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAAdminGenericModelInspector",
+	"type" : "normal"
+}

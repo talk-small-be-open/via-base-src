@@ -1,3 +1,3 @@
 as yet unclassified
 allRoles
-	^#(user admin editor teacher betatester)
+	^#(user admin editor teacher betatester supporter)

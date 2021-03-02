@@ -28,7 +28,6 @@ createMailtoUrlTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: 
 		aBodyString ifNotBlank: [
 			s nextPutAll: '&body='.
 			s nextPutAll: (self urlencode: aBodyString)].
-		
 		].
 
 	^mailto
