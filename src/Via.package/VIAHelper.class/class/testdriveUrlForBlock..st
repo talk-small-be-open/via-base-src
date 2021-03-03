@@ -6,7 +6,8 @@ testdriveUrlForBlock: aBlock
 	das UI nicht vom Backend kommt, sondern Frontend"
 
 	"Kollissionen vermeiden"
-	id := (1 to: 10) atRandom.
+	id := (1 to: 100) atRandom.
 	
 	self db propertyAt: (#testdriveInitBlock, id greaseString) asSymbol put: aBlock.
-	^('/testdrive?id=', id greaseString).
+
+	^ self testdriveUrlForId: id

@@ -1,3 +1,4 @@
 tasks
 runNightlyTasks
-	self exportModulesAsPdf
+	self exportModulesAsPdf.
+	self cleanup.

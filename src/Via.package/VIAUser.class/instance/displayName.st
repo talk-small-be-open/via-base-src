@@ -1,3 +1,8 @@
 as yet unclassified
 displayName
-	^self fullNameFormal, ' (', self email, ')'
+	^String streamContents: [:s |
+		s << self fullNameFormal.
+		self email ifNotBlank: [
+			s << ' ('.
+			s << self email.
+			s << ')' ] ]

@@ -5,7 +5,11 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"searchString",
+		"users",
+		"role"
+	],
 	"name" : "VIAAdminUserFinderInspector",
 	"type" : "normal"
 }

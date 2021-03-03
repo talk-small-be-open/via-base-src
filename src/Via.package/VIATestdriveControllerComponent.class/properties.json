@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Testdrive",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"applicationComponent",
+		"testdriveId"
+	],
+	"name" : "VIATestdriveControllerComponent",
+	"type" : "normal"
+}

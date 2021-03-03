@@ -1,3 +1,4 @@
 rendering
 renderSelfOn: html
-	self renderObjects: self wd teachers on: html
+	self renderSearchOn: html.
+	self renderObjects: users on: html.
