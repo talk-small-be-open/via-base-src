@@ -1,3 +1,0 @@
-asserting
-shouldAnswer
-	self subclassResponsibility
