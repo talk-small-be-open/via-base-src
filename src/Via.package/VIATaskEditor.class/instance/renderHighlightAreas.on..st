@@ -1,6 +1,6 @@
 rendering-visitor
 renderHighlightAreas: aHighlightAreas on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aHighlightAreas on: html with: [
 "		html heading level2; with: 'Mark text'."
 		self renderOn: html quickHelp: 'Enter text with _underscore_ marked ranges in pillar syntax. After saving, you get more actions for each range.'.
 

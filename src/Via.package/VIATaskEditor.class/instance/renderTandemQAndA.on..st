@@ -1,6 +1,6 @@
 rendering-visitor
 renderTandemQAndA: aTandemQAndA on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aTandemQAndA on: html with: [
 "		html span: 'Hint: '.
 		html textArea
 			on: #hintText of: aTandemQAndA."

@@ -26,7 +26,7 @@ performSearch
 				searcher isFound ifTrue: [ searchMatchedTasks add: eachTask ].
 				searcher isFound ].
 
-			foundTasks notEmpty ]
+			foundTasks notEmpty or: [each matchesSearchString: searchString ]]
 	].
 
 	modules := modules sortedBySortKey

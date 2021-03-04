@@ -1,6 +1,6 @@
 rendering-visitor
 renderTextInput: aPlaceholder on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aPlaceholder on: html with: [
 		aPlaceholder code ifNotBlank: [ :c |
 			html heading level2; with: [
 				html text: 'Text input: '.

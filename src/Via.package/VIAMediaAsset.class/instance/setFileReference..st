@@ -1,0 +1,3 @@
+accessing
+setFileReference: anObject
+	self subclassResponsibility

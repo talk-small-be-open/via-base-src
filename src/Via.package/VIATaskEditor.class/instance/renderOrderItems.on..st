@@ -1,6 +1,6 @@
 rendering-visitor
 renderOrderItems: anOrderItems on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: anOrderItems on: html with: [
 		html skRow: [
 			html skColumnWidth: 'three' with: [
 				html label: [

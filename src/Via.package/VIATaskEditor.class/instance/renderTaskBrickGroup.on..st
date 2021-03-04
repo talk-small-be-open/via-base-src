@@ -4,7 +4,7 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 	
 	listId := html nextId.
 
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aTaskBrickGroup on: html with: [
 
 		html label with: 'Title of group'.
 		html textInput on: #title of: aTaskBrickGroup.

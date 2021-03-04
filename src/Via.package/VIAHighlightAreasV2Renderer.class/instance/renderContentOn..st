@@ -19,6 +19,7 @@ renderContentOn: html
 
 	html div
 		class: 'highlightAreas';
+		class: taskBrick uiStyle;
 		class: 'firstTake' if: self exercise isFirstTake; "obsolete?"
 		id: (id := html nextId);
 

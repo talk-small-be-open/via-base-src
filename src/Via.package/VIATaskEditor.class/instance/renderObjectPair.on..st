@@ -1,6 +1,6 @@
 rendering-visitor
 renderObjectPair: anObjectPair on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: anObjectPair on: html with: [
 		html span: 'Hint: '.
 		html textArea
 			on: #hintText of: anObjectPair.

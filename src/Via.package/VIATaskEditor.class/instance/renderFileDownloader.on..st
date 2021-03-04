@@ -1,6 +1,6 @@
 rendering-visitor
 renderFileDownloader: aFileDownloader on: html
-	html div class: 'inputEditor'; with: [			
+	self renderInputEditorFor: aFileDownloader on: html with: [
 		html skRow: [
 			html skColumnWidth: 'nine' with: [
 				html select

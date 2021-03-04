@@ -1,6 +1,6 @@
 rendering-visitor
 renderSelectMany: aSelectManyInput on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aSelectManyInput on: html with: [
 "		html heading level2; with: [
 			html text: 'Multiple choice (multiple answers): '.
 			html text: aSelectManyInput code]."

@@ -1,6 +1,6 @@
 rendering-visitor
 renderDragDrop: aDragDropInput on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aDragDropInput on: html with: [
 		html heading level2; with: [
 			html text: 'Drag & Drop: '.
 			html text: aDragDropInput code].

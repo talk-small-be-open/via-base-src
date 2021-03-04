@@ -1,3 +1,8 @@
 accessing
 fileReference: anObject
-	self subclassResponsibility
+	self setFileReference: anObject.
+
+	comment ifNil: [
+		comment := anObject comment ].
+	title ifNil: [
+		title := anObject title ].

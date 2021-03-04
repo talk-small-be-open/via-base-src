@@ -1,6 +1,6 @@
 rendering-visitor
 renderAudioPlayer: anAudioPlayer on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: anAudioPlayer on: html with: [
 		html select
 			list: self wd audioAssets reversed;
 			labels: [:each | each displayName];

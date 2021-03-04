@@ -1,6 +1,6 @@
 rendering-visitor
 renderMapPairs: aMapPairs on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aMapPairs on: html with: [
 
 "		html heading level2; with: 'Map pairs'."
 "		html div: 'Pairs:'."

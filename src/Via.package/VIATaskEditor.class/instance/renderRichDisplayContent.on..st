@@ -4,7 +4,7 @@ renderRichDisplayContent: aRichDisplayContent on: html
 	
 	listId := html nextId.
 
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aRichDisplayContent on: html with: [
 		html unorderedList
 			id: listId;
 			script: ((html jsSortable)

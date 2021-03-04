@@ -1,6 +1,6 @@
 rendering-visitor
 renderVimeoVideoPlayer: aVideoPlayer on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aVideoPlayer on: html with: [
 		html label: 'Vimeo video ID'.
 		html textInput
 			on: #videoId of: aVideoPlayer.

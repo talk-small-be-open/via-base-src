@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"code"
+		"code",
+		"uiStyle"
 	],
 	"name" : "VIATaskBrick",
 	"type" : "normal"

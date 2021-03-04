@@ -4,7 +4,7 @@ renderVideoPlayer: aVideoPlayer on: html
 
 	v := 'somethingdefaultsilly'.
 		
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aVideoPlayer on: html with: [
 		aVideoPlayer hasVideo ifTrue: [
 			html div: [
 				html video

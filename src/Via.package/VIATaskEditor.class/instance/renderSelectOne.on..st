@@ -1,6 +1,6 @@
 rendering-visitor
 renderSelectOne: aSelectOneInput on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aSelectOneInput on: html with: [
 		aSelectOneInput code ifNotBlank: [ :c |
 			html heading level2; with: [
 				html text: 'Select one: '.

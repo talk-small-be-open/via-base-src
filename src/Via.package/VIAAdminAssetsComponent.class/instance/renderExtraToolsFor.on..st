@@ -11,6 +11,9 @@ renderExtraToolsFor: anAsset on: html
 			callback: [ anAsset fileReference readContentType ];
 			with: 'Reread content type'.
 		html anchor
+			callback: [ self reuploadFor: anAsset ];
+			with: 'Re-Upload file'.
+		html anchor
 			callback: [self deleteAsset: anAsset];
 			with: 'Delete'.
 "		self ifAdmin: [

@@ -1,6 +1,6 @@
 rendering-visitor
 renderTandemSequence: aTandemSequence on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aTandemSequence on: html with: [
 
 		html skRow: [
 			html skColumnWidth: 'three' with: [

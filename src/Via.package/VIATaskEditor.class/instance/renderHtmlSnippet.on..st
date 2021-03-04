@@ -1,5 +1,5 @@
 rendering-visitor
 renderHtmlSnippet: aHtmlSnippet on: html
-	html div class: 'inputEditor'; with: [
+	self renderInputEditorFor: aHtmlSnippet on: html with: [
 		html textArea
 			on: #htmlString of: aHtmlSnippet]

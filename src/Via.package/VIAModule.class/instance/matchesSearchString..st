@@ -1,5 +1,15 @@
 as yet unclassified
 matchesSearchString: aString
-	^((title includesSubstring: aString caseSensitive: false) or:
-	[classification matchesSearchString: aString]) or:
-	[self authorUsers anySatisfy: [:each | each fullName includesSubstring: aString caseSensitive: false]]
+	| found |
+	aString ifBlank: [ ^ false ].
+	
+	found := [ ^ true ].
+
+	(title includesSubstring: aString caseSensitive: false) ifTrue: found.
+	(classification matchesSearchString: aString) ifTrue: found.
+	(self authorUsers anySatisfy: [:each | each fullName includesSubstring: aString caseSensitive: false]) ifTrue: found.
+
+	aString first isDigit ifTrue: [
+		(self matchesIndexCode: aString) ifTrue: found ].
+		
+	^ false

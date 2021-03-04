@@ -1,7 +1,6 @@
 rendering-visitor
 renderImageDisplayer: anImageDisplayer on: html
-	html div class: 'inputEditor'; with: [
-
+	self renderInputEditorFor: anImageDisplayer on: html with: [
 		anImageDisplayer hasImage ifTrue: [
 			html div
 				style: 'width:100px;height:auto;margin-bottom:5px;';
