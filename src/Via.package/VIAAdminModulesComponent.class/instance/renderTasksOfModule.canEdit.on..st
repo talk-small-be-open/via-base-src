@@ -3,8 +3,11 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 	aModule tasks withIndexDo: [:eachTask :index |
 		html tableRow: [
 			html tableData colSpan: 2; class: 'taskName'; with: [
-				html text: index greaseString.
-				html text: '. '.
+				html span
+					class: 'matchesSearch' if: (self isSearchMatchedTask: eachTask);
+					with: [
+						html text: index greaseString.
+						html text: '. '].
 				html text: eachTask displayName].	
 			html tableData colSpan: (columnsCount-2); class: 'actions'; with: [
 				canEdit ifTrue: [

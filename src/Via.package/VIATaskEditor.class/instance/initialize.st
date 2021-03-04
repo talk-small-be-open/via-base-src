@@ -7,7 +7,7 @@ initialize
 	task := nil.
 
 	
-	authorBricks := (((VIATaskBrick allSubclasses select: #isAuthorReady) sortedBy: #displayName) groupedBy: [:each | each authoringCategory]).
+	authorBricks := ((VIATaskBrick allAuthorReady sortedBy: #displayName) groupedBy: [:each | each authoringCategory]).
 	authorBrickCategories := authorBricks keys sorted.
 
 	assetsComponent := VIAAdminMiniAssetsComponent new.

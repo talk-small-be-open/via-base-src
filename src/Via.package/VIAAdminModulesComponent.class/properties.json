@@ -10,7 +10,10 @@
 		"selectedModule",
 		"columnsCount",
 		"modules",
-		"searchString"
+		"searchString",
+		"searchBrickType",
+		"brickTypes",
+		"searchMatchedTasks"
 	],
 	"name" : "VIAAdminModulesComponent",
 	"type" : "normal"

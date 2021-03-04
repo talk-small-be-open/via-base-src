@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIABrickTreeVisitor",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"searchClass",
+		"foundBricks",
+		"searchString"
+	],
+	"name" : "VIASearchBrickVisitor",
+	"type" : "normal"
+}

@@ -14,11 +14,16 @@ module: aModule matchesQuery: aQuery
 
 	"Filter for fulltext"
 	aQuery isFulltextFiltered ifTrue: [
+		| brickSearcher |
+		brickSearcher := VIASearchBrickVisitor new.
 		(aQuery textTokens allSatisfy: [:eachToken |
-			{{aModule}. aModule tasks.}
+			brickSearcher searchString: eachToken.
+			(aModule matchesSearchString: eachToken) or: [brickSearcher isFound: aModule]
+			"{{aModule}. aModule tasks.}
 				anySatisfy: [:collection |
 					collection anySatisfy: [:each |
-						each matchesSearchString: eachToken]]]) ifFalse: [^false]].
+						each matchesSearchString: eachToken]]"
+			]) ifFalse: [^false]].
 
 	"Filter drafts"
 	aQuery isIncludingDrafts ifFalse: [

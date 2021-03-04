@@ -9,12 +9,16 @@ renderToolbarOn: html
 	html skAnchorButton
 		callback: [ self openAudioRecorder ];
 		with: [ html iconRecord; space; text: 'Record audio' ].
+	html space.
+	html skAnchorButton
+		callback: [ self showAll ];
+		with: 'Show all'.
 "Needs love, but obsolete.	html space.
 	html skAnchorButton
 		callback: [self createNewAssetUpload];
 		with: 'Classic simple upload ...'."
 	self ifAdmin: [
-		html space; space.
+		html break.
 		html strong: 'Experts: '.
 		html space.
 		html skAnchorButton
@@ -37,6 +41,4 @@ renderToolbarOn: html
 		self renderSearchStringOn: html.
 		self renderSearchTypeOn: html.
 		self renderSearchPerformOn: html.
-		html skAnchorButton
-			callback: [ self showAll ];
-			with: 'Show all'	].
+	].
