@@ -1,3 +1,3 @@
 accessing
 propertyRemoveAt: aSymbol
-	^properties removeKey: aSymbol asSymbol
+	^properties removeKey: aSymbol asSymbol ifAbsent: [  ]

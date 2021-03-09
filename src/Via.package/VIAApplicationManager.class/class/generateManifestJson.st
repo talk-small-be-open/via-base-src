@@ -27,8 +27,8 @@ generateManifestJson
 'start_url'->(website url).
 'display'->'standalone'.
 'orientation'->'portrait'.
-'background_color'->'#ffffff'.
-'theme_color'->'#ffffff'.
+'background_color'->(self themeColorBackground).
+'theme_color'->(self themeColorForeground).
 } asDictionary.
 
 	GRPlatform current write: j asJson toFile: 'manifest.webmanifest' inFolder: path
