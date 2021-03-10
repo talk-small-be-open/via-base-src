@@ -6,6 +6,6 @@ renderContentOn: html
 			class: 'backButtonAnchor';
 			callback: [self decoratedComponent cancel];
 			with: [
-				html iconBack; space.
+				html iconBack.
 				html t: 'general:back']].
 	self renderNextOn: html.

@@ -1,0 +1,3 @@
+testing
+beCollapsed
+	collapsed := true

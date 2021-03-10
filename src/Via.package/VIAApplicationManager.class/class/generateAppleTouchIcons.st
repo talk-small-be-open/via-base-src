@@ -11,7 +11,7 @@ generateAppleTouchIcons
 			y := each second * n.
 			file := 'touch-icon-', x asString, 'x', y asString, '.png'.
 			
-			cmd := 'cd "', path, '" && convert -bordercolor white -border 10x10 -resize "', x asString,'x', y asString, '>" touch-icon.png', ' -gravity center -background white -extent ', x asString,'x', y asString, ' "', file, '"'.
+			cmd := 'cd "', path, '" && convert -resize "', x asString,'x', y asString, '>" touch-icon.png', ' -gravity center -background transparent -extent ', x asString,'x', y asString, ' "', file, '"'.
 
 			MCLPlatform runShellCommand: cmd.
 	]

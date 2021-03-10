@@ -6,7 +6,7 @@ generatePwaImages
 	self generateAppleTouchIcons.
 	self generateAppleStartupScreens.
 	
-	"Android"
+	"Android, uses Apple images so far, in the manifest"
 "	self generateAndroid..."
 	
 	"MS"

@@ -18,4 +18,10 @@ updateRoot: anHtmlRoot
 
 	"Vimeo embedding"
 	"OPTIMIZE: Only if needed"
-	anHtmlRoot javascript defer url: 'https://player.vimeo.com/api/player.js'
+	anHtmlRoot javascript defer url: 'https://player.vimeo.com/api/player.js'.
+	
+	"Prevent auto content inside exercises"
+	anHtmlRoot meta name: 'format-detection'; content: 'telephone=no'.
+	anHtmlRoot meta name: 'format-detection'; content: 'date=no'.	
+	anHtmlRoot meta name: 'format-detection'; content: 'address=no'.
+	anHtmlRoot meta name: 'format-detection'; content: 'email=no'.

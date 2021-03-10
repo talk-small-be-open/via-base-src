@@ -1,3 +1,3 @@
 as yet unclassified
 removeApplicationCommand: anApplicationCommand
-	applicationCommands removeKey: anApplicationCommand code
+	applicationCommands removeKey: anApplicationCommand code ifAbsent: [  ]

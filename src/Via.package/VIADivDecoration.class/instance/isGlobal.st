@@ -1,3 +1,3 @@
 as yet unclassified
 isGlobal
-	^ true
+	^ false

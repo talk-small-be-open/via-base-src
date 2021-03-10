@@ -9,17 +9,17 @@ createMailtoUrlTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: 
 	mailto := String streamContents: [:s |
 		s nextPutAll: 'mailto:'.
 		to ifNotEmpty: [
-			s nextPutAll: (to joinUsing: ',')].
+			s nextPutAll: (MCLPlatform joinCollection: to delimiter: ',')].
 
 		s nextPutAll: '?abc'.
 		
 		cc ifNotEmpty: [
 			s nextPutAll: '&cc='.
-			s nextPutAll: (cc joinUsing: ',') ].
+			s nextPutAll: (MCLPlatform joinCollection: cc delimiter: ',') ].
 
 		bcc ifNotEmpty: [
 			s nextPutAll: '&bcc='.
-			s nextPutAll: (bcc joinUsing: ',') ].
+			s nextPutAll: (MCLPlatform joinCollection: bcc delimiter: ',') ].
 		
 		aString ifNotBlank: [
 			s nextPutAll: '&subject='.
