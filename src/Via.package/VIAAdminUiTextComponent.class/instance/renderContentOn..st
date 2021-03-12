@@ -5,13 +5,19 @@ renderContentOn: html
 	html skAnchorButton
 		callback: [self refresh];
 		with: 'Refresh'.
+	html space.
 	html skAnchorButton
 		callback: [self downloadTextFile];
 		with: 'Download texts'.
+	html space.
 	html skAnchorButton
 		callback: [self uploadTextFile];
 		with: 'Upload texts ...'.
-	html table: [
+	html space.
+	html skAnchorButton
+		callback: [self addKey];
+		with: 'Add text ...'.
+	html table class: 'uiTexts'; with: [
 		uiTextKeys do: [:each |
 			html tableRow: [
 				html tableData: each.
