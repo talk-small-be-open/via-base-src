@@ -10,7 +10,7 @@ buildFixedImageWidth: aWidth inFolder: aTargetFolder
 
 	scaledImageFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform current fileExists: scaledImageFilepath) ifFalse: [
+	(self fastFileExists: scaledImageFilepath) ifFalse: [
 
 		cmd := 'convert ', self commonImagemagickOptions, ' -scale ', aWidth asString,' "', filepath, '" "', scaledImageFilepath, '"'.
 		MCLPlatform runShellCommand: cmd].

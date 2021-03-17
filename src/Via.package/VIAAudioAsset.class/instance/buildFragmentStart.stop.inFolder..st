@@ -12,7 +12,7 @@ buildFragmentStart: aStart stop: aStop inFolder: aTargetFolder
 
 	audioFragmentFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform current fileExists: audioFragmentFilepath) ifFalse: [
+	(self fastFileExists: audioFragmentFilepath) ifFalse: [
 		cmd := String streamContents: [:s |
 			s nextPutAll: 'ffmpeg -nostats -loglevel warning -y '.
 			aStart ifNotBlank: [

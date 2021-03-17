@@ -1,0 +1,1 @@
+Estimates real length of a pillar input document. In chars. Approx.

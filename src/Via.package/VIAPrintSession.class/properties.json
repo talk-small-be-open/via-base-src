@@ -1,6 +1,6 @@
 {
-	"commentStamp" : "",
-	"super" : "VIASession",
+	"commentStamp" : "AndreasBrodbeck 3/15/2021 14:46",
+	"super" : "VIADefaultSession",
 	"category" : "Via-View-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],

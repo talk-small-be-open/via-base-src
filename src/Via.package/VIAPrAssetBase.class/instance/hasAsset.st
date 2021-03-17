@@ -1,0 +1,3 @@
+testing
+hasAsset
+	^ asset notNil

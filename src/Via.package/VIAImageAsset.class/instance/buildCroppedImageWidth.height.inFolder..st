@@ -8,7 +8,7 @@ buildCroppedImageWidth: aWidth height: aHeight inFolder: aTargetFolder
 
 	scaledImageFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform current fileExists: scaledImageFilepath) ifFalse: [
+	(self fastFileExists: scaledImageFilepath) ifFalse: [
 
 		cmd := 'convert ', self commonImagemagickOptions, ' -scale "', aWidth asString,'x', aHeight asString, '^" -gravity center -crop "', aWidth asString,'x', aHeight asString, '+0+0" "', filepath, '" "', scaledImageFilepath, '"'.
 		MCLPlatform runShellCommand: cmd].

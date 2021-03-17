@@ -17,26 +17,9 @@ renderToolbarOn: html
 	html skAnchorButton
 		callback: [self createNewAssetUpload];
 		with: 'Classic simple upload ...'."
-	self ifAdmin: [
-		html break.
-		html strong: 'Experts: '.
-		html space.
-		html skAnchorButton
-			callback: [self createNewAssetChooseFile];
-			with: 'New from path (FTP) ...'.
-"		html space.
-		html skAnchorButton
-			callback: [self rebuildVideoThumbnails];
-			with: 'Rebuild video thumbs'."
-		html space.
-		html skAnchorButton
-			callback: [self showUnused];
-			with: 'Show unused'.
-		html space.
-		html skAnchorButton
-			callback: [self showUsageReport];
-			with: 'Show usage report'.
-	].
+
+	self renderAdminToolbarOn: html.
+
 	html form: [
 		self renderSearchStringOn: html.
 		self renderSearchTypeOn: html.

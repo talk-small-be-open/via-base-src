@@ -1,3 +1,3 @@
 accessing
 component
-	^ component
+	^ component ifNil: [ component := componentCreator value ]

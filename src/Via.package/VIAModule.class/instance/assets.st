@@ -1,5 +1,6 @@
 as yet unclassified
 assets
-	^(self tasks gather: [:each | each assets]) asSet
-		addIfNotNil: imageAsset;
-		yourself
+	| set |
+	set := Set new.
+	self assetsDo: [ :each | set add: each ].
+	^ set

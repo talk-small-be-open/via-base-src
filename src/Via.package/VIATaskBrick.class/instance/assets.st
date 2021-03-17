@@ -1,4 +1,6 @@
 as yet unclassified
 assets
-	"subclasses can do better"
-	^(self childBricks gather: [:each | each assets]) asSet
+	| set |
+	set := Set new.
+	self assetsDo: [ :each | set add: each ].
+	^ set

@@ -1,3 +1,3 @@
 visiting
 accept: aVisitor
-	aVisitor visitViaPrAssetAudio: self
+	aVisitor visitViaPrAssetBase: self

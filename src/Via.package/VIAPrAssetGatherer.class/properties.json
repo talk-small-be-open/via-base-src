@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "PRVisitor",
+	"super" : "VIAPrAssetVisitor",
 	"category" : "Via-Pillar",
 	"classinstvars" : [ ],
 	"pools" : [ ],

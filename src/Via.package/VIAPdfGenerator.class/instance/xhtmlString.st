@@ -13,7 +13,7 @@ fakeSession user: component currentUser."
 		during: [
 			| builder canvas |
 
-			canvas := component rendererClass.
+			canvas := self component rendererClass.
 			canvas isForPrint ifFalse: [ canvas := VIAPrintHtmlCanvas ].
 			
 			builder := canvas builder
@@ -24,7 +24,7 @@ fakeSession user: component currentUser."
 				yourself.
 
 			xhtmlString := builder render: [:html |
-				html render: component]
+				html render: self component]
 
 		].
 

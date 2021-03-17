@@ -1,3 +1,3 @@
 *Via
 visitViaPrAssetImage: aViaPrAssetImage
-	self visitReference: aViaPrAssetImage
+	self visitViaPrAssetBase: aViaPrAssetImage

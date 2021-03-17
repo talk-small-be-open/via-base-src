@@ -19,4 +19,4 @@ updateRoot: anHtmlRoot
 	self updateRootFontawesome: anHtmlRoot.
 	
 	"Die Komponente auch noch dran lassen"
-	component updateRoot: anHtmlRoot
+	self component updateRoot: anHtmlRoot

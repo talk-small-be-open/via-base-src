@@ -1,3 +1,3 @@
 *Via
 visitViaPrAssetDocument: aViaPrAssetDocument
-	self visitReference: aViaPrAssetDocument
+	self visitViaPrAssetBase: aViaPrAssetDocument

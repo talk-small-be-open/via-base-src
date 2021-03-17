@@ -1,3 +1,3 @@
 *Via
 visitViaPrAssetAudio: aViaPrAssetAudio
-	self visitReference: aViaPrAssetAudio
+	self visitViaPrAssetBase: aViaPrAssetAudio

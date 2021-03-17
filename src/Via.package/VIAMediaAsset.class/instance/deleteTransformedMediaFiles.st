@@ -1,3 +1,4 @@
 as yet unclassified
 deleteTransformedMediaFiles
-	self transformedMediaFiles do: [ :each | VIAPlatform current deleteFileNamed: each ]
+	self transformedMediaFiles do: [ :each | VIAPlatform current deleteFileNamed: each ].
+	self clearFileExistsCache.

@@ -9,7 +9,7 @@ buildScaledImageWidth: aWidth height: aHeight inFolder: aTargetFolder
 
 	scaledImageFilepath := aTargetFolder, '/', self fileReference fileName, suffix.
 
-	(VIAPlatform current fileExists: scaledImageFilepath) ifFalse: [
+	(self fastFileExists: scaledImageFilepath) ifFalse: [
 
 		cmd := 'convert ', self commonImagemagickOptions, ' -scale "',
 			aWidth asString,'x', aHeight asString, '>" "', filepath, '" "', scaledImageFilepath, '"'.
