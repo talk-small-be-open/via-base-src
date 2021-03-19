@@ -1,4 +1,3 @@
 testing
 otherPlayerLetter
-	"65 = A"
-	^ Character value: (65 + (self otherPlayerNumber - 1))
+	^ self playerLetter: self otherPlayerNumber

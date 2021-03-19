@@ -1,7 +1,7 @@
 rendering
 renderStep2InstructionsOn: html
 	html div class: 'step2Instructions'; class: self playerCss; with: [
-		self renderPlayerLetter: self playerInTurnLetter on: html.
+		self renderPlayerLabel: self playerInTurn on: html.
 		self ifPlayer1: [
 			html pillarSnippet: taskBrick step2PillarPlayerA
 		] else: [ 

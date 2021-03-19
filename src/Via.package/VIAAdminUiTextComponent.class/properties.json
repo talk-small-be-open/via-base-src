@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"uiTextKeys"
+		"uiTextKeys",
+		"searchString"
 	],
 	"name" : "VIAAdminUiTextComponent",
 	"type" : "normal"

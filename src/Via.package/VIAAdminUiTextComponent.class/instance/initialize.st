@@ -5,4 +5,4 @@ initialize
 
 	self beRestoringScrollPosition.
 	
-	self refresh
+	self showAll

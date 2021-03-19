@@ -8,11 +8,12 @@ renderStatusOn: html
 				html text: self pairedUser firstName ].
 			html anchorButton
 				callback: [ self finish ];
-				t: 'general:ok'
+				t: 'userPairing:okNext'
 		] ifFalse: [ 
-			html div class: 'pairingMessage'; t: 'userPairing:waitingToPair' ].
+			self renderWaitingToPairOn: html		
+		].
 	].
 
 	html ukAnchorButtonSmall
 		callback: [ self cancel ];
-		t: 'general:cancel'
+		t: 'userPairing:cancel'

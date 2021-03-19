@@ -2,17 +2,18 @@ rendering
 renderQuestionAndAnswerOn: html
 	| id |
 	id := html nextId.
-	html div class: 'questionAndAnswer current'; with: [
+	html div class: 'questionAndAnswer current withAnswer'; with: [
 		self renderQuestionOn: html.
 		html div class: 'answer'; class: self otherPlayerCss; with: [
-			self renderPlayerLetter: self otherPlayerLetter on: html.
-"			html span: '(Me)'."
+			self renderPlayerLabel: self otherPlayerNumber on: html.
 			
 			html div
 				ukToggleFadeTarget: ('#', id);
 				class: 'answerIcon';
 				with: [
 					html iconAnswer.
+					html break.
+					html iconDropdown.
 					"t: 'tandemSequence:answer'; iconDropdown."
 				].
 			
@@ -23,15 +24,21 @@ renderQuestionAndAnswerOn: html
 						| spinnerId |
 						spinnerId := html nextId.
 						html div class: 'buttons'; with: [
-							html anchor
-								onClick: ((self jsSend: 'notCorrect'),
-									(html jQuery id: spinnerId) show);
-								with: [ html iconBeWrong ].
+							html div: [
+								html anchor
+									onClick: ((self jsSend: 'notCorrect'),
+										(html jQuery id: spinnerId) show);
+									with: [ html iconBeWrong ].
+								html break.
+								html span t: 'tandemSequence:wrongButtonText' ].
 							(html ukSpinner) id: spinnerId; class: 'spinner'.
-							html anchor
-								onClick: ((self jsSend: 'correct'),
-									(html jQuery id: spinnerId) show);
-								with: [ html iconBeCorrect ] ].
+							html div: [
+								html anchor
+									onClick: ((self jsSend: 'correct'),
+										(html jQuery id: spinnerId) show);
+									with: [ html iconBeCorrect ].
+								html break.
+								html span t: 'tandemSequence:correctButtonText' ] ].
 					] else: [
 						self ajaxAction: [ self goAhead ] on: html with: [
 							html fasIcon: 'chevron-right']
