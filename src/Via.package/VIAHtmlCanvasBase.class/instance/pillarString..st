@@ -1,6 +1,9 @@
 via
 pillarString: aString
 	| pillarDocument |
+	
+	aString ifBlank: [ ^ self ].
+	
 	pillarDocument := (VIAHelper pillarFromPillarString: aString).
 
 	"Simplify, wenn nur 1 Paragraph"

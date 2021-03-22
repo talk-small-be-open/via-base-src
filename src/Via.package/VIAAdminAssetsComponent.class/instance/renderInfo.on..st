@@ -6,8 +6,8 @@ renderInfo: each on: html
 		html span: (GRPrinter decimalFileSize print: each byteSize).
 		html text: ')'.
 	].
-	html div class: 'publicComment'; with: (each comment).
-	html div class: 'internalComment'; with: (each internalComment).
+	html div class: 'publicComment'; with: [html pillarString: (each comment)].
+	html div class: 'internalComment'; with: [html pillarString: (each internalComment)].
 	html div class: 'fileOnDisk'; with: [
 		html text: each fileName.
 		html space.

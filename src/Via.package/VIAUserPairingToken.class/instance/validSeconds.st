@@ -1,3 +1,3 @@
 testing
 validSeconds
-	^ (self expirationDateAndTime - DateAndTime now) asSeconds max: 0
+	^ (self expirationDateAndTime - DateAndTime now) asSeconds asInteger max: 0
