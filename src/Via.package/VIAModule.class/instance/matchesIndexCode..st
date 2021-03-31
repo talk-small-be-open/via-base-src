@@ -6,5 +6,6 @@ matchesIndexCode: aString
 	"OPTIMIZE"
 	
 	indexCode ifBlank: [ ^ false ].
+	aString ifBlank: [ ^ false ].
 	
 	^ indexCode string beginsWith: aString

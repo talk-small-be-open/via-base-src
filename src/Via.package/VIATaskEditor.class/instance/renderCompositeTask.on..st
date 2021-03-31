@@ -2,20 +2,27 @@ rendering-visitor
 renderCompositeTask: aCompositeTask on: html
 	| listId |
 	
-	html label with: 'Title of task'.
-	html textInput on: #title of: aCompositeTask.
-	html label with: 'Subtitle'.
-	html textInput on: #subtitle of: aCompositeTask.
+	html div class: 'header'; with: [
+		html skRow: [
+			html skColumnWidth: 'four' with: [
+				html label with: 'Title of task'.
+				html textInput class: 'title'; on: #title of: aCompositeTask.
+				html break.
+				html label with: 'Subtitle'.
+				html textInput class: 'subtitle'; on: #subtitle of: aCompositeTask ].
 
-	html skRow: [
-		html skColumnWidth: 'three' with: [
-			self renderClassificationPart: #topicTags class: VIATopicTag of: aCompositeTask on: html ].
-		html skColumnWidth: 'three' with: [
-			self renderClassificationPart: #contextTags class: VIAContextTag of: aCompositeTask on: html ].
-		html skColumnWidth: 'three' with: [
-			self renderClassificationPart: #activityTypeTags class: VIAActivityTypeTag of: aCompositeTask on: html ].
-		html skColumnWidth: 'three' with: [
-			self renderClassificationPart: #grammarTopicTags class: VIAGrammarTopicTag of: aCompositeTask on: html ]].
+			html skColumnWidth: 'eight' with: [
+				html skRow: [
+					html skColumnWidth: 'three' with: [
+						self renderClassificationPart: #topicTags class: VIATopicTag of: aCompositeTask on: html ].
+					html skColumnWidth: 'three' with: [
+						self renderClassificationPart: #contextTags class: VIAContextTag of: aCompositeTask on: html ].
+					html skColumnWidth: 'three' with: [
+						self renderClassificationPart: #activityTypeTags class: VIAActivityTypeTag of: aCompositeTask on: html ].
+					html skColumnWidth: 'three' with: [
+						self renderClassificationPart: #grammarTopicTags class: VIAGrammarTopicTag of: aCompositeTask on: html ]].
+			]].
+	].
 
 	listId := html nextId.
 	

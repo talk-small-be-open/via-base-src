@@ -1,6 +1,12 @@
 rendering-visitor
 renderAudioPlayer: anAudioPlayer on: html
 	self renderInputEditorFor: anAudioPlayer on: html with: [
+		anAudioPlayer hasAudio ifTrue: [
+			html audio
+				controls: true;
+				url: anAudioPlayer audioUrl.
+		].
+
 		html select
 			list: self wd audioAssets reversed;
 			labels: [:each | each displayName];
@@ -12,9 +18,6 @@ renderAudioPlayer: anAudioPlayer on: html
 			self renderAudioRecorderFor: anAudioPlayer on: html.
 		].
 
-		html audio
-			controls: true;
-			url: anAudioPlayer audioUrl.
 	
 		html skRow: [
 			html skColumnWidth: 'three' with: [

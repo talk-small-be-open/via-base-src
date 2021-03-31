@@ -3,13 +3,20 @@ renderPillarSyntaxHelpOn: html
 	html div class: 'syntaxHelp'; with: [
 		html skColumnWidth: 'six' with: [
 
+	html strong: 'Chapters:'.
 	html preformatted: '!Chapter 1
 !!Chapter 2
 !!!Chapter 3'.
 
 	html strong: 'Lists:'.
 	html preformatted: '- Unordered List
-# Ordered list'.
+# Ordered list
+
+;termA
+:definitionA
+;termB
+:definitionB
+'.
 
 	html strong: 'via specific:'.
 	html preformatted: '${note:something|popupLine1|popupLine2|...}$
@@ -19,6 +26,7 @@ renderPillarSyntaxHelpOn: html
 	html preformatted: '|! Header |! Header |! Header
 |{Left  |}Right   | Centered'.
 
+	html strong: 'Text formatting:'.
 	html preformatted: '
 ""bold""
 ''''italic''''
@@ -26,16 +34,30 @@ renderPillarSyntaxHelpOn: html
 __underscore__
 @@subscript@@
 ^^super-script^^'.
+
+	html strong: 'Misc:'.
+	html preformatted: '
+_ horizontal line
+'
+
 ].
 		html skColumnWidth: 'six' with: [
 
 	html strong: 'Links:'.
 	html preformatted: 'Anchor @anchor (new line)
-Internal link *anchor*
+Internal link to *anchor*
 Link to module by index *See also this module>MOD:2.15*
 External link *Google>http://google.com*
-Image +Caption>file://image.png|width=50|label=label+
-Asset +Caption>4bozbmywaefqleznke0r5aa7f|width=50+'.
+Mailto *Write John>john@cleese.uk*
+'.
+
+	html strong: 'Assets:'.
+	html preformatted: 'Web image +Caption>https://www.blabla.ch/image.png|width=50+
+Local image +Caption>/xyz/image.png|width=50+
+Asset image +img:4bozbmywaefqleznke0r5aa7f|width=50+
+Audio +audio:4bozbmywaefqleznke0r5aa7f|start=50|end=60+
+Document +Linktext>doc:4bozbmywaefqleznke0r5aa7f+
+'.
 
 	html strong: 'Inject raw HTML:'.
 	html preformatted: '{{{html:

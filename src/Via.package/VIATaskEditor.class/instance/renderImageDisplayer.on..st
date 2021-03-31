@@ -14,11 +14,11 @@ renderImageDisplayer: anImageDisplayer on: html
 			
 		html skRow: [
 			html skColumnWidth: 'nine' with: [
-				html select
+				html selectize
 					list: self wd imageAssets reversed;
 					labels: [:each | each displayName];
 					beOptional;
-					on: #imageAsset of: anImageDisplayer ].
+					on: #imageAsset of: anImageDisplayer].
 			html skColumnWidth: 'three' with: [
 				html label class: 'inline'; with: 'Width: '.
 				html numberInput

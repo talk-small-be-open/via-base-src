@@ -16,11 +16,13 @@ renderVideoPlayer: aVideoPlayer on: html
 					with: [html source type: aVideoPlayer videoAsset mimeType; url: aVideoPlayer videoAsset videoUrl].
 		]].
 
-		html select
-			list: self wd videoAssets reversed;
-			labels: [:each | each displayName];
-			beOptional;
-			on: #videoAsset of: aVideoPlayer.
+		html skRow: [
+			html skColumnWidth: 'ten' with: [
+				html selectize
+					list: self wd videoAssets reversed;
+					labels: [:each | each displayName];
+					beOptional;
+					on: #videoAsset of: aVideoPlayer ]].
 
 		html skRow: [
 			html skColumnWidth: 'two' with: [

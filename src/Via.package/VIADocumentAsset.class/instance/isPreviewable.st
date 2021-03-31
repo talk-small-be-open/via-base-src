@@ -1,0 +1,3 @@
+testing
+isPreviewable
+	^self isPdf

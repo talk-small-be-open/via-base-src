@@ -18,7 +18,7 @@ renderListOn: html
 						]].
 				html tableBody: [
 					batcher batch do: [:each |
-						html tableRow: [
+						html tableRow class: each className; with: [
 							html tableData: each classDisplayName.
 							html tableData: [
 								self renderPreview: each on: html].

@@ -13,4 +13,4 @@ renderClassificationPart: aSymbol class: aTagClass of: aCompositeTask on: html
 		callback: [:value | self createNewTags: value type: aTagClass].
 	html submitButton
 		class: 'small';
-		with: '+new'
+		with: [ html iconAdd ]

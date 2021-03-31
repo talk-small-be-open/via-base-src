@@ -1,0 +1,3 @@
+testing
+hasAudio
+	^audioAsset notNil

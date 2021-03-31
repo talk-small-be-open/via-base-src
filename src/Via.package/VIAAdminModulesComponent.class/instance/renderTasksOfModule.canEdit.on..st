@@ -9,15 +9,12 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 						html text: index greaseString.
 						html text: '. '].
 				html text: eachTask displayName].	
-			html tableData colSpan: (columnsCount-2); class: 'actions'; with: [
+			html tableData class: 'actions'; with: [
 				canEdit ifTrue: [
 					html anchor
 						callback: [self editTask: eachTask module: aModule];
 						with: 'Edit'.
-					self ifAdmin: [
-						html anchor
-							callback: [self deleteTask: eachTask inModule: aModule];
-							with: 'Delete'].
+					html space; space.
 					html anchor
 						callback: [self moveUpTask: eachTask inModule: aModule];
 						title: 'Move up';
@@ -25,7 +22,9 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 					html anchor
 						callback: [self moveDownTask: eachTask inModule: aModule];
 						title: 'Move down';
-						with: [html iconDown]].
+						with: [html iconDown].
+					html space; space.
+				].
 				html anchor
 					callback: [self readonlyEditTask: eachTask module: aModule];
 					title: 'Sneak look inside and learn from it';
@@ -38,7 +37,16 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 "							target: '_blank';"
 					title: 'Preview single task and test it';
 					with: 'Test'.
-					]]].
+					].
+			html tableData class: 'actions extras'; with: [
+				canEdit ifTrue: [
+					self ifAdmin: [
+						html anchor
+							callback: [self deleteTask: eachTask inModule: aModule];
+							with: 'Delete']].
+			
+			]	
+				]].
 	canEdit ifTrue: [
 		html tableRow: [
 			html tableData class: 'taskName'; colSpan: columnsCount; with: [
