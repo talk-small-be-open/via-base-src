@@ -18,7 +18,6 @@ postCopy
 	rating := rating copy.
 "	isPrivate
 	releasedAt"
-	geocode := geocode copy.
 	geocodes := geocodes copyWithCopiedElements.
 	indexCode := indexCode copy.
 	

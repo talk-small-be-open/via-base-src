@@ -1,0 +1,3 @@
+testing
+hasGeocodes
+	^ geocodes notBlank

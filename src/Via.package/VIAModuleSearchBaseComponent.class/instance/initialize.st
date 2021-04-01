@@ -5,7 +5,8 @@ initialize
 
 	self addContainerDiv.
 
-	moduleCardRenderer := self website moduleCardRendererClass component: self.
+	moduleCardRenderer ifNil: [
+		moduleCardRenderer := self website moduleCardRendererClass component: self ].
 
 	searchQuery ifNotNil: [
 		searchFormRenderer := self searchFormRendererClass component: self query: searchQuery].

@@ -3,4 +3,4 @@ initialize
 
 	super initialize.
 
-	cardRenderer := VIAModuleMiniCardRenderer component: self
+	self cardRenderClass: VIAModuleMiniCardRenderer

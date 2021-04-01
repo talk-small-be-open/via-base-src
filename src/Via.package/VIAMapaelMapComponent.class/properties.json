@@ -9,7 +9,9 @@
 		"geocodes",
 		"cssClassBlock",
 		"tooltipContentBlock",
-		"urlBlock"
+		"urlBlock",
+		"showAreaTooltips",
+		"clusteredGeocodes"
 	],
 	"name" : "VIAMapaelMapComponent",
 	"type" : "normal"

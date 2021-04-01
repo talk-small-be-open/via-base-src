@@ -7,6 +7,10 @@ renderModule: aModule canEdit: canEdit on: html
 	].
 	html tableData class: 'moduleName'; with: [
 		html text: aModule displayName.
+		aModule hasGeocodes ifTrue: [
+			html space; space.
+			(html fasIcon: 'globe') style: 'color: blue'.
+		].
 		aModule isExam ifTrue: [
 			html space.
 			html badgeSuccess: 'EXAM ONLY'].
