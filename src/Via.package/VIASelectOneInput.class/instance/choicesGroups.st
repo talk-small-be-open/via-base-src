@@ -1,3 +1,3 @@
 accessing
 choicesGroups
-	^ choicesGroups
+	^ choicesGroups ifNil: [ "robustness" { self choices } ]

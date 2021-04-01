@@ -1,3 +1,3 @@
 as yet unclassified
 choicesGroups
-	^ choicesGroups
+	^ choicesGroups ifNil: [ "robustness" { self choices } ]
