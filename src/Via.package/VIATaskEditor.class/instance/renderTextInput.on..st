@@ -6,7 +6,7 @@ renderTextInput: aPlaceholder on: html
 				html text: 'Text input: '.
 				html text: c ] ].
 		html skRow: [
-			html skColumnWidth: 'four' with: [.
+			html skColumnWidth: 'four' with: [
 				html label class: 'inline'; with: 'Hint: '.
 				html textArea
 					class: 'hint';
