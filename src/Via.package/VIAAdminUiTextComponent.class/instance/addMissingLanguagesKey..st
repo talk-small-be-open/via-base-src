@@ -7,4 +7,4 @@ addMissingLanguagesKey: aKey
 	self db languages do: [:each |
 		self db ensureUiText: baseKey language: each].
 
-	self refresh
+	self showAll
