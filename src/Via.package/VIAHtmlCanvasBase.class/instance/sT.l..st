@@ -1,4 +1,4 @@
 via
 sT: aKey l: aLanguage
 	"simple translate, no pillar"
-	self text: (VIADatabase current getUiText: aKey language: aLanguage) text
+	self text: (self session getUiText: aKey language: aLanguage) text

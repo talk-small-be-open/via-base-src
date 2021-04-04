@@ -1,0 +1,3 @@
+accessing
+cachedUiTextKeys
+	^ cachedUiTexts keys

@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Admin",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"uiRawText",
+		"uiKey"
+	],
+	"name" : "VIAFrontendAdminUiTextsComponent",
+	"type" : "normal"
+}

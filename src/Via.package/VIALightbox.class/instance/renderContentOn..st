@@ -16,7 +16,7 @@ renderContentOn: html
 				with: [
 					title ifNotNil: [
 						html div class: 'uk-modal-header'; with: [
-							html heading level4; t: title]].
+							html heading level4; with: [html tOrS: title]]].
 					html div class: 'uk-modal-body'; with: delegate]].
 
 	"TODO: Frontend/Backend agnostisch werden"

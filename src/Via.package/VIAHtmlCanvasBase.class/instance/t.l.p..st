@@ -12,7 +12,7 @@ t: aKey l: aLanguage p: aDictionary
 	
 	params := aDictionary asDictionary.
 
-	pillar := VIADatabase current getUiText: aKey language: aLanguage.
+	pillar := self session getUiText: aKey language: aLanguage.
 
 	self pillar: pillar onMarker: [:marker :html |
 		| paramValue |

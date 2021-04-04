@@ -1,3 +1,3 @@
 permission
 ifAdmin: aBlock else: anElseBlock
-	^self currentUser isAdmin ifTrue: aBlock ifFalse: anElseBlock
+	^self session isAdminSession ifTrue: aBlock ifFalse: anElseBlock

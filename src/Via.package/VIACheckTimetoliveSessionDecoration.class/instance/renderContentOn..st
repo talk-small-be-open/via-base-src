@@ -25,5 +25,5 @@ renderContentOn: html
 
 	html scriptDefer: js.
 	
-	html div style: 'display: none'; id: 'expiredSessionMessage'; sT: 'checkSession:expired.'.
-	html div style: 'display: none'; id: 'nearlyExpiredSessionMessage'; sT: 'checkSession:nearlyExpired.'.
+	html div style: 'display: none'; id: 'expiredSessionMessage'; sT: 'checkSession:expired'.
+	html div style: 'display: none'; id: 'nearlyExpiredSessionMessage'; sT: 'checkSession:nearlyExpired'.

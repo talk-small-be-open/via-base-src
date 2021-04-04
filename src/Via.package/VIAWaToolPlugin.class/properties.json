@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WAToolPlugin",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaToolPlugin",
+	"type" : "normal"
+}
