@@ -31,4 +31,8 @@ renderAdminFrontendToolsOn: html
 					with: 'lo'.
 			]].
 		adminTool ifNotNil: [
-			html div class: 'frontendAdminTool'; with: adminTool ] ].
+			html div class: 'frontendAdminTool'; with: [
+				html div class: 'title'; with: [
+					html fasIcon: 'thumbtack'; space.
+					html text: 'FRONTEND ADMIN TOOL'].
+				html div class: 'tool'; with: adminTool] ] ].

@@ -22,7 +22,7 @@ renderModule: aModule canEdit: canEdit on: html
 			html badgeWarning: 'IN DEMO'].
 		aModule isForBetatester ifTrue: [
 			html space.
-			html badgeWarning: 'FOR TESTER'].
+			html badgeSuccess: 'FOR TESTER'].
 		aModule isLocked ifTrue: [
 			html space.
 			html badgeDanger: ('LOCKED by ', aModule lockedByAdmin fullName)].

@@ -1,14 +1,14 @@
 rendering
 renderContentOn: html
 	html strong: 'List of used texts, latest first'.
-	html span: ' | '.
+	html break.
 	html anchor
 		callback: [ self clearCache ];
-		with: 'Refresh this list of texts'.
+		with: 'Restart collecting texts'.
 	html span: ' | '.
 	html anchor
 		callback: [ self insertKeysInText ];
-		with: 'Add guiding keys inline'.
+		with: 'Show keys in texts'.
 	html table style: 'margin-top: 0.5em; margin-bottom: 3em'; with: [ 
 		self session cachedUiTextKeys reverseDo: [ :each |
 			html tableRow: [ 
