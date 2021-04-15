@@ -7,7 +7,11 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 	self renderInputEditorFor: aTaskBrickGroup on: html with: [
 
 		html label with: 'Title of group'.
-		html textInput on: #title of: aTaskBrickGroup.
+		html textInput style: 'width: 50em'; on: #title of: aTaskBrickGroup.
+		html label with: 'Restricted to'.
+		html multiSelect
+			list: VIAUser allRoles;
+			on: #userRoles of: aTaskBrickGroup.
 
 		html unorderedList
 			id: listId;

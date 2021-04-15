@@ -17,4 +17,6 @@ editKey: aKey
 					false
 				].
 			]
-	] whileFalse
+	] whileFalse.
+
+"	self resetUiTextCaches"

@@ -50,7 +50,7 @@ renderCompositeTask: aCompositeTask on: html
 
 	authorBrickCategories do: [:cat |
 		html div: [
-			html strong t: ('admin:brickCategory:', cat)].
+			html strong sT: ('admin:brickCategory:', cat)].
 		(authorBricks at: cat) do: [:each |
 			html submitButton
 				title: (each authorInfoKey)t;

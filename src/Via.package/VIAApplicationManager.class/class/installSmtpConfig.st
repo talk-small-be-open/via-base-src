@@ -3,7 +3,7 @@ installSmtpConfig
 	| apps server user password port |
 
 	apps := OrderedCollection new.
-	{ VIAFrontendMainTask. VIAAdminMainTask. VIADemoMainTask } do: [ :each |
+	self allMainTaskClasses do: [ :each |
 		apps add: (WAAdmin defaultDispatcher handlerAt: each registeredApplicationName ).
 	].
 

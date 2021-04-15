@@ -1,3 +1,3 @@
 accessing
 roles
-	^ roles
+	^ roles addIfNotPresent: #user; yourself
