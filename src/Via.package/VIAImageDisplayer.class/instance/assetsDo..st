@@ -1,3 +1,4 @@
 as yet unclassified
 assetsDo: aBlock
-	aBlock value: imageAsset
+	imageAsset ifNotNil: [
+		aBlock value: imageAsset ]

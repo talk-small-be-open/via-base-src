@@ -1,3 +1,4 @@
 visiting
 visitAsset: aViaMediaAsset
-	block value: aViaMediaAsset
+	aViaMediaAsset ifNotNil: [
+		block value: aViaMediaAsset ]

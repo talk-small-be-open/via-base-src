@@ -1,3 +1,4 @@
 as yet unclassified
 assetsDo: aBlock
-	aBlock value: asset
+	asset ifNotNil: [
+		aBlock value: asset ]
