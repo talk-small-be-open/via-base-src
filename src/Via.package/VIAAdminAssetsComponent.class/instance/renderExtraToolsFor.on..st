@@ -11,6 +11,9 @@ renderExtraToolsFor: anAsset on: html
 			callback: [ anAsset fileReference readContentType ];
 			with: 'Reread content type'.
 		html anchor
+			callback: [ anAsset buildPreviewImage ];
+			with: 'Rebuild preview image (if previewable)'.
+		html anchor
 			callback: [ self reuploadFor: anAsset ];
 			with: 'Re-Upload file'.
 		html anchor
