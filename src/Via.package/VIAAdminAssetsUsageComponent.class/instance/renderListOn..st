@@ -9,7 +9,7 @@ renderListOn: html
 				html tableHeading.
 			]]."
 		html tableBody: [
-			modules do: [ :eachModule |
+			batcher batch do: [ :eachModule |
 				| assets |
 				assets := assetsPerModule at: eachModule.
 

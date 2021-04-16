@@ -11,6 +11,9 @@ renderAllUsersOn: html
 
 	self users ifNil: [ ^self ].
 
+	html div
+		style: 'text-align: center';
+		with: batcher.
 
 	html table: [
 		html tableHead: [
