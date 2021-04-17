@@ -3,7 +3,7 @@ uiRawText: anObject
 	uiRawText := anObject.
 	
 	[
-	self db uiTextAt: uiKey language: self session language put: uiRawText.
+	self db uiTextAt: uiKey put: uiRawText.
 	
 	"renew cached text in session. a bit dirty, but ok here"
 	self session cachedUiTexts removeKey: uiKey.

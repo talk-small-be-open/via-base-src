@@ -2,7 +2,7 @@ enumerating
 select: aKey
 	| newText |
 	uiKey := aKey.
-	uiRawText := (VIAHelper pillarStringFromPillar: (self db uiTextAt: aKey language: self currentLanguage)).
+	uiRawText := (VIAHelper pillarStringFromPillar: (self db uiTextAt: aKey)).
 
 "	newText := self call: (VIAInputDialog new
 		beMultiline;

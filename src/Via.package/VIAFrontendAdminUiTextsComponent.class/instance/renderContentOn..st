@@ -17,7 +17,7 @@ renderContentOn: html
 						callback: [ self select: each ];
 						with: each ].
 				html tableData: [
-					html text: (VIAHelper pillarStringFromPillar: (self db uiTextAt: each language: self currentLanguage)).
+					html text: (VIAHelper pillarStringFromPillar: (self db uiTextAt: each)).
 "					html pT: each"
 				].
 	]]]
