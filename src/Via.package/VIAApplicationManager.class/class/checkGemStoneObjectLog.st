@@ -10,7 +10,7 @@ checkGemStoneObjectLog
 	
 	[
 	newErrors do: [ :each |
-		self sendSysAdminEmailSubject: 'Application error' body: each asString].
+		self sendSysAdminEmailSubject: 'Application error' body: each printString].
 
 	LastGemStoneObjectLogCheck := DateAndTime now.
 	]
