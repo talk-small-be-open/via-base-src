@@ -41,5 +41,10 @@ renderContentOn: html
 				html text: (WAAdmin defaultDispatcher handlerAt: 'via-admin') sessions size asString].
 			html tableData: [
 			] ].
-
+		html tableRow: [ 
+			html tableData: 'Versions'.
+			html tableData: [
+				self am viaVersions do: [:each | html div: each ] ].
+			html tableData.
+		]
 	]

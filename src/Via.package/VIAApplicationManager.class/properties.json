@@ -4,7 +4,9 @@
 	"category" : "Via-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
+	"classvars" : [
+		"LastGemStoneObjectLogCheck"
+	],
 	"instvars" : [ ],
 	"name" : "VIAApplicationManager",
 	"type" : "normal"

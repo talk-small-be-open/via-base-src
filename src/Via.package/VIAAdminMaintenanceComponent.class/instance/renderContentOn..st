@@ -5,6 +5,10 @@ renderContentOn: html
 		with: 'Send test email'.
 	html break.
 	html anchor
+		callback: [self sendTestSysadminEmail];
+		with: 'Send test sysadmin email'.
+	html break.
+	html anchor
 		callback: [self sendTestHtmlEmail];
 		with: 'Send test HTML email'.
 	html break.
