@@ -6,12 +6,12 @@ renderAdminFrontendToolsOn: html
 				title: 'ADMIN: show UI texts';
 				callback: [self toggleAdminEditUiTextsMode];
 				with: 'txt'.
-				html space.
+			html space.
 			html anchor
 				title: 'ADMIN: switch to user';
 				callback: [self switchToUser];
 				with: 'su'.
-				html space.
+			html space.
 			self session hasBackgroundAdminUser ifTrue: [
 				html anchor
 					title: 'ADMIN: back to admin';
@@ -29,7 +29,13 @@ renderAdminFrontendToolsOn: html
 					title: 'ADMIN: logout completely';
 					callback: [self session clearBackgroundAdminUser];
 					with: 'lo'.
-			]].
+			].
+			html space.
+			html anchor
+				title: 'ADMIN: simulate frontend error';
+				callback: [self simulateError];
+				with: 'err'.
+		].
 		adminTool ifNotNil: [
 			html div class: 'frontendAdminTool'; with: [
 				html div class: 'title'; with: [
