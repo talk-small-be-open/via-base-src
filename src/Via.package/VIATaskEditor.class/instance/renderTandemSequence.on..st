@@ -27,6 +27,7 @@ renderTandemSequence: aTandemSequence on: html
 
 "		html heading level2; with: 'Tandem sequence'."
 "		html div: 'Question and answers:'."
+		aTandemSequence qAndACount even ifFalse: [ html badgeWarning: 'Warning: Try to use an even Q&A count!' ].
 		aTandemSequence qAndAs withIndexDo: [:each :index |
 			html div: [
 				html text: index asString.

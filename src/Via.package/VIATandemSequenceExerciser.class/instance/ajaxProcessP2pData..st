@@ -15,8 +15,25 @@ ajaxProcessP2pData: anObject
 "	anObject isArray ifTrue: [
 		self createSequence: anObject
 	]."
-	
-	anObject = 'correct' ifTrue: [ self currentIsCorrect. self goAhead. reload value ].
-	anObject = 'notCorrect' ifTrue: [ self currentIsNotCorrect. self goAhead. reload value ].
 
-	anObject = 'restart' ifTrue: [ "TBD" reload value ].
+	anObject isString ifTrue: [	
+		(anObject beginsWith: 'correct') ifTrue: [
+			| index |
+	"		self currentIsCorrect."
+			index := (anObject findTokens: '-') second asInteger.
+			self beCorrect: index.
+			self goAhead.
+			reload value
+		].
+
+		(anObject beginsWith: 'notCorrect') ifTrue: [
+			| index |
+			index := (anObject findTokens: '-') second asInteger.
+	"		self currentIsNotCorrect."
+			self beNotCorrect: index.
+			self goAhead.
+			reload value
+		].
+
+		anObject = 'restart' ifTrue: [ "TBD" reload value ].
+	]

@@ -11,7 +11,7 @@ renderContentOn: html
 		html div: [html space].
 		html heading level3; t: 'certificate:textBegin'.
 		"'Si certifica che'."
-		html heading level1; with: user fullName.
+		html heading level1; with: user accountName.
 		html heading level3; t: 'certificate:textEnd'.
 		"'ha svolto gli esercizi dei seguenti moduli:'."
 		moduleExercises do: [:each |

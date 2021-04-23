@@ -24,9 +24,11 @@ renderQuestionAndAnswerOn: html
 						| spinnerId |
 						spinnerId := html nextId.
 						html div class: 'buttons'; with: [
+							| index |
+							index := self currentStep asString.
 							html div: [
 								html anchor
-									onClick: ((self jsSend: 'notCorrect'),
+									onClick: ((self jsSend: ('notCorrect-', index)),
 										(html jQuery id: spinnerId) show);
 									with: [ html iconBeWrong ].
 								html break.
@@ -34,7 +36,7 @@ renderQuestionAndAnswerOn: html
 							(html ukSpinner) id: spinnerId; class: 'spinner'.
 							html div: [
 								html anchor
-									onClick: ((self jsSend: 'correct'),
+									onClick: ((self jsSend: ('correct-', index)),
 										(html jQuery id: spinnerId) show);
 									with: [ html iconBeCorrect ].
 								html break.

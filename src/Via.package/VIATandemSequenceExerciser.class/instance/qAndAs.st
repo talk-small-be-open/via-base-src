@@ -1,3 +1,3 @@
 accessing
 qAndAs
-	^ self qAndASequence collect: [ :each | taskBrick qAndAAt: each ]
+	^ self qAndASequence collect: [ :each | self qAndAAt: each ]

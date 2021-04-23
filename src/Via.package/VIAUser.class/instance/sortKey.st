@@ -1,3 +1,3 @@
 as yet unclassified
 sortKey
-	^self fullNameFormal asLowercase
+	^(self fullNameFormal, self email) asLowercase

@@ -17,6 +17,8 @@ renderContentOn: html
 					html iconP2pNotConnected ].
 				html span class: 'p2pConnected'; popover: ('p2p:pairedTo't, ' ', self otherPeerLabel); with: [
 					html iconP2pConnected ] ].
+			html span class: 'p2pMessages'.
+
 "			html sT: label."
 		].
 

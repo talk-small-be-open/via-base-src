@@ -7,9 +7,10 @@ renderAllUsersOn: html
 		html text: ')'.
 	].
 
-	self renderToolbarOn: html.
+	self renderUsersToolbarOn: html.
 
 	self users ifNil: [ ^self ].
+
 
 	html div
 		style: 'text-align: center';

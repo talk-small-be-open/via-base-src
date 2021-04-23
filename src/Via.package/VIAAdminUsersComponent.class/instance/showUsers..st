@@ -1,6 +1,6 @@
 as yet unclassified
 showUsers: aCollection
-	self clear.
+"	self clear."
 	users := aCollection.
 
 	batcher := WABatchedList new

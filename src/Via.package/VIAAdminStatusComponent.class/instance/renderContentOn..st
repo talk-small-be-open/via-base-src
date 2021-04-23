@@ -46,5 +46,10 @@ renderContentOn: html
 			html tableData: [
 				self am viaVersions do: [:each | html div: each ] ].
 			html tableData.
+		].
+		html tableRow: [ 
+			html tableData: 'GemStone used object space (in this gem)'.
+			html tableData: (System _tempObjSpacePercentUsed asString, '%').
+			html tableData.
 		]
 	]

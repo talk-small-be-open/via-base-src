@@ -6,7 +6,10 @@ renderSummaryPageOn: html
 			
 			self ifShowCorrection: [
 				html div class: 'pointsSummary'; with: [
-					html t: 'tandemSequence:youHave_points_outOf_max_' p: {#points->self points. #max->self maxPoints}.
+					| p mp |
+					p := self points.
+					mp := self maxPoints.
+					html t: 'tandemSequence:youHave_points_outOf_max_' p: {#points->p. #max->(mp max: p)}.
 	"				html div class: 'points'; with: self points asString" ] ].
 
 	"		html anchor
