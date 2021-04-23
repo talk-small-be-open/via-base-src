@@ -9,4 +9,4 @@ commonImagemagickOptions
 	animatedGifOptions := ''.
 	self isAnimatedGif ifTrue: [ animatedGifOptions := ' -layers optimize +remap ' ].
 
-	^ (animatedGifOptions, ' +repage -strip ', quality)
+	^ (animatedGifOptions, ' +repage -auto-orient -strip ', quality)
