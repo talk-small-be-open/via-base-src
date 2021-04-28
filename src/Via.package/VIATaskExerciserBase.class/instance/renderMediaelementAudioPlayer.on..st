@@ -5,7 +5,8 @@ renderMediaelementAudioPlayer: anAudioPlayer on: html
 	
 	html div class: 'audioPlayer'; with: [
 		html audio
-			preload: 'metadata'; "none = recommended by mediaelement.js"
+			preload: 'none'; "none = recommended by mediaelement.js"
+"			preload: 'metadata';"
 			noTab;
 			autoplay: false;
 			id: audioId;

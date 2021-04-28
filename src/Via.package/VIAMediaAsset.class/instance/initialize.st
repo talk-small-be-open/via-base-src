@@ -5,3 +5,4 @@ initialize
 
 	comment := nil.
 	title := 'Unbenannt'.
+	createdAt := DateAndTime now.

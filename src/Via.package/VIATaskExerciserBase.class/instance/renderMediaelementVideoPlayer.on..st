@@ -21,7 +21,8 @@ renderMediaelementVideoPlayer: aVideoPlayer on: html
 			videoTag := html video.
 			videoTag
 				id: videoId;
-				preload: 'metadata'; "none = recommended by mediaelement.js"
+				preload: 'none'; "none = recommended by mediaelement.js"
+	"			preload: 'metadata';"
 				poster: aVideoPlayer posterUrl;
 				noTab;
 				controls: true;

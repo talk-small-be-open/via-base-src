@@ -1,8 +1,10 @@
 rendering-visitor
 renderVideoPlayer: aVideoPlayer on: html
-	| v i |
+	| v i assets |
 
 	v := 'somethingdefaultsilly'.
+
+	assets := (self wd videoAssets sortedReversedBy: [ :each | each createdAt ]).
 		
 	self renderInputEditorFor: aVideoPlayer on: html with: [
 		aVideoPlayer hasVideo ifTrue: [
@@ -19,7 +21,7 @@ renderVideoPlayer: aVideoPlayer on: html
 		html skRow: [
 			html skColumnWidth: 'ten' with: [
 				html selectize
-					list: self wd videoAssets reversed;
+					list: assets;
 					labels: [:each | each displayName];
 					beOptional;
 					on: #videoAsset of: aVideoPlayer ]].

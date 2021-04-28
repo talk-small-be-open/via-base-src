@@ -1,5 +1,5 @@
 as yet unclassified
 initializeFromFileReference: aFileReference
-	super initialize.
+	self initialize.
 	
 	self takeFromFileReference: aFileReference

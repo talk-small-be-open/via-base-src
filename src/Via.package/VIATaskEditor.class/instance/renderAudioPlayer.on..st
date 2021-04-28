@@ -1,5 +1,7 @@
 rendering-visitor
 renderAudioPlayer: anAudioPlayer on: html
+	| assets |
+	assets := (self wd audioAssets sortedReversedBy: [ :each | each createdAt ]).
 	self renderInputEditorFor: anAudioPlayer on: html with: [
 		anAudioPlayer hasAudio ifTrue: [
 			html audio
@@ -7,8 +9,8 @@ renderAudioPlayer: anAudioPlayer on: html
 				url: anAudioPlayer audioUrl.
 		].
 
-		html select
-			list: self wd audioAssets reversed;
+		html selectize
+			list: assets;
 			labels: [:each | each displayName];
 			beOptional;
 			on: #audioAsset of: anAudioPlayer.

@@ -4,7 +4,7 @@ createTurnConfig
 	Creates username/password for Time-Limited Credentials Mechanism"
 
 	(self db propertyAt: #turnServerSecret) ifNotBlank: [ :secretString |
-		| secret time username password expiry |
+		| secret time username password expiry port |
 		secret := secretString.
 		time := DateAndTime now asPosixSeconds asInteger.
 		expiry := 3600. "60 min"
@@ -14,8 +14,11 @@ createTurnConfig
 		
 		password := VIAHelper hmac: username secret: secret.
 
+		"TODO: Maybe configure for another more hidden port?"
+		port := 3478.
+		
 		^ {
-			'host'->((self db propertyAt: #serverAddress), ':3478').
+			'host'->((self db propertyAt: #serverAddress), ':', (port asString)).
 			'username'->username.
 			'credential'->password.
 		} asDictionary

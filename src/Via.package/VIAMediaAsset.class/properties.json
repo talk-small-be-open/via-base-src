@@ -9,7 +9,8 @@
 		"title",
 		"comment",
 		"internalComment",
-		"cachedFileExists"
+		"cachedFileExists",
+		"createdAt"
 	],
 	"name" : "VIAMediaAsset",
 	"type" : "normal"

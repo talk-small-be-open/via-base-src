@@ -14,4 +14,5 @@ renderInfo: each on: html
 		html text: '('.
 		html text: each mimeType.
 		html text: ')'.
-	]
+	].
+	html div class: 'creationDate'; with: (VIAHelper germanDateAndTimeStringFor: each createdAt)

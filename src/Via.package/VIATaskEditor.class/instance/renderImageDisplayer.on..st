@@ -1,5 +1,9 @@
 rendering-visitor
 renderImageDisplayer: anImageDisplayer on: html
+
+	| assets |
+	assets := (self wd imageAssets sortedReversedBy: [ :each | each createdAt ]).
+
 	self renderInputEditorFor: anImageDisplayer on: html with: [
 		anImageDisplayer hasImage ifTrue: [
 			html div
@@ -15,7 +19,7 @@ renderImageDisplayer: anImageDisplayer on: html
 		html skRow: [
 			html skColumnWidth: 'nine' with: [
 				html selectize
-					list: self wd imageAssets reversed;
+					list: assets;
 					labels: [:each | each displayName];
 					beOptional;
 					on: #imageAsset of: anImageDisplayer].
