@@ -20,7 +20,7 @@ visitViaPrAssetAudio: aViaPrAssetAudio
 		html audio
 			id: audioId;
 			controls: true;
-			preload: 'auto';
+			preload: 'none';
 			url: url.
 	"		self renderAssetInfo: anAudioPlayer audioAsset on: html."
 

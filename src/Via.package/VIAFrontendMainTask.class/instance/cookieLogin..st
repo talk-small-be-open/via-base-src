@@ -11,5 +11,5 @@ cookieLogin: aRequest
 		user := self wd findUserByRememberToken: cookie value.
 		user ifNotNil: [
 			user useAutologin ifTrue: [
-				self session loginUser: user ]]
+				self session loginUser: user remember: true ]]
 	].

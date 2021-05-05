@@ -1,3 +1,3 @@
 testing
 hasSocialLogin
-	^ self hasGoogleLogin or: [ self hasFacebookLogin ]
+	^ self hasGoogleLogin or: [ self hasFacebookLogin or: [ self hasOauthLogin ] ]
