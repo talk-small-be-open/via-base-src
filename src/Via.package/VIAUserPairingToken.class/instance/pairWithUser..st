@@ -1,3 +1,3 @@
 as yet unclassified
 pairWithUser: aUser
-	pairedUser := aUser
+	self pairWithUser: aUser data: nil

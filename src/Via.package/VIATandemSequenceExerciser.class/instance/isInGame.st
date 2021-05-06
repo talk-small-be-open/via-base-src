@@ -1,3 +1,3 @@
 testing
 isInGame
-	^ stepIndex > 2
+	^ stepIndex >= firstGameIndex

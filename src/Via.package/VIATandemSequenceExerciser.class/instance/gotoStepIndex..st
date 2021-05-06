@@ -6,7 +6,8 @@ gotoStepIndex: anInteger
 	stepIndex := anInteger asInteger.
 
 	self currentStep = #summary ifTrue: [
-		self check
+		self check.
+		self stopP2p.
 	].
 	
 	self currentStep isInteger ifTrue: [

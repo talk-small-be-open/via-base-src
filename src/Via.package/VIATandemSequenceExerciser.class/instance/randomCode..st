@@ -1,4 +1,4 @@
-as yet unclassified
+obsolete
 randomCode: aCode
 	randomCode := aCode.
 	self randomizeSequence

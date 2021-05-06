@@ -8,7 +8,8 @@
 	"instvars" : [
 		"pairingToken",
 		"namespace",
-		"data"
+		"data",
+		"lastPairedUser"
 	],
 	"name" : "VIAUserPairingComponent",
 	"type" : "normal"

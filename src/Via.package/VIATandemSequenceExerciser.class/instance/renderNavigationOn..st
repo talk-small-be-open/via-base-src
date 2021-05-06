@@ -2,8 +2,6 @@ rendering
 renderNavigationOn: html		
 	html div class: 'navigation'; with: [ 
 		html span class: 'left'; with: [
-			self ajaxAction: [ self goBack ] on: html with: [
-				html fasIcon: 'chevron-left' "iconLeft"].
 			self renderToolbarOn: html.
 		].
 		html span: [
@@ -11,8 +9,8 @@ renderNavigationOn: html
 			html span: '/'.
 			html span: totalQAndAs asString].
 		html span class: 'right'; with: [
-			self ajaxAction: [ self goAhead ] on: html with: [
-				html fasIcon: 'chevron-right' "iconRight"]
+"			self ajaxAction: [ self goAhead ] on: html with: [
+				html fasIcon: 'chevron-right' ]"
 "			html anchor
 				callback: [ self goAhead ];
 				with: [html iconRight]"

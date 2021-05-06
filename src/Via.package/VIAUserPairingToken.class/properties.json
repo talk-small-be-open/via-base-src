@@ -11,8 +11,10 @@
 		"creatorData",
 		"namespace",
 		"code",
+		"invitedUser",
 		"pairedUser",
-		"pairedData"
+		"pairedData",
+		"expiresAt"
 	],
 	"name" : "VIAUserPairingToken",
 	"type" : "normal"

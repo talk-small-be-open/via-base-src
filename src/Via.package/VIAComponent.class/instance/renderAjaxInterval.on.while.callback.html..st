@@ -11,7 +11,7 @@ renderAjaxInterval: aMsInteger on: html while: aWhileBlock callback: aCallbackBl
 
 		(aWhileBlock value = true) ifTrue: [
 			html script: ((
-				(aCallbackBlock ifNil: [JSStream new] ifNotNil: [ html jQuery callback: aCallbackBlock ]),
+				(aCallbackBlock ifNil: [JSStream new] ifNotNil: [ html jQuery ajax callback: aCallbackBlock ]),
 				((html jQuery id: id) load html: renderBlock)
 			) setTimeout: aMsInteger).
 		]

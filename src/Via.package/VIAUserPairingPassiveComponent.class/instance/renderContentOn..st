@@ -1,15 +1,31 @@
 rendering
 renderContentOn: html
-	html div class: 'explanation'; t:'userPairing:pleaseShareThisCode'.
 
-	html div class: 'yourId'; with: [
-		html span class: 'message'; t: 'userPairing:yourId'.
-		html space.
-		html span class: 'theId'; with: self pairingToken code.
-	].
-"	html paragraph with: [
-		html t: 'userPairing:idValidUntil_time_' p: {#time->self pairingToken expirationDateAndTime asTime print24}.
-	]."
+	self isPaired
+		ifTrue: [
+			self renderStatusOn: html.
+			self renderExistingPairingOn: html.
+		]
+		ifFalse: [
+			html div class: 'explanation'; t:'userPairing:pleaseShareThisCode'.
 
-	self renderAjaxInterval: 2000 on: html while: [self pairingToken isValidNow] html: [ :h |
-		self renderStatusOn: h ]
+			lastPairedUser ifNotNil: [
+				pairingToken invitedUser = lastPairedUser ifTrue: [
+					html div: lastPairedUser firstName, ' will auto-pair'.
+				] ifFalse: [
+					html anchor
+						callback: [ self inviteUser: lastPairedUser ];
+						with: ('invite ', lastPairedUser firstName) ]
+			].
+
+			html div class: 'yourId'; with: [
+				html span class: 'message'; t: 'userPairing:yourId'.
+				html space.
+				html span class: 'theId'; with: self pairingToken code].
+
+			self
+				renderAjaxInterval: 2000
+				on: html
+				while: [self isPaired not and: [self pairingToken isValidNow]]
+				html: [ :h | self renderStatusOn: h ]
+		]

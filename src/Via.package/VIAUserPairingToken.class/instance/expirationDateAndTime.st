@@ -1,3 +1,3 @@
 as yet unclassified
 expirationDateAndTime
-	^createdAt + 3 minutes
+	^ expiresAt ifNil: [createdAt + 3 minutes]

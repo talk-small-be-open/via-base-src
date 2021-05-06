@@ -1,4 +1,4 @@
 as yet unclassified
 takeSequenceFrom: anOtherExerciser 
 	self createSequence: anOtherExerciser qAndASequence.
-	self gotoStepIndex: 1.
+"	self gotoStepIndex: 1."

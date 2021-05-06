@@ -8,7 +8,7 @@ renderQuestionAndAnswerOn: html
 			self renderPlayerLabel: self otherPlayerNumber on: html.
 			
 			html div
-				ukToggleFadeTarget: ('#', id);
+				ukToggleTarget: ('#', id) class: 'partlyHidden';
 				class: 'answerIcon';
 				with: [
 					html iconAnswer.
@@ -17,13 +17,14 @@ renderQuestionAndAnswerOn: html
 					"t: 'tandemSequence:answer'; iconDropdown."
 				].
 			
-			html div class: 'body'; id: id; beHidden; with: [
-				currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html.
+			html div class: 'body partlyHidden'; id: id; with: [
+				html div class: 'answerContent'; with: [
+					currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html ].
 				html div class: 'interaction'; with: [
 					self ifShowCorrection: [
 						| spinnerId |
 						spinnerId := html nextId.
-						html div class: 'buttons'; with: [
+						html div class: 'correctionButtons'; with: [
 							| index |
 							index := self currentStep asString.
 							html div: [
@@ -42,8 +43,9 @@ renderQuestionAndAnswerOn: html
 								html break.
 								html span t: 'tandemSequence:correctButtonText' ] ].
 					] else: [
-						self ajaxAction: [ self goAhead ] on: html with: [
-							html fasIcon: 'chevron-right']
+						html div class: 'goAheadButton'; with: [
+							self ajaxAction: [ self goAhead ] on: html with: [
+								html fasIcon: 'chevron-right']]
 				]]
 			]
 		]

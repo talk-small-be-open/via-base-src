@@ -1,8 +1,15 @@
 actions
 restart
 	playerNumber := nil.
-"	randomCode := nil.	"
-"	randomizationDone := false."
 	stepIndex := nil.
+	showHistory := false.
+
+	currentQAndA := nil.
+
+"	sequence"
+	pairingComponent := nil.
+	p2pComponent := nil.
+	otherExerciser := nil.
+	currentQAndACounter := nil.
 
 	self gotoStepIndex: 1.

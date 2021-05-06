@@ -1,5 +1,6 @@
 accessing
 data: aPayloadObject
-	^self new
-		data: aPayloadObject;
+	^self basicNew
+		setData: aPayloadObject;
+		initialize;
 		yourself
