@@ -8,6 +8,6 @@
 	"instvars" : [
 		"studentsGroups"
 	],
-	"name" : "VIAAdminTeacherInspector",
+	"name" : "VIAAdminStudentInspector",
 	"type" : "normal"
 }

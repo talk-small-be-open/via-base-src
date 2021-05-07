@@ -1,5 +1,5 @@
 rendering
 renderContentOn: html
 	html heading: 'Support console'.
-	html strong: 'Goto: '; break.
-	html anchorButton callback: [ self findTeacher ]; with: 'Teacher'
+	html strong: 'Start with: '; break.
+	html anchorButton callback: [ self findUser ]; with: 'User'.

@@ -4,7 +4,7 @@ renderWaitingToPairOn: html
 	seconds := self pairingToken validSeconds.
 
 	seconds <= 0 ifTrue: [
-		html div class: 'pairingExpired'; t: 'userPairing:idExpired'.
+		html div class: 'uk-margin pairingExpired'; t: 'userPairing:idExpired'.
 		html anchor callback: [ self getNewPairingToken ]; t: 'userPairing:renewId'
 	]
 	ifFalse: [

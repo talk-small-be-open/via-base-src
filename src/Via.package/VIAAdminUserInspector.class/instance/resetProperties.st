@@ -1,0 +1,3 @@
+initialization
+resetProperties
+	model properties removeAll

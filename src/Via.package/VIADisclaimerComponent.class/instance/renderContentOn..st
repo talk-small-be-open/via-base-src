@@ -4,6 +4,8 @@ renderContentOn: html
 	self isEmbedded ifFalse: [
 		html heading level2; t: 'disclaimer:dialogTitle'].
 
+	html div pT: 'disclaimer:info'.
+
 	html div
 		a: 'uk-accordion'; "p: '{collapse: false}'"
 		with: [

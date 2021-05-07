@@ -23,6 +23,3 @@ renderStatusOn: html
 		].
 	].
 
-	html anchor
-		callback: [ self cancel ];
-		t: 'userPairing:cancel'

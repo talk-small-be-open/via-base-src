@@ -1,5 +1,6 @@
 as yet unclassified
 tryAutoPair
+
 	pairingToken ifNil: [
 		| me foundToken |
 		me := self currentUser.

@@ -7,15 +7,17 @@ renderContentOn: html
 			self renderExistingPairingOn: html.
 		]
 		ifFalse: [
-			html div class: 'explanation'; t:'userPairing:pleaseShareThisCode'.
+			html div class: 'explanation'; t: 'userPairing:pleaseShareThisCode'.
 
 			lastPairedUser ifNotNil: [
 				pairingToken invitedUser = lastPairedUser ifTrue: [
-					html div: lastPairedUser firstName, ' will auto-pair'.
-				] ifFalse: [
+					html div class: 'uk-margin'; with: [
+						html t: 'userPairing:willAutoPairTo_user_' p: {#user->lastPairedUser firstName}
+				]].
+"				] ifFalse: [
 					html anchor
 						callback: [ self inviteUser: lastPairedUser ];
-						with: ('invite ', lastPairedUser firstName) ]
+						with: ('invite ', lastPairedUser firstName) ]"
 			].
 
 			html div class: 'yourId'; with: [
@@ -28,4 +30,6 @@ renderContentOn: html
 				on: html
 				while: [self isPaired not and: [self pairingToken isValidNow]]
 				html: [ :h | self renderStatusOn: h ]
-		]
+		].
+	
+	self renderCancelOn: html

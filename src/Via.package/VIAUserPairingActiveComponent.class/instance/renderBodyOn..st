@@ -6,14 +6,15 @@ renderBodyOn: html
 	self isPaired
 		ifTrue: [
 			self renderStatusOn: html.
-			self renderExistingPairingOn: html
+			self renderExistingPairingOn: html.
 		]
 		ifFalse: [
 			html div class: 'codeInputContainer'; with: [
-				html div class: 'explanation'; t:'userPairing:pleaseEnterCode'.
+				html div class: 'explanation'; t: 'userPairing:pleaseEnterCode'.
 				html textInput
 					id: id;
 					class: 'codeInput';
+					placeholder: '***';
 					noAutocapitalize;
 					noAutocorrect;
 					script: ( html jQuery this triggerFocus );
@@ -25,10 +26,13 @@ renderBodyOn: html
 			].
 
 			lastPairedUser ifNotNil: [
-				html div: lastPairedUser firstName.
-				html anchor
-					callback: [ self tryAutoPair ];
-					with: 'try auto pair ...' 
+				html div class: 'uk-margin'; with: [
+					html anchor
+						callback: [ self tryAutoPair ];
+						with: [
+							html t: 'userPairing:tryAutoPairWith_user_' p: { #user-> lastPairedUser firstName}
+						] 
+				]
 			].
 
 "			self
@@ -38,4 +42,6 @@ renderBodyOn: html
 				html: [ :h | self renderStatusOn: h ]."
 
 "			self renderStatusOn: html."
-		]
+		].
+	
+	self renderCancelOn: html

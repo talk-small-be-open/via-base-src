@@ -1,14 +1,14 @@
 actions
 initializePairingComponent
-	
+	| namespace |
+	namespace := ('tandem_', taskBrick uuidString).
+		
 	pairingComponent ifNotNil: [ ^ self ].
 		
 	pairingComponent := self ifPlayer1: [
-		VIAUserPairingPassiveComponent data: self.
+		VIAUserPairingPassiveComponent data: self namespace: namespace.
 	] else: [
-		VIAUserPairingActiveComponent data: self ].
-	
-	pairingComponent namespace: ('tandem_', taskBrick uuidString).
+		VIAUserPairingActiveComponent data: self namespace: namespace].
 	
 	pairingComponent onAnswer: [:pairingToken |
 		pairingToken

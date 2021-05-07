@@ -2,6 +2,12 @@ rendering
 renderQuestionAndAnswerOn: html
 	| id |
 	id := html nextId.
+	
+	"Hint"
+	self isFirstRound ifTrue: [
+		html hintBalloon: 'tandem:myFirstAnswer'.
+	].
+	
 	html div class: 'questionAndAnswer current withAnswer'; with: [
 		self renderQuestionOn: html.
 		html div class: 'answer'; class: self otherPlayerCss; with: [

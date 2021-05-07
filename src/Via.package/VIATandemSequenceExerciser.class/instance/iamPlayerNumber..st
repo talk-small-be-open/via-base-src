@@ -4,4 +4,4 @@ iamPlayerNumber: aNumber
 	
 	self initializePairingComponent.
 		
-	self zoomMyself: self taskExerciser task displayName
+	self zoomMyself: self moduleExerciser module indexCodeLabel, ' ', self taskExerciser task displayName

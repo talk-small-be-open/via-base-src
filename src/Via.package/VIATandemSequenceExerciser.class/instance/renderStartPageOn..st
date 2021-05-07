@@ -3,9 +3,10 @@ renderStartPageOn: html
 	html paragraph class: 'uk-margin-bottom'; with: [
 		html t: 'tandemSequence:pleaseChoosePlayer'].
 
-	html ifT: 'tandemSequence:seeTutorial' then: [ :yield |
+	html hintBox: 'tandem:seeTutorial'.
+"	html ifT: 'tandemSequence:seeTutorial' then: [ :yield |
 		html paragraph class: 'uk-margin-bottom'; with: [
-			yield value ] ].
+			yield value ] ]."
 
 	html ukGrid
 		class: 'uk-grid-small uk-child-width-1-1 uk-child-width-1-2@l';

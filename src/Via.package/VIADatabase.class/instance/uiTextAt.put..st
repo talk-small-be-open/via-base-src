@@ -13,6 +13,6 @@ uiTextAt: aKey put: aPillarString
 
 	"Parameter sollen zwecks Lesbarkeit den Namen behalten"
 	VIAPrMarkerProcessor pillar: pillarDocument onEachBlock: [:marker |
-		marker setName: marker text].
+		marker keepTextAsName].
 	
 	^uiTexts at: aKey put: pillarDocument
