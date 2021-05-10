@@ -1,3 +1,3 @@
 as yet unclassified
 findTeacher
-	self showWithBack: VIAAdminUserFinderInspector new
+	self showWithBack: (VIAAdminUserFinderInspector new role: #teacher; yourself)

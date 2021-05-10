@@ -1,7 +1,7 @@
 initialization
 initialize
 	super initialize.
-
-	namespace := 'global'.
 	
-	self addContainerDiv
+	self addContainerDiv.
+	
+	lastPairedUser := self db findLastRecentlyPairedUserOfMe: self currentUser.

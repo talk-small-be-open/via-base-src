@@ -1,0 +1,3 @@
+testing
+isFirstQAndA
+	^ stepIndex = firstGameIndex

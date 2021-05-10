@@ -32,29 +32,33 @@ renderExtraToolsFor: aModule canEdit: canEdit on: html
 							callback: [self unreleaseModule: aModule];
 							title: 'Unpublish this module';
 							with: 'Un-Release module'].
-				html anchor
-					callback: [ self downloadRawSourceModule: aModule ];
-					title: 'Download raw content of the module in a text file';
-					with: 'Download raw.txt'.
-				html anchor
-					callback: [ self downloadAssetsZipPackage: aModule ];
-					title: 'Download all used assets in one zip file';
-					with: 'Download assets.zip'.
-				html anchor
-					callback: [ self downloadLectorshipPrintVersion: aModule ];
-					title: 'Download lectorship PDF print version';
-					with: 'Download lector.pdf'.
-				self ifDevelopment: [
-					html anchor
-						callback: [ self showLectorshipPrintVersion: aModule ];
-						with: 'DEV: Show lector.pdf preview'].
 			].
 			html anchor
 				callback: [self prepareAssetsForModule: aModule];
 				title: 'Use this, if image/video/audio are not displayed correctly';
-				with: 'Rebuild assets of this module'].
+				with: 'Rebuild assets of this module'
+		].
+
+		html anchor
+			callback: [ self downloadRawSourceModule: aModule ];
+			title: 'Download raw content of the module in a text file';
+			with: 'Download raw.txt'.
+		html anchor
+			callback: [ self downloadAssetsZipPackage: aModule ];
+			title: 'Download all used assets in one zip file';
+			with: 'Download assets.zip'.
+		html anchor
+			callback: [ self downloadLectorshipPrintVersion: aModule ];
+			title: 'Download lectorship PDF print version';
+			with: 'Download lector.pdf'.
+		self ifDevelopment: [
+			html anchor
+				callback: [ self showLectorshipPrintVersion: aModule ];
+				with: 'DEV: Show lector.pdf preview'].
+
+	
 		html anchor
 			url: '/lib/embed_test.html?url=', (VIAHelper urlencode: aModule permaUrlEmbed);
 			target: '_blank';
 			title: 'Show preview of embedded module';
-			with: 'Embedded']
+			with: 'Test embedded']

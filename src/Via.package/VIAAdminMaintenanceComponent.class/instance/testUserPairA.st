@@ -1,7 +1,6 @@
 tests
 testUserPairA
 	| component |
-	component := VIAUserPairingActiveComponent new.
-	component namespace: 'backendTest'.
+	component := VIAUserPairingActiveComponent data: 'nothing' namespace: 'backendTest'.
 	
 	self lightbox: 'Pairing active' component: component

@@ -20,7 +20,8 @@
 		"gameBoardId",
 		"gameOnceJs",
 		"showHistory",
-		"p2pSyncJs"
+		"p2pSyncJs",
+		"firstGameIndex"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

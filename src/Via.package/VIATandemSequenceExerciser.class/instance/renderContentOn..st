@@ -5,7 +5,7 @@ renderContentOn: html
 
 	self requirementsReady ifFalse: [ ^ self ].
 
-	html div class: 'uk-width-1-2@l uk-align-center'; class: taskBrick uiStyle; with: [
+	html div class: 'uk-width-1-2@l uk-align-center uk-margin-remove-top'; class: taskBrick uiStyle; with: [
 		html div id: gameBoardId; with: [
 			self renderPageLogicOn: html ].
 

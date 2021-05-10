@@ -1,4 +1,8 @@
 rendering-visitor
 renderHtmlSnippet: aHtmlSnippet on: html
 	html span class: 'htmlSnippet'; with: [
-		html html: aHtmlSnippet htmlString]
+		html div: [
+			html iconHtmlCode; space.
+			html text: 'HTML SOURCE CODE'].
+		html preformatted: aHtmlSnippet htmlString
+	]

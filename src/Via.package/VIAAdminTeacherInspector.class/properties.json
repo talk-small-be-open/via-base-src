@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAAdminModelInspector",
+	"super" : "VIAAdminUserInspector",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],

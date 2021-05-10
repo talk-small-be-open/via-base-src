@@ -1,0 +1,3 @@
+testing
+isZoomed
+	^ zoomed = true

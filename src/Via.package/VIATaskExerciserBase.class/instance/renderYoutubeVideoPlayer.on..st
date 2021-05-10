@@ -9,7 +9,8 @@ renderYoutubeVideoPlayer: aPlayer on: html
 	html div
 		class: 'youtubePlayer';
 		with: [
-			html div id: youtubeElementId.
+			html div class: 'aspectRatioBox'; with: [
+				html div id: youtubeElementId ].
 
 		aPlayer width ifNotBlank: [
 "			videoContainer style: ('max-width:', (aVideoPlayer width greaseString, 'px'))."

@@ -1,0 +1,3 @@
+as yet unclassified
+inlineHtmlFromPillarDocument: aPillarDocument
+	^VIAPrInlineHtmlWriter write: aPillarDocument

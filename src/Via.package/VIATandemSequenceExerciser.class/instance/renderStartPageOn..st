@@ -3,6 +3,11 @@ renderStartPageOn: html
 	html paragraph class: 'uk-margin-bottom'; with: [
 		html t: 'tandemSequence:pleaseChoosePlayer'].
 
+	html hintBox: 'tandem:seeTutorial'.
+"	html ifT: 'tandemSequence:seeTutorial' then: [ :yield |
+		html paragraph class: 'uk-margin-bottom'; with: [
+			yield value ] ]."
+
 	html ukGrid
 		class: 'uk-grid-small uk-child-width-1-1 uk-child-width-1-2@l';
 		a: 'uk-height-match' p: '> div > a';
@@ -16,7 +21,7 @@ renderStartPageOn: html
 						self renderPlayerLetter: 'A' on: html.
 						html div: [
 							html pillarSnippet: taskBrick startPillarPlayerA ].
-						html span class: 'button'; t: 'tandemSequence:go' ]
+						html span class: 'buttonish'; t: 'tandemSequence:go' ]
 			].
 			html div: [
 				html anchor
@@ -27,6 +32,6 @@ renderStartPageOn: html
 						self renderPlayerLetter: 'B' on: html.
 						html div: [
 							html pillarSnippet: taskBrick startPillarPlayerB ].
-						html span class: 'button'; t: 'tandemSequence:go' ]
+						html span class: 'buttonish'; t: 'tandemSequence:go' ]
 					]
 			]

@@ -4,8 +4,6 @@ initialize
 	
 	super initialize.
 
-	showHistory := false.
-		
 	self addContainerDiv.
 	
 	totalQAndAs := taskBrick qAndACount.

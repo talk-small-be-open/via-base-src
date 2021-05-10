@@ -1,3 +1,4 @@
 as yet unclassified
 text
-	^text
+	^ self class markup, text, self class markup
+	"text"
