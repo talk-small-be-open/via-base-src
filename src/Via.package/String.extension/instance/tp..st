@@ -9,7 +9,7 @@ tp: aDictionaryLike
 		| session text |
 		session := WACurrentRequestContext value session.
 
-		"We do not use raw text (method), since we potentially want to keep new lines".
+		"We do not use raw text (method), since we potentially want to keep new lines"
 "		text := (session getUiText: self) text."
 		text := VIAHelper pillarStringFromPillar: (session getUiText: self).
 		params associationsDo: [ :assoc |
