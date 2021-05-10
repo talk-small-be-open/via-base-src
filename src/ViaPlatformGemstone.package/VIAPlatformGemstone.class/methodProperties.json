@@ -1,0 +1,16 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"deleteFileNamed:" : " 04/23/2021 16:18:03",
+		"extensionOfFile:" : " 04/23/2021 16:18:03",
+		"fileExists:" : " 04/23/2021 16:18:03",
+		"fullPathNameFor:" : " 04/23/2021 16:18:03",
+		"gemstoneMigrateAll" : " 04/23/2021 16:18:03",
+		"gemstoneNeedMigration" : " 04/23/2021 16:18:03",
+		"getFilesIn:pattern:" : "AndreasBrodbeck 05/10/2021 17:10",
+		"moveFileNamed:to:" : " 04/23/2021 16:18:03",
+		"moveFileNamed:toFolder:" : " 04/23/2021 16:18:03",
+		"sizeOfFile:" : " 04/23/2021 16:18:03",
+		"superClassesOf:" : " 04/23/2021 16:18:03",
+		"toUtf8:" : " 04/23/2021 16:18:03" } }
