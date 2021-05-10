@@ -6,9 +6,9 @@ addPlaceholderFromMarker: aMarker
 	"Entweder haben wir schon einen solchen Platzhalter im Shelf oder wir erstellen einen neuen"
 	item := placeholderShelf at: markerName ifAbsent: [
 		| newItem |
-		(aMarker text beginsWith: 'c:') ifTrue: [
+		(aMarker content beginsWith: 'c:') ifTrue: [
 				newItem := VIASelectOneInput fromMarker: aMarker].
-		(aMarker text beginsWith: 'd:') ifTrue: [
+		(aMarker content beginsWith: 'd:') ifTrue: [
 				newItem := VIADragDropInput fromMarker: aMarker.
 				newItem parentBrick: self].
 		newItem ifNil: [

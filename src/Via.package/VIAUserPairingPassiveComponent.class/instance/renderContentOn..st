@@ -4,7 +4,7 @@ renderContentOn: html
 	self isPaired
 		ifTrue: [
 			self renderStatusOn: html.
-			self renderExistingPairingOn: html.
+"			self renderExistingPairingOn: html."
 		]
 		ifFalse: [
 			html div class: 'explanation'; t: 'userPairing:pleaseShareThisCode'.

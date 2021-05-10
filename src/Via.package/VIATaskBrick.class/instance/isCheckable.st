@@ -1,3 +1,3 @@
 testing
 isCheckable
-	self subclassResponsibility
+	^ self childBricks anySatisfy: [ :each | each isCheckable ]

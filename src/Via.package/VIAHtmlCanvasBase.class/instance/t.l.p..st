@@ -16,6 +16,6 @@ t: aKey l: aLanguage p: aDictionary
 
 	self pillar: pillar onMarker: [:marker :html |
 		| paramValue |
-		paramValue := params at: marker text asSymbol ifAbsent: [nil].
+		paramValue := params at: marker name asSymbol ifAbsent: [nil].
 		paramValue ifNotBlank: [html text: paramValue asString]
 	]

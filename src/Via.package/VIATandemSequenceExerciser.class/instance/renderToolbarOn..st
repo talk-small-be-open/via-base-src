@@ -4,7 +4,7 @@ renderToolbarOn: html
 		html span class: 'tool'; with: [
 			html anchor
 				callback: [ self reset ];
-				with: [ html fasIcon: 'times' "iconRefresh" ]].
+				with: [ html fasIcon: 'redo-alt' "iconRefresh" ]].
 
 		self ifPlayer1: [
 			html span class: 'tool'; with: [

@@ -6,7 +6,7 @@ renderBodyOn: html
 	self isPaired
 		ifTrue: [
 			self renderStatusOn: html.
-			self renderExistingPairingOn: html.
+"			self renderExistingPairingOn: html."
 		]
 		ifFalse: [
 			html div class: 'codeInputContainer'; with: [

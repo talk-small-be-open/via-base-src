@@ -8,10 +8,10 @@ renderStatusOn: html
 					html space.
 					html text: self pairedUser firstName.
 					html text: '.' ].
-"				html space.
+				html space.
 				html anchor
 					callback: [ self unpair ];
-					t: 'userPairing:unpairNow'"
+					t: 'userPairing:unpairNow'
 				].
 
 
