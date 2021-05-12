@@ -1,4 +1,5 @@
 as yet unclassified
 unpair
-	pairingToken unpair.
-	pairingToken := nil
+	pairingToken ifNotNil: [
+		pairingToken unpair.
+		pairingToken := nil ]

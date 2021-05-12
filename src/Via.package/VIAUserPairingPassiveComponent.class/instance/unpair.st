@@ -1,6 +1,8 @@
 as yet unclassified
 unpair
-	"We also cancel the invitation, if any, so that there will be no autopair confusion"
-	pairingToken invitedUser: nil.
+	pairingToken ifNotNil: [
 
-	pairingToken unpair
+		"We also cancel the invitation, if any, so that there will be no autopair confusion"
+		pairingToken invitedUser: nil.
+
+		pairingToken unpair ]

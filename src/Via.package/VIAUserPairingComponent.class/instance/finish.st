@@ -6,4 +6,7 @@ finish
 		^ self
 	].
 
+	"Pairing complete. Hm could lead to GemStone conflicts if both press at the same moment?"
+	pairingToken beSealed.
+	
 	self answer: self pairedUser

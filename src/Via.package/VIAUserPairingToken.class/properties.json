@@ -14,7 +14,8 @@
 		"invitedUser",
 		"pairedUser",
 		"pairedData",
-		"expiresAt"
+		"expiresAt",
+		"isSealed"
 	],
 	"name" : "VIAUserPairingToken",
 	"type" : "normal"
