@@ -5,6 +5,8 @@ gotoStepIndex: anInteger
 	
 	stepIndex := anInteger asInteger.
 
+	self ifPlayer1: [ pairingToken ifNotNil: [pairingToken prolong: 20 minutes] ].
+
 	self currentStep = #summary ifTrue: [
 		self check.
 		self stopP2p.

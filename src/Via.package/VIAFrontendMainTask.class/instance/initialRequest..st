@@ -14,14 +14,14 @@ initialRequest: aRequest
 
 	"Beta?"
 	"OPTIMIZE: Secure it"
-	aRequest at: 'beta' ifPresent: [:value | self session isBeta: true].
+"	aRequest at: 'beta' ifPresent: [:value | self session isBeta: true]."
 	
 	isEmbedded := self requestContext request includesKey: 'embed'.
 	
 	"Check for some direct access URL patterns and rewrite them into commands"
 	urlPath := aRequest url path copy.
 
-	"Remove fixed application name in the path, if present"
+	"Remove fixed application name in the path, if present (typical /app)"
 	urlPath ifNotBlank: [
 		urlPath removeFirst].
 	
@@ -74,6 +74,11 @@ initialRequest: aRequest
 		"Direct URL to email settings"
 		(commandName = 'mailsettings') ifTrue: [
 			command := VIAShowMailSettingsCommand new.
+		].
+
+		"Callback after SSO redirect (OAuth, ...)"
+		(commandName = 'sso') ifTrue: [
+			self loginFromExternalCallback: aRequest
 		].
 		
 	].

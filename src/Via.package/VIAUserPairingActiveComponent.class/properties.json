@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"bodyId"
+		"bodyId",
+		"errorMessage"
 	],
 	"name" : "VIAUserPairingActiveComponent",
 	"type" : "normal"

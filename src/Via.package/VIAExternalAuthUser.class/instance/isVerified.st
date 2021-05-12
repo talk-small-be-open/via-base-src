@@ -1,0 +1,4 @@
+testing
+isVerified
+	"subclasses"
+	^ true

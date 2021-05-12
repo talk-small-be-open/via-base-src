@@ -21,7 +21,8 @@
 		"gameOnceJs",
 		"showHistory",
 		"p2pSyncJs",
-		"firstGameIndex"
+		"firstGameIndex",
+		"pairingToken"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

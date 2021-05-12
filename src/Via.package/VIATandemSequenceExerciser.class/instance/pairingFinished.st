@@ -2,6 +2,7 @@ as yet unclassified
 pairingFinished
 	otherExerciser := pairingComponent pairedData.
 	p2pComponent := pairingComponent createP2pComponent.
+	pairingToken := pairingComponent pairingToken.
 
 	"Handover shuffled sequence"
 	taskBrick shuffleSequence ifTrue: [

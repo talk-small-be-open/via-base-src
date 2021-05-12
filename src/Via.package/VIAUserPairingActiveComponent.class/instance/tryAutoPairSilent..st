@@ -1,6 +1,8 @@
 as yet unclassified
 tryAutoPairSilent: aBoolean
 
+	errorMessage := nil.
+
 	pairingToken ifNil: [
 		| me foundToken |
 		me := self currentUser.

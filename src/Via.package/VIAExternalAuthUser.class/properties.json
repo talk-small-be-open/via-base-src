@@ -4,11 +4,13 @@
 	"category" : "Via-Misc",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [
-		"Current",
-		"LastGemStoneObjectLogCheck"
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"firstName",
+		"lastName",
+		"email"
 	],
-	"instvars" : [ ],
-	"name" : "VIAApplicationManager",
+	"name" : "VIAExternalAuthUser",
 	"type" : "normal"
 }

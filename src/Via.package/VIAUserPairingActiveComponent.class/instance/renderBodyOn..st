@@ -25,6 +25,10 @@ renderBodyOn: html
 					) condition: (JSStream on: '$(this).val().length == 3') ).
 			].
 
+			errorMessage ifNotBlank: [
+				html div class: 'uk-margin errorMessage'; t: errorMessage.
+			].
+
 			lastPairedUser ifNotNil: [
 				html div class: 'uk-margin'; with: [
 					html anchor

@@ -2,6 +2,10 @@ as yet unclassified
 loginWithOauthToken: aString request: aRequest
 	| user userData response oauthUrl |
 
+	"TBD!"
+	
+	self shouldBeImplemented.
+
 	oauthUrl := self wd propertyAt: #oauth:url.
 
 	response := MCLPlatform runShellCommand: ('curl --silent "', oauthUrl, '/oauth/token?access_token=', aString, '"').
