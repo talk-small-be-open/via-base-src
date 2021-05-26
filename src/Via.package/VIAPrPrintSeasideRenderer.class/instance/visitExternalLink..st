@@ -3,4 +3,7 @@ visitExternalLink: anExternalLink
 	html anchor
 		url: anExternalLink reference;
 		attributeAt: 'target' put: '_blank';
-		with: (anExternalLink alias, ' (', anExternalLink reference, ')')
+		with: [
+			super visitExternalLink: anExternalLink.
+			html text: (' (', anExternalLink reference, ')')
+		]

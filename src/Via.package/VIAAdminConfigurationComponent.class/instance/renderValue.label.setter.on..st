@@ -7,7 +7,7 @@ renderValue: aValue label: aLabelString setter: aSetterBlock on: html
 		html tableData: [html text: aLabelString].
 		html tableData: [
 			aValue isNil ifTrue: [
-				html span: 'Leer'
+				html span: 'Empty'
 			].
 			aValue isString ifTrue: [
 				(aValue lines size > 1) ifTrue: [ 

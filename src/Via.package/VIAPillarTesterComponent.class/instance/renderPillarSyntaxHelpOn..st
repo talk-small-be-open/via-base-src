@@ -45,9 +45,9 @@ _ horizontal line
 
 	html strong: 'Links:'.
 	html preformatted: 'Anchor @anchor (new line)
-Internal link to *anchor*
+Internal link to *jump to>@anchor*
 Link to module by index *See also this module>MOD:2.15*
-External link *Google>http://google.com*
+External link *Google>https://google.com*
 Mailto *Write John>john@cleese.uk*
 '.
 
