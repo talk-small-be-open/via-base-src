@@ -1,3 +1,3 @@
 accessing
-isBeta: anObject
+isBetatest: anObject
 	isBeta := anObject

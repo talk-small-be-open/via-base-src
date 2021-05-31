@@ -21,6 +21,7 @@ initialize
 
 	self createSequence: qAndASequence.
 
+	isTestdrive := false.
 	gameBoardId := UUID new asString36.
 
 	self restart

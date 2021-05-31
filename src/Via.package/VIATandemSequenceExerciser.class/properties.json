@@ -22,7 +22,8 @@
 		"showHistory",
 		"p2pSyncJs",
 		"firstGameIndex",
-		"pairingToken"
+		"pairingToken",
+		"isTestdrive"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

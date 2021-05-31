@@ -11,7 +11,7 @@ canView: aUser
 	self isPublic ifTrue: yes.
 	
 	"Exception: Betamodule & Betauser"
-	(self isForBetatester and: [ aUser isBetatester ]) ifTrue: yes.
+	(self isForBetatester and: [ aUser isBetatesterForWebsite: self website ]) ifTrue: yes.
 
 	"Exception: Teacher & Exam"
 	(self isExam and: [ aUser isTeacher ]) ifTrue: yes.

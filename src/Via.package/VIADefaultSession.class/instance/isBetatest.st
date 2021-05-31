@@ -1,3 +1,3 @@
 accessing
-isBeta
+isBetatest
 	^ isBeta = true

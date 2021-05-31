@@ -23,7 +23,11 @@ renderQuestionAndAnswerOn: html
 					"t: 'tandemSequence:answer'; iconDropdown."
 				].
 			
-			html div class: 'body partlyHidden'; id: id; with: [
+			html div
+				class: 'body';
+				class: 'partlyHidden' if: isTestdrive not;
+				id: id;
+				with: [
 				html div class: 'answerContent'; with: [
 					currentQAndA answerBrick acceptRenderingVisitor: parentExerciser on: html ].
 				html div class: 'interaction'; with: [

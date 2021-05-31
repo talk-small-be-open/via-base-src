@@ -1,5 +1,7 @@
 rendering
 testdriveStart
+	isTestdrive := true.
+	
 	self iamPlayerNumber: 1.
 "	playerNumber := 1."
 

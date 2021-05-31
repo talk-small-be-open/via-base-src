@@ -2,7 +2,7 @@ rendering
 renderContentOn: html
 	| textField |
 	html div class: 'inputDialog'; with: [
-		html div class: 'messageText'; with: messageText.
+		html div class: 'messageText'; with: [ html tOrS: messageText ].
 		html form
 			defaultAction: [ self answer: value ];
 			with: [

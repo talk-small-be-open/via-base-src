@@ -5,4 +5,6 @@ loginUser: aUser
 	aUser noteSuccessfulLogin.
 
 	portfolio := aUser portfolioInWebsite: self website.
-	portfolio cleanup
+	portfolio cleanup.
+	
+	isBeta := aUser isBetatesterForWebsite: self website.
