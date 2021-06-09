@@ -9,7 +9,7 @@ renderInputEditorFor: aBrick on: html with: aBlock
 					list: styles;
 					on: #uiStyle of: aBrick ]].
 
-		aBrick isPassiveMode ifTrue: [
+		aBrick isSelfCheckMode ifTrue: [
 			html badge
 				class: 'success';
 				title: 'This task will only save, but has no correction';

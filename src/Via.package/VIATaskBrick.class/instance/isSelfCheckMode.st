@@ -1,3 +1,3 @@
 testing
-isPassiveMode
+isSelfCheckMode
 	^ self isCheckable not and: [ self isSaveable ]

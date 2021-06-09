@@ -5,8 +5,8 @@ renderContentOn: html
 	html form: [
 		html ukSubmitButton
 			callback: [self confirm];
-			with: [html t: self confirmationText].
+			with: [html sT: self confirmationText].
 		html space.
 		html ukSubmitButton
 			callback: [self reject];
-			with: [html t: self cancelText]]
+			with: [html sT: self cancelText]]
