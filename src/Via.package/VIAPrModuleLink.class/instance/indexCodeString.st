@@ -1,4 +1,4 @@
 accessing
 indexCodeString
-	"Without MOD:"
-	^ self reference allButFirst: 4
+	"1.2.3/tasknumber"
+	^ self linkString copyUpTo: $/

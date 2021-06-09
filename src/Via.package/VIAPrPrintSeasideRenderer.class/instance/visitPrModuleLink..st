@@ -6,6 +6,6 @@ visitPrModuleLink: aModuleLink
 			html text: aModuleLink alias.
 			html space.
 			html text: '('.
-			html text: aModuleLink indexCodeString.
+			html text: aModuleLink linkString.
 			html text: ')'.
 		]

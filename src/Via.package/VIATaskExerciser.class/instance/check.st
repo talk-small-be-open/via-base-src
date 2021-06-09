@@ -1,4 +1,5 @@
 actions
 check
-	exercise checkAnswers.
-	self tryToFinish.
+	self task isCheckable ifTrue: [
+		exercise checkAnswers.
+		self tryToFinish ]

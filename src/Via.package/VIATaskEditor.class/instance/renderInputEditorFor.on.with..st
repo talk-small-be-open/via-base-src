@@ -8,5 +8,13 @@ renderInputEditorFor: aBrick on: html with: aBlock
 					beOptional;
 					list: styles;
 					on: #uiStyle of: aBrick ]].
+
+		aBrick isPassiveMode ifTrue: [
+			html badge
+				class: 'success';
+				title: 'This task will only save, but has no correction';
+				with: 'passive mode'.
+		].
+			
 		aBlock value.
 	]

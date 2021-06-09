@@ -9,6 +9,7 @@ buildTextMatcher
 		at: PRRaw markupBegin put: PRRaw;
 		at: PRScript markupBegin put: PRScript;
 		at: VIAPrMarker markupBegin put: VIAPrMarker;
-		at: PRAbstractAnnotation markupBegin put: PRAbstractAnnotation.
+		at: PRAbstractAnnotation markupBegin put: PRAbstractAnnotation;
+		at: VIAPrAnnotatedFormat markupBegin put: VIAPrAnnotatedFormat.
 	PRFormat allSubclassesDo: [ :each | result at: each markup put: each ].
 	^ result

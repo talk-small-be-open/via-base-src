@@ -16,6 +16,7 @@ renderContentOn: html
 		onError: (html javascript alert: 'Fehler beim Speichern der Markierung!'))
 			asFunction: #(event).
 			
+	html hintBox: 'highlightAreas:seeTutorial'.
 
 	html div
 		class: 'highlightAreas';

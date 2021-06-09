@@ -1,0 +1,3 @@
+*Via
+visitViaPrAnnotatedFormat: aViaPrAnnotatedFormat
+	self visitDocumentGroup: aViaPrAnnotatedFormat

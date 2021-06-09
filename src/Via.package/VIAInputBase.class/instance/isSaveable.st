@@ -1,3 +1,4 @@
 testing
 isSaveable
-	^ true
+	"override"
+	^ self isCheckable

@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "VIATestCase",
+	"category" : "Via-Tests-Model",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIATagTest",
+	"type" : "normal"
+}

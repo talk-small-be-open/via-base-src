@@ -10,7 +10,9 @@
 		"modules",
 		"moduleExercises",
 		"exams",
-		"lastOpenedModule"
+		"lastOpenedModule",
+		"lastOpenedPalloncini",
+		"lastOpenedVocabolario"
 	],
 	"name" : "VIAPortfolio",
 	"type" : "normal"

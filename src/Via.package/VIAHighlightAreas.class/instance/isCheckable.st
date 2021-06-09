@@ -1,3 +1,3 @@
 testing
 isCheckable
-	^ self isPassiveMode not
+	^ self hasAreas

@@ -65,8 +65,10 @@ this is how you inject raw <b>­htm­l</­b> in your output file
 }}}
 '.
 
-	html strong: 'Special styled paragraphs:'.
+	html strong: 'Special styled paragraphs and texts:'.
 	html preformatted: '@@style This is a paragraph styled with a style.
+This is a ((style word)) with a style.
+
 Ask your developer for available styles (CSS).
 '.
 

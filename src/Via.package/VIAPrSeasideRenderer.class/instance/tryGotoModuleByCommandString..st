@@ -1,7 +1,7 @@
 as yet unclassified
-tryGotoModuleByIndexCode: aString
+tryGotoModuleByCommandString: aString
 	| session |
 	[
 		session := WACurrentRequestContext value session.
-		session app gotoModuleByIndexString: aString.
+		session app gotoModuleByCommandString: aString.
 	] ifError: []

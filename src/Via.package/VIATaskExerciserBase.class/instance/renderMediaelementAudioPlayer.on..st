@@ -11,7 +11,15 @@ renderMediaelementAudioPlayer: anAudioPlayer on: html
 			autoplay: false;
 			id: audioId;
 			controls: true;
-			url: anAudioPlayer audioUrl.
+"			url: anAudioPlayer audioUrl."
+			with: [
+				anAudioPlayer hasAudio ifTrue: [
+					html source
+						url: anAudioPlayer audioUrl;
+						type: anAudioPlayer audioMimeType.
+				].
+			].
+
 		self renderAssetInfo: anAudioPlayer audioAsset on: html.
 
 		self renderAudioTranscription: anAudioPlayer on: html.

@@ -21,7 +21,12 @@ visitViaPrAssetAudio: aViaPrAssetAudio
 			id: audioId;
 			controls: true;
 			preload: 'none';
-			url: url.
+"			url: url."
+			with: [
+				html source
+					url: url;
+					type: asset contentType.
+				].
 	"		self renderAssetInfo: anAudioPlayer audioAsset on: html."
 
 	"		self renderAudioTranscription: anAudioPlayer on: html."

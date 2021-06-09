@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "PRDocumentGroup",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"annotation"
+	],
+	"name" : "VIAPrAnnotatedFormat",
+	"type" : "normal"
+}
