@@ -9,7 +9,8 @@
 		"moduleExercise",
 		"needsMediaelementJs",
 		"needsYoutube",
-		"needsVimeo"
+		"needsVimeo",
+		"needsSrgPlayer"
 	],
 	"name" : "VIAModuleExerciserBase",
 	"type" : "normal"

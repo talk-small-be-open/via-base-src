@@ -8,7 +8,7 @@ callLoggedInApplication
 		ifTrue: [component := self am mainEmbeddedComponentClass new]
 		ifFalse: [component := self am mainComponentClass new].
 
-	self addMainDecoration.
+	self ensureMainDecoration.
 	
 	self applicationComponent: component.
 	self executeCommand.

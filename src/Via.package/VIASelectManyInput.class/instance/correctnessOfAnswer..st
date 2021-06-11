@@ -1,6 +1,7 @@
 as yet unclassified
 correctnessOfAnswer: aCollection
 	| correctCount divider |
+
 	correctCount := self solutions count: [:each | aCollection includes: each].
 
 	divider := (self solutions size).

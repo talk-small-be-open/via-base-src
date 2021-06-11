@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "PRExternalLink",
+	"category" : "Pillar-Model-Document",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "PRTelLink",
+	"type" : "normal"
+}

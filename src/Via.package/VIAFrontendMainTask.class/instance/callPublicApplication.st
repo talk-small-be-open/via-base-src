@@ -8,7 +8,7 @@ callPublicApplication
 		ifTrue: [component := self am mainEmbeddedComponentClass new]
 		ifFalse: [component := self am mainPublicComponentClass new].
 
-	self addMainDecoration.
+	self ensureMainDecoration.
 	
 	self applicationComponent: component.
 	self executeCommand.

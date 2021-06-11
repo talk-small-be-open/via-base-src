@@ -8,7 +8,8 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 					with: [
 						html text: index greaseString.
 						html text: '. '].
-				html text: eachTask displayName].	
+				html text: eachTask displayName.
+				eachTask title ifBlank: [html space; span: '(no title)' ]].	
 			html tableData class: 'actions'; with: [
 				canEdit ifTrue: [
 					html anchor

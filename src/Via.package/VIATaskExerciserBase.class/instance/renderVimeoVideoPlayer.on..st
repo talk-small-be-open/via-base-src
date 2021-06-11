@@ -8,6 +8,7 @@ renderVimeoVideoPlayer: aPlayer on: html
 	
 	html div
 		class: 'vimeoPlayer';
+		style: 'max-width: ', aPlayer width asString, 'px';
 		with: [
 			html div id: vimeoElementId.
 	]

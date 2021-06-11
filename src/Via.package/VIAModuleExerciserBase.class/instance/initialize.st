@@ -12,4 +12,5 @@ initialize
 	needsVimeo := req needsFeature: 'vimeo'.
 	needsYoutube := req needsFeature: 'youtube'.
 	needsMediaelementJs := req needsAnyFeature: {'audio'. 'video'}.
+	needsSrgPlayer := req needsFeature: 'srgplayer'.
 	

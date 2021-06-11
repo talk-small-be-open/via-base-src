@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAExternalVideoPlayer",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"businessUnit"
+	],
+	"name" : "VIASrgVideoPlayer",
+	"type" : "normal"
+}

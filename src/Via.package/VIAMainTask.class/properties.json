@@ -7,7 +7,8 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"applicationComponent",
-		"command"
+		"command",
+		"mainDecoration"
 	],
 	"name" : "VIAMainTask",
 	"type" : "normal"

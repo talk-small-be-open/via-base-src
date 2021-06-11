@@ -2,6 +2,6 @@ initialization
 initialize
 	super initialize.
 	
-	self addMainDecoration.
+	self ensureMainDecoration.
 	
 	demoClass := self am mainDemoComponentClass
