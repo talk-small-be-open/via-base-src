@@ -5,4 +5,4 @@ renderTextMenuEntry: aMenuEntry on: html
 		class: aMenuEntry css;
 		with: [
 			self renderIcon: aMenuEntry on: html.
-			html text: aMenuEntry label]
+			html span class: 'menuEntryText'; with: aMenuEntry label]

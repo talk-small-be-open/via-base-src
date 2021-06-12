@@ -6,11 +6,7 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"moduleExercise",
-		"needsMediaelementJs",
-		"needsYoutube",
-		"needsVimeo",
-		"needsSrgPlayer"
+		"moduleExercise"
 	],
 	"name" : "VIAModuleExerciserBase",
 	"type" : "normal"

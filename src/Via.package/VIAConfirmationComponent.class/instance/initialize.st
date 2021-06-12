@@ -1,4 +1,6 @@
 initialize-release
 initialize
 	super initialize.
-	isCaptchaSecured := false
+	isCaptchaSecured := false.
+	
+	self addContainerDiv.

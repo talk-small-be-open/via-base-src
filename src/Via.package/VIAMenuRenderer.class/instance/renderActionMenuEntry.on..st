@@ -5,4 +5,4 @@ renderActionMenuEntry: aMenuEntry on: html
 		callback: aMenuEntry actionBlock;
 		with: [
 			self renderIcon: aMenuEntry on: html.
-			html text: aMenuEntry label]
+			html span class: 'menuEntryText'; with: aMenuEntry label]
