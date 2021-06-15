@@ -1,7 +1,8 @@
 as yet unclassified
 pairingFinished
 	otherExerciser := pairingComponent pairedData.
-	p2pComponent := pairingComponent createP2pComponent.
+"	p2pComponent := pairingComponent createP2pComponent."
+	talkmasterComponent := pairingComponent createTalkmasterComponent.
 	pairingToken := pairingComponent pairingToken.
 
 	"Handover shuffled sequence"

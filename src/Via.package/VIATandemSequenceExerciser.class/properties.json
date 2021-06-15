@@ -23,7 +23,8 @@
 		"p2pSyncJs",
 		"firstGameIndex",
 		"pairingToken",
-		"isTestdrive"
+		"isTestdrive",
+		"talkmasterComponent"
 	],
 	"name" : "VIATandemSequenceExerciser",
 	"type" : "normal"

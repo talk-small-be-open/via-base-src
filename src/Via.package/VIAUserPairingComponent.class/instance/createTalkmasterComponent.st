@@ -1,8 +1,8 @@
 as yet unclassified
-createP2pComponent
-	^ VIAP2pDualComponent new
+createTalkmasterComponent
+	^ VIAJsTalkmasterComponent new
+		roomName: self pairingId;
 		thisPeerId: self thisPeerId;
 		otherPeerId: self otherPeerId;
 		otherPeerLabel: self pairedUser firstName;
-		beStartConnection; "both. more robust for reloads."
 		yourself

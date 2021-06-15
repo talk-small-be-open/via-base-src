@@ -1,7 +1,7 @@
 rendering
 renderP2pSynchronizationOn: html
 
-	p2pComponent ifNotNil: [
+	talkmasterComponent ifNotNil: [
 		self ifPlayer1: [
 "			p2pComponent send: self stepIndex."
 		]
@@ -9,7 +9,7 @@ renderP2pSynchronizationOn: html
 "			p2pComponent onData: (JSStream on: 'tandemGotoQAndA(data)')"
 		].
 
-		p2pComponent onData: (
+		talkmasterComponent onData: (
 			(html jQuery ajax)
 				callback: [:d | self ajaxProcessP2pData: d ] json: (JSStream on: 'data');
 				onSuccess: ((((html jQuery id: gameBoardId) load
@@ -18,5 +18,5 @@ renderP2pSynchronizationOn: html
 				dataType: 'text'	
 		).
 
-		html render: p2pComponent
+		html render: talkmasterComponent
 	]

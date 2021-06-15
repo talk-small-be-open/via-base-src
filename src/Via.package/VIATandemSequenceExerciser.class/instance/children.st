@@ -1,3 +1,3 @@
 hooks
 children
-	^ Array with: pairingComponent with: p2pComponent
+	^ Array with: pairingComponent with: talkmasterComponent

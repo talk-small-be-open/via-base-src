@@ -13,6 +13,8 @@ jsStart
 	js javascript: thisPeerId.
 	js nextPutAll: ','.
 	js javascript: connectTo.
+	js nextPutAll: ','.
+	js javascript: startConnection.
 	js nextPutAll: ', function(data){'.
 	js javascript: onDataJs.
 	js nextPutAll: '},'.

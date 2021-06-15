@@ -1,0 +1,19 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAComponent",
+	"category" : "Via-View-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"thisPeerId",
+		"otherPeerId",
+		"otherPeerLabel",
+		"onDataJs",
+		"label",
+		"sendJs",
+		"roomName"
+	],
+	"name" : "VIAJsTalkmasterComponent",
+	"type" : "normal"
+}

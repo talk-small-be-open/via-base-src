@@ -18,6 +18,7 @@ restart
 "	sequence"
 	pairingComponent := nil.
 	p2pComponent := nil.
+	talkmasterComponent := nil.
 	pairingToken := nil.
 	otherExerciser := nil.
 	currentQAndACounter := nil.
