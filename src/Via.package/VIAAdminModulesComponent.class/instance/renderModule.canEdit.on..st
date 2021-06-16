@@ -32,7 +32,7 @@ renderModule: aModule canEdit: canEdit on: html
 			html anchor
 				callback: [self editModule: aModule];
 				with: 'Edit'.
-			(self canMakeVewVersionModule: aModule) ifTrue: [
+			(self canMakeNewVersionModule: aModule) ifTrue: [
 				html anchor
 					callback: [self createNewModuleVersion: aModule];
 					title: 'Create a new draft version for this module';

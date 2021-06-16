@@ -1,5 +1,5 @@
 as yet unclassified
-canMakeVewVersionModule: aModule
+canMakeNewVersionModule: aModule
 	self ifAdmin: [^true].
 
 	^aModule authorUsers includes: self currentUser

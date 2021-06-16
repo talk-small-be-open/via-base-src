@@ -10,7 +10,6 @@
 		"otherPeerId",
 		"otherPeerLabel",
 		"onDataJs",
-		"label",
 		"sendJs",
 		"roomName"
 	],

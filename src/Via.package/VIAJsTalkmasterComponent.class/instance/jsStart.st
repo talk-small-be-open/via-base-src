@@ -13,17 +13,6 @@ jsStart
 	js javascript: onDataJs.
 	js nextPutAll: '},'.
 	js javascript: sendJs.
-	js nextPutAll: ')'.
-
-"	sendOnceJs ifNotNil: [ 
-		js nextPutAll: '.then(c => {c.send('.
-		js javascript: sendOnceJs.
-		js nextPutAll: ')})'.
-
-		sendOnceJs := nil.
-	].
-"
-
-	js nextPutAll: ';'.
+	js nextPutAll: ');'.
 
 	^ js

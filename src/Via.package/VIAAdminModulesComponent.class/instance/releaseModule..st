@@ -11,4 +11,6 @@ releaseModule: aModule
 			self flashMessage: 'Published FIRST version of new module.'.
 			aModule releaseNow.
 			self mailer sendMassNotification: #newModule.
-		]
+		].
+	
+	self refresh
