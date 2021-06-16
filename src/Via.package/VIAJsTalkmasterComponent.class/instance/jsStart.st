@@ -7,6 +7,8 @@ jsStart
 	js javascript: self elementId.
 	js nextPutAll: ','.
 	js javascript: self roomName.
+	js nextPutAll: ','.
+	js javascript: self roomCredential.
 	js nextPutAll: ', function(data){'.
 	js javascript: onDataJs.
 	js nextPutAll: '},'.
