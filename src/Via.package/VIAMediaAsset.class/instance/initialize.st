@@ -4,5 +4,5 @@ initialize
 	super initialize.
 
 	comment := nil.
-	title := 'Unbenannt'.
+	title := nil.
 	createdAt := DateAndTime now.

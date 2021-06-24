@@ -14,7 +14,8 @@
 		"deviceDetectionDone",
 		"browserType",
 		"isFullscreenSupported",
-		"portfolio"
+		"portfolio",
+		"externalUser"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

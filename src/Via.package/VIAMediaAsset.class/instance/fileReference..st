@@ -2,7 +2,7 @@ accessing
 fileReference: anObject
 	self setFileReference: anObject.
 
-	comment ifNil: [
+	comment ifBlank: [
 		comment := anObject comment ].
-	title ifNil: [
+	title ifBlank: [
 		title := anObject title ].

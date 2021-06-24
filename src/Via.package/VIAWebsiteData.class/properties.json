@@ -19,7 +19,8 @@
 		"users",
 		"userGroups",
 		"massMailings",
-		"mailingConfiguration"
+		"mailingConfiguration",
+		"trashedObjects"
 	],
 	"name" : "VIAWebsiteData",
 	"type" : "normal"

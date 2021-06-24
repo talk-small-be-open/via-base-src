@@ -1,3 +1,4 @@
 accessing
 cleanup
-	VIAHelper clearTestdriveBlocks
+	VIAHelper clearTestdriveBlocks.
+	self db cleanupObjectsTrash.

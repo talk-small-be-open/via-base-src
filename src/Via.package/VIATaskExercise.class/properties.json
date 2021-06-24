@@ -11,7 +11,8 @@
 		"isOpen",
 		"isFinished",
 		"moduleExercise",
-		"isIgnored"
+		"isIgnored",
+		"touchedAt"
 	],
 	"name" : "VIATaskExercise",
 	"type" : "normal"

@@ -3,7 +3,9 @@ renderVideoPlayer: aVideoPlayer on: html
 	html div with: [
 		html div: [
 			html iconFilm; space.
-			html text: 'VIDEO'].
+			html text: 'VIDEO'.
+			html break.
+			html text: aVideoPlayer videoUrl].
 		html image
 			class: 'videoPreview';
 			url: aVideoPlayer posterUrl.

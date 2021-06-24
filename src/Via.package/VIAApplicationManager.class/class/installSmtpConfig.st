@@ -17,4 +17,10 @@ installSmtpConfig
 		each preferenceAt: #smtpUsername put: user.
 		each preferenceAt: #smtpPassword put: password.
 		each preferenceAt: #smtpPort put: port.
-	]
+	].
+
+	VIAHelper isGemStone ifTrue: [ 
+		"No password, port, username, not possible in bare GemStone"
+		"Used when sending sysadmin emails from non-seaside context, i.e. MaintenanceTask gem"
+		"OPTIMIZE"
+		SendMail mailhost: server ]

@@ -10,7 +10,7 @@ initializeDefaultValues
 	tags ifNil: [tags := Set new].
 	searchEngine ifNil: [searchEngine := VIASearchEngine new].
 	uiTexts ifNil: [uiTexts := Dictionary new].
-	trashedObjects ifNil: [trashedObjects := OrderedCollection new].
+"	trashedObjects ifNil: [trashedObjects := OrderedCollection new]."
 	userPairingTokens ifNil: [ userPairingTokens := RcIdentitySet new ].
 	exams ifNil: [exams := OrderedCollection new].
 	websites ifNil: [websites := OrderedCollection new].

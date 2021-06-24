@@ -8,4 +8,7 @@ loginFromExternalCallback: aRequest
 		user := externalUser syncViaUserFromWebsite: self website.
 		
 		user ifNotNil: [
-			self session loginUser: user]]
+			self session
+				loginUser: user;
+				externalUser: externalUser.
+			]]

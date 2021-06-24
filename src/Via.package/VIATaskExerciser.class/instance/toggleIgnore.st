@@ -1,4 +1,4 @@
 actions
 toggleIgnore
-	exercise isIgnored: exercise isIgnored not.
+	exercise toggleIgnore.
 	exercise isIgnored ifTrue: [ exercise beClosed ].

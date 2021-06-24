@@ -18,7 +18,8 @@
 		"flashMessages",
 		"mailingComponent",
 		"statusComponent",
-		"supportComponent"
+		"supportComponent",
+		"trashComponent"
 	],
 	"name" : "VIAAdminMainComponent",
 	"type" : "normal"

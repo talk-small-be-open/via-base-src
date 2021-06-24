@@ -23,7 +23,7 @@ jsForSrgVideoPlayer: aVideoPlayer id: aVideoId
 		urn javascriptOn: s.
 		s << ', false, '.
 		queryString javascriptOn: s.
-		s << '); '.
+		s << ');'.
 		
 		aVideoPlayer noSound ifTrue: [ 
 			s << 'player.addEventListener(SRG.SrgPlayerEvent.EVT_LOADED, function(evt) {'.

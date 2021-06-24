@@ -1,3 +1,4 @@
 as yet unclassified
 beOpen
-	isOpen := true
+	isOpen := true.
+	self touch

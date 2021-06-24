@@ -25,6 +25,7 @@ initializeTabbedNavigationComponent
 		classificationComponent := VIAAdminClassificationComponent new.
 		mailingComponent := VIAAdminMailingComponent new.
 		maintenanceComponent := VIAAdminMaintenanceComponent new.
+		trashComponent := VIAAdminTrashComponent new.
 
 		tabbedNavigationComponent	
 			add: uiTextComponent label: 'UI Texts';
@@ -32,7 +33,8 @@ initializeTabbedNavigationComponent
 			add: configurationComponent label: 'Configuration';
 	"		add: emailsComponent label: 'Emails';"
 			add: mailingComponent label: 'Mailing';
-			add: maintenanceComponent label: 'Maintenance'.
+			add: maintenanceComponent label: 'Maintenance';
+			add: trashComponent label: 'Trash'.
 	"		add: developmentComponent label: 'Development';"].
 		
 	self ifRoles: #(admin supporter) then: [

@@ -16,9 +16,9 @@ renderUploaderOn: html
 		"Safari 14.0.2 hat ein Bug. Upload-Dialog erscheint nicht!!!"
 		html spanButton
 			id: 'pluploadBrowseButton';
-			with: '+ Add files to queue'.
+			with: '1. Add more files to queue'.
 		html space.
 		html spanButton
 			id: 'pluploadStartButton';
-			with: 'Start upload'.
+			with: '2. Start uploading queue'.
 		]

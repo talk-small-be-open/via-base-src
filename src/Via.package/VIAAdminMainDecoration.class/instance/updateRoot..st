@@ -32,4 +32,8 @@ updateRoot: anHtmlRoot
 	anHtmlRoot javascript defer; url: '/admin/selectize/selectize.min.js'.
 	anHtmlRoot stylesheet url: '/admin/selectize/selectize.default.css'.
 
+	"Alert dialog"
+	anHtmlRoot javascript defer; url: '/admin/alert/alert.js'.
+	anHtmlRoot stylesheet url: '/admin/alert/alert.css'.
+
 	anHtmlRoot javascript defer; url: '/admin/js/scripts.js'.

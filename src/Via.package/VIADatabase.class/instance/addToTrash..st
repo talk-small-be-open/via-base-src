@@ -1,3 +1,3 @@
-as yet unclassified
+obsolete
 addToTrash: anObject
 	trashedObjects add: anObject

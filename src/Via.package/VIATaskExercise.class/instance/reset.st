@@ -2,4 +2,5 @@ as yet unclassified
 reset
 	answers := RcKeyValueDictionary new.
 	isFinished := false.
-	self prepare
+	self prepare.
+	self touch

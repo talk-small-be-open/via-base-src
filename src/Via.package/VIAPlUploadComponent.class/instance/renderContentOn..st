@@ -6,11 +6,12 @@ renderContentOn: html
 		self renderJsOn: html.
 
 		html div class: 'topBuffer'; with: [	
+			self hasUploadedFiles ifTrue: [
+				html anchorButton
+					callback: [self goAhead];
+					with: '3. OK, process uploaded files'.
+				html space ].
 			html anchorButton
-				callback: [self goAhead];
-				with: 'OK'.
-			html space.
-			html anchor
 				callback: [self cancel];
 				with: 'Cancel']
 	]
