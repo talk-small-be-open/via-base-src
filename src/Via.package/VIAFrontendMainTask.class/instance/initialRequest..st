@@ -80,6 +80,12 @@ initialRequest: aRequest
 		(commandName = 'sso') ifTrue: [
 			self loginFromExternalCallback: aRequest
 		].
+	
+		"Direct URL to local login (instead of usual OAuth)"
+		(commandName = 'locallogin') ifTrue: [
+			command := VIALocalLoginCommand new.
+		].
+
 		
 	].
 

@@ -55,7 +55,8 @@ updateRootEssentials: anHtmlRoot
 
 	"Mouse/Touch events unifier for dragging, ..."
 	"TODO: Maybe only as feature request in a module exerciser?"
-	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.10.3/dist/interact.min.js'.
+	"Previous used version: 1.10.3"
+	anHtmlRoot javascript defer; url: 'https://cdn.jsdelivr.net/npm/interactjs@1.10.11/dist/interact.min.js'.
 
 	"List drag/drop sorting library"
 	"TODO: Maybe only as feature request in a module exerciser?"

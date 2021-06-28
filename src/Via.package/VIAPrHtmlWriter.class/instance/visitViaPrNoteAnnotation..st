@@ -7,5 +7,5 @@ visitViaPrNoteAnnotation: aViaPrNoteAnnotation
 	canvas tag
 		name: 'span';
 		parameterAt: 'class' put: 'dictionaryEntry';
-		parameterAt: 'data-content' put: (VIAHelper sanitizeToLatin1: contentHtml) asHTMLString "OPTIMIZE: EVT robuster bei nicht-utf8";
+"macht kein Sinn, ist mit JS		parameterAt: 'data-content' put: (VIAHelper sanitizeToLatin1: contentHtml) asHTMLString;"
 		with: aViaPrNoteAnnotation expression

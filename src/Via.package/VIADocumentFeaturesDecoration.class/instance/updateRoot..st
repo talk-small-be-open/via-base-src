@@ -8,7 +8,7 @@ updateRoot: anHtmlRoot
 		
 	"Mediaelement CDN"
 	self ifNeedsAny: {'audio'. 'video'} then: [
-		anHtmlRoot javascript defer url: 'https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js'.
+		anHtmlRoot javascript defer; url: 'https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js'.
 		anHtmlRoot stylesheet url: 'https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css'.
 	].
 
@@ -20,12 +20,18 @@ updateRoot: anHtmlRoot
 
 	"Vimeo embedding"
 	self ifNeeds: 'vimeo' then: [
-		anHtmlRoot javascript defer url: 'https://player.vimeo.com/api/player.js'.
+		anHtmlRoot javascript defer; url: 'https://player.vimeo.com/api/player.js'.
 	].
 
 	"SRG Player embedding"
 	self ifNeeds: 'srgplayer' then: [
-		anHtmlRoot javascript defer url: 'https://tp.srgssr.ch/assets/javascripts/player-api.min.js'.
+"		anHtmlRoot javascript defer url: 'https://tp.srgssr.ch/assets/javascripts/player-api.min.js'."
+
+		"TODO: stable version, as soon as available:
+		https://srgletterbox-web.s3.eu-central-1.amazonaws.com/production/docs/index.html#/?id=installation-through-npm"
+		anHtmlRoot javascript defer; url: 'https://letterbox-web.srgssr.ch/production/letterbox.js'.
+		anHtmlRoot stylesheet url: 'https://letterbox-web.srgssr.ch/production/letterbox.css'.
+
 	].
 
 

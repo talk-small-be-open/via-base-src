@@ -1,5 +1,6 @@
 as yet unclassified
 onMoveFollowPointer
+	self autoScroll: true.
 	self onStart: '
 var me = event.target;
 if ( ! $(me).data("dragDX") ) {

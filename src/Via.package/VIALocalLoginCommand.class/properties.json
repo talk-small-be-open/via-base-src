@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAApplicationLightweightCommand",
+	"category" : "Via-View-Command",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIALocalLoginCommand",
+	"type" : "normal"
+}
