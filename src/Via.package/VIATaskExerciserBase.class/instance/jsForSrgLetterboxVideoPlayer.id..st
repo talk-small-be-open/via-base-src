@@ -8,6 +8,7 @@ jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
 	options := {
 		'container'->('#',aVideoId).
 		'recommendations'->false.
+		'continuousPlayback'->false.
 		'fillMode'->false.
 		'analytics'->false.
 		'components'->{
@@ -24,8 +25,8 @@ jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
 	^String streamContents: [:s |
 		| loadOptions |
 		loadOptions := Dictionary new.
-		aVideoPlayer startSeconds ifNotNil: [ :es |
-			loadOptions at: 'pendingSeek' put: es ].
+"Not nice visually		aVideoPlayer startSeconds ifNotNil: [ :es |
+			loadOptions at: 'pendingSeek' put: es ]."
 		
 		s << 'const player = new SRGLetterbox('.
 		options javascriptOn: s.
@@ -45,14 +46,32 @@ jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
 		s << 'player.on(SRGLetterbox.playerEvents.CAN_PLAY, function(evt) {'.
 		s << 'player.muted('.
 		aVideoPlayer noSound javascriptOn: s.
-		s << ')});'.
+		s << ');'.
+		aVideoPlayer startSeconds ifNotNil: [ :ss |
+			s << 'player.currentTime('.
+			ss javascriptOn: s.
+			s << ');'.
+		].
+		s << '});'.
+
+		aVideoPlayer startSeconds ifNotNil: [ :ss |
+			s << 'player.on([SRGLetterbox.playerEvents.TIME_UPDATE, SRGLetterbox.playerEvents.SEEKING], function(evt) {'.
+			s << ('if (player.currentTime() < ', ss asString).
+			s << ') {'.
+			s << ('player.currentTime(', ss asString, ');').
+"			s << 'player.pause();'."
+			s << '};'.
+			s << '});'.
+		].
 
 		aVideoPlayer endSeconds ifNotNil: [ :es |
 			s << 'player.on(SRGLetterbox.playerEvents.TIME_UPDATE, function(evt) {'.
-			s << ('if (player.currentTime() > ', es asString, ') { player.pause() };').
+			s << ('if (player.currentTime() > ', es asString).
+			s << ') {'.
+			s << ('player.currentTime(', es asString, ');').
+			s << 'player.pause();'.
+			s << '};'.
 			s << '});'.
 		].
 
 	]
-
-	"Remarks: SRG surprisingly has no end-time option"

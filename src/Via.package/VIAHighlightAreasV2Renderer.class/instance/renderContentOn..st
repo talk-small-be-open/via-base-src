@@ -32,14 +32,16 @@ renderContentOn: html
 		);
 
 		script: ((html jsInteract: 'span.selChar') draggable
-			hold: 100;
+			"hold: 30;" "prevents doubling with tap event"
+"			manualStart: true;"
 			onStart: (('highlightAreas_onStart(event, "', id, '")') asFunction: #(event));
 			onMove: ('"Dummy doing nothing prevent warning"' asFunction: #(event));
 			onEnd: (('highlightAreas_onEnd(event, "', id, '")') asFunction: #(event)));
 			
 		script: (html jQuery this on: 'via:highlightchanged' do: jsEventHandler );
 
-		onClick: ('highlightAreas_onClick(event, "', id, '")' asFunction: #(event));
+		script: (html jsInteract pointer onTap: (
+			'highlightAreas_onClick(event, "', id, '")' asFunction: #(event)));
 		
 		with: [
 			pillarSeasideRenderer

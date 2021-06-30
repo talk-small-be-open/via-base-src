@@ -11,7 +11,7 @@ generateManifestJson
 'short_name'->(website title).
 'lang'->(website languageCode).
 'dir'->'ltr'.
-"'description'->'App für den Unterricht in Deutsch als Zweitsprache'."
+"'description'->'App für ...'."
 
 "We are lazy and just take the icons from apple"
 'icons'->(VIAHelper appleTouchIconImagesData collect: [ :each |
@@ -24,7 +24,7 @@ generateManifestJson
 			'type'->'image/png'.
 			'sizes'->dim.
 		} asDictionary ]).
-'start_url'->(website url).
+'start_url'->'/app?standalone'.
 'display'->'standalone'.
 'orientation'->'portrait'.
 'background_color'->(self themeColorBackground).
