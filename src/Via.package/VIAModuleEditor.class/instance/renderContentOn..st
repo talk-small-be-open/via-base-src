@@ -31,11 +31,12 @@ renderContentOn: html
 				html label: [
 					html checkbox on: #isForDemo of: model.
 					html space.
-					html text: 'Accessible in DEMO app (Even if unpublished)']].
-			html label: [
-				html checkbox on: #isForBetatester of: model.
-				html space.
-				html text: 'Accessible for Beta-Testers, if unpublished']
+					html text: 'Accessible in DEMO app (Even if unpublished)']]].
+			model isReleased ifFalse: [
+				html label: [
+					html checkbox on: #isForBetatester of: model.
+					html space.
+					html text: 'Accessible for Beta-Testers, if unpublished']
 		].
 
 "Deprecated, us level tags		html label: 'Language level' help: '(E.g. A1-B2, ...)'.
@@ -75,4 +76,4 @@ renderContentOn: html
 		self ifFeature: #module:geoInformation then: [
 			self renderGeoInformationOn: html].
 
-		self renderFormButtonsOn: html].
+		self renderFormButtonsOn: html ].

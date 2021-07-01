@@ -1,4 +1,4 @@
-as yet unclassified
+finders
 findModulesUsingAsset: anAsset
 	^ self modules select: [:each |
-		each assets includes: anAsset]
+		each isUsingAsset: anAsset]

@@ -1,4 +1,4 @@
-as yet unclassified
+finders
 findInvitationCommandByCode: aCodeString
 	^ applicationCommands values detect: [ :each |
 		each isExecutable and: [

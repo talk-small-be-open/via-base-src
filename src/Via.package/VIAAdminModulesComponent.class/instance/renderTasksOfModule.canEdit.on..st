@@ -41,10 +41,10 @@ renderTasksOfModule: aModule canEdit: canEdit on: html
 					].
 			html tableData class: 'actions extras'; with: [
 				canEdit ifTrue: [
-					self ifAdmin: [
+"					self ifAdmin: ["
 						html anchor
 							callback: [self deleteTask: eachTask inModule: aModule];
-							with: 'Delete']].
+							with: 'Delete'].
 			
 			]	
 				]].

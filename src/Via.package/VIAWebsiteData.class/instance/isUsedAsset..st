@@ -1,7 +1,6 @@
 as yet unclassified
 isUsedAsset: anAsset
 	self modules do: [:eachModule |
-		eachModule assetsDo: [ :each |
-			each = anAsset ifTrue: [ ^ true ] ] ].
+		(eachModule isUsedAsset: anAsset) ifTrue: [ ^ true ] ].
 	
 	^ false
