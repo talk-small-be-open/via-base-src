@@ -21,6 +21,7 @@ renderContentOn: html
 	html div
 		class: 'highlightAreas';
 		class: taskBrick uiStyle;
+		attributeAt: 'data-wholewordsonly' put: (taskBrick isWholeWordsOnly ifTrue: [ 'yes' ] ifFalse: [ 'no' ] );
 		class: 'firstTake' if: self exercise isFirstTake; "obsolete?"
 		id: (id := html nextId);
 
