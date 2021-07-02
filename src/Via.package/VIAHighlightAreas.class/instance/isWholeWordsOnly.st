@@ -5,9 +5,10 @@ isWholeWordsOnly
 	self hasAreas ifFalse: [ ^ false ].
 
 	"has directly joined area before?"
-	(self pillarString matchesRegexIgnoringCase: '^.*\S\_§[[:alnum:]]+\_.*$') ifTrue: [^false].
+	"asString for GemStone unicode"
+	(self pillarString asString matchesRegexIgnoringCase: '^.*\S\_§[[:alnum:]]+\_.*$') ifTrue: [^false].
 
 	"has directly joined area after?"
-	(self pillarString matchesRegexIgnoringCase: '^.*\_§[[:alnum:]]+\_\S.*$') ifTrue: [^false].
+	(self pillarString asString matchesRegexIgnoringCase: '^.*\_§[[:alnum:]]+\_\S.*$') ifTrue: [^false].
 	
 	^ true
