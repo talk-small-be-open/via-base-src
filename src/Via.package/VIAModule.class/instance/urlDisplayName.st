@@ -6,7 +6,7 @@ urlDisplayName
 "		name := name copyWithoutAll: '!''<>'."
 "		name := name select: #isLetter."
 		urlEncoder := GRPlatform current urlEncoderOn: s.
-		(name findTokens: ' ()') do: [:eachToken |
+		(name findTokens: ' ().') do: [:eachToken |
 			| text |
 			text := (eachToken select: #isAlphaNumeric).
 			text := VIAHelper normalizeAccents: text.

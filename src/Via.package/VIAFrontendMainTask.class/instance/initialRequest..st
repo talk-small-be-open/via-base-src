@@ -45,6 +45,13 @@ initialRequest: aRequest
 						module := module2
 					]
 				].
+
+				"Specific task?"
+				aRequest at: 'task' ifPresent: [:taskNumber |
+					| number |
+					number := taskNumber asInteger.
+					self session gotoTask: number
+				].
 			
 				"Special URL to module assets download"
 				aRequest at: 'media' ifPresent: [:value |

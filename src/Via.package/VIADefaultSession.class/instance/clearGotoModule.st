@@ -1,3 +1,4 @@
 as yet unclassified
 clearGotoModule
-	gotoModule := nil
+	gotoModule := nil.
+	gotoTask := nil
