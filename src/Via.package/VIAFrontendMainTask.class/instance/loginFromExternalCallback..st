@@ -8,6 +8,9 @@ loginFromExternalCallback: aRequest
 		user := externalUser syncViaUserFromWebsite: self website.
 		
 		user ifNotNil: [
+			"Implicit accept terms"
+			user beTermsAccepted.
+			
 			self session
 				loginUser: user;
 				externalUser: externalUser.

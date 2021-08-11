@@ -1,14 +1,17 @@
 testing
 isWholeWordsOnly
+	| sanitized |
 	"check if all areas are whole words. Makes some stuff in the UI easier"
 	
 	self hasAreas ifFalse: [ ^ false ].
 
+	sanitized := (VIAHelper sanitizeToLatin1: self pillarString placeholderChar: $x).
+	
 	"has directly joined area before?"
 	"asString for GemStone unicode"
-	(self pillarString asString matchesRegexIgnoringCase: '^.*\S\_§[[:alnum:]]+\_.*$') ifTrue: [^false].
+	(sanitized matchesRegexIgnoringCase: '^.*\S\_§[[:alnum:]]+\_.*$') ifTrue: [^false].
 
 	"has directly joined area after?"
-	(self pillarString asString matchesRegexIgnoringCase: '^.*\_§[[:alnum:]]+\_\S.*$') ifTrue: [^false].
+	(sanitized matchesRegexIgnoringCase: '^.*\_§[[:alnum:]]+\_\S.*$') ifTrue: [^false].
 	
 	^ true
