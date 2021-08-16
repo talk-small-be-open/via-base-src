@@ -9,9 +9,14 @@ checkGemStoneObjectLog
 	newErrors := errors select: [ :each | each stamp >= LastGemStoneObjectLogCheck ].
 	
 	[
-	newErrors do: [ :each |
-		self sendSysAdminEmailSubject: 'Application error' body: each printString].
-
+	(newErrors size > 50)
+		ifTrue: [
+			self sendSysAdminEmailSubject: '50+ application errors' body: 'Please check the object log!'
+		]
+		ifFalse: [
+			newErrors do: [ :each |
+				self sendSysAdminEmailSubject: 'Application error' body: each printString].
+		].
 	LastGemStoneObjectLogCheck := DateAndTime now.
 	]
 	ifError: [ "ignore" ]
