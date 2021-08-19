@@ -8,6 +8,7 @@ parsePillarString
 
 	self cleanAreaShelf.
 	self rewritePillarString.
+	self analyzeWholeWordsOnly.
 	
 	self beParseOk
 	]

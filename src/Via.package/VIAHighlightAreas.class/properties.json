@@ -11,7 +11,8 @@
 		"pillarString",
 		"areaShelf",
 		"parseOk",
-		"parseError"
+		"parseError",
+		"isWholeWordsOnly"
 	],
 	"name" : "VIAHighlightAreas",
 	"type" : "normal"

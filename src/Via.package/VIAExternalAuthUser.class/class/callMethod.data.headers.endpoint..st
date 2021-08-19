@@ -54,6 +54,7 @@ callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: 
 	
 	"If no error then delete JSON temp file"
 	self ifProduction: [
-		tempFile ifNotNil: [tempFile delete] ].
+		self debugEnabled ifFalse: [
+			tempFile ifNotNil: [tempFile delete] ] ].
 	
 	^ response
