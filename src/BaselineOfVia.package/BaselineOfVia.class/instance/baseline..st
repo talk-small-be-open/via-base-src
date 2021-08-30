@@ -23,8 +23,8 @@ baseline: spec
 		].
 		spec package: 'Via' with: [
 				spec 
-					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' ); "'OSSubprocess'"
-					repository: 'github://talk-small-be-open/via-base-src:master/src'. ].
+					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' ). "'OSSubprocess'"
+"					repository: 'github://talk-small-be-open/via-base-src:master/src'." ].
 		spec 
 			group: 'default' with: #('Core' );
 			group: 'Core' with: #('Via' ). ].
