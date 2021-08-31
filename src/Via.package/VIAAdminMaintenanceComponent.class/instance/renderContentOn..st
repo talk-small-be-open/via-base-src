@@ -13,6 +13,10 @@ renderContentOn: html
 		with: 'Send test HTML email'.
 	html break.
 	html anchor
+		callback: [self sendTestPillarEmail];
+		with: 'Send test Pillar email (Text & HTML)'.
+	html break.
+	html anchor
 		callback: [self showFlash];
 		with: 'Show flash message'.
 	html break.
