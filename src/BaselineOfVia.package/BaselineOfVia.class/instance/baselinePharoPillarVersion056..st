@@ -17,7 +17,7 @@ baselinePharoPillarVersion056: spec
 "			project: 'Mustache' with: '0.71'."
 "			project: 'Cocoon' with: '1.16'."
 
-		spec repository: 'github://talk-small-be-open/via:master/src'.
+"		spec repository: 'github://talk-small-be-open/via-base-src:master/src'."
 
 		spec
 			package: 'Pillar-Model' with: [
