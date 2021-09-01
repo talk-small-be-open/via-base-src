@@ -8,12 +8,10 @@ sendActivationLinkToUser: aUser
 		s << (self dearUser: aUser).
 		s lf; lf.
 		s nextPutAll: 'mailer:sendActivationLink:info't.
-		s lf.
-		s << '_'.
+		s lf; lf.
 		s << '*'.
 		s nextPutAll: (aUser onetimeActivationUrlForWebsite: website).
 		s << '*'.
-		s << '_'.
 		s lf; lf.
 		s << self defaultSignaturePillar].
 

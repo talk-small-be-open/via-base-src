@@ -1,4 +1,5 @@
 as yet unclassified
 defaultSignaturePillar
-	^'_
+	^'
+_
 ', ('mailer:defaultSignature't)

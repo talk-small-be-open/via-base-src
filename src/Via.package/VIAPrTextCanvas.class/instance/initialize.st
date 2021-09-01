@@ -1,4 +1,5 @@
 initialization
 initialize
 	super initialize.
-	lastIsNewLine := true
+	lastIsNewLine := true.
+	lastIsEmptyLine := false.

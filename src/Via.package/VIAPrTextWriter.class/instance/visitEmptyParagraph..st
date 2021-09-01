@@ -1,3 +1,3 @@
 visiting-document
 visitEmptyParagraph: anObject
-"	self newLine."
+	self potentialNewLine.

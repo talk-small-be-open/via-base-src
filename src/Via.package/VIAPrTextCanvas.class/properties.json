@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"lastIsNewLine"
+		"lastIsNewLine",
+		"lastIsEmptyLine"
 	],
 	"name" : "VIAPrTextCanvas",
 	"type" : "normal"
