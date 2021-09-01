@@ -1,5 +1,5 @@
 visiting-document
 visitListItem: anObject
-	self newLine.
+	self potentialNewLine.
 	canvas nextPutAll: '- '.
 	self visitDocumentGroup: anObject

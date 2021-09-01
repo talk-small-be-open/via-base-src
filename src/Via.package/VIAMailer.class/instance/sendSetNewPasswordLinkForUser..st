@@ -1,16 +1,20 @@
 mails
 sendSetNewPasswordLinkForUser: aUser
-	| to body subject |
+	| to body subject pillar |
 	to := Array with: aUser email.
 
 	subject := 'mailer:setNewPassword:subject't.
-	body := String streamContents: [:stream |
-		stream nextPutAll: (self dearUser: aUser).
-		stream crlf; crlf.
-		stream nextPutAll: 'mailer:setNewPassword:clickToSetNewPassword't.
-		stream crlf; crlf.
-		stream nextPutAll: (aUser onetimeSetNewPasswordUrlForWebsite: website).
-		stream crlf; crlf.
-		stream crlf; nextPutAll: self defaultSignature].
+	body := String streamContents: [:s |
+		s << (self dearUser: aUser).
+		s lf; lf.
+		s << 'mailer:setNewPassword:clickToSetNewPassword't.
+		s lf; lf.
+		s << $*.
+		s << (aUser onetimeSetNewPasswordUrlForWebsite: website).
+		s << $*.
+		s lf; lf.
+		s << self defaultSignaturePillar].
 
-	self sendMailTo: to subject: subject body: body
+	pillar := VIAHelper pillarFromPillarString: body.
+
+	^ self sendMailTo: to subject: subject pillarBody: pillar

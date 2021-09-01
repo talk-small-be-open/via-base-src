@@ -1,5 +1,5 @@
 visiting-document
 visitHorizontalRule: anHorizontalRule
-	self newLine; newLine.
+	self potentialNewLine.
 	canvas nextPutAll: '----------------------'.
 	self newLine.

@@ -1,6 +1,13 @@
 visiting-document
 visitExternalLink: anExternalLink
-	canvas nextPutAll: anExternalLink alias.
-	canvas nextPutAll: ' ('.
-	canvas nextPutAll: anExternalLink reference.
-	canvas nextPutAll: ')'.
+	| alias url |
+	alias := anExternalLink alias.
+	url := anExternalLink reference.
+	
+	alias = url
+		ifTrue: [ canvas nextPutAll: url ]
+		ifFalse: [
+			canvas nextPutAll: alias.
+			canvas nextPutAll: ' ('.
+			canvas nextPutAll: url.
+			canvas nextPutAll: ')'].

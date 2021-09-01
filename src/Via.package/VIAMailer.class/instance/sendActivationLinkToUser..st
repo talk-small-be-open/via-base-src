@@ -4,16 +4,18 @@ sendActivationLinkToUser: aUser
 	to := Array with: aUser email.
 
 	subject := 'mailer:sendActivationLink:subject't.
-	string := String streamContents: [:stream |
-		stream nextPutAll: 'mailer:sendActivationLink:info't.
-		stream lf.
-		stream nextPutAll: '_'.
-		stream lf.
-		stream nextPutAll: (aUser onetimeActivationUrlForWebsite: website).
-		stream lf.
-		stream nextPutAll: '_'.
-		stream lf.
-		stream lf; nextPutAll: self defaultSignature].
+	string := String streamContents: [:s |
+		s << (self dearUser: aUser).
+		s lf; lf.
+		s nextPutAll: 'mailer:sendActivationLink:info't.
+		s lf.
+		s << '_'.
+		s << '*'.
+		s nextPutAll: (aUser onetimeActivationUrlForWebsite: website).
+		s << '*'.
+		s << '_'.
+		s lf; lf.
+		s << self defaultSignaturePillar].
 
 	pillar := VIAHelper pillarFromPillarString: string.
 
