@@ -1,12 +1,14 @@
 as yet unclassified
 correctnessOfAnswer: aValue
- 	| lowercased |
+ 	| simplifiedAnswer simplifier |
 
 	"Spezialfall leer: Objekt ist VIABlankAnswerItem, falls explizit blank"	
 	(aValue = VIABlankAnswerItem default) ifTrue: [
 		^ self isBlankIsSolution ifTrue: [ 100 ] ifFalse: [ 0 ] ].
+
+	simplifier := [ :in | VIAHelper standardizeCharacters: in asLowercase ].
 	
-	lowercased := aValue ifNotNil: [:v | v asLowercase].
-	
-	^(self solutions anySatisfy: [:each | each asLowercase = lowercased])
+	simplifiedAnswer := aValue ifNotNil: [:v | simplifier value: v ].
+
+	^(self solutions anySatisfy: [:each | (simplifier value: each) = simplifiedAnswer])
 		ifTrue: [100] ifFalse: [0]
