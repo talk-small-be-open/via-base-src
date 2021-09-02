@@ -3,7 +3,8 @@ checkGemStoneObjectLog
 	| errorPrio errors newErrors |
 	errorPrio := ObjectLogEntry error.
 	
-	errors := ObjectLogEntry objectLog select: [ :each | each priority = errorPrio ].
+	errors := ObjectLogEntry objectLog select: [ :each |
+		each priority = errorPrio and: [ each hasContinuation ] ].
 	
 	LastGemStoneObjectLogCheck ifNil: [ LastGemStoneObjectLogCheck := DateAndTime now ].
 	newErrors := errors select: [ :each | each stamp >= LastGemStoneObjectLogCheck ].
