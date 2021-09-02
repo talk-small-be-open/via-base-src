@@ -3,11 +3,14 @@ cssStyles
 	^ '
 html { 
 	font-family: sans-serif;
-	font-size: 14px;
 }
-
+body { 
+	margin: 1em 3em;
+}
+img.viaSiteLogo { 
+	width: 5em;
+}
 div.pillarParagraph { 
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
+	margin: 1em 0;
 }
 '

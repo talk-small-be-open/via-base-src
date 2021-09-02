@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PRExportCanvas",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"lastIsNewLine",
+		"lastIsEmptyLine"
+	],
+	"name" : "VIAPrTextCanvas",
+	"type" : "normal"
+}

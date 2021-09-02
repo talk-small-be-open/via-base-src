@@ -1,16 +1,20 @@
 mails
 sendDeleteAccountLinkForUser: aUser
-	| to body subject |
+	| to body subject pillar |
 	to := Array with: aUser email.
 
 	subject := 'mailer:deleteAccount:subject't.
-	body := String streamContents: [:stream |
-		stream nextPutAll: (self dearUser: aUser).
-		stream crlf; crlf.
-		stream nextPutAll: 'mailer:deleteAccount:clickToDeleteAccount't.
-		stream crlf; crlf.
-		stream nextPutAll: (aUser onetimeDeleteAccountUrlForWebsite: website).
-		stream crlf; crlf.
-		stream crlf; nextPutAll: self defaultSignature].
+	body := String streamContents: [:s |
+		s << (self dearUser: aUser).
+		s lf; lf.
+		s << 'mailer:deleteAccount:clickToDeleteAccount't.
+		s lf; lf.
+		s << $*.
+		s << (aUser onetimeDeleteAccountUrlForWebsite: website).
+		s << $*.
+		s lf; lf.
+		s << self defaultSignaturePillar].
 
-	self sendMailTo: to subject: subject body: body
+	pillar := VIAHelper pillarFromPillarString: body.
+
+	^ self sendMailTo: to subject: subject pillarBody: pillar
