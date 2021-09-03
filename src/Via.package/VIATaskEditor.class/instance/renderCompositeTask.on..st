@@ -9,7 +9,13 @@ renderCompositeTask: aCompositeTask on: html
 				html textInput class: 'title'; on: #title of: aCompositeTask.
 				html break.
 				html label with: 'Subtitle'.
-				html textInput class: 'subtitle'; on: #subtitle of: aCompositeTask ].
+				html textInput class: 'subtitle'; on: #subtitle of: aCompositeTask.
+				html label: 'Level'.
+				html select
+					labels: [:each | each displayName];
+					list: (VIALevelTag allSortedForWebsite: self website);
+					on: #levelTag of: task classification.
+			].
 
 			html skColumnWidth: 'eight' with: [
 				html skRow: [
