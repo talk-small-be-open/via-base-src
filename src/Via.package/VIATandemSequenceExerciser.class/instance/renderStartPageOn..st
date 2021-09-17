@@ -1,7 +1,7 @@
 rendering
 renderStartPageOn: html
-	html paragraph class: 'uk-margin-bottom'; with: [
-		html t: 'tandemSequence:pleaseChoosePlayer'].
+"	html paragraph class: 'uk-margin-bottom'; with: [
+		html t: 'tandemSequence:pleaseChoosePlayer']."
 
 	html hintBox: 'tandem:seeTutorial'.
 "	html ifT: 'tandemSequence:seeTutorial' then: [ :yield |

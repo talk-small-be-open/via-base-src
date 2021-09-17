@@ -2,7 +2,9 @@ actions
 reuploadFor: anAsset
 
 	"Double check"
-	(self wd hasReleasedModulesUsingAsset: anAsset) ifTrue: [ self inform: 'Not allowed. Asset is used in published module(s)'. ^self ].
+	(self wd hasReleasedModulesUsingAsset: anAsset) ifTrue: [
+		(self confirm: 'CAREFUL!. Asset is used in published module(s)! Continue?') ifFalse: [ ^ self ]
+	].
 
 	uploader := VIAUploaderComponent new
 		targetBasePath: (self db propertyAt: #webRootPath);

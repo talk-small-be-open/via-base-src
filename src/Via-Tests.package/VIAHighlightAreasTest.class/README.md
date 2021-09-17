@@ -1,0 +1,1 @@
+A VIAHighlightAreasTest is a test class for testing the behavior of VIAHighlightAreas

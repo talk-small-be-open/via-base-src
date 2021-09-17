@@ -2,4 +2,5 @@ signalling
 signalError: aString returnData: aDataObject request: aRequest
 	self signalError: (aString, '
 RETURN DATA: ', aDataObject printString, '
-IP: ', aRequest remoteAddress).
+REQUEST: ', aRequest printString, '
+HTTP HEADERS: ', aRequest headers printString).

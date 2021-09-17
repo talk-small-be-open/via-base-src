@@ -16,13 +16,13 @@ analyzeWholeWordsOnly
 	
 	(VIAHelper
 		gemstoneSafe: string
-		matchesRegexIgnoringCase: '^.*\S\_§[[:alnum:]]+\_.*$' onError: [false]
+		prefixMatchesRegexIgnoringCase: '.*\S\_§[[:alnum:]]+\_.*' onError: [false]
 	) ifTrue: [
 		isWholeWordsOnly := false. ^ self ].
 
 	"has directly joined area after?"
 	(VIAHelper
 		gemstoneSafe: string
-		matchesRegexIgnoringCase: '^.*\_§[[:alnum:]]+\_\S.*$' onError: [false]
+		prefixMatchesRegexIgnoringCase: '.*\_§[[:alnum:]]+\_\S.*' onError: [false]
 	) ifTrue: [
 		isWholeWordsOnly := false. ^ self ].

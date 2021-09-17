@@ -3,6 +3,7 @@ releaseModule: aModule
 	| othersInFamily |
 	
 	aModule beReleased.
+	aModule isForBetatester: false.
 	
 	"Alle anderen un-releasen und entfernen, weil diese nicht mehr interessant sind"
 	othersInFamily := (modules copyWithout: aModule) select: [:each |

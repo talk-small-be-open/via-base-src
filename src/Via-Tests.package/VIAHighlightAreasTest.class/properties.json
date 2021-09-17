@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "<historical>",
+	"super" : "VIATestCase",
+	"category" : "Via-Tests-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAHighlightAreasTest",
+	"type" : "normal"
+}
