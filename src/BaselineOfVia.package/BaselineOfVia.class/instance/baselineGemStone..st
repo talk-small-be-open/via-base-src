@@ -9,6 +9,10 @@ baselineGemStone: spec
 		spec baseline: 'NeoJSON' with: [
 			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'.
 		].
+		spec baseline: 'GsNeoCSV' with: [
+			spec repository: 'github://feldti/GsNeoCSV:main/repository' ].
+		spec group: 'NeoCSV' with: #('GsNeoCSV').
+		
 "		spec baseline: 'Pillar' with: [
 			spec repository: 'github://dassi/Pillar:projectVia/repository' ]."
 		spec package: 'MCLPlatformPortabilityGemstone' with: [ 

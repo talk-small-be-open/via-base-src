@@ -1,4 +1,7 @@
 finders
 findUserByEmail: aString
+	| normalized |
 	aString ifBlank: [ ^ nil ].
-	^users detect: [:each | each email = aString] ifNone: nil
+
+	normalized := aString asLowercase.
+	^ users detect: [ :each | each email = normalized ] ifNone: [ nil ]

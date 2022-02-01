@@ -6,6 +6,9 @@ baselinePharo: spec
 		spec baseline: 'NeoJSON' with: [
 			spec repository: 'github://svenvc/NeoJSON/repository'.
 		].
+		spec baseline: 'NeoCSV' with: [
+			spec repository: 'github://svenvc/NeoCSV/repository'.
+		].
 		spec baseline: 'Seaside3' with: [
 			spec
 "				repository: 'github://SeasideSt/Seaside:v3.3.4/repository';"

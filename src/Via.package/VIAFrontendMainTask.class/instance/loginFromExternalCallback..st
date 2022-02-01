@@ -12,6 +12,6 @@ loginFromExternalCallback: aRequest
 			user beTermsAccepted.
 			
 			self session
-				loginUser: user;
+				loginUser: user remember: true;
 				externalUser: externalUser.
 			]]

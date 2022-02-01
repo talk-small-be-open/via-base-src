@@ -39,5 +39,9 @@ renderNewMailing: html
 			html submitButton
 				callback: [ self send ];
 				with: 'Send to all'.
+			html space.
+			html submitButton
+				callback: [ self downloadRecipients ];
+				with: 'Download recipients'.
 		]
 	].
