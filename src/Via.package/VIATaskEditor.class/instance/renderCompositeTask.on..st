@@ -10,11 +10,21 @@ renderCompositeTask: aCompositeTask on: html
 				html break.
 				html label with: 'Subtitle'.
 				html textInput class: 'subtitle'; on: #subtitle of: aCompositeTask.
-				html label: 'Level'.
-				html select
-					labels: [:each | each displayName];
-					list: (VIALevelTag allSortedForWebsite: self website);
-					on: #levelTag of: task classification.
+				html skRow: [
+					html skColumnWidth: 'six' with: [
+						html label with: 'Restricted to'.
+						html multiSelect
+							list: VIAUser allRoles;
+							size: 3;
+							on: #userRoles of: aCompositeTask.
+					].
+					html skColumnWidth: 'six' with: [
+						html label: 'Level'.
+						html select
+							labels: [:each | each displayName];
+							list: (VIALevelTag allSortedForWebsite: self website);
+							on: #levelTag of: task classification ].
+				]
 			].
 
 			html skColumnWidth: 'eight' with: [

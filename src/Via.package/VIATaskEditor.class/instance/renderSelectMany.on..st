@@ -8,7 +8,7 @@ renderSelectMany: aSelectManyInput on: html
 		html label: 'Hint: '.
 		html textArea
 			on: #hintText of: aSelectManyInput.
-		html label: 'Choices (prefixed * = answer, -- = group border)'.
+		html label: 'Choices (prefixed * = answer, -- = group border, "BLANK" = empty answer)'.
 		html textArea on: #choicesString of: aSelectManyInput.
 		html skRow: [
 			html skColumnWidth: 'three' with: [

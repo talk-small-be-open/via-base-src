@@ -11,7 +11,7 @@ renderSelectOne: aSelectOneInput on: html
 		html label: 'Hint: '.
 		html textArea
 			on: #hintText of: aSelectOneInput.
-		html label: 'Choices (prefixed * = answer, -- = group border)'.
+		html label: 'Choices (prefixed * = answer, -- = group border, "BLANK" = empty answer)'.
 		html textArea on: #choicesString of: aSelectOneInput.
 		html skRow: [
 			html skColumnWidth: 'three' with: [

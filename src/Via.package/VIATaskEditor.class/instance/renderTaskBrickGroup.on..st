@@ -11,6 +11,7 @@ renderTaskBrickGroup: aTaskBrickGroup on: html
 		html label with: 'Restricted to'.
 		html multiSelect
 			list: VIAUser allRoles;
+			size: 3;
 			on: #userRoles of: aTaskBrickGroup.
 
 		html unorderedList

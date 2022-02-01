@@ -6,7 +6,8 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"children"
+		"children",
+		"userRoles"
 	],
 	"name" : "VIACompositeTask",
 	"type" : "normal"

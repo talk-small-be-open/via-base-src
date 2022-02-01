@@ -1,3 +1,5 @@
 testing
 isEmpty
-	^value isBlank "Hm, nicht ganz sicher ob besser isNil?"
+	^ value isNil
+	
+	"isBlank" "Hm, nicht ganz sicher ob besser isNil?"

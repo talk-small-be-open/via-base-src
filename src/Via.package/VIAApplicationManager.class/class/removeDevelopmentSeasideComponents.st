@@ -1,7 +1,6 @@
 removing
 removeDevelopmentSeasideComponents
-	"Will be called from script while deploying with ansible, and if the
-	app is not beta status"
+	"Will be called from script while deploying with ansible"
 
 	"Remove dangerous unused seaside apps"
 	WAAdmin
@@ -12,3 +11,8 @@ removeDevelopmentSeasideComponents
 		unregister: 'seaside';
 		unregister: 'welcome';
 		unregister: 'tools'.
+
+	"Do NOT *list* the /files index, but keep the handler"
+	WAFileHandler default 
+		preferenceAt: #fileHandlerListingClass
+		put: WAForbiddenFileHandlerListing.
