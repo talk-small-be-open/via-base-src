@@ -11,7 +11,7 @@ baselineGemStone: spec
 		].
 		spec baseline: 'GsNeoCSV' with: [
 			spec repository: 'github://feldti/GsNeoCSV:main/repository' ].
-		spec group: 'NeoCSV' with: #('GsNeoCSV').
+		spec group: 'CSV' with: #('GsNeoCSV').
 		
 "		spec baseline: 'Pillar' with: [
 			spec repository: 'github://dassi/Pillar:projectVia/repository' ]."

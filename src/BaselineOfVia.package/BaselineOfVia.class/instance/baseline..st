@@ -10,7 +10,7 @@ baseline: spec
 			].
 
 			spec baseline: 'NeoJSON'.
-			spec baseline: 'NeoCSV'.
+			spec group: 'CSV' with: #().
 
 "			spec baseline: 'OSSubprocess' with: [
 				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
@@ -25,7 +25,7 @@ baseline: spec
 		].
 		spec package: 'Via' with: [
 				spec 
-					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'NeoCSV' ). "'OSSubprocess'"
+					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ). "'OSSubprocess'"
 "					repository: 'github://talk-small-be-open/via-base-src:master/src'." ].
 		spec 
 			group: 'default' with: #('Core' );

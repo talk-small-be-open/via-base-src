@@ -9,6 +9,8 @@ baselinePharo: spec
 		spec baseline: 'NeoCSV' with: [
 			spec repository: 'github://svenvc/NeoCSV/repository'.
 		].
+		spec group: 'CSV' with: #('NeoCSV').
+
 		spec baseline: 'Seaside3' with: [
 			spec
 "				repository: 'github://SeasideSt/Seaside:v3.3.4/repository';"
