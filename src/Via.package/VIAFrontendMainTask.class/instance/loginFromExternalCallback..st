@@ -11,6 +11,9 @@ loginFromExternalCallback: aRequest
 			"Implicit accept terms"
 			user beTermsAccepted.
 			
+			"Some initializations after registration"
+			user presetAutologinFromSession: self session.
+			
 			self session
 				loginUser: user remember: true;
 				externalUser: externalUser.
