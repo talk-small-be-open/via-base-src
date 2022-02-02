@@ -1,3 +1,6 @@
 visiting-document
 visitRaw: aRaw
-	html html: aRaw text
+
+	(aRaw type = #html) ifTrue: [ html html: aRaw text. ^ self ].
+	
+	html text: aRaw text

@@ -59,6 +59,9 @@ Audio +audio:4bozbmywaefqleznke0r5aa7f|start=50|end=60+
 Document +Linktext>doc:4bozbmywaefqleznke0r5aa7f+
 '.
 
+	html strong: 'Inject raw text:'.
+	html preformatted: '{{{no pillar just text}}}'.
+
 	html strong: 'Inject raw HTML:'.
 	html preformatted: '{{{html:
 this is how you inject raw <b>­htm­l</­b> in your output file 

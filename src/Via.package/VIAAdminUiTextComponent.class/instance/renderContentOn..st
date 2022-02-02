@@ -8,7 +8,7 @@ renderContentOn: html
 			uiTextKeys do: [:each |
 				html tableRow: [
 					html tableData: each.
-					html tableData: [html pillar: (self db uiTextAt: each)].
+					html tableData: [self renderUiText: each on: html].
 					html tableData: [
 						html anchor
 							callback: [self editKey: each];
