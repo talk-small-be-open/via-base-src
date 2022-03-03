@@ -6,7 +6,6 @@ parsePillarString
 	pillarDocument := VIAPrDocumentParser parse: pillarString markersDo: [:marker |
 		self addAreaFromMarker: marker].
 
-	self cleanAreaShelf.
 	self rewritePillarString.
 	self analyzeWholeWordsOnly.
 	

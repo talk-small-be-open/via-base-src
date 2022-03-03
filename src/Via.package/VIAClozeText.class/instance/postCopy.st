@@ -5,6 +5,7 @@ postCopy
 
 "	clozeTemplateString"
 	placeholderShelf := nil.
+	lastParsedAt := nil.
 "	parseOk"
 	
 	newPlaceholders := placeholders species new.

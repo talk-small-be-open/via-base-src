@@ -17,7 +17,9 @@ renderSelectMany: aSelectManyInput on: html
 							html iconUnchecked.
 							html space.
 							self renderDetailsTricolorWrong: wrong on: html with: [
-								html span: [html pillarString: choice]].
+								html span: [
+									choice acceptRenderingVisitor: self on: html.
+									"html pillarString: choice"]].
 							html span class: 'uk-text-muted'; with: [
 								isSolution ifTrue: [html iconCorrect] ifFalse: [html iconWrong].
 							].

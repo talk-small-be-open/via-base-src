@@ -16,11 +16,15 @@ renderSelectOne: aSelectOneInput on: html
 							isSolution
 								ifTrue: [
 									self renderDetailsTricolorCorrect: percent on: html with: [
-										html pillarString: choice].
+										choice acceptRenderingVisitor: self on: html.
+										"html pillarString: choice"
+									].
 								]
 								ifFalse: [
 									self renderDetailsTricolorWrong: percent on: html with: [
-										html pillarString: choice].
+										choice acceptRenderingVisitor: self on: html.
+										"html pillarString: choice"
+									].
 								].
 							
 							html span class: 'uk-text-muted'; with: [

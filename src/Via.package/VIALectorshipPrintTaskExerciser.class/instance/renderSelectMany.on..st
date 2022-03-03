@@ -10,7 +10,8 @@ renderSelectMany: aSelectManyInput on: html
 						html listItem
 							class: 'solution' if: (aSelectManyInput solutions includes: choice);
 							with: [
-								html pillarString: choice]].
+								choice acceptRenderingVisitor: self on: html.
+								"html pillarString: choice"]].
 					]].
 		self renderFootnoteSymbolOfBrick: aSelectManyInput on: html.
 		]

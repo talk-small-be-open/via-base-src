@@ -1,4 +1,15 @@
 as yet unclassified
 clearForParsing
-	areaShelf := areas.
+	| now |
+	now := DateAndTime now.
+	
+	"Keep the objects for later re-assign"
+
+	"Clear shelf, if long ago"
+	(areaShelf isNil or: [ lastParsedAt notNil and: [ (now - lastParsedAt) > 7 days ] ]) ifTrue: [
+		areaShelf := GRSmallDictionary new ].
+
+	areaShelf addAll: areas.
+
+	lastParsedAt := now.	
 	areas := GRSmallDictionary new. "Order preserved!"

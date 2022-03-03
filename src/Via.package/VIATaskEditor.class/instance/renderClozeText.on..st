@@ -13,4 +13,12 @@ renderClozeText: aClozeText on: html
 	"TODO? Toolbox:		html anchor
 				callback: [ ];
 				with: 'Change to select box'."
-			each acceptRenderingVisitor: self on: html]]
+			each acceptRenderingVisitor: self on: html].
+		
+		aClozeText orphanedPlaceholders ifNotBlank: [ :ops |
+			html strong: 'Elemente im Papierkorb: '.
+			ops do: [ :each |
+				html span selectOnClick; with: ('_', each code, '_')
+			] separatedBy: [ html space ]
+		]
+	]

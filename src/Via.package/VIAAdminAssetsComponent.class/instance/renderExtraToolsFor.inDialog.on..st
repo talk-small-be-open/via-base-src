@@ -1,5 +1,5 @@
 rendering
-renderExtraToolsFor: anAsset on: html
+renderExtraToolsFor: anAsset inDialog: aComponent on: html
 	html div class: 'extraTools'; with: [
 		html anchor
 			callback: [self showUsingModules: anAsset];
@@ -17,7 +17,7 @@ renderExtraToolsFor: anAsset on: html
 			callback: [ self reuploadFor: anAsset ];
 			with: 'Re-Upload file'.
 		html anchor
-			callback: [self deleteAsset: anAsset];
+			callback: [self deleteAsset: anAsset. aComponent close];
 			with: 'Delete'.
 "		self ifAdmin: [
 			self ifDevelopment: [

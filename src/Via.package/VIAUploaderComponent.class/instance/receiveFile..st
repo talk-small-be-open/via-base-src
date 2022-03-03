@@ -17,7 +17,7 @@ receiveFile: aFile
 				fileBasePath: self targetBasePath;
 				fileRelativePath: uploadRelativeDir;
 				fileName: uniqueFilename;
-				contentType: aFile contentType;
+				contentType: aFile contentType greaseString;
 				byteSize: aFile size;
 				title: aFile fileName.
 

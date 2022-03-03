@@ -8,7 +8,6 @@ parseClozeTemplate
 		parse: clozeTemplateString
 		markersDo: [:marker | self addPlaceholderFromMarker: marker].
 
-	self cleanPlaceholderShelf.
 	self rewriteTemplateString.
 	self beParseOk.
 	] on: VIAPillarSyntaxError do: [:e |

@@ -11,7 +11,8 @@
 		"placeholderShelf",
 		"pillarDocument",
 		"parseOk",
-		"parseError"
+		"parseError",
+		"lastParsedAt"
 	],
 	"name" : "VIAClozeText",
 	"type" : "normal"

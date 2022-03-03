@@ -12,7 +12,8 @@
 		"areaShelf",
 		"parseOk",
 		"parseError",
-		"isWholeWordsOnly"
+		"isWholeWordsOnly",
+		"lastParsedAt"
 	],
 	"name" : "VIAHighlightAreas",
 	"type" : "normal"

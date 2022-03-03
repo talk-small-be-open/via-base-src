@@ -14,4 +14,5 @@ postCopy
 
 "	pillarString"
 
-	areaShelf := nil
+	areaShelf := nil.
+	lastParsedAt := nil

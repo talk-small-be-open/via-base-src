@@ -15,4 +15,12 @@ renderHighlightAreas: aHighlightAreas on: html
 			html span: 'You have not defined any highlight areas. The task will be just for highlighting but there will be no correction.' ]."
 		
 		aHighlightAreas areas do: [:each |
-			each acceptRenderingVisitor: self on: html]]
+			each acceptRenderingVisitor: self on: html].
+
+		aHighlightAreas orphanedAreas ifNotBlank: [ :oas |
+			html strong: 'Elemente im Papierkorb: '.
+			oas do: [ :each |
+				html span selectOnClick; with: ('_', each code, '_')
+			] separatedBy: [ html space ]
+		]		
+	]
