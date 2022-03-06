@@ -9,7 +9,9 @@ clearForParsing
 	(placeholderShelf isNil or: [ lastParsedAt notNil and: [ (now - lastParsedAt) > 7 days ] ]) ifTrue: [
 		placeholderShelf := GRSmallDictionary new ].
 
-	placeholderShelf addAll: placeholders.
+	placeholders ifNotNil: [
+		"Rescue the elements to the shelf"
+		placeholderShelf addAll: placeholders ].
 
 	lastParsedAt := now.
 	placeholders := GRSmallDictionary new. "Order preserve!"

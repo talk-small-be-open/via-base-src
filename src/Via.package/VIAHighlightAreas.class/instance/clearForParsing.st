@@ -9,7 +9,9 @@ clearForParsing
 	(areaShelf isNil or: [ lastParsedAt notNil and: [ (now - lastParsedAt) > 7 days ] ]) ifTrue: [
 		areaShelf := GRSmallDictionary new ].
 
-	areaShelf addAll: areas.
+	areas ifNotNil: [
+		"Rescue the elements to the shelf"
+		areaShelf addAll: areas ].
 
 	lastParsedAt := now.	
 	areas := GRSmallDictionary new. "Order preserved!"
