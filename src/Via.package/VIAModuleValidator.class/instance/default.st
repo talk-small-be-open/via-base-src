@@ -5,4 +5,6 @@ default
 "	self validatePresence of: #coAuthorUsers named: 'module:coauthors'."
 	self validatePresence of: #imageAsset named: 'module:mainImage'.
 
-	self validatePresence of: #levelTag named: 'module:level'
+	self validatePresence of: #levelTag named: 'module:level'.
+	
+	self validateUniqueIndexCode

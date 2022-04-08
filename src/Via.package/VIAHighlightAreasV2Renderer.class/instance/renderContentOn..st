@@ -2,7 +2,7 @@ as yet unclassified
 renderContentOn: html
 	| id jsEventHandler inputId |
 	
-	self addJavascript: '/js/outofthebox/highlight_areas_v2.js' on: html.
+"	self addJavascript: '/js/outofthebox/highlight_areas_v2.js' on: html."
 	
 	self start.
 
@@ -23,6 +23,7 @@ renderContentOn: html
 		class: taskBrick uiStyle;
 		attributeAt: 'data-wholewordsonly' put: (taskBrick isWholeWordsOnly ifTrue: [ 'yes' ] ifFalse: [ 'no' ] );
 		class: 'firstTake' if: self exercise isFirstTake; "obsolete?"
+		class: 'checked' if: self exercise isChecked;
 		id: (id := html nextId);
 
 		script: ((html jQuery id: id) dataAt: 'allSelChars' put: ((html jQuery id: id) find: 'span.selChar'));

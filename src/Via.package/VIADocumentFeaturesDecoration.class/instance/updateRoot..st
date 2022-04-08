@@ -34,6 +34,12 @@ updateRoot: anHtmlRoot
 
 	].
 
+	self ifNeeds: 'highlightAreasV2' then: [
+		anHtmlRoot javascript defer; url: '/js/outofthebox/highlight_areas_v2.js'.
+	].
+
+	"TODO tandem js library"
+
 
 	"Prevent auto content inside exercises"
 	anHtmlRoot meta name: 'format-detection'; content: 'telephone=no'.

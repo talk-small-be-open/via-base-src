@@ -6,4 +6,8 @@ visitTableCell: anObject
 		anObject isAlignedCenter ifTrue: [ canvas raw: anObject class markupCenter ].
 		anObject isAlignedRight ifTrue: [ canvas raw: anObject class markupRight ] ].
 	anObject isHeading ifTrue: [ canvas raw: anObject class markupHeading ].
-	super visitTableCell: anObject
+
+	"Surrounded by spaces, to distinguish from possible inner Pillar bars"
+	canvas space.
+	super visitTableCell: anObject.
+	canvas space.

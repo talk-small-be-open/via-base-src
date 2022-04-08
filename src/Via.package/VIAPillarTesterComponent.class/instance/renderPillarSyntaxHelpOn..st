@@ -24,7 +24,8 @@ renderPillarSyntaxHelpOn: html
 
 	html strong: 'Table:'.
 	html preformatted: '|! Header |! Header |! Header
-|{Left  |}Right   | Centered'.
+| some    | normal  | text
+|{ left   |} right  || centered'.
 
 	html strong: 'Text formatting:'.
 	html preformatted: '

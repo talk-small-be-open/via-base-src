@@ -7,6 +7,10 @@ createNewCopy
 		title: ('Copy of ', self title);
 		setShortUid: nil;
 		createdAt: DateAndTime now.
+		
+	self hasIndexCode ifTrue: [ 
+		copy indexCodeString: (self indexCodeString, '.copy').
+	].
 	
 	copy startNewHistory.
 	
