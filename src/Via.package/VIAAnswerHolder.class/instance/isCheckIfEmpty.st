@@ -1,0 +1,3 @@
+testing
+isCheckIfEmpty
+	^ checkIfEmpty = true

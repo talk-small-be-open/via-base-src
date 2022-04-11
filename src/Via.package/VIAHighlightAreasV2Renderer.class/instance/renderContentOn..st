@@ -22,8 +22,9 @@ renderContentOn: html
 		class: 'highlightAreas';
 		class: taskBrick uiStyle;
 		attributeAt: 'data-wholewordsonly' put: (taskBrick isWholeWordsOnly ifTrue: [ 'yes' ] ifFalse: [ 'no' ] );
+"		class: 'checkable' if: taskBrick isCheckable;"
 		class: 'firstTake' if: self exercise isFirstTake; "obsolete?"
-		class: 'checked' if: self exercise isChecked;
+		class: 'checked' if: (taskBrick isCheckable and: [self exercise isChecked]);
 		id: (id := html nextId);
 
 		script: ((html jQuery id: id) dataAt: 'allSelChars' put: ((html jQuery id: id) find: 'span.selChar'));

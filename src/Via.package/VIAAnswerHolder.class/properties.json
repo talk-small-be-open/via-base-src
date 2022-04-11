@@ -13,7 +13,8 @@
 		"correctionCount",
 		"lastCheckedValueHash",
 		"lastAccessDateTime",
-		"points"
+		"points",
+		"checkIfEmpty"
 	],
 	"name" : "VIAAnswerHolder",
 	"type" : "normal"

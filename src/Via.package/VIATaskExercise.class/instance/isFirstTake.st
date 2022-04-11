@@ -1,8 +1,9 @@
 testing
 isFirstTake
-	| mainAnswers |
-	"OPTIMIZE: Schöner berechnen"
+	^ isFirstTake = true
+
+"	| mainAnswers |
 	mainAnswers := self mainAnswerHolders.
 	^(mainAnswers isEmpty
 		or: [mainAnswers allSatisfy: #isEmpty ])
-		or: [mainAnswers allSatisfy: #isUnchecked]
+		or: [mainAnswers allSatisfy: #isUnchecked]"

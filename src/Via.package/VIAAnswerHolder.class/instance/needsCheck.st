@@ -2,7 +2,7 @@ testing
 needsCheck
 "	^self isUnchecked and: [self isEmpty not and: [self lastCheckedValueHasChanged]]."
 	
-	self isEmpty ifTrue: [ ^ false ].
+	(self isEmpty and: [ self isCheckIfEmpty not ]) ifTrue: [ ^ false ].
 	
 	self isUnchecked ifTrue: [ ^ true ].
 	
