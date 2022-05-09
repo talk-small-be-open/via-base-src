@@ -2,6 +2,8 @@ javascript
 jsForYoutubeVideoPlayer: aVideoPlayer id: aVideoId
 	| options playerOptions jsOnReady |
 	
+	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
+	
 	"https://developers.google.com/youtube/player_parameters.html?playerVersion=HTML5#modestbranding"
 	playerOptions := {
 		'autoplay'->0.

@@ -4,7 +4,10 @@ checkGemStoneObjectLog
 	errorPrio := ObjectLogEntry error.
 	
 	errors := ObjectLogEntry objectLog select: [ :each |
-		each priority = errorPrio and: [ each hasContinuation ] ].
+		each priority = errorPrio ]. "and: [ each hasContinuation ]"
+	
+	"Cheap trick, to ignore the non-continuation error message, of a standard seaside error. Seaside is saving 2 separate errors per incident."
+	errors := errors reject: [ :each | each label = 'Continuation saved to object log' ].
 	
 	LastGemStoneObjectLogCheck ifNil: [ LastGemStoneObjectLogCheck := DateAndTime now ].
 	newErrors := errors select: [ :each | each stamp >= LastGemStoneObjectLogCheck ].

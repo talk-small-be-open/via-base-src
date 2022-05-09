@@ -20,7 +20,7 @@ renderImageDisplayer: anImageDisplayer on: html
 			html skColumnWidth: 'nine' with: [
 				html selectize
 					list: assets;
-					labels: [:each | each displayName];
+					labels: [:each | each uniqueLabel ];
 					beOptional;
 					on: #imageAsset of: anImageDisplayer].
 			html skColumnWidth: 'three' with: [

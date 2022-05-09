@@ -1,6 +1,8 @@
 javascript
 jsForMediaelementVideoPlayer: aVideoPlayer id: aVideoId
 
+	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
+
 	^(String streamContents: [:s |
 			s
 				nextPutAll: 'var player', aVideoId, ' = $("#';

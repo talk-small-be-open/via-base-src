@@ -4,7 +4,10 @@ renderContentOn: html
 		class: 'message';
 		class: css;
 		with: [
-			html tOrS: message].
+			message isTranslationKey
+				ifTrue: [ html t: message ]
+				ifFalse: [ html withLineBreaks: message ]
+"			html tOrS: message"].
 	"Render as button, that robots dont klick it"
 	html form: [
 		html ukSubmitButton
