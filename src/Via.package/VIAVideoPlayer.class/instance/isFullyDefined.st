@@ -1,0 +1,3 @@
+testing
+isFullyDefined
+	^ self hasVideo
