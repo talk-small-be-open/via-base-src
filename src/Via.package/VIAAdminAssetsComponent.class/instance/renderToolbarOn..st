@@ -24,4 +24,5 @@ renderToolbarOn: html
 		self renderSearchStringOn: html.
 		self renderSearchTypeOn: html.
 		self renderSearchPerformOn: html.
+		self renderSortOn: html
 	].

@@ -1,3 +1,3 @@
 visiting
 acceptVisitor: aVisitor
-	aVisitor visitMediaAsset: self
+	^ aVisitor visitMediaAsset: self

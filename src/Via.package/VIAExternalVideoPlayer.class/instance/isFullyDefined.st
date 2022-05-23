@@ -1,0 +1,3 @@
+testing
+isFullyDefined
+	^ videoId notBlank

@@ -1,4 +1,5 @@
 as yet unclassified
 afterDeletion
-	self cleanupAfterDeletion.
-	self deleteTransformedMediaFiles.
+"only after trash"
+"	self cleanupAfterDeletion."
+"	self deleteTransformedMediaFiles."

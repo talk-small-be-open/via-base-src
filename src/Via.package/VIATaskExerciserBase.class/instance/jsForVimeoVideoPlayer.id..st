@@ -2,6 +2,8 @@ javascript
 jsForVimeoVideoPlayer: aVideoPlayer id: aVideoId
 	| options |
 	
+	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
+	
 	"See https://developer.vimeo.com/player/sdk"
 	
 	options := {

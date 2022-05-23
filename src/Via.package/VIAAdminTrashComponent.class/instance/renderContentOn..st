@@ -4,7 +4,8 @@ renderContentOn: html
 	html div: [
 		html anchorButton
 			callback: [self cleanupTrash];
-			with: 'Remove old entries'.
+			with: 'Remove old (> 30 days) entries'.
+		html space.
 		html anchorButton
 			callback: [self clearTrash];
 			with: 'REMOVE ALL (!)'].

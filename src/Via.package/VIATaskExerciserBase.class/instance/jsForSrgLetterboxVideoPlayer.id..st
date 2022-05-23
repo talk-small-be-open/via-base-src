@@ -2,6 +2,8 @@ javascript
 jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
 	| options urn |
 	
+	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
+	
 	"See https://letterbox-web.srgssr.ch/production/api/global.html#LetterboxConfiguration"
 	urn := 'urn:', aVideoPlayer businessUnit asLowercase, ':video:', aVideoPlayer videoId.
 	

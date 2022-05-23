@@ -2,6 +2,8 @@ javascript
 jsForSrg2020VideoPlayer: aVideoPlayer id: aVideoId
 	| options urn queryString |
 	
+	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
+	
 	"See http://tp.srgssr.ch/assets/docs/index.html, but could be outdated"
 	urn := 'urn:', aVideoPlayer businessUnit asLowercase, ':video:', aVideoPlayer videoId.
 	
