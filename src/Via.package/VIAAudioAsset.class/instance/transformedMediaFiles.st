@@ -1,7 +1,9 @@
 as yet unclassified
 transformedMediaFiles
 	| fragmentFilepattern suffix |
-
+	
+	self fileReference isFileDefined ifFalse: [ ^ #() ].
+	
 	suffix := '_*.', self fileReference fileExtension.
 
 	fragmentFilepattern := self fileReference fileName, suffix.

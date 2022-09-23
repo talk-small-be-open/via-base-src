@@ -1,3 +1,5 @@
 as yet unclassified
 fileExtension
-	^VIAPlatform current extensionOfFile: self fileName
+	self isFileDefined ifFalse: [ ^ '' ].
+	
+	^ VIAPlatform current extensionOfFile: self fileName

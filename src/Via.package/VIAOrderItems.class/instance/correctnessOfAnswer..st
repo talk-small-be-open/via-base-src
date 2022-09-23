@@ -5,7 +5,7 @@ correctnessOfAnswer: anAnswer
 	
 	correctCount := 0.
 	anAnswer withIndexDo: [ :each :index |
-		((solution indexOf: each) = index) ifTrue: [ correctCount := correctCount + 1 ]
+		(self isCorrect: each atPosition: index) ifTrue: [ correctCount := correctCount + 1 ]
 	].
 
 	correctCount = 0 ifTrue: [ ^ 0 ].

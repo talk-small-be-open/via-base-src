@@ -2,6 +2,8 @@ as yet unclassified
 transformedMediaFiles
 	| fragmentFilepattern suffix fragments posters |
 
+	self fileReference isFileDefined ifFalse: [ ^ #() ].
+
 	suffix := '_*.', self fileReference fileExtension.
 	fragmentFilepattern := self fileReference fileName, suffix.
 	fragments := VIAPlatform current
