@@ -10,7 +10,7 @@ sendUnlockingNotification: aModule to: aUser
 		stream crlf; crlf.
 		stream nextPutAll: aModule displayName.
 		stream crlf; crlf.
-		stream crlf; nextPutAll: self defaultSignature].
+		stream crlf; nextPutAll: self defaultSignatureAutomatic].
 
 
 	^self sendMailTo: to subject: subject body: body

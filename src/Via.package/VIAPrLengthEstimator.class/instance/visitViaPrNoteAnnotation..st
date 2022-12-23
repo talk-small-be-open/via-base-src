@@ -1,0 +1,3 @@
+visiting
+visitViaPrNoteAnnotation: aViaPrNoteAnnotation
+	self inc: aViaPrNoteAnnotation expression size

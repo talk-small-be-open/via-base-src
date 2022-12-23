@@ -40,3 +40,7 @@ renderContentOn: html
 	html anchor
 		callback: [ self testUserPairB ];
 		with: 'Test Pairing B ...'.
+	html break.
+	html anchor
+		callback: [ self checkHealthAllModules ];
+		with: 'Check health of modules (External videos exist?, ...)'
