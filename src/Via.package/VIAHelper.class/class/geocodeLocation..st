@@ -9,6 +9,10 @@ geocodeLocation: aString
 	
 	aString ifBlank: [ ^emptyResult ].
 	
+	"Would need to setup certificates in GemStone, but we dont want that"
+	"GsSecureSocket disableCertificateVerificationOnClient."
+
+	
 	response := ZnClient new
 		beOneShot;
 		url: 'http://api.geo.admin.ch/rest/services/api/SearchServer';

@@ -6,6 +6,9 @@ checkExternalResourceAvailable
 	apiSecret := self db propertyAt: #srg:api:secret.
 
 	(apiKey isBlank or: [ apiSecret isBlank ]) ifTrue: [ self error: 'No SRG API credentials' ].
+
+	"Would need to setup certificates in GemStone, but we dont want that"
+	GsSecureSocket disableCertificateVerificationOnClient.
 	
 	"OPTIMIZE: Do not get token every single time. But hey, we use this just for admins"
 	response := ZnClient new

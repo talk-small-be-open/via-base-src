@@ -6,6 +6,9 @@ checkExternalResourceAvailable
 	This will also tell us, if it is not available.
 	There is probably a real API for that, but with the hassle of API-keys"
 
+	"Would need to setup certificates in GemStone, but we dont want that"
+	GsSecureSocket disableCertificateVerificationOnClient.
+
 	response := ZnClient new
 		beOneShot;
 		url: 'https://www.youtube.com/oembed';
