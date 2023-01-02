@@ -38,6 +38,10 @@ checkExternalResourceAvailable
 
 "			response isError ifTrue: [ self error: 'Could not get video metadata with SRG API.' ]."
 		
-			^ response isSuccess
+			"Strangely SRG sends back a 203 status some times. From a proxy or so, probably not intended.
+			We read it as success"
+			"^ response isSuccess"
+			^ #(200 201 202 203 204) includes: response code
+			
 				
 	]
