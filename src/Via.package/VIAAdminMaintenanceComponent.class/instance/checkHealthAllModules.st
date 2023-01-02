@@ -14,6 +14,8 @@ checkHealthAllModules
 			warnings add: ('Module ', each displayName, ': ', checker warningMessages asCommaString) ].
 	].
 
-	warnings ifNotEmpty: [
-		self inform: (MCLPlatform joinCollection: warnings delimiter: String lf)
+	warnings
+		ifEmpty: [ self inform: 'Everything OK' ]
+		ifNotEmpty: [
+			self inform: (MCLPlatform joinCollection: warnings delimiter: String lf)
 	]
