@@ -14,7 +14,7 @@ installInGemStone
 	self registerSeasideComponents.
 	self loadDefaultData.
 
-"	self configurePaths."
+	self ensureDefaultConfiguration.
 	
 	"Pre-warm"
 	self runTasksAll5Minutes.
