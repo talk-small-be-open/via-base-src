@@ -16,5 +16,5 @@ initializeDefaultValues
 	websites ifNil: [websites := OrderedCollection new].
 	websiteDatas ifNil: [websiteDatas := IdentityDictionary new].
 
-	self propertyAt: #uploadsBasePath ifAbsentPut: ['/tmp'].
+"	self propertyAt: #uploadsBasePath ifAbsentPut: ['/tmp']."
 	self propertyAt: #webRootPath ifAbsentPut: ['/tmp'].
