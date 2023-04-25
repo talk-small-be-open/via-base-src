@@ -1,5 +1,5 @@
 tasks
 runNightlyTasks
 	self exportModulesAsPdf.
-	self checkHealthOfPublishedModules.
+"	self checkHealthOfPublishedModules."
 	self cleanup.

@@ -1,26 +1,31 @@
 javascript
 jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
-	| options urn |
+	| options urn noStoreOption |
 	
 	aVideoPlayer isFullyDefined ifFalse: [ ^ nil ].
 	
 	"See https://letterbox-web.srgssr.ch/production/api/global.html#LetterboxConfiguration"
 	urn := 'urn:', aVideoPlayer businessUnit asLowercase, ':video:', aVideoPlayer videoId.
+
+	noStoreOption := [ :value | { 'default'->value. 'storage'->false } aD ].
 	
 	options := {
+		'debug'->(self db isDevelopment).
+		'muted'->(noStoreOption value: aVideoPlayer noSound).
 		'container'->('#',aVideoId).
 		'recommendations'->false.
-		'continuousPlayback'->false.
-		'fillMode'->false.
+		'continuousPlayback'->(noStoreOption value: false).
+		'fillMode'->(noStoreOption value: false).
 		'analytics'->false.
 		'components'->{
-        'controlBar'->true.
-        'header'->true.
-        'sharing'->false.
-        'title'->true.
-        'thumbnails'->true.
-        'playButton'->true.
-        'subdivisions'->false.
+			'audioDescription'->false.
+			'controlBar'->true.
+			'header'->true.
+			'sharing'->false.
+			'title'->true.
+			'thumbnails'->true.
+			'playButton'->true.
+			'subdivisions'->false.
 		} aD.
 	} aD.
 	
@@ -45,35 +50,45 @@ jsForSrgLetterboxVideoPlayer: aVideoPlayer id: aVideoId
 			s << ');'.
 		]."
 		
-		s << 'player.on(SRGLetterbox.playerEvents.CAN_PLAY, function(evt) {'.
-		s << 'player.muted('.
+		"SRGLetterbox.playerEvents.CAN_PLAY"
+		s << 'player.on(SRGLetterbox.videojsEvents.READY, function(evt) {'.
+"		s << 'player.muted('.
 		aVideoPlayer noSound javascriptOn: s.
-		s << ');'.
+		s << ');'."
 		aVideoPlayer startSeconds ifNotNil: [ :ss |
+			s << ('if (player.currentTime() != ', ss asString).
+			s << ') {'.
 			s << 'player.currentTime('.
 			ss javascriptOn: s.
-			s << ');'.
+			s << ')};'.
 		].
 		s << '});'.
 
-		aVideoPlayer startSeconds ifNotNil: [ :ss |
-			s << 'player.on([SRGLetterbox.playerEvents.TIME_UPDATE, SRGLetterbox.playerEvents.SEEKING], function(evt) {'.
-			s << ('if (player.currentTime() < ', ss asString).
-			s << ') {'.
-			s << ('player.currentTime(', ss asString, ');').
-"			s << 'player.pause();'."
-			s << '};'.
-			s << '});'.
-		].
+		s << 'player.on([SRGLetterbox.playerEvents.TIME_UPDATE, SRGLetterbox.playerEvents.SEEKING], function(evt) {'.
+			aVideoPlayer noSound ifTrue: [
+				s << 'if (!player.muted()) {player.muted(true)}'.
+			].
 
-		aVideoPlayer endSeconds ifNotNil: [ :es |
-			s << 'player.on(SRGLetterbox.playerEvents.TIME_UPDATE, function(evt) {'.
-			s << ('if (player.currentTime() > ', es asString).
-			s << ') {'.
-			s << ('player.currentTime(', es asString, ');').
-			s << 'player.pause();'.
-			s << '};'.
-			s << '});'.
-		].
 
+			aVideoPlayer startSeconds ifNotNil: [ :ss |
+	"			s << 'player.on([SRGLetterbox.playerEvents.TIME_UPDATE, SRGLetterbox.playerEvents.SEEKING], function(evt) {'."
+				s << ('if (player.currentTime() < ', ss asString).
+				s << ') {'.
+				s << ('player.currentTime(', ss asString, ');').
+				s << 'player.play();'.
+				s << '};'.
+"				s << '});'."
+			].
+
+			aVideoPlayer endSeconds ifNotNil: [ :es |
+	"			s << 'player.on(SRGLetterbox.playerEvents.TIME_UPDATE, function(evt) {'."
+				s << ('if (player.currentTime() > ', es asString).
+				s << ') {'.
+				s << ('player.currentTime(', es asString, ');').
+				s << 'player.pause();'.
+				s << '};'.
+"				s << '});'."
+			].
+
+		s << '});'.
 	]

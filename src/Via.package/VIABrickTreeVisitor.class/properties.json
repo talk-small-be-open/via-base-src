@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"currentModule",
+		"currentTopLevelTask"
+	],
 	"name" : "VIABrickTreeVisitor",
 	"type" : "normal"
 }

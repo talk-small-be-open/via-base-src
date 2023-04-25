@@ -4,4 +4,5 @@ showAll
 	showOnlyMy := false.
 	searchBrickType := nil.
 	searchMatchedTasks := nil.
+	indexCodePartial := nil.
 	self performSearch.

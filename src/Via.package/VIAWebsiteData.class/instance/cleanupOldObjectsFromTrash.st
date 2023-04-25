@@ -1,7 +1,7 @@
 as yet unclassified
 cleanupOldObjectsFromTrash
 	| oldModels threshold |
-	threshold := DateAndTime now - 30 days.
+	threshold := DateAndTime now - 180 days.
 	oldModels := self trashedObjects select: [:each | each first < threshold]
 		thenCollect: [ :each | each second ].
 

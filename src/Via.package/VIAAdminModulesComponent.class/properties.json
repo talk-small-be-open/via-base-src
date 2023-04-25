@@ -13,7 +13,8 @@
 		"searchString",
 		"searchBrickType",
 		"brickTypes",
-		"searchMatchedTasks"
+		"searchMatchedTasks",
+		"indexCodePartial"
 	],
 	"name" : "VIAAdminModulesComponent",
 	"type" : "normal"

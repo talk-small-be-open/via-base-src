@@ -4,15 +4,23 @@ performSearch
 
 	all := self wd modules.
 	searchMatchedTasks := OrderedCollection new.
-	
-	modules := showOnlyMy
-		ifFalse: [all]
-		ifTrue: [all select: [:each | each isContributor: self currentUser]].
+
+	modules := all.
 		
+	"Filter only my"
+	showOnlyMy ifTrue: [
+		modules := modules select: [ :each | each isContributor: self currentUser ] ].
+
 "	searchString ifNotBlank: [
 		modules := modules select: [:each | self matches: each searchString: searchString].
 	]."
 
+	"Filter by index"
+	indexCodePartial ifNotBlank: [
+		modules := modules select: [ :each | each matchesIndexCode: indexCodePartial ]
+	].
+
+	"Filter by search text"
 	(searchBrickType notNil or: [ searchString notBlank ]) ifTrue: [
 		| searcher |
 		searcher := VIASearchBrickVisitor new.
