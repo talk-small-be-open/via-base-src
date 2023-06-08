@@ -13,7 +13,7 @@ renderAllUsersOn: html
 
 
 	html div
-		style: 'text-align: center';
+		class: 'listBatcher';
 		with: batcher.
 
 	html table: [
@@ -48,5 +48,5 @@ renderAllUsersOn: html
 			]]].
 
 	html div
-		style: 'text-align: center';
-		with: batcher
+		class: 'listBatcher';
+		with: batcher.

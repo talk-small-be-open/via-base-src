@@ -7,5 +7,3 @@ initialize
 	mediaClasses := VIAMediaAsset subclasses sortedBy: [:each | each displayName ].
 	
 	self clear.
-		
-	self beRestoringScrollPosition

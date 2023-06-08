@@ -1,3 +1,7 @@
 as yet unclassified
 add: aBrick warning: aString
-	warnings add: { aBrick. aString }
+	| location |
+	
+	location := 'In Task "', currentTopLevelTask displayName, '": '.
+	
+	warnings add: { aBrick. (location, aString) }

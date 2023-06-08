@@ -5,7 +5,7 @@ initializeTabbedNavigationComponent
 
 	self ifRoles: #(admin editor) then: [
 		modulesComponent := VIAAdminModulesComponent new.
-		assetsComponent := VIAAdminAssetsComponent new.
+		assetsComponent := VIAAdminExpertAssetsComponent new.
 
 		tabbedNavigationComponent	
 			add: modulesComponent label: 'Modules';

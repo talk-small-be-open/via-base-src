@@ -4,22 +4,28 @@ performSearch
 
 	all := self wd modules.
 	searchMatchedTasks := OrderedCollection new.
-	
-	modules := showOnlyMy
-		ifFalse: [all]
-		ifTrue: [all select: [:each | each isContributor: self currentUser]].
-		
+
+	"Filter only my"
+	showOnlyMy ifTrue: [
+		all := all select: [ :each | each isContributor: self currentUser ] ].
+
 "	searchString ifNotBlank: [
-		modules := modules select: [:each | self matches: each searchString: searchString].
+		all := all select: [:each | self matches: each searchString: searchString].
 	]."
 
+	"Filter by index"
+	indexCodePartial ifNotBlank: [
+		all := all select: [ :each | each matchesIndexCode: indexCodePartial ]
+	].
+
+	"Filter by search text"
 	(searchBrickType notNil or: [ searchString notBlank ]) ifTrue: [
 		| searcher |
 		searcher := VIASearchBrickVisitor new.
 		searcher searchClass: searchBrickType.
 		searcher searchString: searchString.
 		
-		modules := modules select: [ :each |
+		all := all select: [ :each |
 			| foundTasks |
 			foundTasks := each tasks select: [ :eachTask |
 				searcher start: eachTask.
@@ -29,4 +35,16 @@ performSearch
 			foundTasks notEmpty or: [each matchesSearchString: searchString ]]
 	].
 
-	modules := modules sortedBySortKey
+	"Filter by draft/published"
+	searchPublicationState = #draft ifTrue: [
+		all := all select: [ :each | each isDraft ]
+	].
+	searchPublicationState = #released ifTrue: [
+		all := all select: [ :each | each isReleased ]
+	].
+
+
+
+	all := all sortedBySortKey.
+	
+	self modules: all.

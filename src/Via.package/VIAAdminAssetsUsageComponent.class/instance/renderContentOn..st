@@ -4,11 +4,11 @@ renderContentOn: html
 	self renderToolbarOn: html.
 
 	html div
-		style: 'text-align: center';
+		class: 'listBatcher';
 		with: batcher.
 
 	self renderListOn: html.
 
 	html div
-		style: 'text-align: center';
+		class: 'listBatcher';
 		with: batcher.

@@ -5,7 +5,7 @@ initialize
 	
 	columnsCount := 4.
 	showOnlyMy := true.
-	modules := #().
+	self modules: #().
 	self ifAdmin: [showOnlyMy := false].
 	brickTypes := VIATaskBrick allAuthorReady sortedBy: #displayName.
 

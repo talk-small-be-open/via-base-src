@@ -1,5 +1,7 @@
 accessing
 height
-	^self width
-		ifBlank: [nil]
-		ifNotBlank: [:w | (w asInteger / (videoAsset aspectRatio)) asInteger]
+	videoAsset ifNil: [ ^ nil ].
+	
+	^ self width
+		ifBlank: [ nil ]
+		ifNotBlank: [ :w | (w asInteger / (videoAsset aspectRatio)) asInteger ]

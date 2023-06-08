@@ -1,0 +1,3 @@
+tasks
+runWeeklyTasks
+	self checkHealthOfPublishedModules.
