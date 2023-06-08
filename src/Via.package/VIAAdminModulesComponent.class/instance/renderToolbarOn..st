@@ -30,6 +30,14 @@ renderToolbarOn: html
 				labels: [ :each | each displayName ];
 				on: #searchBrickType of: self.
 			html space.
+			html select
+				beOptional;
+				list: #(draft released);
+				optionalLabel: 'all';
+"				labels: [ :each | each displayName ];"
+				on: #searchPublicationState of: self.
+			html space.
+
 			html submitButton callback: ["do nothing special"]; with: 'Search'.
 			html hiddenInput callback: [self performSearch].
 

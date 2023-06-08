@@ -35,6 +35,16 @@ performSearch
 			foundTasks notEmpty or: [each matchesSearchString: searchString ]]
 	].
 
+	"Filter by draft/published"
+	searchPublicationState = #draft ifTrue: [
+		all := all select: [ :each | each isDraft ]
+	].
+	searchPublicationState = #released ifTrue: [
+		all := all select: [ :each | each isReleased ]
+	].
+
+
+
 	all := all sortedBySortKey.
 	
 	self modules: all.
