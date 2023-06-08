@@ -7,6 +7,11 @@ renderListOn: html
 	self assets
 		ifBlank: [ html paragraph: 'Nothing found' ]
 		ifNotBlank: [
+
+			html div
+				class: 'listBatcher';
+				with: batcher.
+
 			html table class: 'adminAssets'; with: [
 				html tableHead: [
 					html tableRow: [
@@ -38,7 +43,7 @@ renderListOn: html
 								self renderActions: each on: html.
 							]]]]].
 		html div
-			style: 'text-align: center';
+			class: 'listBatcher';
 			with: batcher
 		
 		]

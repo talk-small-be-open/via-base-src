@@ -5,19 +5,17 @@ performSearch
 	all := self wd modules.
 	searchMatchedTasks := OrderedCollection new.
 
-	modules := all.
-		
 	"Filter only my"
 	showOnlyMy ifTrue: [
-		modules := modules select: [ :each | each isContributor: self currentUser ] ].
+		all := all select: [ :each | each isContributor: self currentUser ] ].
 
 "	searchString ifNotBlank: [
-		modules := modules select: [:each | self matches: each searchString: searchString].
+		all := all select: [:each | self matches: each searchString: searchString].
 	]."
 
 	"Filter by index"
 	indexCodePartial ifNotBlank: [
-		modules := modules select: [ :each | each matchesIndexCode: indexCodePartial ]
+		all := all select: [ :each | each matchesIndexCode: indexCodePartial ]
 	].
 
 	"Filter by search text"
@@ -27,7 +25,7 @@ performSearch
 		searcher searchClass: searchBrickType.
 		searcher searchString: searchString.
 		
-		modules := modules select: [ :each |
+		all := all select: [ :each |
 			| foundTasks |
 			foundTasks := each tasks select: [ :eachTask |
 				searcher start: eachTask.
@@ -37,4 +35,6 @@ performSearch
 			foundTasks notEmpty or: [each matchesSearchString: searchString ]]
 	].
 
-	modules := modules sortedBySortKey
+	all := all sortedBySortKey.
+	
+	self modules: all.

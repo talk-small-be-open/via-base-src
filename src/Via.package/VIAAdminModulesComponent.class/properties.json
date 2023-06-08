@@ -14,7 +14,8 @@
 		"searchBrickType",
 		"brickTypes",
 		"searchMatchedTasks",
-		"indexCodePartial"
+		"indexCodePartial",
+		"batcher"
 	],
 	"name" : "VIAAdminModulesComponent",
 	"type" : "normal"
