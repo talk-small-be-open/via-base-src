@@ -1,0 +1,3 @@
+accessing
+hintFragments
+	^ hintFragments
