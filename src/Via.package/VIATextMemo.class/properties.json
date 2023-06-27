@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAInputBase",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIATextMemo",
+	"type" : "normal"
+}
