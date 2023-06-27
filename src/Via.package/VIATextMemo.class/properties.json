@@ -5,7 +5,10 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [ ],
+	"instvars" : [
+		"maxCharCount",
+		"infoPillar"
+	],
 	"name" : "VIATextMemo",
 	"type" : "normal"
 }
