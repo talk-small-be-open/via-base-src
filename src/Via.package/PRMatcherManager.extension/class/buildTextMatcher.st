@@ -12,4 +12,7 @@ buildTextMatcher
 		at: PRAbstractAnnotation markupBegin put: PRAbstractAnnotation;
 		at: VIAPrAnnotatedFormat markupBegin put: VIAPrAnnotatedFormat.
 	PRFormat allSubclassesDo: [ :each | result at: each markup put: each ].
+	
+	VIAApplicationManager current configurePillarTextMatcher: result.
+	
 	^ result
