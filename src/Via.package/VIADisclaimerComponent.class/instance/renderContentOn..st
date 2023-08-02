@@ -5,7 +5,7 @@ renderContentOn: html
 		html heading level2; t: 'disclaimer:dialogTitle'].
 
 	html div
-		a: 'uk-accordion'; "p: '{collapse: false}'"
+		a: 'uk-accordion' p: ('collapsible: false; active: ', (languages size - 1) asString);
 		with: [
 			languages do: [:eachLanguage |
 				html div: [
