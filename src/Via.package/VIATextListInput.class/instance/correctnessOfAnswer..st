@@ -2,7 +2,9 @@ as yet unclassified
 correctnessOfAnswer: aCollection
 	| correctCount divider |
 
-	correctCount := self solutions count: [:each | aCollection includes: each].
+"	correctCount := self solutions count: [:each | aCollection includes: each]."
+
+	correctCount :=  aCollection count: [ :each | self isSolution: each ].
 
 	divider := (self solutions size).
 	

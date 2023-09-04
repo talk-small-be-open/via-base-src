@@ -1,3 +1,6 @@
 as yet unclassified
 isSolution: aValue
-	^self solutions includes: aValue
+	| standardized |
+	standardized := (VIAHelper standardizeCharacters: aValue) trimBoth.
+	
+	^ self solutions includes: standardized

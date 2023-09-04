@@ -15,8 +15,9 @@ renderContentOn: html
 		value: (JSStream on: ( '$("#', inputId asString, '").val()' ) );
 		onError: (html javascript alert: 'Fehler beim Speichern der Markierung!'))
 			asFunction: #(event).
-			
-	html hintBox: 'highlightAreas:seeTutorial'.
+
+	taskBrick isCheckable ifTrue: [
+		html hintBox: 'highlightAreas:seeTutorial' ].
 
 	html div
 		class: 'highlightAreas';

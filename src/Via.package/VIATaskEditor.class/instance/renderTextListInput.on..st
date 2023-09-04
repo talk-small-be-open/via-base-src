@@ -12,7 +12,7 @@ renderTextListInput: aTextListInput on: html
 		html label: 'Correct answers (Each line = one correct answer)'.
 		html textArea on: #solutionsString of: aTextListInput.
 
-		html label: 'Hint fragments'.
+		html label: 'Given fragments (Optional)'.
 		html textArea on: #hintFragmentsString of: aTextListInput.
 
 	]
