@@ -3,8 +3,7 @@ correctnessOfAnswer: aCollection
 	| correctCount divider |
 
 "	correctCount := self solutions count: [:each | aCollection includes: each]."
-
-	correctCount :=  aCollection count: [ :each | self isSolution: each ].
+	correctCount :=  aCollection asSet count: [ :each | self isSolution: each ].
 
 	divider := (self solutions size).
 	

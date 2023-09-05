@@ -11,8 +11,8 @@
 		"moduleExercises",
 		"exams",
 		"lastOpenedModule",
-		"lastOpenedVocabolario",
-		"lastOpenedCommentatio"
+		"lastOpenedCommentatio",
+		"lastOpenedVocabulo"
 	],
 	"name" : "VIAPortfolio",
 	"type" : "normal"

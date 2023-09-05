@@ -6,4 +6,4 @@ removeModule: aModule
 	"dirty, but harry"
 	lastOpenedModule = aModule ifTrue: [ lastOpenedModule := nil ].
 	lastOpenedCommentatio = aModule ifTrue: [ lastOpenedCommentatio := nil ].
-	lastOpenedVocabolario = aModule ifTrue: [ lastOpenedVocabolario := nil ].
+	lastOpenedVocabulo = aModule ifTrue: [ lastOpenedVocabulo := nil ].

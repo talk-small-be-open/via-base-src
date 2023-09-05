@@ -1,3 +1,0 @@
-accessing
-lastOpenedVocabolario
-	^ lastOpenedVocabolario

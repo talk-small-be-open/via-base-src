@@ -39,6 +39,7 @@ __underscore__
 	html strong: 'Misc:'.
 	html preformatted: '
 _ horizontal line
+% Just a comment line without output
 '
 
 ].
