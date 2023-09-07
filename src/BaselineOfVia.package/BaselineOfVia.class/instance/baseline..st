@@ -27,9 +27,13 @@ baseline: spec
 				spec 
 					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ). "'OSSubprocess'"
 "					repository: 'github://talk-small-be-open/via-base-src:master/src'." ].
+		spec package: 'Via-Tests'.
+
 		spec 
 			group: 'default' with: #('Core' );
-			group: 'Core' with: #('Via' ). ].
+			group: 'Core' with: #('Via' );
+			group: 'Tests' with: #('Via-Tests' ).
+		].
 
 	self baselinePillar: spec.
 
