@@ -7,7 +7,10 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"solutions",
-		"hintFragments"
+		"hintFragments",
+		"maxSolutionsCount",
+		"isWholeWordsOnly",
+		"withTypingAssistant"
 	],
 	"name" : "VIATextListInput",
 	"type" : "normal"

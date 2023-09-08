@@ -34,19 +34,10 @@ renderVideoPlayer: aVideoPlayer on: html
 					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer posterImageTimeMs / 1000));
 					on: #posterImageTimeString of: aVideoPlayer.
 				html div class: 'videoTimingTools'; with: [
-					html anchor
-						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
-						with: 'GOTO'.
-					html anchor
-						onClick: 'videoTakeTime("',v,'", "',i,'", true);';
-						with: 'SET'.
-					html anchor
-						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") - 0.04;', 'videoTakeTime("',v,'", "',i,'", true);');
-						with: '<<'.
-					html anchor
-						class: 'clickAction';
-						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") + 0.04;', 'videoTakeTime("',v,'", "',i,'", true);');
-						with: '>>'.
+					html clickAnchor: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");') with: 'GOTO'.
+					html clickAnchor: 'videoTakeTime("',v,'", "',i,'", true);' with: 'SET'.
+					html clickAnchor: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") - 0.04;', 'videoTakeTime("',v,'", "',i,'", true);') with: '<<'.
+					html clickAnchor: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec") + 0.04;', 'videoTakeTime("',v,'", "',i,'", true);') with: '>>'.
 				]
 			].
 			html skColumnWidth: 'two' with: [
@@ -56,12 +47,8 @@ renderVideoPlayer: aVideoPlayer on: html
 					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer startSeconds));
 					on: #startTimeString of: aVideoPlayer.
 				html div class: 'videoTimingTools'; with: [
-					html anchor
-						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
-						with: 'GOTO'.
-					html anchor
-						onClick: 'videoTakeTime("',v,'", "',i,'");';
-						with: 'SET'
+					html clickAnchor: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");') with: 'GOTO'.
+					html clickAnchor: 'videoTakeTime("',v,'", "',i,'");' with: 'SET'
 				].
 			].
 			html skColumnWidth: 'two' with: [
@@ -71,12 +58,8 @@ renderVideoPlayer: aVideoPlayer on: html
 					script: (html jQuery this dataAt: 'sec' put: (aVideoPlayer endSeconds));
 					on: #endTimeString of: aVideoPlayer.
 				html div class: 'videoTimingTools'; with: [
-					html anchor
-						onClick: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");');
-						with: 'GOTO'.
-					html anchor
-						onClick: 'videoTakeTime("',v,'", "',i,'");';
-						with: 'SET'
+					html clickAnchor: ('document.getElementById("',v,'").currentTime = $("#',i,'").data("sec");') with: 'GOTO'.
+					html clickAnchor: 'videoTakeTime("',v,'", "',i,'");' with: 'SET'
 				].
 					
 			].

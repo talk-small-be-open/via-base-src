@@ -1,3 +1,3 @@
 as yet unclassified
 maxPoints
-	^solutions size
+	^ maxSolutionsCount ifBlank: [ solutions size ]
