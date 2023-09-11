@@ -15,7 +15,10 @@ installInPharoDevelopment
 	self runTasksAll5Minutes.
 
 	self registerSeasideComponents.
-	self configureWebserver.
+
+	"configure webserver"
+	"TODO: Install, port, ..."
+"	ZnZincServerAdaptor default useDefaultExpirationHeaders."
 
 	self loadAdmin: 'andreas.brodbeck@mindclue.ch' password: 'test123'.
 	VIADatabase current loadSampleData.
