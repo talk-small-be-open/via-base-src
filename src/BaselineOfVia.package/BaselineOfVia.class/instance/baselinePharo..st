@@ -13,7 +13,7 @@ baselinePharo: spec
 
 		spec baseline: 'Seaside3' with: [
 			spec
-				loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'Development' 'Zinc')
+				loads: #( 'Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'JQueryUI' 'Development' 'Zinc' 'Tests' )
 		].
 	
 		spec package: 'MockGemStone' with: [
