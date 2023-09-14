@@ -12,8 +12,6 @@ baseline: spec
 			spec baseline: 'NeoJSON'.
 			spec group: 'CSV' with: #().
 
-"			spec baseline: 'OSSubprocess' with: [
-				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
 		spec package: 'MCLPlatformPortability' with: [ 
 			spec repository: 'github://talk-small-be-open/utils:master/src'
 		 ].
