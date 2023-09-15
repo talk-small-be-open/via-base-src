@@ -5,4 +5,3 @@ initialize
 
 	self preventHtmlFormSubmission.
 
-	self addContainerDiv.
