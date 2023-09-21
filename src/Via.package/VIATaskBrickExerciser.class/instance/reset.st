@@ -4,5 +4,5 @@ reset
 	taskBrick resetAnswersOfExercise: self exercise.
 
 	"Exit the exerciser, so that it will be freshly created again from the parent exerciser"
-	self class doesUseExitToRestart ifTrue: [
-		self exit ]
+"	self class doesUseExitToRestart ifTrue: [
+		self exit ]"

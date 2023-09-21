@@ -11,7 +11,7 @@ buildComponents
 		taskExerciser
 			parent: self;
 			onFinish: [self gotoNextOrFinish];
-			onCheckButton: [self checkAllExcept: taskExerciser];
+"			onCheckButton: [self checkAllExcept: taskExerciser];"
 			onAnswer: [self rebuild].
 		
 		exerciserComponents
