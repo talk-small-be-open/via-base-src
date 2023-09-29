@@ -1,3 +1,3 @@
 as yet unclassified
 presetAutologinFromSession: aSeasideSession
-	"do nothing"
+	self presetAutologin: aSeasideSession isMobileDevice
