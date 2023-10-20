@@ -1,3 +1,3 @@
 accessing
 loginCount
-	^ loginCount
+	^ loginCount ifNil: [ 0 ]

@@ -3,7 +3,7 @@ showAssets: aCollection
 "	self clear."
 	assets := aCollection.
 
-	batcher := WABatchedList new
+	batcher := VIABatchedList new
 		items: assets;
 		batchSize: batchSize;
 		yourself

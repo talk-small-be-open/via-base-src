@@ -1,4 +1,4 @@
 as yet unclassified
 noteSuccessfulLogin
-	lastLoginAt := DateAndTime.
+	lastLoginAt := DateAndTime now.
 	loginCount := (loginCount ifNil: [ 0 ]) + 1

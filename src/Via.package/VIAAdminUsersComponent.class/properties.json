@@ -8,7 +8,11 @@
 	"instvars" : [
 		"batcher",
 		"users",
-		"searchString"
+		"searchString",
+		"searchRoles",
+		"searchRolesMatchAll",
+		"selectedUsers",
+		"searchSmartFilter"
 	],
 	"name" : "VIAAdminUsersComponent",
 	"type" : "normal"

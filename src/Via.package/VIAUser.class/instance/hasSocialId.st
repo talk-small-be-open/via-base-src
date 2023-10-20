@@ -1,0 +1,3 @@
+accessing
+hasSocialId
+	^ socialIds notBlank

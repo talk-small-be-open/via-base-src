@@ -3,7 +3,9 @@ showUsers: aCollection
 "	self clear."
 	users := aCollection.
 
-	batcher := WABatchedList new
+	self clearSelection.
+
+	batcher := VIABatchedList new
 		items: users;
-		batchSize: 100;
+		batchSize: 10;
 		yourself
