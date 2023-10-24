@@ -20,9 +20,9 @@ performSearch
 		].
 
 		searchSmartFilter = #'invalid-external-user' ifTrue: [
-			foundUsers := foundUsers reject: [ :each |
+			foundUsers := foundUsers select: [ :each |
 				| externalUser |
-				externalUser := (self am externalAuthUserClass tryFromUser: each).
+				externalUser := (self am externalAuthUserClass tryNewFromUser: each).
 				externalUser notNil and: [ externalUser checkExist not ]
 			]
 		].
