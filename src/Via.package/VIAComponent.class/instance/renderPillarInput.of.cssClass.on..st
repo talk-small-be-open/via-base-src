@@ -23,4 +23,7 @@ renderPillarInput: aSymbol of: anObject cssClass: aString on: html
 					);
 					with: [
 "						html iconPreview."
-						html text: 'Preview']]]
+						html text: 'Preview'].
+				html space.
+				html clickAnchor: ((html jQuery id: id) toggleClass: 'noWrap') with: 'Toggle-Linebreak'
+			]]

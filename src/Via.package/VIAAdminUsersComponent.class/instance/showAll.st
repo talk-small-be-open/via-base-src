@@ -1,4 +1,4 @@
 as yet unclassified
 showAll
-	searchString := nil.
+	self clear.
 	self performSearch.

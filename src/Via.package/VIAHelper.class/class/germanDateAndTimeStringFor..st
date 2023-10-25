@@ -1,7 +1,7 @@
 as yet unclassified
 germanDateAndTimeStringFor: aDateAndTime
 	aDateAndTime ifNil: [^''].
-	^String streamContents: [:stream |
+	^ [ String streamContents: [:stream |
 		stream
 			nextPutAll: (aDateAndTime dayOfMonth asString padLeftTo: 2 with: $0);
 			nextPut: $.;
@@ -12,4 +12,4 @@ germanDateAndTimeStringFor: aDateAndTime
 			nextPutAll: (aDateAndTime hour asString padLeftTo: 2 with: $0);
 			nextPut: $:;
 			nextPutAll: (aDateAndTime minute asString padLeftTo: 2 with: $0).
-			]
+			] ] ifError: [ '[invalid date]' ]

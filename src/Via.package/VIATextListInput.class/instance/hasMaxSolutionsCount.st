@@ -1,0 +1,3 @@
+testing
+hasMaxSolutionsCount
+	^ maxSolutionsCount notBlank

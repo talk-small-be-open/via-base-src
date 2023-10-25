@@ -4,7 +4,6 @@ generateWithWkhtmltopdf
 	
 	tempFile := VIATempFile html
 		write: self xhtmlString;
-		close;
 		yourself.
 
 	GRPlatform current ensureExistenceOfFolder: self targetFolder.

@@ -3,7 +3,7 @@ refresh
 	modules := self wd modules sortedBySortKey.
 	assetsPerModule := modules map: [ :each | each assets sortedBySortKey ].
 	
-	batcher := WABatchedList new
+	batcher := VIABatchedList new
 		items: modules;
 		batchSize: 10;
 		yourself

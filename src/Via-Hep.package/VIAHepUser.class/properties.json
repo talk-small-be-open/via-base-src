@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "AndreasBrodbeck 10/24/2023 11:47",
+	"super" : "VIAExternalAuthUser",
+	"category" : "Via-Hep",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isEmailConfirmed",
+		"apiToken",
+		"groups"
+	],
+	"name" : "VIAHepUser",
+	"type" : "normal"
+}

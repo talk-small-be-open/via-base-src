@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAError",
+	"category" : "Via-Hep",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAHepUserError",
+	"type" : "normal"
+}

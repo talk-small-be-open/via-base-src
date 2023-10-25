@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "WAValueCallback",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAWaLateHiddenInputCallback",
+	"type" : "normal"
+}

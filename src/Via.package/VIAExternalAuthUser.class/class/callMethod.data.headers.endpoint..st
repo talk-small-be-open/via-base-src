@@ -1,16 +1,17 @@
 as yet unclassified
 callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: anEndpointPath
-	| postData output response cmd tempFile url |
+	| postData output response cmd postTempFile outTempFile url httpStatus |
 
 	url := self apiUrl.
 
 	url ifBlank: [ self signalError: 'Authentication server not configured' ].
+
+	outTempFile := VIATempFile json.
 	
 	aDictionaryLike ifNotBlank: [
 		postData := aDictionaryLike asDictionary.
-		tempFile := VIATempFile json
+		postTempFile := VIATempFile json
 			write: postData asJson;
-			close;
 			yourself ].
 
 	cmd := String streamContents: [ :s |
@@ -19,7 +20,11 @@ callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: 
 
 		s << 'curl --request '.
 		s << aMethod asUppercase.
-		s << ' --silent --header "Content-Type: application/json; charset=UTF-8" --header "Accept: application/json" '.
+		s << ' --silent -w "%{http_code}" --header "Content-Type: application/json; charset=UTF-8" --header "Accept: application/json" '.
+
+		s << ' --output "'.
+		s << outTempFile filePath.
+		s << '" '.
 
 		aHeadersCollection ifNotBlank: [
 			aHeadersCollection do: [:each |
@@ -30,7 +35,7 @@ callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: 
 	
 		postData ifNotBlank: [
 			s << ' --data @'.
-			s << tempFile filePath.
+			s << postTempFile filePath.
 			s space ].
 
 		s << url.
@@ -46,7 +51,11 @@ callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: 
 
 	(output endsWith: 'CURLFAILED') ifTrue: [ self signalError: 'Error with curl communication' ].
 	
-	response := VIAHelper fromJson: output.
+	httpStatus := output asInteger.
+	response := VIAHelper fromJson: outTempFile contents.
+
+	"Add http status to result"
+	response at: 'httpStatus' put: httpStatus.
 
 	"Signal error and keep tempfile JSON"
 "	response isDictionary ifTrue: [
@@ -55,6 +64,7 @@ callMethod: aMethod data: aDictionaryLike headers: aHeadersCollection endpoint: 
 	"If no error then delete JSON temp file"
 	self ifProduction: [
 		self debugEnabled ifFalse: [
-			tempFile ifNotNil: [tempFile delete] ] ].
+			outTempFile delete.
+			postTempFile ifNotNil: [postTempFile delete] ] ].
 	
 	^ response

@@ -1,4 +1,8 @@
 public
 clear
 	searchString := nil.
-	users := nil
+	searchRoles := #().
+	searchRolesMatchAll := false.
+	searchSmartFilter := nil.
+	users := nil.
+	selectedUsers := nil.
