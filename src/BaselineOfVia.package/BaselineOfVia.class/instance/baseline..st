@@ -12,6 +12,8 @@ baseline: spec
 			spec baseline: 'NeoJSON'.
 			spec group: 'CSV' with: #().
 
+"			spec baseline: 'OSSubprocess' with: [
+				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
 		spec package: 'MCLPlatformPortability' with: [ 
 			spec repository: 'github://talk-small-be-open/utils:master/src'
 		 ].
@@ -22,15 +24,18 @@ baseline: spec
 			spec repository: 'github://talk-small-be-open/utils:master/src'
 		].
 		spec package: 'Via' with: [
-				spec 
-					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ). "'OSSubprocess'"
-"					repository: 'github://talk-small-be-open/via-base-src:master/src'." ].
+			spec requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ). 
+ 		].
+		spec package: 'Via-Hep' with: [
+			spec requires: #('Via'). 
+ 		].
 		spec package: 'Via-Tests'.
 
 		spec 
-			group: 'default' with: #('Core' );
-			group: 'Core' with: #('Via' );
-			group: 'Tests' with: #('Via-Tests' ).
+			group: 'default' with: #('Core');
+			group: 'Core' with: #('Via');
+			group: 'hep' with: #('Via-Hep');
+			group: 'Tests' with: #('Via-Tests').
 		].
 
 	self baselinePillar: spec.
