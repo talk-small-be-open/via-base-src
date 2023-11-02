@@ -3,4 +3,4 @@ postCopy
 	super postCopy.
 
 	solutions := solutions copy.
-	hintFragments := hintFragments copy.
+	hintFragments := hintFragments copyWithCopiedElements.

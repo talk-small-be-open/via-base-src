@@ -4,12 +4,12 @@ renderTextBasedEditorOn: html
 		html textArea
 			class: 'newEntriesInput';
 			placeholder: 'Example:
-	=== A
-	=== Alpha
-	This is the first letter of the greek alphabet.
-	=== B
-	=== Beta
-	This is the second letter.
-	';
+=== A
+=== Alpha
+This is the first letter of the greek alphabet.
+=== B
+=== Beta
+This is the second letter.
+';
 			on: #glossaryString of: self.
 	]

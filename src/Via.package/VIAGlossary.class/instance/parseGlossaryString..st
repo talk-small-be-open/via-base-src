@@ -12,8 +12,8 @@ parseGlossaryString: aString
 	glossarEntries := OrderedCollection new.
 	delimiter := self entryDelimiter.
 
-	"Fast forward to first title"
-	stream upToAll: delimiter.
+	"Fast forward to first title. Use grease for GemStone compat!"
+	stream greaseUpToAll: delimiter.
 
 	[ stream atEnd ] whileFalse: [
 		| title pillarString |
