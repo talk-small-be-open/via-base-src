@@ -1,0 +1,3 @@
+testing
+isDescriptionEmpty
+	^ description isEmpty

@@ -1,0 +1,3 @@
+adding
+removeAllEntries
+	entries removeAll

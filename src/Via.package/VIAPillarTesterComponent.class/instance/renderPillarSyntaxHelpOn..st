@@ -50,6 +50,7 @@ _ horizontal line
 			html preformatted: 'Anchor @anchor (new line)
 Internal link to *jump to>@anchor*
 Link to module by index *See also this module>MOD:2.15*
+Link inside glossary *cheesy>GLO:cheese*
 External link *Google>https://google.com*
 Mailto *Write John>john@cleese.uk*
 '.

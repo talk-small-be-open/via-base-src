@@ -1,9 +1,9 @@
 as yet unclassified
 checkExist
 	| token data |
-	token := VIAAurHepUser getClientToken.
+	token := self class getClientToken.
 
-	data := (VIAAurHepUser getUserDataId: self hepId clientToken: token).
+	data := (self class getUserDataId: self hepId clientToken: token).
 	
 	data ifNil: [ ^ false ].
 	

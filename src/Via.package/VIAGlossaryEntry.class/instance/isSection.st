@@ -1,0 +1,3 @@
+testing
+isSection
+	^ self isDescriptionEmpty
