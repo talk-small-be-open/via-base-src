@@ -18,7 +18,7 @@ parseGlossaryString: aString
 	[ stream atEnd ] whileFalse: [
 		| title pillarString |
 		title := stream nextLine.
-		pillarString := stream upToAll: delimiter.
+		pillarString := stream greaseUpToAll: delimiter.
 		
 		glossarEntries add: (VIAGlossaryEntry title: title description: pillarString )
 	].
