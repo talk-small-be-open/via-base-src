@@ -1,5 +1,5 @@
 as yet unclassified
-visitPrModuleLink: aModuleLink
+visitViaPrModuleLink: aModuleLink
 	html anchor
 		class: 'linkToModule';
 		with: [

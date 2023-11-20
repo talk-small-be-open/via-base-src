@@ -1,3 +1,5 @@
 as yet unclassified
 hintFragmentsString
-	^ MCLPlatform joinCollection: hintFragments delimiter: String lf
+	^ MCLPlatform
+		joinCollection: (hintFragments collect: [ :each | VIAHelper pillarStringFromPillar: each ])
+		delimiter: String lf

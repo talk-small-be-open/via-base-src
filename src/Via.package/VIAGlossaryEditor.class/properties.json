@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAdminComponent",
+	"category" : "Via-View",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"glossary",
+		"cachedGlossaryString"
+	],
+	"name" : "VIAGlossaryEditor",
+	"type" : "normal"
+}
