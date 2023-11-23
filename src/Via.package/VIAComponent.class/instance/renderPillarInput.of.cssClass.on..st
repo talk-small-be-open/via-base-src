@@ -11,7 +11,7 @@ renderPillarInput: aSymbol of: anObject cssClass: aString on: html
 		html div
 			class: 'pillarToolbar';
 			with: [
-				html span class: 'pillarSyntaxIndicator'; with: 'Pillar syntax'.
+				html pillarSyntaxIndicator.
 				html anchor
 					class: 'pillarPreviewLink';
 					onClick: (

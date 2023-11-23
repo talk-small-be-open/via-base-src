@@ -9,7 +9,7 @@ renderTextListInput: aTextListInput on: html
 					on: #hintText of: aTextListInput ].
 		].
 
-		html label: 'Given text pieces (optional)'.
+		html label: [ html text: 'Given text pieces, each line (optional)'. html pillarSyntaxIndicator ].
 		html textArea on: #hintFragmentsString of: aTextListInput.
 		html skRow: [
 			html skColumnWidth: 'three' with: [
@@ -30,7 +30,7 @@ renderTextListInput: aTextListInput on: html
 		
 		html skRow: [
 			html skColumnWidth: 'three' with: [
-				html strong: 'Fixed number of solution lines: '.
+				html strong: 'Fixed number of solution lines (empty = auto): '.
 				html numberInput
 					min: 1;
 					on: #maxSolutionsCount of: aTextListInput.
