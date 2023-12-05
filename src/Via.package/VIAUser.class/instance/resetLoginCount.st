@@ -1,0 +1,3 @@
+initialization
+resetLoginCount
+	loginCount := nil
