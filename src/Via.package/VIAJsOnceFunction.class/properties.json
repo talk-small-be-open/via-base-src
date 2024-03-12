@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "JSDecoration",
+	"category" : "Via-View-Javascript",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "VIAJsOnceFunction",
+	"type" : "normal"
+}

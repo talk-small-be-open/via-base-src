@@ -1,3 +1,3 @@
-as yet unclassified
+api
 holdDuration: anInteger
 	self optionAt: 'holdDuration' put: anInteger
