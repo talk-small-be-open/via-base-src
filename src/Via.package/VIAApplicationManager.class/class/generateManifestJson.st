@@ -23,6 +23,7 @@ generateManifestJson
 			'src'->('/site/pwa/apple/touch-icon-', dim, '.png').
 			'type'->'image/png'.
 			'sizes'->dim.
+			'purpose'->'any maskable'.
 		} asDictionary ]).
 'start_url'->'/app?standalone'.
 'display'->'standalone'.
