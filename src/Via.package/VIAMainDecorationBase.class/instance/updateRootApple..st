@@ -23,14 +23,11 @@ updateRootApple: anHtmlRoot
 		yourself)
 		attributes at: 'sizes' append: '152x152'."
 
-VIAHelper appleStartupImagesData
-	do: [ :each |
-		| x y n |
-		x := each first. y := each second. n := each third.
+VIAHelper appleStartupImagesDataDo: [ :x :y :n :orientation |
 		anHtmlRoot link
 			relationship: 'apple-touch-startup-image';
-			media: ('(device-width: ', x asString, 'px) and (device-height: ', y asString, 'px) and (-webkit-device-pixel-ratio: ', n asString,')');
-			url: '/site/pwa/apple/startup-', (n * x) asString, 'x', (n * y) asString, '.png'.].
+			media: ('(device-width: ', x asString, 'px) and (device-height: ', y asString, 'px) and (-webkit-device-pixel-ratio: ', n asString,') and (orientation: ', orientation, ')');
+			url: '/site/pwa/apple/startup-', (n * x) asString, 'x', (n * y) asString, '-', orientation, '.png' ].
 		
 VIAHelper appleTouchIconImagesData
 	do: [ :each |

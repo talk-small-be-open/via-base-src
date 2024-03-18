@@ -1,10 +1,10 @@
 as yet unclassified
-appleStartupImagesData
-"WIDTH HEIGHT PIXEL-RATIO"
+appleStartupImagesDataDo: aBlock
+"WIDTH HEIGHT PIXEL-RATIO ORIENTATION"
 
-^{
-"iPhone 5 640x1136"
-#(320 568 2).
+"see https://developer.apple.com/design/human-interface-guidelines/layout#Specifications"
+
+{
 "<!-- iPhone Xs Max (1242px x 2688px) --> "
 #(414 896 3).
 "<!-- iPhone Xr (828px x 1792px) --> "
@@ -15,6 +15,12 @@ appleStartupImagesData
 #(414 736 3).
 "<!-- iPhone 8, 7, 6s, 6 (750px x 1334px) --> "
 #(375 667 2).
+#(430 932 3).
+#(393 852 3).
+#(428 926 3).
+#(390 844 3).
+
+
 "<!-- iPad Pro 12.9 (2048px x 2732px) --> "
 #(1024 1366 2).
 "<!-- iPad Pro 11 (1668px x 2388px) --> "
@@ -23,4 +29,11 @@ appleStartupImagesData
 #(834 1112 2).
 "<!-- iPad Mini, Air (1536px x 2048px) --> "
 #(768 1024 2).
-}
+#(744 1133 2).
+#(820 1180 2).
+#(810 1080 2).
+
+} do: [ :each |
+	aBlock value: (each at: 1) value: (each at: 2) value: (each at: 3) value: 'portrait'.
+	aBlock value: (each at: 2) value: (each at: 1) value: (each at: 3) value: 'landscape'.
+]

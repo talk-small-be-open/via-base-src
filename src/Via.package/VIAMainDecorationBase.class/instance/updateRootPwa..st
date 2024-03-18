@@ -8,7 +8,7 @@ updateRootPwa: anHtmlRoot
 
 	anHtmlRoot meta
 		name: 'theme-color';
-		content: '#ffffff'.
+		content: VIAApplicationManager current themeColorForeground.
 
 	self updateRootApple: anHtmlRoot.
 	self updateRootMicrosoft: anHtmlRoot.
