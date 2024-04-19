@@ -16,7 +16,8 @@
 		"browserType",
 		"isFullscreenSupported",
 		"portfolio",
-		"externalUser"
+		"externalUser",
+		"appClient"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

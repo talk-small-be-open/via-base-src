@@ -19,7 +19,8 @@
 		"isInvitee",
 		"mailingConfiguration",
 		"lastLoginAt",
-		"loginCount"
+		"loginCount",
+		"appClients"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"
