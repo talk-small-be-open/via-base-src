@@ -9,6 +9,6 @@ renderCompositeTask: aCompositeTask on: html
 		class: 'taskBricks';
 		with: [
 			aCompositeTask children do: [:each |
-				html listItem class: 'taskChild'; with: [
+				html listItem class: 'taskChild'; class: each className; with: [
 					self renderTaskBrickHandle: each parentBrick: aCompositeTask on: html.
 					each acceptRenderingVisitor: self on: html]]].

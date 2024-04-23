@@ -4,7 +4,12 @@ createGlossaryString
 		entries do: [ :each |
 			s << self entryDelimiter.
 			s << each title.
-"			s lf."
+			each isSyntaxEmpty ifFalse: [
+				s lf.
+				s << each syntax pillarString.
+				s lf.
+				s << self contentDelimiter.
+			].
 			each isDescriptionEmpty ifFalse: [
 				s lf.
 				s << each description pillarString.
