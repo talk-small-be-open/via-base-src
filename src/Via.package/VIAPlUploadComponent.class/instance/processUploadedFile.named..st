@@ -15,7 +15,7 @@ processUploadedFile: aFilepathString named: aNameString
 		fileBasePath: self targetBasePath;
 		fileRelativePath: uploadRelativeDir;
 		fileName: uniqueFilename;
-		title: aNameString;
+		title: (VIAPlatform current basenameNoExtensionOfFile: aNameString);
 		yourself.
 
 	tempFileReferences add: fileReference.

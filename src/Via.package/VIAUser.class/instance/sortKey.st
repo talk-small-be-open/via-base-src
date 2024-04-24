@@ -1,3 +1,5 @@
 as yet unclassified
 sortKey
-	^(self fullNameFormal, self email) asLowercase
+	^ String streamContents: [ :s |
+		s << self fullNameFormal asLowercase.
+		self email ifNotBlank: [ :e | s << e asLowercase ] ]

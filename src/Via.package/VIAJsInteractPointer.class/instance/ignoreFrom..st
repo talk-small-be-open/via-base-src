@@ -1,3 +1,3 @@
-as yet unclassified
+api
 ignoreFrom: aString
 	self optionAt: 'ignoreFrom' put: aString

@@ -26,7 +26,8 @@ baseline: spec
 		spec package: 'Via' with: [
 			spec requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ). 
  		].
-		spec package: 'Via-Hep' with: [
+		"Name without hyphen, because GemStone would confuse package namespaces"
+		spec package: 'ViaHep' with: [
 			spec requires: #('Via'). 
  		].
 		spec package: 'Via-Tests'.
@@ -34,7 +35,7 @@ baseline: spec
 		spec 
 			group: 'default' with: #('Core');
 			group: 'Core' with: #('Via');
-			group: 'hep' with: #('Via-Hep');
+			group: 'hep' with: #('ViaHep');
 			group: 'Tests' with: #('Via-Tests').
 		].
 

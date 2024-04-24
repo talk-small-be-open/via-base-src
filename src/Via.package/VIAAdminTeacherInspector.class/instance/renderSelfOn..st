@@ -4,5 +4,5 @@ renderSelfOn: html
 	self renderModelToolbarOn: html.
 	
 
-	html strong: 'Student groups:'.
+	html heading level2; with: 'Student groups:'.
 	self renderObjects: studentsGroups on: html

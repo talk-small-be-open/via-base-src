@@ -1,7 +1,7 @@
 finders
 findOrCreatePortfolioByUser: aUser
 	^(self findPortfolioByUser: aUser) ifNil: [
-		self addPortfolio: (VIAPortfolio new
+		self addPortfolio: (self am portfolioClass new
 			user: aUser;
 			yourself).
 		]

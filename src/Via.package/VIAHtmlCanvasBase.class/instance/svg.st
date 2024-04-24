@@ -1,3 +1,3 @@
 as yet unclassified
 svg
-	^ self tag: 'svg'
+	^ self brush: VIAWaSvgTag new

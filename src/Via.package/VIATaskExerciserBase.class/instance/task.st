@@ -1,0 +1,3 @@
+accessing
+task
+	^ self subclassResponsibility

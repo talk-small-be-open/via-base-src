@@ -6,6 +6,7 @@ renderContentOn: html
 	html form: [
 		html label: 'Title of module'.
 		html textInput class: 'title'; on: #title of: model.
+		html textInput class: 'subtitle'; on: #subtitle of: model.
 		self ifFeature: #module:indexCode then: [
 			html label: 'Index code' help: '(E.g. chapter number like "12.5" or similar)'.
 			html textInput on: #string of: model indexCode].

@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAObject",
+	"category" : "Via-Misc",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"id",
+		"lastSeenAt",
+		"createdAt"
+	],
+	"name" : "VIAApplicationClient",
+	"type" : "normal"
+}
