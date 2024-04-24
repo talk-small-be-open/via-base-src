@@ -8,6 +8,7 @@
 	"instvars" : [
 		"tasks",
 		"title",
+		"subtitle",
 		"imageAsset",
 		"authorUsers",
 		"coAuthorUsers",

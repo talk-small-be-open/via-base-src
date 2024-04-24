@@ -19,7 +19,8 @@
 		"mailingComponent",
 		"statusComponent",
 		"supportComponent",
-		"trashComponent"
+		"trashComponent",
+		"siteAdminComponent"
 	],
 	"name" : "VIAAdminMainComponent",
 	"type" : "normal"

@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAnswerItem",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [
+		"Default"
+	],
+	"instvars" : [ ],
+	"name" : "VIADoneAnswerItem",
+	"type" : "normal"
+}

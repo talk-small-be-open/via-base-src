@@ -26,6 +26,8 @@ initializeTabbedNavigationComponent
 		mailingComponent := VIAAdminMailingComponent new.
 		maintenanceComponent := VIAAdminMaintenanceComponent new.
 		trashComponent := VIAAdminTrashComponent new.
+		
+		self am siteAdminClass ifNotNil: [ :class | siteAdminComponent := class new. ].
 
 		tabbedNavigationComponent	
 			add: uiTextComponent label: 'UI Texts';
@@ -44,3 +46,6 @@ initializeTabbedNavigationComponent
 		tabbedNavigationComponent add: supportComponent label: 'Support'.
 		tabbedNavigationComponent add: statusComponent label: 'Status'
 	].
+
+	siteAdminComponent ifNotNil: [ 
+		tabbedNavigationComponent add: siteAdminComponent label: self website title ]

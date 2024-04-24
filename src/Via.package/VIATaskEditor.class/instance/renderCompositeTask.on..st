@@ -10,6 +10,11 @@ renderCompositeTask: aCompositeTask on: html
 				html break.
 				html label with: 'Subtitle'.
 				html textInput class: 'subtitle'; on: #subtitle of: aCompositeTask.
+
+				self ifFeature: #module:teacherNotes then: [
+					html label: 'Remarks for teachers'.
+					self renderPillarInput: #teacherNotesPillarString of: aCompositeTask on: html ].
+
 				html skRow: [
 					html skColumnWidth: 'six' with: [
 						html label with: 'Restricted to'.

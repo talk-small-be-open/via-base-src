@@ -1,6 +1,10 @@
 as yet unclassified
 renderGlobalSettingsOn: html
 	html heading level3; with: 'Global settings'.
+	html skAnchorButton
+		callback: [ self addGlobalValue ];
+		with: 'Add'.
+
 	html form: [
 		html table: [
 			self db properties keys sorted do: [:key |

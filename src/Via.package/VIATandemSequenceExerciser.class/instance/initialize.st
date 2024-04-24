@@ -3,8 +3,6 @@ initialize
 	| qAndASequence |
 	
 	super initialize.
-
-	self addContainerDiv.
 	
 	totalQAndAs := taskBrick qAndACount.
 
