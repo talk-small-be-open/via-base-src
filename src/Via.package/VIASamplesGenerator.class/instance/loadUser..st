@@ -12,7 +12,7 @@ loadUser: aWebsite
 			yourself).
 		aWebsite data addUser: user.
 
-		portfolio := VIAPortfolio new
+		portfolio := self am portfolioClass new
 			user: user;
 			yourself.
 		

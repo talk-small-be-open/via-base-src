@@ -1,5 +1,5 @@
 initialization
 initialize
-	portfolio := (VIAPortfolio new
+	portfolio := (self am portfolioClass new
 		user: self;
 		yourself).
