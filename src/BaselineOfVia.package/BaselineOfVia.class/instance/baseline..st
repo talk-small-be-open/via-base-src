@@ -42,6 +42,8 @@ baseline: spec
 	self baselinePillar: spec.
 
 	self baselinePharo: spec.
+	self baselinePharo10: spec.
+
 "	self baselinePharoPillarVersion056: spec."
 	
 	self baselineGemStone: spec.

@@ -60,11 +60,13 @@ renderContentOn: html
 			on: #coAuthorUsers of: model.
 		html label: 'Level'.
 		html select
+			beOptional;
 			labels: [:each | each displayName];
 			list: (VIALevelTag allSortedForWebsite: self website);
 			on: #levelTag of: model classification.
 		html label: 'Duration'.
 		html select
+			beOptional;
 			labels: [:each | each displayName];
 			list: (VIADurationTag allSortedForWebsite: self website);
 			on: #durationTag of: model classification.

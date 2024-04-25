@@ -26,6 +26,7 @@ renderCompositeTask: aCompositeTask on: html
 					html skColumnWidth: 'six' with: [
 						html label: 'Level'.
 						html select
+							beOptional;
 							labels: [:each | each displayName];
 							list: (VIALevelTag allSortedForWebsite: self website);
 							on: #levelTag of: task classification ].

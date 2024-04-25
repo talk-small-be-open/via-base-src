@@ -1,7 +1,7 @@
 baselines
 baselinePharo: spec
 	spec for: #'pharo' do: [
-		"TODO: OSSubprocess"
+		"OSSubprocess"
 		spec baseline: 'OSSubprocess' with: [
 			spec repository: 'github://pharo-contributions/OSSubprocess:master/repository'].
 
