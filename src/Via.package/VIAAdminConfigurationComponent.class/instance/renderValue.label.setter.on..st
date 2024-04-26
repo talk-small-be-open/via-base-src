@@ -1,7 +1,13 @@
 as yet unclassified
 renderValue: aValue label: aLabelString setter: aSetterBlock on: html
 	
-	aValue isBlock ifTrue: [ ^ self ].
+	"Exclude some system values from being displayed and overwritten"
+"	aValue isBlock ifTrue: [ ^ self ]."
+	(
+	aValue isNumber
+	or: [ aValue isString
+	or: [ (aValue isKindOf: Boolean)
+	or: [ aValue isNil ] ] ] ) ifFalse: [ ^ self ].
 	
 	html tableRow: [
 		html tableData: [html text: aLabelString].
