@@ -29,8 +29,8 @@ renderTextListInput: aTextListInput on: html
 		html textArea on: #solutionsString of: aTextListInput.
 		
 		html skRow: [
-			html skColumnWidth: 'three' with: [
-				html strong: 'Fixed number of solution lines (empty = auto): '.
+			html skColumnWidth: 'twelve' with: [
+				html label: 'Fixed number of solution lines (empty = auto):'.
 				html numberInput
 					min: 1;
 					on: #maxSolutionsCount of: aTextListInput.
