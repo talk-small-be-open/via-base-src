@@ -1,4 +1,4 @@
 as yet unclassified
 equalityArray
 	"Straightforward, simple standard implementation"
-	^ { self asString }
+	^ { object }
