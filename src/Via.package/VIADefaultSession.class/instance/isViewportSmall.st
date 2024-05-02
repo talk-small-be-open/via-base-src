@@ -1,3 +1,3 @@
 viewport
 isViewportSmall
-	^self viewportWidth < 640
+	^ self viewportWidth < viewBreakpointS

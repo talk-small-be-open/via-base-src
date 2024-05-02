@@ -3,4 +3,6 @@ initialize
 	super initialize.
 	self detectWebsite.
 
-	deviceDetectionDone := false
+	deviceDetectionDone := false.
+	viewBreakpointS := 640.
+	viewBreakpointM := 1024.
