@@ -1,7 +1,7 @@
 as yet unclassified
 cookieLogin: aRequest
 	| user cookieName |
-	
+
 	cookieName := self wd propertyAt: #login:rememberMe:cookieName.
 
 	cookieName ifBlank: [ ^ self ].
