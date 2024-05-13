@@ -2,6 +2,8 @@ as yet unclassified
 appleTouchIconImagesData
 "WIDTH HEIGHT PIXEL-RATIO"
 
+"See https://www.ios-resolution.com/"
+
 ^{
 #(57 57 1).
 #(60 60 1).

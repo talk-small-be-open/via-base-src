@@ -5,6 +5,6 @@ updateRootAndroid: anHtmlRoot
 		name: 'mobile-web-app-capable';
 		content: 'yes'.
 
-	anHtmlRoot meta
+"	anHtmlRoot meta
 		name: 'theme-color';
-		content: 'black'.
+		content: 'black'."

@@ -7,21 +7,17 @@ updateRootApple: anHtmlRoot
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-capable';
 		content: 'yes'.
+
+	"maybe old style. New with webmanifest"
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-status-bar-style';
 		content: 'black'.
+
+	"maybe old style. New with webmanifest"
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-title';
 		content: self website title.
 
-"	anHtmlRoot link
-		relationship: 'apple-touch-icon';
-		url: '/site/pwa/apple/touch-icon.png'."
-"	(anHtmlRoot link
-		relationship: 'apple-touch-icon';
-		url: 'icon-152x152.png';
-		yourself)
-		attributes at: 'sizes' append: '152x152'."
 
 VIAHelper appleStartupImagesDataDo: [ :x :y :n :orientation |
 		anHtmlRoot link

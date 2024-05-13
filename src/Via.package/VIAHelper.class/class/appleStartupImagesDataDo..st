@@ -2,7 +2,10 @@ as yet unclassified
 appleStartupImagesDataDo: aBlock
 "WIDTH HEIGHT PIXEL-RATIO ORIENTATION"
 
-"see https://developer.apple.com/design/human-interface-guidelines/layout#Specifications"
+"
+See https://developer.apple.com/design/human-interface-guidelines/layout#Specifications
+See https://www.ios-resolution.com/
+"
 
 {
 "<!-- iPhone Xs Max (1242px x 2688px) --> "
