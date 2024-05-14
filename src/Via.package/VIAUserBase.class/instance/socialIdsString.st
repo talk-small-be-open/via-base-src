@@ -1,3 +1,3 @@
 as yet unclassified
 socialIdsString
-	^socialIds asCommaString
+	^self socialIds asCommaString
