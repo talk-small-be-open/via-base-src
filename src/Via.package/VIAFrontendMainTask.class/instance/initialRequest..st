@@ -4,10 +4,15 @@ initialRequest: aRequest
 
 	super initialRequest: aRequest.
 
+	"Try login from a remember cookie"
 	self cookieLogin: aRequest.
 	
+	"Try login from external social auth"
 	self socialLogin: aRequest.
-	
+
+	"Give the session the chance to do some initial stuff, maybe even some login logic"
+	self session initialRequest: aRequest.
+		
 	"Get the command, if any given"
 	aRequest at: 'c' ifPresent: [:value |
 		command := self wd findApplicationCommandByCode: value].
@@ -16,7 +21,7 @@ initialRequest: aRequest
 	"OPTIMIZE: Secure it"
 "	aRequest at: 'beta' ifPresent: [:value | self session isBeta: true]."
 	
-	isEmbedded := self requestContext request includesKey: 'embed'.
+	isEmbedded := aRequest includesKey: 'embed'.
 	
 	"Check for some direct access URL patterns and rewrite them into commands"
 	urlPath := aRequest url path copy.

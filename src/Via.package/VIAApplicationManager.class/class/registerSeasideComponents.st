@@ -13,6 +13,7 @@ registerSeasideComponents
 	"Register some auxiliary handlers"
 	VIASessionKeepaliveRequestHandler register.
 	VIAPingRequestHandler register.
+	VIAWebmanifestRequestHandler register.
 	
 	WAAdmin defaultDispatcher defaultName: 'app'.
 	

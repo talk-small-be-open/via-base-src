@@ -6,3 +6,5 @@ initialize
 	deviceDetectionDone := false.
 	viewBreakpointS := 640.
 	viewBreakpointM := 1024.
+
+	isStandalonePwa := false.

@@ -5,13 +5,10 @@ installRememberCookie: aRequestContext website: aWebsite
 	cookieName := (aWebsite data propertyAt: #login:rememberMe:cookieName ifBlankPut: [UUID new asString36]).
 	durationDays := (aWebsite data propertyAt: #login:rememberMe:expireInDays ifBlankPut: [30]).
 	
-	rememberToken ifNil: [
-		rememberToken := UUID new asString36 ].
-
 	aRequestContext response addCookie: 
 		(aRequestContext newCookie
 			key: cookieName;
-			value: rememberToken;
+			value: self rememberToken;
 			discard: false;
 			secure: true;
 			expireIn: durationDays days;

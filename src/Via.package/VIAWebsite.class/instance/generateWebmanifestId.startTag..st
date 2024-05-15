@@ -1,17 +1,19 @@
-obsolete
-generateManifestJson
-	| j website path |
+as yet unclassified
+generateWebmanifestId: anIdString startTag: aStartTag
+	| dict startUrl |
 	
-	"OPTIMIZE: For each website an individual manifest?"
-	website := self db websites first.
-	path := (self db propertyAt: #webRootPath), '/site/'.
-
-	j := {
-'name'->(website title).
-'short_name'->(website title).
-'lang'->(website languageCode).
+	startUrl := WAUrl new.
+	startUrl addToPath: 'app'.
+	startUrl addField: 'standalone'.
+	
+	aStartTag ifNotBlank: [ startUrl addField: 'tag' value: aStartTag ].
+	
+	dict := {
+'name'->(self title).
+'short_name'->(self title).
+'id'->('/app?', anIdString).
+'lang'->(self languageCode asString).
 'dir'->'ltr'.
-"'description'->'App für ...'."
 
 "We are lazy and just take the icons from apple"
 'icons'->(VIAHelper appleTouchIconImagesData collect: [ :each |
@@ -25,11 +27,12 @@ generateManifestJson
 			'sizes'->dim.
 			'purpose'->'any maskable'.
 		} asDictionary ]).
-'start_url'->'/app?standalone'.
+'start_url'->(startUrl asString).
+'scope'->'/'. "the whole domain, including keepalive and other utility pathes"
 'display'->'standalone'.
 'orientation'->'portrait'.
 'background_color'->(self themeColorBackground).
 'theme_color'->(self themeColorForeground).
 } asDictionary.
 
-	GRPlatform current write: j asJson toFile: 'manifest.webmanifest' inFolder: path
+	^ dict

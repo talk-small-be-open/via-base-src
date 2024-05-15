@@ -19,7 +19,8 @@
 		"externalUser",
 		"appClient",
 		"viewBreakpointS",
-		"viewBreakpointM"
+		"viewBreakpointM",
+		"isStandalonePwa"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"
