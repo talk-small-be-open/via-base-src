@@ -1,6 +1,10 @@
 as yet unclassified
 manifestUrlFor: aWebsite id: aWebAppIdString tag: anOptionalTag
-	| id tag |
+	| id tag url |
 	id := aWebAppIdString ifBlank: [ '-' ].
 	tag := anOptionalTag ifBlank: [ '-' ].
-	^ '/webmanifest/', aWebsite code, '/', id, '/', tag, '/manifest.webmanifest'
+	url := '/webmanifest/', aWebsite code, '/', id, '/manifest.webmanifest'.
+	
+	anOptionalTag ifNotBlank: [ url := url, '?tag=', tag. ].
+
+	^ url

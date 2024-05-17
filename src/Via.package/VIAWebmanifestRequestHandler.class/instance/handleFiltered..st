@@ -1,8 +1,9 @@
 as yet unclassified
 handleFiltered: aRequestContext
 
-	| urlPath websiteCode manifestId tag website dict |
-	urlPath := aRequestContext request url path.
+	| urlPath websiteCode manifestId tag website dict url |
+	url := aRequestContext request url.
+	urlPath := url path.
 
 	websiteCode := urlPath at: 2.
 	
@@ -13,8 +14,9 @@ handleFiltered: aRequestContext
 	manifestId := urlPath at: 3.
 	manifestId = '-' ifTrue: [ manifestId := nil ].
 
-	tag := urlPath at: 4.
-	tag = '-' ifTrue: [ tag := nil ].
+	tag := url queryFields at: 'tag' ifAbsent: [ nil ].
+"	tag := urlPath at: 4.
+	tag = '-' ifTrue: [ tag := nil ]."
 	
 	dict := website generateWebmanifestId: manifestId startTag: tag.
 	

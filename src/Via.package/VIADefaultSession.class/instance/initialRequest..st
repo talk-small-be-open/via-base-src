@@ -5,4 +5,5 @@ initialRequest: aRequest
 	"subclasses do more"
 	
 	"App started from webmanifest start_url"
-	self isStandalonePwa: (aRequest includesKey: 'standalone').
+	"IMPORTANT: Do not reset flag, since we might have a new seaside initialRequest WITHIN the standalone PWA. Only lock in to =true"
+	(aRequest includesKey: 'standalone') ifTrue: [ self beStandalonePwa ].

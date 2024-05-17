@@ -21,7 +21,8 @@ renderContentOn: html
 		onSuccess: ('handleSessionCheck(data)' asFunction: #(data status));
 		onError: 'clearInterval(checkaliveInterval);') javascriptContentOn: js.
 	js
-		nextPutAll: '}, 120000);'. "120 sec"
+		nextPutAll: '}, 120000);'; "120 sec"
+		setTimeout: ((self session class sessionDurationSeconds - 600) * 1000). "Wait until almost the session will expire, before start polling."
 
 	html scriptDefer: js.
 	
