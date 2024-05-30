@@ -1,6 +1,6 @@
 as yet unclassified
 renderContentOn: html
-	| keepaliveUrl appName js |
+	| keepaliveUrl appName |
 
 	self renderNextOn: html.
 
@@ -13,12 +13,25 @@ renderContentOn: html
 		stream nextPutAll: appName.
 	].
 
-	js := JSStream new.
+"	js := JSStream new.
 	js nextPutAll: 'var keepaliveInterval; keepaliveInterval = setInterval(function(){'.
 	(html jQuery ajax
 		url: keepaliveUrl;
-		onError: 'clearInterval(keepaliveInterval);alert("Error: Could not keep session alive. You might have been logged out.");') javascriptContentOn: js.
+		onError: 'clearInterval(keepaliveInterval);alert(""Error: Could not keep session alive. You might have been logged out."");') javascriptContentOn: js.
 	js
-		nextPutAll: '}, 540000);'. "9 Minuten"
+		nextPutAll: '}, 540000);'.
+		
+	html scriptDefer: js."
+			
+	"Keepalive every 30 minutes = 1'800'000"
+	html script: '
+function callKeepalive() {
+	', (html jQuery ajax
+		url: keepaliveUrl;
+		onSuccess: 'setTimeout(callKeepalive, 1800000);'
+	) asJavascript, '
+}
+setTimeout(callKeepalive, 1800000);
+'.		
+		
 
-	html scriptDefer: js
