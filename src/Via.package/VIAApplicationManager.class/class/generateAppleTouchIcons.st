@@ -1,4 +1,4 @@
-as yet unclassified
+generators
 generateAppleTouchIcons
 	| path bg |
 

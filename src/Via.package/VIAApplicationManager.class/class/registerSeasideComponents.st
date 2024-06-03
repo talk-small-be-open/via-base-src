@@ -13,7 +13,8 @@ registerSeasideComponents
 	"Register some auxiliary handlers"
 	VIASessionKeepaliveRequestHandler register.
 	VIAPingRequestHandler register.
-	VIAWebmanifestRequestHandler register.
+	self isUsingDynamicWebmanifests ifTrue: [
+		VIAWebmanifestRequestHandler register ].
 	
 	WAAdmin defaultDispatcher defaultName: 'app'.
 	

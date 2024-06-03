@@ -1,4 +1,4 @@
-as yet unclassified
+webmanifest
 generateWebmanifestId: anIdString startTag: aStartTag
 	| dict startUrl |
 	
@@ -11,7 +11,7 @@ generateWebmanifestId: anIdString startTag: aStartTag
 	dict := {
 'name'->(self title).
 'short_name'->(self title).
-'id'->('/app?', anIdString).
+'id'->('/app?', anIdString). "Should be in URL syntax according to spec (?)"
 'lang'->(self languageCode asString).
 'dir'->'ltr'.
 

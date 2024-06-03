@@ -1,4 +1,7 @@
-as yet unclassified
+generators
 generatePwaFiles
-" is generated dynamically with VIAWebmanifestRequestHandler	self generateManifestJson."
+
+	"Could be dynamic, see VIAWebmanifestRequestHandler"
+	self isUsingStaticWebmanifests ifTrue: [ self generateStaticManifestJson ].
+	
 	self generatePwaImages.

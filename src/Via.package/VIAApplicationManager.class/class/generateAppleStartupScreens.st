@@ -1,4 +1,4 @@
-as yet unclassified
+generators
 generateAppleStartupScreens
 	| path bg |
 
