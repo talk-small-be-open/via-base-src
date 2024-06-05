@@ -15,7 +15,7 @@ updateRootPwa: anHtmlRoot
 	].
 
 	self am isUsingStaticWebmanifests ifTrue: [
-		manifest url: ('/', self website webmanifestFilename).
+		manifest url: ('/site/', self website webmanifestFilename).
 	].
 
 	anHtmlRoot meta

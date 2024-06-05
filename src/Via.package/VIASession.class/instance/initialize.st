@@ -6,3 +6,4 @@ initialize
 	self clearCachedUiTexts.
 	self initializeAnonymousUser.
 
+	loginMethod := nil

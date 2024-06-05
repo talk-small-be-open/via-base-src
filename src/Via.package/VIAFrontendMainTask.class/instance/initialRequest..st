@@ -5,7 +5,8 @@ initialRequest: aRequest
 	super initialRequest: aRequest.
 
 	"Try login from a remember cookie"
-	self cookieLogin: aRequest.
+	self autologin.
+"	self cookieLogin: aRequest."
 	
 	"Try login from external social auth"
 	self socialLogin: aRequest.

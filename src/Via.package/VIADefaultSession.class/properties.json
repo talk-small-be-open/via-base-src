@@ -20,7 +20,8 @@
 		"appClient",
 		"viewBreakpointS",
 		"viewBreakpointM",
-		"isStandalonePwa"
+		"isStandalonePwa",
+		"autologinUsers"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"
