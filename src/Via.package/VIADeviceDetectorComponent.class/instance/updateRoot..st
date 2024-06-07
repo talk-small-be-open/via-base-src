@@ -36,7 +36,7 @@ updateRoot: anHtmlRoot
 "	anHtmlRoot javascript defer; url: '/js/js.cookie.js'."
 	"Our own library
 	REMARK: We do not defer, because some of it we might use in early JavaScript"
-"	anHtmlRoot javascript url: '/js/lib.js'."
+	anHtmlRoot javascript url: '/js/lib.js'.
 	
 
 	"CSS from the site repository"
