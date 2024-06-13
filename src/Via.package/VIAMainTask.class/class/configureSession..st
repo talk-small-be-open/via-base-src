@@ -13,3 +13,6 @@ configureSession: anApp
 	
 	"What to do when the maximum number of sessions is reached. Only matters when the maximum size is bigger than 0."
 	anApp preferenceAt: #overflowAction put: #removeRelativeOldest. "see WAHashCache overflowActions"
+
+
+	anApp initializeCache. "Needs to be recreated. Seaside initializes the cache to early, before preferences are overwritten"

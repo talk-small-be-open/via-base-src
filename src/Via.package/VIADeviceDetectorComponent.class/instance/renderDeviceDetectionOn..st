@@ -3,9 +3,8 @@ renderDeviceDetectionOn: html
 	| anchorTag |
 	html ukContainer with: [
 		html div class: 'uk-position-center uk-align-center'; style: 'text-align: center'; with: [
-			html heading
-				onClick: (html javascript alert: (JSStream on: self jsJsonData));
-				with: self website title.
+"			html heading
+				with: self website title."
 			html paragraph: [
 				anchorTag := html anchor
 					class: 'spinnerMessage';
@@ -15,6 +14,7 @@ renderDeviceDetectionOn: html
 			html break; break.
 			html image
 				url: '/images/svg-loaders/three-dots.svg';
+				onClick: (html javascript alert: (JSStream on: self jsJsonData));
 				style: 'width: 2em'.
 	
 			detectionDoneUrl := anchorTag url.

@@ -1,6 +1,9 @@
 as yet unclassified
 updateRootApple: anHtmlRoot
 
+	"If already install, forget that bullshit"
+	self session isStandalonePwa ifTrue: [ ^ self ].
+
 	"Home screen for Safari"
 	"Siehe https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html"
 	"und: https://medium.com/appscope/designing-native-like-progressive-web-apps-for-apple-1b3cdda1d0e8"

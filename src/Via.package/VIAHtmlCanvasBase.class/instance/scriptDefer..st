@@ -7,4 +7,4 @@ scriptDefer: aStringOrJs
 	else { document.addEventListener(""DOMContentLoaded"", code, {once: true} ) }
 })(function() {', aStringOrJs greaseString, '})')."
 
-	self script: ('scriptDefer(function() {', aStringOrJs greaseString, '})').
+	self script: ('scriptDefer(() => {', aStringOrJs greaseString, '})').

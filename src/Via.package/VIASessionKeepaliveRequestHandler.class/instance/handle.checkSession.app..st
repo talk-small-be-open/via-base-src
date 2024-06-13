@@ -15,9 +15,10 @@ handle: aRequestContext checkSession: aSessionKey app: anAppnameString
 		| result |
 
 		ok ifTrue: [
-			result := 'OK'.
-			timeToLive <= (5*60) ifTrue: [result := 'nearlyExpired']. "5 Minuten"
-			timeToLive <= 0 ifTrue: [result := 'expired'].
+			"seconds"
+			result := timeToLive asString. "'OK'."
+"			timeToLive <= (5*60) ifTrue: [result := 'nearlyExpired']. ""5 Minuten""
+			timeToLive <= 0 ifTrue: [result := 'expired']."
 			response
 				contentType: WAMimeType textPlain;
 				nextPutAll: result
