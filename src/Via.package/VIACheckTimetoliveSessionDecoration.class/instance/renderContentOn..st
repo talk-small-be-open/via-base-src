@@ -24,8 +24,9 @@ renderContentOn: html
 		nextPutAll: '}, 120000);'; ""120 sec""
 		setTimeout: ((self session class sessionDurationSeconds - 600) * 1000). ""Wait until almost the session will expire, before start polling.""
 "
-	js := html jsWindow call: 'checkSessionTimetolive' withArguments: { checkaliveUrl. self session class sessionDurationSeconds. 300 }.
-"Debug:	js := html jsWindow call: 'checkSessionTimetolive' withArguments: { checkaliveUrl. 30. 10 }."
+	js := ('(new SessionChecker)' asJsStream) call: 'startCheckalive' withArguments: { checkaliveUrl. self session class sessionDurationSeconds. 300 }.
+"Debug:	js := ('(new SessionChecker)' asJsStream) call: 'startCheckalive' withArguments: { checkaliveUrl. 30. 10 }."
+
 
 	html scriptDefer: js.
 	
