@@ -27,7 +27,7 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 
 	email
 		subject: subject;
-		setStringBody: body;
+		setStringBody: (body asString); "asString to make sure GemStone reduces to not-Unicode16 if possible"
 		from: sender.
 		
 	isMultipart ifTrue: [ 
