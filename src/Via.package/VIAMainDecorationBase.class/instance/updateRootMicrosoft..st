@@ -1,6 +1,9 @@
 as yet unclassified
 updateRootMicrosoft: anHtmlRoot
 
+	"If already install, forget that bullshit"
+	self session isStandalonePwa ifTrue: [ ^ self ].
+
 	"Microsoft"
 	VIAHelper msTileImagesData do: [ :each |
 		 | x y |

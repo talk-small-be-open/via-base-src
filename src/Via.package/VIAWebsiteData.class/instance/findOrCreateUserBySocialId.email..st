@@ -8,10 +8,10 @@ findOrCreateUserBySocialId: aString email: anEmailString
 		(each hasSocialId: aString) or: [anEmailString notBlank and: [each email = anEmailString]]]
 	ifNone: [
 		| newUser |
-		newUser := VIAUser new
-			firstName: 'Nofirstname';
-			lastName: 'Nolastname';
-			yourself.
+		newUser := VIAUser new.
+"bad practice			firstName: 'Nofirstname';
+			lastName: 'Nolastname';"
+"			yourself."
 		self addUser: newUser.
 		newUser].
 	

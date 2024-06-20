@@ -17,7 +17,11 @@
 		"isFullscreenSupported",
 		"portfolio",
 		"externalUser",
-		"appClient"
+		"appClient",
+		"viewBreakpointS",
+		"viewBreakpointM",
+		"isStandalonePwa",
+		"autologinUsers"
 	],
 	"name" : "VIADefaultSession",
 	"type" : "normal"

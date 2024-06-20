@@ -4,3 +4,5 @@ loginUser: aUser
 	aUser ifNil: [ self error: 'User can not be nil' ].
 	
 	user := aUser.
+
+	loginMethod := 'unspecified'

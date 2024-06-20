@@ -1,27 +1,26 @@
 as yet unclassified
 updateRootApple: anHtmlRoot
 
+	"If already install, forget that bullshit"
+	self session isStandalonePwa ifTrue: [ ^ self ].
+
 	"Home screen for Safari"
 	"Siehe https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html"
 	"und: https://medium.com/appscope/designing-native-like-progressive-web-apps-for-apple-1b3cdda1d0e8"
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-capable';
 		content: 'yes'.
+
+	"maybe old style. New with webmanifest"
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-status-bar-style';
 		content: 'black'.
+
+	"maybe old style. New with webmanifest"
 	anHtmlRoot meta
 		name: 'apple-mobile-web-app-title';
 		content: self website title.
 
-"	anHtmlRoot link
-		relationship: 'apple-touch-icon';
-		url: '/site/pwa/apple/touch-icon.png'."
-"	(anHtmlRoot link
-		relationship: 'apple-touch-icon';
-		url: 'icon-152x152.png';
-		yourself)
-		attributes at: 'sizes' append: '152x152'."
 
 VIAHelper appleStartupImagesDataDo: [ :x :y :n :orientation |
 		anHtmlRoot link

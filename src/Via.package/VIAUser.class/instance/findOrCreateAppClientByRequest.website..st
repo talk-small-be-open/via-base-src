@@ -26,6 +26,7 @@ findOrCreateAppClientByRequest: aWaRequestContext website: aWebsite
 	"Set new or reset existing cookie"
 	aWaRequestContext response addCookie: 
 		(aWaRequestContext newCookie
+			path: '/';
 			key: cookieName;
 			value: appClient id;
 			discard: false;

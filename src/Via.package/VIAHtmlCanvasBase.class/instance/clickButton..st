@@ -1,6 +1,8 @@
 convenience
 clickButton: aScriptString
-	^self ukButtonSmall
+	^ self button
 		bePush;
+		class: 'clickButton';
+"		onMouseDown: 'event.preventDefault();';"
 		onClick: aScriptString;
 		yourself

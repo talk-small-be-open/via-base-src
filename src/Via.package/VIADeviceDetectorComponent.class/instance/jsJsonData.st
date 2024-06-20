@@ -14,5 +14,8 @@ jsJsonData
 	isChrome: isChrome,
 	isEdgeChromium: isEdgeChromium,
 	isBlink: isBlink,
+	isPwaStandalone: isPwaStandalone,
+	isPwaFullscreen: isPwaFullscreen,
+	isPwa: isPwa
 })
 '

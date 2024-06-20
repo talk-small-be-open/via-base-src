@@ -1,3 +1,3 @@
 viewport
 isViewportMedium
-	^self viewportWidth < 960
+	^ self viewportWidth > viewBreakpointS and: [ self viewportWidth <= viewBreakpointM ]

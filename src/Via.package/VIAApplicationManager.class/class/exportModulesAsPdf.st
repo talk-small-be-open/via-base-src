@@ -8,8 +8,9 @@ exportModulesAsPdf
 	today := Date today.
 	timestamp := today year asString, '_', today monthIndex asTwoCharacterString.
 	self db allModules do: [ :each |
-		| fileBasename |
-		fileBasename := each fileDisplayName, '_', timestamp.
+		| fileBasename filePrefix |
+		filePrefix := 'export_', each fileDisplayName, '_'.
+		fileBasename := filePrefix, timestamp.
 		
 		[
 			| generator |
@@ -17,14 +18,14 @@ exportModulesAsPdf
 			generator := VIAPdfGenerator componentCreator: [ VIAPrintModuleExerciser model: each ] website: each website.
 
 			generator
-				targetName: ('export_', fileBasename, '.pdf');
+				targetName: (fileBasename, '.pdf');
 				targetFolder: exportFolder;
 				generate.
-		
-"		printableComponent := VIAPrintModuleExerciser model: each.
-		printableComponent savePdfAs: ('export_', fileBasename, '.pdf') inFolder: exportFolder"
-		
-		] value "ifError: [ :message |
+		] value. "TODO hm, why not? ifError: [ :message |
 			self logError: ('Fehler beim PDF-Export von Modul ', each displayName, ': ', message)
 		]"
-	]
+	
+		"Cleanup very old exported files"
+		MCLPlatform runShellCommand: ('find "', exportFolder, '" -not -newermt "1 year ago" -type f -iname "', filePrefix, '*.pdf" -delete').
+	].
+
