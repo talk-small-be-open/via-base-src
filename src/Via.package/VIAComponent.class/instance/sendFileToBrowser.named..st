@@ -4,11 +4,4 @@ sendFileToBrowser: aLocalFileReference named: aString
 	
 	aLocalFileReference contentType. "ensure that we have the mimetype"
 	
-	self requestContext respond: [ :response |
-		response
-			contentType: aLocalFileReference contentType; "'application/pdf'"
-			doNotCache;
-			headerAt: 'X-Sendfile' put: aLocalFileReference filePath; "Apache"
-			headerAt: 'X-Accel-Redirect' put: aLocalFileReference filePath; "nginx"
-			"document: aFile rawContents asString;"
-			attachmentWithFileName: aString ]
+	VIAHelper sendFile: aLocalFileReference filePath contentType: aLocalFileReference contentType named: aString requestContext: self requestContext
