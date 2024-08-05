@@ -1,3 +1,7 @@
 as yet unclassified
 childBricks
-	^ Array with: description
+	^ self isSyntaxEmpty ifTrue: [
+		Array with: description
+	] ifFalse: [ 
+		Array with: description with: syntax
+	]

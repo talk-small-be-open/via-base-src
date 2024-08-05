@@ -2,5 +2,5 @@
 visitViaPrAnnotatedFormat: aFormat
 	canvas tag
 		name: 'span';
-		class: aFormat annotation;
+		parameterAt: 'class' put: aFormat annotation;
 		with: [super visitViaPrAnnotatedFormat: aFormat]

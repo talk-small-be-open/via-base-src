@@ -1,4 +1,5 @@
 as yet unclassified
 matchesSearchString: aString
-	^(text includesSubstring: aString caseSensitive: false) or: [
-		self textVariants anySatisfy: [:each | each includesSubstring: aString caseSensitive: false]]
+	^(VIAHelper matchesSearchString: aString in: text) or: [
+		self textVariants anySatisfy: [:each |
+			VIAHelper matchesSearchString: aString in: each ] ]

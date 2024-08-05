@@ -1,4 +1,4 @@
 testing
 matchesSearchString: aString
-	^(title notBlank and: [title includesSubstring: aString caseSensitive: false]) or: [
+	^( VIAHelper matchesSearchString: aString in: title ) or: [
 		self classification matchesSearchString: aString]

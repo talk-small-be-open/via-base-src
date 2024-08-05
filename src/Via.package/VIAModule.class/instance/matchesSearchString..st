@@ -5,9 +5,10 @@ matchesSearchString: aString
 	
 	found := [ ^ true ].
 
-	(title includesSubstring: aString caseSensitive: false) ifTrue: found.
+	(VIAHelper matchesSearchString: aString in: title) ifTrue: found.
 	(classification matchesSearchString: aString) ifTrue: found.
-	(self authorUsers anySatisfy: [:each | each fullName includesSubstring: aString caseSensitive: false]) ifTrue: found.
+	(self authorUsers anySatisfy: [:each |
+		VIAHelper matchesSearchString: aString in: each fullName ]) ifTrue: found.
 
 "	aString first isDigit ifTrue: ["
 	(self matchesIndexCode: aString) ifTrue: found.

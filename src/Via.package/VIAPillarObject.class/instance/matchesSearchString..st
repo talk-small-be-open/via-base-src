@@ -1,4 +1,3 @@
-as yet unclassified
+testing
 matchesSearchString: aString
-
 	^ VIAPrTextSearcher document: pillarDocument matchesSearchString: aString

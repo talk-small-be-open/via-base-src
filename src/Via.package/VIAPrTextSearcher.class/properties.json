@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "PRVisitor",
+	"category" : "Via-Pillar",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"searchString",
+		"onFound"
+	],
+	"name" : "VIAPrTextSearcher",
+	"type" : "normal"
+}

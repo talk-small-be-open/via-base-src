@@ -1,3 +1,9 @@
 as yet unclassified
 childBricks
-	^self qAndAs
+	^ OrderedCollection new
+		add: startPillarPlayerA;
+		add: startPillarPlayerB;
+		add: step2PillarPlayerA;
+		add: step2PillarPlayerB;
+		addAll: self qAndAs;
+		yourself
