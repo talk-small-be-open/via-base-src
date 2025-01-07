@@ -10,8 +10,8 @@ baseline: spec
 			].
 
 			spec baseline: 'NeoJSON'.
-"			spec baseline: 'OSSubprocess' with: [
-				spec repository: 'github://pharo-contributions/OSSubprocess:master/repository']."
+			spec group: 'CSV' with: #().
+			
 		spec package: 'MCLPlatformPortability' with: [ 
 			spec repository: 'github://talk-small-be-open/utils:master/src'
 		 ].
@@ -23,8 +23,8 @@ baseline: spec
 		].
 		spec package: 'Via' with: [
 				spec 
-					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' ). "'OSSubprocess'"
-"					repository: 'github://talk-small-be-open/via-base-src:master/src'." ].
+					requires: #('Pillar' 'Seaside3' 'MCLPlatformPortability' 'MCL-Utils-Blankness' 'MCL-Utils-CollectionSugar' 'NeoJSON' 'CSV' ).
+		].
 		spec 
 			group: 'default' with: #('Core' );
 			group: 'Core' with: #('Via' ). ].
@@ -32,6 +32,8 @@ baseline: spec
 	self baselinePillar: spec.
 
 	self baselinePharo: spec.
+	self baselinePharo10: spec.
+
 "	self baselinePharoPillarVersion056: spec."
 	
 	self baselineGemStone: spec.
