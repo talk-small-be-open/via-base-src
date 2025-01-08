@@ -4,4 +4,9 @@ baselinePharo10: spec
 		spec baseline: 'OSSubprocess' with: [
 			"Last compatible with Pharo 10"
 			spec repository: 'github://pharo-contributions/OSSubprocess:v1.4.2/repository'].
+		
+		spec package: 'Via' with: [
+			spec 
+				includes: #('ViaPlatformCompatibilityPharo10')
+		].
 	]
