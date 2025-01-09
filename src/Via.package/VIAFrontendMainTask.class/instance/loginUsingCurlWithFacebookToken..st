@@ -7,12 +7,16 @@ loginUsingCurlWithFacebookToken: aString
 	userData := VIAHelper fromJson: response.
 
 	self ifDevelopment: [
-		(userData includesKey: 'verified') ifFalse: [
+		
+		Transcript crShow: response.
+		
+		"Faking data, if none from API"
+"		(userData includesKey: 'verified') ifFalse: ["
+		(userData includesKey: 'email') ifFalse: [
 			userData
-"				at: 'verified' put: true;"
 				at: 'email' put: 'developer.test@nobody.nowhere';
-				at: 'first_name' put: 'Firstname';
-				at: 'last_name' put: 'Lastname'.
+				at: 'first_name' put: 'Firstname-Dev';
+				at: 'last_name' put: 'Lastname-Dev'.
 		]
 	].
 
@@ -22,7 +26,8 @@ loginUsingCurlWithFacebookToken: aString
 		user := self wd findOrCreateUserBySocialId: ('facebook_', (userData at: 'id')) email: (userData at: 'email').
 	
 		"Namen übernehmen oder update etc."
-		user lastName ifBlank: [
+		"OPTIMIZE: Nolastname Dirty but OK"
+		(user lastName isBlank or: [ user lastName = 'Nolastname' ]) ifTrue: [
 			user
 				firstName: (userData at: 'first_name');
 				lastName: (userData at: 'last_name')].

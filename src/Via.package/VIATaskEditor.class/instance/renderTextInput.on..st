@@ -25,6 +25,6 @@ renderTextInput: aPlaceholder on: html
 					html text: ' Offer blank']]
 		].
 		
-		html label: 'Correct answers (Each line = one correct answer. Use "BLANK" as empty answer)'.
+		html label: 'Correct answers (Each line = one correct answer. Use the uppercased word "BLANK" as the empty answer)'.
 		html textArea on: #solutionsString of: aPlaceholder.
 	]

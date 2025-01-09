@@ -13,7 +13,7 @@ loginUsingCurlWithGoogleToken: aString request: aRequest
 		user := self wd findOrCreateUserBySocialId: ('google_', (userData at: 'sub')) email: (aRequest at: 'email').
 	
 		"Namen übernehmen oder update etc."
-		user lastName ifBlank: [
+		(user lastName isBlank or: [ user lastName = 'Nolastname' ]) ifTrue: [
 			user
 				firstName: (aRequest at: 'first_name');
 				lastName: (aRequest at: 'last_name').

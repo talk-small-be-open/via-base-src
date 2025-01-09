@@ -5,6 +5,13 @@ viaVersions
 		each key beginsWith: 'BaselineOfVia'].
 	
 	^ projects values collect: [ :each |
-		| vi |
-		vi := each versionInfo.
-		each projectName, ' Version ', vi versionString ]
+		String streamContents: [ :s |
+			s << each projectName.
+			s << ' Version '.
+			s << each versionInfo versionString.
+			s << ' from '.
+			each repositoryDescriptions
+				do: [ :eachRd | s << eachRd ]
+				separatedBy: [ s << ', ' ]
+		]
+	]
