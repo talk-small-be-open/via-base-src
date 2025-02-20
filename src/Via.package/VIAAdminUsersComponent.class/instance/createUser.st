@@ -8,6 +8,6 @@ createUser
 	self show: editor onAnswer: [:answer |
 		answer ifNotNil: [
 			(self wd findUserByEmail: user email)
-				ifNil: [self wd addUser: user]
+				ifNil: [ self wd addUser: user. users add: user. ]
 				ifNotNil: [self inform: 'User-Email already exists. User could not be stored.'].
 	]]

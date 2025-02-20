@@ -4,5 +4,7 @@ clear
 	searchRoles := #().
 	searchRolesMatchAll := false.
 	searchSmartFilter := nil.
-	users := nil.
-	selectedUsers := nil.
+
+"	users := OrderedCollection new."
+	self showUsers: OrderedCollection new
+"implicit: 	self clearSelection"
