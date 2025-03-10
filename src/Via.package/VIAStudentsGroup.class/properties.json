@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAUserGroup",
-	"category" : "Via-Model",
+	"category" : "Via-Model-User",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"teachers",
-		"invitationCommand"
+		"invitationCommand",
+		"studentMemberships"
 	],
 	"name" : "VIAStudentsGroup",
 	"type" : "normal"

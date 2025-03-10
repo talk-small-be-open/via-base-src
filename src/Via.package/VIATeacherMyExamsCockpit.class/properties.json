@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAComponent",
-	"category" : "Via-View",
+	"category" : "Via-View-Exam",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
@@ -10,6 +10,6 @@
 		"examModules",
 		"moduleCardRenderer"
 	],
-	"name" : "VIAMyTeacherCockpit",
+	"name" : "VIATeacherMyExamsCockpit",
 	"type" : "normal"
 }

@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAApplicationLightweightCommand",
-	"category" : "Via-View-Command",
+	"category" : "Via-View-Exam",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

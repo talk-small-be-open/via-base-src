@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIABrickTreeVisitor",
-	"category" : "Via-Misc",
+	"category" : "Via-Model-Exam",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

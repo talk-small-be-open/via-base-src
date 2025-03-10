@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAAnswerItem",
+	"category" : "Via-Model-Task",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"text",
+		"teacherPoints",
+		"teacherShortComment",
+		"needsTeacher"
+	],
+	"name" : "VIATextMemoAnswerItem",
+	"type" : "normal"
+}

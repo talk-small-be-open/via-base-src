@@ -4,7 +4,7 @@ renderStudentsIn: anExam on: html
 		ifTrue: [html span t: 'examModuleTeacher:noStudents']
 		ifFalse: [
 			anExam submittedUsers ifNotEmpty: [:collection |
-				html ukTable class: 'uk-table-condensed'; with: [
+				html ukTable class: 'uk-table-small'; with: [
 					collection do: [:each |
 						html tableRow: [
 							html tableData: [

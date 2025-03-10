@@ -1,0 +1,4 @@
+accessing
+teacherCanView
+
+	^ teacherCanView = true

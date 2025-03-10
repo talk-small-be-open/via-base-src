@@ -3,4 +3,5 @@ checkAnswersOfExercise: anExercise
 	| answerHolder |
 	answerHolder := anExercise answerOf: self.
 	answerHolder needsCheck ifTrue: [
-		self setAnswerHolderCorrectness: answerHolder]
+		self setAnswerHolderCorrectness: answerHolder.
+		self setAnswerHolderExplicitPoints: answerHolder. ]

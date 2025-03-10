@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "VIAUserBase",
-	"category" : "Via-Model",
+	"category" : "Via-Model-User",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

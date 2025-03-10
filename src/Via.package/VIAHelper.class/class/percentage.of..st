@@ -1,6 +1,9 @@
 as yet unclassified
 percentage: aNumber of: aTotalNumber
 
-	aTotalNumber = 0 ifTrue: [^100].
+	aNumber ifNil: [ ^ 0 ].
+	aTotalNumber ifNil: [ ^ 0 ].
 
-	^(aNumber * 100 / aTotalNumber) rounded asInteger
+	aTotalNumber = 0 ifTrue: [ ^ 100 ].	
+
+	^ (aNumber * 100 / aTotalNumber) rounded asInteger

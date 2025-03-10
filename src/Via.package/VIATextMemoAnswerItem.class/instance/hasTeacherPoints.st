@@ -1,0 +1,3 @@
+testing
+hasTeacherPoints
+	^ teacherPoints notNil

@@ -1,3 +1,3 @@
 testing
 isCheckable
-	^ false
+	^ self maxPoints > 0

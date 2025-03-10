@@ -2,7 +2,8 @@ as yet unclassified
 points
 	self isUnchecked ifTrue: [ ^0 ].
 
-	^points ifNil: [
+	"Entweder fixe Punkte schon da, oder von Übung und Korrektheit berechnen"
+	^ points ifNil: [
 		taskBrick ifNil: [ ^0 ].
 		correctness ifNil: [ ^0 ].
 

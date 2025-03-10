@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAModelObject",
+	"category" : "Via-Model-User",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"student",
+		"teacherCanView"
+	],
+	"name" : "VIAStudentMembership",
+	"type" : "normal"
+}

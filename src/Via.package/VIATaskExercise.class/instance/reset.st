@@ -1,6 +1,7 @@
 as yet unclassified
 reset
-	answers := RcKeyValueDictionary new.
+"nicht nötig und bläht die DB wegen RC-Teilobjekten auf:	answers := RcKeyValueDictionary new."
+	answers := Dictionary new.
 	isFinished := false.
 	isFirstTake := true.
 	self prepare.

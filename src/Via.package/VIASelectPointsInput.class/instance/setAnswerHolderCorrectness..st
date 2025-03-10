@@ -2,4 +2,4 @@ as yet unclassified
 setAnswerHolderCorrectness: anAnswerHolder
 	super setAnswerHolderCorrectness: anAnswerHolder.
 
-	anAnswerHolder points: (self pointsOfAnswer: anAnswerHolder value).
+"done separately explicitly:	anAnswerHolder points: (self pointsOfAnswer: anAnswerHolder value)."

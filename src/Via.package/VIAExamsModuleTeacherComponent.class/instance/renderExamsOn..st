@@ -1,6 +1,6 @@
 rendering
 renderExamsOn: html
-	html ukTable class: 'uk-table-condensed'; with: [
+	html ukTable class: 'uk-table-small'; with: [
 		html tableHead: [
 			html tableRow: [
 				html tableHeading t: 'examModuleTeacher:date'.

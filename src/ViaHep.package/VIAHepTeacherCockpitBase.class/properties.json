@@ -1,0 +1,20 @@
+{
+	"commentStamp" : "",
+	"super" : "VIAPagedComponent",
+	"category" : "ViaHep",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"studentsGroups",
+		"selectedGroup",
+		"portfolios",
+		"modules",
+		"selectedModule",
+		"moduleExercises",
+		"moduleAverages",
+		"taskAverages"
+	],
+	"name" : "VIAHepTeacherCockpitBase",
+	"type" : "normal"
+}

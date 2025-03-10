@@ -1,0 +1,3 @@
+enumerating
+tasksAndIndicesDo: aBlockWithTwoArgs
+	self tasks withIndexDo: aBlockWithTwoArgs
