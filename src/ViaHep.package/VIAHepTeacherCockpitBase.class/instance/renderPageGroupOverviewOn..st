@@ -9,7 +9,12 @@ renderPageGroupOverviewOn: html
 
 		isPristine := (self hasInvitationCommand not and: [selectedGroup users isEmpty]).
 		
-		html heading level2; with: selectedGroup displayName.
+		html heading level2; with: [
+			html span: selectedGroup displayName.
+			html anchor
+				callback: [ self editGroupName ];
+				with: [ html iconEdit ]
+		].
 
 		isPristine ifTrue: [
 			html div class: 'uk-margin'; pT: 'teacherCockpit:noStudents'

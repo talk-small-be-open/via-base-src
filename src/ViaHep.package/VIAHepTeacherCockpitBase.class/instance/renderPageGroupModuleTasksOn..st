@@ -23,60 +23,64 @@ renderPageGroupModuleTasksOn: html
 			].
 		].
 
-		html ukTable class: 'uk-table-small uk-table-divider'; with: [ 
-			html tableRow: [ 
-				html tableHeading.
-				selectedModule tasksAndIndicesDo: [ :each :index |
-					html tableHeading: [
-						html div: index asString.
-					] ]
-			].
-
-			html tableRow class: 'average'; with: [ 
-				html tableData pT: 'teacherCockpit:average'.
-				selectedModule tasksAndIndicesDo: [ :each :index |
-					| array f d |
-					array := taskAverages at: each.
-					d := array first.
-					f := array second.
-					
-					html tableData: [ 
-						html iconProgressFromPercent: d correctness: f.
-					]
-				]
-			].
-
-		
-			moduleExercises do: [ :eachExercise |
-				html tableRow: [ 
-					html tableData: [
-						| teacherCanView |
-						teacherCanView := self canTeacherView: eachExercise user.
-
-						html span: eachExercise user displayName.
-						teacherCanView ifTrue: [
-							html space.
-							html anchor
-								callback: [ self viewModuleExercise: eachExercise ];
-								sT: 'teacherCockpit:viewExercise' ]
+		html div class: 'scrollingTableContainer topBuffer'; with: [
+			html ukTable class: 'uk-table-small uk-table-divider'; with: [ 
+				html tableHead: [ 
+					html tableRow: [ 
+						html tableHeading class: 'sticky'.
+						selectedModule tasksAndIndicesDo: [ :each :index |
+							html tableHeading: [
+								html div: index asString.
+							] ]
 					].
-					
-					selectedModule tasksAndIndicesDo: [ :eachTask :index |
-						html tableData: [ 
-							(eachExercise includesTask: eachTask) ifTrue: [
-								| taskExercise |
-								taskExercise := eachExercise exerciseForTask: eachTask.
-								html iconDoneFinishedExercise: eachExercise.
-
-"								html iconProgressFromPercent: (taskExercise percentDone).
-								html iconProgressFromPercent: (taskExercise percentFinished)."
-								(self needsTeacherInsightTaskExercise: taskExercise) ifTrue: [ html space; iconNeedsTeacher ].
-							] ifFalse: [
-								html mdash
-							]
-
-			 			] ]
 				].
-		]].
+			
+				html tableBody: [ 
+					html tableRow class: 'average'; with: [ 
+						html tableData class: 'sticky'; pT: 'teacherCockpit:average'.
+						selectedModule tasksAndIndicesDo: [ :each :index |
+							| array f d |
+							array := taskAverages at: each.
+							d := array first.
+							f := array second.
+							
+							html tableData: [ 
+								html iconProgressFromPercent: d correctness: f.
+							]
+						]
+					].
 
+				
+					moduleExercises do: [ :eachExercise |
+						html tableRow: [ 
+							html tableData class: 'sticky'; with: [
+								| teacherCanView |
+								teacherCanView := self canTeacherView: eachExercise user.
+
+								html span: eachExercise user displayName.
+								teacherCanView ifTrue: [
+									html space.
+									html anchor
+										callback: [ self viewModuleExercise: eachExercise ];
+										sT: 'teacherCockpit:viewExercise' ]
+							].
+							
+							selectedModule tasksAndIndicesDo: [ :eachTask :index |
+								html tableData: [ 
+									(eachExercise includesTask: eachTask) ifTrue: [
+										| taskExercise |
+										taskExercise := eachExercise exerciseForTask: eachTask.
+										html iconDoneFinishedExercise: eachExercise.
+
+		"								html iconProgressFromPercent: (taskExercise percentDone).
+										html iconProgressFromPercent: (taskExercise percentFinished)."
+										(self needsTeacherInsightTaskExercise: taskExercise) ifTrue: [ html space; iconNeedsTeacher ].
+									] ifFalse: [
+										html mdash
+									]
+
+					 			] ]
+						].
+				]]].
+		]
 	]
