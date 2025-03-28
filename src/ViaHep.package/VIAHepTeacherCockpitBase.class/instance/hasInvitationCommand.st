@@ -1,3 +1,3 @@
 testing
 hasInvitationCommand
-	^ selectedGroup invitationCommand notNil
+	^ self invitationCommand notNil

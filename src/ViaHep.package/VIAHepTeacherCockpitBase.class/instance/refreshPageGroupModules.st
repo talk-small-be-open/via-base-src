@@ -2,7 +2,7 @@ actions
 refreshPageGroupModules
 	| website |
 	website := self currentWebsite.
-	portfolios := selectedGroup students collect: [ :each | each portfolioInWebsite: website ].
+	portfolios := selectedGroup students sortedBySortKey collect: [ :each | each portfolioInWebsite: website ].
 	modules := portfolios flatCollectAsSet: [ :each | each modules ].
 	modules := modules sortedBySortKey.
 	

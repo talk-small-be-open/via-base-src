@@ -1,6 +1,6 @@
 initialization
 refresh
-	studentsGroups := self wd findStudentsGroupsByTeacher: self teacher.
+	studentsGroups := (self wd findStudentsGroupsByTeacher: self teacher) sortedBySortKey.
 	
 	"cleanunp expired command"
 	studentsGroups do: [ :each | each invitationCommand ifNotNil: [ :ic |
