@@ -6,7 +6,7 @@ renderPageGroupModulesOn: html
 		html heading level2; with: selectedGroup displayName.
 
 		html ukButtonGroup: [ 
-			self renderBackButton: 'teacherCockpit:back' callback: [ self gotoPageGroupOverview ] on: html.
+			self renderBackButton: 'teacherCockpit:backToOverview' callback: [ self gotoStart ] on: html.
 			html anchorButton
 				callback: [ self refreshPageGroupModules ];
 				with: [ 
@@ -14,12 +14,24 @@ renderPageGroupModulesOn: html
 					html sT: 'teacherCockpit:reload']
 		].
 	
+		self renderProgressLegendOn: html.
+	
+		html div pT: 'teacherCockpit:modulesList:info'.
+		
+		html form: [
+			html select
+				list: allModuleIndexes;
+				submitOnChange;
+				on: #filterModuleIndex of: self ].
+	
+		html render: modulesBatcher.
+	
 		html div class: 'scrollingTableContainer topBuffer'; with: [ 
 			html ukTable class: 'uk-table-small uk-table-divider'; with: [ 
 				html tableHead: [ 
 					html tableRow: [ 
 						html tableHeading class: 'sticky'.
-						modules do: [ :each |
+						modulesBatcher batch do: [ :each |
 							html tableHeading: [
 								html div: each indexCodeLabel.
 								html anchor
@@ -31,7 +43,7 @@ renderPageGroupModulesOn: html
 				html tableBody: [ 
 					html tableRow class: 'average'; with: [ 
 						html tableData class: 'sticky'; pT: 'teacherCockpit:average'.
-						modules do: [ :each |
+						modulesBatcher batch do: [ :each |
 							| array f d |
 							array := moduleAverages at: each.
 							d := array first.
@@ -50,7 +62,7 @@ renderPageGroupModulesOn: html
 						html tableRow: [ 
 							html tableData  class: 'sticky'; with: eachPortfolio user displayName.
 							
-							modules do: [ :eachModule |
+							modulesBatcher batch do: [ :eachModule |
 								html tableData: [ 
 									(eachPortfolio includesModule: eachModule) ifTrue: [
 										| moduleExercise |

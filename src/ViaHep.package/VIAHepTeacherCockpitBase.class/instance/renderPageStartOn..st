@@ -20,10 +20,14 @@ renderPageStartOn: html
 				html tableRow: [
 					html tableData: [ 
 						html anchor
-							callback: [ self selectGroup: each ];
+							callback: [ self showGroupModules: each ];
 							with: each displayName ].
 					html tableData: each usersCount asString.
 					html tableData: [ 
+						html anchor
+							callback: [ self editGroup: each ];
+							with: 'EDIT'.
+						html space.
 						html anchor
 							callback: [ self deleteGroup: each ];
 							with: [ html iconDelete ] ] ] ]

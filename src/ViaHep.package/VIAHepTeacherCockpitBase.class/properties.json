@@ -13,7 +13,10 @@
 		"selectedModule",
 		"moduleExercises",
 		"moduleAverages",
-		"taskAverages"
+		"taskAverages",
+		"modulesBatcher",
+		"allModuleIndexes",
+		"filterModuleIndex"
 	],
 	"name" : "VIAHepTeacherCockpitBase",
 	"type" : "normal"

@@ -9,5 +9,5 @@ createStudentsGroup
 			
 		self wd addUserGroup: group.
 		self refresh.
-		self selectGroup: group.
+		self editGroup: group.
 	]

@@ -1,6 +1,6 @@
 rendering
 renderContentOn: html
-	self maxPages = 0
+	self maxPages <= 1 
 		ifTrue: [ ^ self ].
 	html div
 		class: 'batch';

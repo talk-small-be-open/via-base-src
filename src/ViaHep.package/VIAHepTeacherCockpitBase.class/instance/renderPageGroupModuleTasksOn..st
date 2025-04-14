@@ -13,13 +13,17 @@ renderPageGroupModuleTasksOn: html
 					html iconRefresh.
 					html sT: 'teacherCockpit:reload' ]
 		].
+
+		html div pT: 'teacherCockpit:tasksList:info'.
 		
 		html div class: 'topBuffer tasksList'; with: [ 
 			selectedModule tasksAndIndicesDo: [ :each :index |
-				html div: [
-					html text: index asString.
-					html text: '. '.
-					html text: each title ].
+				(self isShowTask: each) ifTrue: [
+					html div: [
+						html text: index asString.
+						html text: '. '.
+						html text: each title ].
+				].
 			].
 		].
 
@@ -29,9 +33,10 @@ renderPageGroupModuleTasksOn: html
 					html tableRow: [ 
 						html tableHeading class: 'sticky'.
 						selectedModule tasksAndIndicesDo: [ :each :index |
-							html tableHeading: [
-								html div: index asString.
-							] ]
+							(self isShowTask: each) ifTrue: [
+								html tableHeading: [
+									html div: index asString.
+								] ] ]
 					].
 				].
 			
@@ -39,13 +44,15 @@ renderPageGroupModuleTasksOn: html
 					html tableRow class: 'average'; with: [ 
 						html tableData class: 'sticky'; pT: 'teacherCockpit:average'.
 						selectedModule tasksAndIndicesDo: [ :each :index |
-							| array f d |
-							array := taskAverages at: each.
-							d := array first.
-							f := array second.
-							
-							html tableData: [ 
-								html iconProgressFromPercent: d correctness: f.
+							(self isShowTask: each) ifTrue: [
+								| array f d |
+								array := taskAverages at: each.
+								d := array first.
+								f := array second.
+								
+								html tableData: [ 
+									html iconProgressFromPercent: d correctness: f.
+								]
 							]
 						]
 					].

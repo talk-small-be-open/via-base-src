@@ -4,21 +4,42 @@ refreshPageGroupModules
 	website := self currentWebsite.
 	portfolios := selectedGroup students sortedBySortKey collect: [ :each | each portfolioInWebsite: website ].
 	modules := portfolios flatCollectAsSet: [ :each | each modules ].
-	modules := modules sortedBySortKey.
+
+	modulesBatcher := VIABatchedList new
+		batchSize: 5;
+		yourself.
+
 	
-	moduleAverages := modules map: [ :eachModule |
-		| finished done |
-		finished := OrderedCollection new.
-		done := OrderedCollection new.
+	modules ifNotEmpty: [ 
+		allModuleIndexes := (modules collect: [ :each | each indexCode firstAsIndexCode ] into: Set new) sorted reversed.
 		
-		portfolios do: [ :eachPortfolio |
-			| moduleExercise |
-			(eachPortfolio includesModule: eachModule) ifTrue: [ 
-				moduleExercise := eachPortfolio exerciseForModule: eachModule.
-				
-				done add: moduleExercise percentDone.
-				finished add: moduleExercise percentFinished ]
+		filterModuleIndex ifNil: [ 
+			filterModuleIndex := allModuleIndexes firstOrNil.
 		].
 
-		{ done average. finished average }
-	]
+		modules := modules select: [ :each | each indexCode first = filterModuleIndex first ].
+		
+		modules := modules sortedBySortKey reversed.
+		
+		modulesBatcher
+			items: modules;
+			onPageChange: [ :b |
+				moduleAverages := b batch map: [ :eachModule |
+					| finished done |
+					finished := OrderedCollection new.
+					done := OrderedCollection new.
+					
+					portfolios do: [ :eachPortfolio |
+						| moduleExercise |
+						(eachPortfolio includesModule: eachModule) ifTrue: [ 
+							moduleExercise := eachPortfolio exerciseForModule: eachModule.
+							
+							done add: moduleExercise percentDone.
+							finished add: moduleExercise percentFinished ]
+					].
+
+					{ done average. finished average }
+		] ].
+	].
+
+	modulesBatcher gotoPageOne

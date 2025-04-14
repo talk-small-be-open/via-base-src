@@ -26,14 +26,14 @@ renderPageGroupOverviewOn: html
 			html heading level3; t: 'teacherCockpit:students'.
 				html div class: 'uk-margin'; with: [ 
 					html ukButtonGroup: [ 
-						html anchorButton
+"						html anchorButton
 							callback: [ self gotoPageGroupModules ];
-							sT: 'teacherCockpit:gotoPageGroupModules'.
-					html anchorButton
-						callback: [  ];
-						with: [
-							html iconRefresh.
-							html sT: 'teacherCockpit:refreshStudentList' ].
+							sT: 'teacherCockpit:gotoPageGroupModules'."
+						html anchorButton
+							callback: [  ];
+							with: [
+								html iconRefresh.
+								html sT: 'teacherCockpit:refreshStudentList' ].
 					]
 				].
 
