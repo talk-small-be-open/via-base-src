@@ -16,16 +16,19 @@ renderPageGroupModulesOn: html
 	
 		self renderProgressLegendOn: html.
 	
-		html div pT: 'teacherCockpit:modulesList:info'.
+		html div class: 'topBuffer'; pT: 'teacherCockpit:modulesList:info'.
 		
-		html form: [
-			html select
-				list: allModuleIndexes;
-				submitOnChange;
-				on: #filterModuleIndex of: self ].
-	
-		html render: modulesBatcher.
-	
+		html div class: 'tableNavigation'; with: [ 
+			html form: [
+				html span: 'LEVEL: '.
+				html select
+					list: allModuleIndexes;
+					submitOnChange;
+					on: #filterModuleIndex of: self ].
+		
+			html render: modulesBatcher.
+		].
+		
 		html div class: 'scrollingTableContainer topBuffer'; with: [ 
 			html ukTable class: 'uk-table-small uk-table-divider'; with: [ 
 				html tableHead: [ 
@@ -42,7 +45,9 @@ renderPageGroupModulesOn: html
 
 				html tableBody: [ 
 					html tableRow class: 'average'; with: [ 
-						html tableData class: 'sticky'; pT: 'teacherCockpit:average'.
+						html tableData class: 'sticky'; with: [
+							html iconAverage; space.
+							html pT: 'teacherCockpit:average'].
 						modulesBatcher batch do: [ :each |
 							| array f d |
 							array := moduleAverages at: each.

@@ -2,7 +2,8 @@ rendering
 renderPageGroupModuleTasksOn: html
 
 	html ukContainer: [
-
+		
+		html heading level3; with: selectedGroup displayName.
 		html heading level2; with: selectedModule displayName.
 		
 		html ukButtonGroup: [ 
@@ -13,8 +14,9 @@ renderPageGroupModuleTasksOn: html
 					html iconRefresh.
 					html sT: 'teacherCockpit:reload' ]
 		].
-
-		html div pT: 'teacherCockpit:tasksList:info'.
+		
+		self renderProgressLegendOn: html.
+		html div class: 'topBuffer'; pT: 'teacherCockpit:tasksList:info'.
 		
 		html div class: 'topBuffer tasksList'; with: [ 
 			selectedModule tasksAndIndicesDo: [ :each :index |
@@ -42,7 +44,9 @@ renderPageGroupModuleTasksOn: html
 			
 				html tableBody: [ 
 					html tableRow class: 'average'; with: [ 
-						html tableData class: 'sticky'; pT: 'teacherCockpit:average'.
+						html tableData class: 'sticky'; with: [
+							html iconAverage; space.
+							html pT: 'teacherCockpit:average' ].
 						selectedModule tasksAndIndicesDo: [ :each :index |
 							(self isShowTask: each) ifTrue: [
 								| array f d |

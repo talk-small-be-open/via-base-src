@@ -8,4 +8,5 @@ renderProgressLegendOn: html
 				html space.
 				html iconProgress: index ].
 		].
+		html div pT: 'tocca:legend:colorInfo'.
 	]

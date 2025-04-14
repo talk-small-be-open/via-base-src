@@ -11,10 +11,10 @@ refreshPageGroupModules
 
 	
 	modules ifNotEmpty: [ 
-		allModuleIndexes := (modules collect: [ :each | each indexCode firstAsIndexCode ] into: Set new) sorted reversed.
+		allModuleIndexes := (modules collect: [ :each | each indexCode firstAsIndexCode ] into: Set new) sorted.
 		
 		filterModuleIndex ifNil: [ 
-			filterModuleIndex := allModuleIndexes firstOrNil.
+			filterModuleIndex := allModuleIndexes lastOrNil.
 		].
 
 		modules := modules select: [ :each | each indexCode first = filterModuleIndex first ].
