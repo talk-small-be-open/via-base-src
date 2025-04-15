@@ -26,7 +26,7 @@ renderPageStartOn: html
 					html tableData: [ 
 						html anchor
 							callback: [ self editGroup: each ];
-							with: 'EDIT'.
+							with: 'MANAGE'.
 						html space.
 						html anchor
 							callback: [ self deleteGroup: each ];
