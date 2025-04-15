@@ -18,10 +18,10 @@ baselinePharo: spec
 				loads: #( 'Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'JQueryUI' 'Development' 'Zinc' 'Tests' )
 		].
 	
-		spec package: 'MockGemStone' with: [
+		spec baseline: 'MockGemStone' with: [
 			spec
 				requires: #('Seaside3');
-				repository: 'github://talk-small-be-open/utils:master/src'.
+				repository: 'github://dassi/MockGemStone/repository'.
 		].
 		spec package: 'MCLPlatformPortabilityPharo' with: [ 
 			spec
