@@ -77,19 +77,20 @@ renderPageGroupModuleTasksOn: html
 							].
 							
 							selectedModule tasksAndIndicesDo: [ :eachTask :index |
-								html tableData: [ 
-									(eachExercise includesTask: eachTask) ifTrue: [
-										| taskExercise |
-										taskExercise := eachExercise exerciseForTask: eachTask.
-										html iconDoneFinishedExercise: eachExercise.
+								(self isShowTask: eachTask) ifTrue: [
+									html tableData: [ 
+										(eachExercise includesTask: eachTask) ifTrue: [
+											| taskExercise |
+											taskExercise := eachExercise exerciseForTask: eachTask.
+											html iconDoneFinishedExercise: taskExercise.
 
-		"								html iconProgressFromPercent: (taskExercise percentDone).
-										html iconProgressFromPercent: (taskExercise percentFinished)."
-										(self needsTeacherInsightTaskExercise: taskExercise) ifTrue: [ html space; iconNeedsTeacher ].
-									] ifFalse: [
-										html mdash
+			"								html iconProgressFromPercent: (taskExercise percentDone).
+											html iconProgressFromPercent: (taskExercise percentFinished)."
+											(self needsTeacherInsightTaskExercise: taskExercise) ifTrue: [ html space; iconNeedsTeacher ].
+										] ifFalse: [
+											html mdash
+										]
 									]
-
 					 			] ]
 						].
 				]]].

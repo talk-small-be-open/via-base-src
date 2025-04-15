@@ -10,7 +10,7 @@ renderPageGroupModulesOn: html
 			html anchorButton
 				callback: [ self refreshPageGroupModules ];
 				with: [ 
-					html iconRefresh.
+					html iconRefresh; space.
 					html sT: 'teacherCockpit:reload']
 		].
 	
@@ -20,7 +20,8 @@ renderPageGroupModulesOn: html
 		
 		html div class: 'tableNavigation'; with: [ 
 			html form: [
-				html span: 'LEVEL: '.
+				html span sT: 'teacherCockpit:modulesList:filterIndex'.
+				html space.
 				html select
 					list: allModuleIndexes;
 					submitOnChange;

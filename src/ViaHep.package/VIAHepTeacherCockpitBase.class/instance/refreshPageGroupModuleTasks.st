@@ -16,5 +16,5 @@ refreshPageGroupModuleTasks
 				finished add: taskExercise percentFinished ]
 		].
 
-		{ done average. finished average }
-	]
+		{ done ifEmpty: [ 0 ] ifNotEmpty: [ done average ]. finished ifEmpty: [ 0 ] ifNotEmpty: [ finished average ] }
+	].

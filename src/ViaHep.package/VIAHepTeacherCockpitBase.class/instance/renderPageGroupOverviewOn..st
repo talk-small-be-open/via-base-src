@@ -32,7 +32,7 @@ renderPageGroupOverviewOn: html
 						html anchorButton
 							callback: [  ];
 							with: [
-								html iconRefresh.
+								html iconRefresh; space.
 								html sT: 'teacherCockpit:refreshStudentList' ].
 					]
 				].

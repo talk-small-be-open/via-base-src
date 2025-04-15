@@ -38,7 +38,7 @@ refreshPageGroupModules
 							finished add: moduleExercise percentFinished ]
 					].
 
-					{ done average. finished average }
+					{ done ifEmpty: [ 0 ] ifNotEmpty: [ done average ]. finished ifEmpty: [ 0 ] ifNotEmpty: [ finished average ] }
 		] ].
 	].
 
