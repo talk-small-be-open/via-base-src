@@ -12,9 +12,9 @@ renderPageStartOn: html
 				html sT: 'teacherCockpit:createStudentGroups' ].
 		html ukTable class: 'studentsGroups uk-table-small uk-table-divider'; with: [
 			html tableRow: [ 
-				html tableHeading.
+				html tableHeading sT: 'teacherCockpit:groupName'.
 				html tableHeading sT: 'teacherCockpit:studentsCount'.
-				html tableHeading sT: 'teacherCockpit:delete'.
+				html tableHeading.
 			].
 			studentsGroups do: [ :each |
 				html tableRow: [
@@ -26,7 +26,7 @@ renderPageStartOn: html
 					html tableData: [ 
 						html anchor
 							callback: [ self editGroup: each ];
-							with: 'MANAGE'.
+							sT: 'teacherCockpit:manage'.
 						html space.
 						html anchor
 							callback: [ self deleteGroup: each ];
