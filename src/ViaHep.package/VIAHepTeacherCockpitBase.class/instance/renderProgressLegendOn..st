@@ -13,5 +13,10 @@ renderProgressLegendOn: html
 			html span
 				class: ('correctness correctness', each asString);
 				with: (each asString, '%').
-		]
+		].
+		html div: [ 
+			html iconNeedsTeacher.
+			html span: ' = '.
+			html pT: 'teacherCockpit:legend:needsTeacher'.
+ 		]
 	]

@@ -19,9 +19,11 @@ renderPageStartOn: html
 			studentsGroups do: [ :each |
 				html tableRow: [
 					html tableData: [ 
-						html anchor
+						html text: each displayName.
+"Zukünftiges Feature						html anchor
 							callback: [ self showGroupModules: each ];
-							with: each displayName ].
+							with: each displayName."
+					].
 					html tableData: each usersCount asString.
 					html tableData: [ 
 						html anchor

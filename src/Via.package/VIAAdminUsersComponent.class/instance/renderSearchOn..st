@@ -17,7 +17,7 @@ renderSearchOn: html
 		html space: 3.
 		html span: 'Filter: '.
 		html select
-			list: #(#'no-social-id' #'invalid-external-user' #'never-logged-in');
+			list: #(#'no-social-id' #'invalid-external-user' #'never-logged-in' #'last-login-older-180days' #'last-login-older-365days');
 			beOptional;
 			on: #searchSmartFilter of: self.
 		

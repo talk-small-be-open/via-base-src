@@ -31,6 +31,18 @@ performSearch
 			foundUsers := foundUsers select: [ :each | each loginCount = 0 ].
 		].
 
+		searchSmartFilter = #'last-login-older-180days' ifTrue: [
+			| date |
+			date := Date today subtractDays: 180. 
+			foundUsers := foundUsers select: [ :each | each lastLoginAt notNil and: [ each lastLoginAt < date ] ].
+		].
+
+		searchSmartFilter = #'last-login-older-365days' ifTrue: [
+			| date |
+			date := Date today subtractDays: 365.
+			foundUsers := foundUsers select: [ :each | each lastLoginAt notNil and: [ each lastLoginAt < date ] ].
+		].
+
 	].
 
 	foundUsers := foundUsers sortedBySortKey.

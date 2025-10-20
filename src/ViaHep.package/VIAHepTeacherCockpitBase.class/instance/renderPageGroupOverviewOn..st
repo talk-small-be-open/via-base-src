@@ -42,12 +42,12 @@ renderPageGroupOverviewOn: html
 					html ukTable class: 'uk-table-small uk-table-divider'; with: [
 						html tableRow: [
 							html tableHeading.
-							html tableHeading sT: 'teacherCockpit:teacherCanView'.
+"TODO FEATURE							html tableHeading sT: 'teacherCockpit:teacherCanView'."
 							html tableHeading sT: 'teacherCockpit:delete' ].
 						selectedGroup studentsAndMembershipsDo: [ :student :membership |
 							html tableRow: [
 								html tableData: student displayName.
-								html tableData: [ (membership teacherCanView ifTrue: [ html iconCheck ] ifFalse: [ html mdash ]) ].
+"TODO FEATURE								html tableData: [ (membership teacherCanView ifTrue: [ html iconCheck ] ifFalse: [ html mdash ]) ]."
 								html tableData: [ 
 									html anchor
 										callback: [ self removeStudent: student ];

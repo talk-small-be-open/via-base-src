@@ -11,6 +11,10 @@ renderSearchResultOn: html
 		html submitButton
 			callback: [ self deleteSelectedUsers ];
 			with: 'Delete selected'.
+		html space.
+		html anchorButton
+			callback: [ self downloadUsersCsv ];
+			with: 'Download CSV file'.
 
 		html div
 			class: 'listBatcher';
