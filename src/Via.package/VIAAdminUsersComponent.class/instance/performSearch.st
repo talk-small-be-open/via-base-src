@@ -40,7 +40,12 @@ performSearch
 		searchSmartFilter = #'last-login-older-365days' ifTrue: [
 			| date |
 			date := Date today subtractDays: 365.
-			foundUsers := foundUsers select: [ :each | each lastLoginAt notNil and: [ each lastLoginAt < date ] ].
+			foundUsers := foundUsers select: [ :each | each loginCount > 0 and: [
+					"Due to a past bug in 2023, there were timestamps == DateAndTime class. So we count them as very old, too.
+					And also if we somehow reset it to nil, then it is also very old (combined with loginCount>0 above) "
+					(((each lastLoginAt isKindOf: DateAndTime) not) or: [ each lastLoginAt isNil ]) or: [
+						each lastLoginAt < date ].
+			] ].
 		].
 
 	].
