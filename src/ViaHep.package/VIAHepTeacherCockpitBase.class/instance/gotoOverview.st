@@ -1,3 +1,3 @@
 as yet unclassified
 gotoOverview
-	selectedGroup := nil
+	self selectedGroup: nil
