@@ -12,6 +12,7 @@ renderSettingsOn: html
 			html sT: 'myProfile:enabledHintBoxes'].
 		html div class: 'uk-margin-top'; with: [
 			html submitButton
+				callback: [ self afterSaveSettings ];
 				t: 'form:save'
 		]
 	].

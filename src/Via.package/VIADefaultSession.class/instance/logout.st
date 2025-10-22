@@ -1,16 +1,11 @@
 as yet unclassified
 logout
-	user isRealUser ifTrue: [
-		user useAutologin
-			ifTrue: [
-				self addAutologinUser: user.
-				user installRememberCookie: self requestContext website: self website ]
-			ifFalse: [
-				self removeAutologinUser: user.
-				user deleteRememberCookie: self requestContext website: self website ]
-	].
-
+	| theLoggedOutUser |
+	theLoggedOutUser := user.
+	
 	super logout.
+
+	self removeAutologinUser: theLoggedOutUser.
 	
 	portfolio := nil.
 	backgroundAdminUser := nil.

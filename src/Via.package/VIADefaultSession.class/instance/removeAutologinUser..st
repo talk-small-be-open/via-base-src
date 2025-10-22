@@ -1,4 +1,9 @@
 accessing
 removeAutologinUser: aUser
 
-	autologinUsers ifNotBlank: [ autologinUsers remove: aUser ifAbsent: [  ] ]
+	"double check, robustness"
+	aUser isRealUser ifFalse: [ ^ self ].
+
+	autologinUsers ifNotBlank: [ autologinUsers remove: aUser ifAbsent: [  ] ].
+	
+	aUser deleteRememberCookie: self requestContext website: self website
