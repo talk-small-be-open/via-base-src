@@ -4,7 +4,7 @@ renderContentOn: html
 
 		html heading: 'Gateway to the secret dungeons'.
 		html image url: '/images/logo_via.svg'; height: 'auto'; width: 120.
-		html form class: 'topBuffer'; with: [
+		html form class: 'topBuffer login'; with: [
 			html label: 'Website:'.
 			html select
 				list: self db websites;
@@ -13,11 +13,13 @@ renderContentOn: html
 			html label: 'Email:'.
 			html textInput
 				id: 'loginEmail';
-				autocomplete: 'username';
+				class: 'email';
+				autocomplete: 'username email';
 				on: #email of: self.
 			html label: 'Magic spell:'.
 			html passwordInput
 				id: 'loginPassword';
+				class: 'password';
 				autocomplete: 'current-password';
 				on: #password of: self.
 			html break; break.
