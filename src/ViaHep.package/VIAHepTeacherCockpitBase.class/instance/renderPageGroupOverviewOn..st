@@ -26,7 +26,7 @@ renderPageGroupOverviewOn: html
 			html heading level3; t: 'teacherCockpit:students'.
 				html div class: 'uk-margin'; with: [ 
 					html ukButtonGroup: [ 
-"						html anchorButton
+"TODO FEATURE						html anchorButton
 							callback: [ self gotoPageGroupModules ];
 							sT: 'teacherCockpit:gotoPageGroupModules'."
 						html anchorButton
