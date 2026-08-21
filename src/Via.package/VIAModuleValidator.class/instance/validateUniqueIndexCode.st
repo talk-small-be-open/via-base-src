@@ -5,4 +5,10 @@ validateUniqueIndexCode
 		of: #indexCodeString named: 'module:indexCode';
 		beNilAllowed;
 		beEmptyAllowed;
-		within: [ self module wd modules ]
+		within: [
+			| others me |
+			me := self module.
+			others := me wd modules copy.
+			others removeAllSuchThat: [ :each | each isSameFamily: me ].
+			others
+		]

@@ -1,3 +1,3 @@
 accessing
 modules
-	^ modules
+	^ modules copy

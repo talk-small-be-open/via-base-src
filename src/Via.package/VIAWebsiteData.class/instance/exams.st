@@ -1,3 +1,3 @@
 accessing
 exams
-	^ exams
+	^ exams copy

@@ -1,3 +1,3 @@
 accessing
 assets
-	^ assets
+	^ assets copy

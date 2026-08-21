@@ -1,3 +1,3 @@
 accessing
 tags
-	^ tags
+	^ tags copy

@@ -1,3 +1,3 @@
 accessing
 trashedObjects
-	^trashedObjects ifNil: [trashedObjects := OrderedCollection new]
+	^ (trashedObjects ifNil: [trashedObjects := OrderedCollection new]) copy

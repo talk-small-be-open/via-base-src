@@ -1,3 +1,3 @@
 accessing
 portfolios
-	^ portfolios
+	^ portfolios copy

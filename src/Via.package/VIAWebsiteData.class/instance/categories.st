@@ -1,3 +1,3 @@
 accessing
 categories
-	^ categories
+	^ categories copy
