@@ -11,8 +11,8 @@ m070ConvertTextMemoAnswerObjects
 			oldAnswerText := answer value.
 			oldAnswerText isString ifTrue: [
 				Transcript crShow: 'Memo answer converted'.
-"				answer presetValue: (VIATextMemoAnswerItem new
+				answer presetValue: (VIATextMemoAnswerItem new
 					text: oldAnswerText;
-					yourself)"
+					yourself)
 			] ]
 	]
