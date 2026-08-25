@@ -1,14 +1,13 @@
 {
 	"commentStamp" : "",
-	"super" : "VIAAdminComponent",
+	"super" : "WANavigation",
 	"category" : "Via-View-Admin",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"flashMessages",
-		"tabbedNavigationComponent"
+		"components"
 	],
-	"name" : "VIAAdminMainComponent",
+	"name" : "VIAAdminTabNavigation",
 	"type" : "normal"
 }

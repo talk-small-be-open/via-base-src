@@ -1,51 +1,36 @@
 as yet unclassified
 initializeTabbedNavigationComponent
 
-	tabbedNavigationComponent := WASimpleNavigation new.
+	tabbedNavigationComponent := VIAAdminTabNavigation new.
 
 	self ifRoles: #(admin editor) then: [
-		modulesComponent := VIAAdminModulesComponent new.
-		assetsComponent := VIAAdminExpertAssetsComponent new.
 
 		tabbedNavigationComponent	
-			add: modulesComponent label: 'Modules';
-			add: assetsComponent label: 'Assets'.
+			add: [ VIAAdminModulesComponent new ] label: 'Modules';
+			add: [ VIAAdminExpertAssetsComponent new ] label: 'Assets'.
 	"		add: helpCenterComponent label: 'Help system';"].
 
 	self ifRoles: #(admin supporter) then: [
-		usersComponent := VIAAdminUsersComponent new.
 	
 		tabbedNavigationComponent 
-			add: usersComponent label: 'Users' ].
+			add: [ VIAAdminUsersComponent new ] label: 'Users' ].
 			
 	self ifAdmin: [
 
-		uiTextComponent := VIAAdminUiTextComponent new.
-		configurationComponent := VIAAdminConfigurationComponent new.
-		classificationComponent := VIAAdminClassificationComponent new.
-		mailingComponent := VIAAdminMailingComponent new.
-		maintenanceComponent := VIAAdminMaintenanceComponent new.
-		trashComponent := VIAAdminTrashComponent new.
-		
-		self am siteAdminClass ifNotNil: [ :class | siteAdminComponent := class new. ].
-
 		tabbedNavigationComponent	
-			add: uiTextComponent label: 'UI Texts';
-			add: classificationComponent label: 'Tagging';
-			add: configurationComponent label: 'Configuration';
+			add: [ VIAAdminUiTextComponent new. ] label: 'UI Texts';
+			add: [ VIAAdminClassificationComponent new ] label: 'Tagging';
+			add: [ VIAAdminConfigurationComponent new ] label: 'Configuration';
 	"		add: emailsComponent label: 'Emails';"
-			add: mailingComponent label: 'Mailing';
-			add: maintenanceComponent label: 'Maintenance';
-			add: trashComponent label: 'Trash'.
+			add: [ VIAAdminMailingComponent new ] label: 'Mailing';
+			add: [ VIAAdminMaintenanceComponent new ] label: 'Maintenance';
+			add: [ VIAAdminTrashComponent new ] label: 'Trash'.
 	"		add: developmentComponent label: 'Development';"].
 		
 	self ifRoles: #(admin supporter) then: [
-		statusComponent := VIAAdminStatusComponent new.
-		supportComponent := VIAAdminSupportComponent new.
-
-		tabbedNavigationComponent add: supportComponent label: 'Support'.
-		tabbedNavigationComponent add: statusComponent label: 'Status'
+		tabbedNavigationComponent add: [ VIAAdminSupportComponent new ] label: 'Support'.
+		tabbedNavigationComponent add: [ VIAAdminStatusComponent new ] label: 'Status'
 	].
 
-	siteAdminComponent ifNotNil: [ 
-		tabbedNavigationComponent add: siteAdminComponent label: self website title ]
+	self am siteAdminClass ifNotNil: [ :class |
+		tabbedNavigationComponent add: [ class new ] label: self website title ]
