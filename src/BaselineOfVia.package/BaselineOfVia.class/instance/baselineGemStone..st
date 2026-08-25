@@ -7,7 +7,9 @@ baselineGemStone: spec
 				loads: #('Base' 'Core' 'JSON' 'Email' 'Javascript' 'JQuery' 'JQueryUI' 'Production' 'Zinc Project' 'Seaside-GemStone-Adaptors-Zinc')
 		].
 		spec baseline: 'NeoJSON' with: [
-			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'.
+"zu neu			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'."
+			spec repository: 'github://GsDevKit/NeoJSON:5f6dc72/repository'.
+			
 		].
 		spec baseline: 'GsNeoCSV' with: [
 			spec repository: 'github://feldti/GsNeoCSV:main/repository' ].
