@@ -1,3 +1,3 @@
 accessing
 searchRolesMatchAll: anObject
-	searchRolesMatchAll := anObject
+	searchRolesMatchAll := searchRolesMatchExact not and: [ anObject ]

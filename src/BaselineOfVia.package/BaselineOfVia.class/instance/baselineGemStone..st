@@ -8,6 +8,7 @@ baselineGemStone: spec
 		].
 		spec baseline: 'NeoJSON' with: [
 "zu neu			spec repository: 'github://GsDevKit/NeoJSON:gs_master/repository'."
+			"ACHTUNG! Muss in GemStone bei den ZincHttpComponents (BaselineOfZinc) auch fixiert werden auf diesen Commit!!"
 			spec repository: 'github://GsDevKit/NeoJSON:5f6dc72/repository'.
 			
 		].

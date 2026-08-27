@@ -11,8 +11,10 @@
 		"searchString",
 		"searchRoles",
 		"searchRolesMatchAll",
+		"searchRolesMatchExact",
 		"selectedUsers",
-		"searchSmartFilter"
+		"searchSmartFilter",
+		"defaultRoles"
 	],
 	"name" : "VIAAdminUsersComponent",
 	"type" : "normal"

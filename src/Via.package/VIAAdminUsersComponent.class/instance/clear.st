@@ -1,8 +1,10 @@
 public
 clear
 	searchString := nil.
+	defaultRoles := #(user).
 	searchRoles := #().
 	searchRolesMatchAll := false.
+	searchRolesMatchExact := false.
 	searchSmartFilter := nil.
 
 "	users := OrderedCollection new."

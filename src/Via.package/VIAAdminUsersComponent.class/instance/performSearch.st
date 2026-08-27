@@ -6,12 +6,19 @@ performSearch
 		ifBlank: [self wd users]
 		ifNotBlank: [self wd findUsersByText: searchString ]).
 
-	searchRoles ifNotBlank: [
-		searchRolesMatchAll ifTrue: [
-			foundUsers := foundUsers select: [ :each | each hasRoles: searchRoles ]
-		] ifFalse: [ 
-			foundUsers := foundUsers select: [ :each | each hasAnyRole: searchRoles ]
-		]
+	searchRoles ifNotEmpty: [ 
+		searchRolesMatchExact ifTrue: [
+			searchRoles addIfNotPresent: #user.
+			foundUsers := foundUsers select: [ :each | each hasExactRoles: searchRoles ]
+		] ifFalse: [
+			searchRoles ~= defaultRoles ifTrue: [
+				searchRolesMatchAll ifTrue: [
+					foundUsers := foundUsers select: [ :each | each hasRoles: searchRoles ]
+				] ifFalse: [ 
+					foundUsers := foundUsers select: [ :each | each hasAnyRole: searchRoles ]
+				]
+			]
+		].
 	].
 
 	searchSmartFilter ifNotBlank: [
@@ -31,6 +38,16 @@ performSearch
 			foundUsers := foundUsers select: [ :each | each loginCount = 0 ].
 		].
 
+		searchSmartFilter = #'login-count-below-10' ifTrue: [
+			foundUsers := foundUsers select: [ :each | each loginCount < 10 ].
+		].
+
+		searchSmartFilter = #'login-count-above-100' ifTrue: [
+			foundUsers := foundUsers select: [ :each | each loginCount > 100 ].
+		].
+	
+	
+
 		searchSmartFilter = #'last-login-older-180days' ifTrue: [
 			| date |
 			date := Date today subtractDays: 180. 
@@ -47,6 +64,21 @@ performSearch
 						each lastLoginAt < date ].
 			] ].
 		].
+
+		searchSmartFilter = #'last-exercise-activity-older-180days' ifTrue: [
+			| date |
+			date := Date today subtractDays: 180. 
+			foundUsers := foundUsers select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]
+		].
+	
+		searchSmartFilter = #'last-exercise-activity-older-365days' ifTrue: [
+			| date |
+			date := Date today subtractDays: 365. 
+			foundUsers := foundUsers select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]
+		]
+	
+
+
 
 	].
 

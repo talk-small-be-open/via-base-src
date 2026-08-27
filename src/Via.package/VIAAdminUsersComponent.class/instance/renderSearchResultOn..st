@@ -38,7 +38,8 @@ renderSearchResultOn: html
 					html tableHeading: 'Role'.
 					html tableHeading: 'Social-ID(s)'.
 					html tableHeading: 'Terms'.
-					html tableHeading: 'Login'.
+					html tableHeading: 'Last login'.
+					html tableHeading: 'Last activity'.
 					html tableHeading.
 				 ]
 			 ].
@@ -64,6 +65,7 @@ renderSearchResultOn: html
 							html text: (each loginCount asString).
 							html text: 'x' ]
 					].
+					html tableData: [ html text: (VIAHelper germanDateAndTimeStringFor: each lastExerciseActivityAt) ].
 					html tableData: [
 						html anchor
 							callback: [self editUser: each];

@@ -1,0 +1,3 @@
+accessing
+portfolios
+	self subclassResponsibility
