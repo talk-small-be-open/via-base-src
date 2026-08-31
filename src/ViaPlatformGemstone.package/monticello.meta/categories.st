@@ -1,1 +1,1 @@
-SystemOrganization addCategory: #ViaPlatformGemstone!
+SystemOrganization addCategory: #'ViaPlatformGemstone'!

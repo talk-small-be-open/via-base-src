@@ -1,0 +1,18 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"basenameNoExtensionOfFile:" : " 08/31/2026 14:33:40",
+		"deleteFileNamed:" : " 08/31/2026 14:33:40",
+		"extensionOfFile:" : " 08/31/2026 14:33:40",
+		"fileExists:" : " 08/31/2026 14:33:40",
+		"fullPathNameFor:" : " 08/31/2026 14:33:40",
+		"gemstoneMigrateAll" : " 08/31/2026 14:33:40",
+		"gemstoneNeedMigration" : " 08/31/2026 14:33:40",
+		"getFilesIn:pattern:" : " 08/31/2026 14:33:40",
+		"isGemStone" : "AndreasBrodbeck 08/31/2026 15:35",
+		"moveFileNamed:to:" : " 08/31/2026 14:33:40",
+		"moveFileNamed:toFolder:" : " 08/31/2026 14:33:40",
+		"sizeOfFile:" : " 08/31/2026 14:33:40",
+		"superClassesOf:" : " 08/31/2026 14:33:40",
+		"toUtf8:" : " 08/31/2026 14:33:40" } }
