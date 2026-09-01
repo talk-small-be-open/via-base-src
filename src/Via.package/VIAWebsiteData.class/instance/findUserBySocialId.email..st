@@ -23,7 +23,8 @@ findUserBySocialId: aString email: anEmailString
 					q << ''')'.
 				]
 			].
-			(GsQuery fromString: query on: users) anyIfNone: [ nil ]
+"anyIfNone does not work in GS if compound query, maybe bug?			(GsQuery fromString: query on: users) anyIfNone: [ nil ]"
+			(GsQuery fromString: query on: users) queryResult anyOneOrNil
 		].
 		
 	^ user
