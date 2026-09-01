@@ -13,14 +13,14 @@ findUserBySocialId: aString email: anEmailString
 		ifGemStone: [
 			| query |
 			query := String streamContents: [ :q |
-				q << '(each.socialIds.* = "'.
+				q << '(each.socialIds.* = '''.
 				q << aString.
-				q << '")'.
+				q << ''')'.
 				
 				anEmailString ifNotBlank: [ 
-					q << ' | (each.email = "'.
+					q << ' | (each.email = '''.
 					q << anEmailString.
-					q << '")'.
+					q << ''')'.
 				]
 			].
 			(GsQuery fromString: query on: users) anyIfNone: [ nil ]
