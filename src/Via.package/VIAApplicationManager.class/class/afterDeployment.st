@@ -7,6 +7,8 @@ afterDeployment
 	
 "Allways?	self registerSeasideComponents."
 
+	self configureGemStone.
+
 	"Load new tasks, if any"
 	WAGemStoneMaintenanceTask initialize.
 	

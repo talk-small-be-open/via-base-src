@@ -1,6 +1,6 @@
 delivery
 sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject textBody: body htmlBody: aComponent replyTo: aReplyEmailString sender: aWAEmailAddress
-	| email to cc bcc sender isMultipart |
+	| email to cc bcc sender isMultipart sanitizedBody |
 	
 	self enabled ifFalse: [^nil].
 
@@ -25,9 +25,14 @@ sendMailTo: aToCollection cc: aCcCollection bcc: aBccCollection subject: subject
 
 	sender := aWAEmailAddress ifNil: [self defaultSender].
 
+	"asString to make sure GemStone reduces to not-Unicode16 if possible"
+	sanitizedBody := VIAHelper sanitizeToLatin1: body asString.
+"OPTIMIZE Just sanitize to safe utf8, but how? Especially UTF16 should be ripped off.
+	sanitizedBody := VIAPlatform current toUtf8: body asString."
+
 	email
 		subject: subject;
-		setStringBody: (body asString); "asString to make sure GemStone reduces to not-Unicode16 if possible"
+		setStringBody: sanitizedBody;
 		from: sender.
 		
 	isMultipart ifTrue: [ 

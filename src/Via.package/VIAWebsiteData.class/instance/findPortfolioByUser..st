@@ -1,3 +1,10 @@
 finders
 findPortfolioByUser: aUser
-	^portfolios detect: [:each | each user == aUser] ifNone: nil
+	^ VIAPlatform ifPharo: [ 
+		portfolios detect: [:each | each user == aUser] ifNone: [ nil ]
+	] ifGemStone: [ 
+		(GsQuery fromString: 'each.user == theUser')
+			bind: 'theUser' to: aUser;
+			on: portfolios;
+			anyIfNone: [ nil ]
+	]
