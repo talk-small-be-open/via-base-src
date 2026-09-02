@@ -1,3 +1,3 @@
 accessing
 portfolios
-	^ portfolios copy
+	^ portfolios asOrderedCollection

@@ -4,4 +4,9 @@ findUserByEmail: aString
 	aString ifBlank: [ ^ nil ].
 
 	normalized := aString asLowercase.
-	^ users detect: [ :each | each email = normalized ] ifNone: [ nil ]
+	
+	^ VIAPlatform ifPharo: [
+			users detect: [ :each | each email = normalized ] ifNone: [ nil ] ]
+		ifGemStone: [
+			(GsQuery fromString: ('each.email = ''', aString, '''') on: users) anyIfNone: [ nil ]
+		]

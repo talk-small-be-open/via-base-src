@@ -1,0 +1,3 @@
+as yet unclassified
+cacheLastExerciseActivityAt
+	cachedLastExerciseActivityAt := self lastExerciseActivityAt

@@ -1,10 +1,43 @@
 actions
 performSearch
 	| foundUsers |
-	
-	foundUsers := (searchString
-		ifBlank: [self wd users]
-		ifNotBlank: [self wd findUsersByText: searchString ]).
+
+	"Abfragen, die eine eigene Basiskollektion liefern zuerst:"
+	"1. Präzedenz"
+	(searchSmartFilter beginsWith: #'last-exercise-activity-older-') ifTrue: [
+		| date days |
+
+		"Wäre Konflikt"
+		searchString := nil.
+
+		days := 1.
+		searchSmartFilter = #'last-exercise-activity-older-180days' ifTrue: [ days = 180 ].
+		searchSmartFilter = #'last-exercise-activity-older-365days' ifTrue: [ days = 365 ].
+		
+		date := Date today subtractDays: days.
+
+		foundUsers := VIAPlatform ifPharo: [
+			self wd users select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]		
+		] ifGemStone: [
+			| query |
+			query := (GsQuery fromString: 'each.cachedLastExerciseActivityAt < date')
+				bind: 'date' to: date;
+				yourself.
+				
+			self wd findUsersByGsQuery: query.
+		]
+	].
+
+	"2. Präzedenz"
+	(foundUsers isNil and: [ searchString notBlank ]) ifTrue: [
+		foundUsers := self wd findUsersByText: searchString ].
+
+
+	"Letzte Präzedenz"
+	"Standard Basiskollektion holen, falls noch nichts vordefiniert"
+	foundUsers ifNil: [
+		foundUsers := self wd users.
+	].
 
 	searchRoles ifNotEmpty: [ 
 		searchRolesMatchExact ifTrue: [
@@ -64,24 +97,9 @@ performSearch
 						each lastLoginAt < date ].
 			] ].
 		].
-
-		searchSmartFilter = #'last-exercise-activity-older-180days' ifTrue: [
-			| date |
-			date := Date today subtractDays: 180. 
-			foundUsers := foundUsers select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]
-		].
-	
-		searchSmartFilter = #'last-exercise-activity-older-365days' ifTrue: [
-			| date |
-			date := Date today subtractDays: 365. 
-			foundUsers := foundUsers select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]
-		]
-	
-
-
-
 	].
 
-	foundUsers := foundUsers sortedBySortKey.
+	(foundUsers size < 1000) ifTrue: [
+		foundUsers := foundUsers sortedBySortKey ].
 
 	self showUsers: foundUsers.

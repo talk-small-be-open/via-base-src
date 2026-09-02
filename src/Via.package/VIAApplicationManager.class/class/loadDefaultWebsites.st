@@ -26,7 +26,7 @@ loadDefaultWebsites
 "		websiteData exerciseLevels: #('A1' 'A2' 'B1' 'B2')."
 	
 "		websiteData categories: (db instVarNamed: 'categories') copy."
-		websiteData tags: (db instVarNamed: 'tags') copy.
-		websiteData users: (db instVarNamed: 'users') copy.
+"		websiteData tags: (db instVarNamed: 'tags') copy.
+		websiteData users: (db instVarNamed: 'users') copy."
 
 	]

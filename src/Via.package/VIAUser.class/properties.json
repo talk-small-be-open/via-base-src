@@ -20,7 +20,8 @@
 		"mailingConfiguration",
 		"lastLoginAt",
 		"loginCount",
-		"appClients"
+		"appClients",
+		"cachedLastExerciseActivityAt"
 	],
 	"name" : "VIAUser",
 	"type" : "normal"

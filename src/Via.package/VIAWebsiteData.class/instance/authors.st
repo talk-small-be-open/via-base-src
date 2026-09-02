@@ -1,3 +1,3 @@
 as yet unclassified
 authors
-	^(self editors, self admins) asSet
+	^(self editors_fast, self admins_fast) asSet
