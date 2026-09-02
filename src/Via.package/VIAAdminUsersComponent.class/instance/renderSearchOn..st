@@ -29,8 +29,8 @@ renderSearchOn: html
 				#'login-count-above-100'
 				#'last-login-older-180days'
 				#'last-login-older-365days'
-"slow				#'last-exercise-activity-older-180days'"
-"slow				#'last-exercise-activity-older-365days'"
+				#'last-exercise-activity-older-180days'
+				#'last-exercise-activity-older-365days'
 			);
 			beOptional;
 			on: #searchSmartFilter of: self.

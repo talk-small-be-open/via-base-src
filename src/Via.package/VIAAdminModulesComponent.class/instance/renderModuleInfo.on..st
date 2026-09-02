@@ -9,7 +9,8 @@ renderModuleInfo: aModule on: html
 
 	html text: ', Rating: '.
 	html text: aModule rating value asString.
-	html text: ', Started: '.
+		
+"Too much CPU	html text: ', Started: '.
 	html text: (self countInWork: aModule) asString.
 	html text: ', Finished: '.
-	html text: (self countFinished: aModule) asString.
+	html text: (self countFinished: aModule) asString."

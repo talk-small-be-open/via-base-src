@@ -12,5 +12,6 @@ visitViaPrNoteAnnotation: aViaPrNoteAnnotation
 
 	html span
 		class: 'dictionaryEntry';
-		attributeAt: 'data-content' put: (VIAHelper sanitizeToLatin1: contentHtml) "OPTIMIZE: EVT robuster bei nicht-latin1?";
+"		attributeAt: 'data-content' put: (VIAHelper sanitizeToLatin1: contentHtml)" "OPTIMIZE: EVT robuster bei nicht-latin1?"
+		attributeAt: 'data-content' put: (VIAHelper sanitizeToXml: contentHtml);
 		with: aViaPrNoteAnnotation expression
