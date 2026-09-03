@@ -7,4 +7,8 @@ renderContentOn: html
 		with: [
 			self renderPreviousOn: html.
 			self renderPagesOn: html.
-			self renderNextOn: html ]
+			self renderNextOn: html.
+			
+			html span: ' Total: '.
+			html span: items size asString.
+		]

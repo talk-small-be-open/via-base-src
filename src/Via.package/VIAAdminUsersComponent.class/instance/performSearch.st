@@ -4,28 +4,30 @@ performSearch
 
 	"Abfragen, die eine eigene Basiskollektion liefern zuerst:"
 	"1. Präzedenz"
-	(searchSmartFilter beginsWith: #'last-exercise-activity-older-') ifTrue: [
-		| date days |
+	searchSmartFilter ifNotBlank: [
+		(searchSmartFilter beginsWith: #'last-exercise-activity-older-') ifTrue: [
+			| datetime days |
 
-		"Wäre Konflikt"
-		searchString := nil.
+			"Wäre Konflikt"
+			searchString := nil.
 
-		days := 1.
-		searchSmartFilter = #'last-exercise-activity-older-180days' ifTrue: [ days = 180 ].
-		searchSmartFilter = #'last-exercise-activity-older-365days' ifTrue: [ days = 365 ].
-		
-		date := Date today subtractDays: days.
+			days := 1.
+			searchSmartFilter = #'last-exercise-activity-older-180days' ifTrue: [ days := 180 ].
+			searchSmartFilter = #'last-exercise-activity-older-365days' ifTrue: [ days := 365 ].
+			
+			datetime := (Date today subtractDays: days) asDateAndTime.
 
-		foundUsers := VIAPlatform ifPharo: [
-			self wd users select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < date ] ]		
-		] ifGemStone: [
-			| query |
-			query := (GsQuery fromString: 'each.cachedLastExerciseActivityAt < date')
-				bind: 'date' to: date;
-				yourself.
-				
-			self wd findUsersByGsQuery: query.
-		]
+			foundUsers := VIAPlatform ifPharo: [
+				self wd users select: [ :each | each lastExerciseActivityAt ifNil: [ false ] ifNotNil: [ :at | at < datetime ] ]
+			] ifGemStone: [
+				| query |
+				query := (GsQuery fromString: 'each.cachedLastExerciseActivityAt < datetime')
+					bind: 'datetime' to: datetime;
+					yourself.
+					
+				self wd findUsersByGsQuery: query.
+			]
+		].
 	].
 
 	"2. Präzedenz"
