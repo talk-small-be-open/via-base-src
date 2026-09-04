@@ -4,7 +4,7 @@ findUserBySocialId: aString email: anEmailString
 	
 	aString ifBlank: [ self error: 'No, no, no!' ].
 	
-	user := VIAPlatform
+	user := self
 		ifPharo: [
 			self users detect: [:each |
 				(each hasSocialId: aString) or: [anEmailString notBlank and: [each email = anEmailString]]

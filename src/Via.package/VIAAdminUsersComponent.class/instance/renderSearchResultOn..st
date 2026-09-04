@@ -22,10 +22,12 @@ renderSearchResultOn: html
 
 "		(html clickAnchor: ((html jQuery: 'input.selectionCheckbox') attributeAt: 'checked' put: true ))
 			with: 'Select all'."
-		html anchor
-			callback: [ self selectAllUsers ];
-			with: 'Select all'.
-
+		self hasLotsOfUsers ifFalse: [
+			html anchor
+				callback: [ self selectAllUsers ];
+				with: ('Select all ', users size asString).
+		].
+	
 		"VERY IMPORTANT!"
 		html hiddenInput callback: [ self clearSelection ].
 

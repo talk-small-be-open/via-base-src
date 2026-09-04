@@ -1,9 +1,9 @@
 finders
-findUsersByAnyRole: aCollectionOfRoles
+findUsersByRoles: aCollectionOfRoles
 	aCollectionOfRoles ifBlank: [ ^ #() ].
 	
 	^ self ifPharo: [ 
-		self users select: [:each | each hasAnyRole: aCollectionOfRoles ].
+		self users select: [:each | each hasRoles: aCollectionOfRoles ].
 	] ifGemStone: [
 		| queryString |
 		
@@ -11,7 +11,7 @@ findUsersByAnyRole: aCollectionOfRoles
 			aCollectionOfRoles do: [ :each |
 				s << '(each.roles.* == #'.
 				s << each.
-				s << ')' ] separatedBy: [ s << ' | ' ]
+				s << ')' ] separatedBy: [ s << ' & ' ]
 		].
 		
 		self findUsersByGsQueryString: queryString.

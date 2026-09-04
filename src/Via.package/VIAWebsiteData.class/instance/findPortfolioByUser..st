@@ -1,6 +1,6 @@
 finders
 findPortfolioByUser: aUser
-	^ VIAPlatform ifPharo: [ 
+	^ self ifPharo: [ 
 		portfolios detect: [:each | each user == aUser] ifNone: [ nil ]
 	] ifGemStone: [ 
 		(GsQuery fromString: 'each.user == theUser')

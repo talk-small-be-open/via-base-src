@@ -1,6 +1,6 @@
 finders
 findUserByRememberToken: aString
-	^ VIAPlatform
+	^ self
 		ifPharo: [
 			users detect: [:each | each rememberToken = aString] ifNone: [ nil ] ]
 		ifGemStone: [
