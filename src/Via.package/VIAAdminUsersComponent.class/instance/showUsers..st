@@ -1,7 +1,7 @@
 as yet unclassified
 showUsers: aCollection
 "	self clear."
-	users := aCollection.
+	users := aCollection asOrderedCollection.
 
 	self clearSelection.
 
