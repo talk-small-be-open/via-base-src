@@ -18,7 +18,10 @@ m073OptimizeQuerySpeedGemStone
 "		each createGemStoneIndexes."
 	].
 
-	self db createGemStoneIndexes
+	self am calculateDailyCachedValues.
+
+	self db createGemStoneIndexes.
+	
 
 	
 
