@@ -1,3 +1,3 @@
 as yet unclassified
 addSocialId: aString
-	socialIds add: aString
+	socialIds addIfNotPresent: aString
